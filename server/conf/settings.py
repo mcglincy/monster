@@ -34,6 +34,18 @@ from evennia.settings_default import *
 # This is the name of your game. Make it catchy!
 SERVERNAME = "evmonster"
 
+DATA_DIR = "/opt/evmonsterdata"
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.getenv("TEST_DB_PATH", os.path.join(DATA_DIR, "evmonster.db3")),
+        "USER": "",
+        "PASSWORD": "",
+        "HOST": "",
+        "PORT": "",
+    }
+}
 
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
