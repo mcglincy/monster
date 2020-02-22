@@ -41,23 +41,57 @@
         margin-top: 4px;
         margin-bottom: 4px;
       }
+      .outer {
+        display: table;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .middle {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 20px;
+      }
+      .inner {
+        border: 1px solid white;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 40em;
+        padding: 2em;
+      }
+      .welcome {
+        margin-bottom: 2em;
+        text-align: center; 
+        width:100%; 
+      }
+      .caveat {
+        font-size: 12px; 
+        margin-top: 50px;
+        text-align: center;
+        width: 100%;
+      }
     </style>
   </head>
   <body>
-  <div
-    style="position: fixed; bottom: 50%; left: 50%; transform: translateX(-50%); padding: 1em; border: 1px solid white;">
-    <div style="width:100%; text-align: center; margin-bottom: 2em;">Welcome to the world of Monster</div>
-    <div>
-      This is a modern port of University at Buffalo's <i>Monster</i>, itself a long-lost descendent of <a href="http://www.skrenta.com/monster/">VMS Monster</a>, an early MUD written by Rich Skrenta.
+    <div class="outer">
+      <div class="middle">
+        <div class="inner">
+          <div class="welcome">Welcome to the world of Monster</div>
+          <div>
+            This is a modern port of University at Buffalo's <i>Monster</i>, itself a long-lost descendent of <a href="http://www.skrenta.com/monster/">VMS Monster</a>, an early MUD written by Rich Skrenta.
+          </div>
+          <div>
+            <ul>
+              <li><a href="http://www.monstermud.com/webclient">Play Monster</a> in your browser.</li>
+              <li>Find out more about <a href="https://github.com/evennia/evennia">Evennia</a>, the MUD engine powering this new version.</li>
+              <li>Read the <a href="https://docs.google.com/document/d/1tULg1acF8-1Mg0M576TSkbvHP6jhvmLs5FIwWtfVC_M/edit">backstory</a> of the effort to resurrect a 30-year-old VAX Pascal game.</li>
+            </ul>
+          </div>
+          <div class="caveat">FYI: This site has no association with the University at Buffalo, the College of Mathematical Sciences, or Rich Skrenta. All Hail the Kink! And sleet and Rain!</div>
+        </div>
+      </div>
     </div>
-    <div>
-      <ul>
-        <li><a href="http://www.monstermud.com/webclient">Play Monster</a> in your browser.</li>
-        <li>Find out more about <a href="https://github.com/evennia/evennia">Evennia</a>, the MUD engine powering this new version.
-        <li>Read the <a href="https://docs.google.com/document/d/1tULg1acF8-1Mg0M576TSkbvHP6jhvmLs5FIwWtfVC_M/edit">backstory</a> of the effort to resurrect a 30-year-old VAX Pascal game.
-      </ul>
-    </div>
-    <div style="font-size: 12px; margin-top: 40px;">FYI: This site has no association with the University at Buffalo, the College of Mathematical Sciences, or Rich Skrenta. All Hail the Kink! And sleet and Rain!</div>
-  </div>    
   </body>
 </html>
