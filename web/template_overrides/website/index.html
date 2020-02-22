@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'glass_tty_vt220medium';
+        font-style: normal;
+        font-weight: normal;
+        src: url('/static/website/fonts/fonts/glass_tty_vt220-webfont.woff2') format('woff2'),
+             url('/static/website/fonts/glass_tty_vt220-webfont.woff') format('woff');
+      }      
+      a:active {
+        text-decoration: underline;
+        color: white;
+      }      
+      a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+      a:link {
+        color: white;
+        text-decoration: underline;
+      }
+      a:visited {
+        color: white;
+        text-decoration: underline;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font-family: 'glass_tty_vt220medium', serif;
+        font-size: 18px;
+        /*text-shadow: 0 0 2px #C8C8C8;*/
+        padding: 0;
+      }
+      li {
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+    </style>
+  </head>
+  <body>
+  <div
+    style="position: fixed; bottom: 50%; left: 50%; transform: translateX(-50%); padding: 1em; border: 1px solid white;">
+    <div style="width:100%; text-align: center; margin-bottom: 2em;">Welcome to the world of Monster</div>
+    <div>
+      Monster is a modern port of University at Buffalo's long-lost descendent of <a href="http://www.skrenta.com/monster/">VMS Monster</a>, an early MUD written by Rich Skrenta.
+    </div>
+    <div>
+      <ul>
+        <li><a href="http://www.monstermud.com:4001/webclient">Play Monster in your browser</a></li>
+        <li>Find out more about <a href="https://github.com/evennia/evennia">Evennia</a>, the underlying MUD engine.
+        <li>Read the <a href="https://docs.google.com/document/d/1tULg1acF8-1Mg0M576TSkbvHP6jhvmLs5FIwWtfVC_M/edit">backstory</a> of the effort to resurrect a 30-year-old VAX Pascal game.
+      </ul>
+    </div>
+    <div style="font-size: 12px; margin-top: 40px;">FYI: This site has no association with the University at Buffalo, the College of Mathematical Sciences, or Rich Skrenta.</div>
+  </div>    
+  </body>
+</html>
