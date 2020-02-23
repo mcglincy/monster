@@ -32,7 +32,7 @@ from evennia.settings_default import *
 ######################################################################
 
 # This is the name of your game. Make it catchy!
-SERVERNAME = "evmonster"
+SERVERNAME = "Monster"
 
 DATA_DIR = "/opt/evmonsterdata"
 
