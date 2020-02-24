@@ -11,8 +11,10 @@ class CmdBrief(Command):
   def func(self):
     if self.caller.db.brief_descriptions:
       self.caller.db.brief_descriptions = False
+      self.caller.msg("Brief mode now off.")
     else:
       self.caller.db.brief_descriptions = True
+      self.caller.msg("Brief mode now on.")
 
 
 class CmdDot(Command):
