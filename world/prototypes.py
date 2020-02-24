@@ -931,7 +931,7 @@ SCALE_MAIL_ARMOR = {
   'worth': 0,
 }
 
-SERPENT-SKIN_CLOAK = {
+SERPENT_SKIN_CLOAK = {
   'key': "Serpent-skin Cloak",
   'prototype_parent': 'ARMOR',
   'base_armor': 0,
