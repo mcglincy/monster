@@ -91,7 +91,7 @@ WEAPON = {
   'attack_speed': 0,
   'base_damage': 0,
   'desc': 'A weapon.',
-  'equip_slot': 1
+  'equip_slot': 1,
   'random_damage': 0,
   'weight': 0,
   'worth': 0
