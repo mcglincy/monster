@@ -15,6 +15,10 @@ own cmdsets by inheriting from them or directly from `evennia.CmdSet`.
 """
 
 from evennia import default_cmds
+from commands.combat import CmdAttack, CmdRest
+from commands.hiding import CmdHide, CmdReveal, CmdSearch
+from commands.misc import CmdBrief, CmdDot, CmdSheet
+from commands.spells import CmdCast
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -34,6 +38,15 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         #
         # any commands you add below will overload the default ones.
         #
+        self.add(CmdAttack())
+        self.add(CmdBrief())
+        self.add(CmdCast())
+        self.add(CmdDot())
+        self.add(CmdHide())
+        self.add(CmdReveal())
+        self.add(CmdRest())
+        self.add(CmdSearch())
+        self.add(CmdSheet())
 
 
 class AccountCmdSet(default_cmds.AccountCmdSet):

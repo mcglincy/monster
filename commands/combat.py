@@ -1,5 +1,5 @@
-
-from evennia import CmdSet, Command
+from commands.command import Command
+from evennia import CmdSet
 
 
 class CmdSetWeapon(CmdSet):
@@ -17,9 +17,7 @@ class CmdAttack(Command):
     attack <enemy>
   """
   key = "attack"
-  aliases = [
-    # "att" ????
-  ]
+  aliases = ["att", "atta", "attac"]
   locks = "cmd:all()"
   help_category = "Monster"
 
@@ -52,34 +50,10 @@ class CmdAttack(Command):
       return
 
 
-class CmdHide(Command):
-  key = "hide"
+class CmdRest(Command):
+  key = "rest"
+  locks = "cmd:all()"
   help_category = "Monster"
 
   def func(self):
-    pass
-
-
-class CmdReveal(Command):
-  key = "reveal"
-  help_category = "Monster"
-
-  def func(self):
-    pass
-
-
-class CmdEquip(Command):
-  key = "equip"
-  help_category = "Monster"
-
-  def func(self):
-    pass
-
-
-class CmdUnequip(Command):
-  key = "unequip"
-  help_category = "Monster"
-
-  def func(self):
-    pass
-
+    self.not_implemented_yet()

@@ -30,8 +30,11 @@ class Command(BaseCommand):
             every command, like prompts.
 
     """
+    def at_post_cmd(self):
+        self.caller.msg("post")
 
-    pass
+    def not_implemented_yet(self):
+        self.caller.msg("Not implemented yet")
 
 
 # -------------------------------------------------------------
