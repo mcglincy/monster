@@ -12,7 +12,7 @@ inheritance.
 """
 import random
 
-from evennia import CmdSet, Command, DefaultObject
+from evennia import CmdSet, Command, DefaultExit, DefaultObject
 from evennia.utils import search, delay
 from evennia.prototypes.spawner import spawn
 from commands.combat import CmdAttack, CmdSetWeapon
@@ -163,7 +163,6 @@ class Object(DefaultObject):
                                object speaks
   """
   pass
-
 
 
 class Weapon(Object):

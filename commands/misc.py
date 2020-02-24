@@ -19,7 +19,14 @@ class CmdDot(Command):
   help_category = "Monster"
 
   def func(self):
-    self.not_implemented_yet()
+    last_command = self.caller.ndb.last_command
+    if last_command:
+      self.caller.msg(last_command.raw_string)
+      self.caller.execute_cmd(last_command.raw_string)
+
+  def at_post_cmd(self):
+    # override to do nothing; we don't want dot as our last_command
+    pass
 
 
 class CmdSheet(Command):

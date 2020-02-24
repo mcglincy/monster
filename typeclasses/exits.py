@@ -7,6 +7,7 @@ for allowing Characters to traverse the exit to its destination.
 
 """
 from evennia import DefaultExit
+from commands.movement import CmdExit
 
 
 class Exit(DefaultExit):
@@ -35,4 +36,4 @@ class Exit(DefaultExit):
                                         defined, in which case that will simply be echoed.
     """
 
-    pass
+    exit_command = CmdExit

@@ -31,7 +31,7 @@ class Command(BaseCommand):
 
     """
     def at_post_cmd(self):
-        self.caller.msg("post")
+        self.caller.ndb.last_command = self
 
     def not_implemented_yet(self):
         self.caller.msg("Not implemented yet")
