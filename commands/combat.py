@@ -94,6 +94,10 @@ class CmdAttack(Command):
     if not target:
       return
 
+    if self.caller.key == target.key:
+      self.caller.msg("You can't attack yourself!")
+      return
+
     # TODO: check for equipped weapon and return w/ error msg if no weapon
 
     # TODO: get damage from the weapon
