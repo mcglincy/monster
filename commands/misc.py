@@ -9,7 +9,10 @@ class CmdBrief(Command):
   help_category = "Monster"
 
   def func(self):
-    self.not_implemented_yet()
+    if self.caller.db.brief_descriptions:
+      self.caller.db.brief_descriptions = False
+    else:
+      self.caller.db.brief_descriptions = True
 
 
 class CmdDot(Command):
@@ -21,7 +24,6 @@ class CmdDot(Command):
   def func(self):
     last_command = self.caller.ndb.last_command
     if last_command:
-      self.caller.msg(last_command.raw_string)
       self.caller.execute_cmd(last_command.raw_string)
 
   def at_post_cmd(self):

@@ -50,10 +50,24 @@ class CmdAttack(Command):
       return
 
 
+class CmdBleed(Command):
+  key = "bleed"
+  aliases = ["ble", "blee"]
+  locks = "cmd:all()"
+  help_category = "Monster"
+
+  def func(self):
+    new_health = self.caller.db.health - 50
+    self.caller.db.health = new_health
+    self.caller.msg(f"Your health is now {new_health}.")
+
+
 class CmdRest(Command):
   key = "rest"
   locks = "cmd:all()"
   help_category = "Monster"
 
   def func(self):
-    self.not_implemented_yet()
+    new_health = self.caller.db.health + 50
+    self.caller.db.health = new_health
+    self.caller.msg(f"Your health is now {new_health}.")
