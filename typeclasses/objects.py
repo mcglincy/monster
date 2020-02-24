@@ -175,8 +175,6 @@ class Weapon(Object):
     self.db.random_damage = 0
     self.db.weight = 0
     self.db.worth = 0
-    # TODO: move to equip/unequip when we implement that
-    self.cmdset.add_default(CmdSetWeapon, permanent=True)
 
 
 class Armor(Object):
