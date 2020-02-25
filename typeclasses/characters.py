@@ -7,7 +7,7 @@ is setup to be the "default" character type created by the default
 creation commands.
 
 """
-from evennia import DefaultCharacter
+from evennia import DefaultCharacter, search_object
 from evennia.commands import cmdhandler
 from commands.combat import target_msg
 
@@ -92,7 +92,7 @@ class Character(DefaultCharacter):
       return f"{self.key} is near death."
     else:
       return f"{self.key} is dead."
-  
+
   def self_health_msg(self):
     health = self.db.health
     if health >= 1700:
