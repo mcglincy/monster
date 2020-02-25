@@ -63,7 +63,7 @@ class Character(DefaultCharacter):
       self.move_to(the_void)
     self.db.health = 200
 
-  def self_health_msg(self, health):
+  def self_health_msg(self):
     health = self.db.health
     if health >= 1700:
       return "You are in ultimate health."
