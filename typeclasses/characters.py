@@ -35,6 +35,8 @@ class Character(DefaultCharacter):
   def at_object_creation(self):
     """Called at initial creation."""
     super().at_object_creation()
+    # TODO: figure health etc from level and class
+    self.db.max_health = 1000
     self.db.health = 1000
     self.db.brief_descriptions = False
 
@@ -59,16 +61,27 @@ class Character(DefaultCharacter):
   def at_weapon_hit(self, attacker, weapon, damage):
     self.msg(target_msg(attacker.key, weapon.key, damage))
     # TODO: apply armor
+    self.at_damage(damage)
+
+  def at_damage(self, damage):
     self.db.health = max(self.db.health - damage, 0)
     self.msg(self.self_health_msg())
     self.location.msg_contents(self.health_msg(), exclude=[self])
     if self.db.health <= 0:
       self.die()
 
-  def die(self):
-    # TODO: drop objects
+  def at_heal(self, amount):
+    self.db.health = min(self.db.health + amount, self.db.max_health)
+    self.msg(self.self_health_msg())
+    self.location.msg_contents(self.health_msg(), exclude=[self])
 
-    # TODO: go to the actual void
+  def die(self):
+    # drop everything we're holding
+    for obj in self.contents:
+      # TODO: possible destroy chance?
+      self.execute_cmd(f"drop {obj.key}")
+
+    # TODO: go to the actual void room
     the_void = search_object("Limbo")[0]
     if the_void:
       self.move_to(the_void)
