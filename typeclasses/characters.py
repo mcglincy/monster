@@ -60,9 +60,9 @@ class Character(DefaultCharacter):
     # called when an object leaves this object in any fashion
     super().at_object_leave(obj, target_location)
     # unequip if equipped
-    if obj.id == self.db.equipped_armor.id:
+    if obj == self.db.equipped_armor:
       self.db.equipped_armor = None
-    elif obj.id == self.db.equipped_weapon.id:
+    elif obj == self.db.equipped_weapon:
       self.db.equipped_weapon = None
 
   def at_weapon_hit(self, attacker, weapon, damage):
