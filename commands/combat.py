@@ -5,19 +5,19 @@ from random import randint
 
 def attacker_msg(target_name, weapon_name, damage):
   if damage > 500:
-    return f"You vaporize {target_name}'s putrid body."
+    return f"You vaporize {target_name}'s putrid body. [{damage}]"
   elif damage > 400:
-    return f"You attack {target_name} with blinding speed and power!!!"
+    return f"You attack {target_name} with blinding speed and power!!! [{damage}]"
   elif damage > 300:
-    return f"You deliver an almost deadly blow to {target_name} with your {weapon_name}!!"
+    return f"You deliver an almost deadly blow to {target_name} with your {weapon_name}!! [{damage}]"
   elif damage > 200:
-    return f"Your {weapon_name} creams {target_name}'s poor little body!!"
+    return f"Your {weapon_name} creams {target_name}'s poor little body!! [{damage}]"
   elif damage > 150:
-    return f"Your {weapon_name} hits {target_name} very hard!"
+    return f"Your {weapon_name} hits {target_name} very hard! [{damage}]"
   elif damage > 100:
-    return f"Your {weapon_name} hits {target_name} hard!"
+    return f"Your {weapon_name} hits {target_name} hard! [{damage}]"
   elif damage > 50:
-    return f"You hits {target_name}, good."
+    return f"You hits {target_name}, good. [{damage}]"
   elif damage > 0:
     return f"{target_name} is grazed by your {weapon_name}."
   else:
@@ -26,23 +26,23 @@ def attacker_msg(target_name, weapon_name, damage):
 
 def target_msg(attacker_name, weapon_name, damage):
   if damage > 500:
-    return f"{attacker_name} vaporizes you!"
+    return f"{attacker_name} vaporizes you! [{damage}]"
   elif damage > 400:
-    return f"{attacker_name} attacks you with blinding speed and power, ARRRG!!"
+    return f"{attacker_name} attacks you with blinding speed and power, ARRRG!! [{damage}]"
   elif damage > 300:
-    return f"{attacker_name}'s {weapon_name} nearly splits you in two!!!"
+    return f"{attacker_name}'s {weapon_name} nearly splits you in two!!! [{damage}]"
   elif damage > 200:
-    return f"{attacker_name}'s {weapon_name} creams your poor little body!!"
+    return f"{attacker_name}'s {weapon_name} creams your poor little body!! [{damage}]"
   elif damage > 150:
-    return f"{attacker_name}'s {weapon_name} hits you very hard!"
+    return f"{attacker_name}'s {weapon_name} hits you very hard! [{damage}]"
   elif damage > 100:
-    return f"{attacker_name}'s {weapon_name} hits you hard!"
+    return f"{attacker_name}'s {weapon_name} hits you hard! [{damage}]"
   elif damage > 50:
-    return f"{attacker_name}'s {weapon_name} hits you, good."
+    return f"{attacker_name}'s {weapon_name} hits you, good. [{damage}]"
   elif damage > 0:
-    return f"You are grazed by {attacker_name}'s {weapon_name}."
+    return f"You are grazed by {attacker_name}'s {weapon_name}. [{damage}]"
   else:
-    return f"{attacker_name} missed you with a {weapon_name}."
+    return f"{attacker_name} missed you with a {weapon_name}. [{damage}]"
 
 
 def bystander_msg(attacker_name, target_name, weapon_name, damage):

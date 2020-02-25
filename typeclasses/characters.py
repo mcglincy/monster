@@ -7,6 +7,7 @@ is setup to be the "default" character type created by the default
 creation commands.
 
 """
+from random import randint
 from evennia import DefaultCharacter, search_object
 from evennia.commands import cmdhandler
 from commands.combat import target_msg
@@ -67,10 +68,21 @@ class Character(DefaultCharacter):
   def at_weapon_hit(self, attacker, weapon, damage):
     self.msg(target_msg(attacker.key, weapon.key, damage))
     # TODO: apply armor
+    armor = self.db.equipped_armor
+    if armor:
+      if armor.db.deflect_armor > 0 and randint(0, 100) < armor.db.deflect_armor:
+        self.msg("The attack is deflected by your armor.")
+        attacker.msg(f"Your weapon is deflected by {self.key}'s armor.")
+        damage = int(damage / 2)
+      if armor.db.base_armor > 0:
+        self.msg("The attack is partially blocked by your armor.")
+        attacker.msg(f"Your weapon is partially blocked by {self.key}'s armor.")
+        damage = int(damage * ((100 - armor.db.base_armor) / 100))
     self.at_damage(damage)
 
   def at_damage(self, damage):
     self.db.health = max(self.db.health - damage, 0)
+    self.msg(f"You take {damage} damage.")
     self.msg(self.self_health_msg())
     self.location.msg_contents(self.health_msg(), exclude=[self])
     if self.db.health <= 0:
