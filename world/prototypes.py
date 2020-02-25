@@ -81,6 +81,14 @@ See the `@spawn` command and `evennia.utils.spawner` for more info.
 #
 #
 
+# Mob prototypes
+TARGET_DUMMY = {
+  'typeclass': 'typeclasses.objects.Mob',
+  'key': 'target dummy',
+  'health': 1000,
+}
+
+
 #
 # Weapon prototypes
 #

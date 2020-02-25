@@ -162,7 +162,34 @@ class Object(DefaultObject):
    at_say(speaker, message)  - by default, called if an object inside this
                                object speaks
   """
-  pass
+  def health_msg(self):
+    health = self.db.health
+    if health >= 1700:
+      return f"{self.key} is in ultimate health."
+    elif health > 1400:
+      return f"{self.key} is in incredible health."
+    elif health > 1200:
+      return f"{self.key} is in extraordinary health."
+    elif health > 1000:
+      return f"{self.key} is in tremendous health."
+    elif health > 850:
+      return f"{self.key} is in superior condition."
+    elif health > 700:
+      return f"{self.key} is in exceptional health."
+    elif health > 500:
+      return f"{self.key} is in good health."
+    elif health > 350:
+      return f"{self.key} looks a little bit dazed."
+    elif health > 200:
+      return f"{self.key} has some minor wounds."
+    elif health > 100:
+      return f"{self.key} is suffering from some serious wounds."
+    elif health > 50:
+      return f"{self.key} is in critical condition."
+    elif health > 1:
+      return f"{self.key} is near death."
+    else:
+      return f"{self.key} is dead."
 
 
 class Weapon(Object):
@@ -188,3 +215,23 @@ class Armor(Object):
     self.db.random_damage = 0
     self.db.weight = 0
     self.db.worth = 0
+
+
+class Mob(Object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.health = 1000
+
+  def at_weapon_hit(self, attacker, weapon, damage):
+    # TODO: apply armor
+    self.db.health = max(self.db.health - damage, 0)
+    if self.db.health <= 0:
+      death_msg = f"{self.key} disappears in a cloud of greasy black smoke."
+      self.location.msg_contents(death_msg, exclude=[self])
+      self.location = None
+      # TODO: give attacker experience
+    else:
+      # tell everyone else in the room our health
+      self.location.msg_contents(self.health_msg(), exclude=[self])
+
+

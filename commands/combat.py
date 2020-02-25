@@ -1,5 +1,6 @@
 from commands.command import Command
 from evennia import CmdSet
+from random import randint
 
 
 class CmdSetWeapon(CmdSet):
@@ -73,6 +74,9 @@ def bystander_msg(attacker_name, target_name, weapon_name, damage):
     return f"{attacker_name} misses {target_name} with a {weapon_name}."
 
 
+
+
+
 class CmdAttack(Command):
   """
   Attack the enemy. Commands:
@@ -94,35 +98,25 @@ class CmdAttack(Command):
     if not target:
       return
 
+    # TODO: have some target validity check
     if self.caller.key == target.key:
       self.caller.msg("You can't attack yourself!")
       return
 
-    # TODO: check for equipped weapon and return w/ error msg if no weapon
-
-    # TODO: get damage from the weapon
-    damage = 50
-
-    attacker_name = self.caller.key
-    target_name = target.key
-    weapon_name = "claws"
-
-    self.caller.msg(attacker_msg(target_name, weapon_name, damage))
-    target.msg(target_msg(attacker_name, weapon_name, damage))
-    self.caller.location.msg_contents(bystander_msg(attacker_name, target_name, weapon_name, damage))
-
-    # call enemy hook
-#    if hasattr(target, "at_hit"):
-#      # should return True if target is defeated, False otherwise.
-#      target.at_hit(self.obj, self.caller, damage)
-#      return
-
-    if target.db.health:
-      target.db.health -= damage      
-    else:
-      # sorry, impossible to fight this enemy ...
-      self.caller.msg("The enemy seems unaffected.")
+    weapon = self.caller.db.equipped_weapon
+    if not weapon:
+      self.caller.msg("You have no equipped weapon!")
       return
+
+    # TODO: apply attacker level etc to damage calc
+    damage = weapon.db.base_damage + randint(0, weapon.db.random_damage)
+
+    self.caller.msg(attacker_msg(target.key, weapon.key, damage))
+    location_msg = bystander_msg(self.caller.key, target.key, weapon.key, damage)
+    self.caller.location.msg_contents(location_msg, exclude=[self.caller, target])
+
+    if hasattr(target, "at_weapon_hit"):
+      target.at_weapon_hit(self.caller.key, weapon, damage)
 
 
 class CmdBleed(Command):
