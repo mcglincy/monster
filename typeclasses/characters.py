@@ -53,6 +53,7 @@ class Character(DefaultCharacter):
     # TODO: apply armor
     self.db.health = max(self.db.health - damage, 0)
     self.msg(self.self_health_msg())
+    self.location.msg_contents(self.health_msg(), exclude=[self])
     if self.db.health <= 0:
       self.die()
 
