@@ -39,6 +39,10 @@ class Character(DefaultCharacter):
     self.db.max_health = 1000
     self.db.health = 1000
     self.db.brief_descriptions = False
+    # TODO: support various equipment slots
+    self.db.equipped_weapon = None
+    self.db.equipped_armor = None
+
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -55,7 +59,9 @@ class Character(DefaultCharacter):
     # called when an object leaves this object in any fashion
     super().at_object_leave(obj, target_location)
     # unequip if equipped
-    if obj.id == self.db.equipped_weapon.id:
+    if obj.id == self.db.equipped_armor.id:
+      self.db.equipped_armor = None
+    elif obj.id == self.db.equipped_weapon.id:
       self.db.equipped_weapon = None
 
   def at_weapon_hit(self, attacker, weapon, damage):
