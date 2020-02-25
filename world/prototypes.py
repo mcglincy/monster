@@ -71,23 +71,16 @@ See the `@spawn` command and `evennia.utils.spawner` for more info.
 # "key": "goblin archwizard",
 # "prototype_parent" : ("GOBLIN_WIZARD", "ARCHWIZARD_MIXIN")
 # }
-# evmonster generated objects
+
 #
-#
-# evmonster generated objects
-#
-#
-# evmonster generated objects
-#
+# Mob prototypes
 #
 
-# Mob prototypes
 TARGET_DUMMY = {
   'typeclass': 'typeclasses.objects.Mob',
   'key': 'target dummy',
   'health': 1000,
 }
-
 
 #
 # Weapon prototypes
@@ -672,6 +665,7 @@ ARMOR = {
   'desc': 'An armor.',
   'equip_slot': 4,
   'spell_armor': 0,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0  
 }
@@ -684,6 +678,7 @@ ANIMAL_SKINS = {
   'desc': "The animal skins are coarse, and have been treated with some substance to make them rigid. It looks as though they are meant to be worn.",
   'equip_slot': 4,
   'spell_armor': 1,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -696,6 +691,7 @@ BRACERS_OF_LUNACY = {
   'desc': "The bracers are made of a gold that seems to shimmer as if hot, though it is cold to the touch.",
   'equip_slot': 10,
   'spell_armor': 15,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -708,6 +704,7 @@ BUCKLER = {
   'desc': "The buckler is a very small shield with an irregular outer face. While the shield provides very little in the way of body protection, it is useful in catching an opponents weapon away from the body.",
   'equip_slot': 2,
   'spell_armor': 0,
+  'spell_deflect_armor': 1,
   'weight': 0,
   'worth': 0,
 }
@@ -720,6 +717,7 @@ CAVE_BEAR_SKINS = {
   'desc': "The clump of skins is extremely heavy and thick, and is clearly from a huge bear of some sort. The hide has been cured somewhat, but the thick black hair of the animal remains. Small bone fragments have been adorned to the hide to provide some additional protection, as well as to appeal to the \"spirits\".",
   'equip_slot': 4,
   'spell_armor': 9,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -732,6 +730,7 @@ CHAIN_MAIL_ARMOR = {
   'desc': "The chain mail is a fine mesh of very small, inter-locking steel links. A support of padded leather is attached in the shoulder and chest  region of the armor.",
   'equip_slot': 4,
   'spell_armor': 5,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -744,6 +743,7 @@ CLOAK = {
   'desc': "This grey cloak is just perfect to keep you warm and possibly a little more protected.",
   'equip_slot': 8,
   'spell_armor': 0,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -756,6 +756,7 @@ CLOAK_OF_THE_MAGI = {
   'desc': "This worn black cloak inlaid with golden runes appears to be somthing of an ancient evil power.",
   'equip_slot': 8,
   'spell_armor': 0,
+  'spell_deflect_armor': 35,
   'weight': 25,
   'worth': 0,
 }
@@ -768,6 +769,7 @@ CONICAL_HELM = {
   'desc': "The helm is of steel, and conical in shape. A wedge shaped nose guard extends downward, while leather flaps fitted with metal scales provide added protection for the neck.",
   'equip_slot': 5,
   'spell_armor': 0,
+  'spell_deflect_armor': 1,
   'weight': 0,
   'worth': 0,
 }
@@ -780,6 +782,7 @@ CRESTED_HELM = {
   'desc': "The helm is of steel, and padded with leather. A horsehair crest runs over the surface of the helm from front to back. There is no nose  piece, but metal flaps extend down to protect part of the neck and face.",
   'equip_slot': 5,
   'spell_armor': 0,
+  'spell_deflect_armor': 1,
   'weight': 0,
   'worth': 0,
 }
@@ -792,6 +795,7 @@ DWARVEN_MAIL = {
   'desc': "The mail is finely crafted, but obviously made for a creature of small stature",
   'equip_slot': 4,
   'spell_armor': 6,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -804,6 +808,7 @@ GAUNTLET_OF_CRUSADER = {
   'desc': "The guantlet is made of a fine chain mail mesh, under which lies a glove of red leather. The leather is emblazoned with a rampant dragon, and bears the initial \"C\".",
   'equip_slot': 13,
   'spell_armor': 20,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -815,6 +820,7 @@ GAUNTLETS = {
   'deflect_armor': 0,
   'equip_slot': 13,
   'spell_armor': 0,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -827,6 +833,7 @@ HORNED_HELM = {
   'desc': "The helm is conical and made of iron, with a leather padding on the inside. Affixed to the sides of the helmet, however, are two large bull horns which curve up and out in a menacing fashion.",
   'equip_slot': 5,
   'spell_armor': 0,
+  'spell_deflect_armor': 1,
   'weight': 0,
   'worth': 0,
 }
@@ -839,6 +846,7 @@ LEATHER_BOOTS = {
   'desc': "This pair of boots appear to be slightly worn in, but they look like they are heavy enough to protect your feet from harsh terrain.",
   'equip_slot': 16,
   'spell_armor': 0,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -851,6 +859,7 @@ LEATHER_JERKIN = {
   'desc': "The jerkin is of boiled leather, and comes down to the wearer's knees. Extra strips of hardened leather have been added across the chest, and on the shoulders.",
   'equip_slot': 4,
   'spell_armor': 2,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -863,6 +872,7 @@ MAGIC_HELMET = {
   'desc': "This helmet appears to be made of one solid piece of metal.  There are no lines or rivets, just smooth glimmering surface.",
   'equip_slot': 5,
   'spell_armor': 0,
+  'spell_deflect_armor': 3,
   'weight': 0,
   'worth': 0,
 }
@@ -875,6 +885,7 @@ NORMAN_KITE_SHIELD = {
   'desc': "This shield is narrow, but long. This design helps to protect the full length of the body. The shield is constructed of three layers: the inner most of leather, then one of wood, and then the outer iron layer.",
   'equip_slot': 2,
   'spell_armor': 0,
+  'spell_deflect_armor': 3,
   'weight': 0,
   'worth': 0,
 }
@@ -887,6 +898,7 @@ PLUMED_HELM = {
   'desc': "This helmet is made of steel, and has been worked and molded to protect most of the head, face, and neck, without recourse to extra flaps. The helmet is topped with a long horsehair plume that drapes down to the shoulders.",
   'equip_slot': 5,
   'spell_armor': 0,
+  'spell_deflect_armor': 1,
   'weight': 0,
   'worth': 0,
 }
@@ -899,6 +911,7 @@ QUARTZ_EYES = {
   'desc': "The quartz stones are finely cut spheroids of milky white stone. They are about an inch each in diamtere.",
   'equip_slot': 6,
   'spell_armor': 5,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -911,6 +924,7 @@ RED_PLATE_MAIL = {
   'desc': "This armor appears to be made out of scales from a Red dragon.  As you stare at it, the air around it shimmers with heat.  Yet you feel none of the heat.",
   'equip_slot': 4,
   'spell_armor': 11,
+  'spell_deflect_armor': 10,
   'weight': 30,
   'worth': 0,
 }
@@ -923,6 +937,7 @@ RING_MAIL_ARMOR = {
   'desc': "The ring mail is essntially a leather jerkin covered with a mail of  inter-locking iron ringlets. ",
   'equip_slot': 4,
   'spell_armor': 3,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -935,6 +950,7 @@ SCALE_MAIL_ARMOR = {
   'desc': "This armor is essentially a padded leather jerkin covered with a  mail of overlapping steel plates, or \"scales\". Each scale is about two inches long, and an inch and a half wide, tapering to a point at the trailing edge.",
   'equip_slot': 4,
   'spell_armor': 7,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -947,6 +963,7 @@ SERPENT_SKIN_CLOAK = {
   'desc': "The cape slithers over your shoulders, giving you an uneasy impression that it is alive!",
   'equip_slot': 4,
   'spell_armor': 42,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -959,6 +976,7 @@ STEEL_BREASTPLATE = {
   'desc': "This steel breastplate looks like it will add quite alot to your personal protection, even though it looks quite heavy.",
   'equip_slot': 9,
   'spell_armor': 0,
+  'spell_deflect_armor': 0,
   'weight': 40,
   'worth': 0,
 }
@@ -971,6 +989,7 @@ TROLL_MAIL = {
   'desc': "This armor is made for a creature of great size. It is heavy and made of blackest iron. A relief of strange and Evil looking markings adorns its dull surface.",
   'equip_slot': 4,
   'spell_armor': 7,
+  'spell_deflect_armor': 0,
   'weight': 0,
   'worth': 0,
 }
@@ -983,6 +1002,7 @@ VAPRAKS_SKIN = {
   'desc': "This object looks like a rough, scaley skin that might have been shed by a huge reptile. Upon closer examination, you see that it has been modified to be worn by a humanoid creature.",
   'equip_slot': 9,
   'spell_armor': 12,
+  'spell_deflect_armor': 0,
   'weight': 10,
   'worth': 0,
 }
@@ -995,6 +1015,7 @@ VIKING_ROUND_SHIELD = {
   'desc': "This shield is very large and heavy, and of course, round. The shield is effective in covering most of the body, but is also very heavy and  unwieldy.",
   'equip_slot': 2,
   'spell_armor': 0,
+  'spell_deflect_armor': 4,
   'weight': 0,
   'worth': 0,
 }
@@ -1007,6 +1028,7 @@ WHITE_SCALE_MAIL = {
   'desc': "The armor appears similar in fabrication to scale mail, but instead of utilizing metal plates, it uses small overlapping scales of what appear to be bone, or reptilean armor. The armor is a pure white in color.",
   'equip_slot': 4,
   'spell_armor': 9,
+  'spell_deflect_armor': 0,
   'weight': 5,
   'worth': 0,
 }
@@ -1019,6 +1041,7 @@ WOODEN_SHIELD = {
   'desc': "The wooden shield is constructed of two layers of wooden pieces, each running perpendicular to the grain of the other, with a coating of  oxhide.",
   'equip_slot': 2,
   'spell_armor': 0,
+  'spell_deflect_armor': 2,
   'weight': 0,
   'worth': 0,
 }

@@ -64,50 +64,22 @@ class CmdSheet(Command):
 
   def func(self):
     account = self.account
-
-    # table = self.styled_table(
-    #   "|wStat",
-    #   "|wValue",
-    # )
     table = self.styled_table(
       "|wCharacter Sheet",
     )
-#    utils.crop(account.get_display_name(account), width=25),
-    # table.add_row("Name", utils.crop(account.get_display_name(account), width=25))
-    # table.add_row("Class", "Peasant")
-    # table.add_row("Size", "6'")
-    # table.add_row("Exp/evel", "0/1")
-    # table.add_row("Health/Max", "")
-    # table.add_row("Move delay", "0")
-    # table.add_row("Attack delay", "0")
-    # table.add_row("Weapon usage", "100%")
-    # table.add_row("Poison chnce", "0%")
-    # table.add_row("Move silent", "0%")
-    # table.add_row("Armor", "0/0/0")
-    # table.add_row("Total Kills", "0")
-    # table.add_row("Money", "0")
-    # table.add_row("Money in Bank", "0")
-    # table.add_row("Weapon", "???")
     table.add_row(f"Name         : {utils.crop(account.get_display_name(account), width=25)}")
     table.add_row(f"Class        : Peasant")
+    table.add_row(f"Alignment    : Neutral")
     table.add_row(f"Size         : 6'")
     table.add_row(f"Exp/level    : 0/1")
     table.add_row(f"Health/Max   : {int(account.character.db.health)}/{int(account.character.db.max_health)}")
+    table.add_row(f"Mana/Max     : 0")
+    table.add_row(f"Status       :")
     table.add_row(f"Move delay   : 0")
+    table.add_row(f"Move silent  : 0%")
+    table.add_row(f"Poison chnce : 0%")
     table.add_row(f"Attack delay : 0")
     table.add_row(f"Weapon usage : 100%")
-    table.add_row(f"Poison chnce : 0%")
-    table.add_row(f"Move silent  : 0%")
-    base_armor = 0
-    deflect_armor = 0
-    spell_armor = 0
-    armor = account.character.db.equipped_armor
-    if armor:
-      base_armor = armor.db.base_armor
-      deflect_armor = armor.db.deflect_armor
-      spell_armor = armor.db.spell_armor
-    table.add_row(f"Armor        : {base_armor}/{deflect_armor}/{spell_armor}")
-    table.add_row(f"Total Kills  : 0")
     table.add_row(f"Money        : 0")
     table.add_row(f"Money in Bank: 0")
     base_damage = 0
@@ -117,6 +89,18 @@ class CmdSheet(Command):
       base_damage = weapon.db.base_damage
       random_damage = weapon.db.random_damage
     table.add_row(f"Weapon       : {base_damage}/{random_damage}")
+    base_armor = 0
+    deflect_armor = 0
+    spell_armor = 0
+    spell_deflect_armor = 0
+    armor = account.character.db.equipped_armor
+    if armor:
+      base_armor = armor.db.base_armor
+      deflect_armor = armor.db.deflect_armor
+      spell_armor = armor.db.spell_armor
+      spell_deflect_armor = armor.db.spell_deflect_armor
+    table.add_row(f"Armor        : {base_armor}%, {deflect_armor}% deflect")
+    table.add_row(f"Spell armor  : {spell_armor}%, {spell_deflect_armor}% deflect")
     self.msg("%s" % table)
 
 

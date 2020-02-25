@@ -211,6 +211,7 @@ class Armor(Object):
     self.db.base_armor = 0
     self.db.deflect_armor = 0
     self.db.spell_armor = 0
+    self.db.spell_deflect_armor = 0
     self.db.equip_slot = 4
     self.db.random_damage = 0
     self.db.weight = 0
