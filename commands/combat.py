@@ -116,7 +116,7 @@ class CmdAttack(Command):
     self.caller.location.msg_contents(location_msg, exclude=[self.caller, target])
 
     if hasattr(target, "at_weapon_hit"):
-      target.at_weapon_hit(self.caller.key, weapon, damage)
+      target.at_weapon_hit(self.caller, weapon, damage)
 
 
 class CmdBleed(Command):
