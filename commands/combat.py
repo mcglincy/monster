@@ -3,14 +3,6 @@ from evennia import CmdSet
 from random import randint
 
 
-class CmdSetWeapon(CmdSet):
-  """Holds the attack command."""
-
-  def at_cmdset_creation(self):
-    """called at first object creation."""
-    self.add(CmdAttack())
-
-
 def attacker_msg(target_name, weapon_name, damage):
   if damage > 500:
     return f"You vaporize {target_name}'s putrid body."
@@ -72,9 +64,6 @@ def bystander_msg(attacker_name, target_name, weapon_name, damage):
     return f"{target_name} is grazed by {attacker_name}'s {weapon_name}."
   else:
     return f"{attacker_name} misses {target_name} with a {weapon_name}."
-
-
-
 
 
 class CmdAttack(Command):
