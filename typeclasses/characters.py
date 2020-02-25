@@ -45,8 +45,16 @@ class Character(DefaultCharacter):
     )
 
   def at_after_move(self, source_location, **kwargs):
+    # override to apply our brief descriptions setting
     if self.location.access(self, "view"):
       self.msg(self.at_look(self.location, brief=self.db.brief_descriptions))
+
+  def at_object_leave(self, obj, target_location):
+    # called when an object leaves this object in any fashion
+    super().at_object_leave(obj, target_location)
+    # unequip if equipped
+    if obj.id == self.db.equipped_weapon.id:
+      self.db.equipped_weapon = None
 
   def at_weapon_hit(self, attacker, weapon, damage):
     self.msg(target_msg(attacker.key, weapon.key, damage))
@@ -58,6 +66,8 @@ class Character(DefaultCharacter):
       self.die()
 
   def die(self):
+    # TODO: drop objects
+
     # TODO: go to the actual void
     the_void = search_object("Limbo")[0]
     if the_void:
@@ -121,3 +131,4 @@ class Character(DefaultCharacter):
       return "You are near death."
     else:
       return "You are dead."
+
