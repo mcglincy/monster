@@ -18,7 +18,7 @@ from evennia import default_cmds
 from commands.combat import CmdAttack, CmdBleed, CmdRest
 from commands.equipment import CmdEquip, CmdUnequip
 from commands.hiding import CmdHide, CmdReveal, CmdSearch
-from commands.misc import CmdBrief, CmdDot, CmdSheet
+from commands.misc import CmdBrief, CmdDot, CmdSheet, CmdWho
 from commands.spells import CmdCast
 
 
@@ -51,6 +51,8 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdSearch())
         self.add(CmdSheet())
         self.add(CmdUnequip())
+        self.remove(default_cmds.CmdWho())
+        self.add(CmdWho())
 
 
 class AccountCmdSet(default_cmds.AccountCmdSet):
