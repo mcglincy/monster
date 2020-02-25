@@ -59,7 +59,7 @@ class Character(DefaultCharacter):
 
   def die(self):
     # TODO: go to the actual void
-    the_void = search_object("Limbo")
+    the_void = search_object("Limbo")[0]
     if the_void:
       self.move_to(the_void)
     self.db.health = 200
