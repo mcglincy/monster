@@ -35,7 +35,26 @@ class CmdDot(Command):
     # override to do nothing; we don't want dot as our last_command
     pass
 
-
+"""
+> she
+--------------- Character Sheet ------------------
+Name        :King Kickass
+Class       :Troll
+Size        :      9'
+Exp/level   :   1630/1
+Health/Max  :   2638/2638
+Move delay  :     38/100 seconds
+Attack delay:    280/100 seconds
+Weapon usage:    100%
+Poison chnce:      5%
+Move silent :     10%
+Armor       :     20%
+Total Kills :      3
+Money       :     44
+Money in Bank:      70
+Weapon      :claws 250/395
+--------------------------------------------------
+"""
 class CmdSheet(Command):
   """Show character sheet."""
   key = "sheet"
@@ -47,6 +66,25 @@ class CmdSheet(Command):
     self.not_implemented_yet()
 
 
+"""
+> who
+                     Monster Status
+                  26-FEB-1991  8:38pm
+                  * - Monster Operator
+
+Username   Game Name             Level     Class  Where
+v112pfsd   Turin Deathstalker        7     Thief  royal passageway
+v130qmty   Friendly Druid            1  HelDruid  void
+v063j3h4   Magog                     1      Mage  the maze
+v056mdht   sorry freeon it           2     Troll  northwest corner
+v051lpqa  *opp'n along               9  GameMstr  the maze
+v059nqal   Soulcatcher               3      Mage  the maze
+v125qqna   Hanged Man                3     Mummy  bordering forest
+v999rbqh   Freeon it                 1     Troll  east base of hill
+v125qqml   Puzzeledfrog              1   Warrior  lothlorien shop
+masproj1   King Kickass              1     Troll  necromancer street.
+v108npa5   Mummy                     1     Troll  the maze
+"""
 class CmdWho(Command):
   """list who is currently online"""
 
@@ -98,10 +136,11 @@ class CmdWho(Command):
     else:
       # unprivileged
       table = self.styled_table(
-        "|wAccount name", 
-        "|wOn for", 
-        "|wIdle",
-        "|wRoom",
+        "|wUsername", 
+        "|wGame Name", 
+        "|wLevel", 
+        "|wClass", 
+        "|wWhere",
       )
       for session in session_list:
         if not session.logged_in:
@@ -113,12 +152,12 @@ class CmdWho(Command):
         location = puppet.location.key if puppet and puppet.location else "None"        
         table.add_row(
           utils.crop(account.get_display_name(account), width=25),
-          utils.time_format(delta_conn, 0),
-          utils.time_format(delta_cmd, 1),
+          utils.crop(puppet.get_display_name(account) if puppet else "None", width=25),
+          "1",
+          "Peasant",
           utils.crop(location, width=25),            
       )
-    is_one = naccounts == 1
     self.msg(
-      "|wAccounts:|n\n%s\n%s unique account%s logged in."
-      % (table, "One" if is_one else naccounts, "" if is_one else "s")
+      "|w                     Monster Status\n                  26-FEB-1991  8:38pm\n                  * - Monster Operator|n\n%s"
+      % table
     )
