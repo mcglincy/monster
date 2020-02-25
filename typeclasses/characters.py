@@ -51,17 +51,17 @@ class Character(DefaultCharacter):
   def at_weapon_hit(self, attacker, weapon, damage):
     self.msg(target_msg(attacker.key, weapon.key, damage))
     # TODO: apply armor
-    new_health = self.db.health - damage
-    if new_health <= 0:
-      # death
-      self.db.health = 0
-    else:
-      self.db.health = new_health
+    self.db.health = max(self.db.health - damage, 0)
     self.msg(self_health_msg)
-
     if self.db.health <= 0:
-      # TODO: go to the void
-      pass
+      self.die()
+
+  def die(self):
+    # TODO: go to the actual void
+    the_void = search_object("Limbo")
+    if the_void:
+      self.move_to(the_void)
+    self.db.health = 200
 
   def self_health_msg(self, health):
     health = self.db.health
