@@ -64,6 +64,35 @@ class Character(DefaultCharacter):
       self.move_to(the_void)
     self.db.health = 200
 
+  def health_msg(self):
+    health = self.db.health
+    if health >= 1700:
+      return f"{self.key} is in ultimate health."
+    elif health > 1400:
+      return f"{self.key} is in incredible health."
+    elif health > 1200:
+      return f"{self.key} is in extraordinary health."
+    elif health > 1000:
+      return f"{self.key} is in tremendous health."
+    elif health > 850:
+      return f"{self.key} is in superior condition."
+    elif health > 700:
+      return f"{self.key} is in exceptional health."
+    elif health > 500:
+      return f"{self.key} is in good health."
+    elif health > 350:
+      return f"{self.key} looks a little bit dazed."
+    elif health > 200:
+      return f"{self.key} has some minor wounds."
+    elif health > 100:
+      return f"{self.key} is suffering from some serious wounds."
+    elif health > 50:
+      return f"{self.key} is in critical condition."
+    elif health > 1:
+      return f"{self.key} is near death."
+    else:
+      return f"{self.key} is dead."
+  
   def self_health_msg(self):
     health = self.db.health
     if health >= 1700:
