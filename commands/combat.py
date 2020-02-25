@@ -122,6 +122,7 @@ class CmdBleed(Command):
 
 class CmdRest(Command):
   key = "rest"
+  aliases = ["res"]
   locks = "cmd:all()"
   help_category = "Monster"
 
