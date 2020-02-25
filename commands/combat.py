@@ -42,7 +42,7 @@ def target_msg(attacker_name, weapon_name, damage):
   elif damage > 200:
     return f"{attacker_name}'s {weapon_name} creams your poor little body!!"
   elif damage > 150:
-    return f"{attacker_name}Your {weapon_name} hits {target_name} very hard!"
+    return f"{attacker_name}'s {weapon_name} hits you very hard!"
   elif damage > 100:
     return f"{attacker_name}'s {weapon_name} hits you hard!"
   elif damage > 50:
