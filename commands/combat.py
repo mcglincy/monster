@@ -78,29 +78,15 @@ def bystander_msg(attacker_name, target_name, weapon_name, damage):
 
 
 class CmdAttack(Command):
-  """
-  Attack the enemy. Commands:
-
-    attack <enemy>
-  """
+  """Attack the enemy."""
   key = "attack"
   aliases = ["att", "atta", "attac"]
   locks = "cmd:all()"
   help_category = "Monster"
 
   def func(self):
-    """Implements the attack."""
-    cmdstring = self.cmdstring
     if not self.args:
-      self.caller.msg("Who do you attack?")
-      return
-    target = self.caller.search(self.args.strip())
-    if not target:
-      return
-
-    # TODO: have some target validity check
-    if self.caller.key == target.key:
-      self.caller.msg("You can't attack yourself!")
+      self.caller.msg("Usage: attack <target>")
       return
 
     weapon = self.caller.db.equipped_weapon
@@ -108,15 +94,30 @@ class CmdAttack(Command):
       self.caller.msg("You have no equipped weapon!")
       return
 
+    target = self.caller.search(self.args.strip())
+    if not target:
+      return
+
+    if not hasattr(target, "at_weapon_hit"):
+      self.caller.msg("You can't attack that.")
+      return
+
+    if self.caller.key == target.key:
+      self.caller.msg("You can't attack yourself!")
+      return
+
     # TODO: apply attacker level etc to damage calc
     damage = weapon.db.base_damage + randint(0, weapon.db.random_damage)
 
+    # attack message for attacker
     self.caller.msg(attacker_msg(target.key, weapon.key, damage))
+
+    # attack message for room bystanders
     location_msg = bystander_msg(self.caller.key, target.key, weapon.key, damage)
     self.caller.location.msg_contents(location_msg, exclude=[self.caller, target])
 
-    if hasattr(target, "at_weapon_hit"):
-      target.at_weapon_hit(self.caller, weapon, damage)
+    # target takes the hit
+    target.at_weapon_hit(self.caller, weapon, damage)
 
 
 class CmdBleed(Command):
