@@ -52,7 +52,7 @@ class Character(DefaultCharacter):
     self.msg(target_msg(attacker.key, weapon.key, damage))
     # TODO: apply armor
     self.db.health = max(self.db.health - damage, 0)
-    self.msg(self_health_msg)
+    self.msg(self.self_health_msg())
     if self.db.health <= 0:
       self.die()
 
