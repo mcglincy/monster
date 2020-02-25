@@ -15,7 +15,7 @@ import random
 from evennia import CmdSet, Command, DefaultExit, DefaultObject
 from evennia.utils import search, delay
 from evennia.prototypes.spawner import spawn
-from commands.combat import CmdAttack, CmdSetWeapon
+from commands.combat import CmdAttack
 
 
 class Object(DefaultObject):
