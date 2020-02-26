@@ -43,6 +43,7 @@ class Character(DefaultCharacter):
     # TODO: support various equipment slots
     self.db.equipped_weapon = None
     self.db.equipped_armor = None
+    self.db.gold_in_bank = 0
 
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
@@ -92,6 +93,13 @@ class Character(DefaultCharacter):
     self.db.health = min(self.db.health + amount, self.db.max_health)
     self.msg(self.self_health_msg())
     self.location.msg_contents(self.health_msg(), exclude=[self])
+
+  def carried_gold_amount(self):
+    gold = self.search("gold",
+      candidates=self.contents, typeclass="typeclasses.objects.Gold", quiet=True)
+    if len(gold) > 0:
+      return gold[0].db.amount
+    return 0
 
   def die(self):
     # drop everything we're holding

@@ -80,8 +80,8 @@ class CmdSheet(Command):
     table.add_row(f"Poison chnce : 0%")
     table.add_row(f"Attack delay : 0")
     table.add_row(f"Weapon usage : 100%")
-    table.add_row(f"Money        : 0")
-    table.add_row(f"Money in Bank: 0")
+    table.add_row(f"Money        : {int(account.character.carried_gold_amount())}")
+    table.add_row(f"Money in Bank: {int(account.character.db.gold_in_bank)}")
     base_damage = 0
     random_damage = 0
     weapon = account.character.db.equipped_weapon

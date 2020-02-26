@@ -192,6 +192,44 @@ class Object(DefaultObject):
       return f"{self.key} is dead."
 
 
+class Gold(Object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.amount = 0
+    self.add(5)
+
+  def get_display_name(self, looker, **kwargs):
+    if self.locks.check_lockstring(looker, "perm(Builder)"):
+      return f"{self.name}({self.db.amount})(#{self.id})"
+    return f"{self.name}({self.db.amount})"
+
+  def add(self, amount):
+    self.db.amount = max(self.db.amount + amount, 0)
+    if self.db.amount == 0:
+      self.delete()
+    self.db.desc = f"A bag of gold({self.db.amount})"
+
+  def at_get(self, getter, **kwargs):
+    # see if getter already has a bag of gold, and add picked-up gold to it
+    existing_gold = getter.search("gold",
+      candidates=getter.contents, typeclass="typeclasses.objects.Gold", quiet=True)
+    if len(existing_gold) > 1:
+      keeper = existing_gold[0]
+      for g in existing_gold[1:]:
+        keeper.add(g.db.amount)
+        g.delete()
+
+  def at_drop(self, dropper, **kwargs):
+    # see if room already has a bag of gold, and add dropped gold to it
+    existing_gold = self.location.search("gold",
+      candidates=self.location.contents, typeclass="typeclasses.objects.Gold", quiet=True)
+    if len(existing_gold) > 1:
+      keeper = existing_gold[0]
+      for g in existing_gold[1:]:
+        keeper.add(g.db.amount)
+        g.delete()
+
+
 class Weapon(Object):
   def at_object_creation(self):
     """Called at first creation of the object."""
