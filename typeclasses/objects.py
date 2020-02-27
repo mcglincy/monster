@@ -13,7 +13,7 @@ inheritance.
 import random
 
 from evennia import CmdSet, Command, DefaultExit, DefaultObject
-from evennia.utils import search, delay
+from evennia.utils import delay, evtable, search
 from evennia.prototypes.spawner import spawn
 from commands.combat import CmdAttack
 from typeclasses.health import health_msg
@@ -264,11 +264,12 @@ class Merchant(Object):
 
   def return_appearance(self, looker, **kwargs):
     lines = []
-    lines.append("You see a merchant, hawking their wares:")
+    lines.append("")
+    table = evtable.EvTable("Item", "Cost")
     for obj in self.contents:
       cost = obj.db.worth if obj.db.worth else 0
-      lines.append(f"- {obj.key} ({cost})")
-    return "\n".join(lines)
+      table.add_row(obj.key, cost)
+    return f"You see a merchant, hawking their wares:\n{table}"
 
   def at_object_receive(self, moved_obj, source_location, **kwargs):
     # only admins can give objects to merchant to go on sale
