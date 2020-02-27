@@ -270,3 +270,9 @@ class Merchant(Object):
       lines.append(f"- {obj.key} ({cost})")
     return "\n".join(lines)
 
+  def at_object_receive(self, moved_obj, source_location, **kwargs):
+    # TODO: can we allow only priv'd giver?
+    if source_location and hasattr(source_location, "msg"):
+      source_location.msg("Sweet, merchants love free stuff.")
+      moved_obj.delete()
+
