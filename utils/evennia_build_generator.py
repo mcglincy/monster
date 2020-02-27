@@ -1,10 +1,53 @@
 #!/usr/bin/python3
 
+from enum import IntEnum
 import json
 
 
 ROOMDESC_FILE = './json/roomdesc.json'
 DESC_FILE = './json/desc.json'
+
+
+class RoomKind(IntEnum):
+  MARKET = 0
+  NO_COMBAT = 1
+  NO_HIDE = 2
+  HARD_TO_HIDE = 3
+  OBJECT_DESTROY = 4
+  TREASURE_DROP = 5
+  MONSTER_GENERATOR = 6
+  MONSTER_LAIR = 7
+  MONSTER_GENERATOR_GROUP = 8
+  MONSTER_GENERATOR_MIN_LEVEL = 9
+  MONSTER_GENERATOR_MAX_LEVEL = 10
+  HEAL = 11
+
+
+class ExitKind(IntEnum):
+  NO_EXIT = 0
+  OPEN = 1
+  OBJECT_REQUIRED = 2
+  OBJECT_FORBIDDEN = 3
+  RANDOM_FAIL = 4
+  POTENTIAL_EXIT = 5
+  ONLY_EXISTS_WHILE_HOLDING_OBJECT = 6
+  TIMED = 7
+  PASSWORDED = 8
+
+
+class ExitEffectKind(IntEnum):
+  XP = 1
+  WEALTH = 2
+  BANK_WEALTH = 3
+  HEALTH = 4
+  MANA = 5
+  XP_SET = 6
+  CLASS_RESET = 7
+  CLASS_SET = 8
+  ALARMED = 9
+  HEALTH_LESS = 10
+  GUARDIAN = 11
+  XP_MODIFIED = 12
 
 
 def main():

@@ -10,9 +10,9 @@ OBJECT_FILE = './json/objects.json'
 
 class ObjectKind(IntEnum):
   BLAND = 0
-  EQUIP= 1
+  EQUIP = 1
   SCROLL = 2
-  WAND   = 3
+  WAND = 3
   MISSILE = 7
   MISSILELAUNCHER = 8
   SBOOK = 104
