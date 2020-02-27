@@ -16,6 +16,7 @@ from evennia import CmdSet, Command, DefaultExit, DefaultObject
 from evennia.utils import search, delay
 from evennia.prototypes.spawner import spawn
 from commands.combat import CmdAttack
+from typeclasses.health import health_msg
 
 
 class Object(DefaultObject):
@@ -162,34 +163,7 @@ class Object(DefaultObject):
    at_say(speaker, message)  - by default, called if an object inside this
                                object speaks
   """
-  def health_msg(self):
-    health = self.db.health
-    if health >= 1700:
-      return f"{self.key} is in ultimate health."
-    elif health > 1400:
-      return f"{self.key} is in incredible health."
-    elif health > 1200:
-      return f"{self.key} is in extraordinary health."
-    elif health > 1000:
-      return f"{self.key} is in tremendous health."
-    elif health > 850:
-      return f"{self.key} is in superior condition."
-    elif health > 700:
-      return f"{self.key} is in exceptional health."
-    elif health > 500:
-      return f"{self.key} is in good health."
-    elif health > 350:
-      return f"{self.key} looks a little bit dazed."
-    elif health > 200:
-      return f"{self.key} has some minor wounds."
-    elif health > 100:
-      return f"{self.key} is suffering from some serious wounds."
-    elif health > 50:
-      return f"{self.key} is in critical condition."
-    elif health > 1:
-      return f"{self.key} is near death."
-    else:
-      return f"{self.key} is dead."
+  pass
 
 
 class Gold(Object):
@@ -207,7 +181,7 @@ class Gold(Object):
     self.db.amount = max(self.db.amount + amount, 0)
     if self.db.amount == 0:
       self.delete()
-    self.db.desc = f"A bag of gold({self.db.amount})"
+    self.db.desc = f"{self.db.amount} gold"
 
   def at_get(self, getter, **kwargs):
     # see if getter already has a bag of gold, and add picked-up gold to it
@@ -271,6 +245,6 @@ class Mob(Object):
       # TODO: give attacker experience
     else:
       # tell everyone else in the room our health
-      self.location.msg_contents(self.health_msg(), exclude=[self])
+      self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
 
 

@@ -11,7 +11,7 @@ from random import randint
 from evennia import DefaultCharacter, search_object
 from evennia.commands import cmdhandler
 from commands.combat import target_msg
-
+from typeclasses.health import health_msg
 
 class Character(DefaultCharacter):
   """
@@ -84,15 +84,15 @@ class Character(DefaultCharacter):
   def at_damage(self, damage):
     self.db.health = max(self.db.health - damage, 0)
     self.msg(f"You take {damage} damage.")
-    self.msg(self.self_health_msg())
-    self.location.msg_contents(self.health_msg(), exclude=[self])
+    self.msg(health_msg("You", self.db.health))
+    self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
     if self.db.health <= 0:
       self.die()
 
   def at_heal(self, amount):
     self.db.health = min(self.db.health + amount, self.db.max_health)
-    self.msg(self.self_health_msg())
-    self.location.msg_contents(self.health_msg(), exclude=[self])
+    self.msg(health_msg("You", self.db.health))
+    self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
 
   def carried_gold_amount(self):
     gold = self.search("gold",
@@ -104,70 +104,13 @@ class Character(DefaultCharacter):
   def die(self):
     # drop everything we're holding
     for obj in self.contents:
-      # TODO: possible destroy chance?
-      self.execute_cmd(f"drop {obj.key}")
+      if obj.db.worth:
+        # only drop things with value
+        # TODO: possible destroy chance?
+        self.execute_cmd(f"drop {obj.key}")
 
     # TODO: go to the actual void room
     the_void = search_object("Limbo")[0]
     if the_void:
       self.move_to(the_void)
     self.db.health = 200
-
-  def health_msg(self):
-    health = self.db.health
-    if health >= 1700:
-      return f"{self.key} is in ultimate health."
-    elif health > 1400:
-      return f"{self.key} is in incredible health."
-    elif health > 1200:
-      return f"{self.key} is in extraordinary health."
-    elif health > 1000:
-      return f"{self.key} is in tremendous health."
-    elif health > 850:
-      return f"{self.key} is in superior condition."
-    elif health > 700:
-      return f"{self.key} is in exceptional health."
-    elif health > 500:
-      return f"{self.key} is in good health."
-    elif health > 350:
-      return f"{self.key} looks a little bit dazed."
-    elif health > 200:
-      return f"{self.key} has some minor wounds."
-    elif health > 100:
-      return f"{self.key} is suffering from some serious wounds."
-    elif health > 50:
-      return f"{self.key} is in critical condition."
-    elif health > 1:
-      return f"{self.key} is near death."
-    else:
-      return f"{self.key} is dead."
-
-  def self_health_msg(self):
-    health = self.db.health
-    if health >= 1700:
-      return "You are in ultimate health."
-    elif health > 1400:
-      return "You are in incredible health."
-    elif health > 1200:
-      return "You are in extraordinary health."
-    elif health > 1000:
-      return "You are in tremendous health."
-    elif health > 850:
-      return "You are in superior condition."
-    elif health > 700:
-      return "You are in exceptional health."
-    elif health > 500:
-      return "You are in good health."
-    elif health > 350:
-      return "You feel a little bit dazed."
-    elif health > 200:
-      return "You have some minor cuts and abrasions."
-    elif health > 100:
-      return "You are suffering from some serious wounds."
-    elif health > 50:
-      return "You are in critical condition."
-    elif health > 1:
-      return "You are near death."
-    else:
-      return "You are dead."
-
