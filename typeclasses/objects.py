@@ -271,8 +271,10 @@ class Merchant(Object):
     return "\n".join(lines)
 
   def at_object_receive(self, moved_obj, source_location, **kwargs):
-    # TODO: can we allow only priv'd giver?
-    if source_location and hasattr(source_location, "msg"):
-      source_location.msg("Sweet, merchants love free stuff.")
+    # only admins can give objects to merchant to go on sale
+    is_admin = (source_location and source_location.account 
+      and (source_location.account.check_permstring("Developer") or source_location.account.check_permstring("Admins")))
+    if not is_admin:
       moved_obj.delete()
-
+      if source_location and hasattr(source_location, "msg"):
+        source_location.msg("Sweet, merchants love free stuff.")

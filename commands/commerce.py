@@ -1,4 +1,5 @@
 from commands.command import Command
+from evennia.objects.models import ObjectDB
 
 
 class CmdBuy(Command):
@@ -33,9 +34,8 @@ class CmdBuy(Command):
     # TODO: take buyer gold
     # seller.take_gold(worth)
     self.caller.msg(f"You buy a {obj.key} for {worth} gold.")
-    newobj = obj.copy()
-    newobj.key = obj.key
-    newobj.move_to(self.caller)
+    # copy the object directly into the caller
+    ObjectDB.objects.copy_object(obj, new_key=obj.key, new_location=self.caller)
 
 
 class CmdSell(Command):
