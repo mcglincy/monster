@@ -16,6 +16,7 @@ own cmdsets by inheriting from them or directly from `evennia.CmdSet`.
 
 from evennia import default_cmds
 from commands.combat import CmdAttack, CmdBleed, CmdRest
+from commands.commerce import CmdBuy, CmdSell
 from commands.equipment import CmdEquip, CmdUnequip
 from commands.hiding import CmdHide, CmdReveal, CmdSearch
 from commands.misc import CmdBrief, CmdDot, CmdSheet, CmdWho
@@ -41,6 +42,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         #
         self.add(CmdAttack())
         self.add(CmdBleed())
+        self.add(CmdBuy())
         self.add(CmdBrief())
         self.add(CmdCast())
         self.add(CmdDot())
@@ -48,8 +50,9 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdHide())
         self.add(CmdReveal())
         self.add(CmdRest())
-        self.add(CmdSearch())
         self.add(CmdSheet())
+        self.add(CmdSearch())
+        self.add(CmdSell())
         self.add(CmdUnequip())
         self.remove(default_cmds.CmdWho())
         self.add(CmdWho())

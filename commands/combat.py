@@ -1,5 +1,4 @@
 from commands.command import Command
-from evennia import CmdSet
 from random import randint
 
 
