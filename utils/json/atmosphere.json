@@ -1,0 +1,668 @@
+[
+  {
+    "trigger": "smile",
+    "i_see": "You smile to yourself.",
+    "event_see": "& is smiling to himself.",
+    "i_see_extra": "You smile at #.",
+    "event_see_extra": "& is smiling at #.",
+    "owner": "maslib",
+    "id": 1
+  },
+  {
+    "trigger": "spit",
+    "i_see": "You split on the floor in disgust!",
+    "event_see": "& just spat on the ground.",
+    "i_see_extra": "# is now covered in your spit!",
+    "event_see_extra": "& just spit all over #.",
+    "owner": "",
+    "id": 2
+  },
+  {
+    "trigger": "slap",
+    "i_see": "You slap yourself in the face.",
+    "event_see": "& just slapped himself in the face.",
+    "i_see_extra": "You just assaulted #!",
+    "event_see_extra": "& just slapped #!",
+    "owner": "",
+    "id": 3
+  },
+  {
+    "trigger": "kiss",
+    "i_see": "You kiss yourself.",
+    "event_see": "& just kissed himself.",
+    "i_see_extra": "You kiss # on the cheek.",
+    "event_see_extra": "& just kissed # on the cheek.",
+    "owner": "",
+    "id": 4
+  },
+  {
+    "trigger": "chuckle",
+    "i_see": "You chuckle to yourself.",
+    "event_see": "& is chuckling.",
+    "i_see_extra": "You chuckle at #.",
+    "event_see_extra": "& chuckles at #.",
+    "owner": "",
+    "id": 5
+  },
+  {
+    "trigger": "puke",
+    "i_see": "You blow chunks.",
+    "event_see": "& ralphs all over you.",
+    "i_see_extra": "You puke on #.",
+    "event_see_extra": "& just ralphed all over #!",
+    "owner": "",
+    "id": 6
+  },
+  {
+    "trigger": "grin",
+    "i_see": "You grin to yourself.",
+    "event_see": "& is grinning evilly.",
+    "i_see_extra": "You grin evilly at #.",
+    "event_see_extra": "& is grinning evilly at #.",
+    "owner": "",
+    "id": 7
+  },
+  {
+    "trigger": "nod",
+    "i_see": "You nod solemnly.",
+    "event_see": "& is nodding solemnly.",
+    "i_see_extra": "You nod solemnly to #.",
+    "event_see_extra": "& is nodding solemnly towards #.",
+    "owner": "maslib",
+    "id": 8
+  },
+  {
+    "trigger": "hug",
+    "i_see": "You hug yourself.",
+    "event_see": "& gives you a large bear hug.",
+    "i_see_extra": "You give # a large bear hug.",
+    "event_see_extra": "& gives # a large bear hug.",
+    "owner": "v063l2rq",
+    "id": 9
+  },
+  {
+    "trigger": "laugh",
+    "i_see": "You start to laugh aloud!",
+    "event_see": "& begins laughing!",
+    "i_see_extra": "You mock # and start laughing!",
+    "event_see_extra": "& points at # and starts laughing!!!",
+    "owner": "masmurf",
+    "id": 10
+  },
+  {
+    "trigger": "sleep",
+    "i_see": "You fall asleep in the corner.",
+    "event_see": "& wanders over to the corner and falls asleep.",
+    "i_see_extra": "You fall asleep beside #.",
+    "event_see_extra": "& falls asleep beside #.",
+    "owner": "maslib",
+    "id": 11
+  },
+  {
+    "trigger": "cackle",
+    "i_see": "You cackle gleefully.",
+    "event_see": "& cackles loudly.  You are a bit frightened.",
+    "i_see_extra": "You cackle at #, he appears frightened.",
+    "event_see_extra": "& makes a strange cackling noise, it scares #.",
+    "owner": "v063l2rq",
+    "id": 12
+  },
+  {
+    "trigger": "flip",
+    "i_see": "You do a back flip!",
+    "event_see": "& does a backflip!",
+    "i_see_extra": "You do a backflip over #!!!",
+    "event_see_extra": "& does a backflip over #!!!",
+    "owner": "masmurf",
+    "id": 13
+  },
+  {
+    "trigger": "toss",
+    "i_see": "You toss off!",
+    "event_see": "& tosses off! Eeewww!",
+    "i_see_extra": "You toss # across the room! Ouch!",
+    "event_see_extra": "& tosses # across the room! Eeeks!",
+    "owner": "masmurf",
+    "id": 14
+  },
+  {
+    "trigger": "pat",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "You pat # fondly on the head.",
+    "event_see_extra": "& pats # fondly on the head.",
+    "owner": "v134kkhp",
+    "id": 15
+  },
+  {
+    "trigger": "headbutt",
+    "i_see": "Your head starts to throb after the tremendous impact!",
+    "event_see": "& rears his head back and crushes your skull with his own.",
+    "i_see_extra": "Your head starts to throb after you headbutt #!",
+    "event_see_extra": "Blood splatters all over as & viciously headbutts #.",
+    "owner": "v042mzv7",
+    "id": 16
+  },
+  {
+    "trigger": "boo",
+    "i_see": "",
+    "event_see": "You are knocking on death's door.",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v134kkhp",
+    "id": 17
+  },
+  {
+    "trigger": "bird",
+    "i_see": "You flip everyone the bird!",
+    "event_see": "& flips everyone the bird!",
+    "i_see_extra": "You flip # the bird and he doesn't look happy.",
+    "event_see_extra": "& flips # the bird! Aren't you angry?",
+    "owner": "",
+    "id": 18
+  },
+  {
+    "trigger": "kick",
+    "i_see": "You kick the ground in disgust.",
+    "event_see": "& is kicking the ground in disgust.",
+    "i_see_extra": "You kick # in the balls!!!",
+    "event_see_extra": "& kicks # right where it counts!!!! OUCH!",
+    "owner": "",
+    "id": 19
+  },
+  {
+    "trigger": "giggle",
+    "i_see": "You giggle.",
+    "event_see": "& giggles insanely.",
+    "i_see_extra": "You giggle at #.",
+    "event_see_extra": "& giggles at #. What a silly person!",
+    "owner": "v134kkhp",
+    "id": 20
+  },
+  {
+    "trigger": "sigh",
+    "i_see": "What's wrong?",
+    "event_see": "& sighs.",
+    "i_see_extra": "You look at & and sigh.",
+    "event_see_extra": "& looks at # and sighs.",
+    "owner": "v115p8d6",
+    "id": 21
+  },
+  {
+    "trigger": "bow",
+    "i_see": "You bow.",
+    "event_see": "& is bowing.",
+    "i_see_extra": "You bow to #.",
+    "event_see_extra": "& bows to #.",
+    "owner": "maslib",
+    "id": 22
+  },
+  {
+    "trigger": "evil",
+    "i_see": "You give everyone the evil eye.",
+    "event_see": "& gives everyone the evil eye.",
+    "i_see_extra": "You give # the evil eye.",
+    "event_see_extra": "& gives # the evil eye! Spooky!",
+    "owner": "v134kkhp",
+    "id": 23
+  },
+  {
+    "trigger": "poot",
+    "i_see": "You let out a real rip-roarer!",
+    "event_see": "& fires off a real rip-roarer! Whew!",
+    "i_see_extra": "You fart and blame it on #. Very sneaky!",
+    "event_see_extra": "& says # farted! What a stinker!",
+    "owner": "v134kkhp",
+    "id": 24
+  },
+  {
+    "trigger": "mumble",
+    "i_see": "You mumble.",
+    "event_see": "& starts mumbling about something.",
+    "i_see_extra": "You mumble something incomprehensible to #.",
+    "event_see_extra": "& mumbles something incomprehensible to #.",
+    "owner": "v134kkhp",
+    "id": 25
+  },
+  {
+    "trigger": "complain",
+    "i_see": "Grumpy?",
+    "event_see": "& starts complaining.",
+    "i_see_extra": "What did # ever do to you?",
+    "event_see_extra": "& starts complaining about #.",
+    "owner": "v134kkhp",
+    "id": 26
+  },
+  {
+    "trigger": "goose",
+    "i_see": "You look around for someone to goose...",
+    "event_see": "& looks horny.",
+    "i_see_extra": "You goose # hard on the buttocks!",
+    "event_see_extra": "& gooses # hard on the buttocks!",
+    "owner": "masmurf",
+    "id": 27
+  },
+  {
+    "trigger": "arm",
+    "i_see": "You rip off you arm and beat yourself with it.",
+    "event_see": "& rips off his arm and beats himself silly with it.",
+    "i_see_extra": "You rip off your arm and beat # with it.",
+    "event_see_extra": "& rips off his arm and beats # to death with it.",
+    "owner": "v042mzv7",
+    "id": 28
+  },
+  {
+    "trigger": "shrug",
+    "i_see": "You shrug.",
+    "event_see": "& shrugs.",
+    "i_see_extra": "You shrug to #.",
+    "event_see_extra": "& shrugs to #.",
+    "owner": "masdough",
+    "id": 29
+  },
+  {
+    "trigger": "burp",
+    "i_see": "you Burp loudly",
+    "event_see": "BUUUUUURRRRRRRRRRPPPPPPPPPP!",
+    "i_see_extra": "BUUUUUUUUUUUUUURRRRRRRRRRRRRRPPPPPPPPPPP",
+    "event_see_extra": "BUUUUUUUUUUUURRRRRRRRRRRRPPPPPPPPP",
+    "owner": "v065mhf7",
+    "id": 30
+  },
+  {
+    "trigger": "hack",
+    "i_see": "You feel like a lamer.",
+    "event_see": "& starts to lame.",
+    "i_see_extra": "You try to hack #'s account!",
+    "event_see_extra": "& is trying to hack # account!",
+    "owner": "masmurf",
+    "id": 31
+  },
+  {
+    "trigger": "Yummy",
+    "i_see": "You poke you own eye out and eat it.",
+    "event_see": "Blood runs down &'s face as he pokes his eye out and eats it.",
+    "i_see_extra": "Bloood runs down #'s face as you poke his eye out and eat it.",
+    "event_see_extra": "& pokes out # eye and munchs it.",
+    "owner": "v042mzv7",
+    "id": 32
+  },
+  {
+    "trigger": "fro",
+    "i_see": "You slap yo' fro!",
+    "event_see": "& slaps his fro'!!",
+    "i_see_extra": "You slap #'s fro!",
+    "event_see_extra": "& slap's #'s fro!!",
+    "owner": "masmurf",
+    "id": 33
+  },
+  {
+    "trigger": "sing",
+    "i_see": "You lift your voice in song.",
+    "event_see": "doo wah diddy diddy dum diddy dee!",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "acssqmc",
+    "id": 34
+  },
+  {
+    "trigger": "hail",
+    "i_see": "You hail everyone assembled.",
+    "event_see": "& greets everyone.",
+    "i_see_extra": "You greet # heartily.",
+    "event_see_extra": "& greets #, giving hearty welcome.",
+    "owner": "v073pzuy",
+    "id": 35
+  },
+  {
+    "trigger": "doh!",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v071rcvs",
+    "id": 36
+  },
+  {
+    "trigger": "yummy",
+    "i_see": "You poke out your eye and eat it.",
+    "event_see": "Blood runs down &'s face as he pokes his eye out and eats it.",
+    "i_see_extra": "You poke #'s eye out and eat it.",
+    "event_see_extra": "Blood runs down #'s face as & pokes his eye out and eats it.",
+    "owner": "v042mzv7",
+    "id": 37
+  },
+  {
+    "trigger": "cool",
+    "i_see": "This game is way too cool.",
+    "event_see": "& obviously thinks this is cool!",
+    "i_see_extra": "# looks at you as if you were realy cool.",
+    "event_see_extra": "& looks realy cool to #.",
+    "owner": "v085r4v3",
+    "id": 38
+  },
+  {
+    "trigger": "mom",
+    "i_see": "Someone is sleeping with your mother...who is it?",
+    "event_see": "Cool. You are sleeping with &'s mother!",
+    "i_see_extra": "Someone just screwed your mother! Kill 'em!",
+    "event_see_extra": "Cool.  &'s mother is having sex with #!",
+    "owner": "v085r4v3",
+    "id": 39
+  },
+  {
+    "trigger": "butthead",
+    "i_see": "Butthead hits you hard,  You are killed!",
+    "event_see": "& is killed by Butthead!",
+    "i_see_extra": "Butthead kills #. Huhuhu!",
+    "event_see_extra": "Butthead kills #. \"Monster like, sucks or something\"",
+    "owner": "v085r4v3",
+    "id": 40
+  },
+  {
+    "trigger": "dad",
+    "i_see": "Someone is sleeping with someone's mother! I wonder??",
+    "event_see": "Someone is sleeping with &re mom!",
+    "i_see_extra": "Someone Takes # mother and pounds the shit out of her!",
+    "event_see_extra": "Someone is sleeping with # mom",
+    "owner": "v177mbfs",
+    "id": 41
+  },
+  {
+    "trigger": "void",
+    "i_see": "Someone is dead! Who could it be. Believe it or not it's just me.",
+    "event_see": "& is dead.",
+    "i_see_extra": "# has died.",
+    "event_see_extra": "# have been slain by &'s Beer Bottle!",
+    "owner": "v177mbfs",
+    "id": 42
+  },
+  {
+    "trigger": "shit",
+    "i_see": "You shit in the corner! Pewww! does it smell!",
+    "event_see": "& shit in the Corner. How disgusting!!",
+    "i_see_extra": "# was watching someone shit in the corner! Peeping Tom!!",
+    "event_see_extra": "# wipes & ass as he shits in the corner!",
+    "owner": "v177mbfs",
+    "id": 43
+  },
+  {
+    "trigger": "dragon",
+    "i_see": "You dupe a dragon in the room.",
+    "event_see": "A Red Dragon has come into the room from up.",
+    "i_see_extra": "You dupe a dragon in to room.",
+    "event_see_extra": "A Red Dragon has come into the room from up.",
+    "owner": "v063l2rq",
+    "id": 44
+  },
+  {
+    "trigger": "bored",
+    "i_see": "you are quite bored, and fall asleep.",
+    "event_see": "& appears to be nodding off from boredom.",
+    "i_see_extra": "# is more boring than your professors. ZZzzz.",
+    "event_see_extra": "& whispers to you,\"I am bored by #.\"",
+    "owner": "v085r4v3",
+    "id": 45
+  },
+  {
+    "trigger": "bug",
+    "i_see": "You dupe a bugbear.",
+    "event_see": "A Bugbear has come into the room from up.",
+    "i_see_extra": "You dupe a Bugbear.",
+    "event_see_extra": "A Bugbear has come into the room from up.",
+    "owner": "v063l2rq",
+    "id": 46
+  },
+  {
+    "trigger": "fart",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v104pwrb",
+    "id": 47
+  },
+  {
+    "trigger": "jump",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v106lvjr",
+    "id": 48
+  },
+  {
+    "trigger": "yech",
+    "i_see": "Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech,",
+    "event_see": "Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech.",
+    "i_see_extra": "",
+    "event_see_extra": "Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech, Yech.",
+    "owner": "v063l2rq",
+    "id": 49
+  },
+  {
+    "trigger": "vs",
+    "i_see": "You pretend to go SOUTH.",
+    "event_see": "& has gone south.",
+    "i_see_extra": "You pretend to go SOUTH.",
+    "event_see_extra": "",
+    "owner": "v131pyds",
+    "id": 50
+  },
+  {
+    "trigger": "dwarf",
+    "i_see": "You dupe Evil Dwarf",
+    "event_see": "A Evil Dwarf has come into the room from up.",
+    "i_see_extra": "You dupe Evil Dwarf.",
+    "event_see_extra": "A Evil Dwarf has come into the room from up.",
+    "owner": "v063l2rq",
+    "id": 51
+  },
+  {
+    "trigger": "krusty",
+    "i_see": "You shout \"GO KRUSTY GO!\"",
+    "event_see": "& shouts \"GO KRUSTY GO!\".",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v133nl45",
+    "id": 52
+  },
+  {
+    "trigger": "dink",
+    "i_see": "Dink Dink!",
+    "event_see": "Dink Dink",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v042mzv7",
+    "id": 53
+  },
+  {
+    "trigger": "cthulhu",
+    "i_see": "You dupe cthulhu",
+    "event_see": "A Cthulhu has come into the room from up.",
+    "i_see_extra": "You dupe cthulhu",
+    "event_see_extra": "A Cthulhu has come into the room from up.",
+    "owner": "v063l2rq",
+    "id": 54
+  },
+  {
+    "trigger": "sd",
+    "i_see": "",
+    "event_see": "sparky dog comes into the room from up.",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v042mzv7",
+    "id": 55
+  },
+  {
+    "trigger": "gd",
+    "i_see": "",
+    "event_see": "guard comes into the room from up.",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v042mzv7",
+    "id": 56
+  },
+  {
+    "trigger": "st",
+    "i_see": "YAR YAR! DIS GUY SMEL LIKE TROL!",
+    "event_see": "& thinks he smells a troll.  Now he has a happy face. >:]",
+    "i_see_extra": "# SMELL GUD! U GO KILL STUF NOW!",
+    "event_see_extra": "& smells #.  They wander off to kill things.",
+    "owner": "v131pyds",
+    "id": 57
+  },
+  {
+    "trigger": "snt",
+    "i_see": "YAR YAR! SMELL LIKE TROL WAS HERE!",
+    "event_see": "& thinks he smells a troll.  Now he has a happy face. >:]",
+    "i_see_extra": "# SMELL GUD! U GO KILL STUF NOW!",
+    "event_see_extra": "& just sniffed # and smiled.  Go kill things now.",
+    "owner": "v131pyds",
+    "id": 58
+  },
+  {
+    "trigger": "sniff",
+    "i_see": "YOU SNIF YOUS BUTT!",
+    "event_see": "& just sniffed his butt... you wonder how it smelled.",
+    "i_see_extra": "YOU SNIF #'s BUTT!! HE SMEL BADD! KILL!",
+    "event_see_extra": "& sniffs #'s butt and wrinkles his nose.",
+    "owner": "v131pyds",
+    "id": 59
+  },
+  {
+    "trigger": "sataki",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "",
+    "event_see_extra": "# sucks sataki's small little penis",
+    "owner": "v086mf45",
+    "id": 60
+  },
+  {
+    "trigger": "temp",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "che9996",
+    "id": 61
+  },
+  {
+    "trigger": "ro",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v133nl45",
+    "id": 62
+  },
+  {
+    "trigger": "crack",
+    "i_see": "You unleashed the power of Crack.",
+    "event_see": "A large, hairy butt-crack appears in front of you and farts on your head!",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v042mzv7",
+    "id": 63
+  },
+  {
+    "trigger": "gleep",
+    "i_see": "You shout the battle cry, \"GLEEEEP WURRRRRP!\"",
+    "event_see": "& shouts the age old battle cry \"GLEEEEP WURRRRPPP!\"",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v133nl45",
+    "id": 64
+  },
+  {
+    "trigger": "clue",
+    "i_see": "So you want a clue...TOO BAD!!! HA HA HA HA :)",
+    "event_see": "He wants a clue!!! HA HA HA",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v074r7hz",
+    "id": 65
+  },
+  {
+    "trigger": "hope",
+    "i_see": "You pray for hope, but find none...",
+    "event_see": "He prays for hope, but finds none",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v074r7hz",
+    "id": 66
+  },
+  {
+    "trigger": "death",
+    "i_see": "Death to all who oppose Warlord",
+    "event_see": "Death to all who oppose Warlord",
+    "i_see_extra": "",
+    "event_see_extra": "says Death to all who oppose Warlord",
+    "owner": "v074r7hz",
+    "id": 67
+  },
+  {
+    "trigger": "piss",
+    "i_see": "You piss on the floor....ahhhhhh.",
+    "event_see": "& just pissed on the floor!",
+    "i_see_extra": "You piss on #!!!",
+    "event_see_extra": "& just pissed on #",
+    "owner": "v074r7hz",
+    "id": 68
+  },
+  {
+    "trigger": "brain",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "nurrehab",
+    "id": 69
+  },
+  {
+    "trigger": "summon",
+    "i_see": "As you step back, a creaturr appears before you!",
+    "event_see": "& has summoned the Dragon of Eternial Flame!",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v074r7hz",
+    "id": 70
+  },
+  {
+    "trigger": "pray",
+    "i_see": "You pray to SATAKI.",
+    "event_see": "& prays to SATAKI for power.",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v074r7hz",
+    "id": 71
+  },
+  {
+    "trigger": "jerry",
+    "i_see": "",
+    "event_see": "(UBVMS) V115MAHQ - YOUR A GEEK!",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "vp2077vl",
+    "id": 72
+  },
+  {
+    "trigger": "lonely",
+    "i_see": "Strange, Monster seems empty.",
+    "event_see": "& appears lonely",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v114q5rq",
+    "id": 73
+  },
+  {
+    "trigger": "warlord",
+    "i_see": "",
+    "event_see": "",
+    "i_see_extra": "",
+    "event_see_extra": "",
+    "owner": "v074r7hz",
+    "id": 74
+  }
+]
