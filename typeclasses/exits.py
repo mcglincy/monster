@@ -8,6 +8,7 @@ for allowing Characters to traverse the exit to its destination.
 """
 from evennia import DefaultExit
 from commands.movement import CmdExit
+from typeclasses.exit_kind import ExitKind
 
 
 class Exit(DefaultExit):
@@ -40,5 +41,5 @@ class Exit(DefaultExit):
 
   def at_object_creation(self):
     super().at_object_creation()
-    self.db.exit_type = 1
+    self.db.exit_kind = ExitKind.OPEN
 

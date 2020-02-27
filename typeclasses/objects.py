@@ -17,7 +17,7 @@ from evennia.utils import search, delay
 from evennia.prototypes.spawner import spawn
 from commands.combat import CmdAttack
 from typeclasses.health import health_msg
-
+from typeclasses.object_kind import ObjectKind
 
 
 class Object(DefaultObject):
@@ -252,4 +252,21 @@ class Mob(Object):
       # tell everyone else in the room our health
       self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
 
+
+class Merchant(Object):
+  def at_object_creation(self):
+    super().at_object_creation()
+
+  def at_before_get(self, getter, **kwargs):
+    # don't allow picking up
+    getter.msg("You can't pick up a merchant!")
+    return False
+
+  def return_appearance(self, looker, **kwargs):
+    lines = []
+    lines.append("You see a merchant, hawking their wares:")
+    for obj in self.contents:
+      cost = obj.db.worth if obj.db.worth else 0
+      lines.append(f"- {obj.key} ({cost})")
+    return "\n".join(lines)
 
