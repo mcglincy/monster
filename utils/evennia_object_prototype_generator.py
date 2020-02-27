@@ -1,39 +1,14 @@
 #!/usr/bin/python3
-
-from enum import IntEnum
 import json
+import sys
+sys.path.insert(0, '..')
+
+from typeclasses.object_effect_kind import ObjectEffectKind
+from typeclasses.object_kind import ObjectKind
 
 
 DESC_FILE = './json/desc.json'
 OBJECT_FILE = './json/objects.json'
-
-
-class ObjectKind(IntEnum):
-  BLAND = 0
-  EQUIP = 1
-  SCROLL = 2
-  WAND = 3
-  MISSILE = 7
-  MISSILELAUNCHER = 8
-  SBOOK = 104
-  BANKING_MACHINE = 106
-
-
-class Effect(IntEnum):
-  ATTACK_SPEED = 13
-  WEAPON_BASE_DAMAGE = 27
-  WEAPON_RANDOM_DAMAGE = 28
-  BASE_ARMOR = 29
-  DEFLECT_ARMOR = 30
-  SPELL_ARMOR = 31
-  SMALLEST_FIT = 32
-  LARGEST_FIT = 33
-  # spell deflect aka spell destroy
-  SPELL_DEFLECT_ARMOR = 39
-  THROW_BASE = 40
-  THROW_RANDOM = 41
-  THROW_RANGE = 42
-  THROW_BEHAVIOR = 43 
 
 
 def parse_parm(i):
@@ -115,12 +90,12 @@ def main():
   armor = []
   for obj in objects:
     if obj['kind'] == ObjectKind.EQUIP:
-      if (lookup_effect(obj, Effect.WEAPON_BASE_DAMAGE)
-        or lookup_effect(obj, Effect.WEAPON_RANDOM_DAMAGE)):
+      if (lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE)
+        or lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE)):
         weapons.append(obj)
-      elif (lookup_effect(obj, Effect.BASE_ARMOR)
-        or lookup_effect(obj, Effect.DEFLECT_ARMOR)
-        or lookup_effect(obj, Effect.SPELL_ARMOR)):
+      elif (lookup_effect(obj, ObjectEffectKind.BASE_ARMOR)
+        or lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR)
+        or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)):
         armor.append(obj)
   weapons.sort(key=lambda x: x['obj_name'].upper())
   armor.sort(key=lambda x: x['obj_name'].upper())
@@ -148,9 +123,9 @@ def main():
   #  print(f'class {classname}(Weapon):')
   #  print('  pass')
     obj_name = weapon['obj_name']
-    base_damage = lookup_effect(weapon, Effect.WEAPON_BASE_DAMAGE) or 0
-    random_damage = lookup_effect(weapon, Effect.WEAPON_RANDOM_DAMAGE) or 0
-    attack_speed = lookup_effect(weapon, Effect.ATTACK_SPEED) or 0
+    base_damage = lookup_effect(weapon, ObjectEffectKind.WEAPON_BASE_DAMAGE) or 0
+    random_damage = lookup_effect(weapon, ObjectEffectKind.WEAPON_RANDOM_DAMAGE) or 0
+    attack_speed = lookup_effect(weapon, ObjectEffectKind.ATTACK_SPEED) or 0
     print(f"{snake_case(obj_name)} = {{")
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{weapon['obj_name']}\",")
@@ -192,10 +167,10 @@ def main():
 
   for armor in armor:
     obj_name = armor['obj_name']
-    base_armor = lookup_effect(armor, Effect.BASE_ARMOR) or 0
-    deflect_armor = lookup_effect(armor, Effect.DEFLECT_ARMOR) or 0
-    spell_armor = lookup_effect(armor, Effect.SPELL_ARMOR) or 0
-    spell_deflect_armor = lookup_effect(armor, Effect.SPELL_DEFLECT_ARMOR) or 0
+    base_armor = lookup_effect(armor, ObjectEffectKind.BASE_ARMOR) or 0
+    deflect_armor = lookup_effect(armor, ObjectEffectKind.DEFLECT_ARMOR) or 0
+    spell_armor = lookup_effect(armor, ObjectEffectKind.SPELL_ARMOR) or 0
+    spell_deflect_armor = lookup_effect(armor, ObjectEffectKind.SPELL_DEFLECT_ARMOR) or 0
     print(f"{snake_case(obj_name)} = {{")  
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{armor['obj_name']}\",")

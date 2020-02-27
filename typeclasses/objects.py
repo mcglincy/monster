@@ -19,6 +19,7 @@ from commands.combat import CmdAttack
 from typeclasses.health import health_msg
 
 
+
 class Object(DefaultObject):
   """
   This is the root typeclass object, implementing an in-game Evennia
@@ -163,7 +164,9 @@ class Object(DefaultObject):
    at_say(speaker, message)  - by default, called if an object inside this
                                object speaks
   """
-  pass
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.object_kind = ObjectKind.BLAND
 
 
 class Gold(Object):
@@ -208,6 +211,7 @@ class Weapon(Object):
   def at_object_creation(self):
     """Called at first creation of the object."""
     super().at_object_creation()
+    self.db.object_kind = ObjectKind.EQUIP   
     self.db.attack_speed = 0
     self.db.base_damage = 0
     self.db.equip_slot = 1
@@ -220,6 +224,7 @@ class Armor(Object):
   def at_object_creation(self):
     """Called at first creation of the object."""
     super().at_object_creation()
+    self.db.object_kind = ObjectKind.EQUIP   
     self.db.base_armor = 0
     self.db.deflect_armor = 0
     self.db.spell_armor = 0
