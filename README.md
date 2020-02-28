@@ -1,13 +1,12 @@
 # Monster
 
-It's not a game, it's a lifestyle.
+*It's not a game, it's a lifestyle.*
+
+This is a WIP port of University at Buffalo's circa-1990 VMS game [Monster](http://www.skrenta.com/monster/) to a modern MUD engine ([Evennia](https://github.com/evennia/evennia)).
+
+The running game server is up at http://www.monstermud.com.
+
+## What's implemented
 
 
-## Running via docker
-
-Game db is currently expected at /opt/monsterdata.
-
-```
-$ docker pull mattmcglincy/monster
-$ docker run -it --rm -d -p 80:4001 -p 443:4003 -p 4000:4000 -p 4001:4001 -p 4002:4002 -v /opt/monsterdata:/opt/monsterdata --user $UID:$GID mattmcglincy/monster 
-```
+## What's not implemented yet
