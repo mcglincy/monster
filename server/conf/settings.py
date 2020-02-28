@@ -4,7 +4,7 @@ Evennia settings file.
 The available options are found in the default settings file found
 here:
 
-/Users/mcglincy/src/evmonster/evennia/evennia/settings_default.py
+../../../evennia/evennia/settings_default.py
 
 Remember:
 
@@ -34,12 +34,12 @@ from evennia.settings_default import *
 # This is the name of your game. Make it catchy!
 SERVERNAME = "Monster"
 
-DATA_DIR = "/opt/evmonsterdata"
+DATA_DIR = "/opt/monsterdata"
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.getenv("TEST_DB_PATH", os.path.join(DATA_DIR, "evmonster.db3")),
+        "NAME": os.getenv("TEST_DB_PATH", os.path.join(DATA_DIR, "monster.db3")),
         "USER": "",
         "PASSWORD": "",
         "HOST": "",

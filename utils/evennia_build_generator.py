@@ -20,18 +20,15 @@ def main():
   with open(DESC_FILE) as f:
     descs = json.load(f)
 
-  print("""# evmonster batchcommand build file.
+  print("""# Monster batchcommand build file.
   #
   # To nuke the database first:
   # $ evennia stop
-  # $ rm -f evmonster/server/evennia.db
+  # $ rm -f /opt/monsterdata/monster.db3
   # $ evennia migrate
   # $ evennia start
   # [connect to game]
-  # @batchcommands evmonster.world.build
-  #
-  # We start from Limbo
-  @tel #2
+  # @batchcommands monster.world.build
   #
   #
   # Step 1: Create all rooms first.

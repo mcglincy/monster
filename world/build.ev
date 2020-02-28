@@ -1,19 +1,16 @@
-# evmonster batchcommand build file.
-#
-# To nuke the database first:
-# $ evennia stop
-# $ rm -f evmonster/server/evennia.db
-# $ evennia migrate
-# $ evennia start
-# [connect to game]
-# @batchcommands evmonster.world.build
-#
-# We start from Limbo
-@tel #2
-#
-#
-# Step 1: Create all rooms first.
-#
+# Monster batchcommand build file.
+  #
+  # To nuke the database first:
+  # $ evennia stop
+  # $ rm -f /opt/monsterdata/monster.db3
+  # $ evennia migrate
+  # $ evennia start
+  # [connect to game]
+  # @batchcommands monster.world.build
+  #
+  #
+  # Step 1: Create all rooms first.
+  #
 @dig/tel Great Hall;room_id_1
 #
 @desc
@@ -6790,9 +6787,9 @@ be heard.  It seems as though the water is down and behind the wall.
 @dig/tel Sanity ward;room_id_752
 #
 #
-#
-# Step 2: Make exits between rooms.
-#
+  #
+  # Step 2: Make exits between rooms.
+  #
 @tel room_id_1
 #
 @open down;d = room_id_79

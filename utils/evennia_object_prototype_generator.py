@@ -81,8 +81,8 @@ def main():
   with open(DESC_FILE) as f:
     descs = json.load(f)
 
-  print("""# evmonster generated objects
-  #
+  print("""#
+  # Monster generated objects
   #""")
 
   # divide objects into lists of weapons and armor
