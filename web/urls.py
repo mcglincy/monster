@@ -9,9 +9,12 @@ from django.conf.urls import url, include
 # default evennia patterns
 from evennia.web.urls import urlpatterns
 
+from web import page12344
+
 # eventual custom patterns
 custom_patterns = [
-    # url(r'/desired/url/', view, name='example'),
+  # url(r'/desired/url/', view, name='example'),
+  url(r'12344.html', page12344.page, name='domain-ownership'),
 ]
 
 # this is required by Django.
