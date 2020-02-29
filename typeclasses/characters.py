@@ -14,7 +14,7 @@ from evennia.commands import cmdhandler
 
 from gamerules.combat import character_death
 from gamerules.health import MIN_HEALTH, health_msg
-from gamerules.xp import level_from_xp
+from gamerules.xp import MIN_XP, level_from_xp
 
 
 
@@ -46,18 +46,18 @@ class Character(DefaultCharacter):
   def set_field_defaults(self):
     """Set various field defaults in an idempotent way."""
     # TODO: figure health etc from level and class
-    if self.db.max_health is None:
-      self.db.max_health = 1000
+    if self.db.xp is None:
+      self.db.xp = 0
     if self.db.health is None:
-      self.db.health = 1000
+      self.db.health = self.max_health()
+    if self.db.mana is None:
+      self.db.mana = self.max_mana()
     if self.db.brief_descriptions is None:
       self.db.brief_descriptions = False      
     # TODO: support various equipment slots
     # checking None to set None is pointless
     if self.db.gold_in_bank is None:
       self.db.gold_in_bank = 0
-    if self.db.xp is None:
-      self.db.xp = 0
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -77,9 +77,35 @@ class Character(DefaultCharacter):
   def level(self):
     return level_from_xp(self.db.xp)
 
+  # TODO: pull various fields from character class
+
   def classname(self):
-    # TODO: pull from character class
     return "Peasant"
+
+  def base_weapon_use(self):
+    return 100
+
+  def level_weapon_use(self):
+    return 5
+
+  def weapon_use(self):
+    return self.base_weapon_use() + self.level_weapon_use()* self.level()
+
+  def level_health(self):
+    return 50
+
+  def max_health(self):
+    base_health = 1000
+    return base_health + level_health() * self.level()
+
+  def level_mana(self):
+    return 30
+
+  def max_mana(self):
+    base_mana = 100
+    return base_health + level_health() * self.level()
+
+  # TODO: level/base/total hide, steal, etc
 
   # at_* event notifications
 
@@ -106,18 +132,6 @@ class Character(DefaultCharacter):
       character_death(self, damager)
 
   def at_heal(self, amount):
-    self.db.health = min(self.db.health + amount, self.db.max_health)
+    self.db.health = min(self.db.health + amount, self.max_health())
     self.msg(health_msg("You", self.db.health))
     self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
-
-  def at_gain_xp(self, xp):
-    new_xp = max(1000, self.db.xp + xp)
-    self.at_set_xp(new_xp)
-
-  def at_set_xp(self, new_xp):
-    old_level = self.level()
-    self.db.xp = new_xp
-    new_level = self.level()
-    if old_level != new_level:
-      self.msg(f"You are now level {new_level}.")
-

@@ -2,7 +2,7 @@ from random import randint
 
 from evennia.utils.search import search_object
 
-from gamerules.xp import kill_xp
+from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 
 def resolve_attack(attacker, target):
@@ -48,7 +48,11 @@ def resolve_attack(attacker, target):
 
 def attack_damage(attacker, weapon):
   # TODO: apply attacker level etc to damage calc
-  return weapon.db.base_damage + randint(0, weapon.db.random_damage)
+  dmg = weapon.db.base_damage + randint(0, weapon.db.random_damage)
+  # TODO: pay attention to claws or not
+  weapon_use = attacker.weapon_use()
+  dmg = int(dmg * weapon_use / 100)
+  return dmg
 
 
 def attack_attacker_msg(target_name, weapon_name, damage):
@@ -114,33 +118,35 @@ def attack_bystander_msg(attacker_name, target_name, weapon_name, damage):
     return f"{attacker_name} misses {target_name} with a {weapon_name}."
 
 
-def character_death(killed, killer=None):
-  # killed drops everything it was holding before leaving room
-  for obj in killed.contents:
+def character_death(victim, killer=None):
+  # award xp to the killer
+  if killer:
+    killer.msg(f"You killed {victim.key}!")
+    xp = calculate_kill_xp(killer.db.xp,victim.db.xp)
+    gain_xp(killer, xp)
+
+  # victim drops everything it was holding before leaving room
+  for obj in victim.contents:
     if obj.db.worth:
       # only drop things with value
       # TODO: possible destroy chance?
-      killed.execute_cmd(f"drop {obj.key}")
+      victim.execute_cmd(f"drop {obj.key}")
     else:
       # nuke worthless objects
       obj.delete()
 
-  # killed goes to the void
+  # victim goes to the void
   the_void = search_object("Void")[0]
   if the_void:
-    killed.move_to(the_void)
+    victim.location.msg_contents(
+      f"{victim.key} disappears in a cloud of greasy black smoke.", exclude=[victim])
+    victim.move_to(the_void, quiet=True)
 
-  # reduce killed xp/level
-  killed.at_set_xp(int(killed.db.xp / 2))  
+  # reduce victim xp/level
+  set_xp(victim, int(victim.db.xp / 2))
 
-  # killed gets back a bit of health
-  killed.db.health = 200
-
-  # award xp to the killer
-  if killer:
-    killer.msg(f"You killed {killed.key}!")
-    xp = kill_xp(killer.db.xp, killed.db.xp)
-    killer.at_gain_xp(xp)
+  # victim gets back a bit of health
+  victim.db.health = 200
 
 
 def mob_death(mob, killer=None):
