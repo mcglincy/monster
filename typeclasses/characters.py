@@ -8,51 +8,14 @@ creation commands.
 
 """
 from random import randint
+
 from evennia import DefaultCharacter, search_object
 from evennia.commands import cmdhandler
-from commands.combat import target_msg
-from typeclasses.health import health_msg
 
+from gamerules.combat import die
+from gamerules.health import health_msg
+from gamerules.xp import level_from_xp
 
-def level_from_xp(xp):
-  return int(xp / 1000)
-
-
-# [GLOBAL]
-# PROCEDURE DieChangeExperience(Th : INTEGER; My : INTEGER; VAR Stat : StatType);
-# VAR
-#   Mylevel, R : INTEGER;
-# BEGIN
-#   Th := Th DIV 1000;  (* making it the level, not the exp *)
-#   Mylevel := My DIV 1000;
-#   IF (Mylevel = 0) OR (Mylevel < Th) THEN
-#   BEGIN
-#     IF (((TH/2) + 1.5 - Mylevel) > 0) THEN
-#       R := Round(1000*((Th/2) + 1.5 - Mylevel))
-#     ELSE R := Round(1000*(1/(Mylevel+(Mylevel-th))));
-#   END
-#   ELSE
-#   BEGIN
-#     IF (Mylevel >= Th) AND (Mylevel < 10) AND ((Mylevel - Th) < 3)THEN
-#       R := Round(1000*(1/(Mylevel+(Mylevel-Th))))
-#    ELSE
-#      R := 0;
-#    END;
-#    ChangeExp(R, Stat.Log, Stat.Experience);
-# END;
-def kill_xp(killer_xp, victim_xp):
-  killer_level = level_from_xp(killer_xp)
-  victim_level = level_from_xp(victim_xp)
-  levels_above = killer_level - victim_level
-  amt = 0
-  if killer_level == 0 or killer_level < victim_level:
-    multiplier = (victim_level / 2) + 1.5 - killer_level
-    if multiplier < 0:
-      multiplier = 1 / (killer_level + levels_above)
-    amt = int(round(1000 * multiplier))
-  elif killer_level >= victim_level and killer_level < 10 and levels_above < 3:
-    amt = int(round(1000 * (1 / (killer_level + levels_above))))
-  return amt
 
 
 class Character(DefaultCharacter):
@@ -102,6 +65,24 @@ class Character(DefaultCharacter):
         self, raw_string, callertype="account", session=session, **kwargs
     )
 
+  # helper getters
+
+  def carried_gold_amount(self):
+    gold = self.search("gold",
+      candidates=self.contents, typeclass="typeclasses.objects.Gold", quiet=True)
+    if len(gold) > 0:
+      return gold[0].db.amount
+    return 0
+
+  def level(self):
+    return level_from_xp(self.db.xp)
+
+  def classname(self):
+    # TODO: pull from character class
+    return "Peasant"
+
+  # at_* event notifications
+
   def at_after_move(self, source_location, **kwargs):
     # override to apply our brief descriptions setting
     if self.location.access(self, "view"):
@@ -117,7 +98,6 @@ class Character(DefaultCharacter):
       self.db.equipped_weapon = None
 
   def at_weapon_hit(self, attacker, weapon, damage):
-    self.msg(target_msg(attacker.key, weapon.key, damage))
     # TODO: apply armor
     armor = self.db.equipped_armor
     if armor:
@@ -129,60 +109,20 @@ class Character(DefaultCharacter):
         self.msg("The attack is partially blocked by your armor.")
         attacker.msg(f"Your weapon is partially blocked by {self.key}'s armor.")
         damage = int(damage * ((100 - armor.db.base_armor) / 100))
-    self.at_damage(damage, causer=attacker)
+    self.at_damage(damage, damager=attacker)
 
-  def at_damage(self, damage, causer=None):
+  def at_damage(self, damage, damager=None):
     self.db.health = max(self.db.health - damage, 0)
     self.msg(f"You take {damage} damage.")
     self.msg(health_msg("You", self.db.health))
     self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
     if self.db.health <= 0:
-      self.die(causer)
+      die(self, damager)
 
   def at_heal(self, amount):
     self.db.health = min(self.db.health + amount, self.db.max_health)
     self.msg(health_msg("You", self.db.health))
     self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
-
-  def carried_gold_amount(self):
-    gold = self.search("gold",
-      candidates=self.contents, typeclass="typeclasses.objects.Gold", quiet=True)
-    if len(gold) > 0:
-      return gold[0].db.amount
-    return 0
-
-  def at_kill(self, deceased):
-    self.msg(f"You killed {deceased.key}!")
-    xp = kill_xp(self.db.xp, deceased.db.xp)
-    self.at_gain_xp(xp)
-
-  def die(self, causer=None):
-    # drop everything we're holding
-    for obj in self.contents:
-      if obj.db.worth:
-        # only drop things with value
-        # TODO: possible destroy chance?
-        self.execute_cmd(f"drop {obj.key}")
-      else:
-        # nuke worthless objects
-        obj.delete()
-
-    the_void = search_object("Void")[0]
-    if the_void:
-      self.move_to(the_void)
-
-    if causer and hasattr(causer, "at_kill"):
-      causer.at_kill(self)
-
-    self.db.health = 200
-    self.at_set_xp(int(self.db.xp / 2))
-
-  def level(self):
-    return level_from_xp(self.db.xp)
-
-  def classname(self):
-    # TODO: pull from character class
-    return "Peasant"
 
   def at_gain_xp(self, xp):
     new_xp = max(1000, self.db.xp + xp)

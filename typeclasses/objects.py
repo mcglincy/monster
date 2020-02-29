@@ -15,8 +15,9 @@ import random
 from evennia import CmdSet, Command, DefaultExit, DefaultObject
 from evennia.utils import delay, evtable, search
 from evennia.prototypes.spawner import spawn
+
 from commands.combat import CmdAttack
-from typeclasses.health import health_msg
+from gamerules.health import health_msg
 from typeclasses.object_kind import ObjectKind
 
 
