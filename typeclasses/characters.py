@@ -91,14 +91,10 @@ class Character(DefaultCharacter):
       self.db.brief_descriptions = False      
     # TODO: support various equipment slots
     # checking None to set None is pointless
-    if not self.db.equipped_weapon:
-      self.db.equipped_weapon = None
-    if not self.db.equipped_armor:
-      self.db.equipped_armor = None
     if self.db.gold_in_bank is None:
       self.db.gold_in_bank = 0
     if self.db.xp is None:
-      self.db.xp = 1000
+      self.db.xp = 0
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
