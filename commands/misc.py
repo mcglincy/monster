@@ -163,7 +163,7 @@ class CmdWho(Command):
           utils.time_format(delta_cmd, 1),
           utils.crop(puppet.get_display_name(account) if puppet else "None", width=25),
           puppet.level() if hasattr(puppet, "level") else 0,
-          puppet.classname() if hasattr(puppet, "classname") else "None"      
+          puppet.classname() if hasattr(puppet, "classname") else "None",
           utils.crop(location, width=25),
           session.cmd_total,
           session.protocol_key,
@@ -190,7 +190,7 @@ class CmdWho(Command):
           utils.crop(account.get_display_name(account), width=25),
           utils.crop(puppet.get_display_name(account) if puppet else "None", width=25),
           puppet.level() if hasattr(puppet, "level") else 0,
-          puppet.classname() if hasattr(puppet, "classname") else "None"
+          puppet.classname() if hasattr(puppet, "classname") else "None",
           utils.crop(location, width=25),            
       )
     self.msg(
