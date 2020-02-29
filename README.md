@@ -10,6 +10,7 @@ The running game server is up at http://www.monstermud.com.
 
 * Character
   * Account login; each account has a character
+  * XP/level
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
 * Objects
@@ -21,7 +22,7 @@ The running game server is up at http://www.monstermud.com.
   * Rest / bleed commands
   * Weapon base damage / random damage
   * Character health and max health
-  * Death at 0 health => go to void (currently Limbo)
+  * Death at 0 health => go to the Void
 * Command set
   * *.* for last action
   * *who* that shows everyone's room location
@@ -36,9 +37,9 @@ The running game server is up at http://www.monstermud.com.
 
 * Character
   * Classes
-  * XP/level
   * Various global player messages
     * E.g., "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm." "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
+  * Per-level stat increases
 * Map/Rooms
   * Start game in tutorial room(s)
   * Look at in-room subdescriptions
@@ -52,24 +53,22 @@ The running game server is up at http://www.monstermud.com.
     * do-effect (gain/lose health, gold, xp; set or reset class)
 * Combat
   * Freeze / attack delay
+  * Weapon speed
   * Weapon use percent
-  * Per-level damage
   * Surprise attack
   * Claws
   * Punch
-  * Weapon speed / freeze
-  * Go to the Void upon death
   * Get 50 gold upon death
   * Missiles and *throw* command
   * Bombs and *lob* command
 * Commands
-  * Redirect *pose* to *express*
-  * Atmosphere
+  * *hide* / *search* / *reveal* commands
   * *use* command
   * *block* command
-  * remove any Evennia commands we don't want
-  * *hide* / *search* / *reveal* commands
   * *steal* / *pickpocket* commands
+  * Redirect *pose* to *express*
+  * Atmosphere
+  * Remove any Evennia commands we don't want
 * Spells
   * Spell / ability system
   * *learn* command
