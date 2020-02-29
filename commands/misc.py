@@ -64,6 +64,7 @@ class CmdSheet(Command):
 
   def func(self):
     account = self.account
+    character = account.character
     table = self.styled_table(
       "|wCharacter Sheet",
     )
@@ -74,14 +75,14 @@ class CmdSheet(Command):
     xp = account.character.db.xp
     level = account.character.level()
     table.add_row(f"Exp/level    : {xp}/{level}")
-    table.add_row(f"Health/Max   : {int(account.character.db.health)}/{int(account.character.db.max_health)}")
-    table.add_row(f"Mana/Max     : 0")
+    table.add_row(f"Health/Max   : {int(character.db.health)}/{int(character.max_health())}")
+    table.add_row(f"Mana/Max     : {character.db.mana}/{character.max_mana()}")
     table.add_row(f"Status       :")
     table.add_row(f"Move delay   : 0")
     table.add_row(f"Move silent  : 0%")
     table.add_row(f"Poison chnce : 0%")
     table.add_row(f"Attack delay : 0")
-    table.add_row(f"Weapon usage : 100%")
+    table.add_row(f"Weapon usage : {account.character.weapon_use()}%")
     table.add_row(f"Money        : {int(account.character.carried_gold_amount())}")
     table.add_row(f"Money in Bank: {int(account.character.db.gold_in_bank)}")
     weapon = account.character.db.equipped_weapon

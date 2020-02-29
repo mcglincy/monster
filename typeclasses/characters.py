@@ -96,14 +96,14 @@ class Character(DefaultCharacter):
 
   def max_health(self):
     base_health = 1000
-    return base_health + level_health() * self.level()
+    return base_health + self.level_health() * self.level()
 
   def level_mana(self):
     return 30
 
   def max_mana(self):
     base_mana = 100
-    return base_health + level_health() * self.level()
+    return base_mana + self.level_mana() * self.level()
 
   # TODO: level/base/total hide, steal, etc
 
