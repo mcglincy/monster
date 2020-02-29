@@ -23,6 +23,7 @@ The running game server is up at http://www.monstermud.com.
   * Weapon base damage / random damage
   * Character health and max health
   * Death at 0 health => go to the Void
+  * XP for kills (based on level/xp comparison)
 * Command set
   * *.* for last action
   * *who* that shows everyone's room location
