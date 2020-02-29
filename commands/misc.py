@@ -71,7 +71,9 @@ class CmdSheet(Command):
     table.add_row(f"Class        : Peasant")
     table.add_row(f"Alignment    : Neutral")
     table.add_row(f"Size         : 6'")
-    table.add_row(f"Exp/level    : 0/1")
+    xp = account.character.db.xp
+    level = account.character.level()
+    table.add_row(f"Exp/level    : {xp}/{level}")
     table.add_row(f"Health/Max   : {int(account.character.db.health)}/{int(account.character.db.max_health)}")
     table.add_row(f"Mana/Max     : 0")
     table.add_row(f"Status       :")
@@ -82,24 +84,16 @@ class CmdSheet(Command):
     table.add_row(f"Weapon usage : 100%")
     table.add_row(f"Money        : {int(account.character.carried_gold_amount())}")
     table.add_row(f"Money in Bank: {int(account.character.db.gold_in_bank)}")
-    base_damage = 0
-    random_damage = 0
     weapon = account.character.db.equipped_weapon
-    if weapon:
-      base_damage = weapon.db.base_damage
-      random_damage = weapon.db.random_damage
+    base_damage = weapon.db.base_damage if weapon else 0
+    random_damage = weapon.db.random_damage if weapon else 0
     table.add_row(f"Weapon       : {base_damage}/{random_damage}")
-    base_armor = 0
-    deflect_armor = 0
-    spell_armor = 0
-    spell_deflect_armor = 0
     armor = account.character.db.equipped_armor
-    if armor:
-      base_armor = armor.db.base_armor
-      deflect_armor = armor.db.deflect_armor
-      spell_armor = armor.db.spell_armor
-      spell_deflect_armor = armor.db.spell_deflect_armor
+    base_armor = armor.db.base_armor if armor  else 0
+    deflect_armor = armor.db.deflect_armor if armor else 0
     table.add_row(f"Armor        : {base_armor}%, {deflect_armor}% deflect")
+    spell_armor = armor.db.spell_armor if armor else 0
+    spell_deflect_armor = armor.db.spell_deflect_armor if armor else 0
     table.add_row(f"Spell armor  : {spell_armor}%, {spell_deflect_armor}% deflect")
     self.msg("%s" % table)
 
@@ -148,6 +142,8 @@ class CmdWho(Command):
           "|wOn for",
           "|wIdle",
           "|wPuppeting",
+          "|wLevel",
+          "|wClass",
           "|wRoom",
           "|wCmds",
           "|wProtocol",
@@ -166,6 +162,8 @@ class CmdWho(Command):
           utils.time_format(delta_conn, 0),
           utils.time_format(delta_cmd, 1),
           utils.crop(puppet.get_display_name(account) if puppet else "None", width=25),
+          puppet.level() if hasattr(puppet, "level") else 0,
+          puppet.classname() if hasattr(puppet, "classname") else "None"      
           utils.crop(location, width=25),
           session.cmd_total,
           session.protocol_key,
@@ -187,12 +185,12 @@ class CmdWho(Command):
         delta_conn = time.time() - session.conn_time
         account = session.get_account()
         puppet = session.get_puppet()        
-        location = puppet.location.key if puppet and puppet.location else "None"        
+        location = puppet.location.key if puppet and puppet.location else "None"
         table.add_row(
           utils.crop(account.get_display_name(account), width=25),
           utils.crop(puppet.get_display_name(account) if puppet else "None", width=25),
-          "1",
-          "Peasant",
+          puppet.level() if hasattr(puppet, "level") else 0,
+          puppet.classname() if hasattr(puppet, "classname") else "None"
           utils.crop(location, width=25),            
       )
     self.msg(
