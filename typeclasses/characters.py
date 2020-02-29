@@ -12,8 +12,8 @@ from random import randint
 from evennia import DefaultCharacter, search_object
 from evennia.commands import cmdhandler
 
-from gamerules.combat import die
-from gamerules.health import health_msg
+from gamerules.combat import character_death
+from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.xp import level_from_xp
 
 
@@ -97,27 +97,13 @@ class Character(DefaultCharacter):
     elif obj == self.db.equipped_weapon:
       self.db.equipped_weapon = None
 
-  def at_weapon_hit(self, attacker, weapon, damage):
-    # TODO: apply armor
-    armor = self.db.equipped_armor
-    if armor:
-      if armor.db.deflect_armor > 0 and randint(0, 100) < armor.db.deflect_armor:
-        self.msg("The attack is deflected by your armor.")
-        attacker.msg(f"Your weapon is deflected by {self.key}'s armor.")
-        damage = int(damage / 2)
-      if armor.db.base_armor > 0:
-        self.msg("The attack is partially blocked by your armor.")
-        attacker.msg(f"Your weapon is partially blocked by {self.key}'s armor.")
-        damage = int(damage * ((100 - armor.db.base_armor) / 100))
-    self.at_damage(damage, damager=attacker)
-
   def at_damage(self, damage, damager=None):
-    self.db.health = max(self.db.health - damage, 0)
+    self.db.health = max(self.db.health - damage, MIN_HEALTH)
     self.msg(f"You take {damage} damage.")
     self.msg(health_msg("You", self.db.health))
     self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
     if self.db.health <= 0:
-      die(self, damager)
+      character_death(self, damager)
 
   def at_heal(self, amount):
     self.db.health = min(self.db.health + amount, self.db.max_health)

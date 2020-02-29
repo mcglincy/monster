@@ -16,8 +16,8 @@ from evennia import CmdSet, Command, DefaultExit, DefaultObject
 from evennia.utils import delay, evtable, search
 from evennia.prototypes.spawner import spawn
 
-from commands.combat import CmdAttack
-from gamerules.health import health_msg
+from gamerules.combat import mob_death
+from gamerules.health import MIN_HEALTH, health_msg
 from typeclasses.object_kind import ObjectKind
 
 
@@ -241,14 +241,10 @@ class Mob(Object):
     super().at_object_creation()
     self.db.health = 1000
 
-  def at_weapon_hit(self, attacker, weapon, damage):
-    # TODO: apply armor
-    self.db.health = max(self.db.health - damage, 0)
+  def at_damage(self, damage, damager=None):
+    self.db.health = max(self.db.health - damage, MIN_HEALTH)
     if self.db.health <= 0:
-      death_msg = f"{self.key} disappears in a cloud of greasy black smoke."
-      self.location.msg_contents(death_msg, exclude=[self])
-      self.location = None
-      # TODO: give attacker experience
+      mob_death(self, damager)
     else:
       # tell everyone else in the room our health
       self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])

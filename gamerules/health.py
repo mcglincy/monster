@@ -1,4 +1,7 @@
 
+MIN_HEALTH = 0
+
+
 def health_msg(subject, health):
   to_be = "is"
   to_have = "has"

@@ -14,7 +14,8 @@ def resolve_attack(attacker, target):
   if attacker.key == target.key:
     attacker.msg("You can't attack yourself!")
     return
-  if not hasattr(target, "at_weapon_hit"):
+  # TODO: add more rigorous can-attack checks
+  if not hasattr(target, "at_damage"):
     attacker.msg("You can't attack that.")
     return
 
@@ -24,15 +25,25 @@ def resolve_attack(attacker, target):
   # attack message for attacker
   attacker.msg(attack_attacker_msg(target.key, weapon.key, damage))
 
+  # attack message for target
+  target.msg(attack_target_msg(attacker.key, weapon.key, damage))
+
   # attack message for room bystanders
   location_msg = attack_bystander_msg(attacker.key, target.key, weapon.key, damage)
   attacker.location.msg_contents(location_msg, exclude=[attacker, target])
 
-  # attack message for target
-  target.msg(attack_target_msg(attacker.key, weapon.key, damage))
-
-  # target takes the hit
-  target.at_weapon_hit(attacker, weapon, damage)
+  # resolve damage
+  armor = target.db.equipped_armor
+  if armor:
+    if armor.db.deflect_armor > 0 and randint(0, 100) < armor.db.deflect_armor:
+      target.msg("The attack is deflected by your armor.")
+      attacker.msg(f"Your weapon is deflected by {self.key}'s armor.")
+      damage = int(damage / 2)
+    if armor.db.base_armor > 0:
+      target.msg("The attack is partially blocked by your armor.")
+      attacker.msg(f"Your weapon is partially blocked by {self.key}'s armor.")
+      damage = int(damage * ((100 - armor.db.base_armor) / 100))
+  target.at_damage(damage, damager=attacker)
 
 
 def attack_damage(attacker, weapon):
@@ -103,7 +114,7 @@ def attack_bystander_msg(attacker_name, target_name, weapon_name, damage):
     return f"{attacker_name} misses {target_name} with a {weapon_name}."
 
 
-def die(killed, killer=None):
+def character_death(killed, killer=None):
   # killed drops everything it was holding before leaving room
   for obj in killed.contents:
     if obj.db.worth:
@@ -129,4 +140,16 @@ def die(killed, killer=None):
   if killer:
     killer.msg(f"You killed {killed.key}!")
     xp = kill_xp(killer.db.xp, killed.db.xp)
+    killer.at_gain_xp(xp)
+
+
+def mob_death(mob, killer=None):
+  death_msg = f"{mob.key} disappears in a cloud of greasy black smoke."
+  mob.location.msg_contents(death_msg, exclude=[mob])
+  mob.location = None
+  mob.delete()
+  if killer:
+    killer.msg(f"You killed {mob.key}!")
+    # TODO: what should mob xp be?
+    xp = kill_xp(killer.db.xp, 300)
     killer.at_gain_xp(xp)
