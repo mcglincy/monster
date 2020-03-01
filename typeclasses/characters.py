@@ -15,8 +15,7 @@ from evennia.commands import cmdhandler
 from gamerules.combat import character_death
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.xp import MIN_XP, level_from_xp
-
-
+from userdefined.models import CharacterClass
 
 class Character(DefaultCharacter):
   """
@@ -45,7 +44,8 @@ class Character(DefaultCharacter):
 
   def set_field_defaults(self):
     """Set various field defaults in an idempotent way."""
-    # TODO: figure health etc from level and class
+    if self.db.character_class_key is None:
+      self.db.character_class_key = "Druid"
     if self.db.xp is None:
       self.db.xp = 0
     if self.db.health is None:
@@ -66,6 +66,9 @@ class Character(DefaultCharacter):
     )
 
   # helper getters
+
+  def character_class(self):
+    return CharacterClass.objects.get(db_key=self.db.character_class_key)
 
   def carried_gold_amount(self):
     gold = self.search("gold",
