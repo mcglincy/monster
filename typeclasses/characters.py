@@ -17,6 +17,7 @@ from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.xp import MIN_XP, level_from_xp
 from userdefined.models import CharacterClass
 
+
 class Character(DefaultCharacter):
   """
   The Character defaults to reimplementing some of base Object's hook methods with the

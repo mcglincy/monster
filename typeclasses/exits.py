@@ -8,7 +8,9 @@ for allowing Characters to traverse the exit to its destination.
 """
 from evennia import DefaultExit
 from commands.movement import CmdExit
+from gamerules.exit_effects import apply_exit_effect
 from typeclasses.exit_kind import ExitKind
+
 
 
 class Exit(DefaultExit):
@@ -42,4 +44,24 @@ class Exit(DefaultExit):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.exit_kind = ExitKind.OPEN
+    self.db.exit_effect_kind = None
+    self.db.exit_effect_value = None
+    # do these msgs exist for DefaultExit already? vvvv
+    self.db.fail_message = None
+    self.db.success_message = None
+    # alias + req_alias = passworded door, no NSEWUD link
+    # goin/come_out fields are always 32000 (default msg) in the JSON
+    # hidden is always 0 in the JSON
+    # do we care about auto_look?
 
+  def at_after_traverse(self, traversing_object, source_location, **kwargs):
+    if self.db.success_message:
+      traversing_object.msg(self.db.success_message)
+    if self.db.exit_effect_kind:
+      apply_exit_effect(traversing_object, self.db.exit_effect_kind, self.db.exit_effect_value)
+
+  def at_failed_traverse(self, traversing_object, **kwargs):
+    # TODO: instead of overriding at_failed_traverse we could also just 
+    # set err_traverse and let superclass send that
+    if self.db.fail_message:
+      traversing_object.msg(self.db.fail_message)
