@@ -80,33 +80,20 @@ class Character(DefaultCharacter):
   def level(self):
     return level_from_xp(self.db.xp)
 
-  # TODO: pull various fields from character class
-
   def classname(self):
-    return "Peasant"
-
-  def base_weapon_use(self):
-    return 100
-
-  def level_weapon_use(self):
-    return 5
+    return self.character_class().key
 
   def weapon_use(self):
-    return self.base_weapon_use() + self.level_weapon_use()* self.level()
-
-  def level_health(self):
-    return 50
+    return (self.character_class().base_weapon_use + 
+      self.character_class().level_weapon_use * self.level())
 
   def max_health(self):
-    base_health = 1000
-    return base_health + self.level_health() * self.level()
-
-  def level_mana(self):
-    return 30
+    return (self.character_class().base_health +
+      self.character_class().level_health * self.level())
 
   def max_mana(self):
-    base_mana = 100
-    return base_mana + self.level_mana() * self.level()
+    return (self.character_class().base_mana +
+      self.character_class().level_mana * self.level())
 
   # TODO: level/base/total hide, steal, etc
 

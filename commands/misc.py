@@ -69,7 +69,7 @@ class CmdSheet(Command):
       "|wCharacter Sheet",
     )
     table.add_row(f"Name         : {utils.crop(account.get_display_name(account), width=25)}")
-    table.add_row(f"Class        : Peasant")
+    table.add_row(f"Class        : {character.character_class().key}")
     table.add_row(f"Alignment    : Neutral")
     table.add_row(f"Size         : 6'")
     xp = account.character.db.xp
