@@ -45,7 +45,8 @@ class Character(DefaultCharacter):
   def set_field_defaults(self):
     """Set various field defaults in an idempotent way."""
     if self.db.character_class_key is None:
-      self.db.character_class_key = "Druid"
+      self.db.character_class_key = "ghost"
+      self.ndb.character_class = None
     if self.db.xp is None:
       self.db.xp = 0
     if self.db.health is None:
@@ -68,7 +69,9 @@ class Character(DefaultCharacter):
   # helper getters
 
   def character_class(self):
-    return CharacterClass.objects.get(db_key=self.db.character_class_key)
+    if not self.ndb.character_class or self.ndb.character_class.key != self.db.character_class_key:
+      self.ndb.character_class = CharacterClass.objects.get(db_key=self.db.character_class_key)
+    return self.ndb.character_class
 
   def carried_gold_amount(self):
     gold = self.search("gold",
