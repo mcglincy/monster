@@ -736,8 +736,8 @@
   },
   {
     "group": 1,
-    "name": "ghost",
-    "who_name": "ghost",
+    "name": "superghost",
+    "who_name": "superghost",
     "base_health": 2000,
     "level_health": 100,
     "base_mana": 200,
