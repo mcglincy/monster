@@ -8,6 +8,7 @@ def create_character_classes():
     classrecs = json.load(f)
     for rec in classrecs:
       newclass = CharacterClass(
+        db_record_id = rec["id"],
         db_key = rec["name"],
         db_who_name = rec["who_name"],
         db_group = rec["group"],
