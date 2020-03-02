@@ -23,7 +23,10 @@ class Room(DefaultRoom):
     """
     def at_object_creation(self):
         super().at_object_creation()
+        self.db.record_id = -1
         self.db.room_kind = -1
+        self.db.trap_chance = 0
+        self.db.trap_to = -1
 
 
     def return_appearance(self, looker, **kwargs):
