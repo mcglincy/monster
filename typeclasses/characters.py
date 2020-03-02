@@ -45,15 +45,18 @@ class Character(DefaultCharacter):
 
   def set_field_defaults(self):
     """Set various field defaults in an idempotent way."""
+    # TODO: dragging in the CharacterClass model f's with evennia's
+    # initial creation of god_character, so we can't refer to max_health(), 
+    # max_mana(), etc in at_object_created() / set_field_defaults().
     if self.db.character_class_key is None:
       self.db.character_class_key = "ghost"
       self.ndb.character_class = None
     if self.db.xp is None:
       self.db.xp = 0
     if self.db.health is None:
-      self.db.health = self.max_health()
+      self.db.health = 1000
     if self.db.mana is None:
-      self.db.mana = self.max_mana()
+      self.db.mana = 0
     if self.db.brief_descriptions is None:
       self.db.brief_descriptions = False      
     # TODO: support various equipment slots
