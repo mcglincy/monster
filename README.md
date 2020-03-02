@@ -47,6 +47,7 @@ The running game server is up at http://www.monstermud.com.
   * Look at in-room subdescriptions
   * Trap door
   * Windows / window_descs
+  * Exit descriptions
   * Exit types
     * hidden
     * passworded
