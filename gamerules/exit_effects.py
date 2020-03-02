@@ -1,5 +1,6 @@
 from gamerules.character_classes import reset_character_class, set_character_class
 from gamerules.xp import gain_xp, set_xp
+from typeclasses.exit_effect_kind import ExitEffectKind
 
 
 def apply_exit_effect(target, exit_effect_kind, exit_effect_value):
@@ -21,10 +22,10 @@ def apply_exit_effect(target, exit_effect_kind, exit_effect_value):
   elif exit_effect_kind == ExitEffectKind.XP_SET:
     set_xp(target, exit_effect_value)
   elif exit_effect_kind == ExitEffectKind.CLASS_RESET:
-    if target.db.character_class_name:
+    if target.db.character_class_key:
       reset_character_class(target, exit_effect_value)
   elif exit_effect_kind == ExitEffectKind.CLASS_SET:
-    if target.db.character_class_name:
+    if target.db.character_class_key:
       set_character_class(target, exit_effect_value)
   elif exit_effect_kind == ExitEffectKind.ALARMED:
     # TODO
