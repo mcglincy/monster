@@ -1,0 +1,5 @@
+# Go back to the Void
+@tel Void
+# open a normal exit to Purgatory, until we have trapdoors working
+@open down;d = Purgatory
+#
