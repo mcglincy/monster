@@ -11,9 +11,13 @@ The running game server is up at http://www.monstermud.com.
 * Character
   * Account login; each account has a character
   * XP/level
-  * Per-level stat increases  
+  * Per-level stat increases 
+  * Classes 
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
+  * Exit types
+    * passworded
+    * set or reset class
 * Objects
   * Imported all original armor and weapons
   * Simple gold system
@@ -39,7 +43,6 @@ The running game server is up at http://www.monstermud.com.
 ## What's not implemented yet
 
 * Character
-  * Classes
   * Various global player messages
     * E.g., "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm." "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
 * Map/Rooms
@@ -50,10 +53,9 @@ The running game server is up at http://www.monstermud.com.
   * Exit descriptions
   * Exit types
     * hidden
-    * passworded
     * object keyed/forbidden
     * guardian
-    * do-effect (gain/lose health, gold, xp; set or reset class)
+    * do-effect (gain/lose health, gold, xp)
 * Combat
   * Freeze / attack delay
   * Weapon speed
