@@ -8,6 +8,7 @@ from typeclasses.object_kind import ObjectKind
 
 
 DESC_FILE = './json/desc.json'
+LINES_FILE = './json/lines.json'
 OBJECT_FILE = './json/objects.json'
 
 
@@ -73,34 +74,51 @@ def escaped(s):
   return s.replace('"', '\\"')
 
 
-def main():
-  """Command-line script."""
-  with open(OBJECT_FILE) as f:
-    objects = json.load(f)
+def lookup_description(id, descs, lines):
+  if not id:
+    return None
+  elif id > 0:
+    # use descs
+    desc_idx = id - 1
+    # TODO: special handling for default description id 32000
+    if desc_idx < len(descs):
+      return escaped(' '.join(descs[desc_idx]['lines']))
+  elif id < 0:
+    # use lines
+    line_idx = -id -1
+    if line_idx < len(lines):
+      return escaped(lines[line_idx]['line'])
+  return None
 
-  with open(DESC_FILE) as f:
-    descs = json.load(f)
 
+def output_blands(blands, descs, lines):
   print("""#
-# Generated object prototypes
+# 'Bland' objects
 #
+
+BLAND_OBJECT = {
+  'typeclass': 'typeclasses.objects.Object',
+  'key': 'bland_object',
+  'desc': 'A bland object.',
+}
 """)
 
-  # divide objects into lists of weapons and armor
-  weapons = []
-  armor = []
-  for obj in objects:
-    if obj['kind'] == ObjectKind.EQUIP:
-      if (lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE)
-        or lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE)):
-        weapons.append(obj)
-      elif (lookup_effect(obj, ObjectEffectKind.BASE_ARMOR)
-        or lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR)
-        or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)):
-        armor.append(obj)
-  weapons.sort(key=lambda x: x['obj_name'].upper())
-  armor.sort(key=lambda x: x['obj_name'].upper())
+  for bland in blands:
+  #  classname = camelcase_class_name(weapon['obj_name'])
+  #  print(f'class {classname}(Weapon):')
+  #  print('  pass')
+    obj_name = bland['obj_name']
+    print(f"{snake_case(obj_name)} = {{")
+    # TODO: add better quote escaping for key and desc
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'bland_object',")
+    desc = lookup_description(bland['examine'], descs, lines)
+    if desc:
+      print(f"  'desc': \"{desc}\",")
+    print('}')
+    print()
 
+def output_weapons(weapons, descs, lines):
   print("""#
 # Weapons
 #
@@ -128,8 +146,8 @@ WEAPON = {
     attack_speed = lookup_effect(weapon, ObjectEffectKind.ATTACK_SPEED) or 0
     print(f"{snake_case(obj_name)} = {{")
     # TODO: add better quote escaping for key and desc
-    print(f"  'key': \"{weapon['obj_name']}\",")
-    print("  'prototype_parent': 'WEAPON',")
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'weapon',")
     print(f"  'attack_speed': {attack_speed},")
     print(f"  'base_damage': {base_damage},")
     desc_idx = weapon['examine'] - 1
@@ -146,6 +164,7 @@ WEAPON = {
     print()
 
 
+def output_armors(armors, descs, lines):
   print("""#
 # Armor
 #
@@ -164,7 +183,7 @@ ARMOR = {
 }
 """)
 
-  for armor in armor:
+  for armor in armors:
     obj_name = armor['obj_name']
     base_armor = lookup_effect(armor, ObjectEffectKind.BASE_ARMOR) or 0
     deflect_armor = lookup_effect(armor, ObjectEffectKind.DEFLECT_ARMOR) or 0
@@ -172,8 +191,8 @@ ARMOR = {
     spell_deflect_armor = lookup_effect(armor, ObjectEffectKind.SPELL_DEFLECT_ARMOR) or 0
     print(f"{snake_case(obj_name)} = {{")  
     # TODO: add better quote escaping for key and desc
-    print(f"  'key': \"{armor['obj_name']}\",")
-    print("  'prototype_parent': 'ARMOR',")
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'armor',")
     print(f"  'base_armor': {base_armor},")  
     print(f"  'deflect_armor': {deflect_armor},")  
     desc_idx = armor['examine'] - 1
@@ -186,9 +205,45 @@ ARMOR = {
     print(f"  'spell_armor': {spell_armor},")  
     print(f"  'spell_deflect_armor': {spell_deflect_armor},")  
     print(f"  'weight': {armor['weight']},")  
-    print(f"  'worth': {weapon['worth']},")  
+    print(f"  'worth': {armor['worth']},")  
     print('}')
     print()
+
+
+def main():
+  """Command-line script."""
+  with open(DESC_FILE) as f:
+    descs = json.load(f)
+  with open(LINES_FILE) as f:
+    lines = json.load(f)
+  with open(OBJECT_FILE) as f:
+    objects = json.load(f)
+
+  blands = []
+  weapons = []
+  armors = []
+  for obj in objects:
+    if obj['kind'] == ObjectKind.BLAND:
+      blands.append(obj)
+    elif obj['kind'] == ObjectKind.EQUIP:
+      if (lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE)
+        or lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE)):
+        weapons.append(obj)
+      elif (lookup_effect(obj, ObjectEffectKind.BASE_ARMOR)
+        or lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR)
+        or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)):
+        armors.append(obj)
+  blands.sort(key=lambda x: x['obj_name'].upper())
+  weapons.sort(key=lambda x: x['obj_name'].upper())
+  armors.sort(key=lambda x: x['obj_name'].upper())
+
+  print("""#
+# Generated object prototypes
+#
+""")
+  output_blands(blands, descs, lines)
+  output_weapons(weapons, descs, lines)
+  output_armors(armors, descs, lines)
 
 
 if __name__ == "__main__":

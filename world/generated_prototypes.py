@@ -3,6 +3,298 @@
 #
 
 #
+# 'Bland' objects
+#
+
+BLAND_OBJECT = {
+  'typeclass': 'typeclasses.objects.Object',
+  'key': 'bland_object',
+  'desc': 'A bland object.',
+}
+
+AMBER_HEMISPHERE = {
+  'key': "amber hemisphere",
+  'prototype_parent': 'bland_object',
+  'desc': "The piece of amber is a perfect hemisphere that rests comfortably in the palm of your hand. You notice a message has been etched in the amber, and spirals its way around the stone. It reads:  \"The Gae Bolge has returned to its makers, the Tuatha de Danaan, who   have fled the Realm of Man and now are only found in the Realm of   Dreams.\"",
+}
+
+ANIMAL_PELT = {
+  'key': "animal pelt",
+  'prototype_parent': 'bland_object',
+  'desc': "The animal pelt is thick and grey.",
+}
+
+ARROWHEAD = {
+  'key': "arrowhead",
+  'prototype_parent': 'bland_object',
+  'desc': "The arrowhead is made from bronze, and has been severely oxidized.",
+}
+
+BENT_DAGGER = {
+  'key': "bent dagger",
+  'prototype_parent': 'bland_object',
+  'desc': "The dagger's blade has been twisted around behind the hilt.",
+}
+
+BROKEN_LONGSWORD = {
+  'key': "broken longsword",
+  'prototype_parent': 'bland_object',
+}
+
+CHARM_OF_OPENING = {
+  'key': "Charm of Opening",
+  'prototype_parent': 'bland_object',
+  'desc': "The charm is a thin silver medallion that has strange markings on the front face, and an inscription on the back. The inscription reads:  \"The wise will know how to use this most ancient of devices.\"",
+}
+
+CHARM_OF_REDEMPTION = {
+  'key': "Charm of Redemption",
+  'prototype_parent': 'bland_object',
+  'desc': "The charm is a small blue stone on a string.",
+}
+
+CHUNK_OF_AMBER = {
+  'key': "chunk of amber",
+  'prototype_parent': 'bland_object',
+  'desc': "The chunk of amber appears normal.",
+}
+
+COPPER_TABLETS = {
+  'key': "Copper Tablets",
+  'prototype_parent': 'bland_object',
+  'desc': "The tablets are large and thin, made of sheets of copper hammered together. A copper chain forms a large loop, going through the left corner of all the tablets around through the right. The writing on the tablets is very archaic, and does not look human.  One tablet does, however, depict an image of a brilliant spear floating above a sleeping individual. Between the spear and the individual is a round sphere, which might depict either the Sun or a more Earthly object.",
+}
+
+CRYSTAL_PRISM = {
+  'key': "crystal prism",
+  'prototype_parent': 'bland_object',
+  'desc': "The prism fits in the palm of your hand, and is nearly transparent.",
+}
+
+DIAMOND = {
+  'key': "diamond",
+  'prototype_parent': 'bland_object',
+  'desc': "The gem has already been cut, and is clearly valuable.",
+}
+
+DRAGONSTONE = {
+  'key': "Dragonstone",
+  'prototype_parent': 'bland_object',
+}
+
+DRUIDIC_BOAT = {
+  'key': "Druidic Boat",
+  'prototype_parent': 'bland_object',
+}
+
+ELF_SKULL = {
+  'key': "elf skull",
+  'prototype_parent': 'bland_object',
+  'desc': "The skull is delicate and slightly smaller than that of a human. The  cranium has been pierced by a sharp instrument.",
+}
+
+FLAT_STONE = {
+  'key': "flat stone",
+  'prototype_parent': 'bland_object',
+}
+
+FORGE_STONE = {
+  'key': "Forge stone",
+  'prototype_parent': 'bland_object',
+  'desc': "The stone is a crimson ore of some sort, with a distinctly metallic look and feel about it.",
+}
+
+GARNET = {
+  'key': "garnet",
+  'prototype_parent': 'bland_object',
+  'desc': "The gem is about a half an inch in diameter, and in the rough.",
+}
+
+GLASS_BOTTLE = {
+  'key': "glass bottle",
+  'prototype_parent': 'bland_object',
+  'desc': "The bottle is of a dark green glass. The bottom is slightly bloated, appearing perhaps more like a flask.",
+}
+
+GOLDEN_RING = {
+  'key': "golden ring",
+  'prototype_parent': 'bland_object',
+  'desc': "The ring bears the inscription \"to death do us part..\"",
+}
+
+GRANITE_STONE = {
+  'key': "granite stone",
+  'prototype_parent': 'bland_object',
+  'desc': "The stone is very smooth, and is in the shape of a perfect hemisphere.",
+}
+
+HUGE_PEARL = {
+  'key': "huge pearl",
+  'prototype_parent': 'bland_object',
+  'desc': "The pearl is very large, and of the purest, deepest white.",
+}
+
+IRON_KEY = {
+  'key': "iron key",
+  'prototype_parent': 'bland_object',
+}
+
+IVORY_BOAT = {
+  'key': "Ivory Boat",
+  'prototype_parent': 'bland_object',
+  'desc': "The boat is not very large, capable of holding only one person. It lacks a sail, oars, or any other visible means of propulsion. It is carved out of a white wood that looks very much like ivory.",
+}
+
+IVORY_CARVING = {
+  'key': "ivory carving",
+  'prototype_parent': 'bland_object',
+  'desc': "The object is an animal tusk which has been richly carved in relief, and capped with gold.",
+}
+
+JADE_FIGURINE = {
+  'key': "jade figurine",
+  'prototype_parent': 'bland_object',
+  'desc': "The figurine depicts an elephant.",
+}
+
+KEY_OF_MOIBUS = {
+  'key': "key of Moibus",
+  'prototype_parent': 'bland_object',
+}
+
+LAKE_STONE = {
+  'key': "lake stone",
+  'prototype_parent': 'bland_object',
+  'desc': "You see a dark blue stone, shimmering in the water. It has an inscription on one side saying I?s ?n ?he h??t of th? L?k?.",
+}
+
+LANTERN = {
+  'key': "Lantern",
+  'prototype_parent': 'bland_object',
+  'desc': "The Lantern is finely crafted from the fines brass found in the realm",
+}
+
+LEAD_BAR = {
+  'key': "lead bar",
+  'prototype_parent': 'bland_object',
+  'desc': "The bar is a small ingot of solid lead.",
+}
+
+LONG_STRAND_OF_HEMP = {
+  'key': "long strand of hemp",
+  'prototype_parent': 'bland_object',
+}
+
+MARBLE = {
+  'key': "marble",
+  'prototype_parent': 'bland_object',
+}
+
+OBSIDIAN_KEY = {
+  'key': "obsidian key",
+  'prototype_parent': 'bland_object',
+}
+
+OLD_PARCHMENT = {
+  'key': "old parchment",
+  'prototype_parent': 'bland_object',
+  'desc': "The parchment appears blank. There are several sheets stuck together.",
+}
+
+PERSIAN_CARPET = {
+  'key': "Persian carpet",
+  'prototype_parent': 'bland_object',
+  'desc': "The carpet, when unrolled, is 20 feet by 20 feet, and is very impressive.",
+}
+
+PHIAL_OF_SUNSET = {
+  'key': "Phial of Sunset",
+  'prototype_parent': 'bland_object',
+  'desc': "The phial is a glass prism which scatters light into colorful spectrums. Whats more, the phial almost seems to emanate a light of its own, as well as a faint hum. ",
+}
+
+PORCELAIN_SHARD = {
+  'key': "porcelain shard",
+  'prototype_parent': 'bland_object',
+  'desc': "The shard appears like a large piece from an old vase.",
+}
+
+PORCELAIN_VASE = {
+  'key': "porcelain vase",
+  'prototype_parent': 'bland_object',
+  'desc': "The vase is white, with a scene of men hunting tigers adorning it.",
+}
+
+RHINESTONE_KEY = {
+  'key': "Rhinestone Key",
+  'prototype_parent': 'bland_object',
+  'desc': "The key is very oddly shaped. It has a long metal shaft, and is set with an emerald and a cluster of rhinestones.",
+}
+
+ROPE = {
+  'key': "rope",
+  'prototype_parent': 'bland_object',
+}
+
+RUSTY_KEY = {
+  'key': "rusty key",
+  'prototype_parent': 'bland_object',
+}
+
+SILKEN_CORD = {
+  'key': "silken cord",
+  'prototype_parent': 'bland_object',
+  'desc': "The cord is light, and about a foot long. It is red.",
+}
+
+SILVER_MIRROR = {
+  'key': "silver mirror",
+  'prototype_parent': 'bland_object',
+  'desc': "The mirror is small enough to fit in the palm of your hand, and is of polished silver.",
+}
+
+SMALL_RUBY = {
+  'key': "small ruby",
+  'prototype_parent': 'bland_object',
+  'desc': "The gem is rather small, and dark red.",
+}
+
+STONE_TABLET = {
+  'key': "stone tablet",
+  'prototype_parent': 'bland_object',
+  'desc': "The tablet is of white marble, and is inscribed with runes which you unfortunately cannot decipher.",
+}
+
+TEAKWOOD_CHEST = {
+  'key': "teakwood chest",
+  'prototype_parent': 'bland_object',
+  'desc': "The chest is about 4 feet by 2 feet by 2 feet, and has hinges of brass.",
+}
+
+THIGHBONE = {
+  'key': "thighbone",
+  'prototype_parent': 'bland_object',
+  'desc': "The bone is that of some unknown creature, but written on it in black runes is the word: \"suedomsa\"",
+}
+
+TROLL_STAFF = {
+  'key': "troll staff",
+  'prototype_parent': 'bland_object',
+  'desc': "The staff is about 9 feet long, and roughly hacked from wood. It is topped with an Elf skull. Along the length of the staff is written: \"In order to be the leader of your people you must taste the blood of your enemies, and wear the head of a King.\"",
+}
+
+VELVET_CLOTH = {
+  'key': "velvet cloth",
+  'prototype_parent': 'bland_object',
+  'desc': "The cloth is of black velvet, and is decorated with embroidery of  golden thread. ",
+}
+
+VIAL = {
+  'key': "vial",
+  'prototype_parent': 'bland_object',
+}
+
+#
 # Weapons
 #
 
@@ -20,7 +312,7 @@ WEAPON = {
 
 ASSASSINS_DAGGER = {
   'key': "Assassin's dagger",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 9,
   'base_damage': 100,
   'desc': "The dagger has a short, curved blade which has a serrated edge. The blade is coated in a dark liquid you surmise is a deadly poison.",
@@ -32,7 +324,7 @@ ASSASSINS_DAGGER = {
 
 AXE = {
   'key': "axe",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 11,
   'base_damage': 83,
   'desc': "The axe has a double head of iron, and is slightly dull. The haft is worn but solid. This looks like a fine tool for chopping wood. It may also work for chopping bodies.",
@@ -44,7 +336,7 @@ AXE = {
 
 BLEACHED_BONE = {
   'key': "bleached bone",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 30,
   'desc': "The bone is a long thigh bone, and has been bleached white by excessive exposure.",
@@ -56,7 +348,7 @@ BLEACHED_BONE = {
 
 BOOTS_OF_LAGRATH = {
   'key': "Boots of Lagrath",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 0,
   'desc': "These boots look as though somone tried to play a strange twisted joke on someone, they appear to be made of leather, yet, there are steel thorns covering the toe and heel.",
@@ -68,7 +360,7 @@ BOOTS_OF_LAGRATH = {
 
 BROADSWORD = {
   'key': "broadsword",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 15,
   'base_damage': 60,
   'desc': "The sword is very long, and very broad of blade. It is double edged, and is slightly serrated near the hilt. The hilt is appropriately large, with a straight guard, and a wire wrapped handle.",
@@ -80,7 +372,7 @@ BROADSWORD = {
 
 BROKEN_OAR = {
   'key': "broken oar",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 24,
   'desc': "The oar is like that from a rowboat. It has a crack down its axis, and the blade is broken in half.",
@@ -92,7 +384,7 @@ BROKEN_OAR = {
 
 CLAYMOORE_SWORD = {
   'key': "Claymoore sword",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 13,
   'base_damage': 115,
   'desc': "The sword is very long and heavy, clearly unwieldable with only one hand. The blade is about five feet long, and the hilt is an additional foot and a half. The blade is very wide, and has many catches on it near the hilt which, when utilized properly, can catch and snap an opponents blade.",
@@ -104,7 +396,7 @@ CLAYMOORE_SWORD = {
 
 CRUDE_DAGGER = {
   'key': "crude dagger",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 15,
   'base_damage': 15,
   'desc': "This dagger has a sharp blade, with two hooks used to catch  you oppenents weapon.  Hilt is fashioned from steel, with leather to aid in gripping.",
@@ -116,7 +408,7 @@ CRUDE_DAGGER = {
 
 CUDGEL = {
   'key': "cudgel",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 9,
   'base_damage': 104,
   'desc': "The cudgel has been carved out of a branch from some hardwood tree. The handle fits into your hand nicely, while the business end is somewhat  larger, and resplendent with thick knots.",
@@ -128,7 +420,7 @@ CUDGEL = {
 
 DAGGER_OF_VENOMS = {
   'key': "Dagger of Venoms",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 25,
   'desc': "The dagger has a dark, curved blade made of some unknown metal. Black runes run along its surface.",
@@ -140,7 +432,7 @@ DAGGER_OF_VENOMS = {
 
 DIRK = {
   'key': "dirk",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 7,
   'base_damage': 108,
   'desc': "The dirk is a short sword, more properly belonging somewhere between large knife and short sword. The blade is thin, but strong. The cross- piece on the hilt curves upward at the ends into two sharp prongs.",
@@ -152,7 +444,7 @@ DIRK = {
 
 DRAGON_CLAWS = {
   'key': "Dragon Claws",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 2,
   'base_damage': 10,
   'desc': "The portal resists your attempts to open it, and a calm voice speaks inside your head:  \"What lies beyond this door is the pervue of the the original Master of   the Lake, the First Water Lord. Only he, or those working in his name   may enter the sacred chamber beyond.\"",
@@ -164,7 +456,7 @@ DRAGON_CLAWS = {
 
 DRUIDSLAYER = {
   'key': "Druidslayer",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 11,
   'base_damage': 85,
   'desc': "The sword is long and made of a very shiny metal, almost like silver. The hilt is very long, but there is no cross-piece or hilt guard at all. The weapon is double edged, and both edges are severely serrated along their entire length.",
@@ -176,7 +468,7 @@ DRUIDSLAYER = {
 
 EBONBLADE = {
   'key': "EbonBlade",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 10,
   'base_damage': 90,
   'desc': "This double-edged sword has a long, thin blade. The hilt is rather utilitarian and unexceptional, and is made from the same dark metal as the rest of the weapon. When you touch it, you feel a strange  sensation.",
@@ -188,7 +480,7 @@ EBONBLADE = {
 
 ELFEN_SPEAR = {
   'key': "Elfen spear",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 130,
   'desc': "The spear is long and is made of finely crafted wood. The head looks deadly, and is made of a silvery metal.",
@@ -200,7 +492,7 @@ ELFEN_SPEAR = {
 
 GLOVES_OF_ATLAS = {
   'key': "Gloves of Atlas",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 0,
   'equip_slot': 13,
@@ -211,7 +503,7 @@ GLOVES_OF_ATLAS = {
 
 HAMMER_OF_THE_GODS = {
   'key': "Hammer of the Gods",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 12,
   'base_damage': 1,
   'equip_slot': 3,
@@ -222,7 +514,7 @@ HAMMER_OF_THE_GODS = {
 
 HATCHET = {
   'key': "hatchet",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 7,
   'base_damage': 121,
   'desc': "The hatchet is of a common sort, being a short, single headed axe  designed for use with one hand. It shows signs of frequent use, but should serve your uses.",
@@ -234,7 +526,7 @@ HATCHET = {
 
 IRON_BAR = {
   'key': "iron bar",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 9,
   'base_damage': 99,
   'desc': "The bar is about an inch and a half in diameter, and is made of black iron. It is about four feet long, and one end is slightly bent.",
@@ -246,7 +538,7 @@ IRON_BAR = {
 
 IVORY_KNIFE = {
   'key': "Ivory Knife",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 13,
   'base_damage': 100,
   'desc': "You hold in your hand a chill white knife. It glows with a faint light and steam curls from its tip. It is made from a carved bone and the edges never seem to become dull.",
@@ -258,7 +550,7 @@ IVORY_KNIFE = {
 
 JAVELIN = {
   'key': "javelin",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 5,
   'base_damage': 90,
   'desc': "The javelin is light weight, with a shaft of wood and a head of lead. The soft head is intended to deform on impact, hopefully fouling  an enemies shield or armor.",
@@ -270,7 +562,7 @@ JAVELIN = {
 
 JEWELED_SCIMITAR = {
   'key': "jeweled scimitar",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 9,
   'base_damage': 101,
   'desc': "The sword is a long, and has a curved blade. It is single edged, and perhaps a bit heavy. The hilt is oddly shaped, having an oddly inlaid piece of metal, with an emerald in the heel.  You notice something written along the blade of the weapon. It might be some sort of name. It reads: \"Sualtim\".",
@@ -282,7 +574,7 @@ JEWELED_SCIMITAR = {
 
 LAKEBLADE = {
   'key': "Lakeblade",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 10,
   'base_damage': 25,
   'desc': "The blade is a long sword constructed of a strange metal which is dull silver in color. The blade is somewhat thin, but very strong. In varying light, the metal seems almost to flow along the surface of the weapon.",
@@ -294,7 +586,7 @@ LAKEBLADE = {
 
 LONGSWORD = {
   'key': "longsword",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 10,
   'base_damage': 105,
   'desc': "This sword is double-edged, with the edges running parallel until a sharp taper begins within the last few inches of the blade. The guard on the hilt curves slightly upward.",
@@ -306,7 +598,7 @@ LONGSWORD = {
 
 MACE = {
   'key': "mace",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 8,
   'base_damage': 126,
   'desc': "The mace is made of iron, and is rather heavy. Wire has been wound around its haft to provide a solid grip, while the head is diamond shaped with a small spike at its tip, for effective use in close quarters.",
@@ -318,7 +610,7 @@ MACE = {
 
 MAGECRUSHER = {
   'key': "MageCrusher",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 8,
   'base_damage': 152,
   'desc': "The weapon is made of blackened steel, and is cold to the touch--cold beyond the very grave itself.  Its blackness seems to pulse as if alive, supposedly imbued with some of the very hatred of Terminus himself.  There are no spikes on the weapon, which has a long shaft and a perfect sphere of ebon on the end.",
@@ -330,7 +622,7 @@ MAGECRUSHER = {
 
 MAGIC_LONGSWORD = {
   'key': "magic longsword",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 10,
   'base_damage': 125,
   'desc': "This longsword is of fine craftsmanship.  It has runes along its blade and shimmers in the light.",
@@ -342,7 +634,7 @@ MAGIC_LONGSWORD = {
 
 MAGIC_SHIELD = {
   'key': "magic shield",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 0,
   'desc': "This ancient looking shield appears as though it were made out of a solid pice of copper, yet it has strength unlike any metal you have seen.",
@@ -354,7 +646,7 @@ MAGIC_SHIELD = {
 
 MEAT_CLEAVER = {
   'key': "meat cleaver",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 30,
   'desc': "The cleaver looks like an ordinary butcher's utensil. The single edged blade is hefty, and bears small notches wear it has been marred by  contact with bone.",
@@ -366,7 +658,7 @@ MEAT_CLEAVER = {
 
 MILITARY_FORK = {
   'key': "military fork",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 95,
   'desc': "This military fork resembles a spear, with two more points coming out from the center one.  It is very light weight, and could possibly even be thrown!",
@@ -378,7 +670,7 @@ MILITARY_FORK = {
 
 PIKE = {
   'key': "pike",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 18,
   'base_damage': 87,
   'desc': "This weapon appears to be a larger, heavier version of a spear. The head of the weapon is much larger, and more complex in design. Small catch guards are placed along the shaft near the head, in order to catch the blades of attacking foes.",
@@ -390,7 +682,7 @@ PIKE = {
 
 PITCHFORK = {
   'key': "pitchfork",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 14,
   'base_damage': 61,
   'desc': "The pitchfork looks like an ordinary farm implement. Each of the four blackened prongs appears sharp, and capable of delivering a serious injury.",
@@ -402,7 +694,7 @@ PITCHFORK = {
 
 SAXON_AXE = {
   'key': "Saxon axe",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 10,
   'base_damage': 87,
   'desc': "The haft of this axe is a long rod of iron and wood, wrapped in fine leather. The axe's single head is short at the haft, but it curves sharply to present a wide edge.",
@@ -414,7 +706,7 @@ SAXON_AXE = {
 
 SCIMITAR = {
   'key': "scimitar",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 220,
   'equip_slot': 1,
@@ -425,7 +717,7 @@ SCIMITAR = {
 
 SHARPENED_STICK = {
   'key': "sharpened stick",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 100,
   'equip_slot': 1,
@@ -436,7 +728,7 @@ SHARPENED_STICK = {
 
 SHORT_SWORD = {
   'key': "short sword",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 8,
   'base_damage': 70,
   'desc': "This sword is shorter than most. It's blade is straight and double edged, and looks to be a nasty thrusting weapon.",
@@ -448,7 +740,7 @@ SHORT_SWORD = {
 
 SILVER_RAPIER = {
   'key': "Silver Rapier",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 9,
   'base_damage': 145,
   'desc': "The blade is very thin and flexible, being constructed of a very fine  steel. Not very practical as a slashing weapon, this sword is, however, deadly when used deftly as a thrusting and lunging weapon. The hilt is of iron inlaid with silver, and the blade seems to bear a hint of silver as well.",
@@ -460,7 +752,7 @@ SILVER_RAPIER = {
 
 SPEAR = {
   'key': "spear",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 6,
   'base_damage': 117,
   'desc': "The spear has a long wooden shaft, and a broad head of hammered iron. The head is flat, but diamond shaped. The backside edges are serrated in the hopes of inflicting additional damage when the spear is withdrawn.",
@@ -472,7 +764,7 @@ SPEAR = {
 
 STAFF_OF_RA = {
   'key': "Staff of Ra",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 175,
   'equip_slot': 3,
@@ -483,7 +775,7 @@ STAFF_OF_RA = {
 
 STONE_MALLET = {
   'key': "stone mallet",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 100,
   'equip_slot': 1,
@@ -494,7 +786,7 @@ STONE_MALLET = {
 
 SWORD_O_STACK_DUMPS = {
   'key': "Sword O Stack Dumps",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 1,
   'equip_slot': 1,
@@ -505,7 +797,7 @@ SWORD_O_STACK_DUMPS = {
 
 SWORD_OF_DEFENSE = {
   'key': "sword of defense",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 100,
   'equip_slot': 1,
@@ -516,7 +808,7 @@ SWORD_OF_DEFENSE = {
 
 SWORD_OF_THE_KINGS = {
   'key': "Sword of the Kings",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 225,
   'desc': "The sword is very long, and very heavy, yet its form is smooth. The  blade is wide, and bears an edge that cannot be dulled. Sunken runes run the length of the blade, weaving charms and spells into the power of the weapon. ",
@@ -528,7 +820,7 @@ SWORD_OF_THE_KINGS = {
 
 VIRSH_BLADE = {
   'key': "Virsh Blade",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 280,
   'equip_slot': 1,
@@ -539,7 +831,7 @@ VIRSH_BLADE = {
 
 VOULGE = {
   'key': "Voulge",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 0,
   'base_damage': 120,
   'desc': "The  Voulge is a long shafted weapon with a large sharp blade on the end. The weight of this object makes it impossible to use with one hand. The blade is long and sharp, so even the slightess miss might do damage.",
@@ -551,7 +843,7 @@ VOULGE = {
 
 WARHAMMER = {
   'key': "warhammer",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 7,
   'base_damage': 70,
   'desc': "This object has a long, thick handle and a heavy iron headpiece. The hammer is decorated with carvings along the handle.",
@@ -563,7 +855,7 @@ WARHAMMER = {
 
 WRAITH_BLADE = {
   'key': "Wraith Blade",
-  'prototype_parent': 'WEAPON',
+  'prototype_parent': 'weapon',
   'attack_speed': 8,
   'base_damage': 125,
   'equip_slot': 1,
@@ -591,7 +883,7 @@ ARMOR = {
 
 ANIMAL_SKINS = {
   'key': "animal skins",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 2,
   'deflect_armor': 0,
   'desc': "The animal skins are coarse, and have been treated with some substance to make them rigid. It looks as though they are meant to be worn.",
@@ -599,12 +891,12 @@ ANIMAL_SKINS = {
   'spell_armor': 1,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 20,
 }
 
 BRACERS_OF_LUNACY = {
   'key': "Bracers of Lunacy",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 8,
   'deflect_armor': 1,
   'desc': "The bracers are made of a gold that seems to shimmer as if hot, though it is cold to the touch.",
@@ -617,7 +909,7 @@ BRACERS_OF_LUNACY = {
 
 BUCKLER = {
   'key': "buckler",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 1,
   'desc': "The buckler is a very small shield with an irregular outer face. While the shield provides very little in the way of body protection, it is useful in catching an opponents weapon away from the body.",
@@ -625,12 +917,12 @@ BUCKLER = {
   'spell_armor': 0,
   'spell_deflect_armor': 1,
   'weight': 0,
-  'worth': 0,
+  'worth': 20,
 }
 
 CAVE_BEAR_SKINS = {
   'key': "Cave Bear skins",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 6,
   'deflect_armor': 1,
   'desc': "The clump of skins is extremely heavy and thick, and is clearly from a huge bear of some sort. The hide has been cured somewhat, but the thick black hair of the animal remains. Small bone fragments have been adorned to the hide to provide some additional protection, as well as to appeal to the \"spirits\".",
@@ -643,7 +935,7 @@ CAVE_BEAR_SKINS = {
 
 CHAIN_MAIL_ARMOR = {
   'key': "chain mail armor",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 6,
   'deflect_armor': 0,
   'desc': "The chain mail is a fine mesh of very small, inter-locking steel links. A support of padded leather is attached in the shoulder and chest  region of the armor.",
@@ -651,12 +943,12 @@ CHAIN_MAIL_ARMOR = {
   'spell_armor': 5,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 85,
 }
 
 CLOAK = {
   'key': "cloak",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 2,
   'desc': "This grey cloak is just perfect to keep you warm and possibly a little more protected.",
@@ -664,12 +956,12 @@ CLOAK = {
   'spell_armor': 0,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 1,
 }
 
 CLOAK_OF_THE_MAGI = {
   'key': "cloak of the magi",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 13,
   'desc': "This worn black cloak inlaid with golden runes appears to be somthing of an ancient evil power.",
@@ -677,12 +969,12 @@ CLOAK_OF_THE_MAGI = {
   'spell_armor': 0,
   'spell_deflect_armor': 35,
   'weight': 25,
-  'worth': 0,
+  'worth': 1400,
 }
 
 CONICAL_HELM = {
   'key': "conical helm",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 1,
   'desc': "The helm is of steel, and conical in shape. A wedge shaped nose guard extends downward, while leather flaps fitted with metal scales provide added protection for the neck.",
@@ -690,12 +982,12 @@ CONICAL_HELM = {
   'spell_armor': 0,
   'spell_deflect_armor': 1,
   'weight': 0,
-  'worth': 0,
+  'worth': 20,
 }
 
 CRESTED_HELM = {
   'key': "crested helm",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 1,
   'desc': "The helm is of steel, and padded with leather. A horsehair crest runs over the surface of the helm from front to back. There is no nose  piece, but metal flaps extend down to protect part of the neck and face.",
@@ -703,12 +995,12 @@ CRESTED_HELM = {
   'spell_armor': 0,
   'spell_deflect_armor': 1,
   'weight': 0,
-  'worth': 0,
+  'worth': 20,
 }
 
 DWARVEN_MAIL = {
   'key': "Dwarven mail",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 6,
   'deflect_armor': 0,
   'desc': "The mail is finely crafted, but obviously made for a creature of small stature",
@@ -716,12 +1008,12 @@ DWARVEN_MAIL = {
   'spell_armor': 6,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 56,
 }
 
 GAUNTLET_OF_CRUSADER = {
   'key': "Gauntlet of Crusader",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 5,
   'deflect_armor': 0,
   'desc': "The guantlet is made of a fine chain mail mesh, under which lies a glove of red leather. The leather is emblazoned with a rampant dragon, and bears the initial \"C\".",
@@ -734,19 +1026,19 @@ GAUNTLET_OF_CRUSADER = {
 
 GAUNTLETS = {
   'key': "gauntlets",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 1,
   'deflect_armor': 0,
   'equip_slot': 13,
   'spell_armor': 0,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 40,
 }
 
 HORNED_HELM = {
   'key': "horned helm",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 1,
   'desc': "The helm is conical and made of iron, with a leather padding on the inside. Affixed to the sides of the helmet, however, are two large bull horns which curve up and out in a menacing fashion.",
@@ -754,12 +1046,12 @@ HORNED_HELM = {
   'spell_armor': 0,
   'spell_deflect_armor': 1,
   'weight': 0,
-  'worth': 0,
+  'worth': 20,
 }
 
 LEATHER_BOOTS = {
   'key': "leather boots",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 1,
   'deflect_armor': 0,
   'desc': "This pair of boots appear to be slightly worn in, but they look like they are heavy enough to protect your feet from harsh terrain.",
@@ -767,12 +1059,12 @@ LEATHER_BOOTS = {
   'spell_armor': 0,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 15,
 }
 
 LEATHER_JERKIN = {
   'key': "leather jerkin",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 3,
   'deflect_armor': 0,
   'desc': "The jerkin is of boiled leather, and comes down to the wearer's knees. Extra strips of hardened leather have been added across the chest, and on the shoulders.",
@@ -780,12 +1072,12 @@ LEATHER_JERKIN = {
   'spell_armor': 2,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 40,
 }
 
 MAGIC_HELMET = {
   'key': "magic helmet",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 3,
   'desc': "This helmet appears to be made of one solid piece of metal.  There are no lines or rivets, just smooth glimmering surface.",
@@ -793,12 +1085,12 @@ MAGIC_HELMET = {
   'spell_armor': 0,
   'spell_deflect_armor': 3,
   'weight': 0,
-  'worth': 0,
+  'worth': 800,
 }
 
 NORMAN_KITE_SHIELD = {
   'key': "Norman kite shield",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 3,
   'desc': "This shield is narrow, but long. This design helps to protect the full length of the body. The shield is constructed of three layers: the inner most of leather, then one of wood, and then the outer iron layer.",
@@ -806,12 +1098,12 @@ NORMAN_KITE_SHIELD = {
   'spell_armor': 0,
   'spell_deflect_armor': 3,
   'weight': 0,
-  'worth': 0,
+  'worth': 70,
 }
 
 PLUMED_HELM = {
   'key': "plumed helm",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 1,
   'desc': "This helmet is made of steel, and has been worked and molded to protect most of the head, face, and neck, without recourse to extra flaps. The helmet is topped with a long horsehair plume that drapes down to the shoulders.",
@@ -819,12 +1111,12 @@ PLUMED_HELM = {
   'spell_armor': 0,
   'spell_deflect_armor': 1,
   'weight': 0,
-  'worth': 0,
+  'worth': 20,
 }
 
 QUARTZ_EYES = {
   'key': "Quartz Eyes",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 0,
   'desc': "The quartz stones are finely cut spheroids of milky white stone. They are about an inch each in diamtere.",
@@ -837,7 +1129,7 @@ QUARTZ_EYES = {
 
 RED_PLATE_MAIL = {
   'key': "Red plate mail",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 11,
   'deflect_armor': 10,
   'desc': "This armor appears to be made out of scales from a Red dragon.  As you stare at it, the air around it shimmers with heat.  Yet you feel none of the heat.",
@@ -845,12 +1137,12 @@ RED_PLATE_MAIL = {
   'spell_armor': 11,
   'spell_deflect_armor': 10,
   'weight': 30,
-  'worth': 0,
+  'worth': 98999999,
 }
 
 RING_MAIL_ARMOR = {
   'key': "ring mail armor",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 4,
   'deflect_armor': 0,
   'desc': "The ring mail is essntially a leather jerkin covered with a mail of  inter-locking iron ringlets. ",
@@ -858,12 +1150,12 @@ RING_MAIL_ARMOR = {
   'spell_armor': 3,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 55,
 }
 
 SCALE_MAIL_ARMOR = {
   'key': "scale mail armor",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 7,
   'deflect_armor': 0,
   'desc': "This armor is essentially a padded leather jerkin covered with a  mail of overlapping steel plates, or \"scales\". Each scale is about two inches long, and an inch and a half wide, tapering to a point at the trailing edge.",
@@ -871,12 +1163,12 @@ SCALE_MAIL_ARMOR = {
   'spell_armor': 7,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 105,
 }
 
 SERPENT_SKIN_CLOAK = {
   'key': "Serpent-skin Cloak",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 0,
   'desc': "The cape slithers over your shoulders, giving you an uneasy impression that it is alive!",
@@ -889,7 +1181,7 @@ SERPENT_SKIN_CLOAK = {
 
 STEEL_BREASTPLATE = {
   'key': "steel breastplate",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 15,
   'deflect_armor': 10,
   'desc': "This steel breastplate looks like it will add quite alot to your personal protection, even though it looks quite heavy.",
@@ -897,12 +1189,12 @@ STEEL_BREASTPLATE = {
   'spell_armor': 0,
   'spell_deflect_armor': 0,
   'weight': 40,
-  'worth': 0,
+  'worth': 320,
 }
 
 TROLL_MAIL = {
   'key': "Troll mail",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 12,
   'deflect_armor': 0,
   'desc': "This armor is made for a creature of great size. It is heavy and made of blackest iron. A relief of strange and Evil looking markings adorns its dull surface.",
@@ -910,12 +1202,12 @@ TROLL_MAIL = {
   'spell_armor': 7,
   'spell_deflect_armor': 0,
   'weight': 0,
-  'worth': 0,
+  'worth': 59,
 }
 
 VAPRAKS_SKIN = {
   'key': "Vaprak's Skin",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 12,
   'deflect_armor': 0,
   'desc': "This object looks like a rough, scaley skin that might have been shed by a huge reptile. Upon closer examination, you see that it has been modified to be worn by a humanoid creature.",
@@ -928,7 +1220,7 @@ VAPRAKS_SKIN = {
 
 VIKING_ROUND_SHIELD = {
   'key': "Viking round shield",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 4,
   'desc': "This shield is very large and heavy, and of course, round. The shield is effective in covering most of the body, but is also very heavy and  unwieldy.",
@@ -936,12 +1228,12 @@ VIKING_ROUND_SHIELD = {
   'spell_armor': 0,
   'spell_deflect_armor': 4,
   'weight': 0,
-  'worth': 0,
+  'worth': 85,
 }
 
 WHITE_SCALE_MAIL = {
   'key': "White scale mail",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 9,
   'deflect_armor': 5,
   'desc': "The armor appears similar in fabrication to scale mail, but instead of utilizing metal plates, it uses small overlapping scales of what appear to be bone, or reptilean armor. The armor is a pure white in color.",
@@ -954,7 +1246,7 @@ WHITE_SCALE_MAIL = {
 
 WOODEN_SHIELD = {
   'key': "wooden shield",
-  'prototype_parent': 'ARMOR',
+  'prototype_parent': 'armor',
   'base_armor': 0,
   'deflect_armor': 2,
   'desc': "The wooden shield is constructed of two layers of wooden pieces, each running perpendicular to the grain of the other, with a coating of  oxhide.",
@@ -962,6 +1254,6 @@ WOODEN_SHIELD = {
   'spell_armor': 0,
   'spell_deflect_armor': 2,
   'weight': 0,
-  'worth': 0,
+  'worth': 35,
 }
 
