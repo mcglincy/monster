@@ -16,282 +16,380 @@ AMBER_HEMISPHERE = {
   'key': "amber hemisphere",
   'prototype_parent': 'bland_object',
   'desc': "The piece of amber is a perfect hemisphere that rests comfortably in the palm of your hand. You notice a message has been etched in the amber, and spirals its way around the stone. It reads:  \"The Gae Bolge has returned to its makers, the Tuatha de Danaan, who   have fled the Realm of Man and now are only found in the Realm of   Dreams.\"",
+  'weight': 0,
+  'worth': 0,
 }
 
 ANIMAL_PELT = {
   'key': "animal pelt",
   'prototype_parent': 'bland_object',
   'desc': "The animal pelt is thick and grey.",
+  'weight': 0,
+  'worth': 0,
 }
 
 ARROWHEAD = {
   'key': "arrowhead",
   'prototype_parent': 'bland_object',
   'desc': "The arrowhead is made from bronze, and has been severely oxidized.",
+  'weight': 0,
+  'worth': 0,
 }
 
 BENT_DAGGER = {
   'key': "bent dagger",
   'prototype_parent': 'bland_object',
   'desc': "The dagger's blade has been twisted around behind the hilt.",
+  'weight': 0,
+  'worth': 0,
 }
 
 BROKEN_LONGSWORD = {
   'key': "broken longsword",
   'prototype_parent': 'bland_object',
+  'weight': 1,
+  'worth': 0,
 }
 
 CHARM_OF_OPENING = {
   'key': "Charm of Opening",
   'prototype_parent': 'bland_object',
   'desc': "The charm is a thin silver medallion that has strange markings on the front face, and an inscription on the back. The inscription reads:  \"The wise will know how to use this most ancient of devices.\"",
+  'weight': 0,
+  'worth': 73,
 }
 
 CHARM_OF_REDEMPTION = {
   'key': "Charm of Redemption",
   'prototype_parent': 'bland_object',
   'desc': "The charm is a small blue stone on a string.",
+  'weight': 0,
+  'worth': 0,
 }
 
 CHUNK_OF_AMBER = {
   'key': "chunk of amber",
   'prototype_parent': 'bland_object',
   'desc': "The chunk of amber appears normal.",
+  'weight': 0,
+  'worth': 0,
 }
 
 COPPER_TABLETS = {
   'key': "Copper Tablets",
   'prototype_parent': 'bland_object',
   'desc': "The tablets are large and thin, made of sheets of copper hammered together. A copper chain forms a large loop, going through the left corner of all the tablets around through the right. The writing on the tablets is very archaic, and does not look human.  One tablet does, however, depict an image of a brilliant spear floating above a sleeping individual. Between the spear and the individual is a round sphere, which might depict either the Sun or a more Earthly object.",
+  'weight': 0,
+  'worth': 0,
 }
 
 CRYSTAL_PRISM = {
   'key': "crystal prism",
   'prototype_parent': 'bland_object',
   'desc': "The prism fits in the palm of your hand, and is nearly transparent.",
+  'weight': 0,
+  'worth': 0,
 }
 
 DIAMOND = {
   'key': "diamond",
   'prototype_parent': 'bland_object',
   'desc': "The gem has already been cut, and is clearly valuable.",
+  'weight': 0,
+  'worth': 75,
 }
 
 DRAGONSTONE = {
   'key': "Dragonstone",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 DRUIDIC_BOAT = {
   'key': "Druidic Boat",
   'prototype_parent': 'bland_object',
+  'weight': 30,
+  'worth': 0,
 }
 
 ELF_SKULL = {
   'key': "elf skull",
   'prototype_parent': 'bland_object',
   'desc': "The skull is delicate and slightly smaller than that of a human. The  cranium has been pierced by a sharp instrument.",
+  'weight': 0,
+  'worth': 0,
 }
 
 FLAT_STONE = {
   'key': "flat stone",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 FORGE_STONE = {
   'key': "Forge stone",
   'prototype_parent': 'bland_object',
   'desc': "The stone is a crimson ore of some sort, with a distinctly metallic look and feel about it.",
+  'weight': 0,
+  'worth': 0,
 }
 
 GARNET = {
   'key': "garnet",
   'prototype_parent': 'bland_object',
   'desc': "The gem is about a half an inch in diameter, and in the rough.",
+  'weight': 0,
+  'worth': 49,
 }
 
 GLASS_BOTTLE = {
   'key': "glass bottle",
   'prototype_parent': 'bland_object',
   'desc': "The bottle is of a dark green glass. The bottom is slightly bloated, appearing perhaps more like a flask.",
+  'weight': 0,
+  'worth': 0,
 }
 
 GOLDEN_RING = {
   'key': "golden ring",
   'prototype_parent': 'bland_object',
   'desc': "The ring bears the inscription \"to death do us part..\"",
+  'weight': 0,
+  'worth': 91,
 }
 
 GRANITE_STONE = {
   'key': "granite stone",
   'prototype_parent': 'bland_object',
   'desc': "The stone is very smooth, and is in the shape of a perfect hemisphere.",
+  'weight': 0,
+  'worth': 0,
 }
 
 HUGE_PEARL = {
   'key': "huge pearl",
   'prototype_parent': 'bland_object',
   'desc': "The pearl is very large, and of the purest, deepest white.",
+  'weight': 0,
+  'worth': 64,
 }
 
 IRON_KEY = {
   'key': "iron key",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 IVORY_BOAT = {
   'key': "Ivory Boat",
   'prototype_parent': 'bland_object',
   'desc': "The boat is not very large, capable of holding only one person. It lacks a sail, oars, or any other visible means of propulsion. It is carved out of a white wood that looks very much like ivory.",
+  'weight': 0,
+  'worth': 0,
 }
 
 IVORY_CARVING = {
   'key': "ivory carving",
   'prototype_parent': 'bland_object',
   'desc': "The object is an animal tusk which has been richly carved in relief, and capped with gold.",
+  'weight': 0,
+  'worth': 37,
 }
 
 JADE_FIGURINE = {
   'key': "jade figurine",
   'prototype_parent': 'bland_object',
   'desc': "The figurine depicts an elephant.",
+  'weight': 0,
+  'worth': 42,
 }
 
 KEY_OF_MOIBUS = {
   'key': "key of Moibus",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 LAKE_STONE = {
   'key': "lake stone",
   'prototype_parent': 'bland_object',
   'desc': "You see a dark blue stone, shimmering in the water. It has an inscription on one side saying I?s ?n ?he h??t of th? L?k?.",
+  'weight': 0,
+  'worth': 0,
 }
 
 LANTERN = {
   'key': "Lantern",
   'prototype_parent': 'bland_object',
   'desc': "The Lantern is finely crafted from the fines brass found in the realm",
+  'weight': 0,
+  'worth': 10000,
 }
 
 LEAD_BAR = {
   'key': "lead bar",
   'prototype_parent': 'bland_object',
   'desc': "The bar is a small ingot of solid lead.",
+  'weight': 0,
+  'worth': 0,
 }
 
 LONG_STRAND_OF_HEMP = {
   'key': "long strand of hemp",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 MARBLE = {
   'key': "marble",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 OBSIDIAN_KEY = {
   'key': "obsidian key",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 OLD_PARCHMENT = {
   'key': "old parchment",
   'prototype_parent': 'bland_object',
   'desc': "The parchment appears blank. There are several sheets stuck together.",
+  'weight': 0,
+  'worth': 0,
 }
 
 PERSIAN_CARPET = {
   'key': "Persian carpet",
   'prototype_parent': 'bland_object',
   'desc': "The carpet, when unrolled, is 20 feet by 20 feet, and is very impressive.",
+  'weight': 50,
+  'worth': 112,
 }
 
 PHIAL_OF_SUNSET = {
   'key': "Phial of Sunset",
   'prototype_parent': 'bland_object',
   'desc': "The phial is a glass prism which scatters light into colorful spectrums. Whats more, the phial almost seems to emanate a light of its own, as well as a faint hum. ",
+  'weight': 0,
+  'worth': 0,
 }
 
 PORCELAIN_SHARD = {
   'key': "porcelain shard",
   'prototype_parent': 'bland_object',
   'desc': "The shard appears like a large piece from an old vase.",
+  'weight': 0,
+  'worth': 0,
 }
 
 PORCELAIN_VASE = {
   'key': "porcelain vase",
   'prototype_parent': 'bland_object',
   'desc': "The vase is white, with a scene of men hunting tigers adorning it.",
+  'weight': 4,
+  'worth': 56,
 }
 
 RHINESTONE_KEY = {
   'key': "Rhinestone Key",
   'prototype_parent': 'bland_object',
   'desc': "The key is very oddly shaped. It has a long metal shaft, and is set with an emerald and a cluster of rhinestones.",
+  'weight': 0,
+  'worth': 1,
 }
 
 ROPE = {
   'key': "rope",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 65,
 }
 
 RUSTY_KEY = {
   'key': "rusty key",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 SILKEN_CORD = {
   'key': "silken cord",
   'prototype_parent': 'bland_object',
   'desc': "The cord is light, and about a foot long. It is red.",
+  'weight': 0,
+  'worth': 0,
 }
 
 SILVER_MIRROR = {
   'key': "silver mirror",
   'prototype_parent': 'bland_object',
   'desc': "The mirror is small enough to fit in the palm of your hand, and is of polished silver.",
+  'weight': 0,
+  'worth': 0,
 }
 
 SMALL_RUBY = {
   'key': "small ruby",
   'prototype_parent': 'bland_object',
   'desc': "The gem is rather small, and dark red.",
+  'weight': 0,
+  'worth': 36,
 }
 
 STONE_TABLET = {
   'key': "stone tablet",
   'prototype_parent': 'bland_object',
   'desc': "The tablet is of white marble, and is inscribed with runes which you unfortunately cannot decipher.",
+  'weight': 0,
+  'worth': 0,
 }
 
 TEAKWOOD_CHEST = {
   'key': "teakwood chest",
   'prototype_parent': 'bland_object',
   'desc': "The chest is about 4 feet by 2 feet by 2 feet, and has hinges of brass.",
+  'weight': 8,
+  'worth': 51,
 }
 
 THIGHBONE = {
   'key': "thighbone",
   'prototype_parent': 'bland_object',
   'desc': "The bone is that of some unknown creature, but written on it in black runes is the word: \"suedomsa\"",
+  'weight': 0,
+  'worth': 0,
 }
 
 TROLL_STAFF = {
   'key': "troll staff",
   'prototype_parent': 'bland_object',
   'desc': "The staff is about 9 feet long, and roughly hacked from wood. It is topped with an Elf skull. Along the length of the staff is written: \"In order to be the leader of your people you must taste the blood of your enemies, and wear the head of a King.\"",
+  'weight': 0,
+  'worth': 0,
 }
 
 VELVET_CLOTH = {
   'key': "velvet cloth",
   'prototype_parent': 'bland_object',
   'desc': "The cloth is of black velvet, and is decorated with embroidery of  golden thread. ",
+  'weight': 0,
+  'worth': 0,
 }
 
 VIAL = {
   'key': "vial",
   'prototype_parent': 'bland_object',
+  'weight': 0,
+  'worth': 0,
 }
 
 #
@@ -1255,5 +1353,295 @@ WOODEN_SHIELD = {
   'spell_deflect_armor': 2,
   'weight': 0,
   'worth': 35,
+}
+
+#
+# other equipment
+#
+
+EQUIPMENT = {
+  'typeclass': 'typeclasses.objects.Equipment',
+  'key': 'equipment',
+  'desc': 'An equipment.',
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0
+}
+
+AQUAMARINE_ORB = {
+  'key': "Aquamarine Orb",
+  'prototype_parent': 'equipment',
+  'desc': "The orb is about the size of a very large egg, and weighs about 10 pounds. It is a dark aquamarine in color, and reminds you of a still body of water. It is affixed to a silver stand which is mounted into the floor.",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+BLACK_ORB = {
+  'key': "Black Orb",
+  'prototype_parent': 'equipment',
+  'desc': "The orb fits into the palm of your hand nicely, and is very dense.",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+BLOCK_OF_ICE = {
+  'key': "block of ice",
+  'prototype_parent': 'equipment',
+  'desc': "This large block of ice looks quite out of place lying here.  As a breeze blows by it you feel the chill off of its wet surface.",
+  'equip_slot': 0,
+  'weight': 10,
+  'worth': 0,
+}
+
+DRAGON_BOMB = {
+  'key': "dragon bomb",
+  'prototype_parent': 'equipment',
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+DREAMING_STONE = {
+  'key': "Dreaming Stone",
+  'prototype_parent': 'equipment',
+  'desc': "The Dreaming Stone is sphere,one half of which appears to be of amber, the other half of stone. The two pieces fit together exactly, but the method of their adhesion eludes you.",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+EBONY_STAFF = {
+  'key': "ebony staff",
+  'prototype_parent': 'equipment',
+  'equip_slot': 3,
+  'weight': 0,
+  'worth': 0,
+}
+
+EEK = {
+  'key': "eek",
+  'prototype_parent': 'equipment',
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+ELFSTONE = {
+  'key': "elfstone",
+  'prototype_parent': 'equipment',
+  'equip_slot': 17,
+  'weight': 0,
+  'worth': 0,
+}
+
+FIRE_OPAL = {
+  'key': "Fire Opal",
+  'prototype_parent': 'equipment',
+  'desc': "As you peer into the opal you see some people walking through a square in the city of Tai-Tastigon.",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+GEM_OF_TRUE_SEEING = {
+  'key': "Gem of True Seeing",
+  'prototype_parent': 'equipment',
+  'equip_slot': 18,
+  'weight': 0,
+  'worth': 0,
+}
+
+GRAY_ORB = {
+  'key': "Gray Orb",
+  'prototype_parent': 'equipment',
+  'desc': "The orb fits into the palm of your hand nicely, and is very dense.",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+GREEK_FIREBOMB = {
+  'key': "Greek firebomb",
+  'prototype_parent': 'equipment',
+  'desc': "The bomb is circular, roughly a foot in diameter, and is made from some sort of animal bladder. The liquid inside it sloshes slightly as you move it, but you get the feeling shaking it too much could be bad for your health.",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 20,
+}
+
+HACK_OBJ = {
+  'key': "Hack obj",
+  'prototype_parent': 'equipment',
+  'equip_slot': 1,
+  'weight': 0,
+  'worth': 0,
+}
+
+HEART_OF_THE_LAKE = {
+  'key': "Heart of the Lake",
+  'prototype_parent': 'equipment',
+  'desc': "The object is a very large stone, deep blue in color, which seems almost to give off a cool light. It is definitely translucent. It's surface is smooth, but very faint cracks can be seen to move across the deep blue exterior.",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+KEY = {
+  'key': "key",
+  'prototype_parent': 'equipment',
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+LEATHER_BELT = {
+  'key': "leather belt",
+  'prototype_parent': 'equipment',
+  'desc': "The belt is faded, but otherwise a normal belt.",
+  'equip_slot': 14,
+  'weight': 0,
+  'worth': 0,
+}
+
+LICH_RING = {
+  'key': "Lich Ring",
+  'prototype_parent': 'equipment',
+  'desc': "The ring is thin, and carved from some bone or ivory. Etched onto the inner surface of the rings are the following words, written in an ancient but still understandable dialect:               \"Burn away your life and soul.\"",
+  'equip_slot': 12,
+  'weight': 0,
+  'worth': 0,
+}
+
+MAELSTROM_RING = {
+  'key': "Maelstrom Ring",
+  'prototype_parent': 'equipment',
+  'desc': "The ring is constructed of a dull lead, and bears no discernable markings.",
+  'equip_slot': 12,
+  'weight': 0,
+  'worth': 0,
+}
+
+OLD_SHOE = {
+  'key': "old shoe",
+  'prototype_parent': 'equipment',
+  'desc': "The shoe is of leather, and is very tattered.",
+  'equip_slot': 16,
+  'weight': 0,
+  'worth': 0,
+}
+
+PEACOCK_GLOVE = {
+  'key': "Peacock glove",
+  'prototype_parent': 'equipment',
+  'desc': "The many colored threads in the glove glisten in the light. ",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+PINK_FAIRY_TIGHTS = {
+  'key': "pink fairy tights",
+  'prototype_parent': 'equipment',
+  'desc': "These bright pink tights look like they will fit your body quite well, they appear to glimmer in the light.",
+  'equip_slot': 15,
+  'weight': -10,
+  'worth': 300,
+}
+
+RHINESTONE_RING = {
+  'key': "Rhinestone Ring",
+  'prototype_parent': 'equipment',
+  'desc': "The ring is a band of gold set with a cluster of rhinestones. The  workmanship is clearly superlative.",
+  'equip_slot': 12,
+  'weight': 0,
+  'worth': 0,
+}
+
+RUNE = {
+  'key': "Rune",
+  'prototype_parent': 'equipment',
+  'desc': "You have found a Rune of Power. It must not be removed from its place of rest else all of the universe be plunged into chaos. Use carefully and wisely.",
+  'equip_slot': 13,
+  'weight': 0,
+  'worth': 2001,
+}
+
+SHINY_OBJECT = {
+  'key': "shiny object",
+  'prototype_parent': 'equipment',
+  'desc': "The object is oddly shaped, and appears almost like a polished tin or some such. Written across the face of the object is the following phrase: \"If you wish to continue beyond here, check and see who is currently in the game.\"",
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+SHROUD_OF_KROTCHE = {
+  'key': "Shroud of Krotche",
+  'prototype_parent': 'equipment',
+  'desc': "The shroud is very long piece of ancient cloth. Immense age has dulled the original color to that of a dull brown. The length of the garment is such that it can be wrapped around ones entire body. It does not appear as though the cloth would prohibit movement when thus worn, but it certainly would slow it.",
+  'equip_slot': 8,
+  'weight': 30,
+  'worth': 0,
+}
+
+SILK_ROBE = {
+  'key': "silk robe",
+  'prototype_parent': 'equipment',
+  'desc': "The robe is red, and is without much additional decoration.",
+  'equip_slot': 4,
+  'weight': 1,
+  'worth': 26,
+}
+
+STACK_DUMP_BOMB = {
+  'key': "stack-dump bomb",
+  'prototype_parent': 'equipment',
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0,
+}
+
+STAFF_OF_LUXOR = {
+  'key': "Staff of Luxor",
+  'prototype_parent': 'equipment',
+  'desc': "The staff is of wood and about 7 feet long. The top of it, however, is capped with a strange green stone, which has a tendency to give off an intense jade light.",
+  'equip_slot': 2,
+  'weight': 0,
+  'worth': 0,
+}
+
+THERMO_NUCLEAR_BOMB = {
+  'key': "Thermo-nuclear Bomb",
+  'prototype_parent': 'equipment',
+  'equip_slot': 17,
+  'weight': 0,
+  'worth': 7500,
+}
+
+THROWING_DAGGER = {
+  'key': "throwing dagger",
+  'prototype_parent': 'equipment',
+  'equip_slot': 14,
+  'weight': 0,
+  'worth': 25,
+}
+
+WARNOCK = {
+  'key': "Warnock",
+  'prototype_parent': 'equipment',
+  'equip_slot': 17,
+  'weight': 0,
+  'worth': 300000,
+}
+
+ZEPHYR_GOGGLES = {
+  'key': "Zephyr Goggles",
+  'prototype_parent': 'equipment',
+  'desc': "This strange multicolored apparatus appears to be able to be worn on ones head, over ones eyes.  The strange bright colors on the  lenses make you slightly confused, if not nauscious.",
+  'equip_slot': 6,
+  'weight': 3,
+  'worth': 900,
 }
 

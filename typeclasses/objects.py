@@ -168,6 +168,8 @@ class Object(DefaultObject):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.BLAND
+    self.db.weight = 0
+    self.db.worth = 0
 
 
 class Gold(Object):
@@ -208,32 +210,31 @@ class Gold(Object):
         g.delete()
 
 
-class Weapon(Object):
+# TODO: move to mixins?
+class Equipment(object):
   def at_object_creation(self):
-    """Called at first creation of the object."""
     super().at_object_creation()
     self.db.object_kind = ObjectKind.EQUIP   
+    self.db.equip_slot = 0
+
+
+class Weapon(Equipment):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.equip_slot = 1
     self.db.attack_speed = 0
     self.db.base_damage = 0
-    self.db.equip_slot = 1
     self.db.random_damage = 0
-    self.db.weight = 0
-    self.db.worth = 0
 
 
-class Armor(Object):
+class Armor(Equipment):
   def at_object_creation(self):
-    """Called at first creation of the object."""
     super().at_object_creation()
-    self.db.object_kind = ObjectKind.EQUIP   
+    self.db.equip_slot = 4
     self.db.base_armor = 0
     self.db.deflect_armor = 0
     self.db.spell_armor = 0
     self.db.spell_deflect_armor = 0
-    self.db.equip_slot = 4
-    self.db.random_damage = 0
-    self.db.weight = 0
-    self.db.worth = 0
 
 
 class Mob(Object):

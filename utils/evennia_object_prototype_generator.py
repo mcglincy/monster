@@ -91,7 +91,7 @@ def lookup_description(id, descs, lines):
   return None
 
 
-def output_blands(blands, descs, lines):
+def output_blands(objs, descs, lines):
   print("""#
 # 'Bland' objects
 #
@@ -102,23 +102,22 @@ BLAND_OBJECT = {
   'desc': 'A bland object.',
 }
 """)
-
-  for bland in blands:
-  #  classname = camelcase_class_name(weapon['obj_name'])
-  #  print(f'class {classname}(Weapon):')
-  #  print('  pass')
-    obj_name = bland['obj_name']
+  for obj in objs:
+    obj_name = obj['obj_name']
     print(f"{snake_case(obj_name)} = {{")
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'bland_object',")
-    desc = lookup_description(bland['examine'], descs, lines)
+    desc = lookup_description(obj['examine'], descs, lines)
     if desc:
       print(f"  'desc': \"{desc}\",")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
-def output_weapons(weapons, descs, lines):
+
+def output_weapons(objs, descs, lines):
   print("""#
 # Weapons
 #
@@ -135,36 +134,32 @@ WEAPON = {
   'worth': 0
 }
 """)
-
-  for weapon in weapons:
-  #  classname = camelcase_class_name(weapon['obj_name'])
-  #  print(f'class {classname}(Weapon):')
-  #  print('  pass')
-    obj_name = weapon['obj_name']
-    base_damage = lookup_effect(weapon, ObjectEffectKind.WEAPON_BASE_DAMAGE) or 0
-    random_damage = lookup_effect(weapon, ObjectEffectKind.WEAPON_RANDOM_DAMAGE) or 0
-    attack_speed = lookup_effect(weapon, ObjectEffectKind.ATTACK_SPEED) or 0
+  for obj in objs:
+    obj_name = obj['obj_name']
+    base_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE) or 0
+    random_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE) or 0
+    attack_speed = lookup_effect(obj, ObjectEffectKind.ATTACK_SPEED) or 0
     print(f"{snake_case(obj_name)} = {{")
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'weapon',")
     print(f"  'attack_speed': {attack_speed},")
     print(f"  'base_damage': {base_damage},")
-    desc_idx = weapon['examine'] - 1
+    desc_idx = obj['examine'] - 1
     if desc_idx >= 0 and desc_idx < len(descs):
       # TODO: special handling for 'default' descript 32000
       desc = escaped(' '.join(descs[desc_idx]['lines']))
       print(f"  'desc': \"{desc}\",")
-    print(f"  'equip_slot': {weapon['wear']},")
+    print(f"  'equip_slot': {obj['wear']},")
     # TODO: handle line_desc? looks mostly dead
     print(f"  'random_damage': {random_damage},")
-    print(f"  'weight': {weapon['weight']},")
-    print(f"  'worth': {weapon['worth']},")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
 
-def output_armors(armors, descs, lines):
+def output_armors(objs, descs, lines):
   print("""#
 # Armor
 #
@@ -182,30 +177,59 @@ ARMOR = {
   'worth': 0  
 }
 """)
-
-  for armor in armors:
-    obj_name = armor['obj_name']
-    base_armor = lookup_effect(armor, ObjectEffectKind.BASE_ARMOR) or 0
-    deflect_armor = lookup_effect(armor, ObjectEffectKind.DEFLECT_ARMOR) or 0
-    spell_armor = lookup_effect(armor, ObjectEffectKind.SPELL_ARMOR) or 0
-    spell_deflect_armor = lookup_effect(armor, ObjectEffectKind.SPELL_DEFLECT_ARMOR) or 0
+  for obj in objs:
+    obj_name = obj['obj_name']
+    base_armor = lookup_effect(obj, ObjectEffectKind.BASE_ARMOR) or 0
+    deflect_armor = lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR) or 0
+    spell_armor = lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR) or 0
+    spell_deflect_armor = lookup_effect(obj, ObjectEffectKind.SPELL_DEFLECT_ARMOR) or 0
     print(f"{snake_case(obj_name)} = {{")  
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'armor',")
     print(f"  'base_armor': {base_armor},")  
     print(f"  'deflect_armor': {deflect_armor},")  
-    desc_idx = armor['examine'] - 1
+    desc_idx = obj['examine'] - 1
     if desc_idx >= 0 and desc_idx < len(descs):
       # TODO: special handling for 'default' descript 32000
       desc = escaped(' '.join(descs[desc_idx]['lines']))
       print(f"  'desc': \"{desc}\",")
-    print(f"  'equip_slot': {armor['wear']},")  
+    print(f"  'equip_slot': {obj['wear']},")
     # TODO: handle line_desc? looks mostly dead
     print(f"  'spell_armor': {spell_armor},")  
     print(f"  'spell_deflect_armor': {spell_deflect_armor},")  
-    print(f"  'weight': {armor['weight']},")  
-    print(f"  'worth': {armor['worth']},")  
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
+    print('}')
+    print()
+
+
+def output_other_equipment(objs, descs, lines):
+  print("""#
+# other equipment
+#
+
+EQUIPMENT = {
+  'typeclass': 'typeclasses.objects.Equipment',
+  'key': 'equipment',
+  'desc': 'An equipment.',
+  'equip_slot': 0,
+  'weight': 0,
+  'worth': 0
+}
+""")
+  for obj in objs:
+    obj_name = obj['obj_name']
+    print(f"{snake_case(obj_name)} = {{")
+    # TODO: add better quote escaping for key and desc
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'equipment',")
+    desc = lookup_description(obj['examine'], descs, lines)
+    if desc:
+      print(f"  'desc': \"{desc}\",")
+    print(f"  'equip_slot': {obj['wear']},")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
@@ -222,6 +246,7 @@ def main():
   blands = []
   weapons = []
   armors = []
+  other_equipment = []
   for obj in objects:
     if obj['kind'] == ObjectKind.BLAND:
       blands.append(obj)
@@ -233,9 +258,14 @@ def main():
         or lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR)
         or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)):
         armors.append(obj)
+      else:
+        # TODO: we'll need to further subcategorize these (scrolls, etc)
+        other_equipment.append(obj)
+
   blands.sort(key=lambda x: x['obj_name'].upper())
   weapons.sort(key=lambda x: x['obj_name'].upper())
   armors.sort(key=lambda x: x['obj_name'].upper())
+  other_equipment.sort(key=lambda x: x['obj_name'].upper())
 
   print("""#
 # Generated object prototypes
@@ -244,6 +274,7 @@ def main():
   output_blands(blands, descs, lines)
   output_weapons(weapons, descs, lines)
   output_armors(armors, descs, lines)
+  output_other_equipment(other_equipment, descs, lines)
 
 
 if __name__ == "__main__":
