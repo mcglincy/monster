@@ -1,5 +1,9 @@
 #
-# Weapon prototypes
+# Generated object prototypes
+#
+
+#
+# Weapons
 #
 
 WEAPON = {
@@ -568,9 +572,8 @@ WRAITH_BLADE = {
   'worth': 0,
 }
 
-
 #
-# Armor prototypes
+# Armor
 #
 
 ARMOR = {

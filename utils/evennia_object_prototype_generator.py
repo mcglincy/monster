@@ -82,8 +82,9 @@ def main():
     descs = json.load(f)
 
   print("""#
-  # Monster generated objects
-  #""")
+# Generated object prototypes
+#
+""")
 
   # divide objects into lists of weapons and armor
   weapons = []
@@ -100,23 +101,22 @@ def main():
   weapons.sort(key=lambda x: x['obj_name'].upper())
   armor.sort(key=lambda x: x['obj_name'].upper())
 
-  print("""
-  #
-  # Weapon prototypes
-  #
+  print("""#
+# Weapons
+#
 
-  WEAPON = {
-    'typeclass': 'typeclasses.objects.Weapon',
-    'key': 'weapon',
-    'attack_speed': 0,
-    'base_damage': 0,
-    'desc': 'A weapon.',
-    'equip_slot': 1,
-    'random_damage': 0,
-    'weight': 0,
-    'worth': 0
-  }
-  """)
+WEAPON = {
+  'typeclass': 'typeclasses.objects.Weapon',
+  'key': 'weapon',
+  'attack_speed': 0,
+  'base_damage': 0,
+  'desc': 'A weapon.',
+  'equip_slot': 1,
+  'random_damage': 0,
+  'weight': 0,
+  'worth': 0
+}
+""")
 
   for weapon in weapons:
   #  classname = camelcase_class_name(weapon['obj_name'])
@@ -146,24 +146,23 @@ def main():
     print()
 
 
-  print("""
-  #
-  # Armor prototypes
-  #
+  print("""#
+# Armor
+#
 
-  ARMOR = {
-    'typeclass': 'typeclasses.objects.Armor',
-    'key': 'armor',
-    'base_armor': 0,
-    'deflect_armor': 0,
-    'desc': 'An armor.',
-    'equip_slot': 4,
-    'spell_armor': 0,
-    'spell_deflect_armor': 0,
-    'weight': 0,
-    'worth': 0  
-  }
-  """)
+ARMOR = {
+  'typeclass': 'typeclasses.objects.Armor',
+  'key': 'armor',
+  'base_armor': 0,
+  'deflect_armor': 0,
+  'desc': 'An armor.',
+  'equip_slot': 4,
+  'spell_armor': 0,
+  'spell_deflect_armor': 0,
+  'weight': 0,
+  'worth': 0  
+}
+""")
 
   for armor in armor:
     obj_name = armor['obj_name']
