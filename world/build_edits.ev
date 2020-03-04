@@ -1,5 +1,10 @@
-# Go back to the Void
+# make sure Limbo is linked to the Void, until we have default start room working
+@tel Limbo
+#
+@open down;d = Void
+#
+# Make sure Void is linked to Purgatory, until we have trapdoors working
 @tel Void
-# open a normal exit to Purgatory, until we have trapdoors working
+#
 @open down;d = Purgatory
 #
