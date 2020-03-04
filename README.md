@@ -49,13 +49,13 @@ The running game server is up at http://www.monstermud.com.
   * Start game in tutorial room(s)
   * Look at in-room subdescriptions
   * Trap door
-  * Windows / window_descs
   * Exit descriptions
   * Exit types
     * hidden
     * object keyed/forbidden
     * guardian
     * do-effect (gain/lose health, gold, xp)
+  * Windows / window_descs?
 * Combat
   * Freeze / attack delay
   * Weapon speed
@@ -66,6 +66,7 @@ The running game server is up at http://www.monstermud.com.
   * Missiles and *throw* command
   * Bombs and *lob* command
 * Commands
+  * *name* command
   * *hide* / *search* / *reveal* commands
   * *use* command
   * *block* command
