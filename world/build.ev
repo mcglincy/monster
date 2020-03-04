@@ -8534,9 +8534,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_571
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949323
+@set down/exit_effect_value = -349
 #
 @tel room_6
 #
@@ -8814,9 +8814,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_63
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949576
+@set north/exit_effect_value = -96
 #
 @open south;s = room_71
 #
@@ -9222,9 +9222,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_716
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949423
+@set down/exit_effect_value = -249
 #
 @tel room_97
 #
@@ -9680,9 +9680,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_193
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949548
+@set down/exit_effect_value = -124
 #
 @tel room_165
 #
@@ -9748,9 +9748,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_175
 #
-@set up/exit_effect_kind = 0
+@set up/exit_effect_kind = 4
 #
-@set up/exit_effect_value = 42949474
+@set up/exit_effect_value = -198
 #
 @tel room_174
 #
@@ -9766,9 +9766,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_173
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949474
+@set down/exit_effect_value = -198
 #
 @tel room_176
 #
@@ -10154,9 +10154,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_227
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949323
+@set west/exit_effect_value = -349
 #
 @tel room_229
 #
@@ -10656,9 +10656,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_645
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949573
+@set south/exit_effect_value = -99
 #
 @tel room_306
 #
@@ -11082,9 +11082,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_320
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949323
+@set east/exit_effect_value = -349
 #
 @tel room_367
 #
@@ -11218,9 +11218,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_432
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949223
+@set down/exit_effect_value = -449
 #
 @tel room_383
 #
@@ -11272,15 +11272,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_386
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949483
+@set south/exit_effect_value = -189
 #
 @open east;e = room_385
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949493
+@set east/exit_effect_value = -179
 #
 @tel room_389
 #
@@ -11322,9 +11322,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_421
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949395
+@set down/exit_effect_value = -277
 #
 @tel room_395
 #
@@ -11342,9 +11342,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_388
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949564
+@set down/exit_effect_value = -108
 #
 @tel room_397
 #
@@ -11370,9 +11370,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_435
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949374
+@set down/exit_effect_value = -298
 #
 @tel room_400
 #
@@ -11732,9 +11732,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_450
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949273
+@set north/exit_effect_value = -399
 #
 @open down;d = room_448
 #
@@ -11800,9 +11800,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_48
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949323
+@set north/exit_effect_value = -349
 #
 @tel room_460
 #
@@ -12264,17 +12264,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_513
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949622
+@set north/exit_effect_value = -50
 #
 @open south;s = room_514
 #
 @open east;e = room_513
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949622
+@set east/exit_effect_value = -50
 #
 @open west;w = room_512
 #
@@ -12282,9 +12282,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock phase = view:perm(see_hidden_exits)
 #
-@set phase/exit_effect_kind = 0
+@set phase/exit_effect_kind = 4
 #
-@set phase/exit_effect_value = 42949173
+@set phase/exit_effect_value = -499
 #
 @tel room_514
 #
@@ -12294,15 +12294,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_514
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949572
+@set east/exit_effect_value = -100
 #
 @open west;w = room_514
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949572
+@set west/exit_effect_value = -100
 #
 @tel room_515
 #
@@ -12310,15 +12310,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_515
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949622
+@set south/exit_effect_value = -50
 #
 @open east;e = room_515
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949622
+@set east/exit_effect_value = -50
 #
 @open west;w = room_517
 #
@@ -12342,15 +12342,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_518
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949622
+@set south/exit_effect_value = -50
 #
 @open east;e = room_518
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949622
+@set east/exit_effect_value = -50
 #
 @open west;w = room_519
 #
@@ -12358,15 +12358,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_519
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949572
+@set north/exit_effect_value = -100
 #
 @open south;s = room_519
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949572
+@set south/exit_effect_value = -100
 #
 @open east;e = room_518
 #
@@ -12378,17 +12378,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_520
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949622
+@set south/exit_effect_value = -50
 #
 @open east;e = room_519
 #
 @open west;w = room_520
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949622
+@set west/exit_effect_value = -50
 #
 @tel room_521
 #
@@ -12410,17 +12410,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_523
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949622
+@set south/exit_effect_value = -50
 #
 @open east;e = room_522
 #
 @open west;w = room_523
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949622
+@set west/exit_effect_value = -50
 #
 @tel room_524
 #
@@ -12430,23 +12430,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_524
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949572
+@set east/exit_effect_value = -100
 #
 @open west;w = room_524
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949572
+@set west/exit_effect_value = -100
 #
 @tel room_525
 #
 @open north;n = room_525
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949622
+@set north/exit_effect_value = -50
 #
 @open south;s = room_524
 #
@@ -12454,9 +12454,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_525
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949622
+@set west/exit_effect_value = -50
 #
 @tel room_526
 #
@@ -12476,9 +12476,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_528
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949622
+@set north/exit_effect_value = -50
 #
 @open south;s = room_527
 #
@@ -12486,23 +12486,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_528
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949622
+@set west/exit_effect_value = -50
 #
 @tel room_529
 #
 @open north;n = room_529
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949572
+@set north/exit_effect_value = -100
 #
 @open south;s = room_529
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949572
+@set south/exit_effect_value = -100
 #
 @open east;e = room_530
 #
@@ -12512,17 +12512,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_530
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949622
+@set north/exit_effect_value = -50
 #
 @open south;s = room_512
 #
 @open east;e = room_530
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949622
+@set east/exit_effect_value = -50
 #
 @open west;w = room_529
 #
@@ -12638,27 +12638,27 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_554
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949398
+@set north/exit_effect_value = -274
 #
 @open south;s = room_551
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949323
+@set south/exit_effect_value = -349
 #
 @open east;e = room_552
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949298
+@set east/exit_effect_value = -374
 #
 @open west;w = room_553
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949273
+@set west/exit_effect_value = -399
 #
 @open down;d = room_509
 #
@@ -13000,9 +13000,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_625
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949493
+@set north/exit_effect_value = -179
 #
 @open south;s = room_628
 #
@@ -13012,9 +13012,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_634
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949476
+@set east/exit_effect_value = -196
 #
 @open west;w = room_623
 #
@@ -13032,69 +13032,69 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_625
 #
-@set up/exit_effect_kind = 0
+@set up/exit_effect_kind = 4
 #
-@set up/exit_effect_value = 42949572
+@set up/exit_effect_value = -100
 #
 @tel room_626
 #
 @open south;s = room_625
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949516
+@set south/exit_effect_value = -156
 #
 @open west;w = room_627
 #
 @open down;d = room_626
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949481
+@set down/exit_effect_value = -191
 #
 @tel room_627
 #
 @open east;e = room_626
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949464
+@set east/exit_effect_value = -208
 #
 @open down;d = room_627
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949223
+@set down/exit_effect_value = -449
 #
 @tel room_628
 #
 @open north;n = room_624
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949587
+@set north/exit_effect_value = -85
 #
 @open south;s = room_629
 #
 @open east;e = room_630
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949644
+@set east/exit_effect_value = -28
 #
 @open down;d = room_625
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949558
+@set down/exit_effect_value = -114
 #
 @tel room_629
 #
 @open north;n = room_628
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949468
+@set north/exit_effect_value = -204
 #
 @open frognar = room_582
 #
@@ -13102,45 +13102,45 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_629
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949272
+@set down/exit_effect_value = -400
 #
 @tel room_630
 #
 @open south;s = room_631
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949513
+@set south/exit_effect_value = -159
 #
 @open west;w = room_628
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949473
+@set west/exit_effect_value = -199
 #
 @open down;d = room_630
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949473
+@set down/exit_effect_value = -199
 #
 @tel room_631
 #
 @open north;n = room_630
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949638
+@set north/exit_effect_value = -34
 #
 @open east;e = room_632
 #
 @open down;d = room_631
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949606
+@set down/exit_effect_value = -66
 #
 @tel room_632
 #
@@ -13152,15 +13152,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_631
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949272
+@set west/exit_effect_value = -400
 #
 @open down;d = room_632
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949272
+@set down/exit_effect_value = -400
 #
 @tel room_633
 #
@@ -13168,51 +13168,51 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_633
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949348
+@set down/exit_effect_value = -324
 #
 @tel room_634
 #
 @open south;s = room_633
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949548
+@set south/exit_effect_value = -124
 #
 @open west;w = room_624
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949503
+@set west/exit_effect_value = -169
 #
 @open down;d = room_634
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949448
+@set down/exit_effect_value = -224
 #
 @tel room_635
 #
 @open east;e = room_637
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949548
+@set east/exit_effect_value = -124
 #
 @open west;w = room_625
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949523
+@set west/exit_effect_value = -149
 #
 @tel room_636
 #
 @open south;s = room_637
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949348
+@set south/exit_effect_value = -324
 #
 @open west;w = room_644
 #
@@ -13222,17 +13222,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_636
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949223
+@set down/exit_effect_value = -449
 #
 @tel room_637
 #
 @open north;n = room_636
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949368
+@set north/exit_effect_value = -304
 #
 @open south;s = room_638
 #
@@ -13244,29 +13244,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_637
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949453
+@set down/exit_effect_value = -219
 #
 @tel room_638
 #
 @open north;n = room_637
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949564
+@set north/exit_effect_value = -108
 #
 @open east;e = room_639
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949179
+@set east/exit_effect_value = -493
 #
 @open down;d = room_625
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949568
+@set down/exit_effect_value = -104
 #
 @tel room_639
 #
@@ -13278,43 +13278,43 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_639
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949619
+@set down/exit_effect_value = -53
 #
 @tel room_640
 #
 @open north;n = room_642
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949548
+@set north/exit_effect_value = -124
 #
 @open west;w = room_639
 #
-@set west/exit_effect_kind = 0
+@set west/exit_effect_kind = 4
 #
-@set west/exit_effect_value = 42949477
+@set west/exit_effect_value = -195
 #
 @open down;d = room_640
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949258
+@set down/exit_effect_value = -414
 #
 @tel room_641
 #
 @open north;n = room_639
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949323
+@set north/exit_effect_value = -349
 #
 @open down;d = room_641
 #
-@set down/exit_effect_kind = 0
+@set down/exit_effect_kind = 4
 #
-@set down/exit_effect_value = 42949574
+@set down/exit_effect_value = -98
 #
 @tel room_642
 #
@@ -13788,15 +13788,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_703
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949653
+@set north/exit_effect_value = -19
 #
 @open south;s = room_697
 #
-@set south/exit_effect_kind = 0
+@set south/exit_effect_kind = 4
 #
-@set south/exit_effect_value = 42949633
+@set south/exit_effect_value = -39
 #
 @open east;e = room_647
 #
@@ -13952,9 +13952,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_262
 #
-@set north/exit_effect_kind = 0
+@set north/exit_effect_kind = 4
 #
-@set north/exit_effect_value = 42949323
+@set north/exit_effect_value = -349
 #
 @tel room_724
 #
@@ -14108,9 +14108,9 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_736
 #
-@set east/exit_effect_kind = 0
+@set east/exit_effect_kind = 4
 #
-@set east/exit_effect_value = 42949553
+@set east/exit_effect_value = -119
 #
 @tel room_747
 #
