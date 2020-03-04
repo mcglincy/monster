@@ -31,10 +31,9 @@ from evennia.settings_default import *
 # Evennia base server config
 ######################################################################
 
-# This is the name of your game. Make it catchy!
 SERVERNAME = "Monster"
 GAME_SLOGAN = "It's not a game, it's a lifestyle"
-START_LOCATION = "Void"  # aka room_2
+START_LOCATION = "#4"  # aka Void
 
 INSTALLED_APPS = INSTALLED_APPS + ["userdefined", ]
 
