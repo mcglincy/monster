@@ -1,0 +1,6802 @@
+[
+  {
+    "line": "",
+    "id": 1
+  },
+  {
+    "line": "You feel a surge of power from the dark tome.",
+    "id": 2
+  },
+  {
+    "line": "The Twin Chalice Tavern is downstairs.",
+    "id": 3
+  },
+  {
+    "line": "Darkness emanates from a book lying on the ground.",
+    "id": 4
+  },
+  {
+    "line": "A dark passage leads west from here.",
+    "id": 5
+  },
+  {
+    "line": "A doorway flanked by stone warriors is east.",
+    "id": 6
+  },
+  {
+    "line": "To the south is the inn hallway.",
+    "id": 7
+  },
+  {
+    "line": "Wide steps of stone lead up.",
+    "id": 8
+  },
+  {
+    "line": "The steps spiral further up, or down.",
+    "id": 9
+  },
+  {
+    "line": "The jagged rocks rise up in a wall that prevents you from going further.",
+    "id": 10
+  },
+  {
+    "line": "Steep cliffs of rock rise up out of the mist before you.",
+    "id": 11
+  },
+  {
+    "line": "Treacherous rocks in the mist prevent your passage in this direction.",
+    "id": 12
+  },
+  {
+    "line": "To the west is the Nicolellis Suite.",
+    "id": 13
+  },
+  {
+    "line": "The Sea is north.",
+    "id": 14
+  },
+  {
+    "line": "There is a boat of gleaming white resting on the shore here.",
+    "id": 15
+  },
+  {
+    "line": "You climb aboard the ivory boat.",
+    "id": 16
+  },
+  {
+    "line": "The Sea is very cold and deep. You will need a boat to cross it...",
+    "id": 17
+  },
+  {
+    "line": "Your boat of white is too heavy to carry inland...",
+    "id": 18
+  },
+  {
+    "line": "Your boat is too heavy for you to carry inland...better leave it here.",
+    "id": 19
+  },
+  {
+    "line": "I am Ranlhach, the God of perpetuality.",
+    "id": 20
+  },
+  {
+    "line": "e",
+    "id": 21
+  },
+  {
+    "line": "The Ocean waves roughly throw you back to shore!",
+    "id": 22
+  },
+  {
+    "line": "You may go EAST to get right into the thick of things!",
+    "id": 23
+  },
+  {
+    "line": "You wander aimlessly in the Void.",
+    "id": 24
+  },
+  {
+    "line": "You wander aimlessly in the Void.",
+    "id": 25
+  },
+  {
+    "line": "You wander aimlessly in the Void.",
+    "id": 26
+  },
+  {
+    "line": "You wander aimlessly in the Void.",
+    "id": 27
+  },
+  {
+    "line": "You wander aimlessly in the Void.",
+    "id": 28
+  },
+  {
+    "line": "To the south is the lewis bakery.",
+    "id": 29
+  },
+  {
+    "line": "A doorway flanked by two stone warriors leads west.",
+    "id": 30
+  },
+  {
+    "line": "You are unable to breach this doors magical defense!",
+    "id": 31
+  },
+  {
+    "line": "To the west is the inn office.",
+    "id": 32
+  },
+  {
+    "line": "The corridor continues to the east and to the west...",
+    "id": 33
+  },
+  {
+    "line": "You are burned horribly beyond recognition by a fireball !!",
+    "id": 34
+  },
+  {
+    "line": "Someone just got pounded--hard...",
+    "id": 35
+  },
+  {
+    "line": "You drop the key down a small chute by the door.",
+    "id": 36
+  },
+  {
+    "line": "You see a dark shadow hovering above the ground.",
+    "id": 37
+  },
+  {
+    "line": "A chamber lies west.",
+    "id": 38
+  },
+  {
+    "line": "You unleash unholy fire!",
+    "id": 39
+  },
+  {
+    "line": "Grey hills fill the eastern horizon..",
+    "id": 40
+  },
+  {
+    "line": "The City of the Gods lay west. Sanctuary may be found there.",
+    "id": 41
+  },
+  {
+    "line": "",
+    "id": 42
+  },
+  {
+    "line": "The Twin Chalice Inn is upstairs.",
+    "id": 43
+  },
+  {
+    "line": "The gates of Tai-Tastigon are closed!",
+    "id": 44
+  },
+  {
+    "line": "The gates of Tai-Tastigon are closed!",
+    "id": 45
+  },
+  {
+    "line": "A frosty ball of death flies through the room.",
+    "id": 46
+  },
+  {
+    "line": "The door is stuck!",
+    "id": 47
+  },
+  {
+    "line": "As you drop #, it disappears in mists.",
+    "id": 48
+  },
+  {
+    "line": "A crowded square is north.",
+    "id": 49
+  },
+  {
+    "line": "A ball of acid strikes someone in the room, burning him horribly!",
+    "id": 50
+  },
+  {
+    "line": "Terrible magic is at work here.",
+    "id": 51
+  },
+  {
+    "line": "You see a bright knife covered in blood and the agony of its victim!",
+    "id": 52
+  },
+  {
+    "line": "Hands scrabble at a dark hole at your feet!",
+    "id": 53
+  },
+  {
+    "line": "The western road leads to Tai-tastigon.",
+    "id": 54
+  },
+  {
+    "line": "A grey expanse stretches out all around you..",
+    "id": 55
+  },
+  {
+    "line": "You can see what seems to be a settlement to the south.",
+    "id": 56
+  },
+  {
+    "line": "Zortek the zombie, the next step after grad school",
+    "id": 57
+  },
+  {
+    "line": "Darkness gathers to the north.",
+    "id": 58
+  },
+  {
+    "line": "The land around you is unchanging and uncompromising.",
+    "id": 59
+  },
+  {
+    "line": "You see shadows gliding in the corners of the room.",
+    "id": 60
+  },
+  {
+    "line": "You can see city walls in the distant west.",
+    "id": 61
+  },
+  {
+    "line": "You see # standing by the distant gates..",
+    "id": 62
+  },
+  {
+    "line": "The entrance to the main building is south.",
+    "id": 63
+  },
+  {
+    "line": "Grey hills surround you..",
+    "id": 64
+  },
+  {
+    "line": "A shattered house lay to your west.",
+    "id": 65
+  },
+  {
+    "line": "The settlement center is north.",
+    "id": 66
+  },
+  {
+    "line": "An irregular crack in the east wall allows passage.",
+    "id": 67
+  },
+  {
+    "line": "I'm a drag queen.  So EAT it, BITCH!!!!",
+    "id": 68
+  },
+  {
+    "line": "There seems to be a stair to the east.",
+    "id": 69
+  },
+  {
+    "line": "Light emanates from the north.",
+    "id": 70
+  },
+  {
+    "line": "The Ocean is that way!",
+    "id": 71
+  },
+  {
+    "line": "A small pinprick of light can be seen far above.",
+    "id": 72
+  },
+  {
+    "line": "You may exit the shop to the east.",
+    "id": 73
+  },
+  {
+    "line": "A cry of anguish winds around you...",
+    "id": 74
+  },
+  {
+    "line": "A mighty structure of earth and wood is west.",
+    "id": 75
+  },
+  {
+    "line": "You see a great hall in the darkness from the south.",
+    "id": 76
+  },
+  {
+    "line": "There is a child sobbing somewhere near....please help her..",
+    "id": 77
+  },
+  {
+    "line": "There is no way through here!",
+    "id": 78
+  },
+  {
+    "line": "Forest critters can be heard all around.",
+    "id": 79
+  },
+  {
+    "line": "The earth repels you!",
+    "id": 80
+  },
+  {
+    "line": "Your hand becomes numb as it closes over the faintly glowing knife..",
+    "id": 81
+  },
+  {
+    "line": "There is a light on the ground at your feet.",
+    "id": 82
+  },
+  {
+    "line": "There is a pile of snakes writhing towards you!",
+    "id": 83
+  },
+  {
+    "line": "There is a book bound in pale leather here.",
+    "id": 84
+  },
+  {
+    "line": "# can be seen at the base of the structure.",
+    "id": 85
+  },
+  {
+    "line": "The War Dance is north.",
+    "id": 86
+  },
+  {
+    "line": "To the south is a green door made of crystal.",
+    "id": 87
+  },
+  {
+    "line": "A door seemingly carved from a red wood that flows like blood is east.",
+    "id": 88
+  },
+  {
+    "line": "A stone slab covers the western exit.",
+    "id": 89
+  },
+  {
+    "line": "You hear faint hissing noises coming from the south.",
+    "id": 90
+  },
+  {
+    "line": "You feel like you are being watched...",
+    "id": 91
+  },
+  {
+    "line": "To the north is a void that whispers to you. Dare cross the threshold.",
+    "id": 92
+  },
+  {
+    "line": "The War Dance is south.",
+    "id": 93
+  },
+  {
+    "line": "The gravestones in this section of the graveyard are unmarked.",
+    "id": 94
+  },
+  {
+    "line": "Gloomy hills are south.",
+    "id": 95
+  },
+  {
+    "line": "The War Dance is west.",
+    "id": 96
+  },
+  {
+    "line": "The War Dance is east.",
+    "id": 97
+  },
+  {
+    "line": "There are arched passages to the south and west.",
+    "id": 98
+  },
+  {
+    "line": "The trail continues to the east and to the west...",
+    "id": 99
+  },
+  {
+    "line": "You have the feeling you are being watched.",
+    "id": 100
+  },
+  {
+    "line": "You will burn yourself if you touch that!",
+    "id": 101
+  },
+  {
+    "line": "There is a flickering flame dancing before your eyes..",
+    "id": 102
+  },
+  {
+    "line": "The stone is too heavy to lift!",
+    "id": 103
+  },
+  {
+    "line": "There is a large stone pillar before you.",
+    "id": 104
+  },
+  {
+    "line": "On the ground here is a large black mace.",
+    "id": 105
+  },
+  {
+    "line": "You feel a surge of magical power permeate your being!",
+    "id": 106
+  },
+  {
+    "line": "You cannot leave this room with the Rune!",
+    "id": 107
+  },
+  {
+    "line": "Muffled cries can be heard from the west.",
+    "id": 108
+  },
+  {
+    "line": "A scroll hangs before you.",
+    "id": 109
+  },
+  {
+    "line": "The only exit lies east, towards more sorry-looking vegetation.",
+    "id": 110
+  },
+  {
+    "line": "You cannot leave with the object of power!",
+    "id": 111
+  },
+  {
+    "line": "A power holds you back! You must not leave with the Rune!",
+    "id": 112
+  },
+  {
+    "line": "You are hit by a wave of unholy fire !!",
+    "id": 113
+  },
+  {
+    "line": "Big trees are west.",
+    "id": 114
+  },
+  {
+    "line": "Away with you, vile Unbeliever!",
+    "id": 115
+  },
+  {
+    "line": "A dark gateway to the west marks the entrance to lower town.",
+    "id": 116
+  },
+  {
+    "line": "Some half hidden steps lead down.",
+    "id": 117
+  },
+  {
+    "line": "The stairs lead both up and down.",
+    "id": 118
+  },
+  {
+    "line": "A passage leads south.",
+    "id": 119
+  },
+  {
+    "line": "If only this forest would end...",
+    "id": 120
+  },
+  {
+    "line": "Upwards is a highway to the Hall of Gods.",
+    "id": 121
+  },
+  {
+    "line": "A calm, deep lake is north.",
+    "id": 122
+  },
+  {
+    "line": "Swamp, swamp everywhere.",
+    "id": 123
+  },
+  {
+    "line": "Dark forest is all around.",
+    "id": 124
+  },
+  {
+    "line": "If only this forest would end...",
+    "id": 125
+  },
+  {
+    "line": "Huge trees are all around you.",
+    "id": 126
+  },
+  {
+    "line": "You could jump into another building to the south.",
+    "id": 127
+  },
+  {
+    "line": "Strange figures are dragging an object along the ground to the west.",
+    "id": 128
+  },
+  {
+    "line": "The mountain gate is to the west.",
+    "id": 129
+  },
+  {
+    "line": "The trail continues east and west.",
+    "id": 130
+  },
+  {
+    "line": "The eastern path leads to darkness..",
+    "id": 131
+  },
+  {
+    "line": "The beastie has the word \"demonlord\" written across his forehead.",
+    "id": 132
+  },
+  {
+    "line": "Hovering seemingly of its own accord is a strange glowing staff.",
+    "id": 133
+  },
+  {
+    "line": "",
+    "id": 134
+  },
+  {
+    "line": "Huge trees are all around.",
+    "id": 135
+  },
+  {
+    "line": "The Great Redwood completely blocks passage south!",
+    "id": 136
+  },
+  {
+    "line": "The rest of the square lies west, east and south.",
+    "id": 137
+  },
+  {
+    "line": "The gates of the cemetery bar your egress west.",
+    "id": 138
+  },
+  {
+    "line": "You have found a hidden doorway leading west.",
+    "id": 139
+  },
+  {
+    "line": "There might be another way out if you search for it.",
+    "id": 140
+  },
+  {
+    "line": "You may follow the beach east.",
+    "id": 141
+  },
+  {
+    "line": "You tumble down the trail!",
+    "id": 142
+  },
+  {
+    "line": "Gloomy hills are north.",
+    "id": 143
+  },
+  {
+    "line": "Upon uttering the long forgotten words you are transformed...",
+    "id": 144
+  },
+  {
+    "line": "You Dropped a # here.",
+    "id": 145
+  },
+  {
+    "line": "A giant crocodile bites your leg off!!",
+    "id": 146
+  },
+  {
+    "line": "Even the graveyard seems quieter than normal.",
+    "id": 147
+  },
+  {
+    "line": "",
+    "id": 148
+  },
+  {
+    "line": "The gates around the tomb area prevent your passage north.",
+    "id": 149
+  },
+  {
+    "line": "",
+    "id": 150
+  },
+  {
+    "line": "The gates around the tomb area prevent your passage south.",
+    "id": 151
+  },
+  {
+    "line": "You stand before a Monster operator (tm). Caution is advised...",
+    "id": 152
+  },
+  {
+    "line": "you cannot go that way!",
+    "id": 153
+  },
+  {
+    "line": "A low passage leads south.",
+    "id": 154
+  },
+  {
+    "line": "There is another passage leading west.",
+    "id": 155
+  },
+  {
+    "line": "Nasty woods are all about.",
+    "id": 156
+  },
+  {
+    "line": "Foul woodlands surround you.",
+    "id": 157
+  },
+  {
+    "line": "A sliding stone in the arch comes crashing down on your head!",
+    "id": 158
+  },
+  {
+    "line": "Tyviar the Ogre's spiked club hits you very hard!",
+    "id": 159
+  },
+  {
+    "line": "Tyviar the Ogre's spiked club hits you very hard!",
+    "id": 160
+  },
+  {
+    "line": "Jorlock the Giant's iron mallet hits you with incredible force!!",
+    "id": 161
+  },
+  {
+    "line": "Jorlock the Giant's iron mallet hits you with incredible force!!",
+    "id": 162
+  },
+  {
+    "line": "Flying sparks hit you!!",
+    "id": 163
+  },
+  {
+    "line": "Orguzar the Fire Giant's huge ass sword creams your little body!!",
+    "id": 164
+  },
+  {
+    "line": "Orguzar the Fire Giant's huge ass sword creams your little body!!",
+    "id": 165
+  },
+  {
+    "line": "A giant bat swoops down on you!",
+    "id": 166
+  },
+  {
+    "line": "A dart shoots out of the wall and hits you!",
+    "id": 167
+  },
+  {
+    "line": "A shadowy warrior jumps out from the shadows and chops your arm off!!",
+    "id": 168
+  },
+  {
+    "line": "A very large cavern is west.",
+    "id": 169
+  },
+  {
+    "line": "she",
+    "id": 170
+  },
+  {
+    "line": "boo",
+    "id": 171
+  },
+  {
+    "line": "You feel your strength being drained...",
+    "id": 172
+  },
+  {
+    "line": "A magical blast of energy hits you in the chest!!",
+    "id": 173
+  },
+  {
+    "line": "Ippulet the Beastmaster's flail beats the shit out you!",
+    "id": 174
+  },
+  {
+    "line": "The door is stuck!",
+    "id": 175
+  },
+  {
+    "line": "The door is stuck!",
+    "id": 176
+  },
+  {
+    "line": "Ippulet the Beastmaster's flail beats the shit out of you!",
+    "id": 177
+  },
+  {
+    "line": "A giant rat bites your leg!",
+    "id": 178
+  },
+  {
+    "line": "# bounces into the open grave.",
+    "id": 179
+  },
+  {
+    "line": "A mondo ferret lunches on your arm!",
+    "id": 180
+  },
+  {
+    "line": "You feel weaker from the noxious fumes in this area...",
+    "id": 181
+  },
+  {
+    "line": "The door is stuck!",
+    "id": 182
+  },
+  {
+    "line": "You feel weaker...",
+    "id": 183
+  },
+  {
+    "line": "Nystrek the bugbear's pike hits you with incredible force!",
+    "id": 184
+  },
+  {
+    "line": "The door is stuck!",
+    "id": 185
+  },
+  {
+    "line": "The door is covered with nasty slime!",
+    "id": 186
+  },
+  {
+    "line": "A large chamber is west.",
+    "id": 187
+  },
+  {
+    "line": "The door is covered with acidic slime! You have been burned!",
+    "id": 188
+  },
+  {
+    "line": "Bog slurping noises are all around.",
+    "id": 189
+  },
+  {
+    "line": "Strange trees extend in all directions.",
+    "id": 190
+  },
+  {
+    "line": "Dark trees attempt to surround you to the west, north, and south.",
+    "id": 191
+  },
+  {
+    "line": "A forboding cave mouth lies north.",
+    "id": 192
+  },
+  {
+    "line": "Thick forest is east of here.",
+    "id": 193
+  },
+  {
+    "line": "A faint trail through the forest may lie south of here.",
+    "id": 194
+  },
+  {
+    "line": "A gulley is west.",
+    "id": 195
+  },
+  {
+    "line": "A ravine is west.",
+    "id": 196
+  },
+  {
+    "line": "The ravine runs into a forested gulley to the south.",
+    "id": 197
+  },
+  {
+    "line": "Dense forest lies north and south of the trail.",
+    "id": 198
+  },
+  {
+    "line": "The trail continues to the west.",
+    "id": 199
+  },
+  {
+    "line": "More light is visible through the trees to the east.",
+    "id": 200
+  },
+  {
+    "line": "Dense forest lies north.",
+    "id": 201
+  },
+  {
+    "line": "A clump of hills rise out of the forest twilight south of here.",
+    "id": 202
+  },
+  {
+    "line": "The trail continues to the east and west.",
+    "id": 203
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 204
+  },
+  {
+    "line": "This place is spooky.",
+    "id": 205
+  },
+  {
+    "line": "Thick forests lie east of here.",
+    "id": 206
+  },
+  {
+    "line": "The forest thins to the south.",
+    "id": 207
+  },
+  {
+    "line": "The hint of mountains peeking through the forest can be seen north.",
+    "id": 208
+  },
+  {
+    "line": "The sounds of rushing water can be heard coming from the west.",
+    "id": 209
+  },
+  {
+    "line": "A faint trail leaves this area to the east.",
+    "id": 210
+  },
+  {
+    "line": "The ground slopes downward to the north.",
+    "id": 211
+  },
+  {
+    "line": "Imposing megaliths jut out of the forest to the south.",
+    "id": 212
+  },
+  {
+    "line": "A faint trail may lie north.",
+    "id": 213
+  },
+  {
+    "line": "Tall oaks are east.",
+    "id": 214
+  },
+  {
+    "line": "A series of low mounds rise to the west.",
+    "id": 215
+  },
+  {
+    "line": "A dense forest of Cedar trees lies south of here.",
+    "id": 216
+  },
+  {
+    "line": "A group of ancient stones jut out of the trees to the west.",
+    "id": 217
+  },
+  {
+    "line": "Cedar trees are south and east of here.",
+    "id": 218
+  },
+  {
+    "line": "A faint trail may lie to the north.",
+    "id": 219
+  },
+  {
+    "line": "A group of grassy knolls are east.",
+    "id": 220
+  },
+  {
+    "line": "Dark woods are all around.",
+    "id": 221
+  },
+  {
+    "line": "A clearing is north of here..",
+    "id": 222
+  },
+  {
+    "line": "An impressive array of gargantuan stones is south.",
+    "id": 223
+  },
+  {
+    "line": "Impassable rocks are that way!",
+    "id": 224
+  },
+  {
+    "line": "A clearing is east of here.",
+    "id": 225
+  },
+  {
+    "line": "Impassable rocks are that way!",
+    "id": 226
+  },
+  {
+    "line": "Man-eating weeds are that way!",
+    "id": 227
+  },
+  {
+    "line": "Dark trees are east.",
+    "id": 228
+  },
+  {
+    "line": "A line of megaliths leads north from here.",
+    "id": 229
+  },
+  {
+    "line": "Swamp and marshland lies south, east, and west from here.",
+    "id": 230
+  },
+  {
+    "line": "An towering megalithic arrangement is north.",
+    "id": 231
+  },
+  {
+    "line": "Thicker forest mingles with swamp to the south and east.",
+    "id": 232
+  },
+  {
+    "line": "Dark marshes are west.",
+    "id": 233
+  },
+  {
+    "line": "Mountainous stones jut out of the swamp to the east.",
+    "id": 234
+  },
+  {
+    "line": "You can't drag that boat along!",
+    "id": 235
+  },
+  {
+    "line": "The exit to this smoky shop is west.",
+    "id": 236
+  },
+  {
+    "line": "# bows before the dark altar, and is transformed!",
+    "id": 237
+  },
+  {
+    "line": "You move some branches around uncovering a path leading north.",
+    "id": 238
+  },
+  {
+    "line": "You feel better.",
+    "id": 239
+  },
+  {
+    "line": "You eat some herbs, and mumble a folk-remedy.",
+    "id": 240
+  },
+  {
+    "line": "A small clearing may lie north.",
+    "id": 241
+  },
+  {
+    "line": "Follow the Will of Sataki, or suffer a fate worse than death!",
+    "id": 242
+  },
+  {
+    "line": "The earth starts shaking damaging your opponents!",
+    "id": 243
+  },
+  {
+    "line": "You may CHANGE YOUR CLASS down from here.",
+    "id": 244
+  },
+  {
+    "line": "Go UP when you are done selecting a class.",
+    "id": 245
+  },
+  {
+    "line": "Fens are north of here.",
+    "id": 246
+  },
+  {
+    "line": "The gallery runs to the north and south.",
+    "id": 247
+  },
+  {
+    "line": "Small arches lead off the balcony in the 4 main directions.",
+    "id": 248
+  },
+  {
+    "line": "A solid door is north.",
+    "id": 249
+  },
+  {
+    "line": "A long gallery is south.",
+    "id": 250
+  },
+  {
+    "line": "You may exit the throne room to the south.",
+    "id": 251
+  },
+  {
+    "line": "The central balcony is north.",
+    "id": 252
+  },
+  {
+    "line": "# stares deeply into the mirror, and is transformed!",
+    "id": 253
+  },
+  {
+    "line": "Go *UP* when you are done selecting a class.",
+    "id": 254
+  },
+  {
+    "line": "Type GNOLL to become a Gnoll.",
+    "id": 255
+  },
+  {
+    "line": "The forest seems somewhat brighter to the east.",
+    "id": 256
+  },
+  {
+    "line": "Thick, tangled woods lie both north and south of here.",
+    "id": 257
+  },
+  {
+    "line": "Type TEMPLAR to become a Templar.",
+    "id": 258
+  },
+  {
+    "line": "# has changed his class.",
+    "id": 259
+  },
+  {
+    "line": "the guy who just wants to learn.. =)",
+    "id": 260
+  },
+  {
+    "line": "A huge monster bites your head off!",
+    "id": 261
+  },
+  {
+    "line": "# masturbates furiously.",
+    "id": 262
+  },
+  {
+    "line": "# gives you a wry grin.",
+    "id": 263
+  },
+  {
+    "line": "You Look Upon Your Death",
+    "id": 264
+  },
+  {
+    "line": "There is a long bladed weapon on the ground.",
+    "id": 265
+  },
+  {
+    "line": "You uncover an exit leading north!",
+    "id": 266
+  },
+  {
+    "line": "You find a covered path leading into the forest to the north.",
+    "id": 267
+  },
+  {
+    "line": "This scimitar ahs a long curved blade, good for slashing opponents.",
+    "id": 268
+  },
+  {
+    "line": "A rocky shore, backed by heavy woods, if south.",
+    "id": 269
+  },
+  {
+    "line": "A shimmer of light lies above.",
+    "id": 270
+  },
+  {
+    "line": "",
+    "id": 271
+  },
+  {
+    "line": "A boat of druidic origin rests here.",
+    "id": 272
+  },
+  {
+    "line": "As # leaves east, the unstable roof caves in upon them.",
+    "id": 273
+  },
+  {
+    "line": "The interior of the Druid Palace is west.",
+    "id": 274
+  },
+  {
+    "line": "Raucus reveling can be heard to the west.",
+    "id": 275
+  },
+  {
+    "line": "The main gate is east.",
+    "id": 276
+  },
+  {
+    "line": "A doorway leads in each of the cardinal directions.",
+    "id": 277
+  },
+  {
+    "line": "A narrow staircase in the corner leads down.",
+    "id": 278
+  },
+  {
+    "line": "Wooden steps lead upward against the tower wall.",
+    "id": 279
+  },
+  {
+    "line": "The Grande Mead Hall is south.",
+    "id": 280
+  },
+  {
+    "line": "A parapet runs atop the fortifications south and west of here.",
+    "id": 281
+  },
+  {
+    "line": "Steps lead down from here.",
+    "id": 282
+  },
+  {
+    "line": "You may enter a tower to the north, as well as another to the south.",
+    "id": 283
+  },
+  {
+    "line": "You may enter a tower to the east, as well as another to the west.",
+    "id": 284
+  },
+  {
+    "line": "A tower lies both north and south of here.",
+    "id": 285
+  },
+  {
+    "line": "You may enter a tower to the east, and to the west as well.",
+    "id": 286
+  },
+  {
+    "line": "Solid doors lead to the ramparts to the north, and to the west.",
+    "id": 287
+  },
+  {
+    "line": "Some steps lead down from here.",
+    "id": 288
+  },
+  {
+    "line": "The Grande Mead Hall is north.",
+    "id": 289
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 290
+  },
+  {
+    "line": "You may continue on the Celtivirke south, or east, from here.",
+    "id": 291
+  },
+  {
+    "line": "Some steps lead down from here.",
+    "id": 292
+  },
+  {
+    "line": "Solid doors lead onto the Celtivirke north, and east, of here.",
+    "id": 293
+  },
+  {
+    "line": "Some steps lead down.",
+    "id": 294
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 295
+  },
+  {
+    "line": "A door is north.",
+    "id": 296
+  },
+  {
+    "line": "Greater warmth is north.",
+    "id": 297
+  },
+  {
+    "line": "The Speckled House is south.",
+    "id": 298
+  },
+  {
+    "line": "To the east is the Mercy Seat.",
+    "id": 299
+  },
+  {
+    "line": "A small set of stone stairs leads down.",
+    "id": 300
+  },
+  {
+    "line": "You are stabbed by poisoned needles on the door!",
+    "id": 301
+  },
+  {
+    "line": "A shadowy figure jumps out and stabs you in the chest!",
+    "id": 302
+  },
+  {
+    "line": "A huge ceiling block falls on you, smashing your little brain!",
+    "id": 303
+  },
+  {
+    "line": "You slip on a puddle of acid and bang your head! Ouch!",
+    "id": 304
+  },
+  {
+    "line": "A gleaming poisonous thorn appears in your hand.",
+    "id": 305
+  },
+  {
+    "line": "A dark thorn pierces your heart!",
+    "id": 306
+  },
+  {
+    "line": "You hear a cry of agony!",
+    "id": 307
+  },
+  {
+    "line": "Your incantation has failed!",
+    "id": 308
+  },
+  {
+    "line": "A burning vice clutches your heart! Flames rip through your flesh!",
+    "id": 309
+  },
+  {
+    "line": "A glowing hand of fire hangs before you, burnig your eyes!",
+    "id": 310
+  },
+  {
+    "line": "Your incantations have failed!",
+    "id": 311
+  },
+  {
+    "line": "A crocodile munches on your foot before you can escape!!",
+    "id": 312
+  },
+  {
+    "line": "You send a flurry of blazing arrows of pain after your prey!",
+    "id": 313
+  },
+  {
+    "line": "You are struck by a magical arrow!",
+    "id": 314
+  },
+  {
+    "line": "A glowing arrow strikes someone in the room.",
+    "id": 315
+  },
+  {
+    "line": "Your incantation has failed! Argh!",
+    "id": 316
+  },
+  {
+    "line": "A croc gnaws at your legs before you can get away!!",
+    "id": 317
+  },
+  {
+    "line": "A giant wave of magical water slams into you!!",
+    "id": 318
+  },
+  {
+    "line": "Bruniak the Gnome king's war hammer crushes your skull!",
+    "id": 319
+  },
+  {
+    "line": "Bruniak the Gnome king's war hammer crushes your skull!",
+    "id": 320
+  },
+  {
+    "line": "You can't get the door open!",
+    "id": 321
+  },
+  {
+    "line": "The stench here weakens you!",
+    "id": 322
+  },
+  {
+    "line": "The stench here weakens you!",
+    "id": 323
+  },
+  {
+    "line": "Drassoff the Ogre-mage's burning staff smites you heavily!",
+    "id": 324
+  },
+  {
+    "line": "A narrow staircase leads up.",
+    "id": 325
+  },
+  {
+    "line": "An open doorway, lacquered in black, leads west.",
+    "id": 326
+  },
+  {
+    "line": "An open doorway, lacquered in black, leads east.",
+    "id": 327
+  },
+  {
+    "line": "A stone arch marks passage west.",
+    "id": 328
+  },
+  {
+    "line": "There is a stone arch marking a passageway east.",
+    "id": 329
+  },
+  {
+    "line": "Another stone arch is west.",
+    "id": 330
+  },
+  {
+    "line": "A passageway, complete with stone arch, leads east.",
+    "id": 331
+  },
+  {
+    "line": "A large root leads west to another chamber.",
+    "id": 332
+  },
+  {
+    "line": "A large root leads east to another chamber.",
+    "id": 333
+  },
+  {
+    "line": "Some stone stairs follow the growth of the tree upwards.",
+    "id": 334
+  },
+  {
+    "line": "A small doorway of black wood leads south.",
+    "id": 335
+  },
+  {
+    "line": "A small door of black wood leads north.",
+    "id": 336
+  },
+  {
+    "line": "A thin bronze ladder leads down through a trapdoor in the floor.",
+    "id": 337
+  },
+  {
+    "line": "The smell of roasting meat is south.",
+    "id": 338
+  },
+  {
+    "line": "A bronze ladder leads up through the ceiling.",
+    "id": 339
+  },
+  {
+    "line": "A door is south.",
+    "id": 340
+  },
+  {
+    "line": "A door is north.",
+    "id": 341
+  },
+  {
+    "line": "A dark tunnel has been burrowed into the rock south of you.",
+    "id": 342
+  },
+  {
+    "line": "The ledge upon which you are standing continues west.",
+    "id": 343
+  },
+  {
+    "line": "The sound of rushing water can be heard to the west.",
+    "id": 344
+  },
+  {
+    "line": "A passageway leads east.",
+    "id": 345
+  },
+  {
+    "line": "A natural curtain formation is east.",
+    "id": 346
+  },
+  {
+    "line": "A low passage leades east.",
+    "id": 347
+  },
+  {
+    "line": "A low passage leads east.",
+    "id": 348
+  },
+  {
+    "line": "Water flows through a small channel to the north.",
+    "id": 349
+  },
+  {
+    "line": "Water flows into this room from south through an open passage.",
+    "id": 350
+  },
+  {
+    "line": "A natural staircase leads up.",
+    "id": 351
+  },
+  {
+    "line": "Passages lead north, east, and west.",
+    "id": 352
+  },
+  {
+    "line": "A passage leads east to a larger cavern.",
+    "id": 353
+  },
+  {
+    "line": "A passage leads west.",
+    "id": 354
+  },
+  {
+    "line": "The passage slopes steeply downward east of here.",
+    "id": 355
+  },
+  {
+    "line": "The passageway ends in a slide of gravel, which you may descend.",
+    "id": 356
+  },
+  {
+    "line": "You may clamber up the mound of gravel.",
+    "id": 357
+  },
+  {
+    "line": "East is a strange, dark shape.",
+    "id": 358
+  },
+  {
+    "line": "Deeper caves are east.",
+    "id": 359
+  },
+  {
+    "line": "# is in the void.  Beware, you may soon be there.",
+    "id": 360
+  },
+  {
+    "line": "Drassoff the Ogre-mage's burning staff smites you heavily!",
+    "id": 361
+  },
+  {
+    "line": "",
+    "id": 362
+  },
+  {
+    "line": "Drassoff the Ogre-mage's burning staff smites you heavily!",
+    "id": 363
+  },
+  {
+    "line": "Ouch! You stub your toe!",
+    "id": 364
+  },
+  {
+    "line": "# lands softly in the lush grass.",
+    "id": 365
+  },
+  {
+    "line": "Little gummy bear like creatures rise up from the floor and grab you!",
+    "id": 366
+  },
+  {
+    "line": "Little gummy bear like creatures rise up from the floor and grab you!",
+    "id": 367
+  },
+  {
+    "line": "The door is stuck!",
+    "id": 368
+  },
+  {
+    "line": "There is small opening to the south.",
+    "id": 369
+  },
+  {
+    "line": "Chet whops you on the head with his bowling bowl for mega damage !!!!",
+    "id": 370
+  },
+  {
+    "line": "You hear something that sounds like \"zuringa\"...",
+    "id": 371
+  },
+  {
+    "line": "A wide passage leads north.",
+    "id": 372
+  },
+  {
+    "line": "The current swirls you around a bit.",
+    "id": 373
+  },
+  {
+    "line": "The tablets are unnaturaly heavy. You cannot lift them.",
+    "id": 374
+  },
+  {
+    "line": "You feel elevated and revived!",
+    "id": 375
+  },
+  {
+    "line": "The Trees rise up to prevent your passage in that direction!",
+    "id": 376
+  },
+  {
+    "line": "You hurl a tsunami of death towards you foes!",
+    "id": 377
+  },
+  {
+    "line": "A long staff, topped with a skull, has been implanted in the ground here.",
+    "id": 378
+  },
+  {
+    "line": "Try as you might, you cannot pull the sturdy staff out of the ground.",
+    "id": 379
+  },
+  {
+    "line": "This district continues to the east.",
+    "id": 380
+  },
+  {
+    "line": "You send forth a dart of green energy after your target!",
+    "id": 381
+  },
+  {
+    "line": "A stone panel turns, and # emerges!",
+    "id": 382
+  },
+  {
+    "line": "A dart of green energy strikes you!  OUCH!",
+    "id": 383
+  },
+  {
+    "line": "Someone in this room has been zapped!",
+    "id": 384
+  },
+  {
+    "line": "An ornate shop is west.",
+    "id": 385
+  },
+  {
+    "line": "The Hammer is a very large, two handed weapon of mass destruction.",
+    "id": 386
+  },
+  {
+    "line": "The fog seems alive, as if trying to pull you deeper into the cemetery.",
+    "id": 387
+  },
+  {
+    "line": "Sulfurous fumes drift over from the east.",
+    "id": 388
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 389
+  },
+  {
+    "line": "e",
+    "id": 390
+  },
+  {
+    "line": "An open passage leads west.",
+    "id": 391
+  },
+  {
+    "line": "The shop's exit is east.",
+    "id": 392
+  },
+  {
+    "line": "The gloves are of thick leather, and are a sooty black.",
+    "id": 393
+  },
+  {
+    "line": "You have found a hidden passage leading south!",
+    "id": 394
+  },
+  {
+    "line": "A wide forum is west.",
+    "id": 395
+  },
+  {
+    "line": "The spirit of the woods.",
+    "id": 396
+  },
+  {
+    "line": "This dirty nasty place is the home of the Wyldibeast!",
+    "id": 397
+  },
+  {
+    "line": "Me be Thud. Me want be Trol. Me kil droods.",
+    "id": 398
+  },
+  {
+    "line": "A narrow corridor leads south.",
+    "id": 399
+  },
+  {
+    "line": "Open stalls displaying many attractive items are west.",
+    "id": 400
+  },
+  {
+    "line": "A dark street lined with stone statues is east.",
+    "id": 401
+  },
+  {
+    "line": "Steps lead upwards.",
+    "id": 402
+  },
+  {
+    "line": "# sits down on one of the chairs and breaks it.",
+    "id": 403
+  },
+  {
+    "line": "# quickly recovers from the slight fall and stands up.",
+    "id": 404
+  },
+  {
+    "line": "A staircase leads up.",
+    "id": 405
+  },
+  {
+    "line": "poof glum pass",
+    "id": 406
+  },
+  {
+    "line": "The rug is a very faded red, and is wearing thin in most places.  ",
+    "id": 407
+  },
+  {
+    "line": "There is no bed evident in the one-story building.",
+    "id": 408
+  },
+  {
+    "line": "The hungry Wyldibeast munches on your head !!",
+    "id": 409
+  },
+  {
+    "line": "A 10 foot high corridor leads north.",
+    "id": 410
+  },
+  {
+    "line": "Natural caverns are south.",
+    "id": 411
+  },
+  {
+    "line": "A narrow stair leads far up into the blackness of this monstrous room.",
+    "id": 412
+  },
+  {
+    "line": "A man made corridor leads south.",
+    "id": 413
+  },
+  {
+    "line": "A dark passage leads north.",
+    "id": 414
+  },
+  {
+    "line": "A small wooden door is east.",
+    "id": 415
+  },
+  {
+    "line": "A narrow stairway leads down into a cavernous expanse.",
+    "id": 416
+  },
+  {
+    "line": "A wide corridor leads south.",
+    "id": 417
+  },
+  {
+    "line": "A small wooden door leads west.",
+    "id": 418
+  },
+  {
+    "line": "The spiral stair leads up.",
+    "id": 419
+  },
+  {
+    "line": "# is on the rocky slope below the tower.",
+    "id": 420
+  },
+  {
+    "line": "You can see # peering down at you from the Cliff-face tower.",
+    "id": 421
+  },
+  {
+    "line": "The tower turret lies even higher.",
+    "id": 422
+  },
+  {
+    "line": "A spiral stair leads down into the tower, and into the mountain.",
+    "id": 423
+  },
+  {
+    "line": "The battlements are below.",
+    "id": 424
+  },
+  {
+    "line": "You can see # in the Warlord's Valley.",
+    "id": 425
+  },
+  {
+    "line": "You can see a dark figure in the turret of the Cliff-face tower.",
+    "id": 426
+  },
+  {
+    "line": "Light can be seen west.",
+    "id": 427
+  },
+  {
+    "line": "The Warlord's mountain fortress lies south from here.",
+    "id": 428
+  },
+  {
+    "line": "A wide, but dark, corridor has been cut into the rock leading north.",
+    "id": 429
+  },
+  {
+    "line": "A passage leads east.",
+    "id": 430
+  },
+  {
+    "line": "The exit from the Warlord's fortress is north.",
+    "id": 431
+  },
+  {
+    "line": "The innards of the warriors' den are south.",
+    "id": 432
+  },
+  {
+    "line": "An raised portcullis lies north.",
+    "id": 433
+  },
+  {
+    "line": "Another large hall is south.",
+    "id": 434
+  },
+  {
+    "line": "Halls lie both to the north and south of here.",
+    "id": 435
+  },
+  {
+    "line": "Another hall is north.",
+    "id": 436
+  },
+  {
+    "line": "Double doors are set in the south wall of this hall.",
+    "id": 437
+  },
+  {
+    "line": "Double doors are north.",
+    "id": 438
+  },
+  {
+    "line": "The wondrous stairway leads both up and down.",
+    "id": 439
+  },
+  {
+    "line": "Passages lead east and west from here.",
+    "id": 440
+  },
+  {
+    "line": "There is a conical helm here.",
+    "id": 441
+  },
+  {
+    "line": "The wondrous stairway continues above and below you.",
+    "id": 442
+  },
+  {
+    "line": "Warm air enters from a passage to the north.",
+    "id": 443
+  },
+  {
+    "line": "Warm air currents originate from a northerly passage.",
+    "id": 444
+  },
+  {
+    "line": "Sounds can be heard south of here.",
+    "id": 445
+  },
+  {
+    "line": "The stone steps of the Grande Ascension stairway lead down from here.",
+    "id": 446
+  },
+  {
+    "line": "There is a corridor leading south.",
+    "id": 447
+  },
+  {
+    "line": "The central stairs can be seen to the south.",
+    "id": 448
+  },
+  {
+    "line": "It is warmer north.",
+    "id": 449
+  },
+  {
+    "line": "The forge lies north.",
+    "id": 450
+  },
+  {
+    "line": "You may go deeper under the mountains south from here.",
+    "id": 451
+  },
+  {
+    "line": "A rocky hillside, and sunlight, is north.",
+    "id": 452
+  },
+  {
+    "line": "A gaping, fanged mouth is cut into the mountainside south of here.",
+    "id": 453
+  },
+  {
+    "line": "You may scramble down the rocky incline to the valley below.",
+    "id": 454
+  },
+  {
+    "line": "You may scramble up a rocky incline to reach the Jaws of Stone.",
+    "id": 455
+  },
+  {
+    "line": "A grim road leads north out of the valley.",
+    "id": 456
+  },
+  {
+    "line": "Towering peaks prevent passage east out of the valley.",
+    "id": 457
+  },
+  {
+    "line": "Towering peaks prevent passage west out of the valley.",
+    "id": 458
+  },
+  {
+    "line": "Towering peaks prevent passage east.",
+    "id": 459
+  },
+  {
+    "line": "Towering peaks prevent passage west.",
+    "id": 460
+  },
+  {
+    "line": "Towering peaks prevent passage east off the road.",
+    "id": 461
+  },
+  {
+    "line": "Towering peaks prevent passage west off the road.",
+    "id": 462
+  },
+  {
+    "line": "A more pleasant valley is south.",
+    "id": 463
+  },
+  {
+    "line": "The terrain seems to flatten out to the north.",
+    "id": 464
+  },
+  {
+    "line": "A grim road leads south.",
+    "id": 465
+  },
+  {
+    "line": "A steep trail leads down the face of the escarpment.",
+    "id": 466
+  },
+  {
+    "line": "Towering peaks prevent passage east.",
+    "id": 467
+  },
+  {
+    "line": "A 300 foot drop is that way!",
+    "id": 468
+  },
+  {
+    "line": "A 300 foot drop is that way!",
+    "id": 469
+  },
+  {
+    "line": "A steep trail leads up the escarpment face.",
+    "id": 470
+  },
+  {
+    "line": "A vast plain of marble extends north and east of here.",
+    "id": 471
+  },
+  {
+    "line": "A giant crevace lies that way! Surely you do not wish to die?",
+    "id": 472
+  },
+  {
+    "line": "Insurmountable mountains are that way! Open your eyes!",
+    "id": 473
+  },
+  {
+    "line": "The Marble plain extends north and west.",
+    "id": 474
+  },
+  {
+    "line": "A gray land is east.",
+    "id": 475
+  },
+  {
+    "line": "The Marble Plain extends east and south of here.",
+    "id": 476
+  },
+  {
+    "line": "Some buildings can be seen rising from the plain to the west of here.",
+    "id": 477
+  },
+  {
+    "line": "Natural caverns are north.",
+    "id": 478
+  },
+  {
+    "line": "There may be light to the south of here.",
+    "id": 479
+  },
+  {
+    "line": "The open wilderness is south.",
+    "id": 480
+  },
+  {
+    "line": "A man-made passage leads north under the mountains.",
+    "id": 481
+  },
+  {
+    "line": "Snow fields and glaciers are north.",
+    "id": 482
+  },
+  {
+    "line": "The mountains lie south.",
+    "id": 483
+  },
+  {
+    "line": "A flat expanse of stone is west.",
+    "id": 484
+  },
+  {
+    "line": "Flatlands are east.",
+    "id": 485
+  },
+  {
+    "line": "A white landscape is north.",
+    "id": 486
+  },
+  {
+    "line": "Mountains are south.",
+    "id": 487
+  },
+  {
+    "line": "Flatlands lie east and west.",
+    "id": 488
+  },
+  {
+    "line": "On the ground here is a suit of ring mail armor.",
+    "id": 489
+  },
+  {
+    "line": "On the ground here is a suit of chain mail.",
+    "id": 490
+  },
+  {
+    "line": "On the ground here is a suit of scale mail armor.",
+    "id": 491
+  },
+  {
+    "line": "You uncover a platform revealing a secret passage!",
+    "id": 492
+  },
+  {
+    "line": "The north end looks deserted..",
+    "id": 493
+  },
+  {
+    "line": "Mountains can be seen south of here.",
+    "id": 494
+  },
+  {
+    "line": "Snow fields are north.",
+    "id": 495
+  },
+  {
+    "line": "Dark plains are east.",
+    "id": 496
+  },
+  {
+    "line": "A great salt plain can be seen west.",
+    "id": 497
+  },
+  {
+    "line": "Tundra lies west.",
+    "id": 498
+  },
+  {
+    "line": "Black earth lies both north and east from here.",
+    "id": 499
+  },
+  {
+    "line": "An un-earthly tower lies north.",
+    "id": 500
+  },
+  {
+    "line": "More devastation lies east of here.",
+    "id": 501
+  },
+  {
+    "line": "A brighter landscape may lie west.",
+    "id": 502
+  },
+  {
+    "line": "Snow fields are east.",
+    "id": 503
+  },
+  {
+    "line": "A highly improbable structure is west.",
+    "id": 504
+  },
+  {
+    "line": "Ashen Wastes extend north and south of here.",
+    "id": 505
+  },
+  {
+    "line": "Glaciers can be seen north of here.",
+    "id": 506
+  },
+  {
+    "line": "A giant structure of unbelievable construction is south.",
+    "id": 507
+  },
+  {
+    "line": "Blackened expanses lie both east and west from here.",
+    "id": 508
+  },
+  {
+    "line": "A monstrous tower of inconceivable dimension and orientation is east.",
+    "id": 509
+  },
+  {
+    "line": "Plains of Ash are north.",
+    "id": 510
+  },
+  {
+    "line": "A less bleak plain may be south.",
+    "id": 511
+  },
+  {
+    "line": "A wasteland of Ash and igneous rock lie all around this structure.",
+    "id": 512
+  },
+  {
+    "line": "The bridge to the city lies north.",
+    "id": 513
+  },
+  {
+    "line": "A brightly lit room is south.",
+    "id": 514
+  },
+  {
+    "line": "You may climb up the rope.",
+    "id": 515
+  },
+  {
+    "line": "The shadow of a large tower falls upon you from the east.",
+    "id": 516
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 517
+  },
+  {
+    "line": "A landing and open passage are south.",
+    "id": 518
+  },
+  {
+    "line": "The rope shaft extends above and below you.",
+    "id": 519
+  },
+  {
+    "line": "A small wooden door is east.",
+    "id": 520
+  },
+  {
+    "line": "You may climb down the rope.",
+    "id": 521
+  },
+  {
+    "line": "A small wooden door leads west.",
+    "id": 522
+  },
+  {
+    "line": "The Demon's shaft lies like a black orafice waiting to swallow you whole.",
+    "id": 523
+  },
+  {
+    "line": "A dark opening reveals a rope dangling down a shaft to the north.",
+    "id": 524
+  },
+  {
+    "line": "Store-rooms of reagents lies to the east and west.",
+    "id": 525
+  },
+  {
+    "line": "A large chamber is east.",
+    "id": 526
+  },
+  {
+    "line": "A pungent odor wafes over from the west.",
+    "id": 527
+  },
+  {
+    "line": "A doorway leads east.",
+    "id": 528
+  },
+  {
+    "line": "A larger chamber is west.",
+    "id": 529
+  },
+  {
+    "line": "Steps lead up.",
+    "id": 530
+  },
+  {
+    "line": "An open passage leads east.",
+    "id": 531
+  },
+  {
+    "line": "An open passage leads west.",
+    "id": 532
+  },
+  {
+    "line": "Sulfurous fumes drift over from the east.",
+    "id": 533
+  },
+  {
+    "line": "A dark corridor leads north.",
+    "id": 534
+  },
+  {
+    "line": "A black corridor leads south.",
+    "id": 535
+  },
+  {
+    "line": "Black steps lead up.",
+    "id": 536
+  },
+  {
+    "line": "The steps continue up and down.",
+    "id": 537
+  },
+  {
+    "line": "A walkway intercepts the stairs from the east.",
+    "id": 538
+  },
+  {
+    "line": "The walkway continues east and west.",
+    "id": 539
+  },
+  {
+    "line": "The walkway continues east and west.",
+    "id": 540
+  },
+  {
+    "line": "The walkway continues east and west.",
+    "id": 541
+  },
+  {
+    "line": "A walkway leads west.",
+    "id": 542
+  },
+  {
+    "line": "A wooden door is north.",
+    "id": 543
+  },
+  {
+    "line": "A wooden door is south.",
+    "id": 544
+  },
+  {
+    "line": "An open passage leads north.",
+    "id": 545
+  },
+  {
+    "line": "An open passage is south.",
+    "id": 546
+  },
+  {
+    "line": "An open door is north.",
+    "id": 547
+  },
+  {
+    "line": "Steps of milky white stone lead up.",
+    "id": 548
+  },
+  {
+    "line": "An open door is south.",
+    "id": 549
+  },
+  {
+    "line": "Steps lead down.",
+    "id": 550
+  },
+  {
+    "line": "An open passage is east.",
+    "id": 551
+  },
+  {
+    "line": "There is an open passage west.",
+    "id": 552
+  },
+  {
+    "line": "A stout door is east.",
+    "id": 553
+  },
+  {
+    "line": "There is a stout door to both the east and west.",
+    "id": 554
+  },
+  {
+    "line": "There is a solid wooden door west of here.",
+    "id": 555
+  },
+  {
+    "line": "An open doorway leads east.",
+    "id": 556
+  },
+  {
+    "line": "A large stone door is west.",
+    "id": 557
+  },
+  {
+    "line": "A large stone door is east.",
+    "id": 558
+  },
+  {
+    "line": "An open passage leads west.",
+    "id": 559
+  },
+  {
+    "line": "The gallery continues south.",
+    "id": 560
+  },
+  {
+    "line": "The entrance to a gallery of sorts is south.",
+    "id": 561
+  },
+  {
+    "line": "A door of white wood is north.",
+    "id": 562
+  },
+  {
+    "line": "A door of white wood is south.",
+    "id": 563
+  },
+  {
+    "line": "Milky white steps lead down from here.",
+    "id": 564
+  },
+  {
+    "line": "An open passage leads north.",
+    "id": 565
+  },
+  {
+    "line": "The gallery extends to the north.",
+    "id": 566
+  },
+  {
+    "line": "An open passage leads south.",
+    "id": 567
+  },
+  {
+    "line": "An open passage leads north.",
+    "id": 568
+  },
+  {
+    "line": "A stout door is south.",
+    "id": 569
+  },
+  {
+    "line": "You may continue east or west.",
+    "id": 570
+  },
+  {
+    "line": "A closed door is east.",
+    "id": 571
+  },
+  {
+    "line": "Another reagent room is west.",
+    "id": 572
+  },
+  {
+    "line": "Deathly black steps lead both up and down from this room.",
+    "id": 573
+  },
+  {
+    "line": "A closed door is west.",
+    "id": 574
+  },
+  {
+    "line": "The spiral of blackness leads both up and down.",
+    "id": 575
+  },
+  {
+    "line": "A heavy door of blackened wood lies east.",
+    "id": 576
+  },
+  {
+    "line": "A low, open passage leads south.",
+    "id": 577
+  },
+  {
+    "line": "Deathly black steps lead down from here.",
+    "id": 578
+  },
+  {
+    "line": "The door is locked, and resists your efforts to force it open.",
+    "id": 579
+  },
+  {
+    "line": "A low open passage leads north.",
+    "id": 580
+  },
+  {
+    "line": "A small door emblazened with a red glyph leads south.",
+    "id": 581
+  },
+  {
+    "line": "A small door leads north.",
+    "id": 582
+  },
+  {
+    "line": "A stout door is north.",
+    "id": 583
+  },
+  {
+    "line": "A small, sliding door is north.",
+    "id": 584
+  },
+  {
+    "line": "A salt flat is north of here.",
+    "id": 585
+  },
+  {
+    "line": "Desolate wastes extend to the east and west of here.",
+    "id": 586
+  },
+  {
+    "line": "The concourse extends east and west.",
+    "id": 587
+  },
+  {
+    "line": "A stolid arch is west.",
+    "id": 588
+  },
+  {
+    "line": "A stately concourse is east.",
+    "id": 589
+  },
+  {
+    "line": "An oval opening is west.",
+    "id": 590
+  },
+  {
+    "line": "A stolid arch leads east.",
+    "id": 591
+  },
+  {
+    "line": "An oval passage is east.",
+    "id": 592
+  },
+  {
+    "line": "The passage continues east and west.",
+    "id": 593
+  },
+  {
+    "line": "A large door leads east.",
+    "id": 594
+  },
+  {
+    "line": "A narrow passage is west.",
+    "id": 595
+  },
+  {
+    "line": "A large door is west.",
+    "id": 596
+  },
+  {
+    "line": "Some steps in the corner lead down from here.",
+    "id": 597
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 598
+  },
+  {
+    "line": "A wooden door, slightly ajar, leads west.",
+    "id": 599
+  },
+  {
+    "line": "A wooden door is east.",
+    "id": 600
+  },
+  {
+    "line": "A wall of ice is north.",
+    "id": 601
+  },
+  {
+    "line": "A white wasteland lies south and east of here.",
+    "id": 602
+  },
+  {
+    "line": "An impassable glacier is west!",
+    "id": 603
+  },
+  {
+    "line": "Icey lands are south.",
+    "id": 604
+  },
+  {
+    "line": "An impassable glacier is that way!",
+    "id": 605
+  },
+  {
+    "line": "An impassable glacier is that way!",
+    "id": 606
+  },
+  {
+    "line": "Glaciers can be seen to the north.",
+    "id": 607
+  },
+  {
+    "line": "More hospitable lands are south, east, and west.",
+    "id": 608
+  },
+  {
+    "line": "Impassable chasms are that way!",
+    "id": 609
+  },
+  {
+    "line": "Glaciers can be seen west of here.",
+    "id": 610
+  },
+  {
+    "line": "A white landscape is east.",
+    "id": 611
+  },
+  {
+    "line": "Black ash is south.",
+    "id": 612
+  },
+  {
+    "line": "A black horizon is west.",
+    "id": 613
+  },
+  {
+    "line": "The grip of ice lies to the north, south, and east.",
+    "id": 614
+  },
+  {
+    "line": "More hospitable vapors are west.",
+    "id": 615
+  },
+  {
+    "line": "You may climb the steps leading upward.",
+    "id": 616
+  },
+  {
+    "line": "A gilt door is north.",
+    "id": 617
+  },
+  {
+    "line": "An iron bound door leads east.",
+    "id": 618
+  },
+  {
+    "line": "A wooden door is south.",
+    "id": 619
+  },
+  {
+    "line": "An open passageway leads north.",
+    "id": 620
+  },
+  {
+    "line": "A narrow hallway leads south.",
+    "id": 621
+  },
+  {
+    "line": "A narrow hallway leads north.",
+    "id": 622
+  },
+  {
+    "line": "A wide archway is south.",
+    "id": 623
+  },
+  {
+    "line": "An arched passageway leads north.",
+    "id": 624
+  },
+  {
+    "line": "Another passage leads south.",
+    "id": 625
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 626
+  },
+  {
+    "line": "You may go east or west as well.",
+    "id": 627
+  },
+  {
+    "line": "An open passage leads east.",
+    "id": 628
+  },
+  {
+    "line": "Another chamber is south.",
+    "id": 629
+  },
+  {
+    "line": "A solid door is set in the east wall.",
+    "id": 630
+  },
+  {
+    "line": "Another chamber is north.",
+    "id": 631
+  },
+  {
+    "line": "Stout doors are placed in the east and west walls of this chamber.",
+    "id": 632
+  },
+  {
+    "line": "Stout doors have been placed in the east and west walls of this chamber.",
+    "id": 633
+  },
+  {
+    "line": "A thick curtain covers what might be a passage south.",
+    "id": 634
+  },
+  {
+    "line": "A solid door is west.",
+    "id": 635
+  },
+  {
+    "line": "An open passage leads north.",
+    "id": 636
+  },
+  {
+    "line": "Another chamber lies south.",
+    "id": 637
+  },
+  {
+    "line": "An open doorway is west.",
+    "id": 638
+  },
+  {
+    "line": "A thick curtain hangs over a passageway leading north.",
+    "id": 639
+  },
+  {
+    "line": "A small door is south.",
+    "id": 640
+  },
+  {
+    "line": "A small door is north.",
+    "id": 641
+  },
+  {
+    "line": "You attempt to climb back up, but soon give up the task as hopeless.",
+    "id": 642
+  },
+  {
+    "line": "Steps lead up and down.",
+    "id": 643
+  },
+  {
+    "line": "Worked passages are east.",
+    "id": 644
+  },
+  {
+    "line": "Less forboding caverns are west.",
+    "id": 645
+  },
+  {
+    "line": "A high cavern is west.",
+    "id": 646
+  },
+  {
+    "line": "A low tunnel leads north from here.",
+    "id": 647
+  },
+  {
+    "line": "Another, larger tunnel leads east.",
+    "id": 648
+  },
+  {
+    "line": "A larger room is west.",
+    "id": 649
+  },
+  {
+    "line": "Some light can be seen to the east.",
+    "id": 650
+  },
+  {
+    "line": "A gaping black maw is before you.",
+    "id": 651
+  },
+  {
+    "line": "A large tunnel leads west.",
+    "id": 652
+  },
+  {
+    "line": "The tunnel continues north and south.",
+    "id": 653
+  },
+  {
+    "line": "The tunnel continues south.",
+    "id": 654
+  },
+  {
+    "line": "Dark unknown lies north beyond the webs.",
+    "id": 655
+  },
+  {
+    "line": "What looks like a solid wall of thick fog lies south.",
+    "id": 656
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 657
+  },
+  {
+    "line": "An open passage leads south.",
+    "id": 658
+  },
+  {
+    "line": "A side tunnel is west.",
+    "id": 659
+  },
+  {
+    "line": "Passages lead north, west, and east from this cavern.",
+    "id": 660
+  },
+  {
+    "line": "A narrow doorway is west.",
+    "id": 661
+  },
+  {
+    "line": "A narrow doorway is east.",
+    "id": 662
+  },
+  {
+    "line": "Leaping off into the darkness like that could be painful.",
+    "id": 663
+  },
+  {
+    "line": "Fresher air likely lies either north or south from here.",
+    "id": 664
+  },
+  {
+    "line": "A foul stench can be sensed coming from the south.",
+    "id": 665
+  },
+  {
+    "line": "A passage leads east.",
+    "id": 666
+  },
+  {
+    "line": "You may clamber up out of this chamber.",
+    "id": 667
+  },
+  {
+    "line": "You may crawl through a hole in the east wall.",
+    "id": 668
+  },
+  {
+    "line": "A circle of \"lighter\" blackness lies above you.",
+    "id": 669
+  },
+  {
+    "line": "Dark passages extend in all directions.",
+    "id": 670
+  },
+  {
+    "line": "Dark passages extend in all directions.",
+    "id": 671
+  },
+  {
+    "line": "Dark passages extend in all directions.",
+    "id": 672
+  },
+  {
+    "line": "Dark passages extend in all directions.",
+    "id": 673
+  },
+  {
+    "line": "Dark passages extend in all directions.",
+    "id": 674
+  },
+  {
+    "line": "Dark passages extend in all directions.",
+    "id": 675
+  },
+  {
+    "line": "Gloomy hills are south.",
+    "id": 676
+  },
+  {
+    "line": "Darks lands surround you.",
+    "id": 677
+  },
+  {
+    "line": "There is an iron key lying here!",
+    "id": 678
+  },
+  {
+    "line": "You drop a # here.",
+    "id": 679
+  },
+  {
+    "line": "You may exit Purgatory in any cardinal direction.",
+    "id": 680
+  },
+  {
+    "line": "The stone portal is west.",
+    "id": 681
+  },
+  {
+    "line": "A gateway of stone is east.",
+    "id": 682
+  },
+  {
+    "line": "A plain is east.",
+    "id": 683
+  },
+  {
+    "line": "A hint of color is south.",
+    "id": 684
+  },
+  {
+    "line": "A windswept bluff can be seen to the far west.",
+    "id": 685
+  },
+  {
+    "line": "Dark clouds hug the earth to the east.",
+    "id": 686
+  },
+  {
+    "line": "A dull landscape is south.",
+    "id": 687
+  },
+  {
+    "line": "Wide stairs of granite climb upward.",
+    "id": 688
+  },
+  {
+    "line": "A bleak horizon is west.",
+    "id": 689
+  },
+  {
+    "line": "More flatlands are south.",
+    "id": 690
+  },
+  {
+    "line": "A squat tower lies east.",
+    "id": 691
+  },
+  {
+    "line": "Half-elf, half-human.  Yuck, what a beast this must be!!",
+    "id": 692
+  },
+  {
+    "line": "What the hell have I?",
+    "id": 693
+  },
+  {
+    "line": "Some wide steps lead up.",
+    "id": 694
+  },
+  {
+    "line": "North lie the Haunted Lands.",
+    "id": 695
+  },
+  {
+    "line": "South and East lie greener plains.",
+    "id": 696
+  },
+  {
+    "line": "A craggy bluff can be seen rising to the west.",
+    "id": 697
+  },
+  {
+    "line": "To the north and west lie a bleak landscape.",
+    "id": 698
+  },
+  {
+    "line": "East lies a dark plain.",
+    "id": 699
+  },
+  {
+    "line": "South lies the city of Tai-Tastigon.",
+    "id": 700
+  },
+  {
+    "line": "The door is stuck, or locked from the other side.",
+    "id": 701
+  },
+  {
+    "line": "A closed door is east.",
+    "id": 702
+  },
+  {
+    "line": "The door is stuck, or perhaps locked from the inside.",
+    "id": 703
+  },
+  {
+    "line": "An arched door is west.",
+    "id": 704
+  },
+  {
+    "line": "You see a dark alley far below you.",
+    "id": 705
+  },
+  {
+    "line": "The alley widens into a street to the south.",
+    "id": 706
+  },
+  {
+    "line": "You are at a dead end.",
+    "id": 707
+  },
+  {
+    "line": "You can see a pool of water far below you.",
+    "id": 708
+  },
+  {
+    "line": "Some Guardsmen beat the shit out of # and drag him away.",
+    "id": 709
+  },
+  {
+    "line": "The riverbank is below you.",
+    "id": 710
+  },
+  {
+    "line": "The Ocean is that way!",
+    "id": 711
+  },
+  {
+    "line": "The Ocean is that way!",
+    "id": 712
+  },
+  {
+    "line": "The Ocean is that way!",
+    "id": 713
+  },
+  {
+    "line": "Unclimbable cliffs are that way!",
+    "id": 714
+  },
+  {
+    "line": "Unscalable cliffs are that way!",
+    "id": 715
+  },
+  {
+    "line": "Open ground is east.",
+    "id": 716
+  },
+  {
+    "line": "A short vile looking beast",
+    "id": 717
+  },
+  {
+    "line": "The boat is too heavy for you to carry into the forest!",
+    "id": 718
+  },
+  {
+    "line": "Hmmm.... I wonder what would happen if i opened this door....",
+    "id": 719
+  },
+  {
+    "line": "You cannot swim the lake with armor and weapons! You must find a boat..",
+    "id": 720
+  },
+  {
+    "line": "NO TRESSPASSING!",
+    "id": 721
+  },
+  {
+    "line": "A steep embankment leads up into the forest.",
+    "id": 722
+  },
+  {
+    "line": "Hallways of wood lead in all directions from here.",
+    "id": 723
+  },
+  {
+    "line": "Passages of wood lead in all directions from here.",
+    "id": 724
+  },
+  {
+    "line": "An door, partially ajar, is north.",
+    "id": 725
+  },
+  {
+    "line": "A hallway leads south.",
+    "id": 726
+  },
+  {
+    "line": "A narrow passage leads south.",
+    "id": 727
+  },
+  {
+    "line": "A hallway paneled in fine wood leads south from here.",
+    "id": 728
+  },
+  {
+    "line": "A hallway paneled in fine wood leads north.",
+    "id": 729
+  },
+  {
+    "line": "A stout door of maple is south.",
+    "id": 730
+  },
+  {
+    "line": "A stout maple door is north.",
+    "id": 731
+  },
+  {
+    "line": "To the south lies the inner courtyard.",
+    "id": 732
+  },
+  {
+    "line": "Strange noises can be heard to the south.",
+    "id": 733
+  },
+  {
+    "line": "An open passage leads north.",
+    "id": 734
+  },
+  {
+    "line": "A path leads east up into the lower mountains.",
+    "id": 735
+  },
+  {
+    "line": "West lies the Great Forest.",
+    "id": 736
+  },
+  {
+    "line": "The meadows extend to the south.",
+    "id": 737
+  },
+  {
+    "line": "The mountains are impassable to the north!",
+    "id": 738
+  },
+  {
+    "line": "You may proceed either east or west.",
+    "id": 739
+  },
+  {
+    "line": "Higher, and impassable, peaks are that way! USE the pass.",
+    "id": 740
+  },
+  {
+    "line": "Impassable mountains are that way!",
+    "id": 741
+  },
+  {
+    "line": "East lies Tai-Tastigon, City of Many Gods..",
+    "id": 742
+  },
+  {
+    "line": "A pass through the Ebonbane Mountains is west.",
+    "id": 743
+  },
+  {
+    "line": "A path leads south, towards the sounds of the Sea.",
+    "id": 744
+  },
+  {
+    "line": "North lies a faint path.",
+    "id": 745
+  },
+  {
+    "line": "You may follow the narrow beach to the west.",
+    "id": 746
+  },
+  {
+    "line": "You may follow the beach east.",
+    "id": 747
+  },
+  {
+    "line": "Rockier shore is west.",
+    "id": 748
+  },
+  {
+    "line": "Sandier beach lies east.",
+    "id": 749
+  },
+  {
+    "line": "You may travel inland to the north.",
+    "id": 750
+  },
+  {
+    "line": "You can't go that way.",
+    "id": 751
+  },
+  {
+    "line": "To the north you see a small dark opening between the buildings..",
+    "id": 752
+  },
+  {
+    "line": "An iron wall is west.",
+    "id": 753
+  },
+  {
+    "line": "The tunnel continues east.",
+    "id": 754
+  },
+  {
+    "line": "The iron door does not budge.",
+    "id": 755
+  },
+  {
+    "line": "The tunnel continues west.",
+    "id": 756
+  },
+  {
+    "line": "Louder noises emanate from the east.",
+    "id": 757
+  },
+  {
+    "line": "A burrowed tunnel leads west.",
+    "id": 758
+  },
+  {
+    "line": "A passage of stone, clearly made by humanoid hands, lies east.",
+    "id": 759
+  },
+  {
+    "line": "Rougher tunnels are west.",
+    "id": 760
+  },
+  {
+    "line": "A larger chamber is east.",
+    "id": 761
+  },
+  {
+    "line": "A small doorway leads out of the cathedral to the east.",
+    "id": 762
+  },
+  {
+    "line": "The main section of the structure is to the south.",
+    "id": 763
+  },
+  {
+    "line": "The main section of the structure is north.",
+    "id": 764
+  },
+  {
+    "line": "The altar is south.",
+    "id": 765
+  },
+  {
+    "line": "The nave is north",
+    "id": 766
+  },
+  {
+    "line": "You may exit the cathedral to the west.",
+    "id": 767
+  },
+  {
+    "line": "You may skip off across the rooftops to the south.",
+    "id": 768
+  },
+  {
+    "line": "The inner cathedral is down from here.",
+    "id": 769
+  },
+  {
+    "line": "A stone buttress, in poor repair, connects this structure with the inn.",
+    "id": 770
+  },
+  {
+    "line": "East is the upper Res Ab'tyrr.",
+    "id": 771
+  },
+  {
+    "line": "West lies the dome of the Chaos Cathedral.",
+    "id": 772
+  },
+  {
+    "line": "North lies the impressive Chaos Cathedral dome.",
+    "id": 773
+  },
+  {
+    "line": "To the south lies a squarish building, unimpressive but in your path.",
+    "id": 774
+  },
+  {
+    "line": "A large green building, emblazened with snake motiffs, is west.",
+    "id": 775
+  },
+  {
+    "line": "A crowded square is north.",
+    "id": 776
+  },
+  {
+    "line": "An intersection is south.",
+    "id": 777
+  },
+  {
+    "line": "You may exit the plaza to the west.",
+    "id": 778
+  },
+  {
+    "line": "More places of worship are south.",
+    "id": 779
+  },
+  {
+    "line": "A large, square, building is north.",
+    "id": 780
+  },
+  {
+    "line": "A brown structure is west.",
+    "id": 781
+  },
+  {
+    "line": "You may exit this building to the south.",
+    "id": 782
+  },
+  {
+    "line": "Another side door is west, and it leads out into a back yard, of sorts.",
+    "id": 783
+  },
+  {
+    "line": "Some stairs lead up to another level.",
+    "id": 784
+  },
+  {
+    "line": "A closed door is west.",
+    "id": 785
+  },
+  {
+    "line": "A stairway leads down.",
+    "id": 786
+  },
+  {
+    "line": "A closed doorway can be reached to the east.",
+    "id": 787
+  },
+  {
+    "line": "A larger structure can be reached to the south.",
+    "id": 788
+  },
+  {
+    "line": "You want to fall off ?!",
+    "id": 789
+  },
+  {
+    "line": "You want to fall off, or something ?!",
+    "id": 790
+  },
+  {
+    "line": "A closed courtyard can be reached to the north.",
+    "id": 791
+  },
+  {
+    "line": "You may exit the building to the east.",
+    "id": 792
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 793
+  },
+  {
+    "line": "You may exit this building to the east.",
+    "id": 794
+  },
+  {
+    "line": "You can see an enclosed stairway leading up.",
+    "id": 795
+  },
+  {
+    "line": "Some steps lead down.",
+    "id": 796
+  },
+  {
+    "line": "West of you lies a partially concealed stairway.",
+    "id": 797
+  },
+  {
+    "line": "A wooden walkway leads off this platform too the north.",
+    "id": 798
+  },
+  {
+    "line": "The baths are east.",
+    "id": 799
+  },
+  {
+    "line": "A solidly built building is south.",
+    "id": 800
+  },
+  {
+    "line": "A tavern is north.",
+    "id": 801
+  },
+  {
+    "line": "A small pub room is north.",
+    "id": 802
+  },
+  {
+    "line": "Anoother open window is set in the east wall.",
+    "id": 803
+  },
+  {
+    "line": "You may inch along the leadge to the east or west.",
+    "id": 804
+  },
+  {
+    "line": "You might try to climb down from the rafters.",
+    "id": 805
+  },
+  {
+    "line": "You can climb out onto a nearby ledge to the west.",
+    "id": 806
+  },
+  {
+    "line": "You can try to jump across to a rooftop to the north.",
+    "id": 807
+  },
+  {
+    "line": "You may open the door, and enter the building, if you wish.",
+    "id": 808
+  },
+  {
+    "line": "The common room of the inn is south.",
+    "id": 809
+  },
+  {
+    "line": "You may exit the building to the north.",
+    "id": 810
+  },
+  {
+    "line": "A spiral staircase leads up.",
+    "id": 811
+  },
+  {
+    "line": "# steps into the fireplace, and is gone!",
+    "id": 812
+  },
+  {
+    "line": "You may exit the building to the east.",
+    "id": 813
+  },
+  {
+    "line": "Steps lead up from here.",
+    "id": 814
+  },
+  {
+    "line": "To the south you see a busy marketplace..the center of the city.",
+    "id": 815
+  },
+  {
+    "line": "To the north is a dark, dank alley.",
+    "id": 816
+  },
+  {
+    "line": "To the north is the great Meadow gate",
+    "id": 817
+  },
+  {
+    "line": "You stumble over some broken cobblestones.",
+    "id": 818
+  },
+  {
+    "line": "You stumble over some broken cobblestones.",
+    "id": 819
+  },
+  {
+    "line": "You tumble over the wall.",
+    "id": 820
+  },
+  {
+    "line": "A light is north.",
+    "id": 821
+  },
+  {
+    "line": "A darkened chamber is south.",
+    "id": 822
+  },
+  {
+    "line": "A central concourse is north.",
+    "id": 823
+  },
+  {
+    "line": "To the South is an ancient crumbling wall.",
+    "id": 824
+  },
+  {
+    "line": "The road continues east and west.",
+    "id": 825
+  },
+  {
+    "line": "Convoluted passages are west.",
+    "id": 826
+  },
+  {
+    "line": "Another cave is east.",
+    "id": 827
+  },
+  {
+    "line": "A very large cavern is west.",
+    "id": 828
+  },
+  {
+    "line": "An open passage leads south.",
+    "id": 829
+  },
+  {
+    "line": "There is an open passage leading north.",
+    "id": 830
+  },
+  {
+    "line": "The steps lead up.",
+    "id": 831
+  },
+  {
+    "line": "You see a scaly reptile skin here.",
+    "id": 832
+  },
+  {
+    "line": "A glimmer of sunlight appears above.",
+    "id": 833
+  },
+  {
+    "line": "You can spy a bridge to the south.",
+    "id": 834
+  },
+  {
+    "line": "Wilted and dead trees are north.",
+    "id": 835
+  },
+  {
+    "line": "The bridge spans the riverbed to the south.",
+    "id": 836
+  },
+  {
+    "line": "You may climb down a path to the riverbed.",
+    "id": 837
+  },
+  {
+    "line": "You may climb up out of the riverbed.",
+    "id": 838
+  },
+  {
+    "line": "A frail vine, which you might try to climb, hangs down from above.",
+    "id": 839
+  },
+  {
+    "line": "A bridge spans a dry riverbed to the north.",
+    "id": 840
+  },
+  {
+    "line": "You see # duck into a dark passageway.",
+    "id": 841
+  },
+  {
+    "line": "A black shaft is up from here, from which a rope dangles.",
+    "id": 842
+  },
+  {
+    "line": "A narrow passage is south.",
+    "id": 843
+  },
+  {
+    "line": "You pass through an ornate archway..",
+    "id": 844
+  },
+  {
+    "line": "There is an unpleasant smell coming from a dark door to the west.",
+    "id": 845
+  },
+  {
+    "line": "The wind rustles papers across the square..",
+    "id": 846
+  },
+  {
+    "line": "A small shop is south.",
+    "id": 847
+  },
+  {
+    "line": "An open doorway leads north.",
+    "id": 848
+  },
+  {
+    "line": "A sign creaks fitfully overhead.",
+    "id": 849
+  },
+  {
+    "line": "A flowerpot falls on your head.",
+    "id": 850
+  },
+  {
+    "line": "The figurine depicts an elephant.",
+    "id": 851
+  },
+  {
+    "line": "The vase is white, with a scene of men hunting tigers adorning it.",
+    "id": 852
+  },
+  {
+    "line": "The chest is about 4 feet by 2 feet by 2 feet, and has hinges of brass.",
+    "id": 853
+  },
+  {
+    "line": "The carpet, when unrolled, is 20 feet by 20 feet, and is very impressive.",
+    "id": 854
+  },
+  {
+    "line": "The robe is red, and is without much additional decoration.",
+    "id": 855
+  },
+  {
+    "line": "You see a silk robe on the ground here.",
+    "id": 856
+  },
+  {
+    "line": "The gem is rather small, and dark red.",
+    "id": 857
+  },
+  {
+    "line": "The gem is about a half an inch in diameter, and in the rough.",
+    "id": 858
+  },
+  {
+    "line": "The pearl is very large, and of the purest, deepest white.",
+    "id": 859
+  },
+  {
+    "line": "The gem has already been cut, and is clearly valuable.",
+    "id": 860
+  },
+  {
+    "line": "The ring bears the inscription \"to death do us part..\"",
+    "id": 861
+  },
+  {
+    "line": "The streets to the city lay south.",
+    "id": 862
+  },
+  {
+    "line": "A vast plain of marble is east.",
+    "id": 863
+  },
+  {
+    "line": "Some taller builders are west.",
+    "id": 864
+  },
+  {
+    "line": "The oracle is east.",
+    "id": 865
+  },
+  {
+    "line": "An open passage leads north.",
+    "id": 866
+  },
+  {
+    "line": "A door is north.",
+    "id": 867
+  },
+  {
+    "line": "There is a door west.",
+    "id": 868
+  },
+  {
+    "line": "There is a door leading south.",
+    "id": 869
+  },
+  {
+    "line": "You see the wind blow # off the ledge into the water.",
+    "id": 870
+  },
+  {
+    "line": "Below you # is wandering around.",
+    "id": 871
+  },
+  {
+    "line": "You see # below you.",
+    "id": 872
+  },
+  {
+    "line": "You descend the steps to wage the War Eternal...",
+    "id": 873
+  },
+  {
+    "line": "# is sprawled on the sand below you.",
+    "id": 874
+  },
+  {
+    "line": "There is someone on a ledge swaying above you..",
+    "id": 875
+  },
+  {
+    "line": "# suddenly appears from within the fireplace!",
+    "id": 876
+  },
+  {
+    "line": "A building with a beautiful white door is south.",
+    "id": 877
+  },
+  {
+    "line": "You see a gap in the Old Wall to the west.",
+    "id": 878
+  },
+  {
+    "line": "An arch to the east marks the entrance of the Lower Town.",
+    "id": 879
+  },
+  {
+    "line": "Follow the twisting road east to find the river.",
+    "id": 880
+  },
+  {
+    "line": "A small bridge crosses the water to a light-filled island south.",
+    "id": 881
+  },
+  {
+    "line": "You can climb down the chimney.",
+    "id": 882
+  },
+  {
+    "line": "A stout door leads west.",
+    "id": 883
+  },
+  {
+    "line": "A sign creaks with a passing breeze..",
+    "id": 884
+  },
+  {
+    "line": "A door is east.",
+    "id": 885
+  },
+  {
+    "line": "As you pick up the plate mail you feel it start to conform to your body.",
+    "id": 886
+  },
+  {
+    "line": "There is a fountain in the center of the square.",
+    "id": 887
+  },
+  {
+    "line": "To the west is the Jade Market.",
+    "id": 888
+  },
+  {
+    "line": "More shops are west.",
+    "id": 889
+  },
+  {
+    "line": "Equipment may be obtained east.",
+    "id": 890
+  },
+  {
+    "line": "Open stalls displaying many attractive items are west.",
+    "id": 891
+  },
+  {
+    "line": "You see the fountain to the west.",
+    "id": 892
+  },
+  {
+    "line": "The nave is north.",
+    "id": 893
+  },
+  {
+    "line": "The Great Temple is north.",
+    "id": 894
+  },
+  {
+    "line": "This door is closed to you!",
+    "id": 895
+  },
+  {
+    "line": "A large wooden door in the north wall leads to the eating hall.",
+    "id": 896
+  },
+  {
+    "line": "The western door leads to a back alley.",
+    "id": 897
+  },
+  {
+    "line": "An enticing smell is wafting in from the south.",
+    "id": 898
+  },
+  {
+    "line": "Ouch!",
+    "id": 899
+  },
+  {
+    "line": "The western door leads to a back alley.",
+    "id": 900
+  },
+  {
+    "line": "You may exit north.",
+    "id": 901
+  },
+  {
+    "line": "There is a burst of laughter from a table in the corner.",
+    "id": 902
+  },
+  {
+    "line": "The common room is south.",
+    "id": 903
+  },
+  {
+    "line": "# has descended the steps, departing like the wind...",
+    "id": 904
+  },
+  {
+    "line": "A stocky tower is south.",
+    "id": 905
+  },
+  {
+    "line": "You notice a balcony overlooking the city through a door in the south wall.",
+    "id": 906
+  },
+  {
+    "line": "You may enter a building to the north.",
+    "id": 907
+  },
+  {
+    "line": "The door to your room lies along the north wall.",
+    "id": 908
+  },
+  {
+    "line": "Crumbling city rooftops can be reached from the west.",
+    "id": 909
+  },
+  {
+    "line": "Don't fall off the roof!",
+    "id": 910
+  },
+  {
+    "line": "Don't fall off the roof!",
+    "id": 911
+  },
+  {
+    "line": "Don't fall off the roof!",
+    "id": 912
+  },
+  {
+    "line": "The courtyard is north.",
+    "id": 913
+  },
+  {
+    "line": "The common room is south.",
+    "id": 914
+  },
+  {
+    "line": "Steps lead up.",
+    "id": 915
+  },
+  {
+    "line": "The Chaos Cathedral lies east.",
+    "id": 916
+  },
+  {
+    "line": "The road continues south.",
+    "id": 917
+  },
+  {
+    "line": "You see # fade into the darkness of an eastern door...",
+    "id": 918
+  },
+  {
+    "line": "# comes running out of the temple as if pursued by demons!",
+    "id": 919
+  },
+  {
+    "line": "The door resists your efforts to make it open.",
+    "id": 920
+  },
+  {
+    "line": "A shop opening is east.",
+    "id": 921
+  },
+  {
+    "line": "A rope ladder leads up into the tree-dwellers realm.",
+    "id": 922
+  },
+  {
+    "line": "# washes up on the shore.",
+    "id": 923
+  },
+  {
+    "line": "You are beckoned north.",
+    "id": 924
+  },
+  {
+    "line": "Please go down from here to begin the adventure of a lifetime.",
+    "id": 925
+  },
+  {
+    "line": "You summon forth a billowing cloud of fauna to punish your enemies!",
+    "id": 926
+  },
+  {
+    "line": "More stalls can be seen north and south of you along the square.",
+    "id": 927
+  },
+  {
+    "line": "The Wyldibeast drags you back down, and chews some more!",
+    "id": 928
+  },
+  {
+    "line": "Your incantations have failed. Ooh Gawd!",
+    "id": 929
+  },
+  {
+    "line": "You have picked up the Greatest Longsword in the world!@",
+    "id": 930
+  },
+  {
+    "line": "A glowing arrow strikes someone in the room!",
+    "id": 931
+  },
+  {
+    "line": "The main fountain is east.",
+    "id": 932
+  },
+  {
+    "line": "Death is in the air...",
+    "id": 933
+  },
+  {
+    "line": "A blast of hurricane winds and flying plants stuns you!",
+    "id": 934
+  },
+  {
+    "line": "A mountain trail leads south down the mountain.",
+    "id": 935
+  },
+  {
+    "line": "Tendrils of sweet smoke caress you..",
+    "id": 936
+  },
+  {
+    "line": "The market runs north.",
+    "id": 937
+  },
+  {
+    "line": "Judgement square is to the east.",
+    "id": 938
+  },
+  {
+    "line": "You must pass over the dry moat to the east to enter the city.",
+    "id": 939
+  },
+  {
+    "line": "The Mountain gate is to the west.",
+    "id": 940
+  },
+  {
+    "line": "Pass over the dry moat to leave the city.",
+    "id": 941
+  },
+  {
+    "line": "You see a crumbling wall to the east.",
+    "id": 942
+  },
+  {
+    "line": "The trapdoor opens, and # enters the chamber...",
+    "id": 943
+  },
+  {
+    "line": "You head through the golden doors and into a long corridor...",
+    "id": 944
+  },
+  {
+    "line": "You cannot move past the crowds in this narrow street!",
+    "id": 945
+  },
+  {
+    "line": "A bolt of lightning flashes, stabbing at someone in the room!",
+    "id": 946
+  },
+  {
+    "line": "The large crowd here blocks your passage!",
+    "id": 947
+  },
+  {
+    "line": "A magical spear flies into the room, striking one of its occupants!",
+    "id": 948
+  },
+  {
+    "line": "Only in the name of the first Lord of the Waters shall ye pass...",
+    "id": 949
+  },
+  {
+    "line": "Viktor is a dork! that is all I have to say!!",
+    "id": 950
+  },
+  {
+    "line": "Rubble is strewn across the exit to the east.",
+    "id": 951
+  },
+  {
+    "line": "Rubble lies strewn across the exit to the east.",
+    "id": 952
+  },
+  {
+    "line": "Your incantations have failed! Ooh Gawd!",
+    "id": 953
+  },
+  {
+    "line": "Some bushes are attacking people!",
+    "id": 954
+  },
+  {
+    "line": "The market runs south.",
+    "id": 955
+  },
+  {
+    "line": "You fill the room with burning agony!!",
+    "id": 956
+  },
+  {
+    "line": "The great doors are south.",
+    "id": 957
+  },
+  {
+    "line": "You are thrown back by an unholy blast!",
+    "id": 958
+  },
+  {
+    "line": "Pain and misery are upon you!  The end is nigh!  ARGH!!!",
+    "id": 959
+  },
+  {
+    "line": "Your incantations have failed! Ooh Gawd!",
+    "id": 960
+  },
+  {
+    "line": "You Summon a magical dragon to spill forth its fiery breath!",
+    "id": 961
+  },
+  {
+    "line": "A mystical dragon's fiery breath sears your skin!",
+    "id": 962
+  },
+  {
+    "line": "You summon a Dragon to spill forth its fiery breath!",
+    "id": 963
+  },
+  {
+    "line": "Someone in this room just got *SNUFFED*!!!",
+    "id": 964
+  },
+  {
+    "line": "A mystical dragon's fiery breath sears your skin!",
+    "id": 965
+  },
+  {
+    "line": "Your attempt to summon a magical dragon fails!",
+    "id": 966
+  },
+  {
+    "line": "SSSS    OOO",
+    "id": 967
+  },
+  {
+    "line": "The smell of fire and smoke eminates from the east.",
+    "id": 968
+  },
+  {
+    "line": "The tavern is too crowded for you to get in!",
+    "id": 969
+  },
+  {
+    "line": "You may exit north.",
+    "id": 970
+  },
+  {
+    "line": "The road continues south.",
+    "id": 971
+  },
+  {
+    "line": "There is an opening between the houses north.",
+    "id": 972
+  },
+  {
+    "line": "An enticing smell is wafting in from the south.",
+    "id": 973
+  },
+  {
+    "line": "Crumbling city rooftops can be reached from the west.",
+    "id": 974
+  },
+  {
+    "line": "You hear music and laughter nearby...",
+    "id": 975
+  },
+  {
+    "line": "A dark gateway to the west marks the entrance to lower town.",
+    "id": 976
+  },
+  {
+    "line": "HEY YOU!",
+    "id": 977
+  },
+  {
+    "line": "Some steps lead up to a turret room, which has a solidly locked door.",
+    "id": 978
+  },
+  {
+    "line": "A trap door and steps lead down.",
+    "id": 979
+  },
+  {
+    "line": "There is a NOTICE here for all Monster players.",
+    "id": 980
+  },
+  {
+    "line": "The place is a long, tall corridor of deep blue stone.",
+    "id": 981
+  },
+  {
+    "line": "ffffffff",
+    "id": 982
+  },
+  {
+    "line": "poof purg",
+    "id": 983
+  },
+  {
+    "line": "An immense wave of heat shimmers west.",
+    "id": 984
+  },
+  {
+    "line": "The wall of heat is too great for you...!",
+    "id": 985
+  },
+  {
+    "line": "A Ball of frost comes forth from your finger tips to stop the enemy!",
+    "id": 986
+  },
+  {
+    "line": "A brilliant burst of magical energy has been released!",
+    "id": 987
+  },
+  {
+    "line": "You fail to freeze you enemies!",
+    "id": 988
+  },
+  {
+    "line": "q",
+    "id": 989
+  },
+  {
+    "line": "Just a small litle pesky little fellow",
+    "id": 990
+  },
+  {
+    "line": "I am DOCTOR DOOM!  Surrender, or die.",
+    "id": 991
+  },
+  {
+    "line": "You lift the large trap door, and slip down into the darkness below.",
+    "id": 992
+  },
+  {
+    "line": "A fish jumps up, splashing you with cool water. You feel refreshed.",
+    "id": 993
+  },
+  {
+    "line": "Type OLD if you are a venerable player.",
+    "id": 994
+  },
+  {
+    "line": "Type NEW if you are a whiney new player.",
+    "id": 995
+  },
+  {
+    "line": "Type OUT if you want OUT of here.",
+    "id": 996
+  },
+  {
+    "line": "You see that Da Smurf pops you the bird!!",
+    "id": 997
+  },
+  {
+    "line": "NOW YOU DIE!",
+    "id": 998
+  },
+  {
+    "line": "Steps lead down.",
+    "id": 999
+  },
+  {
+    "line": "A city gateway is north.",
+    "id": 1000
+  },
+  {
+    "line": "This is me, so there.",
+    "id": 1001
+  },
+  {
+    "line": "A low tunnel leads north.",
+    "id": 1002
+  },
+  {
+    "line": "Some large steps go down from here.",
+    "id": 1003
+  },
+  {
+    "line": "The crawl-space extends south.",
+    "id": 1004
+  },
+  {
+    "line": "poof troll treasure",
+    "id": 1005
+  },
+  {
+    "line": "Falling snow is east.",
+    "id": 1006
+  },
+  {
+    "line": "A collapsed wing of this library is west.",
+    "id": 1007
+  },
+  {
+    "line": "You may pick your way back east.",
+    "id": 1008
+  },
+  {
+    "line": "A nearly intact room is south.",
+    "id": 1009
+  },
+  {
+    "line": "The exit of the building is east.",
+    "id": 1010
+  },
+  {
+    "line": "The main section of the library is north.",
+    "id": 1011
+  },
+  {
+    "line": "The scroll is very old, and has a bluish tint to it.",
+    "id": 1012
+  },
+  {
+    "line": "A building is west.",
+    "id": 1013
+  },
+  {
+    "line": "North lies a wall of rock.",
+    "id": 1014
+  },
+  {
+    "line": "South lies the heart of the town.",
+    "id": 1015
+  },
+  {
+    "line": "A temple of some sort is east.",
+    "id": 1016
+  },
+  {
+    "line": "south lies a large open expanse, perhaps once a park.",
+    "id": 1017
+  },
+  {
+    "line": "What looks like a governmental building lies east.",
+    "id": 1018
+  },
+  {
+    "line": "You may exit this structure to the west.",
+    "id": 1019
+  },
+  {
+    "line": "An open field, or perhaps a park, lies west.",
+    "id": 1020
+  },
+  {
+    "line": "The temple's graveyard is south.",
+    "id": 1021
+  },
+  {
+    "line": "A temple of some sort is north.",
+    "id": 1022
+  },
+  {
+    "line": "An open promenade is west.",
+    "id": 1023
+  },
+  {
+    "line": "The wood parts before you, and you ascend into the hallowed chamber...",
+    "id": 1024
+  },
+  {
+    "line": "# ascends the steps, disappearing through the roof above.",
+    "id": 1025
+  },
+  {
+    "line": "Spiraling steps lead downward.",
+    "id": 1026
+  },
+  {
+    "line": "A path leads into the tall mountains to the north.",
+    "id": 1027
+  },
+  {
+    "line": "A misty green fog fills the room!",
+    "id": 1028
+  },
+  {
+    "line": "You suddenly feel too sleepy to move!",
+    "id": 1029
+  },
+  {
+    "line": "You drop #.",
+    "id": 1030
+  },
+  {
+    "line": "q",
+    "id": 1031
+  },
+  {
+    "line": "# was dropped here.",
+    "id": 1032
+  },
+  {
+    "line": "There is a finely crafted lantern here.",
+    "id": 1033
+  },
+  {
+    "line": "You have found a hidden tunnel leading north!",
+    "id": 1034
+  },
+  {
+    "line": "boo hoo",
+    "id": 1035
+  },
+  {
+    "line": "The crossbow is a standard crossbow.",
+    "id": 1036
+  },
+  {
+    "line": "A park of some sort is north.",
+    "id": 1037
+  },
+  {
+    "line": "The main square of the city is south.",
+    "id": 1038
+  },
+  {
+    "line": "A graveyard lies east.",
+    "id": 1039
+  },
+  {
+    "line": "A small marketplace is west.",
+    "id": 1040
+  },
+  {
+    "line": "The Holy Basilica is north.",
+    "id": 1041
+  },
+  {
+    "line": "The old Wall is south.",
+    "id": 1042
+  },
+  {
+    "line": "l",
+    "id": 1043
+  },
+  {
+    "line": "You summon the local vegetation to do your bidding!",
+    "id": 1044
+  },
+  {
+    "line": "A white passage leads west.",
+    "id": 1045
+  },
+  {
+    "line": "The upper section of the spire lies above.",
+    "id": 1046
+  },
+  {
+    "line": "The battlements are below.",
+    "id": 1047
+  },
+  {
+    "line": "Steps lead ever upwards.",
+    "id": 1048
+  },
+  {
+    "line": "Steps lead down.",
+    "id": 1049
+  },
+  {
+    "line": "A formidible stone portal is set in the ceiling.",
+    "id": 1050
+  },
+  {
+    "line": "The portal will not budge.",
+    "id": 1051
+  },
+  {
+    "line": "Steps lead down from here.",
+    "id": 1052
+  },
+  {
+    "line": "Mortal forests lie south.",
+    "id": 1053
+  },
+  {
+    "line": "A passage leads east.",
+    "id": 1054
+  },
+  {
+    "line": "A passage leads west.",
+    "id": 1055
+  },
+  {
+    "line": "A little stock character with an annoying grin on his face....",
+    "id": 1056
+  },
+  {
+    "line": "Water drops from the ceiling and seems to run down into the cracks.",
+    "id": 1057
+  },
+  {
+    "line": "The exit to this chamber is south.",
+    "id": 1058
+  },
+  {
+    "line": "The warrior realm can be reached through the northern doorway.",
+    "id": 1059
+  },
+  {
+    "line": "# appears in a satanic fanfare!",
+    "id": 1060
+  },
+  {
+    "line": "The lands of mortals lie above!",
+    "id": 1061
+  },
+  {
+    "line": "This place is really dark and Evil!",
+    "id": 1062
+  },
+  {
+    "line": ":)",
+    "id": 1063
+  },
+  {
+    "line": "Nearby plants spring to life and restrain you!",
+    "id": 1064
+  },
+  {
+    "line": "There is a delicate, but deadly looking, spear here.",
+    "id": 1065
+  },
+  {
+    "line": "The riverbed is north.",
+    "id": 1066
+  },
+  {
+    "line": "There is an odd looking pair of boots here.",
+    "id": 1067
+  },
+  {
+    "line": "You concentrate and cause your body to fade away.",
+    "id": 1068
+  },
+  {
+    "line": "You are touched by the fairies!  You feel more alive!",
+    "id": 1069
+  },
+  {
+    "line": "You fail to sprinkly your fairy dust.",
+    "id": 1070
+  },
+  {
+    "line": "You feel the need to reveal yourself.",
+    "id": 1071
+  },
+  {
+    "line": "You reach out with you mind and coax people out.",
+    "id": 1072
+  },
+  {
+    "line": "You fail to coax anyone out of the shadows",
+    "id": 1073
+  },
+  {
+    "line": "# belches forth noxious fumes!  You choke and gag!",
+    "id": 1074
+  },
+  {
+    "line": "Narrow roads radiate out in the four cardinal directions.",
+    "id": 1075
+  },
+  {
+    "line": "A hidden passage is east.",
+    "id": 1076
+  },
+  {
+    "line": "The runes spell out a name: \"Frognar\"",
+    "id": 1077
+  },
+  {
+    "line": "The city's main square is west.",
+    "id": 1078
+  },
+  {
+    "line": "The gates have collapsed! You cannot find a way through the debris.",
+    "id": 1079
+  },
+  {
+    "line": "# has stepped into the debris heap!",
+    "id": 1080
+  },
+  {
+    "line": "# has come out of the pile of rubble!",
+    "id": 1081
+  },
+  {
+    "line": "There is a long rod of the ground here.",
+    "id": 1082
+  },
+  {
+    "line": "The city's ancient square lies north.",
+    "id": 1083
+  },
+  {
+    "line": "The road continues south.",
+    "id": 1084
+  },
+  {
+    "line": "Energy courses through you as you lift the ancient Rod of Destruction!",
+    "id": 1085
+  },
+  {
+    "line": "The # disappears in a burst of light!",
+    "id": 1086
+  },
+  {
+    "line": "A # appears in a burst of magical light!",
+    "id": 1087
+  },
+  {
+    "line": "Where are you going? This is an infinite plain!",
+    "id": 1088
+  },
+  {
+    "line": "Where are you going? This is an infinite plain!",
+    "id": 1089
+  },
+  {
+    "line": "The road continues north and south.",
+    "id": 1090
+  },
+  {
+    "line": "A large building lies east.",
+    "id": 1091
+  },
+  {
+    "line": "You may exit this building to either the west or south.",
+    "id": 1092
+  },
+  {
+    "line": "The city's ancient gates have been sealed, and blocked by debris!",
+    "id": 1093
+  },
+  {
+    "line": "A slender wand lies on the ground here.",
+    "id": 1094
+  },
+  {
+    "line": "A narrow road is north.",
+    "id": 1095
+  },
+  {
+    "line": "This district continues to the east.",
+    "id": 1096
+  },
+  {
+    "line": "You have taken the Wand of Fireballs, and you feel GOOD!!!",
+    "id": 1097
+  },
+  {
+    "line": "By the power of the dark forces you are transformed into a Hobgoblin!",
+    "id": 1098
+  },
+  {
+    "line": "A curved dagger lies on the ground.",
+    "id": 1099
+  },
+  {
+    "line": "As you reach out for your victim, his life force repels you.",
+    "id": 1100
+  },
+  {
+    "line": "The charm is a small blue stone on a string.",
+    "id": 1101
+  },
+  {
+    "line": "This district continues to the west.",
+    "id": 1102
+  },
+  {
+    "line": "This is a smoky, dark room.",
+    "id": 1103
+  },
+  {
+    "line": "# has fell to the ground here!",
+    "id": 1104
+  },
+  {
+    "line": "A small tunnel leads north.",
+    "id": 1105
+  },
+  {
+    "line": "# shakes violently!",
+    "id": 1106
+  },
+  {
+    "line": "A wide path leads south to the ampitheater.",
+    "id": 1107
+  },
+  {
+    "line": "It is too dark to find your way that way!",
+    "id": 1108
+  },
+  {
+    "line": "A minor street runs east and west from this area.",
+    "id": 1109
+  },
+  {
+    "line": "You drop a # here.",
+    "id": 1110
+  },
+  {
+    "line": "# jumps up and down.",
+    "id": 1111
+  },
+  {
+    "line": "There is a shrine in the distance to the west.",
+    "id": 1112
+  },
+  {
+    "line": "ordinary-looking stone",
+    "id": 1113
+  },
+  {
+    "line": "# masturbates furiously!",
+    "id": 1114
+  },
+  {
+    "line": "You can climb out onto a nearby ledge to the west.",
+    "id": 1115
+  },
+  {
+    "line": "Steps lead down.",
+    "id": 1116
+  },
+  {
+    "line": "The courtyard is south.",
+    "id": 1117
+  },
+  {
+    "line": "A dark passage leads north.",
+    "id": 1118
+  },
+  {
+    "line": "An exit from the ampitheater lies to the north and south.",
+    "id": 1119
+  },
+  {
+    "line": "A narrow lane leads north.",
+    "id": 1120
+  },
+  {
+    "line": "The road continues east and west.",
+    "id": 1121
+  },
+  {
+    "line": "A wide stairway is to the north.",
+    "id": 1122
+  },
+  {
+    "line": "A dark passage leads south.",
+    "id": 1123
+  },
+  {
+    "line": "A wide stairway spirals downward.",
+    "id": 1124
+  },
+  {
+    "line": "An archway is set in each of the four walls.",
+    "id": 1125
+  },
+  {
+    "line": "A stronger light is south.",
+    "id": 1126
+  },
+  {
+    "line": "A stronger light is west.",
+    "id": 1127
+  },
+  {
+    "line": "A stronger light is east.",
+    "id": 1128
+  },
+  {
+    "line": "You can see # in the courtyard below.",
+    "id": 1129
+  },
+  {
+    "line": "You can see # in a Tower to the north.",
+    "id": 1130
+  },
+  {
+    "line": "Some narrow steps are to the west.",
+    "id": 1131
+  },
+  {
+    "line": "A forboding tunnel leads south.",
+    "id": 1132
+  },
+  {
+    "line": "A dark tunnel leads north.",
+    "id": 1133
+  },
+  {
+    "line": "You find a loose panel concealing some steps leading down.",
+    "id": 1134
+  },
+  {
+    "line": "A portcullis is east.",
+    "id": 1135
+  },
+  {
+    "line": "You try to lift the portcullis, but can't!",
+    "id": 1136
+  },
+  {
+    "line": "A portcullis leading to a fortress is west.",
+    "id": 1137
+  },
+  {
+    "line": "North lies an ampitheater.",
+    "id": 1138
+  },
+  {
+    "line": "The main square of the city is east.",
+    "id": 1139
+  },
+  {
+    "line": "This road continues west.",
+    "id": 1140
+  },
+  {
+    "line": "Some form of public building is south.",
+    "id": 1141
+  },
+  {
+    "line": "The road leads east and west from here.",
+    "id": 1142
+  },
+  {
+    "line": "# masturbates furiously, and dissappears.",
+    "id": 1143
+  },
+  {
+    "line": "# appears from behind a hidden panel.",
+    "id": 1144
+  },
+  {
+    "line": "An intact building is north.",
+    "id": 1145
+  },
+  {
+    "line": "A dark alley leads north.",
+    "id": 1146
+  },
+  {
+    "line": "A main thoroughfare leads east.",
+    "id": 1147
+  },
+  {
+    "line": "A forum is south.",
+    "id": 1148
+  },
+  {
+    "line": "Squat buildings, likely more shops, lie east and west from here.",
+    "id": 1149
+  },
+  {
+    "line": "A large rooot leads east to another chamber.",
+    "id": 1150
+  },
+  {
+    "line": "Lag is killing me. I need a speed Demon spell.",
+    "id": 1151
+  },
+  {
+    "line": "The old fortress lies to the north and east.",
+    "id": 1152
+  },
+  {
+    "line": "Grass fields extend to the south and east.",
+    "id": 1153
+  },
+  {
+    "line": "Large iron doors are to the north.",
+    "id": 1154
+  },
+  {
+    "line": "To the south lies the entrance to the fortress.",
+    "id": 1155
+  },
+  {
+    "line": "To the east and west, an alley seems to go around the fortress.",
+    "id": 1156
+  },
+  {
+    "line": "There is a locked door leading north into the fortress.",
+    "id": 1157
+  },
+  {
+    "line": "You may exit this building to the west.",
+    "id": 1158
+  },
+  {
+    "line": "There is a wooden door the the west.",
+    "id": 1159
+  },
+  {
+    "line": "To the east is a great open hall.",
+    "id": 1160
+  },
+  {
+    "line": "There are stairs leading up along the wall to an overhang.",
+    "id": 1161
+  },
+  {
+    "line": "You may exit this room to the east.",
+    "id": 1162
+  },
+  {
+    "line": "The alley runs north and south of here.",
+    "id": 1163
+  },
+  {
+    "line": "A blackened structure lies north.",
+    "id": 1164
+  },
+  {
+    "line": "A dark alleyway leads south.",
+    "id": 1165
+  },
+  {
+    "line": "The forum continues east for a bit.",
+    "id": 1166
+  },
+  {
+    "line": "A forum is south.",
+    "id": 1167
+  },
+  {
+    "line": "Marble columns line the hall to the south.",
+    "id": 1168
+  },
+  {
+    "line": "A open wooden door leads west into what looks like a series of rooms.",
+    "id": 1169
+  },
+  {
+    "line": "A staircase leads down into the great landing.",
+    "id": 1170
+  },
+  {
+    "line": "The forum continues west.",
+    "id": 1171
+  },
+  {
+    "line": "A narrow road leads east.",
+    "id": 1172
+  },
+  {
+    "line": "A guild structure lies to the north, and to the south.",
+    "id": 1173
+  },
+  {
+    "line": "A wide forum is west.",
+    "id": 1174
+  },
+  {
+    "line": "A small marketplace is east.",
+    "id": 1175
+  },
+  {
+    "line": "A narrow lane leads south from here.",
+    "id": 1176
+  },
+  {
+    "line": "This road runs north annd south.",
+    "id": 1177
+  },
+  {
+    "line": "More living quarters are to the north.",
+    "id": 1178
+  },
+  {
+    "line": "An open wooden door leads east to the overhang.",
+    "id": 1179
+  },
+  {
+    "line": "A long passage leads west.",
+    "id": 1180
+  },
+  {
+    "line": "The guild forum is north.",
+    "id": 1181
+  },
+  {
+    "line": "To the south are more living quarters.",
+    "id": 1182
+  },
+  {
+    "line": "You may exit the structure to the south.",
+    "id": 1183
+  },
+  {
+    "line": "An open door leads north.",
+    "id": 1184
+  },
+  {
+    "line": "A door leads south.",
+    "id": 1185
+  },
+  {
+    "line": "Some steps survive which lead up.",
+    "id": 1186
+  },
+  {
+    "line": "Some steps lead down.",
+    "id": 1187
+  },
+  {
+    "line": "You may exit this place to the north.",
+    "id": 1188
+  },
+  {
+    "line": "You may exit the building to the south.",
+    "id": 1189
+  },
+  {
+    "line": "An open doorway is west.",
+    "id": 1190
+  },
+  {
+    "line": "A blackened grove is east.",
+    "id": 1191
+  },
+  {
+    "line": "The clearing continues south.",
+    "id": 1192
+  },
+  {
+    "line": "The center of the village lies west.",
+    "id": 1193
+  },
+  {
+    "line": "More blackened vegetation lies south.",
+    "id": 1194
+  },
+  {
+    "line": "More blackened trees are north.",
+    "id": 1195
+  },
+  {
+    "line": "A clearing is west.",
+    "id": 1196
+  },
+  {
+    "line": "A faint path leads east.",
+    "id": 1197
+  },
+  {
+    "line": "The remains of surrounding trees are both east and west of here.",
+    "id": 1198
+  },
+  {
+    "line": "The center of the village is north.",
+    "id": 1199
+  },
+  {
+    "line": "The remains of a woodenn building are south.",
+    "id": 1200
+  },
+  {
+    "line": "A clearing is east.",
+    "id": 1201
+  },
+  {
+    "line": "A faint trail leads west.",
+    "id": 1202
+  },
+  {
+    "line": "",
+    "id": 1203
+  },
+  {
+    "line": "You may exit this building to the north.",
+    "id": 1204
+  },
+  {
+    "line": "There is a wooden archway to the east, and to the west.",
+    "id": 1205
+  },
+  {
+    "line": "A wooden spiral staircase leads up.",
+    "id": 1206
+  },
+  {
+    "line": "The main room of the library is east.",
+    "id": 1207
+  },
+  {
+    "line": "The main room of the library is west.",
+    "id": 1208
+  },
+  {
+    "line": "A large iron door, mostly hanging off its hinges, is east.",
+    "id": 1209
+  },
+  {
+    "line": "An iron door, off its hinges, leads west.",
+    "id": 1210
+  },
+  {
+    "line": "You may jump on to a large dead branch to the north.",
+    "id": 1211
+  },
+  {
+    "line": "A door, slightly blocked by fallen limbs, leads east.",
+    "id": 1212
+  },
+  {
+    "line": "Wooden steps lead down.",
+    "id": 1213
+  },
+  {
+    "line": "A door leads west.",
+    "id": 1214
+  },
+  {
+    "line": "The upper floor of a wooden building is south.",
+    "id": 1215
+  },
+  {
+    "line": "A shaky wooden platform in the trees is north.",
+    "id": 1216
+  },
+  {
+    "line": "An old vine hangs down from here.",
+    "id": 1217
+  },
+  {
+    "line": "A dead branch leads south from this platform.",
+    "id": 1218
+  },
+  {
+    "line": "Thinning branches are north of here.",
+    "id": 1219
+  },
+  {
+    "line": "Blackened treetops are to the east.",
+    "id": 1220
+  },
+  {
+    "line": "An unstable looking, but intacty, platform is west.",
+    "id": 1221
+  },
+  {
+    "line": "A crumbling platform in the treetops is north.",
+    "id": 1222
+  },
+  {
+    "line": "Thinning branches are west.",
+    "id": 1223
+  },
+  {
+    "line": "Blackened treetops are south of here.",
+    "id": 1224
+  },
+  {
+    "line": "A crumbling platform in the trees is east.",
+    "id": 1225
+  },
+  {
+    "line": "An unsteady platform is south.",
+    "id": 1226
+  },
+  {
+    "line": "There is a silvery two handed sword here.",
+    "id": 1227
+  },
+  {
+    "line": "A long passage leads west.",
+    "id": 1228
+  },
+  {
+    "line": "Living quarters are to the east and south.",
+    "id": 1229
+  },
+  {
+    "line": "A closed iron door is to the north.",
+    "id": 1230
+  },
+  {
+    "line": "A faint outline of a door leads south.",
+    "id": 1231
+  },
+  {
+    "line": "A trap door is up from here.",
+    "id": 1232
+  },
+  {
+    "line": "Out of the darkness, # appears into the room",
+    "id": 1233
+  },
+  {
+    "line": "A corridor east is partially blocked by rubble from the walls.",
+    "id": 1234
+  },
+  {
+    "line": "Over a downed wall to the west, sights of gold glimmer through the door.",
+    "id": 1235
+  },
+  {
+    "line": "A study iron door leads south out of the room.",
+    "id": 1236
+  },
+  {
+    "line": "Heading towards the east, one notices a doorway.",
+    "id": 1237
+  },
+  {
+    "line": "A tall iron doorway leads north.",
+    "id": 1238
+  },
+  {
+    "line": "An open doorway to the south can be seen.",
+    "id": 1239
+  },
+  {
+    "line": "A closed door is to the south.",
+    "id": 1240
+  },
+  {
+    "line": "# opens the door south, and closes it behind him.",
+    "id": 1241
+  },
+  {
+    "line": "A door opens to the south and # wander through it.",
+    "id": 1242
+  },
+  {
+    "line": "A door opens to the north and # wanders through it.",
+    "id": 1243
+  },
+  {
+    "line": "A rickety wooden spiral staircase leads up.",
+    "id": 1244
+  },
+  {
+    "line": "A hole in the floor leads to a staircase downward.",
+    "id": 1245
+  },
+  {
+    "line": "Moving through the trees, you find and escape north.",
+    "id": 1246
+  },
+  {
+    "line": "# moves into the trees.",
+    "id": 1247
+  },
+  {
+    "line": "Searching the trees, you find a path leading north.",
+    "id": 1248
+  },
+  {
+    "line": "# moves through the trees.",
+    "id": 1249
+  },
+  {
+    "line": "Out of the darkness, # suddenly appears into the room.",
+    "id": 1250
+  },
+  {
+    "line": "# dissappears from the room.",
+    "id": 1251
+  },
+  {
+    "line": "At the southern end of the room, is the bookcase, which leads to the library.",
+    "id": 1252
+  },
+  {
+    "line": "",
+    "id": 1253
+  },
+  {
+    "line": "Small gnome with big buck teeth",
+    "id": 1254
+  },
+  {
+    "line": "New and Stupid, I am HERE!!!",
+    "id": 1255
+  },
+  {
+    "line": "Some light filters down from above.",
+    "id": 1256
+  },
+  {
+    "line": "There is a finely crafted ring of obvious value here.",
+    "id": 1257
+  },
+  {
+    "line": "There is a pulsating object of metal and jewels here.",
+    "id": 1258
+  },
+  {
+    "line": "There is a fine gauntlet here on the ground.",
+    "id": 1259
+  },
+  {
+    "line": "A long corridor extends west.",
+    "id": 1260
+  },
+  {
+    "line": "A short corridor extends to the north, as well as one to the east and south.",
+    "id": 1261
+  },
+  {
+    "line": "A corridor leads south.",
+    "id": 1262
+  },
+  {
+    "line": "The steps lead down from here.",
+    "id": 1263
+  },
+  {
+    "line": "Two small quartz stones are here on the ground.",
+    "id": 1264
+  },
+  {
+    "line": "A corridor leads west.",
+    "id": 1265
+  },
+  {
+    "line": "Some narrow steps lead down.",
+    "id": 1266
+  },
+  {
+    "line": "A dark passage is east.",
+    "id": 1267
+  },
+  {
+    "line": "Some narrow steps lead up.",
+    "id": 1268
+  },
+  {
+    "line": "You two quartz stones roll away from your grasp...",
+    "id": 1269
+  },
+  {
+    "line": "You see # trapped in the quartz block beneath you!",
+    "id": 1270
+  },
+  {
+    "line": "You see a glass phial here.",
+    "id": 1271
+  },
+  {
+    "line": "A path leads west.",
+    "id": 1272
+  },
+  {
+    "line": "A very large two handed sword lies here on the ground.",
+    "id": 1273
+  },
+  {
+    "line": "There is a large round wooden door set in the south wall.",
+    "id": 1274
+  },
+  {
+    "line": "A carved door with a large lock is set in the eastern wall.",
+    "id": 1275
+  },
+  {
+    "line": "The door remains closed despite your efforts.",
+    "id": 1276
+  },
+  {
+    "line": "Only a great and strong troll can enter here!",
+    "id": 1277
+  },
+  {
+    "line": "You crash through the door with your mighty arms!",
+    "id": 1278
+  },
+  {
+    "line": "You pass into the dark of mysteries...",
+    "id": 1279
+  },
+  {
+    "line": "The dark passage leads both east and west.",
+    "id": 1280
+  },
+  {
+    "line": "A narrow passage of darkness leads west.",
+    "id": 1281
+  },
+  {
+    "line": "Corridors lead north and south from here.",
+    "id": 1282
+  },
+  {
+    "line": "An archway is east.",
+    "id": 1283
+  },
+  {
+    "line": "there is a set of gauntlets here.",
+    "id": 1284
+  },
+  {
+    "line": "These gauntlets are quite new, better oil them up so they fit better.",
+    "id": 1285
+  },
+  {
+    "line": "You pick up the pair of gauntlets.",
+    "id": 1286
+  },
+  {
+    "line": "There is a large boulder here, slightly sunken into the ground.",
+    "id": 1287
+  },
+  {
+    "line": "You climb into the catapult.  It looks very hard to move.",
+    "id": 1288
+  },
+  {
+    "line": "",
+    "id": 1289
+  },
+  {
+    "line": "As you exit this place part of the ceiling comes down on top of you!",
+    "id": 1290
+  },
+  {
+    "line": "You shimmer as you pick up the stone, not realizing its power!",
+    "id": 1291
+  },
+  {
+    "line": "Blackend hills continue to the north.",
+    "id": 1292
+  },
+  {
+    "line": "Pain throbs througout your body as a ray of death strikes you.",
+    "id": 1293
+  },
+  {
+    "line": "A steep hillside leading down the mountian is to the west.",
+    "id": 1294
+  },
+  {
+    "line": "The mountain gets steeper towards the north.",
+    "id": 1295
+  },
+  {
+    "line": "Your incantations have failed! Ooh Gawd!",
+    "id": 1296
+  },
+  {
+    "line": "Along the crumbling ledge to the east is a steep hillside wich has a path",
+    "id": 1297
+  },
+  {
+    "line": "Along the crumbling ledge to the east is the steep hillside.",
+    "id": 1298
+  },
+  {
+    "line": "Nasty falling rocks are to the west.",
+    "id": 1299
+  },
+  {
+    "line": "A ledge along the mountainside is east.",
+    "id": 1300
+  },
+  {
+    "line": "From a distance, to the west, a dark entrance to a cave can be seen.",
+    "id": 1301
+  },
+  {
+    "line": "A crumbling ledge is east.",
+    "id": 1302
+  },
+  {
+    "line": "Darkness is west.",
+    "id": 1303
+  },
+  {
+    "line": "A horde of locusts enters the room, vengefully attacking someone!",
+    "id": 1304
+  },
+  {
+    "line": "As you pick up the lantern, it starts to glow.",
+    "id": 1305
+  },
+  {
+    "line": "The Lantern is finely crafted from the fines brass found in the realm",
+    "id": 1306
+  },
+  {
+    "line": "There is a loose stalagmite sticking from the floor here.",
+    "id": 1307
+  },
+  {
+    "line": "As you pick up the staff, you are jolted with a surge of energy.",
+    "id": 1308
+  },
+  {
+    "line": "A swirling tornado flies into the room, destroying one occupant!",
+    "id": 1309
+  },
+  {
+    "line": "You pick up them mean shades.",
+    "id": 1310
+  },
+  {
+    "line": "Crackling black energy rips through the room!",
+    "id": 1311
+  },
+  {
+    "line": "An eboy staff lies on the ground.",
+    "id": 1312
+  },
+  {
+    "line": "A dark doorway leads east.",
+    "id": 1313
+  },
+  {
+    "line": "Some pale light is south.",
+    "id": 1314
+  },
+  {
+    "line": "There is a really strange object on the ground here.",
+    "id": 1315
+  },
+  {
+    "line": "# goes through the golden doors to the north.",
+    "id": 1316
+  },
+  {
+    "line": "There is another passage leading west.",
+    "id": 1317
+  },
+  {
+    "line": "A low passage leads south.",
+    "id": 1318
+  },
+  {
+    "line": "The chunk of amber appears normal.",
+    "id": 1319
+  },
+  {
+    "line": "The shard appears like a large piece from an old vase.",
+    "id": 1320
+  },
+  {
+    "line": "The bar is a small ingot of solid lead.",
+    "id": 1321
+  },
+  {
+    "line": "The parchment appears blank. There are several sheets stuck together.",
+    "id": 1322
+  },
+  {
+    "line": "The cord is light, and about a foot long. It is red.",
+    "id": 1323
+  },
+  {
+    "line": "The shoe is of leather, and is very tattered.",
+    "id": 1324
+  },
+  {
+    "line": "The dagger's blade has been twisted around behind the hilt.",
+    "id": 1325
+  },
+  {
+    "line": "The animal pelt is thick and grey.",
+    "id": 1326
+  },
+  {
+    "line": "The belt is faded, but otherwise a normal belt.",
+    "id": 1327
+  },
+  {
+    "line": "The prism fits in the palm of your hand, and is nearly transparent.",
+    "id": 1328
+  },
+  {
+    "line": "The arrowhead is made from bronze, and has been severely oxidized.",
+    "id": 1329
+  },
+  {
+    "line": "A wide, open passage leads west.",
+    "id": 1330
+  },
+  {
+    "line": "A low tunnel leads north.",
+    "id": 1331
+  },
+  {
+    "line": "A wide, open passage leads east.",
+    "id": 1332
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 1333
+  },
+  {
+    "line": "An archway is west.",
+    "id": 1334
+  },
+  {
+    "line": "The steps continue down from here.",
+    "id": 1335
+  },
+  {
+    "line": "A short passage leads north.",
+    "id": 1336
+  },
+  {
+    "line": "Wide steps lead up.",
+    "id": 1337
+  },
+  {
+    "line": "A faint light can be seen to the south.",
+    "id": 1338
+  },
+  {
+    "line": "A narrow room lies north.",
+    "id": 1339
+  },
+  {
+    "line": "Another chamber is south.",
+    "id": 1340
+  },
+  {
+    "line": "The many colored threads in the glove glisten in the light. ",
+    "id": 1341
+  },
+  {
+    "line": "A brightly colored object catches your eye...",
+    "id": 1342
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 1343
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 1344
+  },
+  {
+    "line": "A passage leads south.",
+    "id": 1345
+  },
+  {
+    "line": "A chamber lies north.",
+    "id": 1346
+  },
+  {
+    "line": "Upon going west, you put yourself at the mercy of the outsiders.",
+    "id": 1347
+  },
+  {
+    "line": "# descends from the sky..",
+    "id": 1348
+  },
+  {
+    "line": "You feel magical energy as you pick up the tights.",
+    "id": 1349
+  },
+  {
+    "line": "# descends from the sky...",
+    "id": 1350
+  },
+  {
+    "line": "Go north through the gold doors.",
+    "id": 1351
+  },
+  {
+    "line": "This corridor extends north and south from here.",
+    "id": 1352
+  },
+  {
+    "line": "A door is south.",
+    "id": 1353
+  },
+  {
+    "line": "The door is stuck, and cannot be opened from this side!",
+    "id": 1354
+  },
+  {
+    "line": "A dark passageway leads north.",
+    "id": 1355
+  },
+  {
+    "line": "A mystical force prevents you from travelling back the way you came.",
+    "id": 1356
+  },
+  {
+    "line": "A stout door, requiring a magical password, lies east.",
+    "id": 1357
+  },
+  {
+    "line": "An old stone wall is to the west.",
+    "id": 1358
+  },
+  {
+    "line": "There is a door, partially ajar, to the north.",
+    "id": 1359
+  },
+  {
+    "line": "There is a door south.",
+    "id": 1360
+  },
+  {
+    "line": "The city cemetery is through the eastern gates.",
+    "id": 1361
+  },
+  {
+    "line": "The Sun gate rised above you to the east.",
+    "id": 1362
+  },
+  {
+    "line": "The wall is too high for you to climb..",
+    "id": 1363
+  },
+  {
+    "line": "You lose your footing and tumble to the ground..",
+    "id": 1364
+  },
+  {
+    "line": "An old wall lies to the east.",
+    "id": 1365
+  },
+  {
+    "line": "There is an alley to the west.",
+    "id": 1366
+  },
+  {
+    "line": "There is an alley to the south.",
+    "id": 1367
+  },
+  {
+    "line": "The street continues east.",
+    "id": 1368
+  },
+  {
+    "line": "The street of Ribbons is further east.",
+    "id": 1369
+  },
+  {
+    "line": "You make the mistake and re-inhale your gasses.",
+    "id": 1370
+  },
+  {
+    "line": "You flex a muscle inside your body and you release deadly fumes.",
+    "id": 1371
+  },
+  {
+    "line": "You feel your body quiver in extacsy as you pick up the cloak.",
+    "id": 1372
+  },
+  {
+    "line": "You attempt to pick up the automatic teller, and she slaps you silly.",
+    "id": 1373
+  },
+  {
+    "line": "From here ",
+    "id": 1374
+  },
+  {
+    "line": "From here the mountain slopes down to the north and west.",
+    "id": 1375
+  },
+  {
+    "line": "The valley floor continues on to the north.",
+    "id": 1376
+  },
+  {
+    "line": "A long steep climb to the top of the mountain is to the south.",
+    "id": 1377
+  },
+  {
+    "line": "Further down the mountain, smoke covers all one can see.",
+    "id": 1378
+  },
+  {
+    "line": "Off to the north, green life sprouts from the blackness.",
+    "id": 1379
+  },
+  {
+    "line": "More burnt land lies to the south.",
+    "id": 1380
+  },
+  {
+    "line": "All around you lay the cemetery.",
+    "id": 1381
+  },
+  {
+    "line": "A climb up will lead to the side of the valley.",
+    "id": 1382
+  },
+  {
+    "line": "Towards the south, the mountian grows up to the sky.",
+    "id": 1383
+  },
+  {
+    "line": "Rolling hills of Black smoke stand out in the east.",
+    "id": 1384
+  },
+  {
+    "line": "Trees grow over the path to the west.",
+    "id": 1385
+  },
+  {
+    "line": "The valley floor is to the east.",
+    "id": 1386
+  },
+  {
+    "line": "# is washed up on the shore..",
+    "id": 1387
+  },
+  {
+    "line": "The floor of the valley drops down to the west.",
+    "id": 1388
+  },
+  {
+    "line": "ugg",
+    "id": 1389
+  },
+  {
+    "line": "A blue sword lies here waiting for you hands!",
+    "id": 1390
+  },
+  {
+    "line": "This slightly curved blade has a silvery red tint to it.",
+    "id": 1391
+  },
+  {
+    "line": "Out of the sky you are struck by several dozen razor edged chestnuts!",
+    "id": 1392
+  },
+  {
+    "line": "You fail to summon your chestnut friends to your rescue!",
+    "id": 1393
+  },
+  {
+    "line": "# reaches forth and plunges his hand into your skull!",
+    "id": 1394
+  },
+  {
+    "line": "You concentrate on #'s mind and begin to crush his psychie.",
+    "id": 1395
+  },
+  {
+    "line": "You fail to crush #'s mind.  You put the world to sleep.",
+    "id": 1396
+  },
+  {
+    "line": "You summon a strain of powerful music and let it flow around you..",
+    "id": 1397
+  },
+  {
+    "line": "You sense magic at work!",
+    "id": 1398
+  },
+  {
+    "line": "Your incantations have failed! Argh!",
+    "id": 1399
+  },
+  {
+    "line": "# appears beside you out of thin air..",
+    "id": 1400
+  },
+  {
+    "line": "# descends from the sky...",
+    "id": 1401
+  },
+  {
+    "line": "A trail leads north up the mountain.",
+    "id": 1402
+  },
+  {
+    "line": "Your incantations have failed! Argh!",
+    "id": 1403
+  },
+  {
+    "line": "Your attempt to soothe your opponant has failed!",
+    "id": 1404
+  },
+  {
+    "line": "You concentrate with your mind and reach out to #.",
+    "id": 1405
+  },
+  {
+    "line": "# reaches out with his mind to contact you.",
+    "id": 1406
+  },
+  {
+    "line": "This glacial crack continues east and west.",
+    "id": 1407
+  },
+  {
+    "line": "A crack in the ice is west.",
+    "id": 1408
+  },
+  {
+    "line": "A stone corridor leads north.",
+    "id": 1409
+  },
+  {
+    "line": "A beam of darkness absorbs # !",
+    "id": 1410
+  },
+  {
+    "line": "A narrow passage leads south.",
+    "id": 1411
+  },
+  {
+    "line": "A brighter chamber is north.",
+    "id": 1412
+  },
+  {
+    "line": "Falling snow can be seen west.",
+    "id": 1413
+  },
+  {
+    "line": "A larger chamber is south.",
+    "id": 1414
+  },
+  {
+    "line": "Ick.",
+    "id": 1415
+  },
+  {
+    "line": "Additional chambers can be seen beyond the snow to the east and west.",
+    "id": 1416
+  },
+  {
+    "line": "A long corridor is south.",
+    "id": 1417
+  },
+  {
+    "line": "An ancient length of cloth is here.",
+    "id": 1418
+  },
+  {
+    "line": "A long corridor leads north.",
+    "id": 1419
+  },
+  {
+    "line": "An icey balcony lies west.",
+    "id": 1420
+  },
+  {
+    "line": "A small opening is north.",
+    "id": 1421
+  },
+  {
+    "line": "You concentrate with your mind and speak.",
+    "id": 1422
+  },
+  {
+    "line": "There is a suit of white armor here.",
+    "id": 1423
+  },
+  {
+    "line": "It is messy here.",
+    "id": 1424
+  },
+  {
+    "line": "# appears out of the earth beside you!",
+    "id": 1425
+  },
+  {
+    "line": "You scream in paint as # throws lighting bolts at you.",
+    "id": 1426
+  },
+  {
+    "line": "You reach out and throw a lightning bolt at #.",
+    "id": 1427
+  },
+  {
+    "line": "Your lightning bolts go out of control and you paralize everyone.",
+    "id": 1428
+  },
+  {
+    "line": "You notice a small grate set into the cobblestones.",
+    "id": 1429
+  },
+  {
+    "line": "The sewers are a dangerous place...",
+    "id": 1430
+  },
+  {
+    "line": "# disappears from view!",
+    "id": 1431
+  },
+  {
+    "line": "You manage to lift up the grate and descend into the darkness below...",
+    "id": 1432
+  },
+  {
+    "line": "# lifts up a grate and descends beneath the city!",
+    "id": 1433
+  },
+  {
+    "line": "# emerges from a grate set into the street stones.",
+    "id": 1434
+  },
+  {
+    "line": "A ray of sunlight beams down from the city above.",
+    "id": 1435
+  },
+  {
+    "line": "You jump up and try to grab hold of the grate, but fail miserably.",
+    "id": 1436
+  },
+  {
+    "line": "Your incantations have failed! Argh!",
+    "id": 1437
+  },
+  {
+    "line": "# shimmies up a sewer ladder and escapes into the city above.",
+    "id": 1438
+  },
+  {
+    "line": "A shadow obscures the sun..",
+    "id": 1439
+  },
+  {
+    "line": "# lifts the grate and plops down into the water below.",
+    "id": 1440
+  },
+  {
+    "line": "There are oak doors in each of the cardinal directions.",
+    "id": 1441
+  },
+  {
+    "line": "There is also a staircase leading upward.",
+    "id": 1442
+  },
+  {
+    "line": "You find a way out!",
+    "id": 1443
+  },
+  {
+    "line": "# comes running into the room from the north.",
+    "id": 1444
+  },
+  {
+    "line": "# sneaks out through the north door.",
+    "id": 1445
+  },
+  {
+    "line": "# storms out the east door.",
+    "id": 1446
+  },
+  {
+    "line": "# comes skipping in from the east.",
+    "id": 1447
+  },
+  {
+    "line": "# bolts out the south door!",
+    "id": 1448
+  },
+  {
+    "line": "# casually walks into the room from the south.",
+    "id": 1449
+  },
+  {
+    "line": "# runs in terror out the west door!",
+    "id": 1450
+  },
+  {
+    "line": "# barges into the room from the west!",
+    "id": 1451
+  },
+  {
+    "line": "There is an oak door to the south.",
+    "id": 1452
+  },
+  {
+    "line": "There is a strange portal to the east.",
+    "id": 1453
+  },
+  {
+    "line": "There is a strange portal to the west.",
+    "id": 1454
+  },
+  {
+    "line": "There are arched passages to the north and east.",
+    "id": 1455
+  },
+  {
+    "line": "The corridor ends at an arch to the south.",
+    "id": 1456
+  },
+  {
+    "line": "The corridor continues to the west...",
+    "id": 1457
+  },
+  {
+    "line": "The corridor continues to the east and to the west...",
+    "id": 1458
+  },
+  {
+    "line": "The corridor continues to the east...",
+    "id": 1459
+  },
+  {
+    "line": "The corridor ends at an arch to the south.",
+    "id": 1460
+  },
+  {
+    "line": "There are arched passages to the north and west.",
+    "id": 1461
+  },
+  {
+    "line": "There is a strange portal to the south.",
+    "id": 1462
+  },
+  {
+    "line": "There is a strange portal to the north.",
+    "id": 1463
+  },
+  {
+    "line": "There is an oak door to the east.",
+    "id": 1464
+  },
+  {
+    "line": "The path ends at an arch to the east.",
+    "id": 1465
+  },
+  {
+    "line": "The path continues to the south...",
+    "id": 1466
+  },
+  {
+    "line": "The path continues to the north and to the south...",
+    "id": 1467
+  },
+  {
+    "line": "The path continues to the north...",
+    "id": 1468
+  },
+  {
+    "line": "The path ends at an arch to the east.",
+    "id": 1469
+  },
+  {
+    "line": "There is a strange portal to the east.",
+    "id": 1470
+  },
+  {
+    "line": "There are arched passages to south and west.",
+    "id": 1471
+  },
+  {
+    "line": "The trail ends at an arch to the north.",
+    "id": 1472
+  },
+  {
+    "line": "The trail continues to the east...",
+    "id": 1473
+  },
+  {
+    "line": "The trail continues to the east and to the west...",
+    "id": 1474
+  },
+  {
+    "line": "The trail continues to the west...",
+    "id": 1475
+  },
+  {
+    "line": "The trail ends at an arch to the north.",
+    "id": 1476
+  },
+  {
+    "line": "There is a strange portal to the north.",
+    "id": 1477
+  },
+  {
+    "line": "There are arched passages to the east and south.",
+    "id": 1478
+  },
+  {
+    "line": "The caverns end at an arch to the west.",
+    "id": 1479
+  },
+  {
+    "line": "The caverns continue to the north...",
+    "id": 1480
+  },
+  {
+    "line": "The caverns continue to the north and to the south...",
+    "id": 1481
+  },
+  {
+    "line": "The caverns continue to the south...",
+    "id": 1482
+  },
+  {
+    "line": "The caverns end at an arch to the west.",
+    "id": 1483
+  },
+  {
+    "line": "There is a strange portal to the south.",
+    "id": 1484
+  },
+  {
+    "line": "There is an oak door to the west.",
+    "id": 1485
+  },
+  {
+    "line": "There is a strange portal to the west.",
+    "id": 1486
+  },
+  {
+    "line": "There is an oak door to the north.",
+    "id": 1487
+  },
+  {
+    "line": "Swaying seaweed can be seen to the west, past the cave entrance.",
+    "id": 1488
+  },
+  {
+    "line": "Another chamber may be south.",
+    "id": 1489
+  },
+  {
+    "line": "The dark ruins repel your efforts..",
+    "id": 1490
+  },
+  {
+    "line": "The passage ends here..",
+    "id": 1491
+  },
+  {
+    "line": "The wall curves round, blocking your passage...",
+    "id": 1492
+  },
+  {
+    "line": "The door is in the other wall dolt!",
+    "id": 1493
+  },
+  {
+    "line": "The wall blocks your passage!",
+    "id": 1494
+  },
+  {
+    "line": "You can't run through the wall!",
+    "id": 1495
+  },
+  {
+    "line": "You discover an endless pit!",
+    "id": 1496
+  },
+  {
+    "line": "The houses block your passage..",
+    "id": 1497
+  },
+  {
+    "line": "This small yellowed scroll looks like it may contain some information.",
+    "id": 1498
+  },
+  {
+    "line": "You hit the floor..",
+    "id": 1499
+  },
+  {
+    "line": "The road turns here..",
+    "id": 1500
+  },
+  {
+    "line": "Your passage is blocked by a wall of ribbons!",
+    "id": 1501
+  },
+  {
+    "line": "The gate is locked against you!",
+    "id": 1502
+  },
+  {
+    "line": "Crash!",
+    "id": 1503
+  },
+  {
+    "line": "The wall is too high to climb!",
+    "id": 1504
+  },
+  {
+    "line": "The center of the ruins is east.",
+    "id": 1505
+  },
+  {
+    "line": "You feel some keen knowledge as you pick the scroll up",
+    "id": 1506
+  },
+  {
+    "line": "The outline of a large rectangular room is north.",
+    "id": 1507
+  },
+  {
+    "line": "No doubt about it, the sand is real.",
+    "id": 1508
+  },
+  {
+    "line": "# is prepared for combat.",
+    "id": 1509
+  },
+  {
+    "line": "The sewer curls out in all directions.",
+    "id": 1510
+  },
+  {
+    "line": "The party is west. We suggest you curb your curiosity and join it.",
+    "id": 1511
+  },
+  {
+    "line": "You hear a distant voice, \"Use the force #...\"",
+    "id": 1512
+  },
+  {
+    "line": "The remains of the base of a small tower are east.",
+    "id": 1513
+  },
+  {
+    "line": "The fallen gates are west.",
+    "id": 1514
+  },
+  {
+    "line": "Narrow, dark steps lead down.",
+    "id": 1515
+  },
+  {
+    "line": "The center of the ruins is west.",
+    "id": 1516
+  },
+  {
+    "line": "The center of the ruins lies south.",
+    "id": 1517
+  },
+  {
+    "line": "Three small passages appear to your north, east, and south.",
+    "id": 1518
+  },
+  {
+    "line": "The steps continue up and down.",
+    "id": 1519
+  },
+  {
+    "line": "A passage leads south.",
+    "id": 1520
+  },
+  {
+    "line": "A passage leads west.",
+    "id": 1521
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 1522
+  },
+  {
+    "line": "The steps continue both up and down.",
+    "id": 1523
+  },
+  {
+    "line": "Steps lead up.",
+    "id": 1524
+  },
+  {
+    "line": "The stairs lie west.",
+    "id": 1525
+  },
+  {
+    "line": "The Dungeons of Solace are east.",
+    "id": 1526
+  },
+  {
+    "line": "Passages lead in all directions.",
+    "id": 1527
+  },
+  {
+    "line": "You may back-track to the east.",
+    "id": 1528
+  },
+  {
+    "line": "A dark tunnel leads west.",
+    "id": 1529
+  },
+  {
+    "line": "Nasty corridors are south.",
+    "id": 1530
+  },
+  {
+    "line": "The unending corridors lead north and south.",
+    "id": 1531
+  },
+  {
+    "line": "The only exit lies east.",
+    "id": 1532
+  },
+  {
+    "line": "A narrow opening in the rock is west.",
+    "id": 1533
+  },
+  {
+    "line": "Another chamber is south.",
+    "id": 1534
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 1535
+  },
+  {
+    "line": "You may back-track to the north.",
+    "id": 1536
+  },
+  {
+    "line": "The only exit is south.",
+    "id": 1537
+  },
+  {
+    "line": "A narrow opening in the rock is north.",
+    "id": 1538
+  },
+  {
+    "line": "A passage leads west.",
+    "id": 1539
+  },
+  {
+    "line": "An open passage leads east.",
+    "id": 1540
+  },
+  {
+    "line": "A narrow tunnel leads south.",
+    "id": 1541
+  },
+  {
+    "line": "A corridor leads west.",
+    "id": 1542
+  },
+  {
+    "line": "A long corridor leads east.",
+    "id": 1543
+  },
+  {
+    "line": "A chamber is north.",
+    "id": 1544
+  },
+  {
+    "line": "South are damp corridors.",
+    "id": 1545
+  },
+  {
+    "line": "To the west lies a long corridor.",
+    "id": 1546
+  },
+  {
+    "line": "quit",
+    "id": 1547
+  },
+  {
+    "line": "Nasty tunnels are east.",
+    "id": 1548
+  },
+  {
+    "line": "A long corridor leads east.",
+    "id": 1549
+  },
+  {
+    "line": "You may go north, if you are able.",
+    "id": 1550
+  },
+  {
+    "line": "A passage leads south.",
+    "id": 1551
+  },
+  {
+    "line": "You grab the scroll and power pulsates through your veins",
+    "id": 1552
+  },
+  {
+    "line": "The dungeons are north.",
+    "id": 1553
+  },
+  {
+    "line": "A narrow passage leads south.",
+    "id": 1554
+  },
+  {
+    "line": "The only exit is north.",
+    "id": 1555
+  },
+  {
+    "line": "A narrow opening in the rock leads south.",
+    "id": 1556
+  },
+  {
+    "line": "A chamber is west.",
+    "id": 1557
+  },
+  {
+    "line": "A dark passage leads east.",
+    "id": 1558
+  },
+  {
+    "line": "A nasty looking chamber is north.",
+    "id": 1559
+  },
+  {
+    "line": "A terrible smell is south.",
+    "id": 1560
+  },
+  {
+    "line": "More corridors are west.",
+    "id": 1561
+  },
+  {
+    "line": "Dank passages are east.",
+    "id": 1562
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 1563
+  },
+  {
+    "line": "A rougher cave is north.",
+    "id": 1564
+  },
+  {
+    "line": "The aqua steps lead up, towards a pocket of air.",
+    "id": 1565
+  },
+  {
+    "line": "Some wide, bright, steps lead down into a water filled cave.",
+    "id": 1566
+  },
+  {
+    "line": "A narrow, but tall, passage leads east.",
+    "id": 1567
+  },
+  {
+    "line": "Another chamber can be seen east.",
+    "id": 1568
+  },
+  {
+    "line": "A narrow passage leads west.",
+    "id": 1569
+  },
+  {
+    "line": "Another chamber is west.",
+    "id": 1570
+  },
+  {
+    "line": "The coral wall is east.",
+    "id": 1571
+  },
+  {
+    "line": "The coral doorway is west.",
+    "id": 1572
+  },
+  {
+    "line": "A sloping passage leads south.",
+    "id": 1573
+  },
+  {
+    "line": "A wide passage leads north.",
+    "id": 1574
+  },
+  {
+    "line": "A wide passage leads south.",
+    "id": 1575
+  },
+  {
+    "line": "The orb fits into the palm of your hand nicely, and is very dense.",
+    "id": 1576
+  },
+  {
+    "line": "The orb fits into the palm of your hand nicely, and is very dense.",
+    "id": 1577
+  },
+  {
+    "line": "A passage leads east.",
+    "id": 1578
+  },
+  {
+    "line": "Writing it now...read it later",
+    "id": 1579
+  },
+  {
+    "line": "# is here in jail.",
+    "id": 1580
+  },
+  {
+    "line": "A blue portal is west.",
+    "id": 1581
+  },
+  {
+    "line": "A small scroll made of infant skin lies here.",
+    "id": 1582
+  },
+  {
+    "line": "# has come into the room from west.",
+    "id": 1583
+  },
+  {
+    "line": "The passage runs north and south from this point.",
+    "id": 1584
+  },
+  {
+    "line": "The steps lead down.",
+    "id": 1585
+  },
+  {
+    "line": "Sandstone steps lead up from this chamber.",
+    "id": 1586
+  },
+  {
+    "line": "The passage runs north and south from this point.",
+    "id": 1587
+  },
+  {
+    "line": "The gates are closed now, wait till sunrise.",
+    "id": 1588
+  },
+  {
+    "line": "There is a winding trail leading east.",
+    "id": 1589
+  },
+  {
+    "line": "A shimmering portal is north, marked with warnings.",
+    "id": 1590
+  },
+  {
+    "line": "test y",
+    "id": 1591
+  },
+  {
+    "line": "A shimmering portal is south.",
+    "id": 1592
+  },
+  {
+    "line": "# has gone east.",
+    "id": 1593
+  },
+  {
+    "line": "A bottomless chasm is that way!",
+    "id": 1594
+  },
+  {
+    "line": "The passage runs north-south.",
+    "id": 1595
+  },
+  {
+    "line": "'This room was designed by G. W. Church",
+    "id": 1596
+  },
+  {
+    "line": "You see a vulture soaring in the cloud less sky.",
+    "id": 1597
+  },
+  {
+    "line": "z",
+    "id": 1598
+  },
+  {
+    "line": "You can see the sun rising over the eastern horizon.",
+    "id": 1599
+  },
+  {
+    "line": "The stone is very smooth, and is in the shape of a perfect hemisphere.",
+    "id": 1600
+  },
+  {
+    "line": "You muck around the lake bottom.",
+    "id": 1601
+  },
+  {
+    "line": "You muck around the lake bottom.",
+    "id": 1602
+  },
+  {
+    "line": "You muck around the lake bottom.",
+    "id": 1603
+  },
+  {
+    "line": "You muck around the lake bottom.",
+    "id": 1604
+  },
+  {
+    "line": "The current drags you out of the edge of the sea weed.",
+    "id": 1605
+  },
+  {
+    "line": "A ramp leads up the side of the pyramid to the east.",
+    "id": 1606
+  },
+  {
+    "line": "The tractless desert is west.",
+    "id": 1607
+  },
+  {
+    "line": "You may exit the pyramid to the west.",
+    "id": 1608
+  },
+  {
+    "line": "A passageway leads east.",
+    "id": 1609
+  },
+  {
+    "line": "A sand filled chamber is west.",
+    "id": 1610
+  },
+  {
+    "line": "This passage descends to the east.",
+    "id": 1611
+  },
+  {
+    "line": "A passage leads west.",
+    "id": 1612
+  },
+  {
+    "line": "Some steps lead down from here.",
+    "id": 1613
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 1614
+  },
+  {
+    "line": "Darker passages lead east and west from here.",
+    "id": 1615
+  },
+  {
+    "line": "A bottomless chasm is that way!",
+    "id": 1616
+  },
+  {
+    "line": "The magical tunnel through the Ocean extends north and south.",
+    "id": 1617
+  },
+  {
+    "line": "The magical tunnel continues north and south from here.",
+    "id": 1618
+  },
+  {
+    "line": "The Ocean's tunnel leads north.",
+    "id": 1619
+  },
+  {
+    "line": "The doorway is south.",
+    "id": 1620
+  },
+  {
+    "line": "The door remains tightly shut despite your efforts to open it.",
+    "id": 1621
+  },
+  {
+    "line": "A solid door is north.",
+    "id": 1622
+  },
+  {
+    "line": "At the distant southern end of this hall, another exit is visible.",
+    "id": 1623
+  },
+  {
+    "line": "At the distant end of the hall some steps are visible, leading up.",
+    "id": 1624
+  },
+  {
+    "line": "The steps continue up annd down from this point.",
+    "id": 1625
+  },
+  {
+    "line": "The ivory steps lead down.",
+    "id": 1626
+  },
+  {
+    "line": "A small door is in the south wall.",
+    "id": 1627
+  },
+  {
+    "line": "The door resists your efforts.",
+    "id": 1628
+  },
+  {
+    "line": "A burst of flame scorches you! Ahhhh!",
+    "id": 1629
+  },
+  {
+    "line": "The now shut door you entered by is north.",
+    "id": 1630
+  },
+  {
+    "line": "The door won't budge!",
+    "id": 1631
+  },
+  {
+    "line": "The door you entered by is north.",
+    "id": 1632
+  },
+  {
+    "line": "The door moves slightly, but is stuck!",
+    "id": 1633
+  },
+  {
+    "line": "A small doorway is north.",
+    "id": 1634
+  },
+  {
+    "line": "A passage leads south.",
+    "id": 1635
+  },
+  {
+    "line": "A passage leads north.",
+    "id": 1636
+  },
+  {
+    "line": "A steep passage leads up, but is blocked by an iron portcullis.",
+    "id": 1637
+  },
+  {
+    "line": "The now closed off entrance is down from here.",
+    "id": 1638
+  },
+  {
+    "line": "An iron door has closed off your escape!",
+    "id": 1639
+  },
+  {
+    "line": "Another doorway is east, up the ice covered incline.",
+    "id": 1640
+  },
+  {
+    "line": "You lose your grip and slide back down the passage!",
+    "id": 1641
+  },
+  {
+    "line": "A frozen doorway is west.",
+    "id": 1642
+  },
+  {
+    "line": "A frozen doorway is west.",
+    "id": 1643
+  },
+  {
+    "line": "Hey!",
+    "id": 1644
+  },
+  {
+    "line": "Homer was here.",
+    "id": 1645
+  },
+  {
+    "line": "You concentrate and fail to invoke the spell",
+    "id": 1646
+  },
+  {
+    "line": "There is a long black ebony staff lying here",
+    "id": 1647
+  },
+  {
+    "line": "Dough sucks",
+    "id": 1648
+  },
+  {
+    "line": "You see a confused newbie looking around at everything.",
+    "id": 1649
+  },
+  {
+    "line": "The frozen gates are south.",
+    "id": 1650
+  },
+  {
+    "line": "A sloping passage leads north from here.",
+    "id": 1651
+  },
+  {
+    "line": "What the hell are you trying to do, enter the whirlpool?",
+    "id": 1652
+  },
+  {
+    "line": "An ancient path leads north from here.",
+    "id": 1653
+  },
+  {
+    "line": "Old ruins can be seen south.",
+    "id": 1654
+  },
+  {
+    "line": "Lowlands are far to the north.",
+    "id": 1655
+  },
+  {
+    "line": "The Path of Shadows leads south.",
+    "id": 1656
+  },
+  {
+    "line": "A steep path leads down from here.",
+    "id": 1657
+  },
+  {
+    "line": "A steep path threads its way up the foothills.",
+    "id": 1658
+  },
+  {
+    "line": "The well is too small for you to commit suicide by jumping down.",
+    "id": 1659
+  },
+  {
+    "line": "The well is too small for you to commit suicide by jumping down.",
+    "id": 1660
+  },
+  {
+    "line": "The well is too small for you to commit suicide by jumping down.",
+    "id": 1661
+  },
+  {
+    "line": "*",
+    "id": 1662
+  },
+  {
+    "line": "**\\",
+    "id": 1663
+  },
+  {
+    "line": "Foul magic is at work!",
+    "id": 1664
+  },
+  {
+    "line": "A mountain is that way!",
+    "id": 1665
+  },
+  {
+    "line": "A mountain is that way!",
+    "id": 1666
+  },
+  {
+    "line": "You'd jump to your death that way! Use the path down...",
+    "id": 1667
+  },
+  {
+    "line": "A mountain is that way!",
+    "id": 1668
+  },
+  {
+    "line": "A mountain is that way!",
+    "id": 1669
+  },
+  {
+    "line": "The juice is loose!!!",
+    "id": 1670
+  },
+  {
+    "line": "Moxy the great",
+    "id": 1671
+  },
+  {
+    "line": "You are submerged in darkness...",
+    "id": 1672
+  },
+  {
+    "line": "You are submerged in darkness...",
+    "id": 1673
+  },
+  {
+    "line": "You are submerged in darkness...",
+    "id": 1674
+  },
+  {
+    "line": "You are submerged in darkness...",
+    "id": 1675
+  },
+  {
+    "line": "",
+    "id": 1676
+  },
+  {
+    "line": "Your incantations have failed! Argh!",
+    "id": 1677
+  },
+  {
+    "line": "You are submerged in darkness...",
+    "id": 1678
+  },
+  {
+    "line": "You are submerged in darkness...",
+    "id": 1679
+  },
+  {
+    "line": "You are submerged in darkness...",
+    "id": 1680
+  },
+  {
+    "line": "A silver road of light leads south.",
+    "id": 1681
+  },
+  {
+    "line": "There is a long, barbed spear of bronze here.",
+    "id": 1682
+  },
+  {
+    "line": "A narrow, arched passage of dark stone leads east.",
+    "id": 1683
+  },
+  {
+    "line": "A narrow, arched passage leads west.",
+    "id": 1684
+  },
+  {
+    "line": "A revolving stone panel will allow you to go east.",
+    "id": 1685
+  },
+  {
+    "line": "A clump of huge, boney claws and leather strands lies here.",
+    "id": 1686
+  },
+  {
+    "line": "The Fire Opal is set into the floor and cannot be removed.",
+    "id": 1687
+  },
+  {
+    "line": "Some icy steps lead up.",
+    "id": 1688
+  },
+  {
+    "line": "An arched passage through the stone and ice leads east.",
+    "id": 1689
+  },
+  {
+    "line": "An arched passage leads west through the stone and ice.",
+    "id": 1690
+  },
+  {
+    "line": "Another door is south.",
+    "id": 1691
+  },
+  {
+    "line": "A dark passage leads east.",
+    "id": 1692
+  },
+  {
+    "line": "There is a volume bound in reptilean leather here.",
+    "id": 1693
+  },
+  {
+    "line": "The passageway continues south.",
+    "id": 1694
+  },
+  {
+    "line": "Behind the wooden chair you find a dark passageway leading south!",
+    "id": 1695
+  },
+  {
+    "line": "The passageway leads north.",
+    "id": 1696
+  },
+  {
+    "line": "Some steps lead down to the lower part of the hall.",
+    "id": 1697
+  },
+  {
+    "line": "A stone archway leads south.",
+    "id": 1698
+  },
+  {
+    "line": "Some steps lead up.",
+    "id": 1699
+  },
+  {
+    "line": "A stone archway leads north.",
+    "id": 1700
+  }
+]
