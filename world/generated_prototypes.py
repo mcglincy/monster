@@ -422,6 +422,8 @@ ASSASSINS_DAGGER = {
   'weight': 0,
   'worth': 200,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 6,
   'attack_speed': 9,
   'base_damage': 100,
   'random_damage': 100,
@@ -434,6 +436,8 @@ AXE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 4,
+  'largest_fit': 8,
   'attack_speed': 11,
   'base_damage': 83,
   'random_damage': 104,
@@ -446,6 +450,8 @@ BLEACHED_BONE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 6,
   'attack_speed': 0,
   'base_damage': 30,
   'random_damage': 70,
@@ -459,6 +465,8 @@ BOOTS_OF_LAGRATH = {
   'weight': 10,
   'worth': 480,
   'equip_slot': 16,
+  'smallest_fit': 3,
+  'largest_fit': 20,
   'attack_speed': 0,
   'base_damage': 0,
   'random_damage': 50,
@@ -471,6 +479,8 @@ BROADSWORD = {
   'weight': 0,
   'worth': 85,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'attack_speed': 15,
   'base_damage': 60,
   'random_damage': 190,
@@ -483,6 +493,8 @@ BROKEN_OAR = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'attack_speed': 0,
   'base_damage': 24,
   'random_damage': 81,
@@ -495,6 +507,8 @@ CLAYMOORE_SWORD = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 9,
   'attack_speed': 13,
   'base_damage': 115,
   'random_damage': 70,
@@ -507,6 +521,8 @@ CRUDE_DAGGER = {
   'weight': 0,
   'worth': 50,
   'equip_slot': 2,
+  'smallest_fit': 3,
+  'largest_fit': 7,
   'attack_speed': 15,
   'base_damage': 15,
   'random_damage': 10,
@@ -519,6 +535,8 @@ CUDGEL = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 8,
   'attack_speed': 9,
   'base_damage': 104,
   'random_damage': 61,
@@ -532,6 +550,8 @@ DAGGER_OF_VENOMS = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 2,
+  'smallest_fit': 3,
+  'largest_fit': 10,
   'attack_speed': 0,
   'base_damage': 25,
   'random_damage': 40,
@@ -544,6 +564,8 @@ DIRK = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 7,
   'attack_speed': 7,
   'base_damage': 108,
   'random_damage': 52,
@@ -557,6 +579,8 @@ DRAGON_CLAWS = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 9,
   'attack_speed': 2,
   'base_damage': 10,
   'random_damage': 500,
@@ -570,6 +594,8 @@ DRUIDSLAYER = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'attack_speed': 11,
   'base_damage': 85,
   'random_damage': 170,
@@ -582,6 +608,8 @@ EBONBLADE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'attack_speed': 10,
   'base_damage': 90,
   'random_damage': 140,
@@ -595,6 +623,8 @@ ELFEN_SPEAR = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 6,
   'attack_speed': 0,
   'base_damage': 130,
   'random_damage': 40,
@@ -607,6 +637,8 @@ GLOVES_OF_ATLAS = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 13,
+  'smallest_fit': 0,
+  'largest_fit': 10,
   'attack_speed': 0,
   'base_damage': 0,
   'random_damage': 20,
@@ -619,6 +651,8 @@ HAMMER_OF_THE_GODS = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 8,
   'attack_speed': 12,
   'base_damage': 1,
   'random_damage': 500,
@@ -631,6 +665,8 @@ HATCHET = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 7,
   'attack_speed': 7,
   'base_damage': 121,
   'random_damage': 26,
@@ -643,6 +679,8 @@ IRON_BAR = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'attack_speed': 9,
   'base_damage': 99,
   'random_damage': 69,
@@ -656,6 +694,8 @@ IVORY_KNIFE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 2,
+  'smallest_fit': 5,
+  'largest_fit': 8,
   'attack_speed': 13,
   'base_damage': 100,
   'random_damage': 175,
@@ -668,6 +708,8 @@ JAVELIN = {
   'weight': 0,
   'worth': 42,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 7,
   'attack_speed': 5,
   'base_damage': 90,
   'random_damage': 118,
@@ -680,6 +722,8 @@ JEWELED_SCIMITAR = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'attack_speed': 9,
   'base_damage': 101,
   'random_damage': 105,
@@ -692,6 +736,8 @@ LAKEBLADE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'attack_speed': 10,
   'base_damage': 25,
   'random_damage': 284,
@@ -704,6 +750,8 @@ LONGSWORD = {
   'weight': 0,
   'worth': 62,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 10,
   'attack_speed': 10,
   'base_damage': 105,
   'random_damage': 92,
@@ -716,6 +764,8 @@ MACE = {
   'weight': 0,
   'worth': 76,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 7,
   'attack_speed': 8,
   'base_damage': 126,
   'random_damage': 52,
@@ -729,6 +779,8 @@ MAGECRUSHER = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 10,
   'attack_speed': 8,
   'base_damage': 152,
   'random_damage': 26,
@@ -741,6 +793,8 @@ MAGIC_LONGSWORD = {
   'weight': 0,
   'worth': 800,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 10,
   'attack_speed': 10,
   'base_damage': 125,
   'random_damage': 92,
@@ -753,6 +807,8 @@ MAGIC_SHIELD = {
   'weight': 0,
   'worth': 800,
   'equip_slot': 2,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'attack_speed': 0,
   'base_damage': 0,
   'random_damage': 1,
@@ -765,6 +821,8 @@ MEAT_CLEAVER = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 8,
   'attack_speed': 0,
   'base_damage': 30,
   'random_damage': 70,
@@ -777,6 +835,8 @@ MILITARY_FORK = {
   'weight': 0,
   'worth': 110,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 10,
   'attack_speed': 0,
   'base_damage': 95,
   'random_damage': 100,
@@ -789,6 +849,8 @@ PIKE = {
   'weight': 0,
   'worth': 100,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 8,
   'attack_speed': 18,
   'base_damage': 87,
   'random_damage': 154,
@@ -801,6 +863,8 @@ PITCHFORK = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 9,
   'attack_speed': 14,
   'base_damage': 61,
   'random_damage': 147,
@@ -813,6 +877,8 @@ SAXON_AXE = {
   'weight': 0,
   'worth': 78,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 8,
   'attack_speed': 10,
   'base_damage': 87,
   'random_damage': 155,
@@ -825,6 +891,8 @@ SCIMITAR = {
   'weight': 0,
   'worth': 60,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 7,
   'attack_speed': 0,
   'base_damage': 220,
   'random_damage': 210,
@@ -836,6 +904,8 @@ SHARPENED_STICK = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 2,
+  'largest_fit': 12,
   'attack_speed': 0,
   'base_damage': 100,
   'random_damage': 100,
@@ -848,6 +918,8 @@ SHORT_SWORD = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 6,
   'attack_speed': 8,
   'base_damage': 70,
   'random_damage': 140,
@@ -860,6 +932,8 @@ SILVER_RAPIER = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'attack_speed': 9,
   'base_damage': 145,
   'random_damage': 2,
@@ -872,6 +946,8 @@ SPEAR = {
   'weight': 0,
   'worth': 72,
   'equip_slot': 1,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'attack_speed': 6,
   'base_damage': 117,
   'random_damage': 76,
@@ -884,6 +960,8 @@ STAFF_OF_RA = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'attack_speed': 0,
   'base_damage': 175,
   'random_damage': 100,
@@ -895,6 +973,8 @@ STONE_MALLET = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 6,
   'attack_speed': 0,
   'base_damage': 100,
   'random_damage': 105,
@@ -906,6 +986,8 @@ SWORD_O_STACK_DUMPS = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 10,
   'attack_speed': 0,
   'base_damage': 1,
   'random_damage': 0,
@@ -918,6 +1000,8 @@ SWORD_OF_DEFENSE = {
   'weight': 0,
   'worth': 1000000000,
   'equip_slot': 1,
+  'smallest_fit': 0,
+  'largest_fit': 0,
   'attack_speed': 0,
   'base_damage': 100,
   'random_damage': 250,
@@ -931,6 +1015,8 @@ SWORD_OF_THE_KINGS = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'attack_speed': 0,
   'base_damage': 225,
   'random_damage': 199,
@@ -943,6 +1029,8 @@ VIRSH_BLADE = {
   'weight': 10,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 1,
+  'largest_fit': 10,
   'attack_speed': 0,
   'base_damage': 280,
   'random_damage': 190,
@@ -956,6 +1044,8 @@ VOULGE = {
   'weight': 0,
   'worth': 120,
   'equip_slot': 3,
+  'smallest_fit': 6,
+  'largest_fit': 15,
   'attack_speed': 0,
   'base_damage': 120,
   'random_damage': 120,
@@ -968,6 +1058,8 @@ WARHAMMER = {
   'weight': 0,
   'worth': 61,
   'equip_slot': 1,
+  'smallest_fit': 3,
+  'largest_fit': 6,
   'attack_speed': 7,
   'base_damage': 70,
   'random_damage': 162,
@@ -979,6 +1071,8 @@ WRAITH_BLADE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'attack_speed': 8,
   'base_damage': 125,
   'random_damage': 61,
@@ -1008,6 +1102,8 @@ ANIMAL_SKINS = {
   'weight': 0,
   'worth': 20,
   'equip_slot': 4,
+  'smallest_fit': 4,
+  'largest_fit': 9,
   'base_armor': 2,
   'deflect_armor': 0,
   'spell_armor': 1,
@@ -1021,6 +1117,8 @@ BRACERS_OF_LUNACY = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 10,
+  'smallest_fit': 5,
+  'largest_fit': 8,
   'base_armor': 8,
   'deflect_armor': 1,
   'spell_armor': 15,
@@ -1034,6 +1132,8 @@ BUCKLER = {
   'weight': 0,
   'worth': 20,
   'equip_slot': 2,
+  'smallest_fit': 2,
+  'largest_fit': 6,
   'base_armor': 0,
   'deflect_armor': 1,
   'spell_armor': 0,
@@ -1047,6 +1147,8 @@ CAVE_BEAR_SKINS = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 4,
+  'smallest_fit': 7,
+  'largest_fit': 10,
   'base_armor': 6,
   'deflect_armor': 1,
   'spell_armor': 9,
@@ -1061,6 +1163,8 @@ CHAIN_MAIL_ARMOR = {
   'weight': 0,
   'worth': 85,
   'equip_slot': 4,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'base_armor': 6,
   'deflect_armor': 0,
   'spell_armor': 5,
@@ -1074,6 +1178,8 @@ CLOAK = {
   'weight': 0,
   'worth': 1,
   'equip_slot': 8,
+  'smallest_fit': 0,
+  'largest_fit': 20,
   'base_armor': 0,
   'deflect_armor': 2,
   'spell_armor': 0,
@@ -1087,6 +1193,8 @@ CLOAK_OF_THE_MAGI = {
   'weight': 25,
   'worth': 1400,
   'equip_slot': 8,
+  'smallest_fit': 3,
+  'largest_fit': 7,
   'base_armor': 0,
   'deflect_armor': 13,
   'spell_armor': 0,
@@ -1101,6 +1209,8 @@ CONICAL_HELM = {
   'weight': 0,
   'worth': 20,
   'equip_slot': 5,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'base_armor': 0,
   'deflect_armor': 1,
   'spell_armor': 0,
@@ -1114,6 +1224,8 @@ CRESTED_HELM = {
   'weight': 0,
   'worth': 20,
   'equip_slot': 5,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'base_armor': 0,
   'deflect_armor': 1,
   'spell_armor': 0,
@@ -1127,6 +1239,8 @@ DWARVEN_MAIL = {
   'weight': 0,
   'worth': 56,
   'equip_slot': 4,
+  'smallest_fit': 3,
+  'largest_fit': 5,
   'base_armor': 6,
   'deflect_armor': 0,
   'spell_armor': 6,
@@ -1141,6 +1255,8 @@ GAUNTLET_OF_CRUSADER = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 13,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'base_armor': 5,
   'deflect_armor': 0,
   'spell_armor': 20,
@@ -1155,6 +1271,8 @@ GAUNTLETS = {
   'weight': 0,
   'worth': 40,
   'equip_slot': 13,
+  'smallest_fit': 0,
+  'largest_fit': 999,
   'base_armor': 1,
   'deflect_armor': 0,
   'spell_armor': 0,
@@ -1168,6 +1286,8 @@ HORNED_HELM = {
   'weight': 0,
   'worth': 20,
   'equip_slot': 5,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'base_armor': 0,
   'deflect_armor': 1,
   'spell_armor': 0,
@@ -1181,6 +1301,8 @@ LEATHER_BOOTS = {
   'weight': 0,
   'worth': 15,
   'equip_slot': 16,
+  'smallest_fit': 4,
+  'largest_fit': 8,
   'base_armor': 1,
   'deflect_armor': 0,
   'spell_armor': 0,
@@ -1194,6 +1316,8 @@ LEATHER_JERKIN = {
   'weight': 0,
   'worth': 40,
   'equip_slot': 4,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'base_armor': 3,
   'deflect_armor': 0,
   'spell_armor': 2,
@@ -1207,6 +1331,8 @@ MAGIC_HELMET = {
   'weight': 0,
   'worth': 800,
   'equip_slot': 5,
+  'smallest_fit': 1,
+  'largest_fit': 8,
   'base_armor': 0,
   'deflect_armor': 3,
   'spell_armor': 0,
@@ -1220,6 +1346,8 @@ NORMAN_KITE_SHIELD = {
   'weight': 0,
   'worth': 70,
   'equip_slot': 2,
+  'smallest_fit': 5,
+  'largest_fit': 8,
   'base_armor': 0,
   'deflect_armor': 3,
   'spell_armor': 0,
@@ -1233,6 +1361,8 @@ PLUMED_HELM = {
   'weight': 0,
   'worth': 20,
   'equip_slot': 5,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'base_armor': 0,
   'deflect_armor': 1,
   'spell_armor': 0,
@@ -1247,6 +1377,8 @@ QUARTZ_EYES = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 6,
+  'smallest_fit': 2,
+  'largest_fit': 9,
   'base_armor': 0,
   'deflect_armor': 0,
   'spell_armor': 5,
@@ -1260,6 +1392,8 @@ RED_PLATE_MAIL = {
   'weight': 30,
   'worth': 98999999,
   'equip_slot': 4,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'base_armor': 11,
   'deflect_armor': 10,
   'spell_armor': 11,
@@ -1274,6 +1408,8 @@ RING_MAIL_ARMOR = {
   'weight': 0,
   'worth': 55,
   'equip_slot': 4,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'base_armor': 4,
   'deflect_armor': 0,
   'spell_armor': 3,
@@ -1288,6 +1424,8 @@ SCALE_MAIL_ARMOR = {
   'weight': 0,
   'worth': 105,
   'equip_slot': 4,
+  'smallest_fit': 5,
+  'largest_fit': 7,
   'base_armor': 7,
   'deflect_armor': 0,
   'spell_armor': 7,
@@ -1302,6 +1440,8 @@ SERPENT_SKIN_CLOAK = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 4,
+  'smallest_fit': 5,
+  'largest_fit': 8,
   'base_armor': 0,
   'deflect_armor': 0,
   'spell_armor': 42,
@@ -1315,6 +1455,8 @@ STEEL_BREASTPLATE = {
   'weight': 40,
   'worth': 320,
   'equip_slot': 9,
+  'smallest_fit': 2,
+  'largest_fit': 10,
   'base_armor': 15,
   'deflect_armor': 10,
   'spell_armor': 0,
@@ -1328,6 +1470,8 @@ TROLL_MAIL = {
   'weight': 0,
   'worth': 59,
   'equip_slot': 4,
+  'smallest_fit': 7,
+  'largest_fit': 12,
   'base_armor': 12,
   'deflect_armor': 0,
   'spell_armor': 7,
@@ -1342,6 +1486,8 @@ VAPRAKS_SKIN = {
   'weight': 10,
   'worth': 0,
   'equip_slot': 9,
+  'smallest_fit': 5,
+  'largest_fit': 10,
   'base_armor': 12,
   'deflect_armor': 0,
   'spell_armor': 12,
@@ -1355,6 +1501,8 @@ VIKING_ROUND_SHIELD = {
   'weight': 0,
   'worth': 85,
   'equip_slot': 2,
+  'smallest_fit': 5,
+  'largest_fit': 10,
   'base_armor': 0,
   'deflect_armor': 4,
   'spell_armor': 0,
@@ -1369,6 +1517,8 @@ WHITE_SCALE_MAIL = {
   'weight': 5,
   'worth': 0,
   'equip_slot': 4,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'base_armor': 9,
   'deflect_armor': 5,
   'spell_armor': 9,
@@ -1382,6 +1532,8 @@ WOODEN_SHIELD = {
   'weight': 0,
   'worth': 35,
   'equip_slot': 2,
+  'smallest_fit': 4,
+  'largest_fit': 7,
   'base_armor': 0,
   'deflect_armor': 2,
   'spell_armor': 0,
@@ -1408,6 +1560,8 @@ AQUAMARINE_ORB = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 BLACK_ORB = {
@@ -1417,6 +1571,8 @@ BLACK_ORB = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 BLOCK_OF_ICE = {
@@ -1426,6 +1582,8 @@ BLOCK_OF_ICE = {
   'weight': 10,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 DRAGON_BOMB = {
@@ -1434,6 +1592,8 @@ DRAGON_BOMB = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 DREAMING_STONE = {
@@ -1443,6 +1603,8 @@ DREAMING_STONE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 EBONY_STAFF = {
@@ -1452,6 +1614,8 @@ EBONY_STAFF = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 3,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 EEK = {
@@ -1460,6 +1624,8 @@ EEK = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 ELFSTONE = {
@@ -1468,6 +1634,8 @@ ELFSTONE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 17,
+  'smallest_fit': 4,
+  'largest_fit': 10,
 }
 
 FIRE_OPAL = {
@@ -1477,6 +1645,8 @@ FIRE_OPAL = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 GEM_OF_TRUE_SEEING = {
@@ -1485,6 +1655,8 @@ GEM_OF_TRUE_SEEING = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 18,
+  'smallest_fit': 2,
+  'largest_fit': 22,
 }
 
 GRAY_ORB = {
@@ -1494,6 +1666,8 @@ GRAY_ORB = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 GREEK_FIREBOMB = {
@@ -1503,6 +1677,8 @@ GREEK_FIREBOMB = {
   'weight': 0,
   'worth': 20,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 HACK_OBJ = {
@@ -1511,6 +1687,8 @@ HACK_OBJ = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 1,
+  'smallest_fit': 0,
+  'largest_fit': 10,
 }
 
 HEART_OF_THE_LAKE = {
@@ -1520,6 +1698,8 @@ HEART_OF_THE_LAKE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 KEY = {
@@ -1528,6 +1708,8 @@ KEY = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 LEATHER_BELT = {
@@ -1537,6 +1719,8 @@ LEATHER_BELT = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 14,
+  'smallest_fit': 3,
+  'largest_fit': 7,
 }
 
 LICH_RING = {
@@ -1546,6 +1730,8 @@ LICH_RING = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 12,
+  'smallest_fit': 4,
+  'largest_fit': 9,
 }
 
 MAELSTROM_RING = {
@@ -1555,6 +1741,8 @@ MAELSTROM_RING = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 12,
+  'smallest_fit': 4,
+  'largest_fit': 10,
 }
 
 OLD_SHOE = {
@@ -1564,6 +1752,8 @@ OLD_SHOE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 16,
+  'smallest_fit': 3,
+  'largest_fit': 7,
 }
 
 PEACOCK_GLOVE = {
@@ -1574,6 +1764,8 @@ PEACOCK_GLOVE = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 PINK_FAIRY_TIGHTS = {
@@ -1583,6 +1775,8 @@ PINK_FAIRY_TIGHTS = {
   'weight': -10,
   'worth': 300,
   'equip_slot': 15,
+  'smallest_fit': 0,
+  'largest_fit': 20,
 }
 
 RHINESTONE_RING = {
@@ -1593,6 +1787,8 @@ RHINESTONE_RING = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 12,
+  'smallest_fit': 3,
+  'largest_fit': 10,
 }
 
 RUNE = {
@@ -1602,6 +1798,8 @@ RUNE = {
   'weight': 0,
   'worth': 2001,
   'equip_slot': 13,
+  'smallest_fit': 3,
+  'largest_fit': 10,
 }
 
 SHINY_OBJECT = {
@@ -1611,6 +1809,8 @@ SHINY_OBJECT = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 SHROUD_OF_KROTCHE = {
@@ -1621,6 +1821,8 @@ SHROUD_OF_KROTCHE = {
   'weight': 30,
   'worth': 0,
   'equip_slot': 8,
+  'smallest_fit': 3,
+  'largest_fit': 20,
 }
 
 SILK_ROBE = {
@@ -1631,6 +1833,8 @@ SILK_ROBE = {
   'weight': 1,
   'worth': 26,
   'equip_slot': 4,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 STACK_DUMP_BOMB = {
@@ -1639,6 +1843,8 @@ STACK_DUMP_BOMB = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 0,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 STAFF_OF_LUXOR = {
@@ -1648,6 +1854,8 @@ STAFF_OF_LUXOR = {
   'weight': 0,
   'worth': 0,
   'equip_slot': 2,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 THERMO_NUCLEAR_BOMB = {
@@ -1656,6 +1864,8 @@ THERMO_NUCLEAR_BOMB = {
   'weight': 0,
   'worth': 7500,
   'equip_slot': 17,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 THROWING_DAGGER = {
@@ -1664,6 +1874,8 @@ THROWING_DAGGER = {
   'weight': 0,
   'worth': 25,
   'equip_slot': 14,
+  'smallest_fit': 3,
+  'largest_fit': 7,
 }
 
 WARNOCK = {
@@ -1672,6 +1884,8 @@ WARNOCK = {
   'weight': 0,
   'worth': 300000,
   'equip_slot': 17,
+  'smallest_fit': 0,
+  'largest_fit': 0,
 }
 
 ZEPHYR_GOGGLES = {
@@ -1682,6 +1896,8 @@ ZEPHYR_GOGGLES = {
   'weight': 3,
   'worth': 900,
   'equip_slot': 6,
+  'smallest_fit': 0,
+  'largest_fit': 20,
 }
 
 #

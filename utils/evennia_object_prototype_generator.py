@@ -234,6 +234,16 @@ BASE_BANKING_MACHINE = {
     print()
 
 
+
+def output_equip_fields(obj):
+  print(f"  'equip_slot': {obj['wear']},")
+  smallest_fit = lookup_effect(obj, ObjectEffectKind.SMALLEST_FIT) or 0
+  print(f"  'smallest_fit': {smallest_fit},")
+  largest_fit = lookup_effect(obj, ObjectEffectKind.LARGEST_FIT) or 0
+  print(f"  'largest_fit': {largest_fit},")
+
+
+
 def output_weapons(objs, descs, lines):
   print("""#
 # Weapons
@@ -253,7 +263,7 @@ BASE_WEAPON = {
 """)
   for obj in objs:
     output_common_fields(obj, 'base_weapon', descs, lines)
-    print(f"  'equip_slot': {obj['wear']},")
+    output_equip_fields(obj)
     attack_speed = lookup_effect(obj, ObjectEffectKind.ATTACK_SPEED) or 0
     print(f"  'attack_speed': {attack_speed},")
     base_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE) or 0
@@ -284,7 +294,7 @@ BASE_ARMOR = {
 """)
   for obj in objs:
     output_common_fields(obj, 'base_armor', descs, lines)
-    print(f"  'equip_slot': {obj['wear']},")
+    output_equip_fields(obj)
     base_armor = lookup_effect(obj, ObjectEffectKind.BASE_ARMOR) or 0
     print(f"  'base_armor': {base_armor},")  
     deflect_armor = lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR) or 0
@@ -313,10 +323,9 @@ BASE_EQUIPMENT = {
 """)
   for obj in objs:
     output_common_fields(obj, 'base_equipment', descs, lines)
-    # TODO: handle various effects. E.g., look at Gem of True Seeing.
-    # or stone mallet. Maybe we should switch to a generic parms/effects list
-    # like pascal monster, rather than separating weapon/armor/other?
-    print(f"  'equip_slot': {obj['wear']},")
+    output_equip_fields(obj)
+    # TODO: do we need to handle various possible effects?
+    # e.g., is there some magic ring that has an object effect?
     print('}')
     print()
 

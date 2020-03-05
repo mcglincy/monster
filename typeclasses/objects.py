@@ -223,6 +223,8 @@ class Equipment(object):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.EQUIPMENT
     self.db.equip_slot = 0
+    self.db.largest_fit = 0
+    self.db.smallest_fit = 0
 
 
 class Weapon(Equipment):
