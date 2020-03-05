@@ -3,7 +3,7 @@ from enum import IntEnum
 
 class ObjectKind(IntEnum):
   BLAND = 0
-  EQUIP = 1
+  EQUIPMENT = 1
   SCROLL = 2
   WAND = 3
   MISSILE = 7

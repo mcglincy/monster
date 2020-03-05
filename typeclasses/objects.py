@@ -210,11 +210,16 @@ class Gold(Object):
         g.delete()
 
 
-# TODO: move to mixins?
+class Bland(object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.object_kind = ObjectKind.BLAND
+
+
 class Equipment(object):
   def at_object_creation(self):
     super().at_object_creation()
-    self.db.object_kind = ObjectKind.EQUIP   
+    self.db.object_kind = ObjectKind.EQUIPMENT
     self.db.equip_slot = 0
 
 
@@ -235,6 +240,42 @@ class Armor(Equipment):
     self.db.deflect_armor = 0
     self.db.spell_armor = 0
     self.db.spell_deflect_armor = 0
+
+
+class Scroll(object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.object_kind = ObjectKind.SCROLL
+
+
+class Wand(object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.object_kind = ObjectKind.WAND
+
+
+class Missile(object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.object_kind = ObjectKind.MISSILE
+
+
+class MissileLauncher(object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.object_kind = ObjectKind.MISSILE_LAUNCHER
+
+
+class Spellbook(object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.object_kind = ObjectKind.SPELLBOOK
+
+
+class BankingMachine(object):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.object_kind = ObjectKind.BANKING_MACHINE
 
 
 class Mob(Object):

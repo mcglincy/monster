@@ -96,9 +96,9 @@ def output_blands(objs, descs, lines):
 # 'Bland' objects
 #
 
-BLAND_OBJECT = {
-  'typeclass': 'typeclasses.objects.Object',
-  'key': 'bland_object',
+BASE_BLAND = {
+  'typeclass': 'typeclasses.objects.Bland',
+  'key': 'base_bland',
   'desc': 'A bland object.',
 }
 """)
@@ -107,7 +107,157 @@ BLAND_OBJECT = {
     print(f"{snake_case(obj_name)} = {{")
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'bland_object',")
+    print("  'prototype_parent': 'base_bland',")
+    desc = lookup_description(obj['examine'], descs, lines)
+    if desc:
+      print(f"  'desc': \"{desc}\",")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
+    print('}')
+    print()
+
+
+def output_scrolls(objs, descs, lines):
+  print("""#
+# Scroll objects
+#
+
+BASE_SCROLL = {
+  'typeclass': 'typeclasses.objects.Scroll',
+  'key': 'base_scroll',
+  'desc': 'A scroll.',
+}
+""")
+  for obj in objs:
+    obj_name = obj['obj_name']
+    print(f"{snake_case(obj_name)} = {{")
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'base_scroll',")
+    desc = lookup_description(obj['examine'], descs, lines)
+    if desc:
+      print(f"  'desc': \"{desc}\",")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
+    print('}')
+    print()
+
+
+def output_wands(objs, descs, lines):
+  print("""#
+# Wand objects
+#
+
+BASE_WAND = {
+  'typeclass': 'typeclasses.objects.Wand',
+  'key': 'base_wand',
+  'desc': 'A wand.',
+}
+""")
+  for obj in objs:
+    obj_name = obj['obj_name']
+    print(f"{snake_case(obj_name)} = {{")
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'base_wand',")
+    desc = lookup_description(obj['examine'], descs, lines)
+    if desc:
+      print(f"  'desc': \"{desc}\",")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
+    print('}')
+    print()
+
+
+def output_missiles(objs, descs, lines):
+  print("""#
+# Missile objects
+#
+
+BASE_MISSILE = {
+  'typeclass': 'typeclasses.objects.Missile',
+  'key': 'base_missile',
+  'desc': 'A missile.',
+}
+""")
+  for obj in objs:
+    obj_name = obj['obj_name']
+    print(f"{snake_case(obj_name)} = {{")
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'base_missile',")
+    desc = lookup_description(obj['examine'], descs, lines)
+    if desc:
+      print(f"  'desc': \"{desc}\",")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
+    print('}')
+    print()
+
+
+def output_missile_launchers(objs, descs, lines):
+  print("""#
+# Missile launcher objects
+#
+
+BASE_MISSILE_LAUNCHER = {
+  'typeclass': 'typeclasses.objects.MissileLauncher',
+  'key': 'base_missile_launcher',
+  'desc': 'A missile launcher.',
+}
+""")
+  for obj in objs:
+    obj_name = obj['obj_name']
+    print(f"{snake_case(obj_name)} = {{")
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'base_missile_launcher',")
+    desc = lookup_description(obj['examine'], descs, lines)
+    if desc:
+      print(f"  'desc': \"{desc}\",")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
+    print('}')
+    print()
+
+
+def output_spellbooks(objs, descs, lines):
+  print("""#
+# Spellbook objects
+#
+
+BASE_SPELLBOOK = {
+  'typeclass': 'typeclasses.objects.Spellbook',
+  'key': 'base_spellbook',
+  'desc': 'A spellbook.',
+}
+""")
+  for obj in objs:
+    obj_name = obj['obj_name']
+    print(f"{snake_case(obj_name)} = {{")
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'base_spellbook',")
+    desc = lookup_description(obj['examine'], descs, lines)
+    if desc:
+      print(f"  'desc': \"{desc}\",")
+    print(f"  'weight': {obj['weight']},")
+    print(f"  'worth': {obj['worth']},")
+    print('}')
+    print()
+
+
+def output_banking_machines(objs, descs, lines):
+  print("""#
+# Banking machine objects
+#
+
+BASE_BANKING_MACHINE = {
+  'typeclass': 'typeclasses.objects.BankingMachine',
+  'key': 'banking machine',
+  'desc': 'A banking machine.',
+}
+""")
+  for obj in objs:
+    obj_name = obj['obj_name']
+    print(f"{snake_case(obj_name)} = {{")
+    print(f"  'key': \"{obj_name}\",")
+    print("  'prototype_parent': 'base_banking_machine',")
     desc = lookup_description(obj['examine'], descs, lines)
     if desc:
       print(f"  'desc': \"{desc}\",")
@@ -122,9 +272,9 @@ def output_weapons(objs, descs, lines):
 # Weapons
 #
 
-WEAPON = {
+BASE_WEAPON = {
   'typeclass': 'typeclasses.objects.Weapon',
-  'key': 'weapon',
+  'key': 'base_weapon',
   'attack_speed': 0,
   'base_damage': 0,
   'desc': 'A weapon.',
@@ -142,7 +292,7 @@ WEAPON = {
     print(f"{snake_case(obj_name)} = {{")
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'weapon',")
+    print("  'prototype_parent': 'base_weapon',")
     print(f"  'attack_speed': {attack_speed},")
     print(f"  'base_damage': {base_damage},")
     desc_idx = obj['examine'] - 1
@@ -164,9 +314,9 @@ def output_armors(objs, descs, lines):
 # Armor
 #
 
-ARMOR = {
+BASE_ARMOR = {
   'typeclass': 'typeclasses.objects.Armor',
-  'key': 'armor',
+  'key': 'base_armor',
   'base_armor': 0,
   'deflect_armor': 0,
   'desc': 'An armor.',
@@ -186,7 +336,7 @@ ARMOR = {
     print(f"{snake_case(obj_name)} = {{")  
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'armor',")
+    print("  'prototype_parent': 'base_armor',")
     print(f"  'base_armor': {base_armor},")  
     print(f"  'deflect_armor': {deflect_armor},")  
     desc_idx = obj['examine'] - 1
@@ -209,9 +359,9 @@ def output_other_equipment(objs, descs, lines):
 # other equipment
 #
 
-EQUIPMENT = {
+BASE_EQUIPMENT = {
   'typeclass': 'typeclasses.objects.Equipment',
-  'key': 'equipment',
+  'key': 'base_equipment',
   'desc': 'An equipment.',
   'equip_slot': 0,
   'weight': 0,
@@ -223,7 +373,7 @@ EQUIPMENT = {
     print(f"{snake_case(obj_name)} = {{")
     # TODO: add better quote escaping for key and desc
     print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'equipment',")
+    print("  'prototype_parent': 'base_equipment',")
     desc = lookup_description(obj['examine'], descs, lines)
     if desc:
       print(f"  'desc': \"{desc}\",")
@@ -243,38 +393,44 @@ def main():
   with open(OBJECT_FILE) as f:
     objects = json.load(f)
 
-  blands = []
-  weapons = []
-  armors = []
-  other_equipment = []
+  # divide objects by kind
+  obj_by_kind = {}
   for obj in objects:
-    if obj['kind'] == ObjectKind.BLAND:
-      blands.append(obj)
-    elif obj['kind'] == ObjectKind.EQUIP:
-      if (lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE)
-        or lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE)):
-        weapons.append(obj)
-      elif (lookup_effect(obj, ObjectEffectKind.BASE_ARMOR)
-        or lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR)
-        or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)):
-        armors.append(obj)
-      else:
-        # TODO: we'll need to further subcategorize these (scrolls, etc)
-        other_equipment.append(obj)
+    obj_by_kind.setdefault(obj['kind'], []).append(obj)
+  for arr in obj_by_kind.values():
+    arr.sort(key=lambda x: x['obj_name'].upper())
 
-  blands.sort(key=lambda x: x['obj_name'].upper())
-  weapons.sort(key=lambda x: x['obj_name'].upper())
-  armors.sort(key=lambda x: x['obj_name'].upper())
-  other_equipment.sort(key=lambda x: x['obj_name'].upper())
+  # subdivide equipment into weapons, armor, and other
+  equip = obj_by_kind.pop(ObjectKind.EQUIPMENT)
+  equip_weapons = []
+  equip_armors = []
+  equip_other = []
+  for obj in equip:
+    if (lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE)
+      or lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE)):
+      equip_weapons.append(obj)
+    elif (lookup_effect(obj, ObjectEffectKind.BASE_ARMOR)
+      or lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR)
+      or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)):
+      equip_armors.append(obj)
+    else:
+      # TODO: we'll need to further subcategorize these (scrolls, etc)
+      equip_other.append(obj)
 
   print("""#
 # Generated object prototypes
 #
 """)
-  output_blands(blands, descs, lines)
-  output_weapons(weapons, descs, lines)
-  output_armors(armors, descs, lines)
-  output_other_equipment(other_equipment, descs, lines)
+  output_blands(obj_by_kind[ObjectKind.BLAND], descs, lines)
+  output_weapons(equip_weapons, descs, lines)
+  output_armors(equip_armors, descs, lines)
+  output_other_equipment(equip_other, descs, lines)
+  output_scrolls(obj_by_kind[ObjectKind.SCROLL], descs, lines)
+  output_wands(obj_by_kind[ObjectKind.WAND], descs, lines)
+  output_missiles(obj_by_kind[ObjectKind.MISSILE], descs, lines)
+  output_missile_launchers(obj_by_kind[ObjectKind.MISSILE_LAUNCHER], descs, lines)
+  output_spellbooks(obj_by_kind[ObjectKind.SPELLBOOK], descs, lines)
+  output_banking_machines(obj_by_kind[ObjectKind.BANKING_MACHINE], descs, lines)
 
 
 if __name__ == "__main__":
