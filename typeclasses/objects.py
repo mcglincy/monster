@@ -196,8 +196,8 @@ class Object(DefaultObject):
       getter.msg(self.db.get_success_msg)
 
   def at_drop(self, dropper, **kwargs):
-    if self.drop_destroy:
-      dropper.msg(f"{self.key} was destroyed.")
+    if self.db.drop_destroy:
+      dropper.msg(f"The {self.key} was destroyed.")
       self.delete()
 
   def at_before_use(self, user, **kwargs):
@@ -251,13 +251,13 @@ class Gold(Object):
         g.delete()
 
 
-class Bland(object):
+class Bland(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.BLAND
 
 
-class Equipment(object):
+class Equipment(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.EQUIPMENT
@@ -285,37 +285,37 @@ class Armor(Equipment):
     self.db.spell_deflect_armor = 0
 
 
-class Scroll(object):
+class Scroll(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.SCROLL
 
 
-class Wand(object):
+class Wand(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.WAND
 
 
-class Missile(object):
+class Missile(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.MISSILE
 
 
-class MissileLauncher(object):
+class MissileLauncher(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.MISSILE_LAUNCHER
 
 
-class Spellbook(object):
+class Spellbook(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.SPELLBOOK
 
 
-class BankingMachine(object):
+class BankingMachine(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.BANKING_MACHINE
