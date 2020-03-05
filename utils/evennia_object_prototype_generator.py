@@ -326,6 +326,7 @@ BASE_EQUIPMENT = {
     output_equip_fields(obj)
     # TODO: do we need to handle various possible effects?
     # e.g., is there some magic ring that has an object effect?
+    # Answer is apparently yes: see Lich Ring w/ drop destroy and spell deflect armor
     print('}')
     print()
 
