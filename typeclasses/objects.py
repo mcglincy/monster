@@ -176,7 +176,6 @@ class Object(DefaultObject):
     self.db.get_success_msg = None
     self.db.line_desc = None
     self.db.object_kind = ObjectKind.BLAND
-    # TODO: use a get lock?
     self.db.sticky = False
     self.db.num_exist = None
     self.db.use_fail_msg = None
@@ -184,6 +183,34 @@ class Object(DefaultObject):
     self.db.use_success_msg = None
     self.db.weight = 0
     self.db.worth = 0
+
+  def at_before_get(self, getter, **kwargs):
+    if self.db.sticky:
+      if self.db.get_fail_msg:
+        getter.msg(self.db.get_fail_msg)
+      return False
+    return True
+
+  def at_get(self, getter, **kwargs):
+    if self.db.get_success_msg:
+      getter.msg(self.db.get_success_msg)
+
+  def at_drop(self, dropper, **kwargs):
+    if self.drop_destroy:
+      dropper.msg(f"{self.key} was destroyed.")
+      self.delete()
+
+  def at_before_use(self, user, **kwargs):
+    if self.db.use_object_required:
+      # TODO: check that user has object by id
+      if self.db.use_fail_msg:
+        user.msg(self.db.use_fail_msg)
+      return False
+    return True
+
+  def at_use(self, user, **kwargs):
+    if self.db.use_success_msg:
+      user.msg(self.db.use_success_msg)
 
 
 class Gold(Object):
@@ -311,11 +338,7 @@ class Mob(Object):
 class Merchant(Object):
   def at_object_creation(self):
     super().at_object_creation()
-
-  def at_before_get(self, getter, **kwargs):
-    # don't allow picking up
-    getter.msg("You can't pick up a merchant!")
-    return False
+    self.sticky = True
 
   def return_appearance(self, looker, **kwargs):
     lines = []
