@@ -130,6 +130,8 @@ BASE_SCROLL = {
 """)
   for obj in objs:
     obj_name = obj['obj_name']
+    # TODO: figure out effects
+    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0
     print(f"{snake_case(obj_name)} = {{")
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'base_scroll',")
@@ -155,6 +157,8 @@ BASE_WAND = {
 """)
   for obj in objs:
     obj_name = obj['obj_name']
+    # TODO: figure out effects
+    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
     print(f"{snake_case(obj_name)} = {{")
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'base_wand',")
@@ -180,6 +184,8 @@ BASE_MISSILE = {
 """)
   for obj in objs:
     obj_name = obj['obj_name']
+    # TODO: figure out effects
+    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
     print(f"{snake_case(obj_name)} = {{")
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'base_missile',")
@@ -205,6 +211,8 @@ BASE_MISSILE_LAUNCHER = {
 """)
   for obj in objs:
     obj_name = obj['obj_name']
+    # TODO: figure out effects
+    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
     print(f"{snake_case(obj_name)} = {{")
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'base_missile_launcher',")
@@ -230,6 +238,8 @@ BASE_SPELLBOOK = {
 """)
   for obj in objs:
     obj_name = obj['obj_name']
+    # TODO: figure out effects
+    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
     print(f"{snake_case(obj_name)} = {{")
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'base_spellbook',")
@@ -255,6 +265,8 @@ BASE_BANKING_MACHINE = {
 """)
   for obj in objs:
     obj_name = obj['obj_name']
+    # TODO: figure out effects
+    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0        
     print(f"{snake_case(obj_name)} = {{")
     print(f"  'key': \"{obj_name}\",")
     print("  'prototype_parent': 'base_banking_machine',")
