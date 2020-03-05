@@ -1279,6 +1279,20 @@ GAUNTLETS = {
   'spell_deflect_armor': 0,
 }
 
+HACK_OBJ = {
+  'key': "Hack obj",
+  'prototype_parent': 'base_armor',
+  'weight': 0,
+  'worth': 0,
+  'equip_slot': 1,
+  'smallest_fit': 0,
+  'largest_fit': 10,
+  'base_armor': 0,
+  'deflect_armor': 0,
+  'spell_armor': 0,
+  'spell_deflect_armor': 50,
+}
+
 HORNED_HELM = {
   'key': "horned helm",
   'prototype_parent': 'base_armor',
@@ -1322,6 +1336,21 @@ LEATHER_JERKIN = {
   'deflect_armor': 0,
   'spell_armor': 2,
   'spell_deflect_armor': 0,
+}
+
+LICH_RING = {
+  'key': "Lich Ring",
+  'prototype_parent': 'base_armor',
+  'desc': "The ring is thin, and carved from some bone or ivory. Etched onto the inner surface of the rings are the following words, written in an ancient but still understandable dialect:               \"Burn away your life and soul.\"",
+  'weight': 0,
+  'worth': 0,
+  'equip_slot': 12,
+  'smallest_fit': 4,
+  'largest_fit': 9,
+  'base_armor': 0,
+  'deflect_armor': 0,
+  'spell_armor': 0,
+  'spell_deflect_armor': 20,
 }
 
 MAGIC_HELMET = {
@@ -1681,16 +1710,6 @@ GREEK_FIREBOMB = {
   'largest_fit': 0,
 }
 
-HACK_OBJ = {
-  'key': "Hack obj",
-  'prototype_parent': 'base_equipment',
-  'weight': 0,
-  'worth': 0,
-  'equip_slot': 1,
-  'smallest_fit': 0,
-  'largest_fit': 10,
-}
-
 HEART_OF_THE_LAKE = {
   'key': "Heart of the Lake",
   'prototype_parent': 'base_equipment',
@@ -1721,17 +1740,6 @@ LEATHER_BELT = {
   'equip_slot': 14,
   'smallest_fit': 3,
   'largest_fit': 7,
-}
-
-LICH_RING = {
-  'key': "Lich Ring",
-  'prototype_parent': 'base_equipment',
-  'desc': "The ring is thin, and carved from some bone or ivory. Etched onto the inner surface of the rings are the following words, written in an ancient but still understandable dialect:               \"Burn away your life and soul.\"",
-  'weight': 0,
-  'worth': 0,
-  'equip_slot': 12,
-  'smallest_fit': 4,
-  'largest_fit': 9,
 }
 
 MAELSTROM_RING = {

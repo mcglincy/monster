@@ -358,7 +358,8 @@ def main():
       equip_weapons.append(obj)
     elif (lookup_effect(obj, ObjectEffectKind.BASE_ARMOR)
       or lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR)
-      or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)):
+      or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)
+      or lookup_effect(obj, ObjectEffectKind.SPELL_DEFLECT_ARMOR)):
       equip_armors.append(obj)
     else:
       # TODO: we'll need to further subcategorize these (scrolls, etc)
