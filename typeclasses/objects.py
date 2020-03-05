@@ -167,9 +167,21 @@ class Object(DefaultObject):
   """
   def at_object_creation(self):
     super().at_object_creation()
+    self.db.article = None
     self.db.components = []
+    self.db.condition = 100
+    self.db.drop_destroy = False
+    self.db.get_fail_msg = None
+    self.db.get_object_required = None
+    self.db.get_success_msg = None
     self.db.line_desc = None
     self.db.object_kind = ObjectKind.BLAND
+    # TODO: use a get lock?
+    self.db.sticky = False
+    self.db.num_exist = None
+    self.db.use_fail_msg = None
+    self.db.use_object_required = None
+    self.db.use_success_msg = None
     self.db.weight = 0
     self.db.worth = 0
 

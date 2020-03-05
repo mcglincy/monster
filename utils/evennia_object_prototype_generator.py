@@ -11,6 +11,9 @@ DESC_FILE = './json/desc.json'
 LINES_FILE = './json/lines.json'
 OBJECT_FILE = './json/objects.json'
 
+DEFAULT_ARTICLE = 1
+DEFAULT_MSG_ID = 32000
+
 
 def parse_parm(i):
   """Parse a parm integer into the effect and effectnum."""
@@ -91,20 +94,38 @@ def lookup_description(id, descs, lines):
   return None
 
 
+def maybe_desc_field(desc_id, field_name, descs, lines):
+  if desc_id and desc_id != DEFAULT_MSG_ID:
+    desc = lookup_description(desc_id, descs, lines)
+    if desc:
+      print(f"  '{field_name}': \"{desc}\",")
+
+
+def maybe(value, field_name, except_if=None):
+  if value and value != except_if:
+    print(f"  '{field_name}': {value},")
+
+
 def output_common_fields(obj, prototype_parent, descs, lines):
   obj_name = obj['obj_name']
   print(f"{snake_case(obj_name)} = {{")
   # TODO: add better quote escaping for key and desc
   print(f"  'key': \"{obj_name}\",")
   print(f"  'prototype_parent': '{prototype_parent}',")
-  line_desc = lookup_description(obj['line_desc'], descs, lines)
-  if line_desc:
-    print(f"  'line_desc': \"{line_desc}\",")
-  desc = lookup_description(obj['examine'], descs, lines)
-  if desc:
-    print(f"  'desc': \"{desc}\",")
-  print(f"  'weight': {obj['weight']},")
-  print(f"  'worth': {obj['worth']},")
+  maybe(obj['particle'], 'article', except_if=DEFAULT_ARTICLE)
+  maybe(obj['components'], 'components')
+  maybe_desc_field(obj['examine'], 'desc', descs, lines)
+  maybe(obj['get_obj_req'], 'get_object_required')
+  maybe_desc_field(obj['get_fail'], 'get_fail_msg', descs, lines)
+  maybe_desc_field(obj['get_success'], 'get_success_msg', descs, lines)
+  maybe_desc_field(obj['line_desc'], 'line_desc', descs, lines)
+  maybe(obj['num_exist'], 'num_exist')
+  maybe(obj['sticky'], 'sticky')
+  maybe(obj['use_obj_req'], 'use_object_required')
+  maybe_desc_field(obj['use_fail'], 'use_fail_msg', descs, lines)
+  maybe_desc_field(obj['use_success'], 'use_success_msg', descs, lines)
+  maybe(obj['weight'], 'weight')
+  maybe(obj['worth'], 'worth')
 
 
 def output_blands(objs, descs, lines):
