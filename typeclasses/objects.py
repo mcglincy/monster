@@ -167,6 +167,8 @@ class Object(DefaultObject):
   """
   def at_object_creation(self):
     super().at_object_creation()
+    self.db.components = []
+    self.db.line_desc = None
     self.db.object_kind = ObjectKind.BLAND
     self.db.weight = 0
     self.db.worth = 0

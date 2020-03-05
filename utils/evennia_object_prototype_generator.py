@@ -91,6 +91,22 @@ def lookup_description(id, descs, lines):
   return None
 
 
+def output_common_fields(obj, prototype_parent, descs, lines):
+  obj_name = obj['obj_name']
+  print(f"{snake_case(obj_name)} = {{")
+  # TODO: add better quote escaping for key and desc
+  print(f"  'key': \"{obj_name}\",")
+  print(f"  'prototype_parent': '{prototype_parent}',")
+  line_desc = lookup_description(obj['line_desc'], descs, lines)
+  if line_desc:
+    print(f"  'line_desc': \"{line_desc}\",")
+  desc = lookup_description(obj['examine'], descs, lines)
+  if desc:
+    print(f"  'desc': \"{desc}\",")
+  print(f"  'weight': {obj['weight']},")
+  print(f"  'worth': {obj['worth']},")
+
+
 def output_blands(objs, descs, lines):
   print("""#
 # 'Bland' objects
@@ -103,16 +119,7 @@ BASE_BLAND = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
-    print(f"{snake_case(obj_name)} = {{")
-    # TODO: add better quote escaping for key and desc
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_bland',")
-    desc = lookup_description(obj['examine'], descs, lines)
-    if desc:
-      print(f"  'desc': \"{desc}\",")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
+    output_common_fields(obj, 'base_bland', descs, lines)
     print('}')
     print()
 
@@ -129,17 +136,9 @@ BASE_SCROLL = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
+    output_common_fields(obj, 'base_scroll', descs, lines)
     # TODO: figure out effects
-    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0
-    print(f"{snake_case(obj_name)} = {{")
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_scroll',")
-    desc = lookup_description(obj['examine'], descs, lines)
-    if desc:
-      print(f"  'desc': \"{desc}\",")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
+    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0        
     print('}')
     print()
 
@@ -156,17 +155,9 @@ BASE_WAND = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
+    output_common_fields(obj, 'base_wand', descs, lines)
     # TODO: figure out effects
     # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
-    print(f"{snake_case(obj_name)} = {{")
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_wand',")
-    desc = lookup_description(obj['examine'], descs, lines)
-    if desc:
-      print(f"  'desc': \"{desc}\",")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
@@ -183,17 +174,7 @@ BASE_MISSILE = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
-    # TODO: figure out effects
-    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
-    print(f"{snake_case(obj_name)} = {{")
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_missile',")
-    desc = lookup_description(obj['examine'], descs, lines)
-    if desc:
-      print(f"  'desc': \"{desc}\",")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
+    output_common_fields(obj, 'base_missile', descs, lines)
     print('}')
     print()
 
@@ -210,17 +191,7 @@ BASE_MISSILE_LAUNCHER = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
-    # TODO: figure out effects
-    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
-    print(f"{snake_case(obj_name)} = {{")
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_missile_launcher',")
-    desc = lookup_description(obj['examine'], descs, lines)
-    if desc:
-      print(f"  'desc': \"{desc}\",")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
+    output_common_fields(obj, 'base_missile_launcher', descs, lines)
     print('}')
     print()
 
@@ -237,17 +208,9 @@ BASE_SPELLBOOK = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
+    output_common_fields(obj, 'base_spellbook', descs, lines)
     # TODO: figure out effects
     # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
-    print(f"{snake_case(obj_name)} = {{")
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_spellbook',")
-    desc = lookup_description(obj['examine'], descs, lines)
-    if desc:
-      print(f"  'desc': \"{desc}\",")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
@@ -264,17 +227,9 @@ BASE_BANKING_MACHINE = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
+    output_common_fields(obj, 'base_banking_machine', descs, lines)
     # TODO: figure out effects
     # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0        
-    print(f"{snake_case(obj_name)} = {{")
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_banking_machine',")
-    desc = lookup_description(obj['examine'], descs, lines)
-    if desc:
-      print(f"  'desc': \"{desc}\",")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
@@ -297,26 +252,14 @@ BASE_WEAPON = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
-    base_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE) or 0
-    random_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE) or 0
-    attack_speed = lookup_effect(obj, ObjectEffectKind.ATTACK_SPEED) or 0
-    print(f"{snake_case(obj_name)} = {{")
-    # TODO: add better quote escaping for key and desc
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_weapon',")
-    print(f"  'attack_speed': {attack_speed},")
-    print(f"  'base_damage': {base_damage},")
-    desc_idx = obj['examine'] - 1
-    if desc_idx >= 0 and desc_idx < len(descs):
-      # TODO: special handling for 'default' descript 32000
-      desc = escaped(' '.join(descs[desc_idx]['lines']))
-      print(f"  'desc': \"{desc}\",")
+    output_common_fields(obj, 'base_weapon', descs, lines)
     print(f"  'equip_slot': {obj['wear']},")
-    # TODO: handle line_desc? looks mostly dead
+    attack_speed = lookup_effect(obj, ObjectEffectKind.ATTACK_SPEED) or 0
+    print(f"  'attack_speed': {attack_speed},")
+    base_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE) or 0
+    print(f"  'base_damage': {base_damage},")
+    random_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE) or 0
     print(f"  'random_damage': {random_damage},")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
@@ -340,28 +283,16 @@ BASE_ARMOR = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
-    base_armor = lookup_effect(obj, ObjectEffectKind.BASE_ARMOR) or 0
-    deflect_armor = lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR) or 0
-    spell_armor = lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR) or 0
-    spell_deflect_armor = lookup_effect(obj, ObjectEffectKind.SPELL_DEFLECT_ARMOR) or 0
-    print(f"{snake_case(obj_name)} = {{")  
-    # TODO: add better quote escaping for key and desc
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_armor',")
-    print(f"  'base_armor': {base_armor},")  
-    print(f"  'deflect_armor': {deflect_armor},")  
-    desc_idx = obj['examine'] - 1
-    if desc_idx >= 0 and desc_idx < len(descs):
-      # TODO: special handling for 'default' descript 32000
-      desc = escaped(' '.join(descs[desc_idx]['lines']))
-      print(f"  'desc': \"{desc}\",")
+    output_common_fields(obj, 'base_armor', descs, lines)
     print(f"  'equip_slot': {obj['wear']},")
-    # TODO: handle line_desc? looks mostly dead
+    base_armor = lookup_effect(obj, ObjectEffectKind.BASE_ARMOR) or 0
+    print(f"  'base_armor': {base_armor},")  
+    deflect_armor = lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR) or 0
+    print(f"  'deflect_armor': {deflect_armor},")  
+    spell_armor = lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR) or 0
     print(f"  'spell_armor': {spell_armor},")  
+    spell_deflect_armor = lookup_effect(obj, ObjectEffectKind.SPELL_DEFLECT_ARMOR) or 0
     print(f"  'spell_deflect_armor': {spell_deflect_armor},")  
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
@@ -381,17 +312,11 @@ BASE_EQUIPMENT = {
 }
 """)
   for obj in objs:
-    obj_name = obj['obj_name']
-    print(f"{snake_case(obj_name)} = {{")
-    # TODO: add better quote escaping for key and desc
-    print(f"  'key': \"{obj_name}\",")
-    print("  'prototype_parent': 'base_equipment',")
-    desc = lookup_description(obj['examine'], descs, lines)
-    if desc:
-      print(f"  'desc': \"{desc}\",")
+    output_common_fields(obj, 'base_equipment', descs, lines)
+    # TODO: handle various effects. E.g., look at Gem of True Seeing.
+    # or stone mallet. Maybe we should switch to a generic parms/effects list
+    # like pascal monster, rather than separating weapon/armor/other?
     print(f"  'equip_slot': {obj['wear']},")
-    print(f"  'weight': {obj['weight']},")
-    print(f"  'worth': {obj['worth']},")
     print('}')
     print()
 
