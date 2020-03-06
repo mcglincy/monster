@@ -169,8 +169,6 @@ class Object(DefaultObject):
     super().at_object_creation()
     self.db.article = None
     self.db.components = []
-    self.db.condition = 100
-    self.db.drop_destroy = False
     self.db.get_fail_msg = None
     self.db.get_object_required = None
     self.db.get_success_msg = None
@@ -195,10 +193,6 @@ class Object(DefaultObject):
     if self.db.get_success_msg:
       getter.msg(self.db.get_success_msg)
 
-  def at_drop(self, dropper, **kwargs):
-    if self.db.drop_destroy:
-      dropper.msg(f"The {self.key} was destroyed.")
-      self.delete()
 
   def at_before_use(self, user, **kwargs):
     if self.db.use_object_required:
@@ -261,28 +255,68 @@ class Equipment(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.EQUIPMENT
-    self.db.equip_slot = 0
-    self.db.largest_fit = 0
-    self.db.smallest_fit = 0
-
-
-class Weapon(Equipment):
-  def at_object_creation(self):
-    super().at_object_creation()
-    self.db.equip_slot = 1
+    # equipment effects
+    # TODO: keep as a sparse dict instead of fields?
+    # {EquipEffectKind:value}
+    # self.db.effects = {}
     self.db.attack_speed = 0
-    self.db.base_damage = 0
-    self.db.random_damage = 0
-
-
-class Armor(Equipment):
-  def at_object_creation(self):
-    super().at_object_creation()
-    self.db.equip_slot = 4
     self.db.base_armor = 0
+    self.db.base_claw_damage = 0
+    self.db.base_health = 0
+    self.db.base_mana = 0
+    self.db.base_move_silent = 0
+    self.db.base_steal = 0
+    self.db.base_weapon_damage = 0
+    self.db.base_weapon_use = 0    
+    self.db.bomb_base = 0
+    self.db.bomb_random = 0
+    self.db.bomb_time = 0
+    self.db.break_chance = 0
+    self.db.break_magnitude = 0
+    self.db.cast_spell = 0
+    self.db.character_class = 0
+    self.db.charges = 0
+    self.db.condition = 100
+    self.db.control = 0
+    self.db.crystal_radius = 0
+    self.db.cursed = 0
     self.db.deflect_armor = 0
+    self.db.drop_destroy = False
+    self.db.equip_slot = 0
+    self.db.group = 0
+    self.db.heal_speed = 0
+    self.db.hear_noise = 0
+    self.db.invisible = 0
+    self.db.largest_fit = 0
+    self.db.level_claw_damage = 0    
+    self.db.level_health = 0
+    self.db.level_mana = 0
+    self.db.level_move_silent = 0
+    self.db.level_steal = 0
+    self.db.level_weapon_use = 0
+    self.db.move_speed = 0
+    self.db.no_throw = 0
+    self.db.poison = 0
+    self.db.random_claw_damage = 0    
+    self.db.random_weapon_damage = 0
+    self.db.see_invisible = 0
+    self.db.size = 0
+    self.db.smallest_fit = 0
+    self.db.spell = 0
     self.db.spell_armor = 0
     self.db.spell_deflect_armor = 0
+    self.db.teleport = 0
+    self.db.throw_base = 0
+    self.db.throw_behavior = 43
+    self.db.throw_random = 0
+    self.db.throw_range = 0
+    self.db.trap = 0
+    self.db.xp = 0
+
+  def at_drop(self, dropper, **kwargs):
+    if self.db.drop_destroy:
+      dropper.msg(f"The {self.key} was destroyed.")
+      self.delete()
 
 
 class Scroll(Object):

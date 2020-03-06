@@ -3,7 +3,7 @@ import json
 import sys
 sys.path.insert(0, '..')
 
-from typeclasses.object_effect_kind import ObjectEffectKind
+from typeclasses.equip_effect_kind import EquipEffectKind
 from typeclasses.object_kind import ObjectKind
 
 
@@ -94,6 +94,11 @@ def lookup_description(id, descs, lines):
   return None
 
 
+def maybe(value, field_name, except_if=None):
+  if value and value != except_if:
+    print(f"  '{field_name}': {value},")
+
+
 def maybe_desc_field(desc_id, field_name, descs, lines):
   if desc_id and desc_id != DEFAULT_MSG_ID:
     desc = lookup_description(desc_id, descs, lines)
@@ -101,8 +106,9 @@ def maybe_desc_field(desc_id, field_name, descs, lines):
       print(f"  '{field_name}': \"{desc}\",")
 
 
-def maybe(value, field_name, except_if=None):
-  if value and value != except_if:
+def maybe_effect(obj, effect_kind, field_name):
+   value = lookup_effect(obj, effect_kind)
+   if value:
     print(f"  '{field_name}': {value},")
 
 
@@ -145,6 +151,27 @@ BASE_BLAND = {
     print()
 
 
+def output_equipment(objs, descs, lines):
+  print("""#
+# other equipment
+#
+
+BASE_EQUIPMENT = {
+  'typeclass': 'typeclasses.objects.Equipment',
+  'key': 'base_equipment',
+  'desc': 'An equipment.',
+  'equip_slot': 0,
+}
+""")
+  for obj in objs:
+    output_common_fields(obj, 'base_equipment', descs, lines)
+    print(f"  'equip_slot': {obj['wear']},")
+    for effect_kind in EquipEffectKind:
+      maybe_effect(obj, effect_kind, effect_kind.name.lower())
+    print('}')
+    print()
+
+
 def output_scrolls(objs, descs, lines):
   print("""#
 # Scroll objects
@@ -159,7 +186,7 @@ BASE_SCROLL = {
   for obj in objs:
     output_common_fields(obj, 'base_scroll', descs, lines)
     # TODO: figure out effects
-    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0        
+    # ??? = lookup_effect(obj, EquipEffectKind.???) or 0        
     print('}')
     print()
 
@@ -178,7 +205,7 @@ BASE_WAND = {
   for obj in objs:
     output_common_fields(obj, 'base_wand', descs, lines)
     # TODO: figure out effects
-    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
+    # ??? = lookup_effect(obj, EquipEffectKind.???) or 0    
     print('}')
     print()
 
@@ -231,7 +258,7 @@ BASE_SPELLBOOK = {
   for obj in objs:
     output_common_fields(obj, 'base_spellbook', descs, lines)
     # TODO: figure out effects
-    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0    
+    # ??? = lookup_effect(obj, EquipEffectKind.???) or 0    
     print('}')
     print()
 
@@ -250,106 +277,12 @@ BASE_BANKING_MACHINE = {
   for obj in objs:
     output_common_fields(obj, 'base_banking_machine', descs, lines)
     # TODO: figure out effects
-    # ??? = lookup_effect(obj, ObjectEffectKind.???) or 0        
+    # ??? = lookup_effect(obj, EquipEffectKind.???) or 0        
     print('}')
     print()
 
 
 
-def output_equip_fields(obj):
-  print(f"  'equip_slot': {obj['wear']},")
-  smallest_fit = lookup_effect(obj, ObjectEffectKind.SMALLEST_FIT) or 0
-  print(f"  'smallest_fit': {smallest_fit},")
-  largest_fit = lookup_effect(obj, ObjectEffectKind.LARGEST_FIT) or 0
-  print(f"  'largest_fit': {largest_fit},")
-
-
-
-def output_weapons(objs, descs, lines):
-  print("""#
-# Weapons
-#
-
-BASE_WEAPON = {
-  'typeclass': 'typeclasses.objects.Weapon',
-  'key': 'base_weapon',
-  'attack_speed': 0,
-  'base_damage': 0,
-  'desc': 'A weapon.',
-  'equip_slot': 1,
-  'random_damage': 0,
-  'weight': 0,
-  'worth': 0
-}
-""")
-  for obj in objs:
-    output_common_fields(obj, 'base_weapon', descs, lines)
-    output_equip_fields(obj)
-    attack_speed = lookup_effect(obj, ObjectEffectKind.ATTACK_SPEED) or 0
-    print(f"  'attack_speed': {attack_speed},")
-    base_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE) or 0
-    print(f"  'base_damage': {base_damage},")
-    random_damage = lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE) or 0
-    print(f"  'random_damage': {random_damage},")
-    print('}')
-    print()
-
-
-def output_armors(objs, descs, lines):
-  print("""#
-# Armor
-#
-
-BASE_ARMOR = {
-  'typeclass': 'typeclasses.objects.Armor',
-  'key': 'base_armor',
-  'base_armor': 0,
-  'deflect_armor': 0,
-  'desc': 'An armor.',
-  'equip_slot': 4,
-  'spell_armor': 0,
-  'spell_deflect_armor': 0,
-  'weight': 0,
-  'worth': 0  
-}
-""")
-  for obj in objs:
-    output_common_fields(obj, 'base_armor', descs, lines)
-    output_equip_fields(obj)
-    base_armor = lookup_effect(obj, ObjectEffectKind.BASE_ARMOR) or 0
-    print(f"  'base_armor': {base_armor},")  
-    deflect_armor = lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR) or 0
-    print(f"  'deflect_armor': {deflect_armor},")  
-    spell_armor = lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR) or 0
-    print(f"  'spell_armor': {spell_armor},")  
-    spell_deflect_armor = lookup_effect(obj, ObjectEffectKind.SPELL_DEFLECT_ARMOR) or 0
-    print(f"  'spell_deflect_armor': {spell_deflect_armor},")  
-    print('}')
-    print()
-
-
-def output_other_equipment(objs, descs, lines):
-  print("""#
-# other equipment
-#
-
-BASE_EQUIPMENT = {
-  'typeclass': 'typeclasses.objects.Equipment',
-  'key': 'base_equipment',
-  'desc': 'An equipment.',
-  'equip_slot': 0,
-  'weight': 0,
-  'worth': 0
-}
-""")
-  for obj in objs:
-    output_common_fields(obj, 'base_equipment', descs, lines)
-    output_equip_fields(obj)
-    # TODO: do we need to handle various possible effects?
-    # e.g., is there some magic ring that has an object effect?
-    # Answer is apparently yes: see Lich Ring w/ drop destroy and spell deflect armor
-    print('}')
-    print()
 
 
 def main():
@@ -368,32 +301,12 @@ def main():
   for arr in obj_by_kind.values():
     arr.sort(key=lambda x: x['obj_name'].upper())
 
-  # subdivide equipment into weapons, armor, and other
-  equip = obj_by_kind.pop(ObjectKind.EQUIPMENT)
-  equip_weapons = []
-  equip_armors = []
-  equip_other = []
-  for obj in equip:
-    if (lookup_effect(obj, ObjectEffectKind.WEAPON_BASE_DAMAGE)
-      or lookup_effect(obj, ObjectEffectKind.WEAPON_RANDOM_DAMAGE)):
-      equip_weapons.append(obj)
-    elif (lookup_effect(obj, ObjectEffectKind.BASE_ARMOR)
-      or lookup_effect(obj, ObjectEffectKind.DEFLECT_ARMOR)
-      or lookup_effect(obj, ObjectEffectKind.SPELL_ARMOR)
-      or lookup_effect(obj, ObjectEffectKind.SPELL_DEFLECT_ARMOR)):
-      equip_armors.append(obj)
-    else:
-      # TODO: we'll need to further subcategorize these (scrolls, etc)
-      equip_other.append(obj)
-
   print("""#
 # Generated object prototypes
 #
 """)
   output_blands(obj_by_kind[ObjectKind.BLAND], descs, lines)
-  output_weapons(equip_weapons, descs, lines)
-  output_armors(equip_armors, descs, lines)
-  output_other_equipment(equip_other, descs, lines)
+  output_equipment(obj_by_kind[ObjectKind.EQUIPMENT], descs, lines)
   output_scrolls(obj_by_kind[ObjectKind.SCROLL], descs, lines)
   output_wands(obj_by_kind[ObjectKind.WAND], descs, lines)
   output_missiles(obj_by_kind[ObjectKind.MISSILE], descs, lines)
