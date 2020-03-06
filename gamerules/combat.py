@@ -7,8 +7,7 @@ from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 def resolve_attack(attacker, target):
   weapon = attacker.equipped_weapon()
-  if not weapon:
-    # TODO: handle claws
+  if not weapon and not attacker.has_claws():
     attacker.msg("You have no equipped weapon!")
     return
   if attacker.key == target.key:
@@ -20,16 +19,17 @@ def resolve_attack(attacker, target):
     return
 
   # calculate damage
-  damage = attack_damage(attacker)
+  damage = attack_damage(attacker, weapon)
 
   # attack message for attacker
-  attacker.msg(attack_attacker_msg(target.key, weapon.key, damage))
+  attack_name = weapon.key if weapon else "claws"
+  attacker.msg(attack_attacker_msg(target.key, attack_name, damage))
 
   # attack message for target
-  target.msg(attack_target_msg(attacker.key, weapon.key, damage))
+  target.msg(attack_target_msg(attacker.key, attack_name, damage))
 
   # attack message for room bystanders
-  location_msg = attack_bystander_msg(attacker.key, target.key, weapon.key, damage)
+  location_msg = attack_bystander_msg(attacker.key, target.key, attack_name, damage)
   attacker.location.msg_contents(location_msg, exclude=[attacker, target])
 
   # apply armor to reduce damage
@@ -37,27 +37,35 @@ def resolve_attack(attacker, target):
   deflect_armor = target.deflect_armor()
   if deflect_armor > 0 and randint(0, 100) < deflect_armor:
     target.msg("The attack is deflected by your armor.")
-    attacker.msg(f"Your weapon is deflected by {target.key}'s armor.")
+    attacker.msg(f"Your attack is deflected by {target.key}'s armor.")
     damage = int(damage / 2)
   if base_armor > 0:
     target.msg("The attack is partially blocked by your armor.")
-    attacker.msg(f"Your weapon is partially blocked by {target.key}'s armor.")
+    attacker.msg(f"Your attack is partially blocked by {target.key}'s armor.")
     damage = int(damage * ((100 - base_armor) / 100))
 
   # target takes the damage
   target.at_damage(damage, damager=attacker)
 
 
-def attack_damage(attacker):
-  # atttacker weapon damages may be the sum of several equipped objects
-  dmg = attacker.base_weapon_damage() + randint(0, attacker.random_weapon_damage())
-  # TODO: pay attention to claws or not
-  weapon_use = attacker.weapon_use()
-  dmg = int(dmg * weapon_use / 100)
+def attack_damage(attacker, weapon):
+  if weapon:
+    # attacker weapon damages may be the sum of several equipped objects
+    dmg = attacker.base_weapon_damage() + randint(0, attacker.random_weapon_damage())
+    weapon_use = attacker.base_weapon_use() + attacker.level_weapon_use() * attacker.level()
+    dmg = int(dmg * weapon_use / 100)
+  else:
+    # claws
+    dmg = (
+      attacker.base_claw_damage()
+      + randint(0, attacker.random_claw_damage())
+      + attacker.level_claw_damage() * attacker.level()
+      )
   return dmg
 
 
 def attack_attacker_msg(target_name, weapon_name, damage):
+  add_s = "" if weapon_name == "claws" else "s"
   if damage > 500:
     return f"You vaporize {target_name}'s putrid body. [{damage}]"
   elif damage > 400:
@@ -65,13 +73,13 @@ def attack_attacker_msg(target_name, weapon_name, damage):
   elif damage > 300:
     return f"You deliver an almost deadly blow to {target_name} with your {weapon_name}!! [{damage}]"
   elif damage > 200:
-    return f"Your {weapon_name} creams {target_name}'s poor little body!! [{damage}]"
+    return f"Your {weapon_name} cream{add_s} {target_name}'s poor little body!! [{damage}]"
   elif damage > 150:
-    return f"Your {weapon_name} hits {target_name} very hard! [{damage}]"
+    return f"Your {weapon_name} hit{add_s} {target_name} very hard! [{damage}]"
   elif damage > 100:
-    return f"Your {weapon_name} hits {target_name} hard! [{damage}]"
+    return f"Your {weapon_name} hit{add_s} {target_name} hard! [{damage}]"
   elif damage > 50:
-    return f"You hits {target_name}, good. [{damage}]"
+    return f"You hit {target_name}, good. [{damage}]"
   elif damage > 0:
     return f"{target_name} is grazed by your {weapon_name}."
   else:
@@ -79,20 +87,21 @@ def attack_attacker_msg(target_name, weapon_name, damage):
 
 
 def attack_target_msg(attacker_name, weapon_name, damage):
+  add_s = "" if weapon_name == "claws" else "s"  
   if damage > 500:
     return f"{attacker_name} vaporizes you! [{damage}]"
   elif damage > 400:
     return f"{attacker_name} attacks you with blinding speed and power, ARRRG!! [{damage}]"
   elif damage > 300:
-    return f"{attacker_name}'s {weapon_name} nearly splits you in two!!! [{damage}]"
+    return f"{attacker_name}'s {weapon_name} nearly split{add_s} you in two!!! [{damage}]"
   elif damage > 200:
-    return f"{attacker_name}'s {weapon_name} creams your poor little body!! [{damage}]"
+    return f"{attacker_name}'s {weapon_name} cream{add_s} your poor little body!! [{damage}]"
   elif damage > 150:
-    return f"{attacker_name}'s {weapon_name} hits you very hard! [{damage}]"
+    return f"{attacker_name}'s {weapon_name} hit{add_s} you very hard! [{damage}]"
   elif damage > 100:
-    return f"{attacker_name}'s {weapon_name} hits you hard! [{damage}]"
+    return f"{attacker_name}'s {weapon_name} hit{add_s} you hard! [{damage}]"
   elif damage > 50:
-    return f"{attacker_name}'s {weapon_name} hits you, good. [{damage}]"
+    return f"{attacker_name}'s {weapon_name} hit{add_s} you, good. [{damage}]"
   elif damage > 0:
     return f"You are grazed by {attacker_name}'s {weapon_name}. [{damage}]"
   else:
@@ -100,24 +109,25 @@ def attack_target_msg(attacker_name, weapon_name, damage):
 
 
 def attack_bystander_msg(attacker_name, target_name, weapon_name, damage):
+  add_s = "" if weapon_name == "claws" else "s"  
   if damage > 500:
     return f"{attacker_name} vaporizes {target_name}'s putrid body."
   elif damage > 400:
     return f"{attacker_name} attacks {target_name} with blinding speed and power!!!"
   elif damage > 300:
-    return f"{attacker_name}'s {weapon_name} nearly splits {target_name} in two!!!"
+    return f"{attacker_name}'s {weapon_name} nearly split{add_s} {target_name} in two!!!"
   elif damage > 200:
-    return f"{attacker_name}'s {weapon_name} creams {target_name}'s poor little body!!"
+    return f"{attacker_name}'s {weapon_name} cream{add_s} {target_name}'s poor little body!!"
   elif damage > 150:
-    return f"{attacker_name}'s {weapon_name} hits {target_name} very hard!"
+    return f"{attacker_name}'s {weapon_name} hit{add_s} {target_name} very hard!"
   elif damage > 100:
-    return f"{attacker_name}'s {weapon_name} hits {target_name} with incredible force!"
+    return f"{attacker_name}'s {weapon_name} hit{add_s} {target_name} with incredible force!"
   elif damage > 50:
     return f"{attacker_name} hits {target_name}, good."
   elif damage > 0:
     return f"{target_name} is grazed by {attacker_name}'s {weapon_name}."
   else:
-    return f"{attacker_name} misses {target_name} with a {weapon_name}."
+    return f"{attacker_name} misses {target_name} with their {weapon_name}."
 
 
 def character_death(victim, killer=None):

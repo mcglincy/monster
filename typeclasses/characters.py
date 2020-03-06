@@ -15,6 +15,7 @@ from evennia.commands import cmdhandler
 from gamerules.combat import character_death
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.xp import MIN_XP, level_from_xp
+from typeclasses.alignment import Alignment
 from typeclasses.equipment_slot import EquipmentSlot
 from userdefined.models import CharacterClass
 
@@ -94,9 +95,12 @@ class Character(DefaultCharacter):
   def classname(self):
     return self.character_class().key
 
-  def weapon_use(self):
-    return (self.character_class().base_weapon_use + 
-      self.character_class().level_weapon_use * self.level())
+  def size(self):
+    return self.character_class().size
+
+  def alignment(self):
+    # TODO: do we need to handle non-33/66/99 values for classes?
+    return Alignment(self.character_class().alignment)
 
   def max_health(self):
     return (self.character_class().base_health +
@@ -111,30 +115,66 @@ class Character(DefaultCharacter):
   def base_weapon_damage(self):
     return sum(o.db.base_weapon_damage for o in self.db.equipment.values())
 
+  # note: there is no level_weapon_damage stat or effect
+
   def random_weapon_damage(self):
     return sum(o.db.random_weapon_damage for o in self.db.equipment.values())
 
+  def base_weapon_use(self):
+    class_use = self.character_class().base_weapon_use
+    item_use = sum(o.db.base_weapon_use for o in self.db.equipment.values())
+    return class_use + item_use
+
+  def level_weapon_use(self):
+    class_use = self.character_class().level_weapon_use
+    item_use = sum(o.db.level_weapon_use for o in self.db.equipment.values())
+    return class_use + item_use
+
+  def total_weapon_use(self):
+    return self.base_weapon_use() + self.level_weapon_use() * self.level()
+
   def base_armor(self):
-    # TODO: some classes may have built-in armor
-    return sum(o.db.base_armor for o in self.db.equipment.values())
+    class_armor = self.character_class().armor
+    item_armor = sum(o.db.base_armor for o in self.db.equipment.values())
+    return class_armor + item_armor
 
   def deflect_armor(self):
-    # TODO: some classes may have built-in armor
+    # note that CharacterClasses do NOT have deflect_armor
     return sum(o.db.deflect_armor for o in self.db.equipment.values())
 
-  def base_spell_armor(self):
-    # TODO: some classes may have built-in armor
-    return sum(o.db.base_spell_armor for o in self.db.equipment.values())
+  def spell_armor(self):
+    class_armor = self.character_class().spell_armor
+    item_armor = sum(o.db.spell_armor for o in self.db.equipment.values())
+    return class_armor + item_armor
 
-  def deflect_spell_armor(self):
-    # TODO: some classes may have built-in armor
-    return sum(o.db.deflect_spell_armor for o in self.db.equipment.values())
+  def spell_deflect_armor(self):
+    # note that CharacterClasses do NOT have spell_deflect_armor
+    return sum(o.db.spell_deflect_armor for o in self.db.equipment.values())
+
+  def base_claw_damage(self):
+    class_dmg = self.character_class().base_claw_damage
+    item_dmg = sum(o.db.base_claw_damage for o in self.db.equipment.values())
+    return class_dmg + item_dmg
+
+  def level_claw_damage(self):
+    class_dmg = self.character_class().level_claw_damage
+    item_dmg = sum(o.db.level_claw_damage for o in self.db.equipment.values())
+    return class_dmg + item_dmg
+
+  def total_claw_damage(self):
+    return self.base_claw_damage() + self.level_claw_damage() * self.level()
+
+  def random_claw_damage(self):
+    class_dmg = self.character_class().random_claw_damage
+    item_dmg = sum(o.db.random_claw_damage for o in self.db.equipment.values())
+    return class_dmg + item_dmg
 
   # TODO: level/base/total hide, steal, etc
 
   # TODO: move equipment stuff to gamerules, or keep it OOP?
 
   def equipped_weapon(self):
+    # TODO: should claw classes be able to equip anything in TWO_HAND/SWORD_HAND?
     if EquipmentSlot.TWO_HAND in self.db.equipment:
       return self.db.equipment[EquipmentSlot.TWO_HAND]
     if EquipmentSlot.SWORD_HAND in self.db.equipment:
@@ -143,8 +183,10 @@ class Character(DefaultCharacter):
     # TODO: handle claws
     return None
 
-  # def has_claws(self):
-  # ???
+  def has_claws(self):
+    # TODO: should an item be able to give you claws?
+    clazz = self.character_class()
+    return (clazz.base_claw_damage or clazz.level_claw_damage or clazz.random_claw_damage)
 
   def equip(self, obj):
     if not obj.is_typeclass("typeclasses.objects.Equipment"):
@@ -163,7 +205,7 @@ class Character(DefaultCharacter):
     if not obj.is_typeclass("typeclasses.objects.Equipment"):
       return
     slot = obj.db.equipment_slot      
-    if slot in character.db.equipment:
+    if slot in self.db.equipment:
       del self.db.equipment[slot]
       self.msg(f"You unequip the {obj.key}.")
     else:
