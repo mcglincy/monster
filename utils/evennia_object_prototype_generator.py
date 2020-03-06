@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, '..')
 
 from typeclasses.equipment_effect_kind import EquipmentEffectKind
+from typeclasses.equipment_slot import EquipmentSlot
 from typeclasses.object_kind import ObjectKind
 
 
@@ -162,7 +163,9 @@ BASE_EQUIPMENT = {
 """)
   for obj in objs:
     output_common_fields(obj, 'base_equipment', descs, lines)
-    print(f"  'equipment_slot': {obj['wear']},")
+    slot_num = obj['wear']
+    slot = EquipmentSlot(slot_num)
+    print(f"  'equipment_slot': EquipmentSlot.{slot.name},")
     for effect_kind in EquipmentEffectKind:
       maybe_effect(obj, effect_kind, effect_kind.name.lower())
     print('}')
@@ -293,6 +296,7 @@ def main():
   print("""#
 # Generated object prototypes
 #
+from typeclasses.equipment_slot import EquipmentSlot
 """)
   output_blands(obj_by_kind[ObjectKind.BLAND], descs, lines)
   output_equipment(obj_by_kind[ObjectKind.EQUIPMENT], descs, lines)

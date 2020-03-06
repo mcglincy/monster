@@ -108,18 +108,6 @@ class Character(DefaultCharacter):
 
   # our damage, armor, etc is the sum of our equipped objects
 
-  def equipped_weapon(self):
-    if EquipmentSlot.TWO_HAND in self.db.equipment:
-      return self.db.equipment[EquipmentSlot.TWO_HAND]
-    if EquipmentSlot.SWORD_HAND in self.db.equipment:
-      return self.db.equipment[EquipmentSlot.SWORD_HAND]
-    # TODO: does SHIELD_HAND count?
-    # TODO: handle claws
-    return None
-
-  # def has_claws(self):
-  # ???
-
   def base_weapon_damage(self):
     return sum(o.db.base_weapon_damage for o in self.db.equipment.values())
 
@@ -144,6 +132,43 @@ class Character(DefaultCharacter):
 
   # TODO: level/base/total hide, steal, etc
 
+  # TODO: move equipment stuff to gamerules, or keep it OOP?
+
+  def equipped_weapon(self):
+    if EquipmentSlot.TWO_HAND in self.db.equipment:
+      return self.db.equipment[EquipmentSlot.TWO_HAND]
+    if EquipmentSlot.SWORD_HAND in self.db.equipment:
+      return self.db.equipment[EquipmentSlot.SWORD_HAND]
+    # TODO: does SHIELD_HAND count?
+    # TODO: handle claws
+    return None
+
+  # def has_claws(self):
+  # ???
+
+  def equip(self, obj):
+    if not obj.is_typeclass("typeclasses.objects.Equipment"):
+      return
+    slot = obj.db.equipment_slot
+    if (slot == EquipmentSlot.SWORD_HAND 
+      or slot == EquipmentSlot.SHIELD_HAND):
+      self.db.equipment.pop(EquipmentSlot.TWO_HAND, None)
+    elif slot == EquipmentSlot.TWO_HAND:
+      self.db.equipment.pop(EquipmentSlot.SWORD_HAND, None)
+      self.db.equipment.pop(EquipmentSlot.SHIELD_HAND, None)
+    self.db.equipment[slot] = obj
+    self.msg(f"You equip the {obj.key} to {slot.name.upper()}.")
+
+  def unequip(self, obj):
+    if not obj.is_typeclass("typeclasses.objects.Equipment"):
+      return
+    slot = obj.db.equipment_slot      
+    if slot in character.db.equipment:
+      del self.db.equipment[slot]
+      self.msg(f"You unequip the {obj.key}.")
+    else:
+      self.msg("Not currently equipped.")
+
   # at_* event notifications
 
   def at_after_move(self, source_location, **kwargs):
@@ -155,13 +180,9 @@ class Character(DefaultCharacter):
     # called when an object leaves this object in any fashion
     #super().at_object_leave(obj, target_location)
     # unequip if equipped
-    # DEBUG, duh
-    self.msg("before %s" % obj)
     if self.db.equipment.get(obj.db.equipment_slot) == obj:
       self.msg("Unequipping")
       del self.db.equipment[obj.db.equipment_slot]
-    self.msg("After")
-
 
   def at_damage(self, damage, damager=None):
     self.db.health = max(self.db.health - damage, MIN_HEALTH)

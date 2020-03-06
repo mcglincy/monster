@@ -18,6 +18,7 @@ from evennia.prototypes.spawner import spawn
 
 from gamerules.combat import mob_death
 from gamerules.health import MIN_HEALTH, health_msg
+from typeclasses.equipment_slot import EquipmentSlot
 from typeclasses.object_kind import ObjectKind
 
 
@@ -281,8 +282,8 @@ class Equipment(Object):
     self.db.crystal_radius = 0
     self.db.cursed = 0
     self.db.deflect_armor = 0
-    self.db.drop_destroy = False
-    self.db.equipment_slot = 0
+    self.db.drop_destroy = 0
+    self.db.equipment_slot = EquipmentSlot.NOT_EQUIPPABLE
     self.db.group = 0
     self.db.heal_speed = 0
     self.db.hear_noise = 0
@@ -307,7 +308,7 @@ class Equipment(Object):
     self.db.spell_deflect_armor = 0
     self.db.teleport = 0
     self.db.throw_base = 0
-    self.db.throw_behavior = 43
+    self.db.throw_behavior = 0
     self.db.throw_random = 0
     self.db.throw_range = 0
     self.db.trap = 0
