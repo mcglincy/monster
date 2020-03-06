@@ -257,7 +257,7 @@ class Equipment(Object):
     self.db.object_kind = ObjectKind.EQUIPMENT
     # equipment effects
     # TODO: keep as a sparse dict instead of fields?
-    # {EquipEffectKind:value}
+    # {EquipmentEffectKind:value}
     # self.db.effects = {}
     self.db.attack_speed = 0
     self.db.base_armor = 0
@@ -282,7 +282,7 @@ class Equipment(Object):
     self.db.cursed = 0
     self.db.deflect_armor = 0
     self.db.drop_destroy = False
-    self.db.equip_slot = 0
+    self.db.equipment_slot = 0
     self.db.group = 0
     self.db.heal_speed = 0
     self.db.hear_noise = 0
@@ -315,8 +315,11 @@ class Equipment(Object):
 
   def at_drop(self, dropper, **kwargs):
     if self.db.drop_destroy:
-      dropper.msg(f"The {self.key} was destroyed.")
-      self.delete()
+     dropper.msg(f"The {self.key} was destroyed.")
+     self.delete()
+
+  def is_weapon(self):
+    return self.db.base_weapon_damage or self.db.random_weapon_damage
 
 
 class Scroll(Object):
