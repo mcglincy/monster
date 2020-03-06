@@ -15,6 +15,7 @@ from evennia.commands import cmdhandler
 from gamerules.combat import character_death
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.xp import MIN_XP, level_from_xp
+from typeclasses.equipment_slot import EquipmentSlot
 from userdefined.models import CharacterClass
 
 
@@ -63,6 +64,9 @@ class Character(DefaultCharacter):
     # checking None to set None is pointless
     if self.db.gold_in_bank is None:
       self.db.gold_in_bank = 0
+    if self.db.equipment is None:
+      # dict of {EquipmentSlot:object}
+      self.db.equipment = {}
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -102,6 +106,42 @@ class Character(DefaultCharacter):
     return (self.character_class().base_mana +
       self.character_class().level_mana * self.level())
 
+  # our damage, armor, etc is the sum of our equipped objects
+
+  def equipped_weapon(self):
+    if EquipmentSlot.TWO_HAND in self.db.equipment:
+      return self.db.equipment[EquipmentSlot.TWO_HAND]
+    if EquipmentSlot.SWORD_HAND in self.db.equipment:
+      return self.db.equipment[EquipmentSlot.SWORD_HAND]
+    # TODO: does SHIELD_HAND count?
+    # TODO: handle claws
+    return None
+
+  # def has_claws(self):
+  # ???
+
+  def base_weapon_damage(self):
+    return sum(o.db.base_weapon_damage for o in self.db.equipment.values())
+
+  def random_weapon_damage(self):
+    return sum(o.db.random_weapon_damage for o in self.db.equipment.values())
+
+  def base_armor(self):
+    # TODO: some classes may have built-in armor
+    return sum(o.db.base_armor for o in self.db.equipment.values())
+
+  def deflect_armor(self):
+    # TODO: some classes may have built-in armor
+    return sum(o.db.deflect_armor for o in self.db.equipment.values())
+
+  def base_spell_armor(self):
+    # TODO: some classes may have built-in armor
+    return sum(o.db.base_spell_armor for o in self.db.equipment.values())
+
+  def deflect_spell_armor(self):
+    # TODO: some classes may have built-in armor
+    return sum(o.db.deflect_spell_armor for o in self.db.equipment.values())
+
   # TODO: level/base/total hide, steal, etc
 
   # at_* event notifications
@@ -113,12 +153,15 @@ class Character(DefaultCharacter):
 
   def at_object_leave(self, obj, target_location):
     # called when an object leaves this object in any fashion
-    super().at_object_leave(obj, target_location)
+    #super().at_object_leave(obj, target_location)
     # unequip if equipped
-    if obj == self.db.equipped_armor:
-      self.db.equipped_armor = None
-    elif obj == self.db.equipped_weapon:
-      self.db.equipped_weapon = None
+    # DEBUG, duh
+    self.msg("before %s" % obj)
+    if self.db.equipment.get(obj.db.equipment_slot) == obj:
+      self.msg("Unequipping")
+      del self.db.equipment[obj.db.equipment_slot]
+    self.msg("After")
+
 
   def at_damage(self, damage, damager=None):
     self.db.health = max(self.db.health - damage, MIN_HEALTH)

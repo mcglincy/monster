@@ -6,9 +6,9 @@ from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 
 def resolve_attack(attacker, target):
-  # verify attacker/target validity
-  weapon = attacker.db.equipped_weapon
+  weapon = attacker.equipped_weapon()
   if not weapon:
+    # TODO: handle claws
     attacker.msg("You have no equipped weapon!")
     return
   if attacker.key == target.key:
@@ -20,7 +20,7 @@ def resolve_attack(attacker, target):
     return
 
   # calculate damage
-  damage = attack_damage(attacker, weapon)
+  damage = attack_damage(attacker)
 
   # attack message for attacker
   attacker.msg(attack_attacker_msg(target.key, weapon.key, damage))
@@ -32,23 +32,25 @@ def resolve_attack(attacker, target):
   location_msg = attack_bystander_msg(attacker.key, target.key, weapon.key, damage)
   attacker.location.msg_contents(location_msg, exclude=[attacker, target])
 
-  # resolve damage
-  armor = target.db.equipped_armor
-  if armor:
-    if armor.db.deflect_armor > 0 and randint(0, 100) < armor.db.deflect_armor:
-      target.msg("The attack is deflected by your armor.")
-      attacker.msg(f"Your weapon is deflected by {self.key}'s armor.")
-      damage = int(damage / 2)
-    if armor.db.base_armor > 0:
-      target.msg("The attack is partially blocked by your armor.")
-      attacker.msg(f"Your weapon is partially blocked by {self.key}'s armor.")
-      damage = int(damage * ((100 - armor.db.base_armor) / 100))
+  # apply armor to reduce damage
+  base_armor = target.base_armor()
+  deflect_armor = target.deflect_armor()
+  if deflect_armor > 0 and randint(0, 100) < deflect_armor:
+    target.msg("The attack is deflected by your armor.")
+    attacker.msg(f"Your weapon is deflected by {target.key}'s armor.")
+    damage = int(damage / 2)
+  if base_armor > 0:
+    target.msg("The attack is partially blocked by your armor.")
+    attacker.msg(f"Your weapon is partially blocked by {target.key}'s armor.")
+    damage = int(damage * ((100 - base_armor) / 100))
+
+  # target takes the damage
   target.at_damage(damage, damager=attacker)
 
 
-def attack_damage(attacker, weapon):
-  # TODO: apply attacker level etc to damage calc
-  dmg = weapon.db.base_damage + randint(0, weapon.db.random_damage)
+def attack_damage(attacker):
+  # atttacker weapon damages may be the sum of several equipped objects
+  dmg = attacker.base_weapon_damage() + randint(0, attacker.random_weapon_damage())
   # TODO: pay attention to claws or not
   weapon_use = attacker.weapon_use()
   dmg = int(dmg * weapon_use / 100)

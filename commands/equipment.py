@@ -1,4 +1,5 @@
 from commands.command import Command
+from typeclasses.equipment_slot import EquipmentSlot
 
 
 class CmdEquip(Command):
@@ -8,19 +9,29 @@ class CmdEquip(Command):
 
   def func(self):
     if not self.args:
-      self.caller.msg("Usage: equip <obj>")
+      # TODO: show equipped?      
+      # self.caller.msg("Usage: equip <obj>")
+      self.show_currently_equipped()
       return
     obj = self.caller.search(self.args.strip(), candidates=self.caller.contents)
     if not obj:
       return
-    # TODO: support various equipment slots
-    if obj.is_typeclass("typeclasses.objects.Armor"):
-      self.caller.db.equipped_armor = obj
-      self.caller.msg(f"You wear the {obj.key}.")
-    elif obj.is_typeclass("typeclasses.objects.Weapon"):
-      self.caller.db.equipped_weapon = obj
-      self.caller.msg(f"You wield the {obj.key}.")
+    self.caller.msg(obj)
+    # if obj.is_typeclass("typeclasses.objects.Equipment"):
+    if obj.db.equipment_slot:
+      # TODO: show what slot it's equipped to?
+      self.caller.msg(f"You equip the {obj.key}.")
+      self.caller.db.equipment[obj.db.equipment_slot] = obj
 
+  def show_currently_equipped(self):
+    if not self.caller.db.equipment:
+      self.msg("Nothing equipped.")
+      return
+    table = self.styled_table("|wSlot", "Equipped Item")
+    for slot in EquipmentSlot:
+      if slot in self.caller.db.equipment:
+        table.add_row(slot.name, self.caller.db.equipment[slot].key)
+    self.msg(f"{table}")
 
 class CmdUnequip(Command):
   key = "unequip"
@@ -34,12 +45,8 @@ class CmdUnequip(Command):
     obj = self.caller.search(self.args.strip(), candidates=self.caller.contents)
     if not obj:
       return
-    # TODO: support various equipment slots
-    if obj == self.caller.db.equipped_armor:
-      self.caller.db.equipped_armor = None
-      self.caller.msg(f"You remove the {obj.key}.")
-    elif obj == self.caller.db.equipped_weapon:
-      self.caller.db.equipped_weapon = None
-      self.caller.msg(f"You sheath the {obj.key}.")
+    if obj.db.equipment_slot in self.caller.db.equipment:
+      del self.caller.db.equipment[obj.db.equipment_slot]
+      self.caller.msg(f"You unequip the {obj.key}.")
     else:
       self.caller.msg("Not currently equipped.")
