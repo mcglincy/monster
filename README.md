@@ -21,6 +21,7 @@ The running game server is up at http://www.monstermud.com.
 * Objects
   * Imported all original armor and weapons
   * Simple gold system
+  * Wear/equipment slots
 * Combat
   * Attack command
   * Damage-dependent attack messages for attacker, target, and observer (e.g., "Tutt creams your poor little body!!")
