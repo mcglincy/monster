@@ -3,7 +3,7 @@ import json
 import sys
 sys.path.insert(0, '..')
 
-from typeclasses.equip_effect_kind import EquipEffectKind
+from typeclasses.equipment_effect_kind import EquipmentEffectKind
 from typeclasses.object_kind import ObjectKind
 
 
@@ -142,7 +142,6 @@ def output_blands(objs, descs, lines):
 BASE_BLAND = {
   'typeclass': 'typeclasses.objects.Bland',
   'key': 'base_bland',
-  'desc': 'A bland object.',
 }
 """)
   for obj in objs:
@@ -159,14 +158,12 @@ def output_equipment(objs, descs, lines):
 BASE_EQUIPMENT = {
   'typeclass': 'typeclasses.objects.Equipment',
   'key': 'base_equipment',
-  'desc': 'An equipment.',
-  'equip_slot': 0,
 }
 """)
   for obj in objs:
     output_common_fields(obj, 'base_equipment', descs, lines)
-    print(f"  'equip_slot': {obj['wear']},")
-    for effect_kind in EquipEffectKind:
+    print(f"  'equipment_slot': {obj['wear']},")
+    for effect_kind in EquipmentEffectKind:
       maybe_effect(obj, effect_kind, effect_kind.name.lower())
     print('}')
     print()
@@ -180,13 +177,11 @@ def output_scrolls(objs, descs, lines):
 BASE_SCROLL = {
   'typeclass': 'typeclasses.objects.Scroll',
   'key': 'base_scroll',
-  'desc': 'A scroll.',
 }
 """)
   for obj in objs:
     output_common_fields(obj, 'base_scroll', descs, lines)
-    # TODO: figure out effects
-    # ??? = lookup_effect(obj, EquipEffectKind.???) or 0        
+    # TODO: figure out parms
     print('}')
     print()
 
@@ -199,13 +194,11 @@ def output_wands(objs, descs, lines):
 BASE_WAND = {
   'typeclass': 'typeclasses.objects.Wand',
   'key': 'base_wand',
-  'desc': 'A wand.',
 }
 """)
   for obj in objs:
     output_common_fields(obj, 'base_wand', descs, lines)
-    # TODO: figure out effects
-    # ??? = lookup_effect(obj, EquipEffectKind.???) or 0    
+    # TODO: figure out parms
     print('}')
     print()
 
@@ -218,11 +211,11 @@ def output_missiles(objs, descs, lines):
 BASE_MISSILE = {
   'typeclass': 'typeclasses.objects.Missile',
   'key': 'base_missile',
-  'desc': 'A missile.',
 }
 """)
   for obj in objs:
     output_common_fields(obj, 'base_missile', descs, lines)
+    # TODO: figure out parms
     print('}')
     print()
 
@@ -235,11 +228,11 @@ def output_missile_launchers(objs, descs, lines):
 BASE_MISSILE_LAUNCHER = {
   'typeclass': 'typeclasses.objects.MissileLauncher',
   'key': 'base_missile_launcher',
-  'desc': 'A missile launcher.',
 }
 """)
   for obj in objs:
     output_common_fields(obj, 'base_missile_launcher', descs, lines)
+    # TODO: figure out parms
     print('}')
     print()
 
@@ -252,13 +245,11 @@ def output_spellbooks(objs, descs, lines):
 BASE_SPELLBOOK = {
   'typeclass': 'typeclasses.objects.Spellbook',
   'key': 'base_spellbook',
-  'desc': 'A spellbook.',
 }
 """)
   for obj in objs:
     output_common_fields(obj, 'base_spellbook', descs, lines)
-    # TODO: figure out effects
-    # ??? = lookup_effect(obj, EquipEffectKind.???) or 0    
+    # TODO: figure out parms
     print('}')
     print()
 
@@ -271,13 +262,11 @@ def output_banking_machines(objs, descs, lines):
 BASE_BANKING_MACHINE = {
   'typeclass': 'typeclasses.objects.BankingMachine',
   'key': 'banking machine',
-  'desc': 'A banking machine.',
 }
 """)
   for obj in objs:
     output_common_fields(obj, 'base_banking_machine', descs, lines)
-    # TODO: figure out effects
-    # ??? = lookup_effect(obj, EquipEffectKind.???) or 0        
+    # TODO: figure out parms
     print('}')
     print()
 
