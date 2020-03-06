@@ -30,7 +30,8 @@ The running game server is up at http://www.monstermud.com.
   * Character health and max health
   * Death at 0 health => go to the Void
   * XP for kills (based on level/xp comparison)
-  * Weapon use percent  
+  * Weapon use percent
+  * Claws  
 * Command set
   * *.* for last action
   * *who* that shows everyone's room location
@@ -61,7 +62,6 @@ The running game server is up at http://www.monstermud.com.
   * Freeze / attack delay
   * Weapon speed
   * Surprise attack
-  * Claws
   * Punch
   * Get 50 gold upon death
   * Missiles and *throw* command
