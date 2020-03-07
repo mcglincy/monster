@@ -18,6 +18,7 @@ The running game server is up at http://www.monstermud.com.
   * Exit types
     * passworded
     * set or reset class
+  * Exit descriptions    
 * Objects
   * Imported all original armor and weapons
   * Simple gold system
@@ -51,7 +52,6 @@ The running game server is up at http://www.monstermud.com.
   * Start game in tutorial room(s)
   * Look at in-room subdescriptions
   * Trap door
-  * Exit descriptions
   * Exit types
     * hidden
     * object keyed/forbidden
