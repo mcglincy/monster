@@ -56,15 +56,12 @@ class Room(DefaultRoom):
         # get description, build string
         string = "|c%s|n\n" % self.get_display_name(looker)
 
-        if 'brief' in kwargs and kwargs.get('brief'):
-            # skip description
-            pass
-        else:
+        if not kwargs.get('brief', False):
             desc = self.db.desc
             if desc:
-                string += "%s" % desc
+                string += "%s\n" % desc
         if exits:
-            string += "\n|wExits:|n " + list_to_string(exits)
+            string += "\n" + "\n".join(exits)
         if users or things:
             # handle pluralization of things (never pluralize users)
             thing_strings = []

@@ -44,6 +44,7 @@ class Exit(DefaultExit):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.exit_kind = ExitKind.OPEN
+    self.db.exit_desc = None
     self.db.exit_effect_kind = None
     self.db.exit_effect_value = None
     # do these msgs exist for DefaultExit already? vvvv
@@ -65,3 +66,15 @@ class Exit(DefaultExit):
     # set err_traverse and let superclass send that
     if self.db.fail_message:
       traversing_object.msg(self.db.fail_message)
+
+  def get_display_name(self, looker, **kwargs):
+    if self.db.exit_desc:
+      return self.db.exit_desc
+    elif self.name in ["north", "south", "east", "west"]:
+      return f"To the {self.name} is {self.destination.key}."
+    elif self.name in ["up", "down"]:
+      return f"The {self.destination.key} is {self.name} from here."
+  
+    if self.locks.check_lockstring(looker, "perm(Builder)"):
+      return "{}(#{})".format(self.name, self.id)
+    return self.name

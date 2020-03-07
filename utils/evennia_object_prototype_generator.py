@@ -6,6 +6,7 @@ sys.path.insert(0, '..')
 from typeclasses.equipment_effect_kind import EquipmentEffectKind
 from typeclasses.equipment_slot import EquipmentSlot
 from typeclasses.object_kind import ObjectKind
+from utils.generator_utils import lookup_description, split_integer
 
 
 DESC_FILE = './json/desc.json'
@@ -16,14 +17,9 @@ DEFAULT_ARTICLE = 1
 DEFAULT_MSG_ID = 32000
 
 
-def parse_parm(i):
-  """Parse a parm integer into the effect and effectnum."""
-  return (i % 100, int(i / 100))
-
-
 def lookup_effect(obj, effect):
   for parm in obj['parms']:
-    eff, eff_num = parse_parm(parm)
+    eff_num, eff = split_integer(parm)
     if eff == effect:
       return eff_num
 
@@ -72,27 +68,6 @@ def snake_case(s):
     else:
       chars.append(c.upper())
   return ''.join(chars)
-
-
-def escaped(s):
-  return s.replace('"', '\\"')
-
-
-def lookup_description(id, descs, lines):
-  if not id:
-    return None
-  elif id > 0:
-    # use descs
-    desc_idx = id - 1
-    # TODO: special handling for default description id 32000
-    if desc_idx < len(descs):
-      return escaped(' '.join(descs[desc_idx]['lines']))
-  elif id < 0:
-    # use lines
-    line_idx = -id -1
-    if line_idx < len(lines):
-      return escaped(lines[line_idx]['line'])
-  return None
 
 
 def maybe(value, field_name, except_if=None):

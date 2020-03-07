@@ -8506,6 +8506,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_79
 #
+@set down/exit_desc = 'Please go down from here to begin the adventure of a lifetime.'
+#
 @set down/exit_effect_kind = 7
 #
 @set down/exit_effect_value = 1
@@ -8516,9 +8518,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_477
 #
+@set east/exit_desc = 'The street of Ribbons is further east.'
+#
 @tel room_4
 #
 @open north;n = room_39
+#
+@set north/exit_desc = 'The sewer curls out in all directions.'
 #
 @open south;s = room_264
 #
@@ -8530,9 +8536,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock climb = view:perm(see_hidden_exits)
 #
+@set climb/exit_desc = 'A ray of sunlight beams down from the city above.'
+#
 @tel room_5
 #
 @open down;d = room_571
+#
+@set down/exit_desc = 'Steps lead down from here.'
 #
 @set down/exit_effect_kind = 4
 #
@@ -8546,17 +8556,27 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_23
 #
+@set west/exit_desc = 'The City of the Gods lay west. Sanctuary may be found there.'
+#
 @tel room_7
 #
 @open north;n = room_8
 #
+@set north/exit_desc = 'Darkness gathers to the north.'
+#
 @open east;e = room_9
 #
+@set east/exit_desc = 'The land around you is unchanging and uncompromising.'
+#
 @open west;w = room_6
+#
+@set west/exit_desc = 'You can see city walls in the distant west.'
 #
 @tel room_8
 #
 @open south;s = room_7
+#
+@set south/exit_desc = 'Grey hills surround you..'
 #
 @open east;e = room_9
 #
@@ -8570,7 +8590,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_10
 #
+@set south/exit_desc = 'You can see what seems to be a settlement to the south.'
+#
 @open west;w = room_7
+#
+@set west/exit_desc = 'A grey expanse stretches out all around you..'
 #
 @tel room_10
 #
@@ -8578,15 +8602,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_30
 #
+@set south/exit_desc = 'The entrance to the main building is south.'
+#
 @open west;w = room_28
+#
+@set west/exit_desc = 'A shattered house lay to your west.'
 #
 @tel room_11
 #
 @open north;n = room_313
 #
+@set north/exit_desc = 'A low tunnel leads north from here.'
+#
 @open east;e = room_34
 #
+@set east/exit_desc = 'Another, larger tunnel leads east.'
+#
 @open west;w = room_147
+#
+@set west/exit_desc = 'A high cavern is west.'
 #
 @tel room_12
 #
@@ -8594,7 +8628,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_18
 #
+@set north/exit_desc = 'A line of megaliths leads north from here.'
+#
 @open south;s = room_15
+#
+@set south/exit_desc = 'Swamp and marshland lies south, east, and west from here.'
 #
 @open east;e = room_16
 #
@@ -8610,23 +8648,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_13
 #
+@set east/exit_desc = 'Mountainous stones jut out of the swamp to the east.'
+#
 @open west;w = room_14
 #
 @tel room_15
 #
 @open north;n = room_13
 #
+@set north/exit_desc = 'An towering megalithic arrangement is north.'
+#
 @open south;s = room_251
+#
+@set south/exit_desc = 'Thicker forest mingles with swamp to the south and east.'
 #
 @open east;e = room_16
 #
 @open west;w = room_14
+#
+@set west/exit_desc = 'Dark marshes are west.'
 #
 @tel room_16
 #
 @open north;n = room_16
 #
 @open south;s = room_15
+#
+@set south/exit_desc = 'Swamp, swamp everywhere.'
 #
 @open east;e = room_16
 #
@@ -8635,6 +8683,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_17
 #
 @open north;n = room_17
+#
+@set north/exit_desc = 'Bog slurping noises are all around.'
 #
 @open south;s = room_17
 #
@@ -8646,15 +8696,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_27
 #
+@set north/exit_desc = 'A clearing is north of here..'
+#
 @open south;s = room_13
+#
+@set south/exit_desc = 'An impressive array of gargantuan stones is south.'
 #
 @open east;e = room_29
 #
+@set east/exit_desc = 'A group of grassy knolls are east.'
+#
 @open west;w = room_106
+#
+@set west/exit_desc = 'A mighty structure of earth and wood is west.'
 #
 @tel room_19
 #
 @open north;n = room_19
+#
+@set north/exit_desc = 'Foul woodlands surround you.'
 #
 @open south;s = room_19
 #
@@ -8666,7 +8726,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_29
 #
+@set north/exit_desc = 'A small clearing may lie north.'
+#
 @open south;s = room_20
+#
+@set south/exit_desc = 'Forest critters can be heard all around.'
 #
 @open east;e = room_95
 #
@@ -8675,6 +8739,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_21
 #
 @open north;n = room_21
+#
+@set north/exit_desc = 'Nasty woods are all about.'
 #
 @open south;s = room_21
 #
@@ -8688,11 +8754,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_6
 #
+@set east/exit_desc = 'Grey hills fill the eastern horizon..'
+#
 @tel room_24
 #
 @open south;s = room_408
 #
+@set south/exit_desc = 'The frozen gates are south.'
+#
 @open east;e = room_265
+#
+@set east/exit_desc = 'An irregular crack in the east wall allows passage.'
 #
 @set east/exit_effect_kind = 11
 #
@@ -8701,6 +8773,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_25
 #
 @open north;n = room_251
+#
+@set north/exit_desc = 'Huge trees are all around you.'
 #
 @open south;s = room_26
 #
@@ -8712,6 +8786,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_25
 #
+@set north/exit_desc = 'Huge trees are all around.'
+#
 @open east;e = room_25
 #
 @open west;w = room_25
@@ -8720,11 +8796,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_98
 #
+@set north/exit_desc = 'The ground slopes downward to the north.'
+#
 @open south;s = room_18
+#
+@set south/exit_desc = 'Imposing megaliths jut out of the forest to the south.'
 #
 @open east;e = room_67
 #
+@set east/exit_desc = 'A faint trail leaves this area to the east.'
+#
 @open west;w = room_21
+#
+@set west/exit_desc = 'Big trees are west.'
 #
 @tel room_28
 #
@@ -8734,11 +8818,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_67
 #
+@set north/exit_desc = 'A faint trail may lie to the north.'
+#
 @open south;s = room_20
+#
+@set south/exit_desc = 'Cedar trees are south and east of here.'
 #
 @open east;e = room_95
 #
 @open west;w = room_18
+#
+@set west/exit_desc = 'A group of ancient stones jut out of the trees to the west.'
 #
 @open pry = room_457
 #
@@ -8748,13 +8838,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_10
 #
+@set north/exit_desc = 'The settlement center is north.'
+#
 @open east;e = room_31
+#
+@set east/exit_desc = 'There seems to be a stair to the east.'
 #
 @tel room_31
 #
 @open north;n = room_30
 #
+@set north/exit_desc = 'Light emanates from the north.'
+#
 @open south;s = room_32
+#
+@set south/exit_desc = 'You see a great hall in the darkness from the south.'
 #
 @tel room_32
 #
@@ -8784,7 +8882,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_41
 #
+@set east/exit_desc = 'Some light can be seen to the east.'
+#
 @open west;w = room_11
+#
+@set west/exit_desc = 'A larger room is west.'
 #
 @tel room_35
 #
@@ -8814,31 +8916,49 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_63
 #
+@set north/exit_desc = 'To the north is a void that whispers to you. Dare cross the threshold.'
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -96
 #
 @open south;s = room_71
 #
+@set south/exit_desc = 'To the south is a green door made of crystal.'
+#
 @open east;e = room_46
 #
+@set east/exit_desc = 'A door seemingly carved from a red wood that flows like blood is east.'
+#
 @open west;w = room_65
+#
+@set west/exit_desc = 'A stone slab covers the western exit.'
 #
 @tel room_41
 #
 @open west;w = room_34
 #
+@set west/exit_desc = 'A large tunnel leads west.'
+#
 @open down;d = room_42
+#
+@set down/exit_desc = 'A gaping black maw is before you.'
 #
 @tel room_42
 #
 @open east;e = room_43
 #
+@set east/exit_desc = 'You may crawl through a hole in the east wall.'
+#
 @open up;u = room_41
+#
+@set up/exit_desc = 'A circle of \"lighter\" blackness lies above you.'
 #
 @tel room_43
 #
 @open north;n = room_49
+#
+@set north/exit_desc = 'Dark passages extend in all directions.'
 #
 @open south;s = room_50
 #
@@ -8850,6 +8970,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_49
 #
+@set north/exit_desc = 'Dark passages extend in all directions.'
+#
 @open south;s = room_50
 #
 @open east;e = room_45
@@ -8859,6 +8981,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_45
 #
 @open north;n = room_49
+#
+@set north/exit_desc = 'Dark passages extend in all directions.'
 #
 @open south;s = room_50
 #
@@ -8870,9 +8994,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_40
 #
+@set west/exit_desc = 'The War Dance is west.'
+#
 @tel room_47
 #
 @open north;n = room_49
+#
+@set north/exit_desc = 'Dark passages extend in all directions.'
 #
 @open south;s = room_50
 #
@@ -8886,13 +9014,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock !!rawg = view:perm(see_hidden_exits)
 #
+@set !!rawg/exit_desc = 'There is a large round wooden door set in the south wall.'
+#
 @open east;e = room_446
 #
+@set east/exit_desc = 'Another cave is east.'
+#
 @open west;w = room_47
+#
+@set west/exit_desc = 'Convoluted passages are west.'
 #
 @tel room_49
 #
 @open north;n = room_43
+#
+@set north/exit_desc = 'Dark passages extend in all directions.'
 #
 @open south;s = room_45
 #
@@ -8904,6 +9040,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_44
 #
+@set north/exit_desc = 'Dark passages extend in all directions.'
+#
 @open south;s = room_47
 #
 @open east;e = room_45
@@ -8914,27 +9052,45 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_56
 #
+@set south/exit_desc = 'A door is south.'
+#
 @open up;u = room_125
+#
+@set up/exit_desc = 'A bronze ladder leads up through the ceiling.'
 #
 @tel room_52
 #
 @open west;w = room_53
 #
+@set west/exit_desc = 'An open doorway, lacquered in black, leads west.'
+#
 @open up;u = room_108
+#
+@set up/exit_desc = 'A narrow staircase leads up.'
 #
 @tel room_53
 #
 @open north;n = room_56
 #
+@set north/exit_desc = 'A small door of black wood leads north.'
+#
 @open east;e = room_52
 #
+@set east/exit_desc = 'An open doorway, lacquered in black, leads east.'
+#
 @open west;w = room_54
+#
+@set west/exit_desc = 'A stone arch marks passage west.'
 #
 @tel room_54
 #
 @open east;e = room_53
 #
+@set east/exit_desc = 'There is a stone arch marking a passageway east.'
+#
 @open west;w = room_55
+#
+@set west/exit_desc = 'Another stone arch is west.'
 #
 @open push = room_343
 #
@@ -8944,23 +9100,35 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_54
 #
+@set east/exit_desc = 'A passageway, complete with stone arch, leads east.'
+#
 @open west;w = room_149
+#
+@set west/exit_desc = 'A large root leads west to another chamber.'
 #
 @tel room_56
 #
 @open north;n = room_51
 #
+@set north/exit_desc = 'A door is north.'
+#
 @open south;s = room_53
+#
+@set south/exit_desc = 'A small doorway of black wood leads south.'
 #
 @tel room_57
 #
 @open up;u = room_104
+#
+@set up/exit_desc = 'A shimmer of light lies above.'
 #
 @open down;d = room_501
 #
 @tel room_58
 #
 @open north;n = room_282
+#
+@set north/exit_desc = 'Narrow roads radiate out in the four cardinal directions.'
 #
 @open south;s = room_295
 #
@@ -8974,21 +9142,35 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_58
 #
+@set west/exit_desc = 'The city's main square is west.'
+#
 @tel room_60
 #
 @open north;n = room_302
 #
+@set north/exit_desc = 'North lies an ampitheater.'
+#
 @open south;s = room_281
+#
+@set south/exit_desc = 'Some form of public building is south.'
 #
 @open east;e = room_58
 #
+@set east/exit_desc = 'The main square of the city is east.'
+#
 @open west;w = room_61
+#
+@set west/exit_desc = 'This road continues west.'
 #
 @tel room_61
 #
 @open north;n = room_300
 #
+@set north/exit_desc = 'A narrow lane leads north.'
+#
 @open east;e = room_60
+#
+@set east/exit_desc = 'The road continues east and west.'
 #
 @open west;w = room_62
 #
@@ -8996,7 +9178,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_301
 #
+@set north/exit_desc = 'An intact building is north.'
+#
 @open east;e = room_61
+#
+@set east/exit_desc = 'The road leads east and west from here.'
 #
 @open west;w = room_287
 #
@@ -9004,29 +9190,47 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_40
 #
+@set south/exit_desc = 'The War Dance is south.'
+#
 @tel room_64
 #
 @open north;n = room_705
 #
+@set north/exit_desc = 'The valley floor continues on to the north.'
+#
 @open south;s = room_590
 #
+@set south/exit_desc = 'A long steep climb to the top of the mountain is to the south.'
+#
 @open down;d = room_710
+#
+@set down/exit_desc = 'Further down the mountain, smoke covers all one can see.'
 #
 @tel room_65
 #
 @open east;e = room_40
 #
+@set east/exit_desc = 'The War Dance is east.'
+#
 @tel room_66
 #
 @open east;e = room_27
+#
+@set east/exit_desc = 'A clearing is east of here.'
 #
 @tel room_67
 #
 @open north;n = room_96
 #
+@set north/exit_desc = 'Dense forest lies north.'
+#
 @open south;s = room_29
 #
+@set south/exit_desc = 'A clump of hills rise out of the forest twilight south of here.'
+#
 @open east;e = room_68
+#
+@set east/exit_desc = 'The trail continues to the east and west.'
 #
 @open west;w = room_27
 #
@@ -9034,19 +9238,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_94
 #
+@set north/exit_desc = 'Dense forest lies north and south of the trail.'
+#
 @open south;s = room_95
 #
 @open east;e = room_69
 #
+@set east/exit_desc = 'More light is visible through the trees to the east.'
+#
 @open west;w = room_67
+#
+@set west/exit_desc = 'The trail continues to the west.'
 #
 @tel room_69
 #
 @open north;n = room_94
 #
+@set north/exit_desc = 'Dark trees attempt to surround you to the west, north, and south.'
+#
 @open south;s = room_95
 #
 @open east;e = room_93
+#
+@set east/exit_desc = 'Open ground is east.'
 #
 @open west;w = room_68
 #
@@ -9054,7 +9268,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_287
 #
+@set north/exit_desc = 'A city gateway is north.'
+#
 @open east;e = room_288
+#
+@set east/exit_desc = 'Squat buildings, likely more shops, lie east and west from here.'
 #
 @open west;w = room_289
 #
@@ -9062,11 +9280,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_40
 #
+@set north/exit_desc = 'The War Dance is north.'
+#
 @tel room_72
 #
 @open east;e = room_468
 #
+@set east/exit_desc = 'A passageway leads east.'
+#
 @open west;w = room_557
+#
+@set west/exit_desc = 'You may exit the pyramid to the west.'
 #
 @tel room_73
 #
@@ -9078,25 +9302,39 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_76
 #
+@set north/exit_desc = 'The north end looks deserted..'
+#
 @open south;s = room_84
 #
 @open east;e = room_77
 #
+@set east/exit_desc = 'Equipment may be obtained east.'
+#
 @open west;w = room_78
+#
+@set west/exit_desc = 'Open stalls displaying many attractive items are west.'
 #
 @tel room_76
 #
 @open north;n = room_422
 #
+@set north/exit_desc = 'To the north you see a small dark opening between the buildings..'
+#
 @open south;s = room_75
 #
 @open west;w = room_86
+#
+@set west/exit_desc = 'The rest of the square lies west, east and south.'
 #
 @tel room_77
 #
 @open east;e = room_418
 #
+@set east/exit_desc = 'A shop opening is east.'
+#
 @open west;w = room_75
+#
+@set west/exit_desc = 'You see the fountain to the west.'
 #
 @tel room_78
 #
@@ -9104,21 +9342,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_165
 #
+@set south/exit_desc = 'More stalls can be seen north and south of you along the square.'
+#
 @open east;e = room_75
+#
+@set east/exit_desc = 'The main fountain is east.'
 #
 @tel room_79
 #
 @open north;n = room_471
 #
+@set north/exit_desc = 'You are beckoned north.'
+#
 @tel room_80
 #
 @open east;e = room_201
 #
+@set east/exit_desc = 'The oracle is east.'
+#
 @open down;d;stayout = room_500
+#
+@set down/exit_desc = 'Some half hidden steps lead down.'
 #
 @tel room_81
 #
 @open north;n = room_208
+#
+@set north/exit_desc = 'Darks lands surround you.'
 #
 @open south;s = room_439
 #
@@ -9128,19 +9378,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_345
 #
+@set east/exit_desc = 'Louder noises emanate from the east.'
+#
 @open west;w = room_83
+#
+@set west/exit_desc = 'The tunnel continues west.'
 #
 @tel room_83
 #
 @open east;e = room_82
 #
+@set east/exit_desc = 'The tunnel continues east.'
+#
 @tel room_84
 #
 @open north;n = room_75
 #
+@set north/exit_desc = 'There is a fountain in the center of the square.'
+#
 @open south;s = room_260
 #
 @open west;w = room_165
+#
+@set west/exit_desc = 'To the west is the Jade Market.'
 #
 @tel room_85
 #
@@ -9148,11 +9408,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_418
 #
+@set west/exit_desc = 'More shops are west.'
+#
 @tel room_86
 #
 @open south;s = room_78
 #
+@set south/exit_desc = 'The market runs south.'
+#
 @open east;e = room_76
+#
+@set east/exit_desc = 'To the east is the Mercy Seat.'
 #
 @tel room_87
 #
@@ -9176,7 +9442,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_133
 #
+@set south/exit_desc = 'A dark tunnel has been burrowed into the rock south of you.'
+#
 @open west;w = room_138
+#
+@set west/exit_desc = 'The ledge upon which you are standing continues west.'
 #
 @open down;d = room_134
 #
@@ -9186,15 +9456,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_400
 #
+@set south/exit_desc = 'The meadows extend to the south.'
+#
 @open east;e = room_403
 #
+@set east/exit_desc = 'A path leads east up into the lower mountains.'
+#
 @open west;w = room_69
+#
+@set west/exit_desc = 'West lies the Great Forest.'
 #
 @tel room_94
 #
 @open north;n = room_97
 #
 @open south;s = room_68
+#
+@set south/exit_desc = 'A faint trail through the forest may lie south of here.'
 #
 @open east;e = room_69
 #
@@ -9204,11 +9482,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_68
 #
+@set north/exit_desc = 'A faint trail may lie north.'
+#
 @open south;s = room_20
+#
+@set south/exit_desc = 'A dense forest of Cedar trees lies south of here.'
 #
 @open east;e = room_69
 #
+@set east/exit_desc = 'Tall oaks are east.'
+#
 @open west;w = room_29
+#
+@set west/exit_desc = 'A series of low mounds rise to the west.'
 #
 @tel room_96
 #
@@ -9219,6 +9505,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open east;e = room_94
 #
 @open west;w = room_98
+#
+@set west/exit_desc = 'A gulley is west.'
 #
 @open down;d = room_716
 #
@@ -9234,29 +9522,49 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_99
 #
+@set west/exit_desc = 'A ravine is west.'
+#
 @tel room_98
 #
 @open north;n = room_99
 #
+@set north/exit_desc = 'The hint of mountains peeking through the forest can be seen north.'
+#
 @open south;s = room_27
 #
+@set south/exit_desc = 'The forest thins to the south.'
+#
 @open east;e = room_96
+#
+@set east/exit_desc = 'Thick forests lie east of here.'
 #
 @tel room_99
 #
 @open north;n = room_132
 #
+@set north/exit_desc = 'A forboding cave mouth lies north.'
+#
 @open south;s = room_98
 #
+@set south/exit_desc = 'The ravine runs into a forested gulley to the south.'
+#
 @open east;e = room_97
+#
+@set east/exit_desc = 'Thick forest is east of here.'
 #
 @tel room_100
 #
 @open north;n = room_252
 #
+@set north/exit_desc = 'Large iron doors are to the north.'
+#
 @open south;s = room_709
 #
+@set south/exit_desc = 'To the south lies the entrance to the fortress.'
+#
 @open east;e = room_103
+#
+@set east/exit_desc = 'To the east and west, an alley seems to go around the fortress.'
 #
 @open west;w = room_105
 #
@@ -9266,6 +9574,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_85
 #
+@set west/exit_desc = 'The exit to this smoky shop is west.'
+#
 @tel room_103
 #
 @open west;w = room_100
@@ -9273,6 +9583,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_104
 #
 @open south;s = room_253
+#
+@set south/exit_desc = 'A rocky shore, backed by heavy woods, if south.'
 #
 @open drown = room_57
 #
@@ -9288,15 +9600,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_107
 #
+@set west/exit_desc = 'The interior of the Druid Palace is west.'
+#
 @tel room_107
 #
 @open east;e = room_106
 #
+@set east/exit_desc = 'The main gate is east.'
+#
 @open west;w = room_108
+#
+@set west/exit_desc = 'Raucus reveling can be heard to the west.'
 #
 @tel room_108
 #
 @open north;n = room_109
+#
+@set north/exit_desc = 'A doorway leads in each of the cardinal directions.'
 #
 @open south;s = room_110
 #
@@ -9306,29 +9626,45 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_52
 #
+@set down/exit_desc = 'A narrow staircase in the corner leads down.'
+#
 @tel room_109
 #
 @open south;s = room_108
 #
+@set south/exit_desc = 'The Grande Mead Hall is south.'
+#
 @open up;u = room_111
+#
+@set up/exit_desc = 'Wooden steps lead upward against the tower wall.'
 #
 @tel room_110
 #
 @open north;n = room_108
 #
+@set north/exit_desc = 'The Grande Mead Hall is north.'
+#
 @open up;u = room_113
+#
+@set up/exit_desc = 'Some steps lead up.'
 #
 @tel room_111
 #
 @open south;s = room_112
 #
+@set south/exit_desc = 'A parapet runs atop the fortifications south and west of here.'
+#
 @open west;w = room_117
 #
 @open down;d = room_109
 #
+@set down/exit_desc = 'Steps lead down from here.'
+#
 @tel room_112
 #
 @open north;n = room_111
+#
+@set north/exit_desc = 'You may enter a tower to the north, as well as another to the south.'
 #
 @open south;s = room_113
 #
@@ -9336,13 +9672,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_112
 #
+@set north/exit_desc = 'Solid doors lead to the ramparts to the north, and to the west.'
+#
 @open west;w = room_123
 #
 @open down;d = room_110
 #
+@set down/exit_desc = 'Some steps lead down from here.'
+#
 @tel room_114
 #
 @open north;n = room_124
+#
+@set north/exit_desc = 'Hallways of wood lead in all directions from here.'
 #
 @open south;s = room_126
 #
@@ -9353,6 +9695,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_115
 #
 @open north;n = room_128
+#
+@set north/exit_desc = 'Passages of wood lead in all directions from here.'
 #
 @open south;s = room_130
 #
@@ -9366,9 +9710,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_149
 #
+@set down/exit_desc = 'A small set of stone stairs leads down.'
+#
 @tel room_117
 #
 @open east;e = room_111
+#
+@set east/exit_desc = 'You may enter a tower to the east, and to the west as well.'
 #
 @open west;w = room_118
 #
@@ -9378,17 +9726,27 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_117
 #
+@set east/exit_desc = 'You may continue on the Celtivirke south, or east, from here.'
+#
 @open down;d = room_119
+#
+@set down/exit_desc = 'Some steps lead down from here.'
 #
 @tel room_119
 #
 @open south;s = room_129
 #
+@set south/exit_desc = 'A narrow passage leads south.'
+#
 @open up;u = room_118
+#
+@set up/exit_desc = 'Some steps lead up.'
 #
 @tel room_120
 #
 @open north;n = room_118
+#
+@set north/exit_desc = 'A tower lies both north and south of here.'
 #
 @open south;s = room_121
 #
@@ -9396,19 +9754,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_120
 #
+@set north/exit_desc = 'Solid doors lead onto the Celtivirke north, and east, of here.'
+#
 @open east;e = room_123
 #
 @open down;d = room_122
+#
+@set down/exit_desc = 'Some steps lead down.'
 #
 @tel room_122
 #
 @open north;n = room_131
 #
+@set north/exit_desc = 'An open passage leads north.'
+#
 @open up;u = room_121
+#
+@set up/exit_desc = 'Some steps lead up.'
 #
 @tel room_123
 #
 @open east;e = room_113
+#
+@set east/exit_desc = 'You may enter a tower to the east, as well as another to the west.'
 #
 @open west;w = room_121
 #
@@ -9416,23 +9784,37 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_125
 #
+@set north/exit_desc = 'An door, partially ajar, is north.'
+#
 @open south;s = room_114
+#
+@set south/exit_desc = 'A hallway leads south.'
 #
 @tel room_125
 #
 @open south;s = room_124
 #
+@set south/exit_desc = 'The smell of roasting meat is south.'
+#
 @open down;d = room_51
+#
+@set down/exit_desc = 'A thin bronze ladder leads down through a trapdoor in the floor.'
 #
 @tel room_126
 #
 @open north;n = room_114
 #
+@set north/exit_desc = 'A central concourse is north.'
+#
 @open south;s = room_127
+#
+@set south/exit_desc = 'A darkened chamber is south.'
 #
 @tel room_127
 #
 @open north;n = room_126
+#
+@set north/exit_desc = 'A light is north.'
 #
 @open sleep = room_561
 #
@@ -9442,41 +9824,67 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_129
 #
+@set north/exit_desc = 'A door is north.'
+#
 @open south;s = room_115
+#
+@set south/exit_desc = 'A hallway paneled in fine wood leads south from here.'
 #
 @tel room_129
 #
 @open north;n = room_119
 #
+@set north/exit_desc = 'Greater warmth is north.'
+#
 @open south;s = room_128
+#
+@set south/exit_desc = 'The Speckled House is south.'
 #
 @tel room_130
 #
 @open north;n = room_115
 #
+@set north/exit_desc = 'A hallway paneled in fine wood leads north.'
+#
 @open south;s = room_131
+#
+@set south/exit_desc = 'A stout door of maple is south.'
 #
 @tel room_131
 #
 @open north;n = room_130
 #
+@set north/exit_desc = 'A stout maple door is north.'
+#
 @open south;s = room_122
+#
+@set south/exit_desc = 'Strange noises can be heard to the south.'
 #
 @tel room_132
 #
 @open north;n = room_133
 #
+@set north/exit_desc = 'A man-made passage leads north under the mountains.'
+#
 @open south;s = room_99
+#
+@set south/exit_desc = 'The open wilderness is south.'
 #
 @tel room_133
 #
 @open north;n = room_92
 #
+@set north/exit_desc = 'Natural caverns are north.'
+#
 @open south;s = room_132
+#
+@set south/exit_desc = 'There may be light to the south of here.'
 #
 @tel room_134
 #
 @open north;n = room_135
+#
+@set north/exit_desc = 'Passages lead north, east, and west.'
 #
 @open east;e = room_145
 #
@@ -9484,31 +9892,51 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_92
 #
+@set up/exit_desc = 'A natural staircase leads up.'
+#
 @tel room_135
 #
 @open north;n = room_136
 #
+@set north/exit_desc = 'A 10 foot high corridor leads north.'
+#
 @open south;s = room_134
+#
+@set south/exit_desc = 'Natural caverns are south.'
 #
 @tel room_136
 #
 @open north;n = room_137
 #
+@set north/exit_desc = 'A dark passage leads north.'
+#
 @open south;s = room_135
 #
+@set south/exit_desc = 'A man made corridor leads south.'
+#
 @open up;u = room_150
+#
+@set up/exit_desc = 'A narrow stair leads far up into the blackness of this monstrous room.'
 #
 @tel room_137
 #
 @open north;n = room_194
 #
+@set north/exit_desc = 'A rocky hillside, and sunlight, is north.'
+#
 @open south;s = room_136
+#
+@set south/exit_desc = 'You may go deeper under the mountains south from here.'
 #
 @tel room_138
 #
 @open east;e = room_92
 #
+@set east/exit_desc = 'A passageway leads east.'
+#
 @open west;w = room_140
+#
+@set west/exit_desc = 'The sound of rushing water can be heard to the west.'
 #
 @tel room_139
 #
@@ -9516,11 +9944,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_147
 #
+@set east/exit_desc = 'Deeper caves are east.'
+#
 @open west;w = room_146
 #
 @tel room_140
 #
 @open east;e = room_138
+#
+@set east/exit_desc = 'A natural curtain formation is east.'
 #
 @open up;u = room_142
 #
@@ -9530,7 +9962,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_193
 #
+@set north/exit_desc = 'Water flows through a small channel to the north.'
+#
 @open east;e = room_134
+#
+@set east/exit_desc = 'A passage leads east to a larger cavern.'
 #
 @open up;u = room_140
 #
@@ -9544,11 +9980,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_546
 #
+@set east/exit_desc = 'A low passage leades east.'
+#
 @open west;w = room_144
+#
+@set west/exit_desc = 'A narrow doorway is west.'
 #
 @tel room_144
 #
 @open east;e = room_143
+#
+@set east/exit_desc = 'A narrow doorway is east.'
 #
 @tel room_145
 #
@@ -9556,19 +9998,31 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_134
 #
+@set west/exit_desc = 'A passage leads west.'
+#
 @open down;d = room_146
+#
+@set down/exit_desc = 'The passageway ends in a slide of gravel, which you may descend.'
 #
 @tel room_146
 #
 @open east;e = room_139
 #
+@set east/exit_desc = 'East is a strange, dark shape.'
+#
 @open up;u = room_145
+#
+@set up/exit_desc = 'You may clamber up the mound of gravel.'
 #
 @tel room_147
 #
 @open east;e = room_11
 #
+@set east/exit_desc = 'Worked passages are east.'
+#
 @open west;w = room_139
+#
+@set west/exit_desc = 'Less forboding caverns are west.'
 #
 @tel room_148
 #
@@ -9576,65 +10030,107 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_55
 #
+@set east/exit_desc = 'A large rooot leads east to another chamber.'
+#
 @open up;u = room_116
+#
+@set up/exit_desc = 'Some stone stairs follow the growth of the tree upwards.'
 #
 @tel room_150
 #
 @open south;s = room_154
 #
+@set south/exit_desc = 'A wide corridor leads south.'
+#
 @open east;e = room_151
 #
+@set east/exit_desc = 'A small wooden door is east.'
+#
 @open down;d = room_136
+#
+@set down/exit_desc = 'A narrow stairway leads down into a cavernous expanse.'
 #
 @tel room_151
 #
 @open west;w = room_150
 #
+@set west/exit_desc = 'A small wooden door leads west.'
+#
 @open up;u = room_152
+#
+@set up/exit_desc = 'The spiral stair leads up.'
 #
 @tel room_152
 #
 @open up;u = room_153
 #
+@set up/exit_desc = 'The tower turret lies even higher.'
+#
 @open down;d = room_151
+#
+@set down/exit_desc = 'A spiral stair leads down into the tower, and into the mountain.'
 #
 @tel room_153
 #
 @open down;d = room_152
 #
+@set down/exit_desc = 'The battlements are below.'
+#
 @tel room_154
 #
 @open north;n = room_150
 #
+@set north/exit_desc = 'A wide, but dark, corridor has been cut into the rock leading north.'
+#
 @open south;s = room_155
 #
+@set south/exit_desc = 'The Warlord's mountain fortress lies south from here.'
+#
 @open west;w = room_156
+#
+@set west/exit_desc = 'Light can be seen west.'
 #
 @tel room_155
 #
 @open north;n = room_154
 #
+@set north/exit_desc = 'The exit from the Warlord's fortress is north.'
+#
 @open south;s = room_157
+#
+@set south/exit_desc = 'The innards of the warriors' den are south.'
 #
 @tel room_156
 #
 @open east;e = room_154
 #
+@set east/exit_desc = 'A passage leads east.'
+#
 @tel room_157
 #
 @open north;n = room_155
 #
+@set north/exit_desc = 'An raised portcullis lies north.'
+#
 @open south;s = room_159
+#
+@set south/exit_desc = 'Another large hall is south.'
 #
 @tel room_158
 #
 @open north;n = room_159
 #
+@set north/exit_desc = 'Another hall is north.'
+#
 @open south;s = room_160
+#
+@set south/exit_desc = 'Double doors are set in the south wall of this hall.'
 #
 @tel room_159
 #
 @open north;n = room_157
+#
+@set north/exit_desc = 'The floor of this large room is bare, but has been decorated with a mosaic of a huge crocodile.   The smell of incense is strong here, and a small fire burns in the  corner. The room is otherwise empty of objects.   A large swinging door on the north side of this room leads out onto an open veranda. Nearby rooftops are close to the veranda, and could  provide a means of egress should the need arise.'
 #
 @open south;s = room_158
 #
@@ -9642,11 +10138,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_158
 #
+@set north/exit_desc = 'Double doors are north.'
+#
 @open east;e = room_166
+#
+@set east/exit_desc = 'Passages lead east and west from here.'
 #
 @open west;w = room_161
 #
 @open up;u = room_170
+#
+@set up/exit_desc = 'The wondrous stairway leads both up and down.'
 #
 @open down;d = room_187
 #
@@ -9654,19 +10156,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_160
 #
+@set east/exit_desc = 'The concourse extends east and west.'
+#
 @open west;w = room_162
 #
 @tel room_162
 #
 @open east;e = room_161
 #
+@set east/exit_desc = 'A stately concourse is east.'
+#
 @open west;w = room_163
+#
+@set west/exit_desc = 'A stolid arch is west.'
 #
 @tel room_163
 #
 @open east;e = room_162
 #
+@set east/exit_desc = 'A stolid arch leads east.'
+#
 @open west;w = room_164
+#
+@set west/exit_desc = 'An oval opening is west.'
 #
 @open down;d = room_406
 #
@@ -9678,6 +10190,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_163
 #
+@set east/exit_desc = 'An oval passage is east.'
+#
 @open down;d = room_193
 #
 @set down/exit_effect_kind = 4
@@ -9688,13 +10202,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_78
 #
+@set north/exit_desc = 'The market runs north.'
+#
 @open east;e = room_84
 #
+@set east/exit_desc = 'Judgement square is to the east.'
+#
 @open west;w = room_573
+#
+@set west/exit_desc = 'An ornate shop is west.'
 #
 @tel room_166
 #
 @open east;e = room_167
+#
+@set east/exit_desc = 'The passage continues east and west.'
 #
 @open west;w = room_160
 #
@@ -9702,31 +10224,53 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_168
 #
+@set east/exit_desc = 'A large door leads east.'
+#
 @open west;w = room_166
+#
+@set west/exit_desc = 'A narrow passage is west.'
 #
 @tel room_168
 #
 @open west;w = room_167
 #
+@set west/exit_desc = 'A large door is west.'
+#
 @open down;d = room_169
+#
+@set down/exit_desc = 'Some steps in the corner lead down from here.'
 #
 @tel room_169
 #
 @open north;n = room_190
 #
+@set north/exit_desc = 'A gilt door is north.'
+#
 @open south;s = room_192
+#
+@set south/exit_desc = 'A wooden door is south.'
 #
 @open east;e = room_191
 #
+@set east/exit_desc = 'An iron bound door leads east.'
+#
 @open west;w = room_189
 #
+@set west/exit_desc = 'A wooden door, slightly ajar, leads west.'
+#
 @open up;u = room_168
+#
+@set up/exit_desc = 'Some steps lead up.'
 #
 @tel room_170
 #
 @open north;n = room_171
 #
+@set north/exit_desc = 'Warm air enters from a passage to the north.'
+#
 @open up;u = room_174
+#
+@set up/exit_desc = 'The wondrous stairway continues above and below you.'
 #
 @open down;d = room_160
 #
@@ -9734,11 +10278,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_172
 #
+@set north/exit_desc = 'It is warmer north.'
+#
 @open south;s = room_170
+#
+@set south/exit_desc = 'The central stairs can be seen to the south.'
 #
 @tel room_172
 #
 @open north;n = room_173
+#
+@set north/exit_desc = 'The forge lies north.'
 #
 @open south;s = room_171
 #
@@ -9756,13 +10306,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_175
 #
+@set north/exit_desc = 'Warm air currents originate from a northerly passage.'
+#
 @open south;s = room_185
 #
+@set south/exit_desc = 'Sounds can be heard south of here.'
+#
 @open down;d = room_170
+#
+@set down/exit_desc = 'The stone steps of the Grande Ascension stairway lead down from here.'
 #
 @tel room_175
 #
 @open south;s = room_174
+#
+@set south/exit_desc = 'There is a corridor leading south.'
 #
 @open down;d = room_173
 #
@@ -9774,13 +10332,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_186
 #
+@set north/exit_desc = 'An arched passageway leads north.'
+#
 @open south;s = room_177
+#
+@set south/exit_desc = 'Another passage leads south.'
 #
 @tel room_177
 #
 @open north;n = room_176
 #
+@set north/exit_desc = 'A passage leads north.'
+#
 @open east;e = room_180
+#
+@set east/exit_desc = 'You may go east or west as well.'
 #
 @open west;w = room_178
 #
@@ -9788,31 +10354,51 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_179
 #
+@set south/exit_desc = 'Another chamber is south.'
+#
 @open east;e = room_177
+#
+@set east/exit_desc = 'An open passage leads east.'
 #
 @tel room_179
 #
 @open north;n = room_178
 #
+@set north/exit_desc = 'Another chamber is north.'
+#
 @open east;e = room_182
+#
+@set east/exit_desc = 'A solid door is set in the east wall.'
 #
 @tel room_180
 #
 @open south;s = room_181
 #
+@set south/exit_desc = 'Another chamber lies south.'
+#
 @open west;w = room_177
+#
+@set west/exit_desc = 'An open doorway is west.'
 #
 @tel room_181
 #
 @open north;n = room_180
 #
+@set north/exit_desc = 'An open passage leads north.'
+#
 @open west;w = room_182
+#
+@set west/exit_desc = 'A solid door is west.'
 #
 @tel room_182
 #
 @open south;s = room_183
 #
+@set south/exit_desc = 'A thick curtain covers what might be a passage south.'
+#
 @open east;e = room_181
+#
+@set east/exit_desc = 'Stout doors have been placed in the east and west walls of this chamber.'
 #
 @open west;w = room_179
 #
@@ -9820,27 +10406,43 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_182
 #
+@set north/exit_desc = 'A thick curtain hangs over a passageway leading north.'
+#
 @open south;s = room_184
+#
+@set south/exit_desc = 'A small door is south.'
 #
 @tel room_184
 #
 @open north;n = room_183
 #
+@set north/exit_desc = 'A small door is north.'
+#
 @open rogodobob = room_458
 #
 @lock rogodobob = view:perm(see_hidden_exits)
+#
+@set rogodobob/exit_desc = 'A carved door with a large lock is set in the eastern wall.'
 #
 @tel room_185
 #
 @open north;n = room_174
 #
+@set north/exit_desc = 'An open passageway leads north.'
+#
 @open south;s = room_186
+#
+@set south/exit_desc = 'A narrow hallway leads south.'
 #
 @tel room_186
 #
 @open north;n = room_185
 #
+@set north/exit_desc = 'A narrow hallway leads north.'
+#
 @open south;s = room_176
+#
+@set south/exit_desc = 'A wide archway is south.'
 #
 @tel room_187
 #
@@ -9854,73 +10456,115 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_187
 #
+@set up/exit_desc = 'You may climb the steps leading upward.'
+#
 @tel room_189
 #
 @open east;e = room_169
 #
+@set east/exit_desc = 'A wooden door is east.'
+#
 @open west;w = room_188
+#
+@set west/exit_desc = 'More hospitable vapors are west.'
 #
 @tel room_190
 #
 @open south;s = room_169
 #
+@set south/exit_desc = 'There is a door leading south.'
+#
 @tel room_191
 #
 @open west;w = room_169
+#
+@set west/exit_desc = 'There is a door west.'
 #
 @tel room_192
 #
 @open north;n = room_169
 #
+@set north/exit_desc = 'A door is north.'
+#
 @tel room_193
 #
 @open south;s = room_141
+#
+@set south/exit_desc = 'Water flows into this room from south through an open passage.'
 #
 @tel room_194
 #
 @open south;s = room_137
 #
+@set south/exit_desc = 'A gaping, fanged mouth is cut into the mountainside south of here.'
+#
 @open down;d = room_195
+#
+@set down/exit_desc = 'You may scramble down the rocky incline to the valley below.'
 #
 @tel room_195
 #
 @open north;n = room_196
 #
+@set north/exit_desc = 'A grim road leads north out of the valley.'
+#
 @open up;u = room_194
+#
+@set up/exit_desc = 'You may scramble up a rocky incline to reach the Jaws of Stone.'
 #
 @tel room_196
 #
 @open north;n = room_197
 #
+@set north/exit_desc = 'The terrain seems to flatten out to the north.'
+#
 @open south;s = room_195
+#
+@set south/exit_desc = 'A more pleasant valley is south.'
 #
 @tel room_197
 #
 @open south;s = room_196
 #
+@set south/exit_desc = 'A grim road leads south.'
+#
 @open down;d = room_198
+#
+@set down/exit_desc = 'A steep trail leads down the face of the escarpment.'
 #
 @tel room_198
 #
 @open north;n = room_199
 #
+@set north/exit_desc = 'A vast plain of marble extends north and east of here.'
+#
 @open east;e = room_200
 #
 @open up;u = room_197
+#
+@set up/exit_desc = 'A steep trail leads up the escarpment face.'
 #
 @tel room_199
 #
 @open south;s = room_198
 #
+@set south/exit_desc = 'The Marble Plain extends east and south of here.'
+#
 @open east;e = room_200
 #
 @open west;w = room_201
+#
+@set west/exit_desc = 'Some buildings can be seen rising from the plain to the west of here.'
 #
 @tel room_200
 #
 @open north;n = room_199
 #
+@set north/exit_desc = 'The Marble plain extends north and west.'
+#
 @open east;e = room_202
+#
+@set east/exit_desc = 'A gray land is east.'
 #
 @open west;w = room_198
 #
@@ -9928,25 +10572,43 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_199
 #
+@set east/exit_desc = 'A vast plain of marble is east.'
+#
 @open west;w = room_80
+#
+@set west/exit_desc = 'Some taller builders are west.'
 #
 @tel room_202
 #
 @open north;n = room_205
 #
+@set north/exit_desc = 'Snow fields and glaciers are north.'
+#
 @open south;s = room_206
+#
+@set south/exit_desc = 'The mountains lie south.'
 #
 @open east;e = room_203
 #
+@set east/exit_desc = 'Flatlands are east.'
+#
 @open west;w = room_200
+#
+@set west/exit_desc = 'A flat expanse of stone is west.'
 #
 @tel room_203
 #
 @open north;n = room_205
 #
+@set north/exit_desc = 'A white landscape is north.'
+#
 @open south;s = room_206
 #
+@set south/exit_desc = 'Mountains are south.'
+#
 @open east;e = room_204
+#
+@set east/exit_desc = 'Flatlands lie east and west.'
 #
 @open west;w = room_202
 #
@@ -9954,17 +10616,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_205
 #
+@set north/exit_desc = 'Snow fields are north.'
+#
 @open south;s = room_206
+#
+@set south/exit_desc = 'You notice that there are fewer houses in this area.  There are a few public houses here that are frequented by those who disdain the more expensive taverns in the heart of the city.'
 #
 @open east;e = room_207
 #
+@set east/exit_desc = 'Dark plains are east.'
+#
 @open west;w = room_203
+#
+@set west/exit_desc = 'A great salt plain can be seen west.'
 #
 @tel room_205
 #
 @open north;n = room_407
 #
+@set north/exit_desc = 'Glaciers can be seen to the north.'
+#
 @open south;s = room_203
+#
+@set south/exit_desc = 'More hospitable lands are south, east, and west.'
 #
 @open east;e = room_204
 #
@@ -9974,57 +10648,95 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_203
 #
+@set north/exit_desc = 'A salt flat is north of here.'
+#
 @open east;e = room_204
+#
+@set east/exit_desc = 'Desolate wastes extend to the east and west of here.'
 #
 @open west;w = room_202
 #
 @open up;u = room_560
 #
+@set up/exit_desc = 'A steep path threads its way up the foothills.'
+#
 @tel room_207
 #
 @open north;n = room_209
 #
+@set north/exit_desc = 'Black earth lies both north and east from here.'
+#
 @open south;s = room_81
+#
+@set south/exit_desc = 'Gloomy hills are south.'
 #
 @open east;e = room_208
 #
 @open west;w = room_204
 #
+@set west/exit_desc = 'Tundra lies west.'
+#
 @tel room_208
 #
 @open north;n = room_214
 #
+@set north/exit_desc = 'An un-earthly tower lies north.'
+#
 @open south;s = room_81
+#
+@set south/exit_desc = 'Gloomy hills are south.'
 #
 @open east;e = room_210
 #
+@set east/exit_desc = 'Winds howl over the lofty battlements above you as you look up towards a pale sky. The height of the surrounding stone prevents you from seeing the city around you, and despite your height above the ground, you feel as though you are imprisoned in a deep well. '
+#
 @open west;w = room_207
+#
+@set west/exit_desc = 'A brighter landscape may lie west.'
 #
 @tel room_209
 #
 @open north;n = room_211
 #
+@set north/exit_desc = 'Plains of Ash are north.'
+#
 @open south;s = room_207
 #
+@set south/exit_desc = 'A less bleak plain may be south.'
+#
 @open east;e = room_214
+#
+@set east/exit_desc = 'A monstrous tower of inconceivable dimension and orientation is east.'
 #
 @tel room_210
 #
 @open north;n = room_211
 #
+@set north/exit_desc = 'Ashen Wastes extend north and south of here.'
+#
 @open south;s = room_208
 #
 @open east;e = room_213
 #
+@set east/exit_desc = 'Snow fields are east.'
+#
 @open west;w = room_214
+#
+@set west/exit_desc = 'A highly improbable structure is west.'
 #
 @tel room_211
 #
 @open north;n = room_212
 #
+@set north/exit_desc = 'Glaciers can be seen north of here.'
+#
 @open south;s = room_214
 #
+@set south/exit_desc = 'A giant structure of unbelievable construction is south.'
+#
 @open east;e = room_210
+#
+@set east/exit_desc = 'Blackened expanses lie both east and west from here.'
 #
 @open west;w = room_209
 #
@@ -10032,13 +10744,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_211
 #
+@set south/exit_desc = 'Black ash is south.'
+#
 @open east;e = room_213
 #
+@set east/exit_desc = 'A white landscape is east.'
+#
 @open west;w = room_407
+#
+@set west/exit_desc = 'Glaciers can be seen west of here.'
 #
 @tel room_213
 #
 @open north;n = room_212
+#
+@set north/exit_desc = 'The grip of ice lies to the north, south, and east.'
 #
 @open south;s = room_213
 #
@@ -10046,9 +10766,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_210
 #
+@set west/exit_desc = 'A black horizon is west.'
+#
 @tel room_214
 #
 @open north;n = room_211
+#
+@set north/exit_desc = 'A wasteland of Ash and igneous rock lie all around this structure.'
 #
 @open south;s = room_208
 #
@@ -10062,7 +10786,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_216
 #
+@set north/exit_desc = 'A passage leads north.'
+#
 @open south;s = room_452
+#
+@set south/exit_desc = 'A small shop is south.'
 #
 @open down;d = room_214
 #
@@ -10070,13 +10798,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_215
 #
+@set south/exit_desc = 'A brightly lit room is south.'
+#
 @open up;u = room_217
+#
+@set up/exit_desc = 'You may climb up the rope.'
 #
 @tel room_217
 #
 @open south;s = room_218
 #
+@set south/exit_desc = 'A landing and open passage are south.'
+#
 @open up;u = room_236
+#
+@set up/exit_desc = 'The rope shaft extends above and below you.'
 #
 @open down;d = room_216
 #
@@ -10084,7 +10820,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_217
 #
+@set north/exit_desc = 'A dark opening reveals a rope dangling down a shaft to the north.'
+#
 @open east;e = room_219
+#
+@set east/exit_desc = 'Store-rooms of reagents lies to the east and west.'
 #
 @open west;w = room_221
 #
@@ -10094,37 +10834,61 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_218
 #
+@set west/exit_desc = 'You may continue east or west.'
+#
 @tel room_220
 #
 @open east;e = room_224
 #
+@set east/exit_desc = 'A closed door is east.'
+#
 @open west;w = room_219
+#
+@set west/exit_desc = 'Another reagent room is west.'
 #
 @tel room_221
 #
 @open east;e = room_218
 #
+@set east/exit_desc = 'A large chamber is east.'
+#
 @open west;w = room_222
+#
+@set west/exit_desc = 'A pungent odor wafes over from the west.'
 #
 @tel room_222
 #
 @open east;e = room_221
 #
+@set east/exit_desc = 'A doorway leads east.'
+#
 @open west;w = room_223
+#
+@set west/exit_desc = 'A larger chamber is west.'
 #
 @tel room_223
 #
 @open east;e = room_222
 #
+@set east/exit_desc = 'Sulfurous fumes drift over from the east.'
+#
 @open west;w = room_225
+#
+@set west/exit_desc = 'An open passage leads west.'
 #
 @tel room_224
 #
 @open east;e = room_572
 #
+@set east/exit_desc = 'A passage leads east.'
+#
 @open west;w = room_220
 #
+@set west/exit_desc = 'A closed door is west.'
+#
 @open up;u = room_226
+#
+@set up/exit_desc = 'Deathly black steps lead both up and down from this room.'
 #
 @open down;d = room_308
 #
@@ -10132,11 +10896,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_223
 #
+@set east/exit_desc = 'You have entered the eastern gate of Tai-Tastigon. The gate affords an impressive view of the great Ebonbane mountains rising over the the Vale. This gate, like the others of the city, have fallen to ruin because of the relative peace throughout the land. Defenses have been neglected by those secure in the maze that protects them.  The gate holds a worn inscription:             Peace to all who pass through me!'
+#
 @open up;u = room_231
+#
+@set up/exit_desc = 'You pass through the eastern gate into the City of Gods... '
 #
 @tel room_226
 #
 @open up;u = room_227
+#
+@set up/exit_desc = 'The spiral of blackness leads both up and down.'
 #
 @open down;d = room_224
 #
@@ -10144,15 +10914,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_229
 #
+@set south/exit_desc = 'A low, open passage leads south.'
+#
 @open hermathya = room_228
 #
 @lock hermathya = view:perm(see_hidden_exits)
 #
+@set hermathya/exit_desc = 'A heavy door of blackened wood lies east.'
+#
 @open down;d = room_226
+#
+@set down/exit_desc = 'Deathly black steps lead down from here.'
 #
 @tel room_228
 #
 @open west;w = room_227
+#
+@set west/exit_desc = 'Upon going west, you put yourself at the mercy of the outsiders.'
 #
 @set west/exit_effect_kind = 4
 #
@@ -10162,17 +10940,27 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_227
 #
+@set north/exit_desc = 'A low open passage leads north.'
+#
 @open south;s = room_230
+#
+@set south/exit_desc = 'A small door emblazened with a red glyph leads south.'
 #
 @tel room_230
 #
 @open north;n = room_229
 #
+@set north/exit_desc = 'A small door leads north.'
+#
 @tel room_231
 #
 @open east;e = room_234
 #
+@set east/exit_desc = 'A walkway intercepts the stairs from the east.'
+#
 @open up;u = room_250
+#
+@set up/exit_desc = 'The steps continue up and down.'
 #
 @open down;d = room_225
 #
@@ -10180,11 +10968,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_235
 #
+@set east/exit_desc = 'The walkway continues east and west.'
+#
 @open west;w = room_233
 #
 @tel room_233
 #
 @open east;e = room_232
+#
+@set east/exit_desc = 'The walkway continues east and west.'
 #
 @open west;w = room_234
 #
@@ -10192,77 +10984,127 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_233
 #
+@set east/exit_desc = 'The walkway continues east and west.'
+#
 @open west;w = room_231
 #
 @tel room_235
 #
 @open north;n = room_236
 #
+@set north/exit_desc = 'A wooden door is north.'
+#
 @open west;w = room_232
+#
+@set west/exit_desc = 'A walkway leads west.'
 #
 @tel room_236
 #
 @open north;n = room_238
 #
+@set north/exit_desc = 'An open passage leads north.'
+#
 @open south;s = room_235
+#
+@set south/exit_desc = 'A wooden door is south.'
 #
 @open east;e = room_237
 #
+@set east/exit_desc = 'A small wooden door is east.'
+#
 @open down;d = room_217
+#
+@set down/exit_desc = 'You may climb down the rope.'
 #
 @tel room_237
 #
 @open west;w = room_236
 #
+@set west/exit_desc = 'A small wooden door leads west.'
+#
 @tel room_238
 #
 @open north;n = room_239
 #
+@set north/exit_desc = 'An open door is north.'
+#
 @open south;s = room_236
+#
+@set south/exit_desc = 'An open passage is south.'
 #
 @tel room_239
 #
 @open south;s = room_238
 #
+@set south/exit_desc = 'An open door is south.'
+#
 @open up;u = room_240
+#
+@set up/exit_desc = 'Steps of milky white stone lead up.'
 #
 @tel room_240
 #
 @open south;s = room_241
 #
+@set south/exit_desc = 'A door of white wood is south.'
+#
 @open down;d = room_239
+#
+@set down/exit_desc = 'Milky white steps lead down from here.'
 #
 @tel room_241
 #
 @open north;n = room_240
 #
+@set north/exit_desc = 'A door of white wood is north.'
+#
 @open south;s = room_242
+#
+@set south/exit_desc = 'The entrance to a gallery of sorts is south.'
 #
 @tel room_242
 #
 @open north;n = room_241
 #
+@set north/exit_desc = 'An open passage leads north.'
+#
 @open south;s = room_243
+#
+@set south/exit_desc = 'The gallery continues south.'
 #
 @tel room_243
 #
 @open north;n = room_242
 #
+@set north/exit_desc = '         '
+#
 @open south;s = room_244
+#
+@set south/exit_desc = 'An open passage leads south.'
 #
 @tel room_244
 #
 @open north;n = room_243
 #
+@set north/exit_desc = 'An open passage leads north.'
+#
 @open south;s = room_245
+#
+@set south/exit_desc = 'A stout door is south.'
 #
 @open east;e = room_374
 #
+@set east/exit_desc = 'A large stone door is east.'
+#
 @open west;w = room_247
+#
+@set west/exit_desc = 'An open passage leads west.'
 #
 @tel room_245
 #
 @open north;n = room_244
+#
+@set north/exit_desc = 'A stout door is north.'
 #
 @open south;s = room_246
 #
@@ -10270,15 +11112,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_245
 #
+@set north/exit_desc = 'A small, sliding door is north.'
+#
 @tel room_247
 #
 @open east;e = room_244
 #
+@set east/exit_desc = 'An open doorway leads east.'
+#
 @open west;w = room_248
+#
+@set west/exit_desc = 'There is a solid wooden door west of here.'
 #
 @tel room_248
 #
 @open east;e = room_247
+#
+@set east/exit_desc = 'There is a stout door to both the east and west.'
 #
 @open west;w = room_249
 #
@@ -10286,21 +11136,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_248
 #
+@set east/exit_desc = 'A stout door is east.'
+#
 @open west;w = room_250
+#
+@set west/exit_desc = 'There is an open passage west.'
 #
 @tel room_250
 #
 @open east;e = room_249
 #
+@set east/exit_desc = 'An open passage is east.'
+#
 @open down;d = room_231
+#
+@set down/exit_desc = 'Steps lead down.'
 #
 @tel room_251
 #
 @open north;n = room_15
 #
+@set north/exit_desc = 'Fens are north of here.'
+#
 @open south;s = room_25
 #
 @open east;e = room_251
+#
+@set east/exit_desc = 'Dark forest is all around.'
 #
 @open west;w = room_251
 #
@@ -10308,23 +11170,35 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_732
 #
+@set north/exit_desc = 'There is a locked door leading north into the fortress.'
+#
 @open south;s = room_100
+#
+@set south/exit_desc = 'To the south lies the inner courtyard.'
 #
 @tel room_253
 #
 @open north;n = room_104
 #
+@set north/exit_desc = 'A calm, deep lake is north.'
+#
 @open east;e = room_254
+#
+@set east/exit_desc = 'Dark trees are east.'
 #
 @tel room_254
 #
 @open east;e = room_256
+#
+@set east/exit_desc = 'Dark woods are all around.'
 #
 @open west;w = room_253
 #
 @tel room_255
 #
 @open north;n = room_255
+#
+@set north/exit_desc = 'Strange trees extend in all directions.'
 #
 @open south;s = room_255
 #
@@ -10336,11 +11210,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_255
 #
+@set east/exit_desc = 'This place is spooky.'
+#
 @open west;w = room_254
 #
 @tel room_257
 #
 @open north;n = room_725
+#
+@set north/exit_desc = 'The gallery runs to the north and south.'
 #
 @open south;s = room_570
 #
@@ -10352,17 +11230,27 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_542
 #
+@set north/exit_desc = 'The Holy Basilica is north.'
+#
 @open south;s = room_426
+#
+@set south/exit_desc = 'The old Wall is south.'
 #
 @tel room_260
 #
 @open north;n = room_84
 #
+@set north/exit_desc = 'There is an opening between the houses north.'
+#
 @open south;s = room_433
+#
+@set south/exit_desc = 'The road continues south.'
 #
 @tel room_261
 #
 @open south;s = room_438
+#
+@set south/exit_desc = 'The common room of the inn is south.'
 #
 @open climb = room_262
 #
@@ -10384,7 +11272,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_398
 #
+@set west/exit_desc = 'A stout door leads west.'
+#
 @open down;d = room_261
+#
+@set down/exit_desc = 'You can climb down the chimney.'
 #
 @tel room_263
 #
@@ -10396,13 +11288,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_266
 #
+@set east/exit_desc = 'This glacial crack continues east and west.'
+#
 @open west;w = room_24
 #
 @tel room_266
 #
 @open north;n = room_272
 #
+@set north/exit_desc = 'A stone corridor leads north.'
+#
 @open west;w = room_265
+#
+@set west/exit_desc = 'A crack in the ice is west.'
 #
 @tel room_267
 #
@@ -10452,13 +11350,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_273
 #
+@set north/exit_desc = 'A brighter chamber is north.'
+#
 @open south;s = room_266
+#
+@set south/exit_desc = 'A narrow passage leads south.'
 #
 @tel room_273
 #
 @open south;s = room_272
 #
+@set south/exit_desc = 'A larger chamber is south.'
+#
 @open west;w = room_460
+#
+@set west/exit_desc = 'Falling snow can be seen west.'
 #
 @tel room_274
 #
@@ -10466,9 +11372,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_317
 #
+@set up/exit_desc = 'You may clamber up out of this chamber.'
+#
 @tel room_276
 #
 @open north;n = room_277
+#
+@set north/exit_desc = 'The alley runs north and south of here.'
 #
 @open south;s = room_287
 #
@@ -10476,53 +11386,89 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_280
 #
+@set north/exit_desc = 'A blackened structure lies north.'
+#
 @open south;s = room_276
 #
+@set south/exit_desc = 'A dark alleyway leads south.'
+#
 @open east;e = room_279
+#
+@set east/exit_desc = 'The forum continues east for a bit.'
 #
 @tel room_278
 #
 @open north;n = room_291
 #
+@set north/exit_desc = 'An open door leads north.'
+#
 @open south;s = room_279
+#
+@set south/exit_desc = 'You may exit the structure to the south.'
 #
 @tel room_279
 #
 @open north;n = room_278
 #
+@set north/exit_desc = 'A guild structure lies to the north, and to the south.'
+#
 @open south;s = room_290
 #
 @open east;e = room_298
 #
+@set east/exit_desc = 'A narrow road leads east.'
+#
 @open west;w = room_277
+#
+@set west/exit_desc = 'The forum continues west.'
 #
 @tel room_280
 #
 @open south;s = room_277
 #
+@set south/exit_desc = 'A forum is south.'
+#
 @tel room_281
 #
 @open north;n = room_60
+#
+@set north/exit_desc = 'You may exit this place to the north.'
 #
 @tel room_282
 #
 @open north;n = room_283
 #
+@set north/exit_desc = 'A park of some sort is north.'
+#
 @open south;s = room_58
+#
+@set south/exit_desc = 'The main square of the city is south.'
 #
 @open east;e = room_293
 #
+@set east/exit_desc = 'A graveyard lies east.'
+#
 @open west;w = room_299
+#
+@set west/exit_desc = 'A small marketplace is west.'
 #
 @tel room_283
 #
 @open north;n = room_306
 #
+@set north/exit_desc = 'North lies a wall of rock.'
+#
 @open south;s = room_282
+#
+@set south/exit_desc = 'South lies the heart of the town.'
 #
 @open east;e = room_294
 #
+@set east/exit_desc = 'A temple of some sort is east.'
+#
 @open west;w = room_284
+#
+@set west/exit_desc = 'A building is west.'
 #
 @tel room_284
 #
@@ -10530,25 +11476,41 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_285
 #
+@set south/exit_desc = 'A nearly intact room is south.'
+#
 @open east;e = room_283
 #
+@set east/exit_desc = 'The exit of the building is east.'
+#
 @open west;w = room_286
+#
+@set west/exit_desc = 'A collapsed wing of this library is west.'
 #
 @tel room_285
 #
 @open north;n = room_284
 #
+@set north/exit_desc = 'The main section of the library is north.'
+#
 @tel room_286
 #
 @open east;e = room_284
+#
+@set east/exit_desc = 'You may pick your way back east.'
 #
 @tel room_287
 #
 @open north;n = room_276
 #
+@set north/exit_desc = 'A dark alley leads north.'
+#
 @open south;s = room_70
 #
+@set south/exit_desc = 'A forum is south.'
+#
 @open east;e = room_62
+#
+@set east/exit_desc = 'A main thoroughfare leads east.'
 #
 @open alfrion = room_584
 #
@@ -10558,53 +11520,83 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_70
 #
+@set west/exit_desc = 'You may exit this building to the west.'
+#
 @tel room_289
 #
 @open east;e = room_70
+#
+@set east/exit_desc = 'You may exit this room to the east.'
 #
 @tel room_290
 #
 @open north;n = room_279
 #
+@set north/exit_desc = 'The guild forum is north.'
+#
 @tel room_291
 #
 @open south;s = room_278
 #
+@set south/exit_desc = 'A door leads south.'
+#
 @open up;u = room_292
+#
+@set up/exit_desc = 'Some steps survive which lead up.'
 #
 @tel room_292
 #
 @open down;d = room_291
 #
+@set down/exit_desc = 'Some steps lead down.'
+#
 @tel room_293
 #
 @open north;n = room_294
 #
+@set north/exit_desc = 'A temple of some sort is north.'
+#
 @open west;w = room_282
+#
+@set west/exit_desc = 'An open promenade is west.'
 #
 @tel room_294
 #
 @open south;s = room_293
 #
+@set south/exit_desc = 'The temple's graveyard is south.'
+#
 @open west;w = room_283
+#
+@set west/exit_desc = 'An open field, or perhaps a park, lies west.'
 #
 @tel room_295
 #
 @open north;n = room_58
 #
+@set north/exit_desc = 'The city's ancient square lies north.'
+#
 @open south;s = room_296
+#
+@set south/exit_desc = 'The road continues south.'
 #
 @tel room_296
 #
 @open north;n = room_295
 #
+@set north/exit_desc = 'The road continues north and south.'
+#
 @open south;s = room_303
 #
 @open east;e = room_297
 #
+@set east/exit_desc = 'A large building lies east.'
+#
 @tel room_297
 #
 @open south;s = room_304
+#
+@set south/exit_desc = 'You may exit this building to either the west or south.'
 #
 @open west;w = room_296
 #
@@ -10612,15 +11604,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_300
 #
+@set south/exit_desc = 'A narrow lane leads south from here.'
+#
 @open east;e = room_299
 #
+@set east/exit_desc = 'A small marketplace is east.'
+#
 @open west;w = room_279
+#
+@set west/exit_desc = 'A wide forum is west.'
 #
 @tel room_299
 #
 @open south;s = room_302
 #
+@set south/exit_desc = 'A wide path leads south to the ampitheater.'
+#
 @open east;e = room_282
+#
+@set east/exit_desc = 'A minor street runs east and west from this area.'
 #
 @open west;w = room_298
 #
@@ -10628,15 +11630,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_298
 #
+@set north/exit_desc = 'This road runs north annd south.'
+#
 @open south;s = room_61
 #
 @tel room_301
 #
 @open south;s = room_62
 #
+@set south/exit_desc = 'You may exit the building to the south.'
+#
 @tel room_302
 #
 @open north;n = room_299
+#
+@set north/exit_desc = 'An exit from the ampitheater lies to the north and south.'
 #
 @open south;s = room_60
 #
@@ -10644,13 +11652,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_296
 #
+@set north/exit_desc = 'A narrow road is north.'
+#
 @open east;e = room_304
+#
+@set east/exit_desc = 'This district continues to the east.'
 #
 @tel room_304
 #
 @open north;n = room_297
 #
+@set north/exit_desc = 'Rubble lies strewn across the exit to the east.'
+#
 @open west;w = room_303
+#
+@set west/exit_desc = 'This district continues to the west.'
 #
 @tel room_305
 #
@@ -10664,21 +11680,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_283
 #
+@set south/exit_desc = 'south lies a large open expanse, perhaps once a park.'
+#
 @open east;e = room_307
+#
+@set east/exit_desc = 'What looks like a governmental building lies east.'
 #
 @tel room_307
 #
 @open west;w = room_306
 #
+@set west/exit_desc = 'You may exit this structure to the west.'
+#
 @tel room_308
 #
 @open south;s = room_312
 #
+@set south/exit_desc = 'A black corridor leads south.'
+#
 @open up;u = room_224
+#
+@set up/exit_desc = 'Black steps lead up.'
 #
 @tel room_309
 #
 @open north;n = room_310
+#
+@set north/exit_desc = 'An open passage leads north.'
 #
 @open druidslayer = room_284
 #
@@ -10688,11 +11716,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_309
 #
+@set south/exit_desc = 'A narrow passage is south.'
+#
 @open up;u = room_311
+#
+@set up/exit_desc = 'A black shaft is up from here, from which a rope dangles.'
 #
 @tel room_311
 #
 @open up;u = room_312
+#
+@set up/exit_desc = 'Thick, acrid smoke fills this room. At first you try to bend low beneath it, but this smoke clings tightly to the floor, smothering you in its weight. At length you notice a narrow passage through the haze towards the far exit. It seems to be the sole escape from the choking morass which clogs your lungs.'
 #
 @open down;d = room_310
 #
@@ -10700,11 +11734,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_308
 #
+@set north/exit_desc = 'A dark corridor leads north.'
+#
 @open down;d = room_311
+#
+@set down/exit_desc = 'The Demon's shaft lies like a black orafice waiting to swallow you whole.'
 #
 @tel room_313
 #
 @open north;n = room_314
+#
+@set north/exit_desc = 'The tunnel continues north and south.'
 #
 @open south;s = room_11
 #
@@ -10712,23 +11752,37 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_315
 #
+@set north/exit_desc = 'Dark unknown lies north beyond the webs.'
+#
 @open south;s = room_313
+#
+@set south/exit_desc = 'The tunnel continues south.'
 #
 @tel room_315
 #
 @open north;n = room_316
 #
+@set north/exit_desc = 'A passage leads north.'
+#
 @open south;s = room_314
+#
+@set south/exit_desc = 'What looks like a solid wall of thick fog lies south.'
 #
 @tel room_316
 #
 @open south;s = room_315
 #
+@set south/exit_desc = 'An open passage leads south.'
+#
 @open west;w = room_317
+#
+@set west/exit_desc = 'A side tunnel is west.'
 #
 @tel room_317
 #
 @open north;n = room_318
+#
+@set north/exit_desc = 'Passages lead north, west, and east from this cavern.'
 #
 @open east;e = room_316
 #
@@ -10740,11 +11794,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_319
 #
+@set north/exit_desc = 'Fresher air likely lies either north or south from here.'
+#
 @open south;s = room_317
 #
 @tel room_319
 #
 @open south;s = room_318
+#
+@set south/exit_desc = 'A foul stench can be sensed coming from the south.'
 #
 @tel room_320
 #
@@ -10760,29 +11818,49 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_317
 #
+@set east/exit_desc = 'A passage leads east.'
+#
 @open ghobabob = room_366
 #
 @lock ghobabob = view:perm(see_hidden_exits)
+#
+@set ghobabob/exit_desc = 'An immense wave of heat shimmers west.'
 #
 @tel room_321
 #
 @open north;n = room_331
 #
+@set north/exit_desc = 'A bridge spans a dry riverbed to the north.'
+#
 @open south;s = room_322
+#
+@set south/exit_desc = 'The clearing continues south.'
 #
 @open east;e = room_325
 #
+@set east/exit_desc = 'A blackened grove is east.'
+#
 @open west;w = room_323
 #
+@set west/exit_desc = 'An open doorway is west.'
+#
 @open up;u = room_337
+#
+@set up/exit_desc = 'A frail vine, which you might try to climb, hangs down from above.'
 #
 @tel room_322
 #
 @open north;n = room_321
 #
+@set north/exit_desc = 'The center of the village is north.'
+#
 @open south;s = room_329
 #
+@set south/exit_desc = 'The remains of a woodenn building are south.'
+#
 @open east;e = room_324
+#
+@set east/exit_desc = 'The remains of surrounding trees are both east and west of here.'
 #
 @open west;w = room_326
 #
@@ -10790,9 +11868,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e;exit = room_321
 #
+@set east/exit_desc = 'You may exit the shop to the east.'
+#
 @tel room_324
 #
 @open north;n = room_325
+#
+@set north/exit_desc = 'More blackened trees are north.'
 #
 @open blzeebub = room_324
 #
@@ -10804,53 +11886,87 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_328
 #
+@set east/exit_desc = 'A faint path leads east.'
+#
 @open west;w = room_322
+#
+@set west/exit_desc = 'A clearing is west.'
 #
 @tel room_325
 #
 @open south;s = room_324
 #
+@set south/exit_desc = 'More blackened vegetation lies south.'
+#
 @open west;w = room_321
+#
+@set west/exit_desc = 'The center of the village lies west.'
 #
 @tel room_326
 #
 @open east;e = room_322
 #
+@set east/exit_desc = 'A clearing is east.'
+#
 @open west;w = room_327
+#
+@set west/exit_desc = 'A faint trail leads west.'
 #
 @tel room_327
 #
 @open east;e = room_326
 #
+@set east/exit_desc = 'The only exit lies east, towards more sorry-looking vegetation.'
+#
 @tel room_328
 #
 @open west;w = room_324
+#
+@set west/exit_desc = 'A path leads west.'
 #
 @tel room_329
 #
 @open north;n = room_322
 #
+@set north/exit_desc = 'You may exit this building to the north.'
+#
 @open east;e = room_333
+#
+@set east/exit_desc = 'There is a wooden archway to the east, and to the west.'
 #
 @open west;w = room_335
 #
 @open up;u = room_330
 #
+@set up/exit_desc = 'A wooden spiral staircase leads up.'
+#
 @tel room_330
 #
 @open north;n = room_336
 #
+@set north/exit_desc = 'You may jump on to a large dead branch to the north.'
+#
 @open east;e = room_339
 #
+@set east/exit_desc = 'A door, slightly blocked by fallen limbs, leads east.'
+#
 @open down;d = room_329
+#
+@set down/exit_desc = 'Wooden steps lead down.'
 #
 @tel room_331
 #
 @open north;n = room_344
 #
+@set north/exit_desc = 'Wilted and dead trees are north.'
+#
 @open south;s = room_321
 #
+@set south/exit_desc = 'The bridge spans the riverbed to the south.'
+#
 @open down;d = room_332
+#
+@set down/exit_desc = 'You may climb down a path to the riverbed.'
 #
 @tel room_332
 #
@@ -10860,37 +11976,59 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_331
 #
+@set up/exit_desc = 'You may climb up out of the riverbed.'
+#
 @tel room_333
 #
 @open east;e = room_334
 #
+@set east/exit_desc = 'A large iron door, mostly hanging off its hinges, is east.'
+#
 @open west;w = room_329
+#
+@set west/exit_desc = 'The main room of the library is west.'
 #
 @tel room_334
 #
 @open west;w = room_333
 #
+@set west/exit_desc = 'An iron door, off its hinges, leads west.'
+#
 @tel room_335
 #
 @open east;e = room_329
+#
+@set east/exit_desc = 'The main room of the library is east.'
 #
 @tel room_336
 #
 @open north;n = room_337
 #
+@set north/exit_desc = 'A shaky wooden platform in the trees is north.'
+#
 @open south;s = room_330
+#
+@set south/exit_desc = 'The upper floor of a wooden building is south.'
 #
 @tel room_337
 #
 @open north;n = room_340
 #
+@set north/exit_desc = 'Thinning branches are north of here.'
+#
 @open south;s = room_336
 #
+@set south/exit_desc = 'A dead branch leads south from this platform.'
+#
 @open east;e = room_341
+#
+@set east/exit_desc = 'Blackened treetops are to the east.'
 #
 @open up;u = room_338
 #
 @open down;d = room_321
+#
+@set down/exit_desc = 'An old vine hangs down from here.'
 #
 @tel room_338
 #
@@ -10900,27 +12038,43 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_330
 #
+@set west/exit_desc = 'A door leads west.'
+#
 @tel room_340
 #
 @open south;s = room_337
 #
+@set south/exit_desc = 'An unsteady platform is south.'
+#
 @open east;e = room_342
+#
+@set east/exit_desc = 'A crumbling platform in the trees is east.'
 #
 @tel room_341
 #
 @open north;n = room_342
 #
+@set north/exit_desc = 'A crumbling platform in the treetops is north.'
+#
 @open west;w = room_337
+#
+@set west/exit_desc = 'An unstable looking, but intacty, platform is west.'
 #
 @tel room_342
 #
 @open south;s = room_341
 #
+@set south/exit_desc = 'Blackened treetops are south of here.'
+#
 @open west;w = room_340
+#
+@set west/exit_desc = 'Thinning branches are west.'
 #
 @tel room_343
 #
 @open up;u = room_54
+#
+@set up/exit_desc = 'Steps lead up and down.'
 #
 @open down;d = room_344
 #
@@ -10928,11 +12082,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_331
 #
+@set south/exit_desc = 'You can spy a bridge to the south.'
+#
 @open up;u = room_343
 #
 @tel room_345
 #
 @open east;e = room_346
+#
+@set east/exit_desc = 'A passage of stone, clearly made by humanoid hands, lies east.'
 #
 @set east/exit_effect_kind = 11
 #
@@ -10940,15 +12098,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_82
 #
+@set west/exit_desc = 'A burrowed tunnel leads west.'
+#
 @tel room_346
 #
 @open east;e = room_347
 #
+@set east/exit_desc = 'A larger chamber is east.'
+#
 @open west;w = room_345
+#
+@set west/exit_desc = 'Rougher tunnels are west.'
 #
 @tel room_347
 #
 @open north;n = room_350
+#
+@set north/exit_desc = 'A short corridor extends to the north, as well as one to the east and south.'
 #
 @open south;s = room_348
 #
@@ -10956,29 +12122,47 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_346
 #
+@set west/exit_desc = 'A long corridor extends west.'
+#
 @tel room_348
 #
 @open north;n = room_347
 #
+@set north/exit_desc = 'A short passage leads north.'
+#
 @open down;d = room_356
+#
+@set down/exit_desc = 'The steps continue down from here.'
 #
 @tel room_349
 #
 @open west;w = room_347
 #
+@set west/exit_desc = 'A corridor leads west.'
+#
 @open down;d = room_351
+#
+@set down/exit_desc = 'Some narrow steps lead down.'
 #
 @tel room_350
 #
 @open south;s = room_347
 #
+@set south/exit_desc = 'A corridor leads south.'
+#
 @open down;d = room_364
+#
+@set down/exit_desc = 'The steps lead down from here.'
 #
 @tel room_351
 #
 @open east;e = room_353
 #
+@set east/exit_desc = 'A dark passage is east.'
+#
 @open up;u = room_349
+#
+@set up/exit_desc = 'Some narrow steps lead up.'
 #
 @tel room_352
 #
@@ -10987,6 +12171,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_353
 #
 @open east;e = room_355
+#
+@set east/exit_desc = 'The dark passage leads both east and west.'
 #
 @set east/exit_effect_kind = 11
 #
@@ -10998,6 +12184,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_355
 #
+@set west/exit_desc = 'An archway is west.'
+#
 @open asmodeus = room_676
 #
 @lock asmodeus = view:perm(see_hidden_exits)
@@ -11006,27 +12194,43 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_359
 #
+@set north/exit_desc = 'Corridors lead north and south from here.'
+#
 @open south;s = room_362
 #
 @open east;e = room_354
 #
+@set east/exit_desc = 'An archway is east.'
+#
 @open west;w = room_353
+#
+@set west/exit_desc = 'A narrow passage of darkness leads west.'
 #
 @tel room_356
 #
 @open south;s = room_357
 #
+@set south/exit_desc = 'A faint light can be seen to the south.'
+#
 @open up;u = room_348
+#
+@set up/exit_desc = 'Wide steps lead up.'
 #
 @tel room_357
 #
 @open north;n = room_356
 #
+@set north/exit_desc = 'A narrow room lies north.'
+#
 @open south;s = room_358
+#
+@set south/exit_desc = 'Another chamber is south.'
 #
 @tel room_358
 #
 @open north;n = room_357
+#
+@set north/exit_desc = 'A chamber lies north.'
 #
 @open south;s = room_363
 #
@@ -11038,7 +12242,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_355
 #
+@set south/exit_desc = 'Some pale light is south.'
+#
 @open east;e = room_360
+#
+@set east/exit_desc = 'A dark doorway leads east.'
 #
 @tel room_360
 #
@@ -11048,35 +12256,55 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_361
 #
+@set south/exit_desc = 'A low passage leads south.'
+#
 @open west;w = room_359
+#
+@set west/exit_desc = 'There is another passage leading west.'
 #
 @tel room_361
 #
 @open north;n = room_360
 #
+@set north/exit_desc = 'A low tunnel leads north.'
+#
 @open west;w = room_362
+#
+@set west/exit_desc = 'A wide, open passage leads west.'
 #
 @tel room_362
 #
 @open north;n = room_355
 #
+@set north/exit_desc = 'A passage leads north.'
+#
 @open south;s = room_352
 #
 @open east;e = room_361
+#
+@set east/exit_desc = 'A wide, open passage leads east.'
 #
 @tel room_363
 #
 @open up;u = room_423
 #
+@set up/exit_desc = 'Steps lead up from here.'
+#
 @tel room_364
 #
 @open north;n = room_365
 #
+@set north/exit_desc = 'A passage leads north.'
+#
 @open up;u = room_350
+#
+@set up/exit_desc = 'Some steps lead up.'
 #
 @tel room_365
 #
 @open south;s = room_364
+#
+@set south/exit_desc = 'A passage leads south.'
 #
 @tel room_366
 #
@@ -11096,6 +12324,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock old = view:perm(see_hidden_exits)
 #
+@set old/exit_desc = 'Type OLD if you are a venerable player.'
+#
 @set old/exit_effect_kind = 7
 #
 @set old/exit_effect_value = 25
@@ -11104,6 +12334,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock out = view:perm(see_hidden_exits)
 #
+@set out/exit_desc = 'Type OUT if you want OUT of here.'
+#
 @set out/exit_effect_kind = 7
 #
 @set out/exit_effect_value = 2
@@ -11111,6 +12343,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open new = room_368
 #
 @lock new = view:perm(see_hidden_exits)
+#
+@set new/exit_desc = 'Type NEW if you are a whiney new player.'
 #
 @set new/exit_effect_kind = 7
 #
@@ -11158,17 +12392,27 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_244
 #
+@set west/exit_desc = 'A large stone door is west.'
+#
 @tel room_375
 #
 @open north;n = room_413
 #
+@set north/exit_desc = 'You may enter a building to the north.'
+#
 @open south;s = room_720
 #
+@set south/exit_desc = 'A stocky tower is south.'
+#
 @open east;e = room_420
+#
+@set east/exit_desc = 'A portcullis is east.'
 #
 @tel room_376
 #
 @open south;s = room_377
+#
+@set south/exit_desc = 'You notice a balcony overlooking the city through a door in the south wall.'
 #
 @open down;d = room_429
 #
@@ -11176,21 +12420,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_376
 #
+@set north/exit_desc = 'The door to your room lies along the north wall.'
+#
 @open west;w = room_382
+#
+@set west/exit_desc = 'Crumbling city rooftops can be reached from the west.'
 #
 @tel room_378
 #
 @open north;n = room_380
 #
+@set north/exit_desc = 'The nave is north.'
+#
 @open south;s = room_379
 #
+@set south/exit_desc = 'The altar is south.'
+#
 @open west;w = room_417
+#
+@set west/exit_desc = 'You may exit the cathedral to the west.'
 #
 @open up;u = room_381
 #
 @tel room_379
 #
 @open north;n = room_378
+#
+@set north/exit_desc = 'The main section of the structure is north.'
 #
 @open  = room_577
 #
@@ -11200,23 +12456,39 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_378
 #
+@set south/exit_desc = 'The main section of the structure is to the south.'
+#
 @open east;e = room_432
+#
+@set east/exit_desc = 'A small doorway leads out of the cathedral to the east.'
 #
 @tel room_381
 #
 @open south;s = room_394
 #
+@set south/exit_desc = 'You may skip off across the rooftops to the south.'
+#
 @open east;e = room_382
 #
+@set east/exit_desc = 'A stone buttress, in poor repair, connects this structure with the inn.'
+#
 @open down;d = room_378
+#
+@set down/exit_desc = 'The inner cathedral is down from here.'
 #
 @tel room_382
 #
 @open east;e = room_377
 #
+@set east/exit_desc = 'East is the upper Res Ab'tyrr.'
+#
 @open west;w = room_381
 #
+@set west/exit_desc = 'West lies the dome of the Chaos Cathedral.'
+#
 @open down;d = room_432
+#
+@set down/exit_desc = 'You see a dark alley far below you.'
 #
 @set down/exit_effect_kind = 4
 #
@@ -11226,43 +12498,71 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_384
 #
+@set north/exit_desc = 'A crowded square is north.'
+#
 @open south;s = room_425
 #
+@set south/exit_desc = 'An intersection is south.'
+#
 @open west;w = room_387
+#
+@set west/exit_desc = 'A large green building, emblazened with snake motiffs, is west.'
 #
 @tel room_384
 #
 @open north;n = room_385
 #
+@set north/exit_desc = 'A large, square, building is north.'
+#
 @open south;s = room_383
 #
+@set south/exit_desc = 'More places of worship are south.'
+#
 @open west;w = room_386
+#
+@set west/exit_desc = 'A brown structure is west.'
 #
 @tel room_385
 #
 @open south;s = room_384
 #
+@set south/exit_desc = 'You may exit this building to the south.'
+#
 @open west;w = room_388
 #
+@set west/exit_desc = 'Another side door is west, and it leads out into a back yard, of sorts.'
+#
 @open up;u = room_395
+#
+@set up/exit_desc = 'Some stairs lead up to another level.'
 #
 @tel room_386
 #
 @open north;n = room_388
 #
+@set north/exit_desc = 'A closed courtyard can be reached to the north.'
+#
 @open east;e = room_384
 #
+@set east/exit_desc = 'You may exit the building to the east.'
+#
 @open up;u = room_397
+#
+@set up/exit_desc = 'Some steps lead up.'
 #
 @tel room_387
 #
 @open east;e = room_383
+#
+@set east/exit_desc = 'You may exit this building to the east.'
 #
 @set east/exit_effect_kind = 11
 #
 @set east/exit_effect_value = 18
 #
 @open up;u = room_397
+#
+@set up/exit_desc = 'You can see an enclosed stairway leading up.'
 #
 @set up/exit_effect_kind = 11
 #
@@ -11288,15 +12588,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s;open = room_390
 #
+@set south/exit_desc = 'You may open the door, and enter the building, if you wish.'
+#
 @tel room_390
 #
 @open north;n = room_389
 #
+@set north/exit_desc = 'You may exit the building to the north.'
+#
 @open up;u = room_391
+#
+@set up/exit_desc = 'A spiral staircase leads up.'
 #
 @tel room_391
 #
 @open east;e = room_399
+#
+@set east/exit_desc = 'Anoother open window is set in the east wall.'
 #
 @open down;d = room_390
 #
@@ -11310,15 +12618,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_405
 #
+@set north/exit_desc = 'You can try to jump across to a rooftop to the north.'
+#
 @open west;w = room_399
 #
+@set west/exit_desc = 'You can climb out onto a nearby ledge to the west.'
+#
 @open down;d = room_392
+#
+@set down/exit_desc = 'You might try to climb down from the rafters.'
 #
 @tel room_394
 #
 @open north;n = room_381
 #
+@set north/exit_desc = 'North lies the impressive Chaos Cathedral dome.'
+#
 @open south;s = room_395
+#
+@set south/exit_desc = 'To the south lies a squarish building, unimpressive but in your path.'
 #
 @open down;d = room_421
 #
@@ -11332,15 +12650,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_396
 #
+@set west/exit_desc = 'A closed door is west.'
+#
 @open down;d = room_385
+#
+@set down/exit_desc = 'A stairway leads down.'
 #
 @tel room_396
 #
 @open south;s = room_397
 #
+@set south/exit_desc = 'A larger structure can be reached to the south.'
+#
 @open east;e = room_395
 #
+@set east/exit_desc = 'A closed doorway can be reached to the east.'
+#
 @open down;d = room_388
+#
+@set down/exit_desc = 'You can see a pool of water far below you.'
 #
 @set down/exit_effect_kind = 4
 #
@@ -11350,7 +12678,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_396
 #
+@set north/exit_desc = 'A wooden walkway leads off this platform too the north.'
+#
 @open west;w = room_386
+#
+@set west/exit_desc = 'West of you lies a partially concealed stairway.'
 #
 @set west/exit_effect_kind = 11
 #
@@ -11358,17 +12690,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_387
 #
+@set down/exit_desc = 'Some steps lead down.'
+#
 @tel room_398
 #
 @open east;e = room_262
+#
+@set east/exit_desc = 'A door is east.'
 #
 @tel room_399
 #
 @open east;e = room_393
 #
+@set east/exit_desc = 'You may inch along the leadge to the east or west.'
+#
 @open west;w = room_391
 #
 @open down;d = room_435
+#
+@set down/exit_desc = 'The riverbank is below you.'
 #
 @set down/exit_effect_kind = 4
 #
@@ -11378,25 +12718,41 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_93
 #
+@set north/exit_desc = 'You may travel inland to the north.'
+#
 @open east;e = room_401
+#
+@set east/exit_desc = 'Sandier beach lies east.'
 #
 @tel room_401
 #
 @open east;e = room_402
 #
+@set east/exit_desc = 'You may follow the beach east.'
+#
 @open west;w = room_400
+#
+@set west/exit_desc = 'Rockier shore is west.'
 #
 @tel room_402
 #
 @open north;n = room_404
 #
+@set north/exit_desc = 'North lies a faint path.'
+#
 @open west;w = room_401
+#
+@set west/exit_desc = 'You may follow the narrow beach to the west.'
 #
 @tel room_403
 #
 @open north;n = room_585
 #
+@set north/exit_desc = 'A trail leads north up the mountain.'
+#
 @open east;e = room_404
+#
+@set east/exit_desc = 'The trail continues east and west.'
 #
 @open west;w = room_93
 #
@@ -11404,13 +12760,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_402
 #
+@set south/exit_desc = 'A path leads south, towards the sounds of the Sea.'
+#
 @open east;e = room_428
 #
+@set east/exit_desc = 'East lies Tai-Tastigon, City of Many Gods..'
+#
 @open west;w = room_403
+#
+@set west/exit_desc = 'A pass through the Ebonbane Mountains is west.'
 #
 @tel room_405
 #
 @open south;s = room_393
+#
+@set south/exit_desc = 'You could jump into another building to the south.'
 #
 @tel room_406
 #
@@ -11420,7 +12784,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_408
 #
+@set north/exit_desc = 'A wall of ice is north.'
+#
 @open south;s = room_205
+#
+@set south/exit_desc = 'A white wasteland lies south and east of here.'
 #
 @open east;e = room_212
 #
@@ -11430,23 +12798,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_407
 #
+@set south/exit_desc = 'Icey lands are south.'
+#
 @tel room_409
 #
 @open north;n = room_445
 #
 @open south;s = room_410
 #
+@set south/exit_desc = 'To the South is an ancient crumbling wall.'
+#
 @tel room_410
 #
 @open north;n = room_409
 #
+@set north/exit_desc = 'To the north is the great Meadow gate'
+#
 @open south;s = room_411
+#
+@set south/exit_desc = 'The streets to the city lay south.'
 #
 @tel room_411
 #
 @open north;n = room_410
 #
 @open east;e = room_412
+#
+@set east/exit_desc = 'This room is dominated by several large pillars which are draped in thick grey tapestries. The air here is cool and damp.'
 #
 @open west;w = room_415
 #
@@ -11460,13 +12838,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_430
 #
+@set north/exit_desc = 'A dark passage leads north.'
+#
 @open south;s = room_375
+#
+@set south/exit_desc = 'The courtyard is south.'
 #
 @tel room_414
 #
 @open north;n = room_412
 #
 @open south;s = room_429
+#
+@set south/exit_desc = 'The common room is south.'
 #
 @tel room_415
 #
@@ -11482,13 +12866,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_423
 #
+@set west/exit_desc = 'There is an unpleasant smell coming from a dark door to the west.'
+#
 @tel room_417
 #
 @open north;n = room_416
 #
 @open south;s = room_419
 #
+@set south/exit_desc = 'The road continues south.'
+#
 @open east;e = room_378
+#
+@set east/exit_desc = 'The Chaos Cathedral lies east.'
 #
 @tel room_418
 #
@@ -11510,6 +12900,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_375
 #
+@set west/exit_desc = 'A portcullis leading to a fortress is west.'
+#
 @tel room_421
 #
 @open east;e = room_422
@@ -11520,7 +12912,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_432
 #
+@set north/exit_desc = 'To the north is a dark, dank alley.'
+#
 @open south;s = room_76
+#
+@set south/exit_desc = 'This area once housed the famed jewelry courts and guilds of gold and silver. The prosperous guilds have moved their quarters to other parts of the realm leaving the shining courts empty. Little travel comes through these quiet streets now.'
 #
 @open west;w = room_421
 #
@@ -11528,11 +12924,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_416
 #
+@set east/exit_desc = 'You have reached the rim of the city. This is the old wall of inner defences that once stood against enemy hordes from the east. It has been abandoned in these more prosperous times.'
+#
 @open down;d = room_363
 #
 @tel room_424
 #
 @open east;e = room_433
+#
+@set east/exit_desc = 'Follow the twisting road east to find the river.'
 #
 @open west;w = room_425
 #
@@ -11542,13 +12942,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_424
 #
+@set east/exit_desc = 'An arch to the east marks the entrance of the Lower Town.'
+#
 @open west;w = room_426
+#
+@set west/exit_desc = 'You see a gap in the Old Wall to the west.'
 #
 @tel room_426
 #
 @open north;n = room_259
 #
+@set north/exit_desc = 'The Great Temple is north.'
+#
 @open east;e = room_425
+#
+@set east/exit_desc = 'A dark street lined with stone statues is east.'
 #
 @open west;w = room_427
 #
@@ -11556,11 +12964,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_426
 #
+@set east/exit_desc = 'You see a crumbling wall to the east.'
+#
 @open west;w = room_428
+#
+@set west/exit_desc = 'The mountain gate is to the west.'
 #
 @tel room_428
 #
 @open east;e = room_427
+#
+@set east/exit_desc = 'You must pass over the dry moat to the east to enter the city.'
 #
 @open west;w = room_404
 #
@@ -11568,7 +12982,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_414
 #
+@set north/exit_desc = 'You may exit north.'
+#
 @open south;s = room_431
+#
+@set south/exit_desc = 'An enticing smell is wafting in from the south.'
 #
 @open up;u = room_376
 #
@@ -11576,7 +12994,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_714
 #
+@set north/exit_desc = 'A wide stairway is to the north.'
+#
 @open south;s = room_413
+#
+@set south/exit_desc = 'A dark passage leads south.'
 #
 @open sataki = room_718
 #
@@ -11586,15 +13008,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_429
 #
+@set north/exit_desc = 'A large wooden door in the north wall leads to the eating hall.'
+#
 @open west;w = room_432
+#
+@set west/exit_desc = 'The western door leads to a back alley.'
 #
 @tel room_432
 #
 @open south;s = room_422
 #
+@set south/exit_desc = 'The alley widens into a street to the south.'
+#
 @open east;e = room_431
 #
+@set east/exit_desc = 'A closed door is east.'
+#
 @open west;w = room_380
+#
+@set west/exit_desc = 'An arched door is west.'
 #
 @open lift = room_4
 #
@@ -11608,6 +13040,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_424
 #
+@set west/exit_desc = 'A dark gateway to the west marks the entrance to lower town.'
+#
 @tel room_434
 #
 @open east;e = room_713
@@ -11618,15 +13052,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_436
 #
+@set south/exit_desc = 'A small bridge crosses the water to a light-filled island south.'
+#
 @tel room_436
 #
 @open north;n = room_435
 #
+@set north/exit_desc = 'The bridge to the city lies north.'
+#
 @open east;e = room_437
+#
+@set east/exit_desc = 'The shadow of a large tower falls upon you from the east.'
 #
 @tel room_437
 #
 @open west;w = room_436
+#
+@set west/exit_desc = 'The party is west. We suggest you curb your curiosity and join it.'
 #
 @open up;u = room_486
 #
@@ -11636,35 +13078,55 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_261
 #
+@set north/exit_desc = 'A small pub room is north.'
+#
 @open south;s = room_713
 #
 @tel room_439
 #
 @open north;n = room_81
 #
+@set north/exit_desc = 'Gloomy hills are north.'
+#
 @open south;s = room_444
+#
+@set south/exit_desc = 'A hint of color is south.'
 #
 @open east;e = room_440
 #
+@set east/exit_desc = 'A plain is east.'
+#
 @open west;w = room_443
+#
+@set west/exit_desc = 'A windswept bluff can be seen to the far west.'
 #
 @tel room_440
 #
 @open south;s = room_445
 #
+@set south/exit_desc = 'More flatlands are south.'
+#
 @open east;e = room_441
 #
+@set east/exit_desc = 'A squat tower lies east.'
+#
 @open west;w = room_439
+#
+@set west/exit_desc = 'A bleak horizon is west.'
 #
 @tel room_441
 #
 @open west;w = room_440
+#
+@set west/exit_desc = 'What the hell have I?'
 #
 @open totally = room_271
 #
 @lock totally = view:perm(see_hidden_exits)
 #
 @open down;d = room_442
+#
+@set down/exit_desc = 'Half-elf, half-human.  Yuck, what a beast this must be!!'
 #
 @tel room_442
 #
@@ -11674,29 +13136,47 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_441
 #
+@set up/exit_desc = 'Some wide steps lead up.'
+#
 @tel room_443
 #
 @open south;s = room_444
 #
+@set south/exit_desc = 'A dull landscape is south.'
+#
 @open east;e = room_439
+#
+@set east/exit_desc = 'Dark clouds hug the earth to the east.'
 #
 @tel room_444
 #
 @open north;n = room_439
 #
+@set north/exit_desc = 'North lie the Haunted Lands.'
+#
 @open south;s = room_445
+#
+@set south/exit_desc = 'South and East lie greener plains.'
 #
 @open east;e = room_445
 #
 @open west;w = room_443
 #
+@set west/exit_desc = 'A craggy bluff can be seen rising to the west.'
+#
 @tel room_445
 #
 @open north;n = room_444
 #
+@set north/exit_desc = 'To the north and west lie a bleak landscape.'
+#
 @open south;s = room_409
 #
+@set south/exit_desc = 'South lies the city of Tai-Tastigon.'
+#
 @open east;e = room_440
+#
+@set east/exit_desc = 'East lies a dark plain.'
 #
 @open west;w = room_444
 #
@@ -11708,11 +13188,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_447
 #
+@set south/exit_desc = 'An open passage leads south.'
+#
 @open west;w = room_48
+#
+@set west/exit_desc = 'A very large cavern is west.'
 #
 @tel room_447
 #
 @open north;n = room_446
+#
+@set north/exit_desc = 'There is an open passage leading north.'
 #
 @open makemetrol = room_447
 #
@@ -11728,15 +13214,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_449
 #
+@set up/exit_desc = 'The steps lead up.'
+#
 @tel room_449
 #
 @open north;n = room_450
+#
+@set north/exit_desc = 'A low tunnel leads north.'
 #
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -399
 #
 @open down;d = room_448
+#
+@set down/exit_desc = 'Some large steps go down from here.'
 #
 @tel room_450
 #
@@ -11746,6 +13238,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_449
 #
+@set south/exit_desc = 'The crawl-space extends south.'
+#
 @tel room_451
 #
 @open south;s = room_450
@@ -11754,9 +13248,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_215
 #
+@set north/exit_desc = 'An open doorway leads north.'
+#
 @tel room_453
 #
 @open down;d = room_111
+#
+@set down/exit_desc = 'A trap door and steps lead down.'
 #
 @set down/exit_effect_kind = 4
 #
@@ -11788,6 +13286,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_29
 #
+@set up/exit_desc = 'Some light filters down from above.'
+#
 @tel room_458
 #
 @open west;w = room_184
@@ -11808,23 +13308,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_273
 #
+@set east/exit_desc = 'Additional chambers can be seen beyond the snow to the east and west.'
+#
 @open west;w = room_461
 #
 @tel room_461
 #
 @open south;s = room_462
 #
+@set south/exit_desc = 'A long corridor is south.'
+#
 @open east;e = room_460
+#
+@set east/exit_desc = 'Falling snow is east.'
 #
 @tel room_462
 #
 @open north;n = room_461
+#
+@set north/exit_desc = 'A long corridor leads north.'
 #
 @open east;e = room_463
 #
 @tel room_463
 #
 @open west;w = room_462
+#
+@set west/exit_desc = 'An icey balcony lies west.'
 #
 @open up;u = room_467
 #
@@ -11840,9 +13350,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_467
 #
+@set south/exit_desc = 'There is small opening to the south.'
+#
 @tel room_467
 #
 @open north;n = room_466
+#
+@set north/exit_desc = 'A small opening is north.'
 #
 @open down;d = room_463
 #
@@ -11850,7 +13364,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_677
 #
+@set east/exit_desc = 'This passage descends to the east.'
+#
 @open west;w = room_72
+#
+@set west/exit_desc = 'A sand filled chamber is west.'
 #
 @tel room_469
 #
@@ -11870,11 +13388,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_197
 #
+@set north/exit_desc = 'You may exit Purgatory in any cardinal direction.'
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = 300
 #
 @open south;s = room_433
+#
+@set south/exit_desc = 'There is a NOTICE here for all Monster players.'
 #
 @set south/exit_effect_kind = 4
 #
@@ -11894,15 +13416,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_731
 #
+@set down/exit_desc = 'You may CHANGE YOUR CLASS down from here.'
+#
 @tel room_471
 #
 @open north;n = room_472
 #
+@set north/exit_desc = 'Go north through the gold doors.'
+#
 @open east;e = room_470
+#
+@set east/exit_desc = 'You may go EAST to get right into the thick of things!'
 #
 @tel room_472
 #
 @open north;n = room_473
+#
+@set north/exit_desc = 'This corridor extends north and south from here.'
 #
 @open south;s = room_471
 #
@@ -11915,6 +13445,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_474
 #
 @open north;n = room_475
+#
+@set north/exit_desc = 'A dark passageway leads north.'
 #
 @set north/exit_effect_kind = 11
 #
@@ -11930,6 +13462,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock demonlord = view:perm(see_hidden_exits)
 #
+@set demonlord/exit_desc = 'A stout door, requiring a magical password, lies east.'
+#
 @tel room_476
 #
 @open west;w = room_475
@@ -11938,15 +13472,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_480
 #
+@set south/exit_desc = 'There is an alley to the south.'
+#
 @open west;w = room_3
+#
+@set west/exit_desc = 'The street continues east.'
 #
 @tel room_478
 #
 @open north;n = room_479
 #
+@set north/exit_desc = 'There is a door, partially ajar, to the north.'
+#
 @tel room_479
 #
 @open south;s = room_478
+#
+@set south/exit_desc = 'There is a door south.'
 #
 @tel room_480
 #
@@ -11958,17 +13500,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_482
 #
+@set east/exit_desc = 'An old wall lies to the east.'
+#
 @open west;w = room_480
+#
+@set west/exit_desc = 'There is an alley to the west.'
 #
 @tel room_482
 #
 @open east;e = room_483
+#
+@set east/exit_desc = 'The Sun gate rised above you to the east.'
 #
 @open west;w = room_481
 #
 @tel room_483
 #
 @open west;w = room_482
+#
+@set west/exit_desc = 'An old stone wall is to the west.'
 #
 @tel room_484
 #
@@ -12164,6 +13714,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_80
 #
+@set up/exit_desc = 'The stairs lead both up and down.'
+#
 @open down;d = room_510
 #
 @tel room_501
@@ -12178,21 +13730,31 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_503
 #
+@set south/exit_desc = 'Another chamber may be south.'
+#
 @set south/exit_effect_kind = 11
 #
 @set south/exit_effect_value = 26
 #
 @open west;w = room_501
 #
+@set west/exit_desc = 'Swaying seaweed can be seen to the west, past the cave entrance.'
+#
 @tel room_503
 #
 @open north;n = room_502
 #
+@set north/exit_desc = 'A rougher cave is north.'
+#
 @open up;u = room_504
+#
+@set up/exit_desc = 'The aqua steps lead up, towards a pocket of air.'
 #
 @tel room_504
 #
 @open east;e = room_505
+#
+@set east/exit_desc = 'A narrow, but tall, passage leads east.'
 #
 @set east/exit_effect_kind = 11
 #
@@ -12200,11 +13762,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_503
 #
+@set down/exit_desc = 'Some wide, bright, steps lead down into a water filled cave.'
+#
 @tel room_505
 #
 @open east;e = room_506
 #
+@set east/exit_desc = 'Another chamber can be seen east.'
+#
 @open west;w = room_504
+#
+@set west/exit_desc = 'A narrow passage leads west.'
 #
 @tel room_506
 #
@@ -12212,19 +13780,31 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock manannan = view:perm(see_hidden_exits)
 #
+@set manannan/exit_desc = 'The coral wall is east.'
+#
 @open west;w = room_505
+#
+@set west/exit_desc = 'Another chamber is west.'
 #
 @tel room_507
 #
 @open north;n = room_645
 #
+@set north/exit_desc = 'A wide passage leads north.'
+#
 @open south;s = room_508
 #
+@set south/exit_desc = 'A sloping passage leads south.'
+#
 @open west;w = room_506
+#
+@set west/exit_desc = 'The coral doorway is west.'
 #
 @tel room_508
 #
 @open north;n = room_507
+#
+@set north/exit_desc = 'The passage runs north-south.'
 #
 @open south;s = room_509
 #
@@ -12232,11 +13812,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_508
 #
+@set north/exit_desc = 'A sloping passage leads north from here.'
+#
 @open up;u = room_550
 #
 @tel room_510
 #
 @open north;n = room_511
+#
+@set north/exit_desc = 'There are oak doors in each of the cardinal directions.'
 #
 @open south;s = room_521
 #
@@ -12246,19 +13830,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_500
 #
+@set up/exit_desc = 'A staircase leads up.'
+#
 @tel room_511
 #
 @open south;s = room_510
 #
+@set south/exit_desc = 'There is an oak door to the south.'
+#
 @open east;e = room_512
+#
+@set east/exit_desc = 'There is a strange portal to the east.'
 #
 @tel room_512
 #
 @open north;n = room_530
 #
+@set north/exit_desc = 'There are arched passages to the north and east.'
+#
 @open east;e = room_513
 #
 @open west;w = room_511
+#
+@set west/exit_desc = 'There is a strange portal to the west.'
 #
 @tel room_513
 #
@@ -12270,6 +13864,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_514
 #
+@set south/exit_desc = 'The caverns continue to the south...'
+#
 @open east;e = room_513
 #
 @set east/exit_effect_kind = 4
@@ -12277,6 +13873,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set east/exit_effect_value = -50
 #
 @open west;w = room_512
+#
+@set west/exit_desc = 'The caverns end at an arch to the west.'
 #
 @open phase = room_549
 #
@@ -12289,6 +13887,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_514
 #
 @open north;n = room_513
+#
+@set north/exit_desc = 'The caverns continue to the north and to the south...'
 #
 @open south;s = room_515
 #
@@ -12308,6 +13908,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_514
 #
+@set north/exit_desc = 'The caverns continue to the north...'
+#
 @open south;s = room_515
 #
 @set south/exit_effect_kind = 4
@@ -12322,23 +13924,35 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_517
 #
+@set west/exit_desc = 'The caverns end at an arch to the west.'
+#
 @tel room_516
 #
 @open south;s = room_517
 #
+@set south/exit_desc = 'There is a strange portal to the south.'
+#
 @open west;w = room_510
+#
+@set west/exit_desc = 'There is an oak door to the west.'
 #
 @tel room_517
 #
 @open north;n = room_516
 #
+@set north/exit_desc = 'There is a strange portal to the north.'
+#
 @open south;s = room_518
 #
 @open east;e = room_515
 #
+@set east/exit_desc = 'There are arched passages to the east and south.'
+#
 @tel room_518
 #
 @open north;n = room_517
+#
+@set north/exit_desc = 'The trail ends at an arch to the north.'
 #
 @open south;s = room_518
 #
@@ -12353,6 +13967,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set east/exit_effect_value = -50
 #
 @open west;w = room_519
+#
+@set west/exit_desc = 'The trail continues to the west...'
 #
 @tel room_519
 #
@@ -12370,11 +13986,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_518
 #
+@set east/exit_desc = 'The trail continues to the east and to the west...'
+#
 @open west;w = room_520
 #
 @tel room_520
 #
 @open north;n = room_522
+#
+@set north/exit_desc = 'The trail ends at an arch to the north.'
 #
 @open south;s = room_520
 #
@@ -12383,6 +14003,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set south/exit_effect_value = -50
 #
 @open east;e = room_519
+#
+@set east/exit_desc = 'The trail continues to the east...'
 #
 @open west;w = room_520
 #
@@ -12394,19 +14016,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_510
 #
+@set north/exit_desc = 'There is an oak door to the north.'
+#
 @open west;w = room_522
+#
+@set west/exit_desc = 'There is a strange portal to the west.'
 #
 @tel room_522
 #
 @open south;s = room_520
 #
+@set south/exit_desc = 'There are arched passages to the south and west.'
+#
 @open east;e = room_521
+#
+@set east/exit_desc = 'There is a strange portal to the east.'
 #
 @open west;w = room_523
 #
 @tel room_523
 #
 @open north;n = room_524
+#
+@set north/exit_desc = 'The path continues to the north...'
 #
 @open south;s = room_523
 #
@@ -12415,6 +14047,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set south/exit_effect_value = -50
 #
 @open east;e = room_522
+#
+@set east/exit_desc = 'The path ends at an arch to the east.'
 #
 @open west;w = room_523
 #
@@ -12425,6 +14059,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_524
 #
 @open north;n = room_525
+#
+@set north/exit_desc = 'The path continues to the north and to the south...'
 #
 @open south;s = room_523
 #
@@ -12450,7 +14086,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_524
 #
+@set south/exit_desc = 'The path continues to the south...'
+#
 @open east;e = room_527
+#
+@set east/exit_desc = 'The path ends at an arch to the east.'
 #
 @open west;w = room_525
 #
@@ -12462,13 +14102,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_527
 #
+@set north/exit_desc = 'There is a strange portal to the north.'
+#
 @open east;e = room_510
+#
+@set east/exit_desc = 'There is an oak door to the east.'
 #
 @tel room_527
 #
 @open north;n = room_528
 #
+@set north/exit_desc = 'There are arched passages to the north and west.'
+#
 @open south;s = room_526
+#
+@set south/exit_desc = 'There is a strange portal to the south.'
 #
 @open west;w = room_525
 #
@@ -12482,7 +14130,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_527
 #
+@set south/exit_desc = 'The corridor ends at an arch to the south.'
+#
 @open east;e = room_529
+#
+@set east/exit_desc = 'The corridor continues to the east...'
 #
 @open west;w = room_528
 #
@@ -12506,6 +14158,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_530
 #
+@set east/exit_desc = 'The corridor continues to the east and to the west...'
+#
 @open west;w = room_528
 #
 @tel room_530
@@ -12518,6 +14172,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_512
 #
+@set south/exit_desc = 'The corridor ends at an arch to the south.'
+#
 @open east;e = room_530
 #
 @set east/exit_effect_kind = 4
@@ -12525,6 +14181,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set east/exit_effect_value = -50
 #
 @open west;w = room_529
+#
+@set west/exit_desc = 'The corridor continues to the west...'
 #
 @tel room_531
 #
@@ -12588,11 +14246,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_259
 #
+@set south/exit_desc = 'The great doors are south.'
+#
 @tel room_543
 #
 @open south;s = room_585
 #
+@set south/exit_desc = 'A mountain trail leads south down the mountain.'
+#
 @open east;e = room_711
+#
+@set east/exit_desc = 'The smell of fire and smoke eminates from the east.'
 #
 @open west;w = room_588
 #
@@ -12602,23 +14266,37 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_142
 #
+@set east/exit_desc = 'A low passage leads east.'
+#
 @open west;w = room_545
+#
+@set west/exit_desc = 'The stone portal is west.'
 #
 @tel room_545
 #
 @open east;e = room_544
 #
+@set east/exit_desc = 'A gateway of stone is east.'
+#
 @open up;u = room_546
+#
+@set up/exit_desc = 'Wide stairs of granite climb upward.'
 #
 @tel room_546
 #
 @open west;w = room_143
 #
+@set west/exit_desc = 'A white passage leads west.'
+#
 @open down;d = room_545
+#
+@set down/exit_desc = 'Spiraling steps lead downward.'
 #
 @tel room_547
 #
 @open south;s = room_143
+#
+@set south/exit_desc = 'A narrow corridor leads south.'
 #
 @set south/exit_effect_kind = 4
 #
@@ -12628,11 +14306,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_93
 #
+@set south/exit_desc = 'Mortal forests lie south.'
+#
 @open up;u = room_569
+#
+@set up/exit_desc = 'Steps lead upwards.'
 #
 @tel room_549
 #
 @open up;u = room_513
+#
+@set up/exit_desc = 'Some icy steps lead up.'
 #
 @tel room_550
 #
@@ -12722,7 +14406,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_72
 #
+@set east/exit_desc = 'A ramp leads up the side of the pyramid to the east.'
+#
 @open west;w = room_552
+#
+@set west/exit_desc = 'The tractless desert is west.'
 #
 @tel room_558
 #
@@ -12730,13 +14418,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_560
 #
+@set north/exit_desc = 'Lowlands are far to the north.'
+#
 @open south;s = room_613
+#
+@set south/exit_desc = 'Old ruins can be seen south.'
 #
 @tel room_560
 #
 @open south;s = room_559
 #
+@set south/exit_desc = 'The Path of Shadows leads south.'
+#
 @open down;d = room_206
+#
+@set down/exit_desc = 'A steep path leads down from here.'
 #
 @tel room_561
 #
@@ -12748,15 +14444,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_561
 #
+@set south/exit_desc = 'A silver road of light leads south.'
+#
 @tel room_563
 #
 @open east;e = room_564
+#
+@set east/exit_desc = 'A narrow, arched passage of dark stone leads east.'
 #
 @tel room_564
 #
 @open east;e = room_617
 #
+@set east/exit_desc = 'A revolving stone panel will allow you to go east.'
+#
 @open west;w = room_563
+#
+@set west/exit_desc = 'A narrow, arched passage leads west.'
 #
 @tel room_565
 #
@@ -12768,15 +14472,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_567
 #
+@set north/exit_desc = 'A stone archway leads north.'
+#
 @tel room_569
 #
 @open up;u = room_570
 #
+@set up/exit_desc = 'The upper section of the spire lies above.'
+#
 @open down;d = room_548
+#
+@set down/exit_desc = 'Steps lead down.'
 #
 @tel room_570
 #
 @open north;n = room_257
+#
+@set north/exit_desc = 'Small arches lead off the balcony in the 4 main directions.'
 #
 @open south;s = room_728
 #
@@ -12786,7 +14498,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_571
 #
+@set up/exit_desc = 'Steps lead ever upwards.'
+#
 @open down;d = room_569
+#
+@set down/exit_desc = 'The battlements are below.'
 #
 @tel room_571
 #
@@ -12794,15 +14510,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock keebler = view:perm(see_hidden_exits)
 #
+@set keebler/exit_desc = 'A formidible stone portal is set in the ceiling.'
+#
 @open down;d = room_570
+#
+@set down/exit_desc = 'Steps lead down.'
 #
 @tel room_572
 #
 @open west;w = room_224
 #
+@set west/exit_desc = 'A passage leads west.'
+#
 @tel room_573
 #
 @open east;e = room_165
+#
+@set east/exit_desc = 'The shop's exit is east.'
 #
 @tel room_574
 #
@@ -12812,6 +14536,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_542
 #
+@set south/exit_desc = 'The exit to this chamber is south.'
+#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = 500
@@ -12819,6 +14545,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_577
 #
 @open up;u = room_379
+#
+@set up/exit_desc = 'The lands of mortals lie above!'
 #
 @set up/exit_effect_kind = 4
 #
@@ -12832,6 +14560,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_332
 #
+@set north/exit_desc = 'The riverbed is north.'
+#
 @tel room_580
 #
 @tel room_581
@@ -12839,6 +14569,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_582
 #
 @open east;e = room_629
+#
+@set east/exit_desc = 'A hidden passage is east.'
 #
 @tel room_583
 #
@@ -12854,6 +14586,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_543
 #
+@set north/exit_desc = 'The mountain gets steeper towards the north.'
+#
 @open south;s = room_403
 #
 @tel room_586
@@ -12866,17 +14600,27 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_543
 #
+@set east/exit_desc = 'Along the crumbling ledge to the east is the steep hillside.'
+#
 @open west;w = room_589
+#
+@set west/exit_desc = 'Nasty falling rocks are to the west.'
 #
 @tel room_589
 #
 @open east;e = room_588
 #
+@set east/exit_desc = 'A ledge along the mountainside is east.'
+#
 @open west;w = room_647
+#
+@set west/exit_desc = 'From a distance, to the west, a dark entrance to a cave can be seen.'
 #
 @tel room_590
 #
 @open north;n = room_64
+#
+@set north/exit_desc = 'From here the mountain slopes down to the north and west.'
 #
 @open west;w = room_64
 #
@@ -12930,29 +14674,47 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_559
 #
+@set north/exit_desc = 'An ancient path leads north from here.'
+#
 @open east;e = room_614
+#
+@set east/exit_desc = 'The center of the ruins is east.'
 #
 @tel room_614
 #
 @open north;n = room_615
 #
+@set north/exit_desc = 'The outline of a large rectangular room is north.'
+#
 @open east;e = room_616
 #
+@set east/exit_desc = 'The remains of the base of a small tower are east.'
+#
 @open west;w = room_613
+#
+@set west/exit_desc = 'The fallen gates are west.'
 #
 @tel room_615
 #
 @open south;s = room_614
 #
+@set south/exit_desc = 'The center of the ruins lies south.'
+#
 @tel room_616
 #
 @open west;w = room_614
 #
+@set west/exit_desc = 'The center of the ruins is west.'
+#
 @open down;d = room_617
+#
+@set down/exit_desc = 'Narrow, dark steps lead down.'
 #
 @tel room_617
 #
 @open north;n = room_620
+#
+@set north/exit_desc = 'Three small passages appear to your north, east, and south.'
 #
 @open south;s = room_619
 #
@@ -12964,23 +14726,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_616
 #
+@set up/exit_desc = 'The steps continue up and down.'
+#
 @open down;d = room_621
 #
 @tel room_618
 #
 @open west;w = room_617
 #
+@set west/exit_desc = 'A passage leads west.'
+#
 @tel room_619
 #
 @open north;n = room_617
+#
+@set north/exit_desc = 'A passage leads north.'
 #
 @tel room_620
 #
 @open south;s = room_617
 #
+@set south/exit_desc = 'A passage leads south.'
+#
 @tel room_621
 #
 @open up;u = room_617
+#
+@set up/exit_desc = 'The steps continue both up and down.'
 #
 @open down;d = room_622
 #
@@ -12990,15 +14762,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open up;u = room_621
 #
+@set up/exit_desc = 'Steps lead up.'
+#
 @tel room_623
 #
 @open east;e = room_624
 #
+@set east/exit_desc = 'The Dungeons of Solace are east.'
+#
 @open west;w = room_622
+#
+@set west/exit_desc = 'The stairs lie west.'
 #
 @tel room_624
 #
 @open north;n = room_625
+#
+@set north/exit_desc = 'Passages lead in all directions.'
 #
 @set north/exit_effect_kind = 4
 #
@@ -13026,9 +14806,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_626
 #
+@set north/exit_desc = 'The unending corridors lead north and south.'
+#
 @open south;s = room_624
 #
 @open east;e = room_635
+#
+@set east/exit_desc = 'A long corridor leads east.'
 #
 @open up;u = room_625
 #
@@ -13040,11 +14824,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_625
 #
+@set south/exit_desc = 'Nasty corridors are south.'
+#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -156
 #
 @open west;w = room_627
+#
+@set west/exit_desc = 'A dark tunnel leads west.'
 #
 @open down;d = room_626
 #
@@ -13055,6 +14843,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_627
 #
 @open east;e = room_626
+#
+@set east/exit_desc = 'You may back-track to the east.'
 #
 @set east/exit_effect_kind = 4
 #
@@ -13070,13 +14860,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_624
 #
+@set north/exit_desc = 'A passage leads north.'
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -85
 #
 @open south;s = room_629
 #
+@set south/exit_desc = 'A narrow passage leads south.'
+#
 @open east;e = room_630
+#
+@set east/exit_desc = 'Dank passages are east.'
 #
 @set east/exit_effect_kind = 4
 #
@@ -13091,6 +14887,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_629
 #
 @open north;n = room_628
+#
+@set north/exit_desc = 'The dungeons are north.'
 #
 @set north/exit_effect_kind = 4
 #
@@ -13110,11 +14908,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_631
 #
+@set south/exit_desc = 'A terrible smell is south.'
+#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -159
 #
 @open west;w = room_628
+#
+@set west/exit_desc = 'More corridors are west.'
 #
 @set west/exit_effect_kind = 4
 #
@@ -13130,11 +14932,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_630
 #
+@set north/exit_desc = 'A nasty looking chamber is north.'
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -34
 #
 @open east;e = room_632
+#
+@set east/exit_desc = 'A dark passage leads east.'
 #
 @open down;d = room_631
 #
@@ -13146,11 +14952,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_643
 #
+@set south/exit_desc = 'A narrow opening in the rock leads south.'
+#
 @set south/exit_effect_kind = 11
 #
 @set south/exit_effect_value = 36
 #
 @open west;w = room_631
+#
+@set west/exit_desc = 'A chamber is west.'
 #
 @set west/exit_effect_kind = 4
 #
@@ -13166,6 +14976,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_634
 #
+@set north/exit_desc = 'You may go north, if you are able.'
+#
 @open down;d = room_633
 #
 @set down/exit_effect_kind = 4
@@ -13176,11 +14988,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_633
 #
+@set south/exit_desc = 'A passage leads south.'
+#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -124
 #
 @open west;w = room_624
+#
+@set west/exit_desc = 'A large chamber is west.'
 #
 @set west/exit_effect_kind = 4
 #
@@ -13196,11 +15012,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_637
 #
+@set east/exit_desc = 'A chamber lies west.'
+#
 @set east/exit_effect_kind = 4
 #
 @set east/exit_effect_value = -124
 #
 @open west;w = room_625
+#
+@set west/exit_desc = 'Nasty tunnels are east.'
 #
 @set west/exit_effect_kind = 4
 #
@@ -13210,11 +15030,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_637
 #
+@set south/exit_desc = 'Another chamber is south.'
+#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -324
 #
 @open west;w = room_644
+#
+@set west/exit_desc = 'A narrow opening in the rock is west.'
 #
 @set west/exit_effect_kind = 11
 #
@@ -13230,17 +15054,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_636
 #
+@set north/exit_desc = 'A passage leads north.'
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -304
 #
 @open south;s = room_638
 #
+@set south/exit_desc = 'South are damp corridors.'
+#
 @set south/exit_effect_kind = 11
 #
 @set south/exit_effect_value = 38
 #
 @open west;w = room_635
+#
+@set west/exit_desc = 'To the west lies a long corridor.'
 #
 @open down;d = room_637
 #
@@ -13252,11 +15082,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_637
 #
+@set north/exit_desc = 'A chamber is north.'
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -108
 #
 @open east;e = room_639
+#
+@set east/exit_desc = 'A long corridor leads east.'
 #
 @set east/exit_effect_kind = 4
 #
@@ -13272,9 +15106,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_641
 #
+@set south/exit_desc = 'A narrow tunnel leads south.'
+#
 @open east;e = room_640
 #
+@set east/exit_desc = 'An open passage leads east.'
+#
 @open west;w = room_638
+#
+@set west/exit_desc = 'A corridor leads west.'
 #
 @open down;d = room_639
 #
@@ -13286,11 +15126,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_642
 #
+@set north/exit_desc = 'A narrow opening in the rock is north.'
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -124
 #
 @open west;w = room_639
+#
+@set west/exit_desc = 'A passage leads west.'
 #
 @set west/exit_effect_kind = 4
 #
@@ -13306,6 +15150,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_639
 #
+@set north/exit_desc = 'You may back-track to the north.'
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -349
@@ -13320,13 +15166,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_640
 #
+@set south/exit_desc = 'The only exit is south.'
+#
 @tel room_643
 #
 @open north;n = room_632
 #
+@set north/exit_desc = 'The only exit is north.'
+#
 @tel room_644
 #
 @open east;e = room_636
+#
+@set east/exit_desc = 'The only exit lies east.'
 #
 @tel room_645
 #
@@ -13336,6 +15188,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_507
 #
+@set south/exit_desc = 'A wide passage leads south.'
+#
 @set south/exit_effect_kind = 11
 #
 @set south/exit_effect_value = 42
@@ -13343,6 +15197,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open deus = room_646
 #
 @lock deus = view:perm(see_hidden_exits)
+#
+@set deus/exit_desc = 'A blue portal is west.'
 #
 @set deus/exit_effect_kind = 11
 #
@@ -13352,11 +15208,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_645
 #
+@set east/exit_desc = 'A passage leads east.'
+#
 @tel room_647
 #
 @open east;e = room_589
 #
+@set east/exit_desc = 'A crumbling ledge is east.'
+#
 @open west;w = room_700
+#
+@set west/exit_desc = 'Darkness is west.'
 #
 @tel room_648
 #
@@ -13364,9 +15226,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_662
 #
+@set east/exit_desc = 'Darker passages lead east and west from here.'
+#
 @open west;w = room_653
 #
 @open up;u = room_677
+#
+@set up/exit_desc = 'Some steps lead up.'
 #
 @tel room_650
 #
@@ -13580,19 +15446,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_672
 #
+@set down/exit_desc = 'The steps lead down.'
+#
 @tel room_672
 #
 @open north;n = room_673
 #
+@set north/exit_desc = 'A shimmering portal is north, marked with warnings.'
+#
 @open up;u = room_671
+#
+@set up/exit_desc = 'Sandstone steps lead up from this chamber.'
 #
 @tel room_673
 #
 @open south;s = room_672
 #
+@set south/exit_desc = 'A shimmering portal is south.'
+#
 @tel room_674
 #
 @open north;n = room_556
+#
+@set north/exit_desc = 'The magical tunnel through the Ocean extends north and south.'
 #
 @open south;s = room_678
 #
@@ -13614,11 +15490,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_468
 #
+@set west/exit_desc = 'A passage leads west.'
+#
 @open down;d = room_649
+#
+@set down/exit_desc = 'Some steps lead down from here.'
 #
 @tel room_678
 #
 @open north;n = room_674
+#
+@set north/exit_desc = 'The magical tunnel continues north and south from here.'
 #
 @open south;s = room_679
 #
@@ -13626,19 +15508,29 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_678
 #
+@set north/exit_desc = 'The Ocean's tunnel leads north.'
+#
 @open avalon = room_680
 #
 @lock avalon = view:perm(see_hidden_exits)
+#
+@set avalon/exit_desc = 'The doorway is south.'
 #
 @tel room_680
 #
 @open north;n = room_679
 #
+@set north/exit_desc = 'A solid door is north.'
+#
 @open up;u = room_681
+#
+@set up/exit_desc = 'At the distant end of the hall some steps are visible, leading up.'
 #
 @tel room_681
 #
 @open up;u = room_682
+#
+@set up/exit_desc = 'The steps continue up annd down from this point.'
 #
 @open down;d = room_680
 #
@@ -13648,21 +15540,31 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock ring = view:perm(see_hidden_exits)
 #
+@set ring/exit_desc = 'A small door is in the south wall.'
+#
 @set ring/exit_effect_kind = 11
 #
 @set ring/exit_effect_value = 23
 #
 @open down;d = room_681
 #
+@set down/exit_desc = 'The ivory steps lead down.'
+#
 @tel room_683
 #
 @open south;s = room_684
+#
+@set south/exit_desc = 'Another door is south.'
 #
 @tel room_684
 #
 @open north;n = room_683
 #
+@set north/exit_desc = 'A small doorway is north.'
+#
 @open south;s = room_685
+#
+@set south/exit_desc = 'A passage leads south.'
 #
 @set south/exit_effect_kind = 11
 #
@@ -13672,15 +15574,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_684
 #
+@set north/exit_desc = 'A passage leads north.'
+#
 @open up;u = room_686
 #
 @tel room_686
 #
 @open east;e = room_687
 #
+@set east/exit_desc = 'Another doorway is east, up the ice covered incline.'
+#
 @tel room_687
 #
 @open east;e = room_688
+#
+@set east/exit_desc = 'A dark passage leads east.'
 #
 @set east/exit_effect_kind = 11
 #
@@ -13688,23 +15596,35 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_686
 #
+@set west/exit_desc = 'A frozen doorway is west.'
+#
 @tel room_688
 #
 @open east;e = room_692
 #
+@set east/exit_desc = 'A doorway flanked by stone warriors is east.'
+#
 @open west;w = room_687
 #
+@set west/exit_desc = 'A dark passage leads west from here.'
+#
 @open up;u = room_689
+#
+@set up/exit_desc = 'Wide steps of stone lead up.'
 #
 @tel room_689
 #
 @open up;u = room_690
+#
+@set up/exit_desc = 'The steps spiral further up, or down.'
 #
 @open down;d = room_688
 #
 @tel room_690
 #
 @open north;n = room_691
+#
+@set north/exit_desc = 'The Sea is north.'
 #
 @open down;d = room_689
 #
@@ -13730,6 +15650,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_688
 #
+@set west/exit_desc = 'A doorway flanked by two stone warriors leads west.'
+#
 @tel room_693
 #
 @open north;n = room_401
@@ -13743,6 +15665,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @tel room_694
 #
 @open north;n = room_145
+#
+@set north/exit_desc = 'A small tunnel leads north.'
 #
 @tel room_695
 #
@@ -13826,15 +15750,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_750
 #
+@set down/exit_desc = 'A hole in the floor leads to a staircase downward.'
+#
 @tel room_705
 #
 @open north;n;covered path = room_733
 #
 @open south;s = room_64
 #
+@set south/exit_desc = 'Towards the south, the mountian grows up to the sky.'
+#
 @open east;e = room_710
 #
+@set east/exit_desc = 'Rolling hills of Black smoke stand out in the east.'
+#
 @open west;w = room_706
+#
+@set west/exit_desc = 'Trees grow over the path to the west.'
 #
 @tel room_706
 #
@@ -13842,7 +15774,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_705
 #
+@set east/exit_desc = 'The valley floor is to the east.'
+#
 @open west;w = room_707
+#
+@set west/exit_desc = 'The floor of the valley drops down to the west.'
 #
 @tel room_707
 #
@@ -13854,9 +15790,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_709
 #
+@set north/exit_desc = 'The old fortress lies to the north and east.'
+#
 @open west;w = room_709
 #
 @open up;u = room_707
+#
+@set up/exit_desc = 'A steep embankment leads up into the forest.'
 #
 @tel room_709
 #
@@ -13864,21 +15804,33 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_708
 #
+@set south/exit_desc = 'Grass fields extend to the south and east.'
+#
 @open east;e = room_708
 #
 @tel room_710
 #
 @open north;n = room_705
 #
+@set north/exit_desc = 'Off to the north, green life sprouts from the blackness.'
+#
 @open south;s = room_711
 #
+@set south/exit_desc = 'More burnt land lies to the south.'
+#
 @open up;u = room_64
+#
+@set up/exit_desc = 'A climb up will lead to the side of the valley.'
 #
 @tel room_711
 #
 @open north;n = room_710
 #
+@set north/exit_desc = 'Blackend hills continue to the north.'
+#
 @open west;w = room_543
+#
+@set west/exit_desc = 'A steep hillside leading down the mountian is to the west.'
 #
 @tel room_712
 #
@@ -13886,15 +15838,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_438
 #
+@set north/exit_desc = 'A tavern is north.'
+#
 @open south;s = room_389
+#
+@set south/exit_desc = 'A solidly built building is south.'
 #
 @open east;e = room_392
 #
+@set east/exit_desc = 'The baths are east.'
+#
 @open west;w = room_434
+#
+@set west/exit_desc = 'You may exit the plaza to the west.'
 #
 @tel room_714
 #
 @open north;n = room_715
+#
+@set north/exit_desc = 'An archway is set in each of the four walls.'
 #
 @open south;s = room_717
 #
@@ -13904,13 +15866,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open down;d = room_430
 #
+@set down/exit_desc = 'A wide stairway spirals downward.'
+#
 @tel room_715
 #
 @open south;s = room_714
 #
+@set south/exit_desc = 'A stronger light is south.'
+#
 @tel room_716
 #
 @open up;u = room_94
+#
+@set up/exit_desc = 'A glimmer of sunlight appears above.'
 #
 @tel room_717
 #
@@ -13920,11 +15888,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_719
 #
+@set south/exit_desc = 'A forboding tunnel leads south.'
+#
 @open west;w = room_430
+#
+@set west/exit_desc = 'Some narrow steps are to the west.'
 #
 @tel room_719
 #
 @open north;n = room_718
+#
+@set north/exit_desc = 'A dark tunnel leads north.'
 #
 @open worship = room_719
 #
@@ -13938,15 +15912,23 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_375
 #
+@set north/exit_desc = 'The courtyard is north.'
+#
 @open up;u = room_721
+#
+@set up/exit_desc = 'Steps lead up.'
 #
 @tel room_721
 #
 @open down;d = room_720
 #
+@set down/exit_desc = 'Steps lead down.'
+#
 @tel room_722
 #
 @open west;w = room_714
+#
+@set west/exit_desc = 'A stronger light is west.'
 #
 @tel room_723
 #
@@ -13960,21 +15942,31 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_714
 #
+@set east/exit_desc = 'A stronger light is east.'
+#
 @tel room_725
 #
 @open north;n = room_726
 #
+@set north/exit_desc = 'A solid door is north.'
+#
 @open south;s = room_257
+#
+@set south/exit_desc = 'A long gallery is south.'
 #
 @tel room_726
 #
 @open south;s = room_725
+#
+@set south/exit_desc = 'You may exit the throne room to the south.'
 #
 @tel room_727
 #
 @tel room_728
 #
 @open north;n = room_570
+#
+@set north/exit_desc = 'The central balcony is north.'
 #
 @open mojorisin = room_728
 #
@@ -13998,6 +15990,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock gnoll = view:perm(see_hidden_exits)
 #
+@set gnoll/exit_desc = 'Type GNOLL to become a Gnoll.'
+#
 @set gnoll/exit_effect_kind = 7
 #
 @set gnoll/exit_effect_value = 1
@@ -14006,11 +16000,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock templar = view:perm(see_hidden_exits)
 #
+@set templar/exit_desc = 'Type TEMPLAR to become a Templar.'
+#
 @set templar/exit_effect_kind = 7
 #
 @set templar/exit_effect_value = 3
 #
 @open up;u = room_470
+#
+@set up/exit_desc = 'Go *UP* when you are done selecting a class.'
 #
 @tel room_732
 #
@@ -14028,11 +16026,19 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_732
 #
+@set south/exit_desc = 'Marble columns line the hall to the south.'
+#
 @open east;e = room_735
+#
+@set east/exit_desc = 'To the east is a great open hall.'
 #
 @open west;w = room_736
 #
+@set west/exit_desc = 'There is a wooden door the the west.'
+#
 @open up;u = room_737
+#
+@set up/exit_desc = 'There are stairs leading up along the wall to an overhang.'
 #
 @tel room_735
 #
@@ -14054,7 +16060,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open west;w = room_747
 #
+@set west/exit_desc = 'A open wooden door leads west into what looks like a series of rooms.'
+#
 @open down;d = room_734
+#
+@set down/exit_desc = 'A staircase leads down into the great landing.'
 #
 @tel room_738
 #
@@ -14090,19 +16100,31 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open east;e = room_742
 #
+@set east/exit_desc = 'A corridor east is partially blocked by rubble from the walls.'
+#
 @open west;w = room_744
+#
+@set west/exit_desc = 'Over a downed wall to the west, sights of gold glimmer through the door.'
 #
 @tel room_744
 #
 @open south;s = room_745
 #
+@set south/exit_desc = 'A study iron door leads south out of the room.'
+#
 @open east;e = room_743
+#
+@set east/exit_desc = 'Heading towards the east, one notices a doorway.'
 #
 @tel room_745
 #
 @open north;n = room_744
 #
+@set north/exit_desc = 'A tall iron doorway leads north.'
+#
 @open south;s = room_736
+#
+@set south/exit_desc = 'An open doorway to the south can be seen.'
 #
 @tel room_746
 #
@@ -14116,15 +16138,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open north;n = room_748
 #
+@set north/exit_desc = 'More living quarters are to the north.'
+#
 @open east;e = room_737
 #
+@set east/exit_desc = 'An open wooden door leads east to the overhang.'
+#
 @open west;w = room_749
+#
+@set west/exit_desc = 'A long passage leads west.'
 #
 @tel room_748
 #
 @open south;s = room_747
 #
+@set south/exit_desc = 'To the south are more living quarters.'
+#
 @open west;w = room_749
+#
+@set west/exit_desc = 'A long passage leads west.'
 #
 @tel room_749
 #
@@ -14132,9 +16164,13 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock open = view:perm(see_hidden_exits)
 #
+@set open/exit_desc = 'A closed iron door is to the north.'
+#
 @open south;s = room_747
 #
 @open east;e = room_748
+#
+@set east/exit_desc = 'Living quarters are to the east and south.'
 #
 @tel room_750
 #
@@ -14142,7 +16178,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @lock open = view:perm(see_hidden_exits)
 #
+@set open/exit_desc = 'A closed door is to the south.'
+#
 @open up;u = room_704
+#
+@set up/exit_desc = 'A rickety wooden spiral staircase leads up.'
 #
 @open turn = room_751
 #
@@ -14152,7 +16192,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @open south;s = room_743
 #
+@set south/exit_desc = 'A faint outline of a door leads south.'
+#
 @open up;u = room_750
+#
+@set up/exit_desc = 'A trap door is up from here.'
 #
 @tel room_752
 #

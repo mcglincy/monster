@@ -6,17 +6,12 @@ sys.path.insert(0, '..')
 from typeclasses.exit_effect_kind import ExitEffectKind
 from typeclasses.exit_kind import ExitKind
 from typeclasses.room_kind import RoomKind
+from utils.generator_utils import lookup_description, split_integer
 
 
-ROOMDESC_FILE = './json/roomdesc.json'
 DESC_FILE = './json/desc.json'
-
-
-def split_integer(i):
-  # some old pascal integers were packed with 2 values
-  high = int(i / 100)
-  low = i % 100
-  return (high, low)
+LINES_FILE = './json/lines.json'
+ROOMDESC_FILE = './json/roomdesc.json'
 
 
 def make_room(roomdesc, descs):
@@ -40,7 +35,7 @@ def make_room(roomdesc, descs):
       print('#')
 
 
-def make_exit(exit):
+def make_exit(exit, descs, lines):
   exit_kind = exit['kind']
   direction = exit['direction']
   direction_letter = direction[0]
@@ -104,6 +99,18 @@ def make_exit(exit):
   # TODO: obj lock with something like
   # print(f"@lock {exit_name} = traverse:holds(obj_id_or_key)")
 
+  exit_desc = exit['exit_desc']
+  if exit_desc == 0:
+    pass
+  elif exit_desc == 32000:
+    # print(f"@set {exit_name}/exit_desc = 'blah blah default'")
+    # print('#')
+    pass
+  else: 
+    line = lookup_description(exit_desc, descs, lines)
+    print(f"@set {exit_name}/exit_desc = '{line}'")
+    print('#')    
+
   door_effect = exit['door_effect']
   if door_effect:
     exit_effect_value, exit_effect_kind = split_integer(door_effect)
@@ -113,13 +120,16 @@ def make_exit(exit):
     print('#')
 
 
+
 def main():
   """Command-line script."""  
+  with open(DESC_FILE) as f:
+    descs = json.load(f)
+  with open(LINES_FILE) as f:
+    lines = json.load(f)
   with open(ROOMDESC_FILE) as f:
     roomdescs = json.load(f)
 
-  with open(DESC_FILE) as f:
-    descs = json.load(f)
 
   print("""# Monster batchcommand build file.
 #
@@ -147,7 +157,7 @@ def main():
     print(f'@tel room_{roomdesc["id"]}')
     print('#')
     for exit in roomdesc['exits']:
-      make_exit(exit)
+      make_exit(exit, descs, lines)
 
 
 if __name__ == "__main__":
