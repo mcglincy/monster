@@ -75,6 +75,55 @@ class Character(DefaultCharacter):
         self, raw_string, callertype="account", session=session, **kwargs
     )
 
+  def announce_move_from(self, destination, msg=None, mapping=None, **kwargs):
+    """Override superclass to support custom exit messaging.
+
+    Called if the move is to be announced. This is
+    called while we are still standing in the old
+    location.
+
+    Args:
+        destination (Object): The place we are going to.
+        msg (str, optional): a replacement message.
+        mapping (dict, optional): additional mapping objects.
+        **kwargs (dict): Arbitrary, optional arguments for users
+            overriding the call (unused by default).
+
+    You can override this method and call its parent with a
+    message to simply change the default message.  In the string,
+    you can use the following as mappings (between braces):
+        object: the object which is moving.
+        exit: the exit from which the object is moving (if found).
+        origin: the location of the object before the move.
+        destination: the location of the object after moving.
+    """
+    if not self.location:
+      return
+    success_msg = kwargs.get("success_msg")
+    go_in_msg = kwargs.get("go_in_msg")
+
+    if msg:
+      string = msg
+    elif go_in_msg:
+      string = go_in_msg
+    else:
+      string = "{object} is leaving {origin}, heading for {destination}."
+    location = self.location
+    exits = [
+      o for o in location.contents if o.location is location and o.destination is destination
+    ]
+    if not mapping:
+      mapping = {}
+    mapping.update({
+      "object": self,
+      "exit": exits[0] if exits else "somewhere",
+      "origin": location or "nowhere",
+      "destination": destination or "nowhere",
+    })
+    location.msg_contents(string, exclude=(self,), mapping=mapping)
+    if success_msg:
+      self.msg(success_msg)
+
   # helper getters
 
   def character_class(self):

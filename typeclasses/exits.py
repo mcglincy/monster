@@ -48,24 +48,45 @@ class Exit(DefaultExit):
     self.db.exit_effect_kind = None
     self.db.exit_effect_value = None
     # do these msgs exist for DefaultExit already? vvvv
-    self.db.fail_message = None
-    self.db.success_message = None
+    self.db.fail_msg = None
+    self.db.success_msg = None
+    self.db.go_in_msg = None
+    self.db.come_out_msg = None
     # alias + req_alias = passworded door, no NSEWUD link
     # goin/come_out fields are always 32000 (default msg) in the JSON
     # hidden is always 0 in the JSON
     # do we care about auto_look?
 
+  def at_traverse(self, traversing_object, target_location, **kwargs):
+    """Override superclass for custom exit messaging.
+
+    Args:
+        traversing_object (Object): Object traversing us.
+        target_location (Object): Where target is going.
+        **kwargs (dict): Arbitrary, optional arguments for users
+            overriding the call (unused by default).
+    """
+    source_location = traversing_object.location
+    # pass our various exit messages down
+    if traversing_object.move_to(target_location,
+        success_msg=self.db.success_msg,
+        go_in_msg=self.db.go_in_msg,
+        come_out_msg=self.db.come_out_msg):
+      self.at_after_traverse(traversing_object, source_location)
+    else:
+      self.at_failed_traverse(traversing_object)
+
   def at_after_traverse(self, traversing_object, source_location, **kwargs):
-    if self.db.success_message:
-      traversing_object.msg(self.db.success_message)
+    # note: this is taking place *after* we have moved to the new location.
     if self.db.exit_effect_kind:
       apply_exit_effect(traversing_object, self.db.exit_effect_kind, self.db.exit_effect_value)
 
   def at_failed_traverse(self, traversing_object, **kwargs):
     # TODO: instead of overriding at_failed_traverse we could also just 
     # set err_traverse and let superclass send that
-    if self.db.fail_message:
-      traversing_object.msg(self.db.fail_message)
+    if self.db.fail_msg:
+      traversing_object.msg(self.db.fail_msg)
+
 
   def get_display_name(self, looker, **kwargs):
     if self.db.exit_desc:
@@ -74,7 +95,6 @@ class Exit(DefaultExit):
       return f"To the {self.name} is {self.destination.key}."
     elif self.name in ["up", "down"]:
       return f"The {self.destination.key} is {self.name} from here."
-  
     if self.locks.check_lockstring(looker, "perm(Builder)"):
       return "{}(#{})".format(self.name, self.id)
     return self.name
