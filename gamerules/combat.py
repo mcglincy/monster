@@ -158,7 +158,7 @@ def character_death(victim, killer=None):
   set_xp(victim, int(victim.db.xp / 2))
 
   # victim gets back a bit of health
-  victim.db.health = 200
+  victim.db.health = 1
 
 
 def mob_death(mob, killer=None):
