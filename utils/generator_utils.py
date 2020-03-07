@@ -1,4 +1,6 @@
 
+DEFAULT_MSG_ID = 32000
+
 
 def split_integer(i):
   # some old pascal integers were packed with 2 values

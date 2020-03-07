@@ -6,7 +6,7 @@ sys.path.insert(0, '..')
 from typeclasses.equipment_effect_kind import EquipmentEffectKind
 from typeclasses.equipment_slot import EquipmentSlot
 from typeclasses.object_kind import ObjectKind
-from utils.generator_utils import lookup_description, split_integer
+from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_integer
 
 
 DESC_FILE = './json/desc.json'
@@ -14,7 +14,6 @@ LINES_FILE = './json/lines.json'
 OBJECT_FILE = './json/objects.json'
 
 DEFAULT_ARTICLE = 1
-DEFAULT_MSG_ID = 32000
 
 
 def lookup_effect(obj, effect):
@@ -70,7 +69,7 @@ def snake_case(s):
   return ''.join(chars)
 
 
-def maybe(value, field_name, except_if=None):
+def maybe_desc(value, field_name, except_if=None):
   if value and value != except_if:
     print(f"  '{field_name}': {value},")
 
