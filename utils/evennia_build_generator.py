@@ -6,7 +6,7 @@ sys.path.insert(0, '..')
 from typeclasses.exit_effect_kind import ExitEffectKind
 from typeclasses.exit_kind import ExitKind
 from typeclasses.room_kind import RoomKind
-from utils.generator_utils import lookup_description, split_integer
+from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_integer
 
 
 DESC_FILE = './json/desc.json'
@@ -18,13 +18,6 @@ def make_room(roomdesc, descs):
   record_id = roomdesc["id"]
   print(f'@dig/tel {roomdesc["nice_name"]};room_{record_id}')
   print('#')
-  print(f'@set here/record_id = {record_id}')
-  print('#')
-  if roomdesc["trap_chance"]:
-    print(f'@set here/trap_chance = {roomdesc["trap_chance"]}')
-    print('#')
-    print(f'@set here/trap_to = {roomdesc["trap_to"]}')
-    print('#')
   # TODO: do we want to handle secondary descript?
   if 'primary' in roomdesc:
     desc_idx = roomdesc['primary'] - 1
@@ -33,10 +26,26 @@ def make_room(roomdesc, descs):
       print('@desc')
       print('\n'.join(desc['lines']))
       print('#')
+  print(f'@set here/record_id = {record_id}')
+  print('#')
+  if roomdesc["trap_chance"]:
+    print(f'@set here/trap_chance = {roomdesc["trap_chance"]}')
+    print('#')
+    print(f'@set here/trap_to = {roomdesc["trap_to"]}')
+    print('#')
+
+
+def maybe_set_desc(exit, exit_name, field_name, attr_name, descs, lines):
+  desc_id = exit[field_name]
+  if desc_id == 0 or desc_id == DEFAULT_MSG_ID:
+    return
+  desc = lookup_description(desc_id, descs, lines)
+  print(f"@set {exit_name}/{attr_name} = {desc}")
+  print('#') 
 
 
 def make_exit(exit, descs, lines):
-  exit_kind = exit['kind']
+  exit_kind = ExitKind(exit['kind'])
   direction = exit['direction']
   direction_letter = direction[0]
   to_room_id = f'room_{exit["to_loc"]}'
@@ -45,12 +54,11 @@ def make_exit(exit, descs, lines):
   req_alias = exit['req_alias']
   alias = exit['alias']
   obj_req = exit['obj_req']
-    # "hidden" field in the JSON seems to never be set
-  hidden = False
+  hidden = exit['hidden']
 
-  if exit_kind == ExitKind.NO_EXIT:
-    # skip, I guess?
-    return
+  # if exit_kind == ExitKind.NO_EXIT:
+  #   # skip, I guess?
+  #   return
   # elif exit_kind == ExitKind.OPEN:
   #   room_class = 'Room'
   #   pass  
@@ -77,12 +85,16 @@ def make_exit(exit, descs, lines):
   #   # TODO
   #   pass
 
-  if exit_kind == ExitKind.PASSWORDED or (alias and req_alias):
+  #if exit_kind == ExitKind.PASSWORDED or (alias and req_alias):
     # alias and req_alias == passworded door
     # TODO: should these be two different flavors of exit? 
-    exit_names = alias
-    hidden = True
-  elif alias:
+  #  exit_names = alias
+  #  hidden = True
+
+  # TODO: how to handle req_alias? we want to show the exit (e.g., "east"),
+  # but not show the alias password, and require using the alias
+
+  if alias:
     exit_names = f"{direction};{direction_letter};{alias}"
   else:
     exit_names = f"{direction};{direction_letter}"
@@ -92,6 +104,13 @@ def make_exit(exit, descs, lines):
 
   exit_name = exit_names.split(';')[0]
 
+  print(f"@set {exit_name}/exit_kind = {exit_kind}")
+  print('#')
+
+  if exit_kind == ExitKind.NO_EXIT:
+    print(f"@lock {exit_name} = traverse:none()")
+    print('#')
+
   if hidden:
     print(f"@lock {exit_name} = view:perm(see_hidden_exits)")
     print('#')
@@ -99,17 +118,12 @@ def make_exit(exit, descs, lines):
   # TODO: obj lock with something like
   # print(f"@lock {exit_name} = traverse:holds(obj_id_or_key)")
 
-  exit_desc = exit['exit_desc']
-  if exit_desc == 0:
-    pass
-  elif exit_desc == 32000:
-    # print(f"@set {exit_name}/exit_desc = 'blah blah default'")
-    # print('#')
-    pass
-  else: 
-    line = lookup_description(exit_desc, descs, lines)
-    print(f"@set {exit_name}/exit_desc = '{line}'")
-    print('#')    
+
+  maybe_set_desc(exit, exit_name, 'exit_desc', 'exit_desc', descs, lines)
+  maybe_set_desc(exit, exit_name, 'fail', 'fail_msg', descs, lines)
+  maybe_set_desc(exit, exit_name, 'success', 'success_msg', descs, lines)
+  maybe_set_desc(exit, exit_name, 'go_in', 'go_in_msg', descs, lines)
+  maybe_set_desc(exit, exit_name, 'come_out', 'come_out_msg', descs, lines)
 
   door_effect = exit['door_effect']
   if door_effect:
