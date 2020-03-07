@@ -73,6 +73,15 @@ See the `@spawn` command and `evennia.utils.spawner` for more info.
 # }
 
 #
+# Misc object prototypes
+#
+
+MERCHANT = {
+  'typeclass': 'typeclasses.objects.Merchant',
+  'key': 'merchant',
+}
+
+#
 # Mob prototypes
 #
 
