@@ -2,9 +2,3 @@
 @tel Limbo
 #
 @open down;d = Void
-#
-# Make sure Void is linked to Purgatory, until we have trapdoors working
-@tel Void
-#
-@open down;d = Purgatory
-#
