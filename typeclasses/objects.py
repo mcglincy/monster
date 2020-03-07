@@ -174,7 +174,7 @@ class Object(DefaultObject):
     self.db.get_object_required = None
     self.db.get_success_msg = None
     self.db.line_desc = None
-    self.db.object_kind = ObjectKind.BLAND
+    self.db.object_kind = None
     self.db.sticky = False
     self.db.num_exist = None
     self.db.use_fail_msg = None
@@ -377,6 +377,9 @@ class Merchant(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.sticky = True
+    spawn("iron_bar")[0].location = self
+    spawn("meat_cleaver")[0].location = self
+    spawn("axe")[0].location = self
 
   def return_appearance(self, looker, **kwargs):
     lines = []
