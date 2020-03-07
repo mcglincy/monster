@@ -105,7 +105,8 @@ class Character(DefaultCharacter):
     if msg:
       string = msg
     elif go_in_msg:
-      string = go_in_msg
+      # msgs may have a '#' placeholder
+      string = go_in_msg.replace("#", self.key)
     else:
       string = "{object} is leaving {origin}, heading for {destination}."
     location = self.location
@@ -123,6 +124,57 @@ class Character(DefaultCharacter):
     location.msg_contents(string, exclude=(self,), mapping=mapping)
     if success_msg:
       self.msg(success_msg)
+
+  def announce_move_to(self, source_location, msg=None, mapping=None, **kwargs):
+    """Override superclass to support custom exit messaging.
+    Called after the move if the move was not quiet. At this point
+    we are standing in the new location.
+
+    Args:
+        source_location (Object): The place we came from
+        msg (str, optional): the replacement message if location.
+        mapping (dict, optional): additional mapping objects.
+        **kwargs (dict): Arbitrary, optional arguments for users
+            overriding the call (unused by default).
+
+    Notes:
+        You can override this method and call its parent with a
+        message to simply change the default message.  In the string,
+        you can use the following as mappings (between braces):
+            object: the object which is moving.
+            exit: the exit from which the object is moving (if found).
+            origin: the location of the object before the move.
+            destination: the location of the object after moving.
+
+    """
+    if source_location:
+      come_out_msg = kwargs.get("come_out_msg")
+      if msg:
+        string = msg
+      elif come_out_msg:
+        # msgs may have a '#' placeholder
+        string = come_out_msg.replace("#", self.key)
+      else:
+        string = "{object} arrives to {destination} from {origin}."
+    else:
+      string = "{object} arrives to {destination}."
+    origin = source_location
+    destination = self.location
+    exits = []
+    if origin:
+      exits = [
+        o for o in destination.contents if o.location is destination and o.destination is origin
+      ]
+    if not mapping:
+      mapping = {}
+    mapping.update({
+      "object": self,
+      "exit": exits[0] if exits else "somewhere",
+      "origin": origin or "nowhere",
+      "destination": destination or "nowhere",
+    })
+    destination.msg_contents(string, exclude=(self,), mapping=mapping)
+
 
   # helper getters
 
