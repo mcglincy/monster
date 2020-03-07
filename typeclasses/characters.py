@@ -99,8 +99,12 @@ class Character(DefaultCharacter):
     return self.character_class().size
 
   def alignment(self):
-    # TODO: do we need to handle non-33/66/99 values for classes?
-    return Alignment(self.character_class().alignment)
+    try:
+      alignment = Alignment(self.character_class().alignment)
+    except ValueError:
+      # handle non-33/66/99 values for classes, just in case
+      alignment = Alignment.NEUTRAL
+    return alignment
 
   def max_health(self):
     return (self.character_class().base_health +
