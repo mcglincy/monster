@@ -16,9 +16,9 @@ The running game server is up at http://www.monstermud.com.
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
   * Exit types
-    * passworded
     * set or reset class
-  * Exit descriptions    
+  * Exit descriptions
+  * Exit messages: success, failure, "go in", "come out"
 * Objects
   * Imported all original armor and weapons
   * Simple gold system
@@ -53,6 +53,7 @@ The running game server is up at http://www.monstermud.com.
   * Look at in-room subdescriptions
   * Trap door
   * Exit types
+    * passworded
     * hidden
     * object keyed/forbidden
     * guardian
