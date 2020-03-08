@@ -20,7 +20,7 @@ The running game server is up at http://www.monstermud.com.
   * Exit descriptions
   * Exit messages: success, failure, "go in", "come out"
 * Objects
-  * Imported all original armor and weapons
+  * Imported all original objects (weapons, armor, etc)
   * Simple gold system
   * Wear/equipment slots
 * Combat
