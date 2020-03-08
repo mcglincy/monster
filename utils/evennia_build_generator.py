@@ -35,16 +35,47 @@ def make_room(roomdesc, descs):
     print('#')
 
 
-def maybe_set_desc(exit, exit_name, field_name, attr_name, descs, lines):
-  desc_id = exit[field_name]
-  if desc_id == 0 or desc_id == DEFAULT_MSG_ID:
+def maybe_set_desc(desc_id, exit_name, attr_name, descs, lines):
+  if not desc_id or desc_id == 0 or desc_id == DEFAULT_MSG_ID:
     return
   desc = lookup_description(desc_id, descs, lines)
   print(f"@set {exit_name}/{attr_name} = {desc}")
   print('#') 
 
 
-def make_exit(exit, descs, lines):
+def opposite_dir(key):
+  if key == "north":
+    return "south"
+  if key == "south":
+    return "north"
+  if key == "east":
+    return "west"
+  if key == "west":
+    return "east"
+  if key == "up":
+    return "down"
+  if key == "down":
+    return "up"
+  return None
+
+
+def find_opposite_exit(roomdescs, roomdesc, exit):
+  # TODO: use a global data structure instead of brute-forcing every call
+  room_id = roomdesc['id']
+  direction = exit['direction']
+  opposite_direction = opposite_dir(direction)
+  for other_room in roomdescs:
+    if other_room['id'] == room_id:
+      # same room
+      continue
+    for other_exit in other_room['exits']:
+      if (other_exit['to_loc'] == room_id
+        and other_exit['direction'] == opposite_direction):
+        return other_exit
+  return None
+
+
+def make_exit(exit, opposite_exit, descs, lines):
   exit_kind = ExitKind(exit['kind'])
   direction = exit['direction']
   direction_letter = direction[0]
@@ -118,12 +149,15 @@ def make_exit(exit, descs, lines):
   # TODO: obj lock with something like
   # print(f"@lock {exit_name} = traverse:holds(obj_id_or_key)")
 
-
-  maybe_set_desc(exit, exit_name, 'exit_desc', 'exit_desc', descs, lines)
-  maybe_set_desc(exit, exit_name, 'fail', 'fail_msg', descs, lines)
-  maybe_set_desc(exit, exit_name, 'success', 'success_msg', descs, lines)
-  maybe_set_desc(exit, exit_name, 'go_in', 'go_in_msg', descs, lines)
-  maybe_set_desc(exit, exit_name, 'come_out', 'come_out_msg', descs, lines)
+  maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc', descs, lines)
+  maybe_set_desc(exit['fail'], exit_name, 'fail_msg', descs, lines)
+  maybe_set_desc(exit['success'], exit_name, 'success_msg', descs, lines)
+  maybe_set_desc(exit['go_in'], exit_name, 'go_in_msg', descs, lines)
+  # TODO: we could search all rooms/exits for our opposite and then use its come_out_msg
+  # maybe_set_desc(exit['come_out'], exit_name, 'come_out_msg', descs, lines)
+  if opposite_exit:
+    maybe_set_desc(opposite_exit['come_out'], exit_name, 'come_out_msg', descs, lines)
+    
 
   door_effect = exit['door_effect']
   if door_effect:
@@ -134,9 +168,10 @@ def make_exit(exit, descs, lines):
     print('#')
 
 
-
 def main():
   """Command-line script."""  
+  # TODO: use a class and keep descs/lines/roomsdescs as ivars
+  # Alternately make them globals
   with open(DESC_FILE) as f:
     descs = json.load(f)
   with open(LINES_FILE) as f:
@@ -171,7 +206,8 @@ def main():
     print(f'@tel room_{roomdesc["id"]}')
     print('#')
     for exit in roomdesc['exits']:
-      make_exit(exit, descs, lines)
+      opposite_exit = find_opposite_exit(roomdescs, roomdesc, exit)
+      make_exit(exit, opposite_exit, descs, lines)
 
 
 if __name__ == "__main__":

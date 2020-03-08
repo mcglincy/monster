@@ -12,22 +12,6 @@ from gamerules.exit_effects import apply_exit_effect
 from typeclasses.exit_kind import ExitKind
 
 
-def exit_opposite(key):
-  if key == "north":
-    return "south"
-  if key == "south":
-    return "north"
-  if key == "east":
-    return "west"
-  if key == "west":
-    return "east"
-  if key == "up":
-    return "down"
-  if key == "down":
-    return "up"
-  return None
-
-
 class Exit(DefaultExit):
   """
   Exits are connectors between rooms. Exits are normal Objects except
@@ -81,22 +65,11 @@ class Exit(DefaultExit):
     """
     source_location = traversing_object.location
 
-    # see if target_location has a mirror exit for us
-    # e.g., if we're "up", see if there's a "down", with a come_out_msg
-    # TODO: this is stupid to do dynamically, and confusing to boot.
-    # Could we figure this out when generating build.ev?
-    come_out_msg = None
-    opp_exit_key = exit_opposite(self.key)
-    target_exits = target_location.search(opp_exit_key,
-      candidates=target_location.contents, typeclass="typeclasses.exits.Exit", quiet=True)
-    if len(target_exits) > 0:
-      come_out_msg = target_exits[0].db.come_out_msg
-
     # pass our various exit messages down
     if traversing_object.move_to(target_location,
         success_msg=self.db.success_msg,
         go_in_msg=self.db.go_in_msg,
-        come_out_msg=come_out_msg):
+        come_out_msg=self.db.come_out_msg):
       self.at_after_traverse(traversing_object, source_location)
     else:
       self.at_failed_traverse(traversing_object)

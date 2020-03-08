@@ -8566,7 +8566,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/go_in_msg = # shimmies up a sewer ladder and escapes into the city above.
 #
-@set up/come_out_msg = # lifts the grate and plops down into the water below.
+@set up/come_out_msg = # emerges from a grate set into the street stones.
 #
 @tel room_5
 #
@@ -8639,8 +8639,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set down/success_msg = Hand reach out from under you, pulling you with fierce strength to your death!
 #
 @set down/go_in_msg = Your companion disappears with a scream and skeletal hands pull him beneath the earths crust!
-#
-@set down/come_out_msg = Hands scrabble at a dark hole at your feet!
 #
 @tel room_9
 #
@@ -9506,8 +9504,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/go_in_msg = # has stepped into the debris heap!
 #
-@set east/come_out_msg = # has come out of the pile of rubble!
-#
 @open west;w = room_58
 #
 @set west/exit_kind = 1
@@ -9800,8 +9796,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/success_msg = You pull aside the gaudy striped canvas to enter the dim room.. 
 #
-@set east/come_out_msg = # ducks out from under a cloth flap, blinking at the  bright sunlight... 
-#
 @open west;w = room_75
 #
 @set west/exit_kind = 1
@@ -9953,6 +9947,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set up/fail_msg = You try to pull yourself up but hands, invisible in the dark, pull you down!
 #
 @set up/success_msg = With a grand effort you pull yourself out of the dark hole to safety..
+#
+@set up/come_out_msg = Hands scrabble at a dark hole at your feet!
 #
 @tel room_89
 #
@@ -10340,7 +10336,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/go_in_msg = # ascends the steps, disappearing through the roof above.
 #
-@set up/come_out_msg = # descends from the chamber above, a look of grim determination upon his face.
+@set up/come_out_msg = The trapdoor opens, and # enters the chamber...
 #
 @open down;d = room_109
 #
@@ -10788,7 +10784,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/go_in_msg = # hauls himself onto the cavern wall, and begins to slowly ascend in spite of the torrent of water. 
 #
-@set up/come_out_msg = # plops down onto the ledge with you, after climbing down from above. 
+@set up/come_out_msg = # climbs over the edge of the waterfall from below. 
 #
 @open down;d = room_141
 #
@@ -10798,7 +10794,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/go_in_msg = # gently begins to descend the cavern wall. 
 #
-@set down/come_out_msg = # clambers onto the ledge with you, after having climbed up from below. 
+@set down/come_out_msg = # splashes down into the pool, after having climbed down from above. 
 #
 @tel room_141
 #
@@ -10824,7 +10820,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/go_in_msg = # hauls his soaking body onto the cavern wall, and begins to slowly climb up. 
 #
-@set up/come_out_msg = # splashes down into the pool, after having climbed down from above. 
+@set up/come_out_msg = # clambers onto the ledge with you, after having climbed up from below. 
 #
 @tel room_142
 #
@@ -10840,7 +10836,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/go_in_msg = # slowly begins to climb down the face of the waterfall. 
 #
-@set down/come_out_msg = # climbs over the edge of the waterfall from below. 
+@set down/come_out_msg = # plops down onto the ledge with you, after climbing down from above. 
 #
 @tel room_143
 #
@@ -10849,8 +10845,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set north/exit_kind = 0
 #
 @lock north = traverse:none()
-#
-@set north/come_out_msg = A stone panel turns, and # emerges!
 #
 @open east;e = room_546
 #
@@ -11324,7 +11318,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/go_in_msg = # has climbed up the the wall of this chamber, and is attempting to crawl up the air shaft! 
 #
-@set up/come_out_msg = # emerges slightly burned from the air shaft in the ceiling, and plops down onto the floor. 
+@set up/come_out_msg = # has emerged from the heating shaft! 
 #
 @set up/exit_effect_kind = 4
 #
@@ -11366,7 +11360,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/go_in_msg = # has lowered himself into the heating shaft! 
 #
-@set down/come_out_msg = # has emerged from the heating shaft! 
+@set down/come_out_msg = # emerges slightly burned from the air shaft in the ceiling, and plops down onto the floor. 
 #
 @set down/exit_effect_kind = 4
 #
@@ -12740,8 +12734,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/go_in_msg = # steps into the fireplace, and is gone!
 #
-@set up/come_out_msg = # suddenly appears from within the fireplace!
-#
 @tel room_262
 #
 @open south;s;gargantuan = room_723
@@ -12749,8 +12741,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set south/exit_kind = 8
 #
 @set south/go_in_msg = # masturbates furiously, and dissappears.
-#
-@set south/come_out_msg = # appears from behind a hidden panel.
 #
 @open east;e;magpie = room_262
 #
@@ -12773,6 +12763,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set down/exit_kind = 1
 #
 @set down/exit_desc = You can climb down the chimney.
+#
+@set down/come_out_msg = # suddenly appears from within the fireplace!
 #
 @tel room_263
 #
@@ -14168,8 +14160,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/go_in_msg = A beam of darkness absorbs # !
 #
-@set north/come_out_msg = A spray of liquid erupts from the wall, coagulating to form # !
-#
 @open south;s = room_361
 #
 @set south/exit_kind = 1
@@ -14449,6 +14439,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set west/exit_kind = 1
 #
 @set west/exit_desc = You may exit the cathedral to the west.
+#
+@set west/come_out_msg = # comes running out of the temple as if pursued by demons!
 #
 @open up;u = room_381
 #
@@ -15136,8 +15128,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/go_in_msg = You see # fade into the darkness of an eastern door...
 #
-@set east/come_out_msg = # comes running out of the temple as if pursued by demons!
-#
 @tel room_418
 #
 @open east;e = room_85
@@ -15147,6 +15137,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open west;w = room_77
 #
 @set west/exit_kind = 1
+#
+@set west/come_out_msg = # ducks out from under a cloth flap, blinking at the  bright sunlight... 
 #
 @tel room_419
 #
@@ -15269,8 +15261,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set down/success_msg = A piece of the roof falls on you!  
 #
 @set down/go_in_msg = You see # duck as a piece of the roof comes tumbling down 
-#
-@set down/come_out_msg = Ouch!
 #
 @set down/exit_effect_kind = 4
 #
@@ -15420,7 +15410,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/go_in_msg = # lifts up a grate and descends beneath the city!
 #
-@set down/come_out_msg = # emerges from a grate set into the street stones.
+@set down/come_out_msg = # lifts the grate and plops down into the water below.
 #
 @tel room_433
 #
@@ -15768,7 +15758,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/go_in_msg = # has descended the steps, departing like the wind...
 #
-@set down/come_out_msg = The trapdoor opens, and # enters the chamber...
+@set down/come_out_msg = # descends from the chamber above, a look of grim determination upon his face.
 #
 @set down/exit_effect_kind = 4
 #
@@ -16548,6 +16538,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
+@set down/come_out_msg = # comes stumbling into the room from upstairs. 
+#
 @tel room_501
 #
 @open east;e = room_502
@@ -16706,8 +16698,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/go_in_msg = # sneaks out through the north door.
 #
-@set north/come_out_msg = # comes running into the room from the north.
-#
 @open south;s = room_521
 #
 @set south/exit_kind = 1
@@ -16715,8 +16705,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set south/success_msg = You slide out through the south door... 
 #
 @set south/go_in_msg = # bolts out the south door!
-#
-@set south/come_out_msg = # casually walks into the room from the south.
 #
 @open east;e = room_516
 #
@@ -16726,8 +16714,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/go_in_msg = # storms out the east door.
 #
-@set east/come_out_msg = # comes skipping in from the east.
-#
 @open west;w = room_526
 #
 @set west/exit_kind = 1
@@ -16735,8 +16721,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set west/success_msg = You step through the west door... 
 #
 @set west/go_in_msg = # runs in terror out the west door!
-#
-@set west/come_out_msg = # barges into the room from the west!
 #
 @open up;u = room_500
 #
@@ -16748,8 +16732,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/go_in_msg = A dark gateway to the west marks the entrance to lower town.
 #
-@set up/come_out_msg = # comes stumbling into the room from upstairs. 
-#
 @tel room_511
 #
 @open south;s = room_510
@@ -16757,6 +16739,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set south/exit_kind = 1
 #
 @set south/exit_desc = There is an oak door to the south.
+#
+@set south/come_out_msg = # comes running into the room from the north.
 #
 @open east;e = room_512
 #
@@ -16792,8 +16776,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/go_in_msg = # touches one of the icy walls of the cavern... 
 #
-@set north/come_out_msg = ... and quickly recoils from the frigid surface! 
-#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -50
@@ -16812,8 +16794,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/go_in_msg = # touches one of the icy walls of the cavern... 
 #
-@set east/come_out_msg = ... and quickly recoils from the frigid surface! 
-#
 @set east/exit_effect_kind = 4
 #
 @set east/exit_effect_value = -50
@@ -16831,8 +16811,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set down/success_msg = You find yourself passing unharmed through the frozen walls. 
 #
 @set down/go_in_msg = # suddenly passes through the frozen cavern walls as if he were a ghost! 
-#
-@set down/come_out_msg = # suddenly comes right out of the walls! 
 #
 @set down/exit_effect_kind = 4
 #
@@ -16858,8 +16836,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/go_in_msg = # takes the plunge into the watery walls!  #'s not one of your great thinkers, huh? 
 #
-@set east/come_out_msg = Suddenly, # is thrown back out of the watery walls!  It seems # can't even drown himself properly! 
-#
 @set east/exit_effect_kind = 4
 #
 @set east/exit_effect_value = -100
@@ -16871,8 +16847,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set west/success_msg = You plunge into the watery walls of the cavern... ... what are you trying to do? Drown yourself?  We won't have suicides here. Your life was meant to be taken by a Druid. 
 #
 @set west/go_in_msg = # takes the plunge into the watery walls!  #'s not one of your great thinkers, huh? 
-#
-@set west/come_out_msg = Suddenly, # is thrown back out of the watery walls!  It seems # can't even drown himself properly! 
 #
 @set west/exit_effect_kind = 4
 #
@@ -16894,8 +16868,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/go_in_msg = You find yourself in a very cramped, dark, little cave. There is just enough floor space here for a person of very small stature to lay down upon. Some small shelves have been chiseled into the rock. 
 #
-@set south/come_out_msg = ... and finds it little too hot for his liking! 
-#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -50
@@ -16907,8 +16879,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set east/success_msg = You're singed by the boiling water!  You step back to the center of the cavern. 
 #
 @set east/go_in_msg =          
-#
-@set east/come_out_msg = ... and finds it a little too hot for his liking! 
 #
 @set east/exit_effect_kind = 4
 #
@@ -16933,6 +16903,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set west/exit_kind = 1
 #
 @set west/exit_desc = There is an oak door to the west.
+#
+@set west/come_out_msg = # comes skipping in from the east.
 #
 @tel room_517
 #
@@ -16968,8 +16940,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/go_in_msg = # takes a tentative step towards one of the walls... 
 #
-@set south/come_out_msg = ... and suddenly jumps back, apparently in pain. 
-#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -50
@@ -16992,8 +16962,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_desc = The trail continues to the west...
 #
-@set west/come_out_msg = ... and suddenly jumps back, apparently in pain. 
-#
 @tel room_519
 #
 @open north;n = room_519
@@ -17003,8 +16971,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set north/success_msg = You walk off the trail and into the flames... ... you aren't too bright are you?  You suddenly decide that you don't like the smell of burning hair, so you step out of the flames, and back onto the trail. 
 #
 @set north/go_in_msg = # happlessly blunders into the flames! What a moron... 
-#
-@set north/come_out_msg = # soon wises up and steps out of the flames. 
 #
 @set north/exit_effect_kind = 4
 #
@@ -17018,8 +16984,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/go_in_msg = # happlessly blunders into the flames! What a moron... 
 #
-@set south/come_out_msg = # soon wises up and steps out of the flames. 
-#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -100
@@ -17029,6 +16993,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set east/exit_kind = 1
 #
 @set east/exit_desc = The trail continues to the east and to the west...
+#
+@set east/come_out_msg = ... and suddenly jumps back, apparently in pain. 
 #
 @open west;w = room_520
 #
@@ -17050,8 +17016,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/go_in_msg = # unknowingly steps on the hot cinders... 
 #
-@set south/come_out_msg = However, # soon realizes his mistake, and steps back onto the safe trail. 
-#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -50
@@ -17070,8 +17034,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/go_in_msg = # unknowingly steps on the hot cinders... 
 #
-@set west/come_out_msg = However, # soon realizes his mistake, and steps back onto the safe trail. 
-#
 @set west/exit_effect_kind = 4
 #
 @set west/exit_effect_value = -50
@@ -17083,6 +17045,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set north/exit_kind = 1
 #
 @set north/exit_desc = There is an oak door to the north.
+#
+@set north/come_out_msg = # casually walks into the room from the south.
 #
 @open west;w = room_522
 #
@@ -17124,8 +17088,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/go_in_msg = # walks out into the middle of the lava flow... 
 #
-@set south/come_out_msg = ...and quickly returns to the path. 
-#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = -50
@@ -17143,8 +17105,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set west/success_msg = Not realizing what you are doing, you foolishly step into the lava! However, after getting bad burns on your feet you quickly step back onto the path. 
 #
 @set west/go_in_msg = # walks out into the middle of the lava flow... 
-#
-@set west/come_out_msg = ...and quickly returns to the path. 
 #
 @set west/exit_effect_kind = 4
 #
@@ -17170,8 +17130,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/go_in_msg = # unwisely walks straight into the avalanche! He must have left his brain at home... 
 #
-@set east/come_out_msg = Shorty after, however, # is thrown back onto the path. 
-#
 @set east/exit_effect_kind = 4
 #
 @set east/exit_effect_value = -100
@@ -17183,8 +17141,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set west/success_msg = As you step off the path, you are nearly buried by the falling rocks! Do you have a death wish, or something?  By a twist of fate, a particularly large rock hits you and throws you clear of the avalanche of rock and debris. 
 #
 @set west/go_in_msg = # unwisely walks straight into the avalanche! He must have left his brain at home... 
-#
-@set west/come_out_msg = Shortly after, however, # is thrown back onto the path. 
 #
 @set west/exit_effect_kind = 4
 #
@@ -17199,8 +17155,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set north/success_msg = As you step off the path, you are blasted by the abrasive sand storms!  You reluctantly step back onto the path. 
 #
 @set north/go_in_msg = # disregards the sand storms and steps off the path... 
-#
-@set north/come_out_msg = ...however after a few seconds he steps back onto the path. 
 #
 @set north/exit_effect_kind = 4
 #
@@ -17226,8 +17180,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/go_in_msg = # disregards the sand storms and steps off the path... 
 #
-@set west/come_out_msg = ...however after a few seconds he steps back onto the path. 
-#
 @set west/exit_effect_kind = 4
 #
 @set west/exit_effect_value = -50
@@ -17245,6 +17197,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set east/exit_kind = 1
 #
 @set east/exit_desc = There is an oak door to the east.
+#
+@set east/come_out_msg = # barges into the room from the west!
 #
 @tel room_527
 #
@@ -17274,8 +17228,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/go_in_msg = # walks into the smog... 
 #
-@set north/come_out_msg = ... and comes back out gasping for breath! 
-#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -50
@@ -17300,8 +17252,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/go_in_msg = # walks into the smog... 
 #
-@set west/come_out_msg = ... and comes back out gasping for breath! 
-#
 @set west/exit_effect_kind = 4
 #
 @set west/exit_effect_value = -50
@@ -17316,8 +17266,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/go_in_msg = # unwittingly makes a false step into the swirling winds! 
 #
-@set north/come_out_msg = After being thrown around by the high-velocity winds for a bit, # finally lands in the middle of the room. 
-#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -100
@@ -17329,8 +17277,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set south/success_msg = There looks to be a small opening next to the doors. Perhaps with luck one can find an old key lying around that just might fit the lock!
 #
 @set south/go_in_msg = # unwittingly makes a false step into the swirling winds! 
-#
-@set south/come_out_msg = After being thrown around by the high-velocity winds for a bit, # finally lands in the middle of the room. 
 #
 @set south/exit_effect_kind = 4
 #
@@ -17356,8 +17302,6 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/go_in_msg = # is suddenly struck by a bolt of lightning! 
 #
-@set north/come_out_msg = However, he seems relatively unscathed. 
-#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -50
@@ -17375,8 +17319,6 @@ be heard.  It seems as though the water is down and behind the wall.
 @set east/success_msg = You are suddenly struck by a small bolt of lightning! 
 #
 @set east/go_in_msg = # is suddenly struck by a bolt of lightning! 
-#
-@set east/come_out_msg = However, he seems relatively unscathed. 
 #
 @set east/exit_effect_kind = 4
 #
@@ -17574,6 +17516,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_desc = A narrow corridor leads south.
 #
+@set south/come_out_msg = A stone panel turns, and # emerges!
+#
 @set south/exit_effect_kind = 4
 #
 @set south/exit_effect_value = 350
@@ -17599,6 +17543,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set up/exit_kind = 1
 #
 @set up/exit_desc = Some icy steps lead up.
+#
+@set up/come_out_msg = # suddenly comes right out of the walls! 
 #
 @tel room_550
 #
@@ -18009,6 +17955,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @set west/exit_kind = 1
 #
 @set west/fail_msg = Where are you going? This is an infinite plain!
+#
+@set west/come_out_msg = # has come out of the pile of rubble!
 #
 @tel room_584
 #
@@ -18959,6 +18907,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open south;s = room_360
 #
 @set south/exit_kind = 1
+#
+@set south/come_out_msg = A spray of liquid erupts from the wall, coagulating to form # !
 #
 @open west;w = room_360
 #
@@ -20132,6 +20082,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
+@set north/come_out_msg = # appears from behind a hidden panel.
+#
 @set north/exit_effect_kind = 4
 #
 @set north/exit_effect_value = -349
@@ -20466,7 +20418,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/success_msg =  With a little force, you manage to open the door. 
 #
-@set north/come_out_msg = A door opens to the north and # wanders through it.
+@set north/come_out_msg = A door opens to the south and # wander through it.
 #
 @open south;s = room_747
 #
@@ -20492,7 +20444,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/go_in_msg = # opens the door south, and closes it behind him.
 #
-@set south/come_out_msg = A door opens to the south and # wander through it.
+@set south/come_out_msg = A door opens to the north and # wanders through it.
 #
 @open up;u = room_704
 #
@@ -20508,7 +20460,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/go_in_msg = # dissappears from the room.
 #
-@set down/come_out_msg = Out of the darkness, # suddenly appears into the room.
+@set down/come_out_msg = Out of the darkness, # appears into the room
 #
 @tel room_751
 #
@@ -20526,7 +20478,7 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_desc = A trap door is up from here.
 #
-@set up/come_out_msg = Out of the darkness, # appears into the room
+@set up/come_out_msg = Out of the darkness, # suddenly appears into the room.
 #
 @tel room_752
 #
