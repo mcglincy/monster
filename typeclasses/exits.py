@@ -12,6 +12,21 @@ from gamerules.exit_effects import apply_exit_effect
 from typeclasses.exit_kind import ExitKind
 
 
+def exit_opposite(key):
+  if key == "north":
+    return "south"
+  if key == "south":
+    return "north"
+  if key == "east":
+    return "west"
+  if key == "west":
+    return "east"
+  if key == "up":
+    return "down"
+  if key == "down":
+    return "up"
+  return None
+
 
 class Exit(DefaultExit):
   """
@@ -47,15 +62,13 @@ class Exit(DefaultExit):
     self.db.exit_desc = None
     self.db.exit_effect_kind = None
     self.db.exit_effect_value = None
-    # do these msgs exist for DefaultExit already? vvvv
     self.db.fail_msg = None
     self.db.success_msg = None
+    # departure message to show others when someone uses this exit
     self.db.go_in_msg = None
+    # note: come_out_msg has goofball semantics; see at_traverse()
+    # arrival message to show others when someone uses the "opposite" exit
     self.db.come_out_msg = None
-    # alias + req_alias = passworded door, no NSEWUD link
-    # goin/come_out fields are always 32000 (default msg) in the JSON
-    # hidden is always 0 in the JSON
-    # do we care about auto_look?
 
   def at_traverse(self, traversing_object, target_location, **kwargs):
     """Override superclass for custom exit messaging.
@@ -67,11 +80,23 @@ class Exit(DefaultExit):
             overriding the call (unused by default).
     """
     source_location = traversing_object.location
+
+    # see if target_location has a mirror exit for us
+    # e.g., if we're "up", see if there's a "down", with a come_out_msg
+    # TODO: this is stupid to do dynamically, and confusing to boot.
+    # Could we figure this out when generating build.ev?
+    come_out_msg = None
+    opp_exit_key = exit_opposite(self.key)
+    target_exits = target_location.search(opp_exit_key,
+      candidates=target_location.contents, typeclass="typeclasses.exits.Exit", quiet=True)
+    if len(target_exits) > 0:
+      come_out_msg = target_exits[0].db.come_out_msg
+
     # pass our various exit messages down
     if traversing_object.move_to(target_location,
         success_msg=self.db.success_msg,
         go_in_msg=self.db.go_in_msg,
-        come_out_msg=self.db.come_out_msg):
+        come_out_msg=come_out_msg):
       self.at_after_traverse(traversing_object, source_location)
     else:
       self.at_failed_traverse(traversing_object)
@@ -82,11 +107,8 @@ class Exit(DefaultExit):
       apply_exit_effect(traversing_object, self.db.exit_effect_kind, self.db.exit_effect_value)
 
   def at_failed_traverse(self, traversing_object, **kwargs):
-    # TODO: instead of overriding at_failed_traverse we could also just 
-    # set err_traverse and let superclass send that
     if self.db.fail_msg:
       traversing_object.msg(self.db.fail_msg)
-
 
   def get_display_name(self, looker, **kwargs):
     if self.db.exit_desc:
