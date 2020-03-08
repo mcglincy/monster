@@ -75,6 +75,7 @@ The running game server is up at http://www.monstermud.com.
   * *steal* / *pickpocket* commands
   * Redirect *pose* to *express*
   * Atmosphere
+  * Edit self description
   * Remove any Evennia commands we don't want
 * Spells
   * Spell / ability system
