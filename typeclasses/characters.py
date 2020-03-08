@@ -101,18 +101,21 @@ class Character(DefaultCharacter):
       return
     success_msg = kwargs.get("success_msg")
     go_in_msg = kwargs.get("go_in_msg")
-
+    location = self.location
+    exits = [
+      o for o in location.contents if o.location is location and o.destination is destination
+    ]
     if msg:
       string = msg
     elif go_in_msg:
       # msgs may have a '#' placeholder
       string = go_in_msg.replace("#", self.key)
     else:
-      string = "{object} is leaving {origin}, heading for {destination}."
-    location = self.location
-    exits = [
-      o for o in location.contents if o.location is location and o.destination is destination
-    ]
+      if exits:
+        string = f"{self.key} has gone {exits[0].key}."
+      else:
+        # Evennia default:
+        string = "{object} is leaving {origin}, heading for {destination}."        
     if not mapping:
       mapping = {}
     mapping.update({
@@ -147,6 +150,13 @@ class Character(DefaultCharacter):
             destination: the location of the object after moving.
 
     """
+    origin = source_location
+    destination = self.location
+    exits = []
+    if origin:
+      exits = [
+        o for o in destination.contents if o.location is destination and o.destination is origin
+      ]
     if source_location:
       come_out_msg = kwargs.get("come_out_msg")
       if msg:
@@ -155,16 +165,13 @@ class Character(DefaultCharacter):
         # msgs may have a '#' placeholder
         string = come_out_msg.replace("#", self.key)
       else:
-        string = "{object} arrives to {destination} from {origin}."
+        if exits:
+          string = f"{self.key} has come into the room from: {exits[0].key}"
+        else:
+          # Evennia default
+          string = "{object} arrives to {destination} from {origin}."
     else:
       string = "{object} arrives to {destination}."
-    origin = source_location
-    destination = self.location
-    exits = []
-    if origin:
-      exits = [
-        o for o in destination.contents if o.location is destination and o.destination is origin
-      ]
     if not mapping:
       mapping = {}
     mapping.update({
