@@ -339,6 +339,7 @@ class Character(DefaultCharacter):
       del self.db.equipment[obj.db.equipment_slot]
 
   def at_damage(self, damage, damager=None):
+    damage = max(0, damage)
     self.db.health = max(self.db.health - damage, MIN_HEALTH)
     self.msg(f"You take {damage} damage.")
     self.msg(health_msg("You", self.db.health))
@@ -347,6 +348,7 @@ class Character(DefaultCharacter):
       character_death(self, damager)
 
   def at_heal(self, amount):
+    amount = max(0, amount)
     self.db.health = min(self.db.health + amount, self.max_health())
     self.msg(health_msg("You", self.db.health))
     self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])

@@ -14,6 +14,8 @@ def set_character_class(target, record_id):
     target.db.character_class_key = char_class.db_key
     # force re-cache
     target.character_class()
+    if target.db.health > target.max_health():
+      target.db.health = target.max_health()
     target.msg(f"You are now a {char_class.db_key}.")
   except:
     # Show error somewhere?

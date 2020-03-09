@@ -36,3 +36,10 @@ def health_msg(subject, health):
     return f"{subject} {to_be} near death."
   else:
     return f"{subject} {to_be} dead."
+
+
+def gain_health(subject, amount):
+  if amount > 0:
+    subject.at_heal(amount)
+  else:
+    subject.at_damage(-amount)
