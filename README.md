@@ -38,6 +38,7 @@ The running game server is up at http://www.monstermud.com.
   * *who* that shows everyone's room location
   * *sheet*
   * *brief*
+  * *name*  
 * Commerce
   * Simple merchant in-room object
   * *buy* and *sell* commands
@@ -68,7 +69,6 @@ The running game server is up at http://www.monstermud.com.
   * Missiles and *throw* command
   * Bombs and *lob* command
 * Commands
-  * *name* command
   * *hide* / *search* / *reveal* commands
   * *use* command
   * *block* command
