@@ -3,9 +3,9 @@ import json
 import sys
 sys.path.insert(0, '..')
 
-from typeclasses.exit_effect_kind import ExitEffectKind
-from typeclasses.exit_kind import ExitKind
-from typeclasses.room_kind import RoomKind
+from gamerules.exit_effect_kind import ExitEffectKind
+from gamerules.exit_kind import ExitKind
+from gamerules.room_kind import RoomKind
 from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_integer
 
 

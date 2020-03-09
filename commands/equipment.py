@@ -1,5 +1,5 @@
 from commands.command import Command
-from typeclasses.equipment_slot import EquipmentSlot
+from gamerules.equipment_slot import EquipmentSlot
 
 
 class CmdEquip(Command):

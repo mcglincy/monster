@@ -17,9 +17,9 @@ from evennia.utils import delay, evtable, search
 from evennia.prototypes.spawner import spawn
 
 from gamerules.combat import mob_death
+from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg
-from typeclasses.equipment_slot import EquipmentSlot
-from typeclasses.object_kind import ObjectKind
+from gamerules.object_kind import ObjectKind
 
 
 class Object(DefaultObject):

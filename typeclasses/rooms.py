@@ -8,7 +8,7 @@ Rooms are simple containers that has no location of their own.
 from collections import defaultdict
 from evennia import DefaultRoom
 from evennia.utils.utils import list_to_string
-from typeclasses.room_kind import RoomKind
+from gamerules.room_kind import RoomKind
 
 
 class Room(DefaultRoom):

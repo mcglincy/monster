@@ -9,7 +9,7 @@ for allowing Characters to traverse the exit to its destination.
 from evennia import DefaultExit
 from commands.movement import CmdExit
 from gamerules.exit_effects import apply_exit_effect
-from typeclasses.exit_kind import ExitKind
+from gamerules.exit_kind import ExitKind
 
 
 class Exit(DefaultExit):

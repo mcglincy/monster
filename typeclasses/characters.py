@@ -12,11 +12,11 @@ from random import randint
 from evennia import DefaultCharacter, search_object
 from evennia.commands import cmdhandler
 
+from gamerules.alignment import Alignment
 from gamerules.combat import character_death
+from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.xp import MIN_XP, level_from_xp
-from typeclasses.alignment import Alignment
-from typeclasses.equipment_slot import EquipmentSlot
 from userdefined.models import CharacterClass
 
 

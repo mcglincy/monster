@@ -1,7 +1,7 @@
 #
 # Generated object prototypes
 #
-from typeclasses.equipment_slot import EquipmentSlot
+from gamerules.equipment_slot import EquipmentSlot
 
 #
 # 'Bland' objects

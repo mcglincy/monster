@@ -3,9 +3,9 @@ import json
 import sys
 sys.path.insert(0, '..')
 
-from typeclasses.equipment_effect_kind import EquipmentEffectKind
-from typeclasses.equipment_slot import EquipmentSlot
-from typeclasses.object_kind import ObjectKind
+from gamerules.equipment_effect_kind import EquipmentEffectKind
+from gamerules.equipment_slot import EquipmentSlot
+from gamerules.object_kind import ObjectKind
 from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_integer
 
 
@@ -270,7 +270,7 @@ def main():
   print("""#
 # Generated object prototypes
 #
-from typeclasses.equipment_slot import EquipmentSlot
+from gamerules.equipment_slot import EquipmentSlot
 """)
   output_blands(obj_by_kind[ObjectKind.BLAND], descs, lines)
   output_equipment(obj_by_kind[ObjectKind.EQUIPMENT], descs, lines)
