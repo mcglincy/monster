@@ -17,6 +17,8 @@ The running game server is up at http://www.monstermud.com.
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
   * Exit types
     * set or reset class
+    * change xp
+    * change health
   * Exit descriptions
   * Exit messages: success, failure, "go in", "come out"
 * Objects
@@ -58,7 +60,7 @@ The running game server is up at http://www.monstermud.com.
     * hidden
     * object keyed/forbidden
     * guardian
-    * do-effect (gain/lose health, gold, xp)
+    * do-effect (gold, mana, alarmed, guardian, health less)
   * Windows / window_descs?
 * Combat
   * Freeze / attack delay
