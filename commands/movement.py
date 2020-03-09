@@ -1,5 +1,5 @@
 from commands.command import Command
-
+from gamerules.exit_kind import ExitKind
 
 # see also evennia commands.py ExitCommand
 class CmdExit(Command):
@@ -10,25 +10,26 @@ class CmdExit(Command):
   obj = None
 
   def func(self):
-    """
-      Default exit traverse if no syscommand is defined.
-    """
-
+    """Default exit traverse if no syscommand is defined."""
     if self.obj.access(self.caller, "traverse"):
       # we may traverse the exit.
       self.obj.at_traverse(self.caller, self.obj.destination)
     else:
       # exit is locked
-      if self.obj.db.err_traverse:
+      if self.obj.db.password and self.obj.db.password == self.raw_string:
+        # we used the exit's password, so bypass the lock
+        self.obj.at_traverse(self.caller, self.obj.destination)
+      else:
+        # failed to traverse the exit.
+        if self.obj.db.err_traverse:
           # if exit has a better error message, let's use it.
           self.caller.msg(self.obj.db.err_traverse)
-      else:
+        else:
           # No shorthand error message. Call hook.
-            self.obj.at_failed_traverse(self.caller)
+          self.obj.at_failed_traverse(self.caller)
 
   def get_extra_info(self, caller, **kwargs):
-    """
-    Shows a bit of information on where the exit leads.
+    """Shows a bit of information on where the exit leads.
 
     Args:
         caller (Object): The object (usually a character) that entered an ambiguous command.

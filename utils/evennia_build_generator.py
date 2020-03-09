@@ -82,10 +82,7 @@ def make_exit(exit, opposite_exit, descs, lines):
   to_room_id = f'room_{exit["to_loc"]}'
   # req_verb is only used in a single exit - maybe by error?
   # req_verb = exit['req_verb']
-  req_alias = exit['req_alias']
-  alias = exit['alias']
   obj_req = exit['obj_req']
-  hidden = exit['hidden']
 
   # if exit_kind == ExitKind.NO_EXIT:
   #   # skip, I guess?
@@ -116,15 +113,7 @@ def make_exit(exit, opposite_exit, descs, lines):
   #   # TODO
   #   pass
 
-  #if exit_kind == ExitKind.PASSWORDED or (alias and req_alias):
-    # alias and req_alias == passworded door
-    # TODO: should these be two different flavors of exit? 
-  #  exit_names = alias
-  #  hidden = True
-
-  # TODO: how to handle req_alias? we want to show the exit (e.g., "east"),
-  # but not show the alias password, and require using the alias
-
+  alias = exit['alias']
   if alias:
     exit_names = f"{direction};{direction_letter};{alias}"
   else:
@@ -134,20 +123,23 @@ def make_exit(exit, opposite_exit, descs, lines):
   print('#')
 
   exit_name = exit_names.split(';')[0]
-
   print(f"@set {exit_name}/exit_kind = {exit_kind}")
   print('#')
 
-  if exit_kind == ExitKind.NO_EXIT:
-    print(f"@lock {exit_name} = traverse:none()")
-    print('#')
-
-  if hidden:
+  # TODO: hidden appears to never be set in the JSON
+  if exit['hidden']:
     print(f"@lock {exit_name} = view:perm(see_hidden_exits)")
     print('#')
 
-  # TODO: obj lock with something like
-  # print(f"@lock {exit_name} = traverse:holds(obj_id_or_key)")
+  # there are several different "flavors" of locked/passworded exit
+  if (exit_kind == ExitKind.NO_EXIT
+    or exit_kind == ExitKind.PASSWORDED
+    or (exit_kind == ExitKind.OPEN and exit['req_alias'])):
+    print(f"@lock {exit_name} = traverse:none()")
+    print('#')
+    if alias:
+      print(f"@set {exit_name}/password = {alias}")
+      print('#')
 
   maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc', descs, lines)
   maybe_set_desc(exit['fail'], exit_name, 'fail_msg', descs, lines)
@@ -157,7 +149,6 @@ def make_exit(exit, opposite_exit, descs, lines):
   # maybe_set_desc(exit['come_out'], exit_name, 'come_out_msg', descs, lines)
   if opposite_exit:
     maybe_set_desc(opposite_exit['come_out'], exit_name, 'come_out_msg', descs, lines)
-    
 
   door_effect = exit['door_effect']
   if door_effect:

@@ -53,6 +53,7 @@ class Exit(DefaultExit):
     # note: come_out_msg has goofball semantics; see at_traverse()
     # arrival message to show others when someone uses the "opposite" exit
     self.db.come_out_msg = None
+    self.db.password = None
 
   def at_traverse(self, traversing_object, target_location, **kwargs):
     """Override superclass for custom exit messaging.
@@ -80,8 +81,8 @@ class Exit(DefaultExit):
       apply_exit_effect(traversing_object, self.db.exit_effect_kind, self.db.exit_effect_value)
 
   def at_failed_traverse(self, traversing_object, **kwargs):
-    if self.db.fail_msg:
-      traversing_object.msg(self.db.fail_msg)
+    fail_msg = self.db.fail_msg if self.db.fail_msg else "You can't go that way."
+    traversing_object.msg(fail_msg)
 
   def get_display_name(self, looker, **kwargs):
     if self.db.exit_desc:
