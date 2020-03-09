@@ -22,13 +22,12 @@ def set_character_class(target, record_id):
     target.msg(f"Could not set character class {record_id}.")
     return
 
-
-VALID_NAME_REGEX = re.compile('^[a-zA-z]{3,16}$')
+# letters/spaces/hyphen/underscore, first 3 chars must be letters
+VALID_NAME_REGEX = re.compile('^[a-zA-Z]{3}[a-zA-Z -_]{0,13}$')
 FORBIDDEN_NAMES = ['dow', 'down', 'eas', 'east', 'nor', 'nort', 'north',
   'sou', 'sout', 'south', 'wes', 'west']
 
 def is_valid_character_name(name):
-  # letters only, 3-16 chars in length
   if not VALID_NAME_REGEX.match(name):
     return False
   # no cheater names
