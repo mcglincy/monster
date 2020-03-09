@@ -1,5 +1,6 @@
 import time
 from commands.command import Command
+from evennia.commands import cmdhandler
 from evennia.server.sessionhandler import SESSIONS
 from evennia.utils import utils
 
@@ -29,7 +30,9 @@ class CmdDot(Command):
   def func(self):
     last_command = self.caller.ndb.last_command
     if last_command:
-      self.caller.execute_cmd(last_command.raw_string)
+      # self.caller.execute_cmd(last_command.raw_string)
+      self.caller.msg(last_command.raw_string)
+      cmdhandler.cmdhandler(self.session, last_command.raw_string)
 
   def at_post_cmd(self):
     # override to do nothing; we don't want dot as our last_command
