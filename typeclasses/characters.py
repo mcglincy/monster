@@ -327,6 +327,7 @@ class Character(DefaultCharacter):
   def gain_health(self, amount, damager=None):
     if amount < 0:
       # aka damage
+      damage = -amount
       self.db.health = max(self.db.health - damage, MIN_HEALTH)
       self.msg(f"You take {damage} damage.")
       self.msg(health_msg("You", self.db.health))
