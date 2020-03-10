@@ -38,6 +38,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 50,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -81,7 +82,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -92,6 +93,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 1,
+    "trap_direction": "north",
     "trap_chance": 35,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -389,7 +391,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 7,
@@ -606,7 +608,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 6,
@@ -624,7 +626,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 88,
@@ -662,6 +664,7 @@
       32000
     ],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 35,
     "rnd_msg": 32000,
     "x_msg_2": 32000,
@@ -705,7 +708,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 10,
@@ -985,6 +988,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 5,
+    "trap_direction": "up",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -1154,7 +1158,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 15,
@@ -1172,7 +1176,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 13,
@@ -1208,7 +1212,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -1298,7 +1302,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 14,
@@ -1316,7 +1320,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -1370,7 +1374,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 15,
@@ -1388,7 +1392,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 16,
@@ -1406,7 +1410,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 13,
@@ -1820,7 +1824,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 95,
@@ -1838,7 +1842,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 20,
@@ -1856,7 +1860,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -2215,7 +2219,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       },
       {
         "to_loc": 26,
@@ -2233,7 +2237,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -2305,7 +2309,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       },
       {
         "to_loc": 25,
@@ -2323,7 +2327,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -2694,7 +2698,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -2757,7 +2761,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 32,
@@ -2775,7 +2779,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -2838,7 +2842,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "south"
+        "direction": "north"
       },
       {
         "to_loc": 90,
@@ -2874,7 +2878,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 89,
@@ -3207,7 +3211,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "east"
       },
       {
         "to_loc": 269,
@@ -3308,6 +3312,7 @@
       32000
     ],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 32000,
@@ -3719,7 +3724,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "north"
       },
       {
         "to_loc": 50,
@@ -3737,7 +3742,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 44,
@@ -3827,7 +3832,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 50,
@@ -3953,7 +3958,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 47,
@@ -4106,7 +4111,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 50,
@@ -4124,7 +4129,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "south"
       },
       {
         "to_loc": 48,
@@ -4306,7 +4311,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "north"
       },
       {
         "to_loc": 45,
@@ -4342,7 +4347,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 44,
@@ -4360,7 +4365,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -4432,7 +4437,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "south"
       },
       {
         "to_loc": 45,
@@ -4450,7 +4455,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 43,
@@ -4468,7 +4473,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -5025,6 +5030,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 30,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -6031,7 +6037,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 95,
@@ -6049,7 +6055,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 93,
@@ -6846,6 +6852,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 1,
+    "trap_direction": "north",
     "trap_chance": 10,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -6997,7 +7004,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -7923,7 +7930,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 68,
@@ -7959,7 +7966,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 96,
@@ -8006,6 +8013,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 35,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -8067,7 +8075,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 69,
@@ -8085,7 +8093,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 29,
@@ -8240,6 +8248,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 35,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -8301,7 +8310,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 99,
@@ -8348,6 +8357,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 35,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -16243,7 +16253,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 201,
@@ -16315,7 +16325,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 202,
@@ -16477,7 +16487,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 206,
@@ -16495,7 +16505,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 203,
@@ -16693,7 +16703,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 206,
@@ -16711,7 +16721,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 207,
@@ -16837,7 +16847,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 202,
@@ -16855,7 +16865,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -16927,7 +16937,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 202,
@@ -16945,7 +16955,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 560,
@@ -17035,7 +17045,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 208,
@@ -17161,7 +17171,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 207,
@@ -17233,7 +17243,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 207,
@@ -17323,7 +17333,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 208,
@@ -17341,7 +17351,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 213,
@@ -17467,7 +17477,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 209,
@@ -17485,7 +17495,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -17557,7 +17567,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 407,
@@ -17631,7 +17641,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 213,
@@ -17649,7 +17659,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 213,
@@ -17667,7 +17677,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 210,
@@ -18924,6 +18934,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 1,
+    "trap_direction": "north",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -21201,7 +21212,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -21511,7 +21522,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "down"
+        "direction": "east"
       },
       {
         "to_loc": 398,
@@ -22131,7 +22142,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "north"
       },
       {
         "to_loc": 271,
@@ -22149,7 +22160,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       },
       {
         "to_loc": 271,
@@ -22167,7 +22178,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       },
       {
         "to_loc": 441,
@@ -22204,6 +22215,7 @@
       32000
     ],
     "trap_to": 1,
+    "trap_direction": "north",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 32000,
@@ -25121,6 +25133,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -25762,7 +25775,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "down"
+        "direction": "north"
       },
       {
         "to_loc": 139,
@@ -26176,7 +26189,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "north"
+        "direction": "south"
       },
       {
         "to_loc": 328,
@@ -28882,7 +28895,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 361,
@@ -28918,7 +28931,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 359,
@@ -29370,6 +29383,7 @@
       32000
     ],
     "trap_to": 1,
+    "trap_direction": "north",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 32000,
@@ -29476,7 +29490,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "up"
+        "direction": "north"
       },
       {
         "to_loc": 368,
@@ -29494,7 +29508,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "up"
+        "direction": "south"
       },
       {
         "to_loc": 368,
@@ -29512,7 +29526,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "up"
+        "direction": "east"
       },
       {
         "to_loc": 369,
@@ -30462,7 +30476,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -30727,6 +30741,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 41,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -31076,7 +31091,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -31271,6 +31286,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 25,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -31743,6 +31759,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 25,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -31923,6 +31940,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 45,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -31984,7 +32002,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "west"
       },
       {
         "to_loc": 387,
@@ -32168,6 +32186,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 32,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -34208,7 +34227,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -34219,6 +34238,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 25,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -34588,7 +34608,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "north"
       },
       {
         "to_loc": 413,
@@ -34624,7 +34644,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -35047,7 +35067,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "north"
       },
       {
         "to_loc": 436,
@@ -35096,6 +35116,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 1,
+    "trap_direction": "north",
     "trap_chance": 25,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -35262,6 +35283,7 @@
       965
     ],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 5,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -35487,7 +35509,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 441,
@@ -35743,7 +35765,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 439,
@@ -35833,7 +35855,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 445,
@@ -35851,7 +35873,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 443,
@@ -35869,7 +35891,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -35923,7 +35945,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 409,
@@ -35959,7 +35981,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 444,
@@ -35977,7 +35999,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -36139,7 +36161,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -36898,6 +36920,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 1,
+    "trap_direction": "north",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -36952,6 +36975,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 2,
+    "trap_direction": "south",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -37693,6 +37717,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 10,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -37736,7 +37761,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "north"
       },
       {
         "to_loc": 433,
@@ -37754,7 +37779,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "south"
       },
       {
         "to_loc": 214,
@@ -37772,7 +37797,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "east"
       },
       {
         "to_loc": 27,
@@ -37790,7 +37815,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "west"
       },
       {
         "to_loc": 731,
@@ -37886,7 +37911,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -38106,7 +38131,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -38825,6 +38850,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 30,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -38951,6 +38977,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 30,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -39221,6 +39248,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 1,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -39365,6 +39393,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 5,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -39509,6 +39538,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 5,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -39635,6 +39665,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 30,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -39779,6 +39810,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 2,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -39876,7 +39908,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       },
       {
         "to_loc": 491,
@@ -39923,6 +39955,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 4,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -40049,6 +40082,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 30,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -40193,6 +40227,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 1,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -40337,6 +40372,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 1,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -40463,6 +40499,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 1,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -40578,7 +40615,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "south"
       },
       {
         "to_loc": 498,
@@ -40743,7 +40780,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "west"
       },
       {
         "to_loc": 80,
@@ -40790,6 +40827,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -40851,7 +40889,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -40862,6 +40900,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 35,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -41805,7 +41844,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 514,
@@ -41841,7 +41880,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 512,
@@ -42065,7 +42104,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 515,
@@ -42083,7 +42122,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 517,
@@ -42349,7 +42388,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 518,
@@ -42367,7 +42406,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 519,
@@ -42565,7 +42604,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 519,
@@ -42601,7 +42640,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -42841,7 +42880,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 522,
@@ -42877,7 +42916,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -43047,7 +43086,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 524,
@@ -43101,7 +43140,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -43329,7 +43368,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 527,
@@ -43383,7 +43422,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -43545,7 +43584,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 512,
@@ -43581,7 +43620,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 529,
@@ -43716,7 +43755,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       },
       {
         "to_loc": 454,
@@ -44078,6 +44117,7 @@
       32000
     ],
     "trap_to": 5,
+    "trap_direction": "up",
     "trap_chance": 10,
     "rnd_msg": 32000,
     "x_msg_2": 32000,
@@ -45111,7 +45151,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "north"
       },
       {
         "to_loc": 551,
@@ -45129,7 +45169,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "south"
       },
       {
         "to_loc": 552,
@@ -45147,7 +45187,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "east"
       },
       {
         "to_loc": 553,
@@ -45165,7 +45205,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "west"
       },
       {
         "to_loc": 509,
@@ -45255,7 +45295,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 552,
@@ -45273,7 +45313,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 554,
@@ -45291,7 +45331,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 556,
@@ -45309,7 +45349,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -45320,6 +45360,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 5,
+    "trap_direction": "up",
     "trap_chance": 5,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -45363,7 +45404,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 551,
@@ -45381,7 +45422,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 553,
@@ -45399,7 +45440,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 555,
@@ -45435,7 +45476,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -45446,6 +45487,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 5,
+    "trap_direction": "up",
     "trap_chance": 15,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -45489,7 +45531,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 555,
@@ -45525,7 +45567,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 554,
@@ -45543,7 +45585,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -45597,7 +45639,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 551,
@@ -45615,7 +45657,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 555,
@@ -45651,7 +45693,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -45885,7 +45927,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -45950,6 +45992,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 100,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -47187,7 +47230,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -47990,7 +48033,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       },
       {
         "to_loc": 543,
@@ -49819,7 +49862,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -49830,6 +49873,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 5,
+    "trap_direction": "up",
     "trap_chance": 50,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -49909,7 +49953,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -49920,6 +49964,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 50,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -49983,7 +50028,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -49994,6 +50039,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 45,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -50093,7 +50139,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50104,6 +50150,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 88,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -50183,7 +50230,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50194,6 +50241,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 45,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -50275,7 +50323,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50286,6 +50334,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 65,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -50365,7 +50414,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50457,7 +50506,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50468,6 +50517,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 65,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -50531,7 +50581,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50542,6 +50592,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 50,
     "rnd_msg": -183,
     "x_msg_2": 0,
@@ -50621,7 +50672,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50783,7 +50834,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50794,6 +50845,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 85,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -50893,7 +50945,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50904,6 +50956,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 50,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -50985,7 +51038,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -50996,6 +51049,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 35,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -51093,7 +51147,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -51104,6 +51158,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 65,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -51183,7 +51238,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -51194,6 +51249,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 65,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -51257,7 +51313,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -51268,6 +51324,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 19,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -51827,7 +51884,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 360,
@@ -51845,7 +51902,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -54096,6 +54153,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 4,
+    "trap_direction": "west",
     "trap_chance": 0,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -54395,7 +54453,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -54932,6 +54990,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 3,
+    "trap_direction": "east",
     "trap_chance": 99,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -55168,6 +55227,7 @@
     "details": [],
     "detail_descs": [],
     "trap_to": 1,
+    "trap_direction": "north",
     "trap_chance": 100,
     "rnd_msg": 32000,
     "x_msg_2": 0,
@@ -55627,7 +55687,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       },
       {
         "to_loc": 688,
@@ -55699,7 +55759,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "north"
       },
       {
         "to_loc": 691,
@@ -56401,7 +56461,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -56788,7 +56848,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 64,
@@ -56824,7 +56884,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 706,
@@ -57085,7 +57145,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 709,
@@ -57103,7 +57163,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 707,
@@ -57202,7 +57262,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 708,
@@ -57220,7 +57280,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -57283,7 +57343,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 711,
@@ -57461,6 +57521,7 @@
       32000
     ],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 50,
     "rnd_msg": 0,
     "x_msg_2": 32000,
@@ -57693,7 +57754,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -57857,6 +57918,7 @@
       32000
     ],
     "trap_to": 6,
+    "trap_direction": "down",
     "trap_chance": 35,
     "rnd_msg": 32000,
     "x_msg_2": 32000,
@@ -57982,7 +58044,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -58063,7 +58125,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -58856,7 +58918,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "up"
+        "direction": "east"
       },
       {
         "to_loc": 731,
@@ -58874,7 +58936,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "up"
+        "direction": "west"
       },
       {
         "to_loc": 470,
@@ -59054,7 +59116,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -60241,7 +60303,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -60405,7 +60467,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 748,

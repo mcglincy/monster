@@ -1,4 +1,12 @@
+# 
+# Manual edits to apply after running generated build.ev.
+#
 # make sure Limbo is linked to the Void, until we have default start room working
 @tel Limbo
 #
 @open down;d = Void
+#
+@tel Void
+#
+@lock north = view:none()
+#

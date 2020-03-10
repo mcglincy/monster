@@ -26,7 +26,7 @@ class Room(DefaultRoom):
         self.db.record_id = None
         self.db.room_kind = None
         self.db.trap_chance = 0
-        self.db.trap_exit = None
+        self.db.trap_direction = None
 
 
     def return_appearance(self, looker, **kwargs):

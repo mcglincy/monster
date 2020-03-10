@@ -12,6 +12,7 @@ just overloads its hooks to have it perform its function.
 
 """
 
+import random
 from evennia import DefaultScript
 
 
@@ -88,5 +89,27 @@ class Script(DefaultScript):
       at_server_shutdown() - called at a full server shutdown.
 
     """
-
     pass
+
+class Trapdoor(Script):
+  def at_script_creation(self):
+    self.key = "trapdoor"
+    self.interval = 1  # every second
+
+  def at_repeat(self):
+    if not self.obj.db.trap_chance or not self.obj.db.trap_direction:
+      return
+
+    # find the exit
+    exits = self.obj.search(self.obj.db.trap_direction, typeclass="typeclasses.exits.Exit", quiet=True)
+    if not exits:
+      return
+    exit = exits[0]
+
+    for content in self.obj.contents:
+      # only characters go through trap doors
+      if content.is_typeclass("typeclasses.characters.Character"):
+        rand = random.randint(0, 100)
+        if rand < self.obj.db.trap_chance:
+          # away you go!
+          exit.at_traverse(content, exit.destination)
