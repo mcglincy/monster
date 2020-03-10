@@ -5,6 +5,7 @@ sys.path.insert(0, '..')
 
 from gamerules.exit_effect_kind import ExitEffectKind
 from gamerules.exit_kind import ExitKind
+from gamerules.exit_slot import ExitSlot
 from gamerules.room_kind import RoomKind
 from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_integer
 
@@ -31,7 +32,7 @@ def make_room(roomdesc, descs):
   if roomdesc["trap_chance"]:
     print(f'@set here/trap_chance = {roomdesc["trap_chance"]}')
     print('#')
-    print(f'@set here/trap_to = {roomdesc["trap_to"]}')
+    print(f'@set here/trap_exit = {ExitSlot(roomdesc["trap_to"]).name.lower()}')
     print('#')
 
 
