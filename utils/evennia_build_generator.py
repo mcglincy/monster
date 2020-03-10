@@ -78,7 +78,7 @@ def find_opposite_exit(roomdescs, roomdesc, exit):
   return None
 
 
-def make_exit(exit, opposite_exit, descs, lines):
+def make_exit(exit, come_out_exit, descs, lines):
   exit_kind = ExitKind(exit['kind'])
   direction = exit['direction']
   direction_letter = direction[0]
@@ -150,8 +150,10 @@ def make_exit(exit, opposite_exit, descs, lines):
   maybe_set_desc(exit['go_in'], exit_name, 'go_in_msg', descs, lines)
   # TODO: we could search all rooms/exits for our opposite and then use its come_out_msg
   # maybe_set_desc(exit['come_out'], exit_name, 'come_out_msg', descs, lines)
-  if opposite_exit:
-    maybe_set_desc(opposite_exit['come_out'], exit_name, 'come_out_msg', descs, lines)
+  if come_out_exit:
+    maybe_set_desc(come_out_exit['come_out'], exit_name, 'come_out_msg', descs, lines)
+  # if opposite_exit:
+  #   maybe_set_desc(opposite_exit['come_out'], exit_name, 'come_out_msg', descs, lines)
 
   door_effect = exit['door_effect']
   if door_effect:
@@ -200,8 +202,18 @@ def main():
     print(f'@tel room_{roomdesc["id"]}')
     print('#')
     for exit in roomdesc['exits']:
-      opposite_exit = find_opposite_exit(roomdescs, roomdesc, exit)
-      make_exit(exit, opposite_exit, descs, lines)
+      to_loc = exit['to_loc']
+      if not to_loc:
+        continue
+      # stupid slot / come_out msg logic
+      come_out_exit = None
+      come_out_slot = exit['slot']
+      if come_out_slot:
+        to_room = roomdescs[to_loc-1]
+        to_exits = to_room['exits']
+        come_out_exit = to_exits[come_out_slot - 1]
+      # opposite_exit = find_opposite_exit(roomdescs, roomdesc, exit)
+      make_exit(exit, come_out_exit, descs, lines)
 
   print("""#
 #
