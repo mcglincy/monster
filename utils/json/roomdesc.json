@@ -81,7 +81,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -389,7 +389,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 7,
@@ -606,7 +606,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 6,
@@ -624,7 +624,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       },
       {
         "to_loc": 88,
@@ -705,7 +705,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 10,
@@ -1154,7 +1154,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 15,
@@ -1172,7 +1172,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 13,
@@ -1208,7 +1208,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -1298,7 +1298,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 14,
@@ -1316,7 +1316,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -1370,7 +1370,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 15,
@@ -1388,7 +1388,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 16,
@@ -1406,7 +1406,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 13,
@@ -1820,7 +1820,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 95,
@@ -1838,7 +1838,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 20,
@@ -1856,7 +1856,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -2215,7 +2215,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       },
       {
         "to_loc": 26,
@@ -2233,7 +2233,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -2305,7 +2305,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       },
       {
         "to_loc": 25,
@@ -2323,7 +2323,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -2694,7 +2694,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -2757,7 +2757,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 32,
@@ -2775,7 +2775,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -2838,7 +2838,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "north"
+        "direction": "south"
       },
       {
         "to_loc": 90,
@@ -2874,7 +2874,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 89,
@@ -3207,7 +3207,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "up"
       },
       {
         "to_loc": 269,
@@ -3719,7 +3719,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "south"
       },
       {
         "to_loc": 50,
@@ -3737,7 +3737,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 44,
@@ -3827,7 +3827,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 50,
@@ -3953,7 +3953,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 47,
@@ -4106,7 +4106,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 50,
@@ -4124,7 +4124,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "north"
       },
       {
         "to_loc": 48,
@@ -4306,7 +4306,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "south"
       },
       {
         "to_loc": 45,
@@ -4342,7 +4342,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 44,
@@ -4360,7 +4360,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -4432,7 +4432,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "north"
       },
       {
         "to_loc": 45,
@@ -4450,7 +4450,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 43,
@@ -4468,7 +4468,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -6031,7 +6031,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 95,
@@ -6049,7 +6049,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 93,
@@ -6997,7 +6997,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -7923,7 +7923,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 68,
@@ -7959,7 +7959,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 96,
@@ -8067,7 +8067,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 69,
@@ -8085,7 +8085,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 29,
@@ -8301,7 +8301,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 99,
@@ -16243,7 +16243,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 201,
@@ -16315,7 +16315,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 202,
@@ -16477,7 +16477,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 206,
@@ -16495,7 +16495,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 203,
@@ -16693,7 +16693,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 206,
@@ -16711,7 +16711,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 207,
@@ -16837,7 +16837,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 202,
@@ -16855,7 +16855,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -16927,7 +16927,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 202,
@@ -16945,7 +16945,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 560,
@@ -17035,7 +17035,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 208,
@@ -17161,7 +17161,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 207,
@@ -17233,7 +17233,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 207,
@@ -17323,7 +17323,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 208,
@@ -17341,7 +17341,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 213,
@@ -17467,7 +17467,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 209,
@@ -17485,7 +17485,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -17557,7 +17557,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 407,
@@ -17631,7 +17631,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 213,
@@ -17649,7 +17649,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 213,
@@ -17667,7 +17667,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 210,
@@ -21201,7 +21201,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -21511,7 +21511,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "down"
       },
       {
         "to_loc": 398,
@@ -22131,7 +22131,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "south"
       },
       {
         "to_loc": 271,
@@ -22149,7 +22149,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       },
       {
         "to_loc": 271,
@@ -22167,7 +22167,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       },
       {
         "to_loc": 441,
@@ -25762,7 +25762,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "north"
+        "direction": "down"
       },
       {
         "to_loc": 139,
@@ -26176,7 +26176,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "south"
+        "direction": "north"
       },
       {
         "to_loc": 328,
@@ -28882,7 +28882,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 361,
@@ -28918,7 +28918,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 359,
@@ -29476,7 +29476,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "north"
+        "direction": "up"
       },
       {
         "to_loc": 368,
@@ -29494,7 +29494,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "south"
+        "direction": "up"
       },
       {
         "to_loc": 368,
@@ -29512,7 +29512,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "up"
       },
       {
         "to_loc": 369,
@@ -30462,7 +30462,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -31076,7 +31076,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -31984,7 +31984,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "down"
       },
       {
         "to_loc": 387,
@@ -34208,7 +34208,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -34588,7 +34588,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "up"
       },
       {
         "to_loc": 413,
@@ -34624,7 +34624,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "down"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -35047,7 +35047,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "down"
       },
       {
         "to_loc": 436,
@@ -35487,7 +35487,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 441,
@@ -35743,7 +35743,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 439,
@@ -35833,7 +35833,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 445,
@@ -35851,7 +35851,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 443,
@@ -35869,7 +35869,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -35923,7 +35923,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 409,
@@ -35959,7 +35959,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 444,
@@ -35977,7 +35977,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -36139,7 +36139,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -37736,7 +37736,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "down"
       },
       {
         "to_loc": 433,
@@ -37754,7 +37754,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "down"
       },
       {
         "to_loc": 214,
@@ -37772,7 +37772,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "up"
       },
       {
         "to_loc": 27,
@@ -37790,7 +37790,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "down"
       },
       {
         "to_loc": 731,
@@ -37886,7 +37886,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -38106,7 +38106,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -39876,7 +39876,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       },
       {
         "to_loc": 491,
@@ -40578,7 +40578,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "north"
       },
       {
         "to_loc": 498,
@@ -40743,7 +40743,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "down"
       },
       {
         "to_loc": 80,
@@ -40851,7 +40851,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "west"
       }
     ],
     "obj_drop": 0,
@@ -41805,7 +41805,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 514,
@@ -41841,7 +41841,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 512,
@@ -42065,7 +42065,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 515,
@@ -42083,7 +42083,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 517,
@@ -42349,7 +42349,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 518,
@@ -42367,7 +42367,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 519,
@@ -42565,7 +42565,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 519,
@@ -42601,7 +42601,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -42841,7 +42841,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 522,
@@ -42877,7 +42877,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -43047,7 +43047,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 524,
@@ -43101,7 +43101,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -43329,7 +43329,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 527,
@@ -43383,7 +43383,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -43545,7 +43545,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 512,
@@ -43581,7 +43581,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 529,
@@ -43716,7 +43716,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       },
       {
         "to_loc": 454,
@@ -45111,7 +45111,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "up"
       },
       {
         "to_loc": 551,
@@ -45129,7 +45129,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "up"
       },
       {
         "to_loc": 552,
@@ -45147,7 +45147,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "up"
       },
       {
         "to_loc": 553,
@@ -45165,7 +45165,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "up"
       },
       {
         "to_loc": 509,
@@ -45255,7 +45255,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 552,
@@ -45273,7 +45273,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       },
       {
         "to_loc": 554,
@@ -45291,7 +45291,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 556,
@@ -45309,7 +45309,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -45363,7 +45363,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 551,
@@ -45381,7 +45381,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 553,
@@ -45399,7 +45399,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 555,
@@ -45435,7 +45435,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -45489,7 +45489,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 555,
@@ -45525,7 +45525,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 554,
@@ -45543,7 +45543,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -45597,7 +45597,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "east"
       },
       {
         "to_loc": 551,
@@ -45615,7 +45615,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 555,
@@ -45651,7 +45651,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -45885,7 +45885,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -47187,7 +47187,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -47990,7 +47990,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       },
       {
         "to_loc": 543,
@@ -49819,7 +49819,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "up"
+        "direction": "down"
       }
     ],
     "obj_drop": 0,
@@ -49909,7 +49909,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -49983,7 +49983,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50093,7 +50093,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50183,7 +50183,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50275,7 +50275,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50365,7 +50365,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50457,7 +50457,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50531,7 +50531,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50621,7 +50621,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50783,7 +50783,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50893,7 +50893,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -50985,7 +50985,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -51093,7 +51093,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -51183,7 +51183,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -51257,7 +51257,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -51827,7 +51827,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "west"
       },
       {
         "to_loc": 360,
@@ -51845,7 +51845,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -54395,7 +54395,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "west"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -55627,7 +55627,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "west"
       },
       {
         "to_loc": 688,
@@ -55699,7 +55699,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "up"
       },
       {
         "to_loc": 691,
@@ -56401,7 +56401,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": false,
-        "direction": "west"
+        "direction": "east"
       }
     ],
     "obj_drop": 0,
@@ -56788,7 +56788,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 64,
@@ -56824,7 +56824,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       },
       {
         "to_loc": 706,
@@ -57085,7 +57085,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 709,
@@ -57103,7 +57103,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       },
       {
         "to_loc": 707,
@@ -57202,7 +57202,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 708,
@@ -57220,7 +57220,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -57283,7 +57283,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "north"
+        "direction": "west"
       },
       {
         "to_loc": 711,
@@ -57693,7 +57693,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "down"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -57982,7 +57982,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "up"
       }
     ],
     "obj_drop": 0,
@@ -58063,7 +58063,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -58856,7 +58856,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "east"
+        "direction": "up"
       },
       {
         "to_loc": 731,
@@ -58874,7 +58874,7 @@
         "req_verb": false,
         "req_alias": true,
         "auto_look": true,
-        "direction": "west"
+        "direction": "up"
       },
       {
         "to_loc": 470,
@@ -59054,7 +59054,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "east"
+        "direction": "south"
       }
     ],
     "obj_drop": 0,
@@ -60241,7 +60241,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "west"
+        "direction": "north"
       }
     ],
     "obj_drop": 0,
@@ -60405,7 +60405,7 @@
         "req_verb": false,
         "req_alias": false,
         "auto_look": true,
-        "direction": "south"
+        "direction": "east"
       },
       {
         "to_loc": 748,
