@@ -14,7 +14,7 @@ def resolve_attack(attacker, target):
     attacker.msg("You can't attack yourself!")
     return
   # TODO: add more rigorous can-attack checks
-  if not hasattr(target, "at_damage"):
+  if not hasattr(target, "gain_health"):
     attacker.msg("You can't attack that.")
     return
 
@@ -45,7 +45,7 @@ def resolve_attack(attacker, target):
     damage = int(damage * ((100 - base_armor) / 100))
 
   # target takes the damage
-  target.at_damage(damage, damager=attacker)
+  target.gain_health(-damage, damager=attacker)
 
 
 def attack_damage(attacker, weapon):

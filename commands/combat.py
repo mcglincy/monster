@@ -29,8 +29,8 @@ class CmdBleed(Command):
   help_category = "Monster"
 
   def func(self):
-    if hasattr(self.caller, "at_damage"):
-      self.caller.at_damage(50)
+    if hasattr(self.caller, "gain_health"):
+      self.caller.gain_health(-50)
 
 
 class CmdRest(Command):
@@ -40,5 +40,5 @@ class CmdRest(Command):
   help_category = "Monster"
 
   def func(self):
-    if hasattr(self.caller, "at_heal"):
-      self.caller.at_heal(50)
+    if hasattr(self.caller, "gain_health"):
+      self.caller.gain_health(50)

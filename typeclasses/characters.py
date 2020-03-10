@@ -16,6 +16,7 @@ from gamerules.alignment import Alignment
 from gamerules.combat import character_death
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg
+from gamerules.mana import MIN_MANA
 from gamerules.xp import MIN_XP, level_from_xp
 from userdefined.models import CharacterClass
 
@@ -323,6 +324,25 @@ class Character(DefaultCharacter):
     else:
       self.msg("Not currently equipped.")
 
+  def gain_health(self, amount, damager=None):
+    if amount < 0:
+      # aka damage
+      self.db.health = max(self.db.health - damage, MIN_HEALTH)
+      self.msg(f"You take {damage} damage.")
+      self.msg(health_msg("You", self.db.health))
+      self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
+      if self.db.health <= 0:
+        character_death(self, damager)
+    else:
+      # aka healing
+      self.db.health = min(self.db.health + amount, self.max_health())
+      self.msg(health_msg("You", self.db.health))
+      self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
+
+  def gain_mana(self, amount):
+    # TODO: messages?
+    self.db.mana = max(MIN_MANA, min(self.max_mana(), self.db.mana + amount))
+
   # at_* event notifications
 
   def at_after_move(self, source_location, **kwargs):
@@ -338,17 +358,3 @@ class Character(DefaultCharacter):
       self.msg("Unequipping")
       del self.db.equipment[obj.db.equipment_slot]
 
-  def at_damage(self, damage, damager=None):
-    damage = max(0, damage)
-    self.db.health = max(self.db.health - damage, MIN_HEALTH)
-    self.msg(f"You take {damage} damage.")
-    self.msg(health_msg("You", self.db.health))
-    self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
-    if self.db.health <= 0:
-      character_death(self, damager)
-
-  def at_heal(self, amount):
-    amount = max(0, amount)
-    self.db.health = min(self.db.health + amount, self.max_health())
-    self.msg(health_msg("You", self.db.health))
-    self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])

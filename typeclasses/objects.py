@@ -362,10 +362,11 @@ class BankingMachine(Object):
 class Mob(Object):
   def at_object_creation(self):
     super().at_object_creation()
+    self.db.max_health = 1000
     self.db.health = 1000
 
-  def at_damage(self, damage, damager=None):
-    self.db.health = max(self.db.health - damage, MIN_HEALTH)
+  def gain_health(self, amount, damager=None):
+    self.db.health = max(MIN_HEALTH, min(self.db.max_health, self.db.health + amount))
     if self.db.health <= 0:
       mob_death(self, damager)
     else:
