@@ -20,7 +20,8 @@ The running game server is up at http://www.monstermud.com.
   * Exit types
     * passworded / alias-required, hidden
   * Exit effects
-    * set or reset class, change xp, change health  
+    * set or reset class, change xp, change health, change mana
+  * Trapdoors    
 * Objects
   * Imported all original objects (weapons, armor, etc)
   * Simple gold system
@@ -53,12 +54,11 @@ The running game server is up at http://www.monstermud.com.
   * Various global player messages
     * E.g., "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm." "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
 * Map/Rooms
-  * Trap doors
   * Exit types
     * object keyed/forbidden
     * guardian
   * Exit effects
-    * gold, mana, alarmed, guardian, health less
+    * gold, alarmed, guardian, health less
   * Look at in-room subdescriptions
   * Start game in tutorial room(s) (w/ room special/special effect)
   * Windows / window_descs?
