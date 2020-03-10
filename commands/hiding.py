@@ -7,7 +7,10 @@ class CmdHide(Command):
   help_category = "Monster"
 
   def func(self):
-    self.not_implemented_yet()
+    if self.caller.db.hidden:
+      self.caller.msg("You are already hidden")
+      return
+    self.caller.db.hidden = True
 
 
 class CmdReveal(Command):
@@ -16,7 +19,10 @@ class CmdReveal(Command):
   help_category = "Monster"
 
   def func(self):
-    self.not_implemented_yet()
+    if not self.caller.db.hidden:
+      self.caller.msg("You aren't hidden")
+      return
+    self.caller.db.hidden = False
 
 
 class CmdSearch(Command):

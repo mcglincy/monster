@@ -69,6 +69,8 @@ class Character(DefaultCharacter):
     if self.db.equipment is None:
       # dict of {EquipmentSlot:object}
       self.db.equipment = {}
+    if self.db.hidden is None:
+      self.db.hidden = False
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -264,6 +266,8 @@ class Character(DefaultCharacter):
     # note that CharacterClasses do NOT have spell_deflect_armor
     return sum(o.db.spell_deflect_armor for o in self.db.equipment.values())
 
+  # TODO: DRY up these base_ / level_ / total_ methods
+
   def base_claw_damage(self):
     class_dmg = self.character_class().base_claw_damage
     item_dmg = sum(o.db.base_claw_damage for o in self.db.equipment.values())
@@ -282,7 +286,31 @@ class Character(DefaultCharacter):
     item_dmg = sum(o.db.random_claw_damage for o in self.db.equipment.values())
     return class_dmg + item_dmg
 
-  # TODO: level/base/total hide, steal, etc
+  def base_move_silent(self):
+    class_move_silent = self.character_class().base_move_silent
+    item_move_silent = sum(o.db.base_move_silent for o in self.db.equipment.values())
+    return class_move_silent + item_move_silent
+
+  def level_move_silent(self):
+    class_move_silent = self.character_class().level_move_silent
+    item_move_silent = sum(o.db.level_move_silent for o in self.db.equipment.values())
+    return class_move_silent + item_move_silent
+
+  def total_move_silent(self):
+    return self.base_move_silent() + self.level_move_silent() * self.level()
+
+  def base_steal(self):
+    class_steal = self.character_class().base_steal
+    item_steal = sum(o.db.base_steal for o in self.db.equipment.values())
+    return class_steal + item_steal
+
+  def level_steal(self):
+    class_steal = self.character_class().level_steal
+    item_steal = sum(o.db.level_steal for o in self.db.equipment.values())
+    return class_steal + item_steal
+
+  def total_steal(self):
+    return self.base_steal() + self.level_steal() * self.level()
 
   # TODO: move equipment stuff to gamerules, or keep it OOP?
 
