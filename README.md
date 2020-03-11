@@ -18,7 +18,7 @@ The running game server is up at http://www.monstermud.com.
   * Exit descriptions
   * Exit messages: success, failure, "go in", "come out"
   * Exit types
-    * passworded / alias-required, hidden
+    * passworded/alias-required, hidden, object required/forbidden/hidden-without
   * Exit effects
     * set or reset class, change xp, change health, change mana
   * Trapdoors    
@@ -58,7 +58,6 @@ The running game server is up at http://www.monstermud.com.
 * Map/Rooms
   * Move silent between rooms
   * Exit types
-    * object keyed/forbidden
     * guardian
   * Exit effects
     * gold, alarmed, guardian, health less

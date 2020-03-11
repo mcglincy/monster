@@ -54,6 +54,7 @@ class Exit(DefaultExit):
     # arrival message to show others when someone uses the "opposite" exit
     self.db.come_out_msg = None
     self.db.password = None
+    self.db.required_object = None
 
   def at_traverse(self, traversing_object, target_location, **kwargs):
     """Override superclass for custom exit messaging.

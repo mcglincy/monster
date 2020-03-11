@@ -12,6 +12,7 @@ from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_inte
 
 DESC_FILE = './json/desc.json'
 LINES_FILE = './json/lines.json'
+OBJECT_FILE = './json/objects.json'
 ROOMDESC_FILE = './json/roomdesc.json'
 
 
@@ -46,46 +47,19 @@ def maybe_set_desc(desc_id, exit_name, attr_name, descs, lines):
   print('#') 
 
 
-def opposite_dir(key):
-  if key == "north":
-    return "south"
-  if key == "south":
-    return "north"
-  if key == "east":
-    return "west"
-  if key == "west":
-    return "east"
-  if key == "up":
-    return "down"
-  if key == "down":
-    return "up"
+def find_object(objects, obj_id):
+  for obj in objects:
+    if obj['id'] == obj_id:
+      return obj
   return None
 
-
-def find_opposite_exit(roomdescs, roomdesc, exit):
-  # TODO: use a global data structure instead of brute-forcing every call
-  room_id = roomdesc['id']
-  direction = exit['direction']
-  opposite_direction = opposite_dir(direction)
-  for other_room in roomdescs:
-    if other_room['id'] == room_id:
-      # same room
-      continue
-    for other_exit in other_room['exits']:
-      if (other_exit['to_loc'] == room_id
-        and other_exit['direction'] == opposite_direction):
-        return other_exit
-  return None
-
-
-def make_exit(exit, come_out_exit, descs, lines):
+def make_exit(exit, come_out_exit, descs, lines, objects):
   exit_kind = ExitKind(exit['kind'])
   direction = exit['direction']
   direction_letter = direction[0]
   to_room_id = f'room_{exit["to_loc"]}'
   # req_verb is only used in a single exit - maybe by error?
   # req_verb = exit['req_verb']
-  obj_req = exit['obj_req']
 
   # if exit_kind == ExitKind.NO_EXIT:
   #   # skip, I guess?
@@ -141,7 +115,7 @@ def make_exit(exit, come_out_exit, descs, lines):
     print(f"@lock {exit_name} = traverse:none()")
     print('#')
     if alias:
-      print(f"@set {exit_name}/password = {alias}")
+      print(f"@set {exit_name}/password = \"{alias}\"")
       print('#')
 
   maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc', descs, lines)
@@ -163,6 +137,24 @@ def make_exit(exit, come_out_exit, descs, lines):
     print(f"@set {exit_name}/exit_effect_value = {exit_effect_value}")
     print('#')
 
+  obj_req_id = exit['obj_req']
+  if obj_req_id:
+    obj_req = find_object(objects, obj_req_id)
+    if obj_req:
+      print(f"@set {exit_name}/required_object = \"{obj_req['obj_name']}\"")
+      print('#')
+      if exit_kind == ExitKind.OBJECT_REQUIRED:
+        print(f"@lock {exit_name} = traverse:holds({obj_req['obj_name']})")
+        print('#')
+      elif exit_kind == ExitKind.OBJECT_FORBIDDEN:
+        print(f"@lock {exit_name} = traverse: NOT holds({obj_req['obj_name']})")
+        print('#')
+      elif exit_kind == ExitKind.ONLY_EXISTS_WITH_OBJECT:
+        print(f"@lock {exit_name} = traverse:holds({obj_req['obj_name']})")
+        print('#')
+        print(f"@lock {exit_name} = view:holds({obj_req['obj_name']})")
+        print('#')
+
 
 def main():
   """Command-line script."""  
@@ -172,6 +164,8 @@ def main():
     descs = json.load(f)
   with open(LINES_FILE) as f:
     lines = json.load(f)
+  with open(OBJECT_FILE) as f:
+    objects = json.load(f)
   with open(ROOMDESC_FILE) as f:
     roomdescs = json.load(f)
 
@@ -212,8 +206,7 @@ def main():
         to_room = roomdescs[to_loc-1]
         to_exits = to_room['exits']
         come_out_exit = to_exits[come_out_slot - 1]
-      # opposite_exit = find_opposite_exit(roomdescs, roomdesc, exit)
-      make_exit(exit, come_out_exit, descs, lines)
+      make_exit(exit, come_out_exit, descs, lines, objects)
 
   print("""#
 #
