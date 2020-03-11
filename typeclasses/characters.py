@@ -69,10 +69,11 @@ class Character(DefaultCharacter):
     if self.db.equipment is None:
       # dict of {EquipmentSlot:object}
       self.db.equipment = {}
+    if self.ndb.hiding is None:
+      self.ndb.hiding = 0
 
   def at_init(self):
     self.ndb.hiding = 0
-
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -228,7 +229,7 @@ class Character(DefaultCharacter):
       self.character_class().level_mana * self.level())
 
   def is_hiding(self):
-    return self.ndb.hiding > 0
+    return self.ndb.hiding
 
   # our damage, armor, etc is the sum of our equipped objects
 

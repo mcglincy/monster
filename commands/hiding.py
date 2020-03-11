@@ -1,5 +1,5 @@
 from commands.command import Command
-from gamerules.hiding import hide, reveal
+from gamerules.hiding import hide, reveal, search
 
 class CmdHide(Command):
   key = "hide"
@@ -25,4 +25,8 @@ class CmdSearch(Command):
   help_category = "Monster"
 
   def func(self):
-    self.not_implemented_yet()
+    # TODO: maybe move to superclass check/ivar
+    if self.caller.is_hiding():
+      self.caller.msg("You can't do that while you're hiding.")
+      return
+    search(self.caller)

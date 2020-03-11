@@ -1,8 +1,11 @@
 import random
 from gamerules.room_kind import RoomKind
 
-def hide(hider):
 
+MAX_HIDE = 15
+
+
+def hide(hider):
   # TODO: freeze for 0.5 + hide delay
 
   # check for no-hide room
@@ -61,3 +64,41 @@ def reveal(hider):
     return
   hider.ndb.hiding = 0
   hider.msg("You are no longer hiding.")
+  hider.location.msg_contents(f"{hider.key} has stepped out of the shadows.", exclude=[hider])
+
+
+def search(searcher):
+  searcher.location.msg_contents(
+    f"{searcher.key} seems to be looking for something.", exclude=[searcher])
+  rand = random.randint(0, 100)
+  room = searcher.location
+  found = False
+  if rand < 20:
+    # reveal objects
+    pass
+  elif rand < 40:
+    # reveal exits
+    pass
+  else:
+    # reveal people
+    found = reveal_people(searcher)
+
+  if not found:
+    searcher.msg("You haven't found anything.")
+  #searcher.location.msg_contents(f"{searcher.key} appears to have found something.", exclude=[searcher])
+  
+def reveal_people(searcher):
+  # TODO: this logic is a bit wacko
+  characters = [
+    x for x in searcher.location.contents if x.is_typeclass("typeclasses.characters.Character")]
+  for retry in range(0, 7):
+    picked = random.choice(characters)
+    if (picked != searcher and picked.is_hiding()
+      and random.randint(0, MAX_HIDE) > picked.ndb.hiding):
+      picked.ndb.hiding = 0
+      searcher.msg(f"You've found {picked.key} hiding in the shadows!")
+      picked.msg(f"You've been discovered by {searcher.key}")
+      searcher.location.msg_contents(
+        f"{searcher.key} has found {picked.key} hiding in the shadows!", exclude=[searcher])
+      return True
+  return False
