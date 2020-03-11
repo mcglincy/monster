@@ -35,8 +35,9 @@ class CharacterClass(SharedMemoryModel):
   db_spell_armor = models.PositiveSmallIntegerField(default=0, blank=0)
   db_hear_noise = models.PositiveSmallIntegerField(default=0, blank=0)
   db_poison_chance = models.PositiveSmallIntegerField(default=0, blank=0)
+  # shadow damager percent can also be negative
+  db_shadow_damage_percent = models.SmallIntegerField(default=0, blank=0)
   # fields to add later, maybe:
   # How well can it control its actions
   # control = models.PositiveSmallIntegerField(default=0, blank=0)
   # my_void = models.CharField(blank=False, null=True, max_length=32)
-  # shadow_damage_percent = models.PositiveSmallIntegerField(default=0, blank=0)

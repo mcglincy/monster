@@ -292,6 +292,9 @@ class Character(DefaultCharacter):
     item_dmg = sum(o.db.random_claw_damage for o in self.db.equipment.values())
     return class_dmg + item_dmg
 
+  def shadow_damage_percent(self):
+    return self.character_class().shadow_damage_percent
+
   def base_move_silent(self):
     class_move_silent = self.character_class().base_move_silent
     item_move_silent = sum(o.db.base_move_silent for o in self.db.equipment.values())

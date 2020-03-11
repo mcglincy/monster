@@ -36,13 +36,15 @@ The running game server is up at http://www.monstermud.com.
   * Death at 0 health => go to the Void
   * XP for kills (based on level/xp comparison)
   * Weapon use percent
-  * Claws  
+  * Claws
+  * Surprise attack
 * Command set
   * *.* for last action
   * *who* that shows everyone's room location
   * *sheet*
   * *brief*
-  * *name*  
+  * *name* 
+  * *hide* / *reveal* / *search*
 * Commerce
   * Simple merchant in-room object
   * *buy* and *sell* commands
@@ -54,6 +56,7 @@ The running game server is up at http://www.monstermud.com.
   * Various global player messages
     * E.g., "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm." "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
 * Map/Rooms
+  * Move silent between rooms
   * Exit types
     * object keyed/forbidden
     * guardian
@@ -64,17 +67,18 @@ The running game server is up at http://www.monstermud.com.
   * Start game in tutorial room(s) (w/ room special/special effect)
   * Windows / window_descs?
 * Objects
-  * hide/find objects
+  * Hidden/searchable objects
+  * Object damage
 * Combat
   * Freeze / attack delay
   * Weapon speed
-  * Surprise attack
+  * Drop objects when hit
   * Punch
   * Get 50 gold upon death
   * Missiles and *throw* command
   * Bombs and *lob* command
+  * Poison
 * Commands
-  * *hide* / *search* / *reveal* commands
   * hidesay
   * *use* command
   * *block* command

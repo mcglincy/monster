@@ -1,7 +1,8 @@
-from random import randint
+import random
 
 from evennia.utils.search import search_object
 
+from gamerules.hiding import reveal
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 
@@ -18,8 +19,15 @@ def resolve_attack(attacker, target):
     attacker.msg("You can't attack that.")
     return
 
+  is_surprise = False
+  if attacker.is_hiding():
+    attacker.msg(f"You unexpectedly attack {target.key}!")
+    target.msg("Surprise!!!")
+    reveal(attacker)
+    is_surprise = True
+
   # calculate damage
-  damage = attack_damage(attacker, weapon)
+  damage = attack_damage(attacker, weapon, is_surprise)
 
   # attack message for attacker
   attack_name = weapon.key if weapon else "claws"
@@ -35,7 +43,7 @@ def resolve_attack(attacker, target):
   # apply armor to reduce damage
   base_armor = target.base_armor()
   deflect_armor = target.deflect_armor()
-  if deflect_armor > 0 and randint(0, 100) < deflect_armor:
+  if deflect_armor > 0 and random.randint(0, 100) < deflect_armor:
     target.msg("The attack is deflected by your armor.")
     attacker.msg(f"Your attack is deflected by {target.key}'s armor.")
     damage = int(damage / 2)
@@ -48,19 +56,22 @@ def resolve_attack(attacker, target):
   target.gain_health(-damage, damager=attacker)
 
 
-def attack_damage(attacker, weapon):
+def attack_damage(attacker, weapon, is_surprise=False):
+  rand_multiplier = .7 if is_surprise else random.random()
   if weapon:
     # attacker weapon damages may be the sum of several equipped objects
-    dmg = attacker.base_weapon_damage() + randint(0, attacker.random_weapon_damage())
+    dmg = attacker.base_weapon_damage() + int(attacker.random_weapon_damage() * rand_multiplier)
     weapon_use = attacker.base_weapon_use() + attacker.level_weapon_use() * attacker.level()
     dmg = int(dmg * weapon_use / 100)
   else:
     # claws
     dmg = (
       attacker.base_claw_damage()
-      + randint(0, attacker.random_claw_damage())
+      + int(attacker.random_claw_damage() * rand_multiplier)
       + attacker.level_claw_damage() * attacker.level()
       )
+  if is_surprise:
+    dmg = dmg + int(dmg * attacker.shadow_damage_percent() / 100)
   return dmg
 
 

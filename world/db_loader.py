@@ -31,5 +31,6 @@ def create_character_classes():
         db_base_move_silent = rec["move_silent"],
         db_level_move_silent = rec["level_move_silent"],
         db_poison_chance = rec["poison_chance"],
+        db_shadow_damage_percent = rec["shadow_damage_percent"],
       )
       newclass.save()
