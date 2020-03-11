@@ -365,6 +365,12 @@ class Mob(Object):
     self.db.max_health = 1000
     self.db.health = 1000
 
+  def base_armor():
+    return 0
+
+  def deflect_armor():
+    return 0
+
   def gain_health(self, amount, damager=None):
     self.db.health = max(MIN_HEALTH, min(self.db.max_health, self.db.health + amount))
     if self.db.health <= 0:
