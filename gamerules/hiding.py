@@ -56,5 +56,8 @@ def num_unhidden_others(room, hider):
 
 
 def reveal(hider):
+  if hider.ndb.hiding == 0:
+    hider.msg("You were not hiding.")
+    return
   hider.ndb.hiding = 0
   hider.msg("You are no longer hiding.")
