@@ -69,8 +69,8 @@ class Character(DefaultCharacter):
     if self.db.equipment is None:
       # dict of {EquipmentSlot:object}
       self.db.equipment = {}
-    if self.db.hidden is None:
-      self.db.hidden = False
+    if self.ndb.hiding is None:
+      self.ndb.hiding = 0
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""

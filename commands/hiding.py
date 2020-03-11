@@ -1,5 +1,5 @@
 from commands.command import Command
-
+from gamerules.hiding import hide, reveal
 
 class CmdHide(Command):
   key = "hide"
@@ -7,10 +7,7 @@ class CmdHide(Command):
   help_category = "Monster"
 
   def func(self):
-    if self.caller.db.hidden:
-      self.caller.msg("You are already hidden")
-      return
-    self.caller.db.hidden = True
+    hide(self.caller)
 
 
 class CmdReveal(Command):
@@ -19,10 +16,7 @@ class CmdReveal(Command):
   help_category = "Monster"
 
   def func(self):
-    if not self.caller.db.hidden:
-      self.caller.msg("You aren't hidden")
-      return
-    self.caller.db.hidden = False
+    reveal(self.caller)
 
 
 class CmdSearch(Command):
