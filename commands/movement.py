@@ -3,14 +3,15 @@ from gamerules.exit_kind import ExitKind
 
 # see also evennia commands.py ExitCommand
 class CmdExit(Command):
-  """
-    This is a command that simply cause the caller to traverse
-    the object it is attached to.
-  """  
+  """Re-implement so it's a dot-repeatable command."""  
   obj = None
 
   def func(self):
-    """Default exit traverse if no syscommand is defined."""
+    # TODO: maybe move to superclass check/ivar
+    if self.caller.is_hiding():
+      self.caller.msg("You can't do that while you're hiding.")
+      return
+
     if self.obj.access(self.caller, "traverse"):
       # we may traverse the exit.
       self.obj.at_traverse(self.caller, self.obj.destination)
