@@ -59,6 +59,7 @@ The running game server is up at http://www.monstermud.com.
     * guardian
   * Exit effects
     * gold, alarmed, guardian, health less
+  * Hidden/searchable exits
   * Look at in-room subdescriptions
   * Start game in tutorial room(s) (w/ room special/special effect)
   * Windows / window_descs?
@@ -74,6 +75,7 @@ The running game server is up at http://www.monstermud.com.
   * Bombs and *lob* command
 * Commands
   * *hide* / *search* / *reveal* commands
+  * hidesay
   * *use* command
   * *block* command
   * *steal* / *pickpocket* commands
