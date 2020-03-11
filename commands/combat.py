@@ -1,5 +1,6 @@
 from commands.command import Command
 from gamerules.combat import resolve_attack
+from gamerules.hiding import search_unhidden
 
 
 class CmdAttack(Command):
@@ -14,8 +15,7 @@ class CmdAttack(Command):
       self.caller.msg("Usage: attack <target>")
       return
 
-    # TODO: change to pick first matching target
-    target = self.caller.search(self.args.strip())
+    target = search_unhidden(self.caller, self.args.strip())
     if not target:
       return
 

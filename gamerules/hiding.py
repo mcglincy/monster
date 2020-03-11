@@ -5,6 +5,20 @@ from gamerules.room_kind import RoomKind
 MAX_HIDE = 15
 
 
+def unhidden_objects(room):
+  return [x for x in room.contents if not hasattr(x, "is_hiding") or not x.is_hiding()]
+
+
+def search_unhidden(searcher, key):
+  unhidden = [
+    x for x in searcher.location.contents if not hasattr(x, "is_hiding") or not x.is_hiding()]
+  for x in unhidden:
+    if x.key.startswith(key):
+      return x
+  searcher.msg(f"Could not find '{key}'.")
+  return None
+
+
 def hide(hider):
   # TODO: freeze for 0.5 + hide delay
 
