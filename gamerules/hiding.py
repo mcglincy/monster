@@ -5,6 +5,17 @@ from gamerules.room_kind import RoomKind
 MAX_HIDE = 15
 
 
+def evennia_hide(obj):
+  obj.locks.remove("view")
+  # TODO: refactor permissions into an enum?
+  obj.locks.add("view:perm(see_hidden)")
+
+
+def evennia_unhide(obj):
+  obj.locks.remove("view")
+  obj.locks.add("view:all()")
+
+
 def unhidden_objects(room):
   return [x for x in room.contents if not hasattr(x, "is_hiding") or not x.is_hiding()]
 
@@ -61,7 +72,9 @@ def hide(hider):
   if hider.ndb.hiding > 1:
     hider.msg("You've managed to hide yourself a little better.")
   else:
+    evennia_hide(hider)
     hider.msg("You've hidden yourself from view.")
+
 
 
 def num_unhidden_others(room, hider):
@@ -77,6 +90,7 @@ def reveal(hider):
     hider.msg("You were not hiding.")
     return
   hider.ndb.hiding = 0
+  evennia_unhide(hider)
   hider.msg("You are no longer hiding.")
   hider.location.msg_contents(f"{hider.key} has stepped out of the shadows.", exclude=[hider])
 
@@ -110,9 +124,10 @@ def reveal_people(searcher):
     if (picked != searcher and picked.is_hiding()
       and random.randint(0, MAX_HIDE) > picked.ndb.hiding):
       picked.ndb.hiding = 0
+      evennia_unhide(picked)
       searcher.msg(f"You've found {picked.key} hiding in the shadows!")
-      picked.msg(f"You've been discovered by {searcher.key}")
+      picked.msg(f"You've been discovered by {searcher.key}!")
       searcher.location.msg_contents(
-        f"{searcher.key} has found {picked.key} hiding in the shadows!", exclude=[searcher])
+        f"{searcher.key} has found {picked.key} hiding in the shadows!", exclude=[searcher, picked])
       return True
   return False
