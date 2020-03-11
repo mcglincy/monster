@@ -62,6 +62,8 @@ The running game server is up at http://www.monstermud.com.
   * Look at in-room subdescriptions
   * Start game in tutorial room(s) (w/ room special/special effect)
   * Windows / window_descs?
+* Objects
+  * hide/find objects
 * Combat
   * Freeze / attack delay
   * Weapon speed
