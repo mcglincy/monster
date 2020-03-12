@@ -21,7 +21,7 @@ from commands.commerce import CmdBuy, CmdSell
 from commands.equipment import CmdEquip, CmdUnequip
 from commands.hiding import CmdHide, CmdReveal, CmdSearch
 from commands.misc import CmdBrief, CmdDot, CmdWho
-from commands.spells import CmdCast
+from commands.spells import CmdCast, CmdLearn
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -49,6 +49,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdDot())
         self.add(CmdEquip())
         self.add(CmdHide())
+        self.add(CmdLearn())
         self.remove(default_cmds.CmdName())
         self.add(CmdName())
         self.add(CmdReveal())

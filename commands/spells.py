@@ -9,3 +9,11 @@ class CmdCast(Command):
   def func(self):
     self.not_implemented_yet()
 
+
+class CmdLearn(Command):
+  key = "learn"
+  aliases = ["lea", "lear"]
+  help_category = "Monster"
+
+  def func(self):
+    self.not_implemented_yet()
