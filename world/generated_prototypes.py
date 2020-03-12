@@ -1782,6 +1782,8 @@ GOLDEN_SCROLL = {
   'prototype_parent': 'base_scroll',
   'desc': "This scroll is on supple parchment, trimmed with gold-leaf. It is marked with common symbols with appeal to the Gods of good health.",
   'worth': 50,
+  'spell_key': 'heal',
+  'charges': 2,
 }
 
 PLEDGE_SLAYER = {
@@ -1795,6 +1797,8 @@ SCROLL_OF_IDENTIFY = {
   'desc': "This small yellowed scroll looks like it may contain some information.",
   'get_success_msg': "You feel some keen knowledge as you pick the scroll up",
   'worth': 200,
+  'spell_key': 'identify',
+  'charges': 1,
 }
 
 SCROLL_OF_TELEPORT = {
@@ -1805,6 +1809,8 @@ SCROLL_OF_TELEPORT = {
   'line_desc': "A small scroll made of infant skin lies here.",
   'num_exist': 1,
   'worth': 90000,
+  'spell_key': 'death word',
+  'charges': 1,
 }
 
 TATTERED_SCROLL = {
@@ -1813,6 +1819,8 @@ TATTERED_SCROLL = {
   'desc': "The scroll is very old, and has a bluish tint to it.",
   'num_exist': 2,
   'worth': 35,
+  'spell_key': 'Unholy Blast',
+  'charges': 1,
 }
 
 YELLOWED_SCROLL = {
@@ -1820,6 +1828,8 @@ YELLOWED_SCROLL = {
   'prototype_parent': 'base_scroll',
   'desc': "The scrolls are loosely rolled together, and are made of yellowed parchment.",
   'worth': 35,
+  'spell_key': 'Sleep',
+  'charges': 1,
 }
 
 #
@@ -1945,6 +1955,7 @@ BOOK_OF_SHADOWS = {
   'get_success_msg': "You feel a surge of power from the dark tome.",
   'line_desc': "Darkness emanates from a book lying on the ground.",
   'num_exist': 1,
+  'spell_keys': ['Flame Spray', 'Silver Dagger', 'Poison Thorn', 'Grave Rot', 'Dark Arrows', 'Solar Flare', 'Willow Blast', 'Phantom Sword', 'Hands of Fire', 'Green Dart', 'Storm', 'Finger of Death', 'Iron collar', 'Doomspeak', 'Spectral Hounds', 'Blight', 'Ring of Fire'],
 }
 
 DEMONS_TOME = {
@@ -1954,6 +1965,7 @@ DEMONS_TOME = {
   'desc': "The tome is large, and rather heavy. It is bound with a dry, thick leather that appears to have been made from the hide of some huge retile. The pages are of some type of animal skin. The writing contained within is casually indecipherable, but clearly magical.",
   'line_desc': "There is a volume bound in reptilean leather here.",
   'weight': -9,
+  'spell_keys': ['Cold Ball', 'Acid Ball', 'Shatter Person', 'Group Destruction'],
 }
 
 FLICKERING_FLAME = {
@@ -1964,6 +1976,7 @@ FLICKERING_FLAME = {
   'line_desc': "There is a flickering flame dancing before your eyes..",
   'num_exist': 1,
   'sticky': True,
+  'spell_keys': ['Fire Leaping'],
 }
 
 GRAND_GRIMOIRE = {
@@ -1972,12 +1985,14 @@ GRAND_GRIMOIRE = {
   'desc': "The grimiore is an exceedingly large tome, bound in leather and reptile skin. Its pages show great age, but are in good shape. The magical writings contained within are illegible to all save Wizards.",
   'get_fail_msg': "The grimiore is far too bulky and heavy for you to go lugging it around whilst hacking monsters!",
   'num_exist': 2,
+  'spell_keys': ['Cure Poison', 'Unholy Blast', 'Dragon fire', 'Invisibility', 'Sleep', 'Gripping Plants', 'Remove Poison', 'earthquake', 'Illusion I', 'chestnut hail', 'grave rot', 'Brain Hammer', 'ray of death', 'heal', 'charm', 'killing winds', 'whisper', 'lightning bolts', 'identify', 'death word'],
 }
 
 MABINOGIAN = {
   'key': "Mabinogian",
   'prototype_parent': 'base_spellbook',
   'num_exist': 1,
+  'spell_keys': ['Thundering Voice', 'Ent Strength', 'Pinecones of Death', 'Tree Attack', 'Morning Frost', 'Earth Hammer', 'Insect Cloud', 'Locust Plague', 'Bear Claws', 'Pack of Wolves', 'Forest Fire', 'Tornado', 'Soul Harvester', 'Elk Speed'],
 }
 
 PALE_BOOK = {
@@ -1988,6 +2003,7 @@ PALE_BOOK = {
   'line_desc': "There is a book bound in pale leather here.",
   'sticky': True,
   'use_object_required': 132,
+  'spell_keys': ['Water Flowing'],
 }
 
 SANDSTONE = {
@@ -1999,6 +2015,7 @@ SANDSTONE = {
   'num_exist': 1,
   'sticky': True,
   'use_object_required': 132,
+  'spell_keys': ['Quaking Earth'],
 }
 
 SCROLL = {
@@ -2007,6 +2024,7 @@ SCROLL = {
   'desc': "You see a pale scroll covered in faded writing hanging upon the far wall. The words fade out of meaning the more you concentrate but they seem to be of a magical nature.",
   'line_desc': "A scroll hangs before you.",
   'sticky': True,
+  'spell_keys': ['Wind Blowing'],
 }
 
 #

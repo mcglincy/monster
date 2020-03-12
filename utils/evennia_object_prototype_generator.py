@@ -11,7 +11,8 @@ from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_inte
 
 DESC_FILE = './json/desc.json'
 LINES_FILE = './json/lines.json'
-OBJECT_FILE = './json/objects.json'
+OBJECTS_FILE = './json/objects.json'
+SPELLS_FILE = './json/spells.json'
 
 DEFAULT_ARTICLE = 1
 
@@ -21,6 +22,13 @@ def lookup_effect(obj, effect):
     eff_num, eff = split_integer(parm)
     if eff == effect:
       return eff_num
+
+
+def find_obj(objs, id):
+  for obj in objs:
+    if obj['id'] == id:
+      return obj
+  return None
 
 
 def camel_case(s):
@@ -69,7 +77,7 @@ def snake_case(s):
   return ''.join(chars)
 
 
-def maybe_desc(value, field_name, except_if=None):
+def maybe(value, field_name, except_if=None):
   if value and value != except_if:
     print(f"  '{field_name}': {value},")
 
@@ -146,7 +154,7 @@ BASE_EQUIPMENT = {
     print()
 
 
-def output_scrolls(objs, descs, lines):
+def output_scrolls(objs, descs, lines, spells):
   print("""#
 # Scroll objects
 #
@@ -158,7 +166,12 @@ BASE_SCROLL = {
 """)
   for obj in objs:
     output_common_fields(obj, 'base_scroll', descs, lines)
-    # TODO: figure out parms
+    parms = obj['parms']
+    if len(parms) == 2:
+      spell = find_obj(spells, parms[0])
+      charges = parms[1]
+      print(f"  'spell_key': '{spell['name']}',")
+      print(f"  'charges': {charges},")
     print('}')
     print()
 
@@ -173,6 +186,7 @@ BASE_WAND = {
   'key': 'base_wand',
 }
 """)
+  #    O_WAND: Charges := Obj.Parms[2];
   for obj in objs:
     output_common_fields(obj, 'base_wand', descs, lines)
     # TODO: figure out parms
@@ -190,6 +204,7 @@ BASE_MISSILE = {
   'key': 'base_missile',
 }
 """)
+  #    O_MISSILE: Charges := Obj.Parms[3];
   for obj in objs:
     output_common_fields(obj, 'base_missile', descs, lines)
     # TODO: figure out parms
@@ -214,7 +229,7 @@ BASE_MISSILE_LAUNCHER = {
     print()
 
 
-def output_spellbooks(objs, descs, lines):
+def output_spellbooks(objs, descs, lines, spells):
   print("""#
 # Spellbook objects
 #
@@ -226,7 +241,11 @@ BASE_SPELLBOOK = {
 """)
   for obj in objs:
     output_common_fields(obj, 'base_spellbook', descs, lines)
-    # TODO: figure out parms
+    spell_keys = []
+    for parm in obj['parms']:
+      spell = find_obj(spells, parm)
+      spell_keys.append(spell['name'])
+    print(f"  'spell_keys': {spell_keys},")
     print('}')
     print()
 
@@ -248,17 +267,16 @@ BASE_BANKING_MACHINE = {
     print()
 
 
-
-
-
 def main():
   """Command-line script."""
   with open(DESC_FILE) as f:
     descs = json.load(f)
   with open(LINES_FILE) as f:
     lines = json.load(f)
-  with open(OBJECT_FILE) as f:
+  with open(OBJECTS_FILE) as f:
     objects = json.load(f)
+  with open(SPELLS_FILE) as f:
+    spells = json.load(f)
 
   # divide objects by kind
   obj_by_kind = {}
@@ -274,11 +292,11 @@ from gamerules.equipment_slot import EquipmentSlot
 """)
   output_blands(obj_by_kind[ObjectKind.BLAND], descs, lines)
   output_equipment(obj_by_kind[ObjectKind.EQUIPMENT], descs, lines)
-  output_scrolls(obj_by_kind[ObjectKind.SCROLL], descs, lines)
+  output_scrolls(obj_by_kind[ObjectKind.SCROLL], descs, lines, spells)
   output_wands(obj_by_kind[ObjectKind.WAND], descs, lines)
   output_missiles(obj_by_kind[ObjectKind.MISSILE], descs, lines)
   output_missile_launchers(obj_by_kind[ObjectKind.MISSILE_LAUNCHER], descs, lines)
-  output_spellbooks(obj_by_kind[ObjectKind.SPELLBOOK], descs, lines)
+  output_spellbooks(obj_by_kind[ObjectKind.SPELLBOOK], descs, lines, spells)
   output_banking_machines(obj_by_kind[ObjectKind.BANKING_MACHINE], descs, lines)
 
 

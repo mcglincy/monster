@@ -327,18 +327,22 @@ class Scroll(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.SCROLL
+    self.db.spell_key = None
+    self.db.charges = 0
 
 
 class Wand(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.WAND
+    self.db.charges = 0
 
 
 class Missile(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.MISSILE
+    self.db.charges = 0
 
 
 class MissileLauncher(Object):
@@ -351,6 +355,7 @@ class Spellbook(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.SPELLBOOK
+    self.db.spell_keys = []
 
 
 class BankingMachine(Object):
