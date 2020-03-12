@@ -91,10 +91,12 @@ class Script(DefaultScript):
     """
     pass
 
+
 class Trapdoor(Script):
   def at_script_creation(self):
     self.key = "trapdoor"
     self.interval = 1  # every second
+    self.persistent = True  # survive server reset/shutdown
 
   def at_repeat(self):
     if not self.obj.db.trap_chance or not self.obj.db.trap_direction:

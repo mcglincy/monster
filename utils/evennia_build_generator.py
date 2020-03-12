@@ -30,7 +30,7 @@ def make_room(roomdesc, descs):
       print('#')
   print(f'@set here/record_id = {record_id}')
   print('#')
-  if roomdesc["trap_chance"]:
+  if roomdesc["trap_chance"] and roomdesc["trap_direction"]:
     print(f'@set here/trap_chance = {roomdesc["trap_chance"]}')
     print('#')
     print(f'@set here/trap_direction = {roomdesc["trap_direction"]}')
