@@ -13,7 +13,7 @@ def evennia_hide(obj):
 
 def evennia_unhide(obj):
   obj.locks.remove("view")
-  obj.locks.add("view:all")
+  obj.locks.add("view:all()")
 
 
 def unhidden_objects(room):
