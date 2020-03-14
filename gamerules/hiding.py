@@ -24,7 +24,7 @@ def search_unhidden(searcher, key):
   unhidden = [
     x for x in searcher.location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
   for x in unhidden:
-    if x.key.startswith(key):
+    if x.key.lower().startswith(key.lower()):
       return x
   searcher.msg(f"Could not find '{key}'.")
   return None
@@ -74,7 +74,6 @@ def hide(hider):
   else:
     evennia_hide(hider)
     hider.msg("You've hidden yourself from view.")
-
 
 
 def num_unhidden_others(room, hider):
