@@ -31,6 +31,7 @@ class CmdBleed(Command):
   def func(self):
     if hasattr(self.caller, "gain_health"):
       self.caller.gain_health(-50)
+      self.caller.gain_mana(-10)
 
 
 class CmdRest(Command):
@@ -42,3 +43,4 @@ class CmdRest(Command):
   def func(self):
     if hasattr(self.caller, "gain_health"):
       self.caller.gain_health(50)
+      self.caller.gain_mana(10)
