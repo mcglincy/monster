@@ -83,6 +83,12 @@ class SpellEffect(SharedMemoryModel):
   db_param_3 = models.SmallIntegerField(default=0, blank=0)
   db_param_4 = models.SmallIntegerField(default=0, blank=0)
   
+  def nice_name(self):
+    effect_name = SpellEffectKind(self.db_effect_kind).name
+    if self.db_affects_room:
+      effect_name = "GROUP_" + effect_name
+    return effect_name.replace("_", " ").lower()
+
   # db.push_direction
   # db.base_strength
   # db.level_strength

@@ -363,8 +363,15 @@ class Character(DefaultCharacter):
     # TODO: handle claws
     return None
 
+  @property
+  def equipped_spellbook(self):
+    if EquipmentSlot.BACKPACK in self.db.equipment:
+      in_slot = self.db.equipment[EquipmentSlot.BACKPACK]
+      if in_slot and in_slot.is_typeclass("typeclasses.objects.Spellbook"):
+        return in_slot
+    return None
+
   def equip(self, obj):
-    self.msg("foo")
     if not obj.is_typeclass("typeclasses.objects.Equipment", exact=False):
       return
     slot = obj.db.equipment_slot

@@ -20,6 +20,7 @@ from gamerules.combat import mob_death
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.object_kind import ObjectKind
+from userdefined.models import Spell
 
 
 class Object(DefaultObject):
@@ -356,6 +357,9 @@ class Spellbook(Equipment):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.SPELLBOOK
     self.db.spell_keys = []
+
+  def spells(self):
+    return Spell.objects.filter(db_key__in=self.db.spell_keys)
 
 
 class BankingMachine(Object):
