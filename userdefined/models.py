@@ -81,14 +81,14 @@ class Spell(SharedMemoryModel):
 
 class SpellEffect(SharedMemoryModel):
   spell = models.ForeignKey(Spell, on_delete=models.CASCADE)  
-  db.effect_kind = models.CharField(max_length=16, choices = [(k, k.value) for k in SpellEffectKind])
-  db.affects_room = models.BooleanField(default=False)
-  db.affects_caster = models.BooleanField(default=False)
-  db.target_prompt = models.BooleanField(default=False)
-  db.param_1 = models.SmallIntegerField(default=0, blank=0)
-  db.param_2 = models.SmallIntegerField(default=0, blank=0)
-  db.param_3 = models.SmallIntegerField(default=0, blank=0)
-  db.param_4 = models.SmallIntegerField(default=0, blank=0)
+  db_effect_kind = models.CharField(max_length=16, choices = [(k, k.value) for k in SpellEffectKind])
+  db_affects_room = models.BooleanField(default=False)
+  db_affects_caster = models.BooleanField(default=False)
+  db_target_prompt = models.BooleanField(default=False)
+  db_param_1 = models.SmallIntegerField(default=0, blank=0)
+  db_param_2 = models.SmallIntegerField(default=0, blank=0)
+  db_param_3 = models.SmallIntegerField(default=0, blank=0)
+  db_param_4 = models.SmallIntegerField(default=0, blank=0)
   
   # db.push_direction
   # db.base_strength
