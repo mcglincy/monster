@@ -86,6 +86,7 @@ The running game server is up at http://www.monstermud.com.
   * Atmosphere
   * Edit self description
   * Remove any Evennia commands we don't want
+  * Highlighting for pub messages
 * Spells
   * Spell / ability system
   * *learn* command
