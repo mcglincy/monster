@@ -26,7 +26,7 @@ class CmdSearch(Command):
 
   def func(self):
     # TODO: maybe move to superclass check/ivar
-    if self.caller.is_hiding():
+    if self.caller.is_hiding:
       self.caller.msg("You can't do that while you're hiding.")
       return
     search(self.caller)

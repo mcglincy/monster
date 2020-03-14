@@ -13,16 +13,16 @@ def evennia_hide(obj):
 
 def evennia_unhide(obj):
   obj.locks.remove("view")
-  obj.locks.add("view:all()")
+  obj.locks.add("view:all")
 
 
 def unhidden_objects(room):
-  return [x for x in room.contents if not hasattr(x, "is_hiding") or not x.is_hiding()]
+  return [x for x in room.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
 
 
 def search_unhidden(searcher, key):
   unhidden = [
-    x for x in searcher.location.contents if not hasattr(x, "is_hiding") or not x.is_hiding()]
+    x for x in searcher.location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
   for x in unhidden:
     if x.key.startswith(key):
       return x
@@ -64,7 +64,7 @@ def hide(hider):
   # hide success! increase hiding amount, maybe
 
   # you can hide up to your level + 1
-  if hider.ndb.hiding > hider.level():
+  if hider.ndb.hiding > hider.level:
     hider.msg("You're pretty well hidden now.  I don't think you could be any less visible.")
     return
 
@@ -121,7 +121,7 @@ def reveal_people(searcher):
     x for x in searcher.location.contents if x.is_typeclass("typeclasses.characters.Character")]
   for retry in range(0, 7):
     picked = random.choice(characters)
-    if (picked != searcher and picked.is_hiding()
+    if (picked != searcher and picked.is_hiding
       and random.randint(0, MAX_HIDE) > picked.ndb.hiding):
       picked.ndb.hiding = 0
       evennia_unhide(picked)

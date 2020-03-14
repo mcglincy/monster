@@ -191,11 +191,13 @@ class Character(DefaultCharacter):
 
   # helper getters
 
+  @property
   def character_class(self):
     if not self.ndb.character_class or self.ndb.character_class.key != self.db.character_class_key:
       self.ndb.character_class = CharacterClass.objects.get(db_key=self.db.character_class_key)
     return self.ndb.character_class
 
+  @property
   def carried_gold_amount(self):
     gold = self.search("gold",
       candidates=self.contents, typeclass="typeclasses.objects.Gold", quiet=True)
@@ -203,126 +205,153 @@ class Character(DefaultCharacter):
       return gold[0].db.amount
     return 0
 
+  @property
   def level(self):
     return level_from_xp(self.db.xp)
 
+  @property
   def classname(self):
-    return self.character_class().key
+    return self.character_class.key
 
+  @property
   def size(self):
-    return self.character_class().size
+    return self.character_class.size
 
+  @property
   def alignment(self):
     try:
-      alignment = Alignment(self.character_class().alignment)
+      alignment = Alignment(self.character_class.alignment)
     except ValueError:
       # handle non-33/66/99 values for classes, just in case
       alignment = Alignment.NEUTRAL
     return alignment
 
+  @property
   def max_health(self):
-    return (self.character_class().base_health +
-      self.character_class().level_health * self.level())
+    return self.base_plus_level_attr("base_health", "level_health")
 
+  @property
   def max_mana(self):
-    return (self.character_class().base_mana +
-      self.character_class().level_mana * self.level())
+    return self.base_plus_level_attr("base_mana", "level_mana")
 
+  @property
   def is_hiding(self):
     return self.ndb.hiding
 
   # our damage, armor, etc is the sum of our equipped objects
 
+  def base_plus_level_attr(self, base_attr_name, level_attr_name):
+    clazz = self.character_class
+    base_val = getattr(clazz, base_attr_name)
+    level_val = getattr(clazz, level_attr_name)
+    return base_val + level_val * self.level
+
+  def equipped_attr(self, attr_name):
+    # TODO: there may be None values in the dict post-dequip
+    equipped = filter(None, self.db.equipment.values())
+    return sum(getattr(e.db, attr_name) for e in equipped)
+
+  def class_plus_equipped_attr(self, attr_name):
+    class_val = getattr(self.character_class, attr_name)
+    equipped_val = self.equipped_attr(attr_name)
+    return class_val + equipped_val
+
+  @property
   def base_weapon_damage(self):
-    return sum(o.db.base_weapon_damage for o in self.db.equipment.values())
+    return self.equipped_attr("base_weapon_damage")
 
   # note: there is no level_weapon_damage stat or effect
 
+  @property
   def random_weapon_damage(self):
-    return sum(o.db.random_weapon_damage for o in self.db.equipment.values())
+    return self.equipped_attr("random_weapon_damage")
 
+  @property
   def base_weapon_use(self):
-    class_use = self.character_class().base_weapon_use
-    item_use = sum(o.db.base_weapon_use for o in self.db.equipment.values())
-    return class_use + item_use
+    return self.class_plus_equipped_attr("base_weapon_use")
 
+  @property
   def level_weapon_use(self):
-    class_use = self.character_class().level_weapon_use
-    item_use = sum(o.db.level_weapon_use for o in self.db.equipment.values())
-    return class_use + item_use
+    return self.class_plus_equipped_attr("level_weapon_use")
 
+  @property
   def total_weapon_use(self):
-    return self.base_weapon_use() + self.level_weapon_use() * self.level()
+    return self.base_plus_level_attr("base_weapon_use", "level_weapon_use")
 
+  @property
   def base_armor(self):
-    class_armor = self.character_class().armor
+    # TODO: ivars are named differently :P
+    class_armor = self.character_class.armor
     item_armor = sum(o.db.base_armor for o in self.db.equipment.values())
     return class_armor + item_armor
 
+  @property
   def deflect_armor(self):
     # note that CharacterClasses do NOT have deflect_armor
-    return sum(o.db.deflect_armor for o in self.db.equipment.values())
+    return self.equipped_attr("deflect_armor")
 
+  @property
   def spell_armor(self):
-    class_armor = self.character_class().spell_armor
-    item_armor = sum(o.db.spell_armor for o in self.db.equipment.values())
-    return class_armor + item_armor
+    return self.class_plus_equipped_attr("spell_armor")
 
+  @property
   def spell_deflect_armor(self):
     # note that CharacterClasses do NOT have spell_deflect_armor
-    return sum(o.db.spell_deflect_armor for o in self.db.equipment.values())
+    return self.equipped_attr("spell_deflect_armor")
 
-  # TODO: DRY up these base_ / level_ / total_ methods
-
+  @property
   def base_claw_damage(self):
-    class_dmg = self.character_class().base_claw_damage
-    item_dmg = sum(o.db.base_claw_damage for o in self.db.equipment.values())
-    return class_dmg + item_dmg
+    return self.class_plus_equipped_attr("base_claw_damage")
 
+  @property
   def level_claw_damage(self):
-    class_dmg = self.character_class().level_claw_damage
-    item_dmg = sum(o.db.level_claw_damage for o in self.db.equipment.values())
-    return class_dmg + item_dmg
+    return self.class_plus_equipped_attr("level_claw_damage")
 
+  @property
   def total_claw_damage(self):
-    return self.base_claw_damage() + self.level_claw_damage() * self.level()
+    return self.base_plus_level_attr("base_claw_damage", "level_claw_damage")
 
+  @property
   def random_claw_damage(self):
-    class_dmg = self.character_class().random_claw_damage
-    item_dmg = sum(o.db.random_claw_damage for o in self.db.equipment.values())
-    return class_dmg + item_dmg
+    return self.class_plus_equipped_attr("random_claw_damage")
 
+  @property
   def shadow_damage_percent(self):
-    return self.character_class().shadow_damage_percent
+    return self.character_class.shadow_damage_percent
 
+  @property
   def base_move_silent(self):
-    class_move_silent = self.character_class().base_move_silent
-    item_move_silent = sum(o.db.base_move_silent for o in self.db.equipment.values())
-    return class_move_silent + item_move_silent
+    return self.class_plus_equipped_attr("base_move_silent")
 
+  @property
   def level_move_silent(self):
-    class_move_silent = self.character_class().level_move_silent
-    item_move_silent = sum(o.db.level_move_silent for o in self.db.equipment.values())
-    return class_move_silent + item_move_silent
+    return self.class_plus_equipped_attr("level_move_silent")
 
+  @property
   def total_move_silent(self):
-    return self.base_move_silent() + self.level_move_silent() * self.level()
+    return self.base_plus_level_attr("base_move_silent", "level_move_silent")
 
+  @property
   def base_steal(self):
-    class_steal = self.character_class().base_steal
-    item_steal = sum(o.db.base_steal for o in self.db.equipment.values())
-    return class_steal + item_steal
+    return self.class_plus_equipped_attr("base_steal")
 
+  @property
   def level_steal(self):
-    class_steal = self.character_class().level_steal
-    item_steal = sum(o.db.level_steal for o in self.db.equipment.values())
-    return class_steal + item_steal
+    return self.class_plus_equipped_attr("level_steal")
 
+  @property
   def total_steal(self):
-    return self.base_steal() + self.level_steal() * self.level()
+    return self.base_plus_level_attr("base_steal", "level_steal")
 
   # TODO: move equipment stuff to gamerules, or keep it OOP?
 
+  @property
+  def has_claws(self):
+    # TODO: should an item be able to give you claws?
+    clazz = self.character_class
+    return (clazz.base_claw_damage or clazz.level_claw_damage or clazz.random_claw_damage)
+
+  @property
   def equipped_weapon(self):
     # TODO: should claw classes be able to equip anything in TWO_HAND/SWORD_HAND?
     if EquipmentSlot.TWO_HAND in self.db.equipment:
@@ -332,11 +361,6 @@ class Character(DefaultCharacter):
     # TODO: does SHIELD_HAND count?
     # TODO: handle claws
     return None
-
-  def has_claws(self):
-    # TODO: should an item be able to give you claws?
-    clazz = self.character_class()
-    return (clazz.base_claw_damage or clazz.level_claw_damage or clazz.random_claw_damage)
 
   def equip(self, obj):
     if not obj.is_typeclass("typeclasses.objects.Equipment"):
@@ -373,13 +397,13 @@ class Character(DefaultCharacter):
         character_death(self, damager)
     else:
       # aka healing
-      self.db.health = min(self.db.health + amount, self.max_health())
+      self.db.health = min(self.db.health + amount, self.max_health)
       self.msg(health_msg("You", self.db.health))
       self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
 
   def gain_mana(self, amount):
     # TODO: messages?
-    self.db.mana = max(MIN_MANA, min(self.max_mana(), self.db.mana + amount))
+    self.db.mana = max(MIN_MANA, min(self.max_mana, self.db.mana + amount))
 
   # at_* event notifications
 

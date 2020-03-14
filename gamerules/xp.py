@@ -49,9 +49,9 @@ def gain_xp(target, xp):
 
 def set_xp(target, new_xp):
   new_xp = max(MIN_XP, new_xp)
-  old_level = target.level()
+  old_level = target.level
   target.db.xp = new_xp
-  new_level = target.level()
+  new_level = target.level
   if old_level != new_level:
     target.msg(f"You are now level {new_level}.")
     # level changes are reflected in various character method calculations
