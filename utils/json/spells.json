@@ -13,7 +13,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -52,7 +52,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Cure poison",
+        "effect": 1,
         "name": "",
         "all": false,
         "caster": true,
@@ -91,7 +91,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Announce",
+        "effect": 10,
         "name": "",
         "all": false,
         "caster": false,
@@ -130,7 +130,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": true,
@@ -169,7 +169,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -208,7 +208,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": true,
@@ -219,7 +219,7 @@
         "m4": 5
       },
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": true,
         "caster": true,
@@ -258,7 +258,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -297,7 +297,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -336,7 +336,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -375,7 +375,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": true,
@@ -386,7 +386,7 @@
         "m4": 20
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -425,7 +425,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": false,
@@ -436,7 +436,7 @@
         "m4": 0
       },
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "Freeze",
         "all": true,
         "caster": true,
@@ -475,7 +475,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": true,
         "caster": false,
@@ -514,7 +514,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": true,
         "caster": false,
@@ -553,7 +553,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Cure poison",
+        "effect": 1,
         "name": "",
         "all": false,
         "caster": false,
@@ -592,7 +592,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -631,7 +631,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Announce",
+        "effect": 10,
         "name": "",
         "all": false,
         "caster": false,
@@ -670,7 +670,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Push",
+        "effect": 9,
         "name": "",
         "all": true,
         "caster": true,
@@ -681,7 +681,7 @@
         "m4": 0
       },
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -720,7 +720,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": true,
@@ -731,7 +731,7 @@
         "m4": 10
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -742,7 +742,7 @@
         "m4": 10
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -781,7 +781,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": false,
@@ -792,7 +792,7 @@
         "m4": 100
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -831,7 +831,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": true,
@@ -842,7 +842,7 @@
         "m4": 1000
       },
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -881,7 +881,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Heal",
+        "effect": 6,
         "name": "",
         "all": false,
         "caster": false,
@@ -892,7 +892,7 @@
         "m4": 5
       },
       {
-        "effect": "Heal",
+        "effect": 6,
         "name": "",
         "all": false,
         "caster": false,
@@ -931,7 +931,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": true,
@@ -942,7 +942,7 @@
         "m4": 4
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -953,7 +953,7 @@
         "m4": 4
       },
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": true,
         "caster": false,
@@ -992,7 +992,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": true,
@@ -1003,7 +1003,7 @@
         "m4": 1
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -1042,7 +1042,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Announce",
+        "effect": 10,
         "name": "",
         "all": false,
         "caster": false,
@@ -1053,7 +1053,7 @@
         "m4": 0
       },
       {
-        "effect": "Announce",
+        "effect": 10,
         "name": "",
         "all": false,
         "caster": false,
@@ -1092,7 +1092,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": true,
@@ -1103,7 +1103,7 @@
         "m4": 10
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1114,7 +1114,7 @@
         "m4": 5
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1125,7 +1125,7 @@
         "m4": 10
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1136,7 +1136,7 @@
         "m4": 20
       },
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": true,
         "caster": true,
@@ -1175,7 +1175,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Detect magic",
+        "effect": 13,
         "name": "",
         "all": false,
         "caster": false,
@@ -1214,7 +1214,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Command",
+        "effect": 11,
         "name": "poof demon pit",
         "all": false,
         "caster": false,
@@ -1253,7 +1253,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "Blindness",
         "all": true,
         "caster": false,
@@ -1292,7 +1292,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1331,7 +1331,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Command",
+        "effect": 11,
         "name": "",
         "all": false,
         "caster": true,
@@ -1370,7 +1370,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": false,
@@ -1409,7 +1409,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -1448,7 +1448,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": false,
@@ -1487,7 +1487,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Strength",
+        "effect": 2,
         "name": "",
         "all": false,
         "caster": true,
@@ -1526,7 +1526,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Speed",
+        "effect": 3,
         "name": "",
         "all": false,
         "caster": true,
@@ -1565,7 +1565,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1576,7 +1576,7 @@
         "m4": 0
       },
       {
-        "effect": "Push",
+        "effect": 9,
         "name": "",
         "all": false,
         "caster": false,
@@ -1615,7 +1615,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1626,7 +1626,7 @@
         "m4": 0
       },
       {
-        "effect": "Push",
+        "effect": 9,
         "name": "",
         "all": false,
         "caster": false,
@@ -1665,7 +1665,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1676,7 +1676,7 @@
         "m4": 0
       },
       {
-        "effect": "Push",
+        "effect": 9,
         "name": "",
         "all": false,
         "caster": false,
@@ -1715,7 +1715,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1726,7 +1726,7 @@
         "m4": 0
       },
       {
-        "effect": "Push",
+        "effect": 9,
         "name": "",
         "all": false,
         "caster": false,
@@ -1765,7 +1765,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -1804,7 +1804,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": false,
@@ -1815,7 +1815,7 @@
         "m4": 0
       },
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": false,
@@ -1854,7 +1854,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -1893,7 +1893,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -1932,7 +1932,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": false,
@@ -1971,7 +1971,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -2010,7 +2010,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -2049,7 +2049,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -2060,7 +2060,7 @@
         "m4": 3
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -2099,7 +2099,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -2138,7 +2138,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -2177,7 +2177,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -2216,7 +2216,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -2255,7 +2255,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": true,
         "caster": false,
@@ -2294,7 +2294,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -2333,7 +2333,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -2344,7 +2344,7 @@
         "m4": 4
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -2383,7 +2383,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -2422,7 +2422,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -2461,7 +2461,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -2500,7 +2500,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -2539,7 +2539,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -2578,7 +2578,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -2617,7 +2617,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -2656,7 +2656,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -2695,7 +2695,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": false,
         "caster": false,
@@ -2734,7 +2734,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -2773,7 +2773,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -2812,7 +2812,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": true,
         "caster": false,
@@ -2851,7 +2851,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Announce",
+        "effect": 10,
         "name": "",
         "all": false,
         "caster": false,
@@ -2890,7 +2890,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Announce",
+        "effect": 10,
         "name": "",
         "all": false,
         "caster": false,
@@ -2929,7 +2929,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Announce",
+        "effect": 10,
         "name": "",
         "all": false,
         "caster": false,
@@ -2968,7 +2968,18 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 1919247977,
+        "name": "a trol heading west.",
+        "all": false,
+        "caster": false,
+        "prompt": false,
+        "m1": 543908654,
+        "m2": 1802464627,
+        "m3": 11877,
+        "m4": 0
+      },
+      {
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -3007,7 +3018,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": true,
         "caster": false,
@@ -3046,7 +3057,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Sleep",
+        "effect": 8,
         "name": "",
         "all": true,
         "caster": false,
@@ -3085,7 +3096,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -3124,7 +3135,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -3163,7 +3174,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -3202,7 +3213,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -3241,7 +3252,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Invisibility",
+        "effect": 4,
         "name": "?",
         "all": false,
         "caster": true,
@@ -3280,7 +3291,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -3319,7 +3330,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -3358,7 +3369,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -3397,7 +3408,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
@@ -3436,7 +3447,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Push",
+        "effect": 9,
         "name": "",
         "all": false,
         "caster": false,
@@ -3447,7 +3458,7 @@
         "m4": 0
       },
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -3486,7 +3497,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Heal",
+        "effect": 6,
         "name": "",
         "all": false,
         "caster": false,
@@ -3525,7 +3536,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Distance hurt",
+        "effect": 12,
         "name": "",
         "all": false,
         "caster": false,
@@ -3564,7 +3575,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": false,
         "caster": false,
@@ -3603,7 +3614,7 @@
     "room": 0,
     "effects": [
       {
-        "effect": "Hurt",
+        "effect": 7,
         "name": "",
         "all": true,
         "caster": false,
