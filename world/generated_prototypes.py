@@ -1955,6 +1955,7 @@ BOOK_OF_SHADOWS = {
   'get_success_msg': "You feel a surge of power from the dark tome.",
   'line_desc': "Darkness emanates from a book lying on the ground.",
   'num_exist': 1,
+  'equipment_slot': EquipmentSlot.BACKPACK,
   'spell_keys': ['Flame Spray', 'Silver Dagger', 'Poison Thorn', 'Grave Rot', 'Dark Arrows', 'Solar Flare', 'Willow Blast', 'Phantom Sword', 'Hands of Fire', 'Green Dart', 'Storm', 'Finger of Death', 'Iron collar', 'Doomspeak', 'Spectral Hounds', 'Blight', 'Ring of Fire'],
 }
 
@@ -1965,6 +1966,7 @@ DEMONS_TOME = {
   'desc': "The tome is large, and rather heavy. It is bound with a dry, thick leather that appears to have been made from the hide of some huge retile. The pages are of some type of animal skin. The writing contained within is casually indecipherable, but clearly magical.",
   'line_desc': "There is a volume bound in reptilean leather here.",
   'weight': -9,
+  'equipment_slot': EquipmentSlot.BACKPACK,
   'spell_keys': ['Cold Ball', 'Acid Ball', 'Shatter Person', 'Group Destruction'],
 }
 
@@ -1976,6 +1978,7 @@ FLICKERING_FLAME = {
   'line_desc': "There is a flickering flame dancing before your eyes..",
   'num_exist': 1,
   'sticky': True,
+  'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
   'spell_keys': ['Fire Leaping'],
 }
 
@@ -1985,6 +1988,7 @@ GRAND_GRIMOIRE = {
   'desc': "The grimiore is an exceedingly large tome, bound in leather and reptile skin. Its pages show great age, but are in good shape. The magical writings contained within are illegible to all save Wizards.",
   'get_fail_msg': "The grimiore is far too bulky and heavy for you to go lugging it around whilst hacking monsters!",
   'num_exist': 2,
+  'equipment_slot': EquipmentSlot.BACKPACK,
   'spell_keys': ['Cure Poison', 'Unholy Blast', 'Dragon fire', 'Invisibility', 'Sleep', 'Gripping Plants', 'Remove Poison', 'earthquake', 'Illusion I', 'chestnut hail', 'grave rot', 'Brain Hammer', 'ray of death', 'heal', 'charm', 'killing winds', 'whisper', 'lightning bolts', 'identify', 'death word'],
 }
 
@@ -1992,6 +1996,7 @@ MABINOGIAN = {
   'key': "Mabinogian",
   'prototype_parent': 'base_spellbook',
   'num_exist': 1,
+  'equipment_slot': EquipmentSlot.BACKPACK,
   'spell_keys': ['Thundering Voice', 'Ent Strength', 'Pinecones of Death', 'Tree Attack', 'Morning Frost', 'Earth Hammer', 'Insect Cloud', 'Locust Plague', 'Bear Claws', 'Pack of Wolves', 'Forest Fire', 'Tornado', 'Soul Harvester', 'Elk Speed'],
 }
 
@@ -2003,6 +2008,7 @@ PALE_BOOK = {
   'line_desc': "There is a book bound in pale leather here.",
   'sticky': True,
   'use_object_required': 132,
+  'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
   'spell_keys': ['Water Flowing'],
 }
 
@@ -2015,6 +2021,7 @@ SANDSTONE = {
   'num_exist': 1,
   'sticky': True,
   'use_object_required': 132,
+  'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
   'spell_keys': ['Quaking Earth'],
 }
 
@@ -2024,6 +2031,7 @@ SCROLL = {
   'desc': "You see a pale scroll covered in faded writing hanging upon the far wall. The words fade out of meaning the more you concentrate but they seem to be of a magical nature.",
   'line_desc': "A scroll hangs before you.",
   'sticky': True,
+  'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
   'spell_keys': ['Wind Blowing'],
 }
 

@@ -241,6 +241,9 @@ BASE_SPELLBOOK = {
 """)
   for obj in objs:
     output_common_fields(obj, 'base_spellbook', descs, lines)
+    slot_num = obj['wear']
+    slot = EquipmentSlot(slot_num)
+    print(f"  'equipment_slot': EquipmentSlot.{slot.name},")
     spell_keys = []
     for parm in obj['parms']:
       spell = find_obj(spells, parm)
