@@ -364,7 +364,8 @@ class Character(DefaultCharacter):
     return None
 
   def equip(self, obj):
-    if not obj.is_typeclass("typeclasses.objects.Equipment"):
+    self.msg("foo")
+    if not obj.is_typeclass("typeclasses.objects.Equipment", exact=False):
       return
     slot = obj.db.equipment_slot
     if (slot == EquipmentSlot.SWORD_HAND 
@@ -377,7 +378,7 @@ class Character(DefaultCharacter):
     self.msg(f"You equip the {obj.key} to {slot.name.upper()}.")
 
   def unequip(self, obj):
-    if not obj.is_typeclass("typeclasses.objects.Equipment"):
+    if not obj.is_typeclass("typeclasses.objects.Equipment", exact=False):
       return
     slot = obj.db.equipment_slot      
     if slot in self.db.equipment:

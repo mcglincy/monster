@@ -351,11 +351,10 @@ class MissileLauncher(Object):
     self.db.object_kind = ObjectKind.MISSILE_LAUNCHER
 
 
-class Spellbook(Object):
+class Spellbook(Equipment):
   def at_object_creation(self):
     super().at_object_creation()
     self.db.object_kind = ObjectKind.SPELLBOOK
-    self.db.equipment_slot = EquipmentSlot.NOT_EQUIPPABLE        
     self.db.spell_keys = []
 
 
