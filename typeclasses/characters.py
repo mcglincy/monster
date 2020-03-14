@@ -282,7 +282,8 @@ class Character(DefaultCharacter):
   def base_armor(self):
     # TODO: ivars are named differently :P
     class_armor = self.character_class.armor
-    item_armor = sum(o.db.base_armor for o in self.db.equipment.values())
+    equipped = filter(None, self.db.equipment.values())
+    item_armor = sum(o.db.base_armor for o in equipped)
     return class_armor + item_armor
 
   @property
