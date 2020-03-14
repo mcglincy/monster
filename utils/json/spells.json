@@ -707,7 +707,7 @@
     "id": 17
   },
   {
-    "name": "grave rot",
+    "name": "grave rot 2",
     "mana": 23,
     "level_mana": 1,
     "caster_desc": 1225,
@@ -1318,7 +1318,7 @@
     "id": 29
   },
   {
-    "name": "death word",
+    "name": "death word 2",
     "mana": 0,
     "level_mana": 0,
     "caster_desc": 32000,

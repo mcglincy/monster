@@ -1,10 +1,16 @@
 import json
-from userdefined.models import CharacterClass
+from userdefined.models import CharacterClass, Spell, SpellEffect
 
 CLASSREC_FILE = "utils/json/classrec.json"
 DESC_FILE = 'utils/json/desc.json'
 LINES_FILE = 'utils/json/lines.json'
-SPELLS_FILE = "utils/json/spellsjson"
+SPELLS_FILE = "utils/json/spells.json"
+
+# TODO: refactor
+
+
+def escaped(s):
+  return s.replace('"', '\\"')
 
 
 def lookup_description(id, descs, lines):
@@ -76,7 +82,7 @@ def create_spells():
       db_alignment = rec["alignment"],
       db_failure_desc = lookup_description(rec["failure_desc"], descs, lines),
       db_min_level = rec["min_level"],
-      db_class_id = rec["clas"],
+      db_class_id = rec["class"],
       db_group = rec["group"],
       db_room = rec["room"],
       db_failure_chance = rec["chance_of_failure"],
@@ -92,16 +98,16 @@ def create_spells():
       # TODO: extra1, extra2, extra3 ???
     )
     new_spell.save()
-    for eff in rec["effects"]:
-      new_effect = SpellEffect(
-        db_effect_kind = SpellEffect(eff["effect"]),
-        db_affects_room =  eff["all"],
-        db_affects_caster = eff["caster"],
-        db_target_prompt = eff["prompt"],
-        db_param_1 = eff["m1"],
-        db_param_2 = eff["m2"],
-        db_param_3 = eff["m3"],
-        db_param_4 = eff["m4"],
-      )
-      new_effect.spell = new_spell
-      new_effect.save()
+    # for eff in rec["effects"]:
+    #   new_effect = SpellEffect(
+    #     db_effect_kind = SpellEffect(eff["effect"]),
+    #     db_affects_room =  eff["all"],
+    #     db_affects_caster = eff["caster"],
+    #     db_target_prompt = eff["prompt"],
+    #     db_param_1 = eff["m1"],
+    #     db_param_2 = eff["m2"],
+    #     db_param_3 = eff["m3"],
+    #     db_param_4 = eff["m4"],
+    #   )
+    #   new_effect.spell = new_spell
+    #   new_effect.save()

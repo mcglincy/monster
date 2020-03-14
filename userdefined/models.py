@@ -51,7 +51,7 @@ class Spell(SharedMemoryModel):
   db_level_mana = models.PositiveSmallIntegerField(default=0, blank=0)
   db_caster_desc = models.CharField(blank=False, null=True, max_length=256)
   db_victim_desc = models.CharField(blank=False, null=True, max_length=256)
-  db_alignment = models.PositiveSmallIntegerField(default=0, blank=0)
+  db_room_desc = models.CharField(blank=False, null=True, max_length=256)
   db_failure_desc = models.CharField(blank=False, null=True, max_length=256)
   db_min_level = models.PositiveSmallIntegerField(default=0, blank=0)
   db_class_id = models.PositiveSmallIntegerField(default=0, blank=0)
@@ -65,18 +65,11 @@ class Spell(SharedMemoryModel):
   db_silent = models.BooleanField(default=False)
   db_reveals = models.BooleanField(default=False)
   db_memorize = models.BooleanField(default=False)
+  db_command = models.CharField(blank=False, null=True, max_length=32)
+  db_command_priv = models.BooleanField(default=False)
 
   # Room    :INTEGER;       (* Where do I have to be to cast it *)
-  # Command :String;  (* Command to execute *)
-  # CommandPriv :BYTE_BOOL; (* Execute it with Privs? *)
- #   Extra1, Extra2, Extra3 : INTEGER;
-
-  # room: 0,
-  # command: ""
-  # command_priv: false,
-  # extra1: 0,
-  # extra2: 0,
-  # extra3: 0,
+  # Extra1, Extra2, Extra3 : INTEGER;
 
 
 class SpellEffect(SharedMemoryModel):
