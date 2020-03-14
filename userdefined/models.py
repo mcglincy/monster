@@ -74,7 +74,7 @@ class Spell(SharedMemoryModel):
 
 class SpellEffect(SharedMemoryModel):
   spell = models.ForeignKey(Spell, on_delete=models.CASCADE)  
-  db_effect_kind = models.CharField(max_length=16, choices = [(k, k.value) for k in SpellEffectKind])
+  db_effect_kind = models.SmallIntegerField(default=0, blank=0, choices = [(k.value, k.name) for k in SpellEffectKind])
   db_affects_room = models.BooleanField(default=False)
   db_affects_caster = models.BooleanField(default=False)
   db_target_prompt = models.BooleanField(default=False)

@@ -1,5 +1,7 @@
 import json
+from gamerules.spell_effect_kind import SpellEffectKind
 from userdefined.models import CharacterClass, Spell, SpellEffect
+
 
 CLASSREC_FILE = "utils/json/classrec.json"
 DESC_FILE = 'utils/json/desc.json'
@@ -72,6 +74,7 @@ def create_spells():
     spells = json.load(f)
 
   for rec in spells:
+    print(f"doing spell {rec['name']}")
     new_spell = Spell(
       db_record_id = rec["id"],
       db_key = rec["name"],
@@ -79,7 +82,7 @@ def create_spells():
       db_level_mana = rec["level_mana"],
       db_caster_desc = lookup_description(rec["caster_desc"], descs, lines),
       db_victim_desc = lookup_description(rec["victim_desc"], descs, lines),
-      db_alignment = rec["alignment"],
+      db_room_desc = lookup_description(rec["alignment"], descs, lines),
       db_failure_desc = lookup_description(rec["failure_desc"], descs, lines),
       db_min_level = rec["min_level"],
       db_class_id = rec["class"],
@@ -87,7 +90,6 @@ def create_spells():
       db_room = rec["room"],
       db_failure_chance = rec["chance_of_failure"],
       db_casting_time = rec["casting_time"],
-      # object key/name
       db_object_required = rec["obj_required"],
       db_object_consumed = rec["obj_consumed"],
       db_silent = rec["silent"],
@@ -98,16 +100,22 @@ def create_spells():
       # TODO: extra1, extra2, extra3 ???
     )
     new_spell.save()
-    # for eff in rec["effects"]:
-    #   new_effect = SpellEffect(
-    #     db_effect_kind = SpellEffect(eff["effect"]),
-    #     db_affects_room =  eff["all"],
-    #     db_affects_caster = eff["caster"],
-    #     db_target_prompt = eff["prompt"],
-    #     db_param_1 = eff["m1"],
-    #     db_param_2 = eff["m2"],
-    #     db_param_3 = eff["m3"],
-    #     db_param_4 = eff["m4"],
-    #   )
-    #   new_effect.spell = new_spell
-    #   new_effect.save()
+
+    effect_kind_ids = set(k.value for k in SpellEffectKind)
+    for eff in rec["effects"]:
+      effect_kind_id = eff["effect"]
+      if not effect_kind_id in effect_kind_ids:
+        # goofball out of range data, so skip
+        continue
+      new_effect = SpellEffect(
+        db_effect_kind = SpellEffectKind(effect_kind_id).value,
+        db_affects_room =  eff["all"],
+        db_affects_caster = eff["caster"],
+        db_target_prompt = eff["prompt"],
+        db_param_1 = eff["m1"],
+        db_param_2 = eff["m2"],
+        db_param_3 = eff["m3"],
+        db_param_4 = eff["m4"],
+      )
+      new_effect.spell = new_spell
+      new_effect.save()
