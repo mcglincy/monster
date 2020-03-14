@@ -1,6 +1,7 @@
 import json
 from gamerules.spell_effect_kind import SpellEffectKind
 from userdefined.models import CharacterClass, Spell, SpellEffect
+from utils.generator_utils import escaped, lookup_description
 
 
 CLASSREC_FILE = "utils/json/classrec.json"
@@ -8,28 +9,10 @@ DESC_FILE = 'utils/json/desc.json'
 LINES_FILE = 'utils/json/lines.json'
 SPELLS_FILE = "utils/json/spells.json"
 
-# TODO: refactor
 
-
-def escaped(s):
-  return s.replace('"', '\\"')
-
-
-def lookup_description(id, descs, lines):
-  if not id:
-    return None
-  elif id > 0:
-    # use descs
-    desc_idx = id - 1
-    # TODO: special handling for default description id 32000
-    if desc_idx < len(descs):
-      return escaped(' '.join(descs[desc_idx]['lines']))
-  elif id < 0:
-    # use lines
-    line_idx = -id -1
-    if line_idx < len(lines):
-      return escaped(lines[line_idx]['line'])
-  return None
+def create_everything():
+  create_character_classes()
+  create_spells()
 
 
 def create_character_classes():
