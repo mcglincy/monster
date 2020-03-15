@@ -90,6 +90,10 @@ def create_spells():
       if not effect_kind_id in effect_kind_ids:
         # goofball out of range data, so skip
         continue
+      if not eff["m1"] and not eff["m2"] and not eff["m3"] and not eff["m4"]:
+        # no-effect spell, so skip
+        continue
+
       new_effect = SpellEffect(
         db_effect_kind = SpellEffectKind(effect_kind_id).value,
         db_affects_room =  eff["all"],

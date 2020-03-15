@@ -358,9 +358,15 @@ class Spellbook(Equipment):
     self.db.object_kind = ObjectKind.SPELLBOOK
     self.db.spell_keys = []
 
+  @property
   def spells(self):
     return Spell.objects.filter(db_key__in=self.db.spell_keys)
 
+  def find_spell(self, name):
+    for spell in self.spells:
+      if spell.key.lower().startswith(name.lower()):
+        return spell
+    return None
 
 class BankingMachine(Object):
   def at_object_creation(self):

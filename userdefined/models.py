@@ -71,6 +71,17 @@ class Spell(SharedMemoryModel):
   # Room    :INTEGER;       (* Where do I have to be to cast it *)
   # Extra1, Extra2, Extra3 : INTEGER;
 
+  @property
+  def effects(self):
+    return self.spelleffect_set.all()
+
+  @property
+  def should_prompt(self):
+    for effect in self.effects:
+      if effect.target_prompt:
+        return True
+    return False
+
 
 class SpellEffect(SharedMemoryModel):
   spell = models.ForeignKey(Spell, on_delete=models.CASCADE)  
