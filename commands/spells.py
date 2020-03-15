@@ -1,7 +1,22 @@
 from commands.command import Command
+from evennia.utils.evmenu import get_input
 from gamerules.hiding import find_unhidden
 from gamerules.spell_effect_kind import SpellEffectKind
 from gamerules.spells import can_cast_spell, cast_spell
+
+
+def _target_callback(caller, prompt, target_name):
+  target = find_unhidden(caller, target_name)
+  if not target:
+    return
+
+  # TODO: make sure we want this not-me check... e.g., for healing spells?
+  if target == caller:
+    caller.msg("You can't target yourself!")
+    return
+
+  if caller.ndb.active_spell:
+    cast_spell(caller, caller.ndb.active_spell, target)
 
 
 class CmdCast(Command):
@@ -16,38 +31,18 @@ class CmdCast(Command):
       self.caller.msg("No spellbook equipped!")
       return
 
-    # TODO: figure out prompting etc
-    words = self.args.strip().split(" ")
-    spell_name = words[0]
+    spell_name = self.args.strip()
     spell = spellbook.find_spell(spell_name)
     if not spell:
       self.caller.msg(f"No spell found for {spell_name}!")
       return
 
-    # TODO: need to figure out how to mix prompts and error-check-returns
-    # maybe prompt for target
-    # target = None
-    # if spell.should_prompt:
-    #   target_name = yield("At who?")
-    #   self.msg("you said " + target_name)
-    #   target = find_unhidden(self.caller, target_name)
-    #   if not target:
-    #    yield -1
-    target = None
     if spell.should_prompt:
-      if len(words) < 2:
-        self.caller.msg(f"This spell needs a target! Usage: cast <spell> <target>")
-        return
-      target_name = words[1]
-      target = find_unhidden(self.caller, target_name)
-      if not target:
-        return
-      # TODO: make sure we want this not-me check... e.g., for healing spells?
-      if target == self.caller:
-        self.caller.msg("You can't target yourself!")
-        return  
-
-    cast_spell(self.caller, spell, target)
+      # stash the spell on the caster, for use from the callback
+      self.caller.ndb.active_spell = spell
+      get_input(self.caller, "At who?", _target_callback)
+    else:
+      cast_spell(self.caller, spell, target=None)
 
 
 class CmdLearn(Command):
