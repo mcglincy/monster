@@ -64,8 +64,13 @@ def cast_spell(caster, spell, target=None):
     f"{caster.key} casts {spell.key}.", exclude=[caster])
   if spell.caster_desc:
     caster.msg(spell.caster_desc)
+
   if spell.victim_desc:
-    target.msg(spell.victim_desc)
+    victim_desc = spell.victim_desc.replace("#", caster.key)
+    if spell.affects_room:
+      caster.location.msg_contents(victim_desc, exclude=[caster])
+    elif target:
+      target.msg(victim_desc)
   # TODO: our room descriptions / alignment field??? seem off. DEBUG and look at old pascal code.
   #if spell.room_desc:
   #  caster.location.msg_contents(spell.room_desc, exclude=[caster, target])

@@ -82,6 +82,13 @@ class Spell(SharedMemoryModel):
         return True
     return False
 
+  @property
+  def affects_room(self):
+    for effect in self.effects:
+      if effect.affects_room:
+        return True
+    return False
+
 
 class SpellEffect(SharedMemoryModel):
   spell = models.ForeignKey(Spell, on_delete=models.CASCADE)  
