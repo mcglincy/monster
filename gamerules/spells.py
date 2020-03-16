@@ -78,10 +78,10 @@ def cast_spell(caster, spell, target=None):
 
   # apply spell effects
   for effect in spell.effects:
-    apply_spell_effect(effect, caster, target)
+    apply_spell_effect(spell, effect, caster, target)
 
 
-def apply_spell_effect(effect, caster, target=None):
+def apply_spell_effect(spell, effect, caster, target=None):
   if effect.effect_kind == SpellEffectKind.CURE_POISON:
     apply_cure_poison_effect(effect, caster, target)
   elif effect.effect_kind == SpellEffectKind.STRENGTH:
@@ -95,7 +95,7 @@ def apply_spell_effect(effect, caster, target=None):
   elif effect.effect_kind == SpellEffectKind.HEAL:
     apply_heal_effect(effect, caster, target)
   elif effect.effect_kind == SpellEffectKind.HURT:
-    apply_hurt_effect(effect, caster, target)
+    apply_hurt_effect(spell, effect, caster, target)
   elif effect.effect_kind == SpellEffectKind.SLEEP:
     apply_sleep_effect(effect, caster, target)
   elif effect.effect_kind == SpellEffectKind.PUSH:
@@ -142,7 +142,7 @@ def apply_heal_effect(effect, caster, target):
   pass
 
 
-def apply_hurt_effect(effect, caster, target):
+def apply_hurt_effect(spell, effect, caster, target):
   # calculate damage
   base = effect.param_1
   level_base = effect.param_2
@@ -151,6 +151,10 @@ def apply_hurt_effect(effect, caster, target):
   base_dmg = base + level_base * caster.level
   random_dmg = rand + level_rand * caster.level
   damage = base_dmg + random.randint(0, random_dmg)
+  caster.msg(f"Your {spell.key} spell does {damage} damage.")
+
+  # TODO: apply target armor
+
   # dish it out
   if effect.affects_room:
     # everyone in room
