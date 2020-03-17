@@ -58,6 +58,16 @@ def create_spells():
 
   for rec in spells:
     print(f"doing spell {rec['name']}")
+
+    maybe_alignment = rec["alignment"]
+    if maybe_alignment >= 0 and maybe_alignment <= 99:
+      # valid alignment range
+      alignment = maybe_alignment
+      room_desc = None
+    else:
+      # TODO: it's possible the room_desc is old record garbage
+      alignment = 66  # neutral
+      room_desc = lookup_description(maybe_alignment, descs, lines)
     new_spell = Spell(
       db_record_id = rec["id"],
       db_key = rec["name"],
@@ -65,9 +75,10 @@ def create_spells():
       db_level_mana = rec["level_mana"],
       db_caster_desc = lookup_description(rec["caster_desc"], descs, lines),
       db_victim_desc = lookup_description(rec["victim_desc"], descs, lines),
-      db_room_desc = lookup_description(rec["alignment"], descs, lines),
+      db_room_desc = room_desc,
       db_failure_desc = lookup_description(rec["failure_desc"], descs, lines),
       db_min_level = rec["min_level"],
+      db_alignment = alignment,
       db_class_id = rec["class"],
       db_group = rec["group"],
       db_room = rec["room"],

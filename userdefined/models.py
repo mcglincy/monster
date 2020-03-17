@@ -52,6 +52,7 @@ class Spell(SharedMemoryModel):
   db_caster_desc = models.CharField(blank=False, null=True, max_length=256)
   db_victim_desc = models.CharField(blank=False, null=True, max_length=256)
   db_room_desc = models.CharField(blank=False, null=True, max_length=256)
+  db_alignment = models.PositiveSmallIntegerField(default=66, blank=66)
   db_failure_desc = models.CharField(blank=False, null=True, max_length=256)
   db_min_level = models.PositiveSmallIntegerField(default=0, blank=0)
   db_class_id = models.PositiveSmallIntegerField(default=0, blank=0)
