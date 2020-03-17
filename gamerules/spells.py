@@ -76,12 +76,21 @@ def cast_spell(caster, spell, target=None):
   #  caster.location.msg_contents(spell.room_desc, exclude=[caster, target])
   # TODO: do we need to consider effect vs. room for msgs?
 
+
   # apply spell effects
   for effect in spell.effects:
     apply_spell_effect(spell, effect, caster, target)
 
 
 def apply_spell_effect(spell, effect, caster, target=None):
+  # check spell deflection before applying the actual effect
+  if target.spell_deflect_armor:
+    if random.randint(0, 100) < target.spell_deflect_armor:
+      target.msg("The spell has been deflected by your armor!")
+      target.location.msg_contents(
+        f"The spell was deflected by {target.key}'s armor.", exclude=[target])
+      return
+
   if effect.effect_kind == SpellEffectKind.CURE_POISON:
     apply_cure_poison_effect(effect, caster, target)
   elif effect.effect_kind == SpellEffectKind.STRENGTH:
@@ -142,6 +151,17 @@ def apply_heal_effect(effect, caster, target):
   pass
 
 
+def spell_armor_adverb(amount):
+  if amount <= 33:
+    return "slightly"
+  elif amount <=66:
+    return "significantly"
+  elif amount <= 99:
+    return "greatly"
+  else:
+    return "totally"
+
+
 def apply_hurt_effect(spell, effect, caster, target):
   # calculate damage
   base = effect.param_1
@@ -151,9 +171,19 @@ def apply_hurt_effect(spell, effect, caster, target):
   base_dmg = base + level_base * caster.level
   random_dmg = rand + level_rand * caster.level
   damage = base_dmg + random.randint(0, random_dmg)
-  caster.msg(f"Your {spell.key} spell does {damage} damage.")
 
-  # TODO: apply target armor
+  # apply spell armor, if any
+  spell_armor = target.spell_armor
+  if spell_armor:
+    damage = int(damage * (100 - spell_armor) / 100)
+    adverb = spell_armor_adverb(spell_armor)
+    caster.msg(f"You spell is {adverb} diffused by {target.key}'s armor.")
+    target.msg(f"{caster.key}'s spell is {adverb} diffused by your armor.")
+    target.location.msg_contents(
+      f"{caster.key}'s spell is {adverb} diffused by {target.key}'s armor.",
+      exclude=[caster, target])
+
+  caster.msg(f"Your {spell.key} spell does {damage} damage.")
 
   # dish it out
   if effect.affects_room:
