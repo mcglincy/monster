@@ -128,15 +128,20 @@ def apply_spell_effect(spell, effect, caster, target=None):
 
 
 def apply_cure_poison_effect(effect, caster, target):
-  pass
+  cure_or_poison = effect.param_1
+  # TODO
 
 
 def apply_strength_effect(effect, caster, target):
-  pass
+  strength_modifier = effect.param_1
+  level_strength_modifier = effect.param_2
+  # TODO
 
 
 def apply_speed_effect(effect, caster, target):
-  pass
+  speed_modifier = effect.param_1
+  level_speed_modifier = effect.param_2
+  # TODO
 
 
 def apply_invisible_effect(effect, caster, target):
@@ -148,7 +153,14 @@ def apply_see_invisible_effect(effect, caster, target):
 
 
 def apply_heal_effect(effect, caster, target):
-  pass
+  base = effect.param_1
+  level_base = effect.param_2
+  rand = effect.param_3
+  level_rand = effect.param_4
+  base_heal = base + level_base * caster.level
+  random_heal = rand + level_rand * caster.level
+  damage = base_heal + random.randint(0, random_heal)
+  # TODO
 
 
 def spell_armor_adverb(amount):
@@ -200,11 +212,19 @@ def apply_hurt_effect(spell, effect, caster, target):
 
 
 def apply_sleep_effect(effect, caster, target):
-  pass
+  base = effect.param_1
+  level_base = effect.param_2
+  rand = effect.param_3
+  level_rand = effect.param_4
+  base_sleep_time = base + level_base * caster.level
+  random_sleep_time = rand + level_rand * caster.level
+  sleep_time = base_sleep_time + random.randint(0, random_sleep_time)
+  # TODO
 
 
 def apply_push_effect(effect, caster, target):
-  pass
+  push_direction = effect.param_1
+  # TODO
 
 
 def apply_announce_effect(effect, caster, target):
@@ -216,7 +236,8 @@ def apply_command_effect(effect, caster, target):
 
 
 def apply_distance_hurt_effect(effect, caster, target):
-  pass
+  distance_behavior = effect.param_4
+  # TODO
 
 
 def apply_detect_magic_effect(effect, caster, target):
@@ -232,10 +253,14 @@ def apply_locate_effect(effect, caster, target):
 
 
 def apply_weak_effect(effect, caster, target):
-  pass
+  strength_modifier = effect.param_1
+  level_strength_modifier = effect.param_2
+  # TODO
 
 
 def apply_slow_effect(effect, caster, target):
-  pass
+  speed_modifier = effect.param_1
+  level_speed_modifier = effect.param_2
+  # TODO
 
 
