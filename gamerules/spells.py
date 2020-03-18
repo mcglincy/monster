@@ -42,6 +42,9 @@ def cast_spell(caster, spell, target=None):
     caster.msg("You do not have enough mana.")
     return
 
+  # deduct mana
+  caster.gain_mana(-mana_cost)
+
   # possibly reveal caster
   if spell.reveals and caster.is_hiding:
       reveal(caster)
@@ -53,9 +56,6 @@ def cast_spell(caster, spell, target=None):
     else:
       caster.msg("Your spell failed!")
     return
-
-  # deduct mana
-  caster.gain_mana(-mana_cost)
 
   # send messages
   # TODO: handle spell.silent checks for messaging
