@@ -84,7 +84,8 @@ def cast_spell(caster, spell, target=None):
 
 def apply_spell_effect(spell, effect, caster, target=None):
   # check spell deflection before applying the actual effect
-  if target.spell_deflect_armor:
+  # TODO: should this affect all effects? e.g., heal?
+  if target and target != caster and target.spell_deflect_armor:
     if random.randint(0, 100) < target.spell_deflect_armor:
       target.msg("The spell has been deflected by your armor!")
       target.location.msg_contents(
@@ -159,8 +160,8 @@ def apply_heal_effect(effect, caster, target):
   level_rand = effect.param_4
   base_heal = base + level_base * caster.level
   random_heal = rand + level_rand * caster.level
-  damage = base_heal + random.randint(0, random_heal)
-  # TODO
+  heal = base_heal + random.randint(0, random_heal)
+  target.gain_health(heal, damager=None)
 
 
 def spell_armor_adverb(amount):

@@ -56,7 +56,7 @@ The running game server is up at http://www.monstermud.com.
   * *learn* command (list spells only)
   * *cast* command
     * At Who? target prompt
-  * Spell effects: hurt, group hurt
+  * Spell effects: hurt, group hurt, heal
   * Spell deflect and armor
 
 
@@ -99,5 +99,5 @@ The running game server is up at http://www.monstermud.com.
   * Highlighting for pub messages
 * Spells
   * Spell effects
-    * Heal, sleep, cure/poison, push, distance hurt, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
+    * Sleep, cure/poison, push, distance hurt, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
   * Direction prompt
