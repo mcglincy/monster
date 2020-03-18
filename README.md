@@ -34,6 +34,7 @@ The running game server is up at http://www.monstermud.com.
   * Weapon base damage / random damage
   * Character health and max health
   * Death at 0 health => go to the Void
+  * Armor
   * XP for kills (based on level/xp comparison)
   * Weapon use percent
   * Claws
@@ -48,6 +49,15 @@ The running game server is up at http://www.monstermud.com.
 * Commerce
   * Simple merchant in-room object
   * *buy* and *sell* commands
+* Spells
+  * Spell and SpellEffect schema
+  * Character and class mana
+  * Spellbooks w/ spells
+  * *learn* command (list spells only)
+  * *cast* command
+    * At Who? target prompt
+  * Spell effects: hurt, group hurt
+  * Spell deflect and armor
 
 
 ## What's not implemented yet
@@ -88,10 +98,6 @@ The running game server is up at http://www.monstermud.com.
   * Remove any Evennia commands we don't want
   * Highlighting for pub messages
 * Spells
-  * Spell / ability system
-  * *learn* command
-  * thundering voice?
   * Spell effects
-    * Same room, single target Damage / Heal / Freeze
-    * Same room, multiple target Damage / Heal / Freeze
-    * Missile Damage / Heal / Freeze
+    * Heal, sleep, cure/poison, push, distance hurt, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
+  * Direction prompt
