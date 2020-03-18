@@ -11,9 +11,9 @@ def _target_callback(caller, prompt, target_name):
     return
 
   # TODO: make sure we want this not-me check... e.g., for healing spells?
-  if target == caller:
-    caller.msg("You can't target yourself!")
-    return
+  # if target == caller:
+  #   caller.msg("You can't target yourself!")
+  #   return
 
   if caller.ndb.active_spell:
     cast_spell(caller, caller.ndb.active_spell, target)
