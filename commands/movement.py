@@ -12,6 +12,7 @@ class CmdExit(QueuedCommand):
       return False
 
   def pre_freeze(self):
+    # TODO: exit fail should be only move_speed / 400
     return self.caller.move_speed / 100.0
 
   def inner_func(self):
