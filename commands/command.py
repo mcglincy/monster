@@ -211,12 +211,12 @@ class QueuedCommand(Command):
   def func(self):
     if self.caller.ndb.active_command:
       # another command is already running, so just enqueue ourself (FIFO)
-      self.caller.msg(f"enqueuing {self.raw_string}")
+      # self.caller.msg(f"enqueuing {self.raw_string}")
       self.caller.ndb.command_queue.appendleft(self)
       return
 
     # TODO: do we need locks?
-    self.caller.msg(f"{self.raw_string}: active")
+    # self.caller.msg(f"{self.raw_string}: active")
     self.caller.ndb.active_command = self
 
     # do any pre-pre-freeze checks
@@ -224,16 +224,16 @@ class QueuedCommand(Command):
     if check is None or check == True:
       if self.pre_freeze():
         # utils.delay(self.pre_freeze, other_func)
-        self.caller.msg(f"{self.raw_string}: pre_freeze {self.pre_freeze()}")
+        # self.caller.msg(f"{self.raw_string}: pre_freeze {self.pre_freeze()}")
         yield self.pre_freeze()
-      self.caller.msg(f"{self.raw_string}: inner_func")
+      # self.caller.msg(f"{self.raw_string}: inner_func")
       self.inner_func()
       if self.post_freeze():
         # utils.delay(self.post_freeze, other_func)
-        self.caller.msg(f"{self.raw_string}: post_freeze {self.post_freeze()}")
+        # self.caller.msg(f"{self.raw_string}: post_freeze {self.post_freeze()}")
         yield self.post_freeze()
 
-    self.caller.msg(f"{self.raw_string}: end")
+    # self.caller.msg(f"{self.raw_string}: end")
     self.caller.ndb.active_command = None
     if self.caller.ndb.command_queue:
       # commands are in queue, so do the next one (FIFO)
