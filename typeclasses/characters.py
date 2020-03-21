@@ -244,10 +244,13 @@ class Character(DefaultCharacter):
     return self.ndb.hiding
 
   @property
-  def move_delay(self):
-    move_speed = self.class_plus_equipped_attr("move_speed")
-    # TODO: consider equipment weight
-    return move_speed / 100.0
+  def attack_speed(self):
+    return self.class_plus_equipped_attr("attack_speed")
+
+  @property
+  def move_speed(self):
+    # TODO: consider equipment weight?
+    return self.class_plus_equipped_attr("move_speed")
 
   # our damage, armor, etc is the sum of our equipped objects
 

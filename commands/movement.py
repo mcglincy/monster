@@ -12,7 +12,7 @@ class CmdExit(QueuedCommand):
       return False
 
   def pre_freeze(self):
-    return self.caller.move_delay
+    return self.caller.move_speed / 100.0
 
   def inner_func(self):
     if self.obj.access(self.caller, "traverse"):
