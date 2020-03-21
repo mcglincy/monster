@@ -1,16 +1,16 @@
-from commands.command import Command
+from commands.command import QueuedCommand
 from evennia.utils import utils
 from gamerules.character_classes import is_valid_character_name
 
 
-class CmdName(Command):
+class CmdName(QueuedCommand):
   """Change your own character name."""
   key = "name"
   aliases = ["nam"]
   locks = "cmd:all()"
   help_category = "Monster"
 
-  def func(self):
+  def inner_func(self):
     if not self.args:
       self.caller.msg("Usage: name <newname>")
       return
@@ -22,14 +22,14 @@ class CmdName(Command):
     self.caller.msg(f"You are now known as {self.account.character.name}.")
 
 
-class CmdSheet(Command):
+class CmdSheet(QueuedCommand):
   """Show character sheet."""
   key = "sheet"
   aliases = ["she", "shee"]
   locks = "cmd:all()"
   help_category = "Monster"
 
-  def func(self):
+  def inner_func(self):
     account = self.account
     character = account.character
     table = self.styled_table(
@@ -56,5 +56,3 @@ class CmdSheet(Command):
     table.add_row(f"Armor        : {character.base_armor}%, {character.deflect_armor}% deflect")
     table.add_row(f"Spell armor  : {character.spell_armor}%, {character.spell_deflect_armor}% deflect")
     self.msg("%s" % table)
-
-

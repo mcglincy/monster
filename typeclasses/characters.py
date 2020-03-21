@@ -7,6 +7,7 @@ is setup to be the "default" character type created by the default
 creation commands.
 
 """
+from collections import deque
 from random import randint
 
 from evennia import DefaultCharacter, search_object
@@ -51,6 +52,8 @@ class Character(DefaultCharacter):
     # TODO: dragging in the CharacterClass model f's with evennia's
     # initial creation of god_character, so we can't refer to max_health(), 
     # max_mana(), etc in at_object_created() / set_field_defaults().
+    self.ndb.command_queue = deque()
+    self.ndb.active_command = None
     if self.db.character_class_key is None:
       self.db.character_class_key = "ghost"
       self.ndb.character_class = None
@@ -73,7 +76,9 @@ class Character(DefaultCharacter):
       self.ndb.hiding = 0
 
   def at_init(self):
+    self.ndb.active_command = None
     self.ndb.hiding = 0
+    self.ndb.command_queue = deque()
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -238,6 +243,12 @@ class Character(DefaultCharacter):
   def is_hiding(self):
     return self.ndb.hiding
 
+  @property
+  def move_delay(self):
+    move_speed = self.class_plus_equipped_attr("move_speed")
+    # TODO: consider equipment weight
+    return move_speed / 100.0
+
   # our damage, armor, etc is the sum of our equipped objects
 
   def base_plus_level_attr(self, base_attr_name, level_attr_name):
@@ -249,6 +260,9 @@ class Character(DefaultCharacter):
   def equipped_attr(self, attr_name):
     # TODO: there may be None values in the dict post-dequip
     equipped = filter(None, self.db.equipment.values())
+    # TODO: we need to consider equipment condition... condition/100 * val
+    # AttackSpeed := AttackSpeed + ROUND(AllStats.MyHold.Condition[OSlot] / 100 *
+    #            ( LookupEffect(Obj, EF_AttackSpeed)));
     return sum(getattr(e.db, attr_name) for e in equipped)
 
   def class_plus_equipped_attr(self, attr_name):

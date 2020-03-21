@@ -6,35 +6,38 @@ Commands describe the input the account can do to the game.
 """
 
 from evennia import Command as BaseCommand
+from evennia.commands import cmdhandler
+from evennia.utils import utils
 
 # from evennia import default_cmds
 
 
 class Command(BaseCommand):
-    """
-    Inherit from this if you want to create your own command styles
-    from scratch.  Note that Evennia's default commands inherits from
-    MuxCommand instead.
+  """
+  Inherit from this if you want to create your own command styles
+  from scratch.  Note that Evennia's default commands inherits from
+  MuxCommand instead.
 
-    Note that the class's `__doc__` string (this text) is
-    used by Evennia to create the automatic help entry for
-    the command, so make sure to document consistently here.
+  Note that the class's `__doc__` string (this text) is
+  used by Evennia to create the automatic help entry for
+  the command, so make sure to document consistently here.
 
-    Each Command implements the following methods, called
-    in this order (only func() is actually required):
-        - at_pre_cmd(): If this returns anything truthy, execution is aborted.
-        - parse(): Should perform any extra parsing needed on self.args
-            and store the result on self.
-        - func(): Performs the actual work.
-        - at_post_cmd(): Extra actions, often things done after
-            every command, like prompts.
+  Each Command implements the following methods, called
+  in this order (only func() is actually required):
+      - at_pre_cmd(): If this returns anything truthy, execution is aborted.
+      - parse(): Should perform any extra parsing needed on self.args
+          and store the result on self.
+      - func(): Performs the actual work.
+      - at_post_cmd(): Extra actions, often things done after
+          every command, like prompts.
 
-    """
-    def at_post_cmd(self):
-        self.caller.ndb.last_command = self
+  """
 
-    def not_implemented_yet(self):
-        self.caller.msg("Not implemented yet")
+  def at_post_cmd(self):
+    self.caller.ndb.last_command = self
+
+  def not_implemented_yet(self):
+    self.caller.msg("Not implemented yet")
 
 
 # -------------------------------------------------------------
@@ -189,3 +192,52 @@ class Command(BaseCommand):
 #                 self.character = self.caller.get_puppet(self.session)
 #             else:
 #                 self.character = None
+
+
+class QueuedCommand(Command):
+
+  def check_preconditions(self):
+    return True
+
+  def pre_freeze(self):
+    return 0.0
+
+  def inner_func(self):
+    pass
+
+  def post_freeze(self):
+    return 0.0
+
+  def func(self):
+    if self.caller.ndb.active_command:
+      # another command is already running, so just enqueue ourself (FIFO)
+      self.caller.msg(f"enqueuing {self.raw_string}")
+      self.caller.ndb.command_queue.appendleft(self)
+      return
+
+    # TODO: do we need locks?
+    self.caller.msg(f"{self.raw_string}: active")
+    self.caller.ndb.active_command = self
+
+    # do any pre-pre-freeze checks
+    check = self.check_preconditions()
+    if check is None or check == True:
+      if self.pre_freeze():
+        # utils.delay(self.pre_freeze, other_func)
+        self.caller.msg(f"{self.raw_string}: pre_freeze {self.pre_freeze()}")
+        yield self.pre_freeze()
+      self.caller.msg(f"{self.raw_string}: inner_func")
+      self.inner_func()
+      if self.post_freeze():
+        # utils.delay(self.post_freeze, other_func)
+        self.caller.msg(f"{self.raw_string}: post_freeze {self.post_freeze()}")
+        yield self.post_freeze()
+
+    self.caller.msg(f"{self.raw_string}: end")
+    self.caller.ndb.active_command = None
+    if self.caller.ndb.command_queue:
+      # commands are in queue, so do the next one (FIFO)
+      next_command = self.caller.ndb.command_queue.pop()
+      cmdhandler.cmdhandler(self.session, next_command.raw_string)
+
+

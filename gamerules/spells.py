@@ -3,6 +3,10 @@ from gamerules.hiding import find_unhidden, reveal
 from gamerules.spell_effect_kind import SpellEffectKind
 
 
+def mana_cost(caster, spell):
+  return spell.mana + spell.level_mana * caster.level
+
+
 def can_cast_spell(caster, spell):
   # TODO: convert to character_class.key?
   if spell.class_id and spell.class_id != caster.character_class.record_id:
@@ -17,32 +21,17 @@ def can_cast_spell(caster, spell):
     caster.msg(f"Your level is too low to cast {spell.key}.")
     return False
 
-  mana_cost = spell.mana + spell.level_mana * caster.level
-  if mana_cost > caster.db.mana:
+  if mana_cost(caster, spell) > caster.db.mana:
     caster.msg("You do not have enough mana.")
     return False
 
 
 def cast_spell(caster, spell, target=None):
-  # TODO: convert to character_class.key?
-  if spell.class_id and spell.class_id != caster.character_class.record_id:
-    caster.msg("You are the wrong class to cast that spell.")
-    return
-
-  if spell.group and spell.group != caster.character_class.group:
-    caster.msg("You are the wrong group to cast that spell.")
-    return
-
-  if spell.min_level > caster.level:
-    caster.msg(f"Your level is too low to cast {spell.key}.")
-    return
-
-  mana_cost = spell.mana + spell.level_mana * caster.level
-  if mana_cost > caster.db.mana:
-    caster.msg("You do not have enough mana.")
+  if not can_cast_spell(caster, spell):
     return
 
   # deduct mana
+  mana_cost = mana_cost(caster, spell)
   caster.gain_mana(-mana_cost)
 
   # possibly reveal caster

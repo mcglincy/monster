@@ -1,13 +1,13 @@
-from commands.command import Command
+from commands.command import QueuedCommand
 from gamerules.equipment_slot import EquipmentSlot
 
 
-class CmdEquip(Command):
+class CmdEquip(QueuedCommand):
   key = "equip"
   aliases = ["equ", "equi", "wie", "wiel", "wield", "wea", "wear"]  
   help_category = "Monster"
 
-  def func(self):
+  def inner_func(self):
     if not self.args:
       self.show_currently_equipped()
       return
@@ -27,12 +27,12 @@ class CmdEquip(Command):
     self.msg(f"{table}")
 
 
-class CmdUnequip(Command):
+class CmdUnequip(QueuedCommand):
   key = "unequip"
   aliases = ["une", "uneq", "unequ", "unequi"] 
   help_category = "Monster"
 
-  def func(self):
+  def inner_func(self):
     if not self.args:
       self.caller.msg("Usage: unequip <obj>")
       return

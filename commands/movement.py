@@ -1,17 +1,20 @@
-from commands.command import Command
+from commands.command import Command, QueuedCommand
 from gamerules.exit_kind import ExitKind
 
 # see also evennia commands.py ExitCommand
-class CmdExit(Command):
-  """Re-implement so it's a dot-repeatable command."""  
+class CmdExit(QueuedCommand):
+  """Re-implement CmdExit so it's a dot-repeatable command."""  
   obj = None
 
-  def func(self):
-    # TODO: maybe move to superclass check/ivar
+  def check_preconditions(self):
     if self.caller.is_hiding:
       self.caller.msg("You can't do that while you're hiding.")
-      return
+      return False
 
+  def pre_freeze(self):
+    return self.caller.move_delay
+
+  def inner_func(self):
     if self.obj.access(self.caller, "traverse"):
       # we may traverse the exit.
       self.obj.at_traverse(self.caller, self.obj.destination)

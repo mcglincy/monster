@@ -1,18 +1,18 @@
 import time
-from commands.command import Command
+from commands.command import QueuedCommand
 from evennia.commands import cmdhandler
 from evennia.server.sessionhandler import SESSIONS
 from evennia.utils import utils
 
 
-class CmdBrief(Command):
+class CmdBrief(QueuedCommand):
   """Toggle brief descriptions."""
   key = "brief"
   aliases = ["bri", "brie"]
   locks = "cmd:all()"
   help_category = "Monster"
 
-  def func(self):
+  def inner_func(self):
     if self.caller.db.brief_descriptions:
       self.caller.db.brief_descriptions = False
       self.caller.msg("Brief mode now off.")
@@ -21,13 +21,13 @@ class CmdBrief(Command):
       self.caller.msg("Brief mode now on.")
 
 
-class CmdDot(Command):
+class CmdDot(QueuedCommand):
   """Repeat the last command."""
   key = "."
   locks = "cmd:all()"
   help_category = "Monster"
 
-  def func(self):
+  def inner_func(self):
     last_command = self.caller.ndb.last_command
     if last_command:
       # self.caller.execute_cmd(last_command.raw_string)
@@ -58,7 +58,7 @@ v125qqml   Puzzeledfrog              1   Warrior  lothlorien shop
 masproj1   King Kickass              1     Troll  necromancer street.
 v108npa5   Mummy                     1     Troll  the maze
 """
-class CmdWho(Command):
+class CmdWho(QueuedCommand):
   """list who is currently online"""
 
   key = "who"
@@ -67,7 +67,7 @@ class CmdWho(Command):
   # this is used by the parent
   account_caller = True
 
-  def func(self):
+  def inner_func(self):
     """Get all connected accounts by polling session."""
     account = self.account
     session_list = SESSIONS.get_sessions()

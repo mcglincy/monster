@@ -1,18 +1,19 @@
-from commands.command import Command
+from commands.command import QueuedCommand
 from evennia.objects.models import ObjectDB
 
 
-class CmdBuy(Command):
+class CmdBuy(QueuedCommand):
   key = "buy"
   aliases = []
   locks = "cmd:all()"
   help_category = "Monster"
 
-  def func(self):
+  def check_preconditions(self):
     if not self.args:
       self.caller.msg("Usage: buy <item>")
-      return
+      return False
 
+  def inner_func(self):
     # is there a merchant in the room?
     merchants = self.caller.location.search("merchant",
       candidates=self.caller.location.contents, typeclass="typeclasses.objects.Merchant", quiet=True)
@@ -38,17 +39,18 @@ class CmdBuy(Command):
     ObjectDB.objects.copy_object(obj, new_key=obj.key, new_location=self.caller)
 
 
-class CmdSell(Command):
+class CmdSell(QueuedCommand):
   key = "sell"
   aliases = ["sel"]
   locks = "cmd:all()"
   help_category = "Monster"
 
-  def func(self):
+  def check_preconditions(self):
     if not self.args:
       self.caller.msg("Usage: sell <item>")
-      return
+      return False
 
+  def inner_func(self):
     obj = self.caller.search(self.args.strip(), candidates=self.caller.contents)
     if not obj:
       return
