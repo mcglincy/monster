@@ -25,14 +25,16 @@ def can_cast_spell(caster, spell):
     caster.msg("You do not have enough mana.")
     return False
 
+  return True
+
 
 def cast_spell(caster, spell, target=None):
   if not can_cast_spell(caster, spell):
     return
 
   # deduct mana
-  mana_cost = mana_cost(caster, spell)
-  caster.gain_mana(-mana_cost)
+  mana = mana_cost(caster, spell)
+  caster.gain_mana(-mana)
 
   # possibly reveal caster
   if spell.reveals and caster.is_hiding:
@@ -64,7 +66,6 @@ def cast_spell(caster, spell, target=None):
   #if spell.room_desc:
   #  caster.location.msg_contents(spell.room_desc, exclude=[caster, target])
   # TODO: do we need to consider effect vs. room for msgs?
-
 
   # apply spell effects
   for effect in spell.effects:
@@ -173,32 +174,36 @@ def apply_hurt_effect(spell, effect, caster, target):
   base_dmg = base + level_base * caster.level
   random_dmg = rand + level_rand * caster.level
   damage = base_dmg + random.randint(0, random_dmg)
-
-  # apply spell armor, if any
-  spell_armor = target.spell_armor
-  if spell_armor:
-    damage = int(damage * (100 - spell_armor) / 100)
-    adverb = spell_armor_adverb(spell_armor)
-    caster.msg(f"You spell is {adverb} diffused by {target.key}'s armor.")
-    target.msg(f"{caster.key}'s spell is {adverb} diffused by your armor.")
-    target.location.msg_contents(
-      f"{caster.key}'s spell is {adverb} diffused by {target.key}'s armor.",
-      exclude=[caster, target])
-
   caster.msg(f"Your {spell.key} spell does {damage} damage.")
 
   # dish it out
+  targets = []
   if effect.affects_room:
     # everyone in room
     for occupant in caster.location.contents:
       if occupant != caster and hasattr(occupant, "gain_health"):
-        occupant.gain_health(-damage, damager=caster)
+        targets.append(occupant)
   else:
     # just single target
     if target and hasattr(target, "gain_health"):
-      target.gain_health(-damage, damager=caster)
+      targets.append(target)
+
+  for target in targets:
+    # apply spell armor, if any
+    spell_armor = target.spell_armor
+    if spell_armor:
+      damage = int(damage * (100 - spell_armor) / 100)
+      adverb = spell_armor_adverb(spell_armor)
+      caster.msg(f"You spell is {adverb} diffused by {target.key}'s armor.")
+      target.msg(f"{caster.key}'s spell is {adverb} diffused by your armor.")
+      target.location.msg_contents(
+        f"{caster.key}'s spell is {adverb} diffused by {target.key}'s armor.",
+        exclude=[caster, target])
+    target.gain_health(-damage, damager=caster)
+
   if effect.affects_caster and hasattr(caster, "gain_health"):
-    target.gain_health(-damage, damager=None)
+    # TODO: handle caster as targets.append()?
+    caster.gain_health(-damage, damager=None)
 
 
 def apply_sleep_effect(effect, caster, target):

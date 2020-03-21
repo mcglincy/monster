@@ -31,22 +31,25 @@ class CmdCast(QueuedCommand):
       self.caller.msg("No spellbook equipped!")
       return False
     spell_name = self.args.strip()
-    spell = spellbook.find_spell(spell_name)
-    if not spell:
+    self.spell = spellbook.find_spell(spell_name)
+    if not self.spell:
       self.caller.msg(f"No spell found for {spell_name}!")
       return False
-    return can_cast_spell(self.caller, spell)
+    return can_cast_spell(self.caller, self.spell)
+
+  def pre_freeze(self):
+    return self.spell.casting_time / 200.0
+
+  def post_freeze(self):
+    return self.spell.casting_time / 200.0
 
   def inner_func(self):
-    spellbook = self.caller.equipped_spellbook
-    spell_name = self.args.strip()
-    spell = spellbook.find_spell(spell_name)
-    if spell.should_prompt:
+    if self.spell.should_prompt:
       # stash the spell on the caster, for use from the callback
       self.caller.ndb.active_spell = spell
       get_input(self.caller, "At who?", _target_callback)
     else:
-      cast_spell(self.caller, spell, target=None)
+      cast_spell(self.caller, self.spell, target=None)
 
 
 class CmdLearn(QueuedCommand):
