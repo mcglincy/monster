@@ -399,9 +399,15 @@ class Merchant(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.sticky = True
+    spawn("axe")[0].location = self
+    spawn("cudgel")[0].location = self
+    spawn("dirk")[0].location = self
     spawn("iron_bar")[0].location = self
     spawn("meat_cleaver")[0].location = self
-    spawn("axe")[0].location = self
+    spawn("short_sword")[0].location = self
+    spawn("book_of_shadows")[0].location = self
+    spawn("grand_grimoire")[0].location = self
+    spawn("mabinogian")[0].location = self
 
   def return_appearance(self, looker, **kwargs):
     lines = []
