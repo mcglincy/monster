@@ -199,6 +199,10 @@ class QueuedCommand(Command):
   def check_preconditions(self):
     return True
 
+  def input_prompt(self):
+    """If not None, command will block for user input, saved to self.input."""
+    return None
+
   def pre_freeze(self):
     return 0.0
 
@@ -226,6 +230,11 @@ class QueuedCommand(Command):
         # utils.delay(self.pre_freeze, other_func)
         # self.caller.msg(f"{self.raw_string}: pre_freeze {self.pre_freeze()}")
         yield self.pre_freeze()
+
+      # prompt after pre_freeze, to better mimic old monster behavior
+      if self.input_prompt():
+        self.input = yield(self.input_prompt())
+
       # self.caller.msg(f"{self.raw_string}: inner_func")
       self.inner_func()
       if self.post_freeze():

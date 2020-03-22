@@ -48,6 +48,14 @@ def cast_spell(caster, spell, target=None):
       caster.msg("Your spell failed!")
     return
 
+  # verify we have a target if spell needs one.
+  # We do this in cast_spell() and not before, so mis-targeting still
+  # deducts mana and reveals caster.
+  if spell.should_prompt and not target:
+    # we already did a find_hidden() call that msg'd caller with any find
+    # failure, so just silently bail
+    return
+
   # send messages
   # TODO: handle spell.silent checks for messaging
   caster.msg(f"You cast {spell.key}.")

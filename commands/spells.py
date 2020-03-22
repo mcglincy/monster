@@ -9,12 +9,10 @@ def _target_callback(caller, prompt, target_name):
   target = find_unhidden(caller, target_name)
   if not target:
     return
-
   # TODO: make sure we want this not-me check... e.g., for healing spells?
   # if target == caller:
   #   caller.msg("You can't target yourself!")
   #   return
-
   if caller.ndb.active_spell:
     cast_spell(caller, caller.ndb.active_spell, target)
 
@@ -37,6 +35,12 @@ class CmdCast(QueuedCommand):
       return False
     return can_cast_spell(self.caller, self.spell)
 
+  def input_prompt(self):
+    if self.spell.should_prompt:
+      return "At who?"
+    else:
+      return None
+
   def pre_freeze(self):
     return self.spell.casting_time / 200.0
 
@@ -44,12 +48,19 @@ class CmdCast(QueuedCommand):
     return self.spell.casting_time / 200.0
 
   def inner_func(self):
+    # if self.spell.should_prompt:
+    #   self.caller.msg("should prompt")
+    #   # stash the spell on the caster, for use from the callback
+    #   self.caller.ndb.active_spell = spell
+    #   get_input(self.caller, "At who?", _target_callback)
+    # else:
+    #   cast_spell(self.caller, self.spell, target=None)
+
     if self.spell.should_prompt:
-      # stash the spell on the caster, for use from the callback
-      self.caller.ndb.active_spell = spell
-      get_input(self.caller, "At who?", _target_callback)
-    else:
-      cast_spell(self.caller, self.spell, target=None)
+      self.target = find_unhidden(self.caller, self.input)
+      # TODO: check for None?
+
+    cast_spell(self.caller, self.spell, target=self.target)
 
 
 class CmdLearn(QueuedCommand):
