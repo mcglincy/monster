@@ -72,6 +72,8 @@ class CmdLearn(QueuedCommand):
     spells = sorted(spellbook.spells, key = lambda x: (x.min_level, x.key))
     table = self.styled_table("|wSpell Name", "Level", "Mana/Lvl", "Casting Time", "Effects")
     for spell in spells:
+      if spell.group and spell.group != self.caller.character_class.group:
+        continue
       effects = spell.spelleffect_set.all()
       effect_names = ",".join([e.nice_name() for e in effects])
       table.add_row(
