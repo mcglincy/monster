@@ -46,7 +46,7 @@ class CmdSheet(QueuedCommand):
     table.add_row(f"Move delay   : {character.move_speed}")
     table.add_row(f"Move silent  : {character.total_move_silent}%")
     table.add_row(f"Steal        : {character.total_steal}%")
-    table.add_row(f"Poison chnce : 0%")
+    table.add_row(f"Poison chnce : {character.poison_chance}%")
     table.add_row(f"Attack delay : {character.attack_speed}")
     table.add_row(f"Weapon usage : {character.total_weapon_use}%")
     table.add_row(f"Money        : {int(character.carried_gold_amount)}")

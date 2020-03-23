@@ -369,6 +369,12 @@ class Character(DefaultCharacter):
   def total_steal(self):
     return self.base_plus_level_attr("base_steal", "level_steal")
 
+  @property
+  def poison_chance(self):
+    # TODO: rename equipment effect kind to POISON_CHANCE?
+    return (self.character_class.poison_chance
+      + self.equipped_attr("poison"))
+  
   # TODO: move equipment stuff to gamerules, or keep it OOP?
 
   @property
