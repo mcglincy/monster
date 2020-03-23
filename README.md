@@ -12,7 +12,9 @@ The running game server is up at http://www.monstermud.com.
   * Account login; each account has a character
   * XP/level
   * Per-level stat increases 
-  * Classes 
+  * Classes
+  * Freeze/delays, queued commands
+  * Move speed
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
   * Exit descriptions
@@ -39,6 +41,8 @@ The running game server is up at http://www.monstermud.com.
   * Weapon use percent
   * Claws
   * Surprise attack
+  * Freeze
+  * Weapon speed  
 * Command set
   * *.* for last action
   * *who* that shows everyone's room location
@@ -56,7 +60,7 @@ The running game server is up at http://www.monstermud.com.
   * *learn* command (list spells only)
   * *cast* command
     * At Who? target prompt
-  * Spell effects: hurt, group hurt, heal
+  * Spell effects: hurt, group hurt, heal, sleep (freeze)
   * Spell deflect and armor
 
 
@@ -79,8 +83,6 @@ The running game server is up at http://www.monstermud.com.
   * Hidden/searchable objects
   * Object damage
 * Combat
-  * Freeze / attack delay
-  * Weapon speed
   * Drop objects when hit
   * Punch
   * Get 50 gold upon death
@@ -99,5 +101,5 @@ The running game server is up at http://www.monstermud.com.
   * Highlighting for pub messages
 * Spells
   * Spell effects
-    * Sleep, cure/poison, push, distance hurt, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
+    * cure/poison, push, distance hurt, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
   * Direction prompt
