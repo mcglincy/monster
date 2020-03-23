@@ -21,8 +21,8 @@ class CmdExit(QueuedCommand):
       self.obj.at_traverse(self.caller, self.obj.destination)
     else:
       # exit is locked
-      if self.obj.db.password and self.obj.db.password == self.raw_string:
-        # we used the exit's password, so bypass the lock
+      if self.obj.db.password and self.obj.db.password.lower() == self.raw_string.lower():
+        # we used the exit's password (case-insensitive), so bypass the lock
         self.obj.at_traverse(self.caller, self.obj.destination)
       else:
         # failed to traverse the exit.
