@@ -1997,7 +1997,7 @@ MABINOGIAN = {
   'prototype_parent': 'base_spellbook',
   'num_exist': 1,
   'equipment_slot': EquipmentSlot.BACKPACK,
-  'spell_keys': ['Thundering Voice', 'Ent Strength', 'Pinecones of Death', 'Tree Attack', 'Morning Frost', 'Earth Hammer', 'Insect Cloud', 'Locust Plague', 'Bear Claws', 'Pack of Wolves', 'Forest Fire', 'Tornado', 'Soul Harvester', 'Elk Speed'],
+  'spell_keys': ['Gripping Plants', 'Thundering Voice', 'Ent Strength', 'Pinecones of Death', 'Tree Attack', 'Morning Frost', 'Earth Hammer', 'Insect Cloud', 'Locust Plague', 'Bear Claws', 'Pack of Wolves', 'Forest Fire', 'Tornado', 'Soul Harvester', 'Elk Speed'],
 }
 
 PALE_BOOK = {
