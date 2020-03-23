@@ -7,6 +7,7 @@ is setup to be the "default" character type created by the default
 creation commands.
 
 """
+import time
 from collections import deque
 from random import randint
 
@@ -52,8 +53,9 @@ class Character(DefaultCharacter):
     # TODO: dragging in the CharacterClass model f's with evennia's
     # initial creation of god_character, so we can't refer to max_health(), 
     # max_mana(), etc in at_object_created() / set_field_defaults().
-    self.ndb.command_queue = deque()
     self.ndb.active_command = None
+    self.ndb.command_queue = deque()
+    self.ndb.frozen_until = 0
     if self.db.character_class_key is None:
       self.db.character_class_key = "ghost"
       self.ndb.character_class = None
@@ -77,8 +79,9 @@ class Character(DefaultCharacter):
 
   def at_init(self):
     self.ndb.active_command = None
-    self.ndb.hiding = 0
     self.ndb.command_queue = deque()
+    self.ndb.frozen_until = 0
+    self.ndb.hiding = 0
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -251,6 +254,11 @@ class Character(DefaultCharacter):
   def move_speed(self):
     # TODO: consider equipment weight?
     return self.class_plus_equipped_attr("move_speed")
+
+  @property
+  def is_frozen(self):
+    now = time.time()
+    return self.ndb.frozen_until > now
 
   # our damage, armor, etc is the sum of our equipped objects
 

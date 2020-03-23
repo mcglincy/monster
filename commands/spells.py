@@ -21,6 +21,7 @@ class CmdCast(QueuedCommand):
   key = "cast"
   aliases = ["cas"]
   help_category = "Monster"
+  target = None
 
   def check_preconditions(self):
     # TODO: figure out rules for spellbook vs. no spellbook    
@@ -48,14 +49,6 @@ class CmdCast(QueuedCommand):
     return self.spell.casting_time / 200.0
 
   def inner_func(self):
-    # if self.spell.should_prompt:
-    #   self.caller.msg("should prompt")
-    #   # stash the spell on the caster, for use from the callback
-    #   self.caller.ndb.active_spell = spell
-    #   get_input(self.caller, "At who?", _target_callback)
-    # else:
-    #   cast_spell(self.caller, self.spell, target=None)
-
     if self.spell.should_prompt:
       self.target = find_unhidden(self.caller, self.input)
       # TODO: check for None?

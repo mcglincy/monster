@@ -14,6 +14,7 @@ just overloads its hooks to have it perform its function.
 
 import random
 from evennia import DefaultScript
+from gamerules.freeze import unfreeze
 
 
 class Script(DefaultScript):
@@ -115,3 +116,17 @@ class Trapdoor(Script):
         if rand < self.obj.db.trap_chance:
           # away you go!
           exit.at_traverse(content, exit.destination)
+
+
+# To unfreeze a target:
+# create_script('typeclasses.scripts.DelayedUnfreeze', obj=target, interval=freeze_duration)
+class DelayedUnfreeze(Script):
+  def at_script_creation(self):
+    self.key = "unfreeze"
+    self.interval = 2
+    self.repeats = 1
+    self.start_delay = True
+
+  def at_repeat(self):
+    unfreeze(self.obj)
+

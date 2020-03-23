@@ -213,8 +213,9 @@ class QueuedCommand(Command):
     return 0.0
 
   def func(self):
-    if self.caller.ndb.active_command:
-      # another command is already running, so just enqueue ourself (FIFO)
+    if self.caller.ndb.active_command is not None or self.caller.is_frozen:
+      # another command is already running or caller is frozen,
+      # so just enqueue this command (FIFO)
       # self.caller.msg(f"enqueuing {self.raw_string}")
       self.caller.ndb.command_queue.appendleft(self)
       return
@@ -242,11 +243,14 @@ class QueuedCommand(Command):
         # self.caller.msg(f"{self.raw_string}: post_freeze {self.post_freeze()}")
         yield self.post_freeze()
 
-    # self.caller.msg(f"{self.raw_string}: end")
-    self.caller.ndb.active_command = None
-    if self.caller.ndb.command_queue:
-      # commands are in queue, so do the next one (FIFO)
-      next_command = self.caller.ndb.command_queue.pop()
-      cmdhandler.cmdhandler(self.session, next_command.raw_string)
+    do_next_queued_command(self.caller)
+
+
+def do_next_queued_command(target):
+  target.ndb.active_command = None
+  if target.ndb.command_queue and not target.is_frozen:
+    # commands are in queue, so do the next one (FIFO)
+    next_command = target.ndb.command_queue.pop()
+    cmdhandler.cmdhandler(target.sessions.get()[0], next_command.raw_string)
 
 

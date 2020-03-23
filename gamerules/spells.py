@@ -1,6 +1,20 @@
 import random
+from gamerules.freeze import freeze
 from gamerules.hiding import find_unhidden, reveal
 from gamerules.spell_effect_kind import SpellEffectKind
+
+
+def make_saving_throw(target, spell):
+  # TODO: original monster save % is MyExperience DIV 1000, aka 1% per level...
+  # but that code also checks if >80, which would never happen. WTF?
+  # Maybe it was supposed to be 10% per level? or max 8%?
+  chance_to_save = target.level
+  if random.randint(0, 100) <= chance_to_save:
+    target.msg(f"You resisted the {spell.key} spell.")
+    target.location.msg_contents(
+      f"{target.ket} resisted the {spell.key} spell.", exclude=[target])
+    return True
+  return False
 
 
 def mana_cost(caster, spell):
@@ -81,49 +95,65 @@ def cast_spell(caster, spell, target=None):
 
 
 def apply_spell_effect(spell, effect, caster, target=None):
+  targets = []
+  if effect.affects_room:
+    # everyone in room
+    for occupant in caster.location.contents:
+      if (occupant != caster 
+        and occupant.is_typeclass("typeclasses.characters.Character")):
+        targets.append(occupant)
+  else:
+    # just single target
+    if target:
+      targets.append(target)
+
   # check spell deflection before applying the actual effect
   # TODO: should this affect all effects? e.g., heal?
-  if target and target != caster and target.spell_deflect_armor:
-    if random.randint(0, 100) < target.spell_deflect_armor:
-      target.msg("The spell has been deflected by your armor!")
-      target.location.msg_contents(
-        f"The spell was deflected by {target.key}'s armor.", exclude=[target])
-      return
+  deflected = []
+  for target in targets:
+    if target != caster and target.spell_deflect_armor:
+      if random.randint(0, 100) < target.spell_deflect_armor:
+        target.msg("The spell has been deflected by your armor!")
+        target.location.msg_contents(
+          f"The spell was deflected by {target.key}'s armor.", exclude=[target])
+        deflected.append(target)
+  # remove deflections
+  targets = [x for x in targets if x not in deflected]
 
   if effect.effect_kind == SpellEffectKind.CURE_POISON:
-    apply_cure_poison_effect(effect, caster, target)
+    apply_cure_poison_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.STRENGTH:
-    apply_strength_effect(effect, caster, target)
+    apply_strength_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.SPEED:
-    apply_speed_effect(effect, caster, target)
+    apply_speed_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.INVISIBLE:
-    apply_invisible_effect(effect, caster, target)
+    apply_invisible_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.SEE_INVISIBLE:
-    apply_see_invisible_effect(effect, caster, target)
+    apply_see_invisible_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.HEAL:
-    apply_heal_effect(effect, caster, target)
+    apply_heal_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.HURT:
-    apply_hurt_effect(spell, effect, caster, target)
+    apply_hurt_effect(spell, effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.SLEEP:
-    apply_sleep_effect(effect, caster, target)
+    apply_sleep_effect(spell, effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.PUSH:
-    apply_push_effect(effect, caster, target)
+    apply_push_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.ANNOUNCE:
-    apply_announce_effect(effect, caster, target)
+    apply_announce_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.COMMAND:
-    apply_command_effect(effect, caster, target)
+    apply_command_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.DISTANCE_HURT:
     apply_distance_hurt_effect(effect, caster, target)
   elif effect.effect_kind == SpellEffectKind.DETECT_MAGIC:
-    apply_detect_magic_effect(effect, caster, target)
+    apply_detect_magic_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.FIND_PERSON:
-    apply_find_person_effect(effect, caster, target)
+    apply_find_person_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.LOCATE:
-    apply_locate_effect(effect, caster, target)
+    apply_locate_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.WEAK:
-    apply_weak_effect(effect, caster, target)
+    apply_weak_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.SLOW:
-    apply_slow_effect(effect, caster, target)
+    apply_slow_effect(effect, caster, targets)
 
 
 def apply_cure_poison_effect(effect, caster, target):
@@ -173,7 +203,7 @@ def spell_armor_adverb(amount):
     return "totally"
 
 
-def apply_hurt_effect(spell, effect, caster, target):
+def apply_hurt_effect(spell, effect, caster, targets):
   # calculate damage
   base = effect.param_1
   level_base = effect.param_2
@@ -184,37 +214,28 @@ def apply_hurt_effect(spell, effect, caster, target):
   damage = base_dmg + random.randint(0, random_dmg)
   caster.msg(f"Your {spell.key} spell does {damage} damage.")
 
-  # dish it out
-  targets = []
-  if effect.affects_room:
-    # everyone in room
-    for occupant in caster.location.contents:
-      if occupant != caster and hasattr(occupant, "gain_health"):
-        targets.append(occupant)
-  else:
-    # just single target
-    if target and hasattr(target, "gain_health"):
-      targets.append(target)
-
   for target in targets:
+    if not hasattr(target, "gain_health"):
+      continue
     # apply spell armor, if any
+    target_damage = damage
     spell_armor = target.spell_armor
     if spell_armor:
-      damage = int(damage * (100 - spell_armor) / 100)
+      target_damage = int(target_damage * (100 - spell_armor) / 100)
       adverb = spell_armor_adverb(spell_armor)
-      caster.msg(f"You spell is {adverb} diffused by {target.key}'s armor.")
+      caster.msg(f"Your spell is {adverb} diffused by {target.key}'s armor.")
       target.msg(f"{caster.key}'s spell is {adverb} diffused by your armor.")
       target.location.msg_contents(
         f"{caster.key}'s spell is {adverb} diffused by {target.key}'s armor.",
         exclude=[caster, target])
-    target.gain_health(-damage, damager=caster)
+    target.gain_health(-target_damage, damager=caster)
 
   if effect.affects_caster and hasattr(caster, "gain_health"):
     # TODO: handle caster as targets.append()?
     caster.gain_health(-damage, damager=None)
 
 
-def apply_sleep_effect(effect, caster, target):
+def apply_sleep_effect(spell, effect, caster, targets):
   base = effect.param_1
   level_base = effect.param_2
   rand = effect.param_3
@@ -222,7 +243,15 @@ def apply_sleep_effect(effect, caster, target):
   base_sleep_time = base + level_base * caster.level
   random_sleep_time = rand + level_rand * caster.level
   sleep_time = base_sleep_time + random.randint(0, random_sleep_time)
-  # TODO
+  freeze_duration = sleep_time / 100.0
+
+  for target in targets:
+    if make_saving_throw(target, spell):
+      # We already msg in make_saving_throw()...
+      # caster.msg(f"{target.key} is not affected by the spell.")
+      # target.msg("You are not affected by the spell.")
+      continue
+    freeze(target, freeze_duration)
 
 
 def apply_push_effect(effect, caster, target):
@@ -265,5 +294,4 @@ def apply_slow_effect(effect, caster, target):
   speed_modifier = effect.param_1
   level_speed_modifier = effect.param_2
   # TODO
-
 
