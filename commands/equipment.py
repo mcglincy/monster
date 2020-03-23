@@ -22,7 +22,7 @@ class CmdEquip(QueuedCommand):
       return
     table = self.styled_table("|wSlot", "Equipped Item")
     for slot in EquipmentSlot:
-      if slot in self.caller.db.equipment:
+      if slot in self.caller.db.equipment and self.caller.db.equipment[slot] is not None:
         table.add_row(slot.name, self.caller.db.equipment[slot].key)
     self.msg(f"{table}")
 
