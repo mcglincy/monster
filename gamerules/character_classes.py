@@ -8,19 +8,19 @@ def reset_character_class(target, record_id):
 
 
 def set_character_class(target, record_id):
-  # make sure this is a valid class
   try:
+    # TODO make sure this is a valid class
     char_class = CharacterClass.objects.get(db_record_id=record_id)
     target.db.character_class_key = char_class.db_key
     # force re-cache
-    target.character_class()
-    if target.db.health > target.max_health():
-      target.db.health = target.max_health()
+    _ = target.character_class
+    if target.db.health > target.max_health:
+      target.db.health = target.max_health
+    if target.db.mana > target.max_mana:
+      target.db.health = target.max_mana
     target.msg(f"You are now a {char_class.db_key}.")
-  except:
-    # Show error somewhere?
-    target.msg(f"Could not set character class {record_id}.")
-    return
+  except Exception as err:
+    target.msg(err)
 
 # letters/spaces/hyphen/underscore, first 3 chars must be letters
 VALID_NAME_REGEX = re.compile('^[a-zA-Z]{3}[a-zA-Z -_]{0,13}$')
