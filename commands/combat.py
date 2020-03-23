@@ -49,4 +49,4 @@ class CmdRest(QueuedCommand):
   def inner_func(self):
     if hasattr(self.caller, "gain_health"):
       self.caller.gain_health(50)
-      self.caller.gain_mana(10)
+      self.caller.gain_mana(50)
