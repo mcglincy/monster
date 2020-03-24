@@ -203,6 +203,10 @@ class QueuedCommand(Command):
     """If not None, command will block for user input, saved to self.input."""
     return None
 
+  def input_prompt2(self):
+    """If not None, command will block for user input, saved to self.input2."""
+    return None
+
   def pre_freeze(self):
     return 0.0
 
@@ -224,26 +228,34 @@ class QueuedCommand(Command):
     # self.caller.msg(f"{self.raw_string}: active")
     self.caller.ndb.active_command = self
 
-    # do any pre-pre-freeze checks
-    check = self.check_preconditions()
-    if check is None or check == True:
-      if self.pre_freeze():
-        # utils.delay(self.pre_freeze, other_func)
-        # self.caller.msg(f"{self.raw_string}: pre_freeze {self.pre_freeze()}")
-        yield self.pre_freeze()
+    # do everything in a try-finally block,
+    # so we always go on to the next command
+    try:
+      # do any pre-pre-freeze checks
+      check = self.check_preconditions()
+      if check is None or check == True:
+        if self.pre_freeze():
+          # utils.delay(self.pre_freeze, other_func)
+          # self.caller.msg(f"{self.raw_string}: pre_freeze {self.pre_freeze()}")
+          yield self.pre_freeze()
 
-      # prompt after pre_freeze, to better mimic old monster behavior
-      if self.input_prompt():
-        self.input = yield(self.input_prompt())
+        # prompt after pre_freeze, to better mimic old monster behavior
+        if self.input_prompt():
+          self.input = yield(self.input_prompt())
+        if self.input_prompt2():
+          self.input2 = yield(self.input_prompt2())
 
-      # self.caller.msg(f"{self.raw_string}: inner_func")
-      self.inner_func()
-      if self.post_freeze():
-        # utils.delay(self.post_freeze, other_func)
-        # self.caller.msg(f"{self.raw_string}: post_freeze {self.post_freeze()}")
-        yield self.post_freeze()
-
-    do_next_queued_command(self.caller)
+        # self.caller.msg(f"{self.raw_string}: inner_func")
+        # TODO: use kwargs instead of input/input2?
+        self.inner_func()
+        if self.post_freeze():
+          # utils.delay(self.post_freeze, other_func)
+          # self.caller.msg(f"{self.raw_string}: post_freeze {self.post_freeze()}")
+          yield self.post_freeze()
+    except Exception as err:
+      self.caller.msg(err)
+    finally:
+      do_next_queued_command(self.caller)
 
 
 def do_next_queued_command(target):

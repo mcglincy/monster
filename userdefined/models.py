@@ -90,6 +90,18 @@ class Spell(SharedMemoryModel):
         return True
     return False
 
+  @property
+  def is_distance(self):
+    return self.distance_effect is not None
+
+  @property
+  def distance_effect(self):
+    # TODO: this assumes that a special can only have one distance effect
+    for effect in self.effects:
+      if effect.effect_kind == SpellEffectKind.DISTANCE_HURT:
+        return effect
+    return None
+
 
 class SpellEffect(SharedMemoryModel):
   spell = models.ForeignKey(Spell, on_delete=models.CASCADE)  

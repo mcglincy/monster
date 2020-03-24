@@ -42,7 +42,8 @@ def can_cast_spell(caster, spell):
   return True
 
 
-def cast_spell(caster, spell, target=None):
+def cast_spell(caster, spell, target=None,
+  direction=None, distance_target_name=None):
   if not can_cast_spell(caster, spell):
     return
 
@@ -70,55 +71,90 @@ def cast_spell(caster, spell, target=None):
     # failure, so just silently bail
     return
 
-  # send messages
+  send_cast_messages(caster, spell)
+  if not spell.is_distance:
+    # TODO: where to do this?
+    send_effect_messages(caster, spell, target)
+
+  # apply spell effects
+  for effect in spell.effects:
+    apply_spell_effect(spell, effect, caster, target,
+      direction, distance_target_name)
+
+
+def send_cast_messages(caster, spell):
   # TODO: handle spell.silent checks for messaging
   caster.msg(f"You cast {spell.key}.")
   caster.location.msg_contents(
     f"{caster.key} casts {spell.key}.", exclude=[caster])
+  # where should caster_desc be sent? cast or effect?
   if spell.caster_desc:
     caster.msg(spell.caster_desc)
 
+
+# TODO: figure out distance vs. not for messaging
+def send_effect_messages(caster, spell, target):
+  # TODO: our room descriptions / alignment field??? seem off. DEBUG and look at old pascal code.
+  #if spell.room_desc:
+  #  caster.location.msg_contents(spell.room_desc, exclude=[caster, target])
+  # TODO: do we need to consider effect vs. room for msgs?
   if spell.victim_desc:
     victim_desc = spell.victim_desc.replace("#", caster.key)
     if spell.affects_room:
       caster.location.msg_contents(victim_desc, exclude=[caster])
     elif target:
       target.msg(victim_desc)
-  # TODO: our room descriptions / alignment field??? seem off. DEBUG and look at old pascal code.
-  #if spell.room_desc:
-  #  caster.location.msg_contents(spell.room_desc, exclude=[caster, target])
-  # TODO: do we need to consider effect vs. room for msgs?
-
-  # apply spell effects
-  for effect in spell.effects:
-    apply_spell_effect(spell, effect, caster, target)
 
 
-def apply_spell_effect(spell, effect, caster, target=None):
+def effect_targets(effect, caster, target):
+  if not effect.affects_room:
+    # single target
+    return [target]
+  # everyone in room
   targets = []
-  if effect.affects_room:
-    # everyone in room
-    for occupant in caster.location.contents:
-      if (occupant != caster 
-        and occupant.is_typeclass("typeclasses.characters.Character")):
-        targets.append(occupant)
-  else:
-    # just single target
-    if target:
-      targets.append(target)
+  for occupant in caster.location.contents:
+    if (occupant != caster 
+      and occupant.is_typeclass("typeclasses.characters.Character")):
+      targets.append(occupant)
+  return targets  
 
-  # check spell deflection before applying the actual effect
-  # TODO: should this affect all effects? e.g., heal?
+
+def is_deflectable(effect):  
+  if effect.effect_kind == SpellEffectKind.CURE_POISON:
+    # we should just have separate POISON and CURE_POISON effects
+    return effect.param_1 > 0
+  else:
+    return effect.effect_kind in [
+      SpellEffectKind.HURT, SpellEffectKind.SLEEP,
+      SpellEffectKind.PUSH, SpellEffectKind.WEAK, SpellEffectKind.SLOW]
+
+
+def remove_spell_deflections(effect, targets):
   deflected = []
   for target in targets:
-    if target != caster and target.spell_deflect_armor:
+    if target.spell_deflect_armor:
       if random.randint(0, 100) < target.spell_deflect_armor:
         target.msg("The spell has been deflected by your armor!")
         target.location.msg_contents(
           f"The spell was deflected by {target.key}'s armor.", exclude=[target])
         deflected.append(target)
   # remove deflections
-  targets = [x for x in targets if x not in deflected]
+  return [x for x in targets if x not in deflected]
+
+
+def apply_spell_effect(spell, effect, caster, 
+  target=None, direction=None, distance_target_name=None):
+
+  if effect.effect_kind == SpellEffectKind.DISTANCE_HURT:
+    # distance has fundamentally different handling for effect delivery
+    apply_distance_hurt_effect(effect, caster, target)
+    return
+
+  # single target or room
+  targets = effect_targets(effect, caster, target)
+  # check spell deflection before applying the actual effect
+  if is_deflectable(effect):
+    targets = remove_spell_deflections(caster, targets)
 
   if effect.effect_kind == SpellEffectKind.CURE_POISON:
     apply_cure_poison_effect(effect, caster, targets)
@@ -142,8 +178,6 @@ def apply_spell_effect(spell, effect, caster, target=None):
     apply_announce_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.COMMAND:
     apply_command_effect(effect, caster, targets)
-  elif effect.effect_kind == SpellEffectKind.DISTANCE_HURT:
-    apply_distance_hurt_effect(effect, caster, target)
   elif effect.effect_kind == SpellEffectKind.DETECT_MAGIC:
     apply_detect_magic_effect(effect, caster, targets)
   elif effect.effect_kind == SpellEffectKind.FIND_PERSON:
