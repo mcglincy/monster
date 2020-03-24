@@ -45,7 +45,7 @@ def can_cast_spell(caster, spell):
 
 
 def find_exit(location, direction):
-  if direction and direction != Direction.INVALID:
+  if direction is not None and direction != Direction.INVALID:
     for x in location.contents:
       if (x.is_typeclass("typeclasses.exits.Exit", exact=False) 
         and x.key.lower() == direction.name.lower()):
@@ -79,7 +79,7 @@ def cast_spell(caster, spell, target=None,
     # find exit
     exit = find_exit(caster.location, direction)
     if not exit:
-      caster.msg("Invalid direction.")
+      caster.msg(f"Invalid direction {direction.name}.")
       return
 
   # verify we have a target if spell needs one.
@@ -395,6 +395,7 @@ def apply_distance_hurt_effect(spell, effect, caster,
       behavior in [DistanceSpellBehavior.BOUNCES_OFF_WALLS, 
         DistanceSpellBehavior.RETURNS_TO_CASTER]):
       direction = direction.opposite()
+      exit = find_exit(current_room, direction)
       current_room.msg_contents(
         f"You see a {spell.key} from {caster.key} bounce {direction.name.lower()}.",
         exclude=[caster])
