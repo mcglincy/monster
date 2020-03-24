@@ -119,22 +119,3 @@ class SpellEffect(SharedMemoryModel):
     if self.db_affects_room:
       effect_name = "GROUP_" + effect_name
     return effect_name.replace("_", " ").lower()
-
-  # db.push_direction
-  # db.base_strength
-  # db.level_strength
-  # db.base_speed
-  # db.level_speed
-  # db.base_health
-  # db.random_health
-  # db.level_health
-  # db.level_random_health
-  # db.base_sleep
-  # db.random_sleep
-  # db.level_sleep
-  # db.level_random_sleep
-  # db.base_duration
-  # db.random_duration
-  # db.range
-  # db.ranged_behavior
-  # db.cure_or_poison

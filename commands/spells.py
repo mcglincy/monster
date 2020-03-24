@@ -1,5 +1,6 @@
 from commands.command import QueuedCommand
 from evennia.utils.evmenu import get_input
+from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
 from gamerules.hiding import find_unhidden
 from gamerules.spell_effect_kind import SpellEffectKind
@@ -62,21 +63,17 @@ class CmdCast(QueuedCommand):
   def inner_func(self):
     target = None
     direction = None
-    distance_target_name = None
+    distance_target_key = None
     if self.spell.is_distance:
-      direction = self.input.lower()
-      if direction not in ["n", "north", "s", "south", "e", "east", 
-        "w", "west", "u", "up", "d", "down"]:
-        self.caller("Not a valid direction.")
-        return
-      distance_target_name = self.input2
+      direction = Direction.from_string(self.input)
+      distance_target_key = self.input2
     elif self.spell.should_prompt:
       target = find_unhidden(self.caller, self.input)
       # we check for missing target later in cast_spell(),
       # so mana etc gets deducted properly
 
     cast_spell(self.caller, self.spell, target=target, 
-      direction=direction, distance_target_name=distance_target_name)
+      direction=direction, distance_target_key=distance_target_key)
 
 
 class CmdLearn(QueuedCommand):

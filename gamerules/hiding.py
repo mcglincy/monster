@@ -20,6 +20,15 @@ def unhidden_objects(room):
   return [x for x in room.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
 
 
+def unhidden_object(location, key):
+  unhidden = [
+    x for x in location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
+  for x in unhidden:
+    if x.key.lower().startswith(key.lower()):
+      return x
+  return None
+
+
 def find_unhidden(searcher, key):
   unhidden = [
     x for x in searcher.location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]

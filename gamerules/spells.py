@@ -1,6 +1,8 @@
 import random
+from gamerules.direction import Direction
+from gamerules.distance_spell_behavior import DistanceSpellBehavior
 from gamerules.freeze import freeze
-from gamerules.hiding import find_unhidden, reveal
+from gamerules.hiding import reveal, unhidden_object, unhidden_objects
 from gamerules.spell_effect_kind import SpellEffectKind
 
 
@@ -42,8 +44,17 @@ def can_cast_spell(caster, spell):
   return True
 
 
+def find_exit(location, direction):
+  if direction and direction != Direction.INVALID:
+    for x in location.contents:
+      if (x.is_typeclass("typeclasses.exits.Exit", exact=False) 
+        and x.key.lower() == direction.name.lower()):
+        return x
+  return None
+
+
 def cast_spell(caster, spell, target=None,
-  direction=None, distance_target_name=None):
+  direction=None, distance_target_key=None):
   if not can_cast_spell(caster, spell):
     return
 
@@ -63,6 +74,14 @@ def cast_spell(caster, spell, target=None,
       caster.msg("Your spell failed!")
     return
 
+  # make sure distance spells have a valid initial exit
+  if spell.is_distance:
+    # find exit
+    exit = find_exit(caster.location, direction)
+    if not exit:
+      caster.msg("Invalid direction.")
+      return
+
   # verify we have a target if spell needs one.
   # We do this in cast_spell() and not before, so mis-targeting still
   # deducts mana and reveals caster.
@@ -79,7 +98,7 @@ def cast_spell(caster, spell, target=None,
   # apply spell effects
   for effect in spell.effects:
     apply_spell_effect(spell, effect, caster, target,
-      direction, distance_target_name)
+      direction, distance_target_key)
 
 
 def send_cast_messages(caster, spell):
@@ -143,11 +162,11 @@ def remove_spell_deflections(effect, targets):
 
 
 def apply_spell_effect(spell, effect, caster, 
-  target=None, direction=None, distance_target_name=None):
+  target=None, direction=None, distance_target_key=None):
 
   if effect.effect_kind == SpellEffectKind.DISTANCE_HURT:
     # distance has fundamentally different handling for effect delivery
-    apply_distance_hurt_effect(effect, caster, target)
+    apply_distance_hurt_effect(spell, effect, caster, target, direction, distance_target_key)
     return
 
   # single target or room
@@ -237,6 +256,23 @@ def spell_armor_adverb(amount):
     return "totally"
 
 
+def give_spell_damage(spell, caster, target, damage):
+  if not hasattr(target, "gain_health"):
+    return
+  # apply spell armor, if any
+  target_damage = damage
+  spell_armor = target.spell_armor
+  if spell_armor:
+    target_damage = int(target_damage * (100 - spell_armor) / 100)
+    adverb = spell_armor_adverb(spell_armor)
+    caster.msg(f"Your spell is {adverb} diffused by {target.key}'s armor.")
+    target.msg(f"{caster.key}'s spell is {adverb} diffused by your armor.")
+    target.location.msg_contents(
+      f"{caster.key}'s spell is {adverb} diffused by {target.key}'s armor.",
+      exclude=[caster, target])
+  target.gain_health(-target_damage, damager=caster)
+
+
 def apply_hurt_effect(spell, effect, caster, targets):
   # calculate damage
   base = effect.param_1
@@ -249,23 +285,9 @@ def apply_hurt_effect(spell, effect, caster, targets):
   caster.msg(f"Your {spell.key} spell does {damage} damage.")
 
   for target in targets:
-    if not hasattr(target, "gain_health"):
-      continue
-    # apply spell armor, if any
-    target_damage = damage
-    spell_armor = target.spell_armor
-    if spell_armor:
-      target_damage = int(target_damage * (100 - spell_armor) / 100)
-      adverb = spell_armor_adverb(spell_armor)
-      caster.msg(f"Your spell is {adverb} diffused by {target.key}'s armor.")
-      target.msg(f"{caster.key}'s spell is {adverb} diffused by your armor.")
-      target.location.msg_contents(
-        f"{caster.key}'s spell is {adverb} diffused by {target.key}'s armor.",
-        exclude=[caster, target])
-    target.gain_health(-target_damage, damager=caster)
+    give_spell_damage(spell, caster, target, damage)
 
   if effect.affects_caster and hasattr(caster, "gain_health"):
-    # TODO: handle caster as targets.append()?
     caster.gain_health(-damage, damager=None)
 
 
@@ -301,9 +323,94 @@ def apply_command_effect(effect, caster, target):
   pass
 
 
-def apply_distance_hurt_effect(effect, caster, target):
-  distance_behavior = effect.param_4
-  # TODO
+def apply_distance_hurt_effect(spell, effect, caster, 
+  target=None, direction=None, distance_target_key=None):
+  damage_base = effect.param_1
+  damage_rand = effect.param_2
+  damage = damage_base + random.randint(0, damage_rand)
+  max_range = effect.param_3
+  behavior = DistanceSpellBehavior(effect.param_4)
+
+  # we've already checked direction vs. current-room exits
+  # TODO: should effect.name be populated?
+  caster.location.msg_contents(
+    f"{caster.key} fires a {spell.key} heading {direction.name.lower()}.",
+    exclude=[caster])
+
+  current_range = 0
+  current_room = caster.location
+  while True:
+    # send messaging
+    if current_room == caster.location:
+      caster.msg(f"The {spell.key} is in your room.")
+    else:
+      caster.msg(f"The {spell.key} travels into {current_room.key}.")
+      current_room.msg_contents(
+        f"You see a {spell.key} from {caster.key} heading {direction.name.lower()}.",
+        exclude=[caster])
+
+    victim_desc = None
+    if spell.victim_desc:
+      victim_desc = spell.victim_desc.replace("#", caster.key)
+
+    # deal damage, if any
+    if behavior == DistanceSpellBehavior.DAMAGES_ENTIRE_PATH:
+      # damage everyone unhidden in the room except the caster
+      caster.msg(f"The {spell.key} does {damage} damage.")
+      for unhidden in unhidden_objects(location):
+        if unhidden != caster:
+          give_spell_damage(spell, caster, unhidden, damage)
+          if victim_desc:
+            unhidden.msg(victim_desc)
+          current_room.msg_contents(f"{unhidden.key} is hit by {caster.key}'s {spell.key}.",
+            exclude=[caster, unhidden])
+    else:
+      # single target; see if they're in this room
+      target = unhidden_object(current_room, distance_target_key)
+      if target:
+        caster.msg(f"The {spell.key} hits {target.key} for {damage} damage.")
+        if victim_desc:
+          target.msg(victim_desc)
+        # TODO: look at room_desc... Green Dart has it, but do others?
+        current_room.msg_contents(f"{target.key} is hit by {caster.key}'s {spell.key}.",
+          exclude=[caster, target])
+        give_spell_damage(spell, caster, target, damage)
+        if (behavior in [DistanceSpellBehavior.NORMAL,
+          DistanceSpellBehavior.BOUNCES_OFF_WALLS]):
+          # we hit our target, so we're done
+          break
+
+    # RETURNS_TO_CASTER should go max range and then turn around
+    if (current_range == max_range and
+      behavior == DistanceSpellBehavior.RETURNS_TO_CASTER):
+      current_range = 0
+      direction = direction.opposite()
+      current_room.msg_contents(
+        f"You see a {spell.key} from {caster.key} bounce {direction.name.lower()}.",
+        exclude=[caster])
+
+    # try to advance to the next room
+    exit = find_exit(current_room, direction)
+    if ((current_range == max_range or not exit) and 
+      behavior in [DistanceSpellBehavior.BOUNCES_OFF_WALLS, 
+        DistanceSpellBehavior.RETURNS_TO_CASTER]):
+      direction = direction.opposite()
+      current_room.msg_contents(
+        f"You see a {spell.key} from {caster.key} bounce {direction.name.lower()}.",
+        exclude=[caster])
+      if behavior == DistanceSpellBehavior.RETURNS_TO_CASTER:
+        max_range = current_range  # how many rooms it took to get here
+        current_range = 0  # starting all over again
+      behavior = DistanceSpellBehavior.NORMAL  # don't keep bouncing
+
+    if exit:
+      current_room = exit.destination
+      current_range = current_range + 1
+
+    if current_range > max_range:
+      # we're done
+      break
+
 
 
 def apply_detect_magic_effect(effect, caster, target):
