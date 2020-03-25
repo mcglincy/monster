@@ -23,7 +23,8 @@ The running game server is up at http://www.monstermud.com.
     * passworded/alias-required, hidden, object required/forbidden/hidden-without
   * Exit effects
     * set or reset class, change xp, change health, change mana
-  * Trapdoors    
+  * Trapdoors
+  * Special room kinds: no combat, no hide, hard to hide 
 * Objects
   * Imported all original objects (weapons, armor, etc)
   * Simple gold system
@@ -71,7 +72,7 @@ The running game server is up at http://www.monstermud.com.
   * Various global player messages
     * E.g., "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm." "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
 * Map/Rooms
-  * Room types: market, no combat, no hide, hard-to-hide, object destroy, treasure drop, monster generator, monster lair, heal
+  * Special room kinds: market, object destroy, treasure drop, monster generator, monster lair, heal
   * Move silent between rooms
   * Exit types
     * guardian
