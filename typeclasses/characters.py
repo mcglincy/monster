@@ -457,6 +457,5 @@ class Character(DefaultCharacter):
     #super().at_object_leave(obj, target_location)
     # unequip if equipped
     if self.db.equipment.get(obj.db.equipment_slot) == obj:
-      self.msg("Unequipping")
       del self.db.equipment[obj.db.equipment_slot]
 

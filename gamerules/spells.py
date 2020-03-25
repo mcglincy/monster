@@ -85,7 +85,7 @@ def cast_spell(caster, spell, target=None,
   # verify we have a target if spell needs one.
   # We do this in cast_spell() and not before, so mis-targeting still
   # deducts mana and reveals caster.
-  if spell.should_prompt and not target:
+  if not spell.is_distance and spell.should_prompt and not target:
     # we already did a find_hidden() call that msg'd caller with any find
     # failure, so just silently bail
     return
@@ -356,18 +356,18 @@ def apply_distance_hurt_effect(spell, effect, caster,
     # deal damage, if any
     if behavior == DistanceSpellBehavior.DAMAGES_ENTIRE_PATH:
       # damage everyone unhidden in the room except the caster
-      caster.msg(f"The {spell.key} does {damage} damage.")
-      for unhidden in unhidden_objects(location):
-        if unhidden != caster:
-          give_spell_damage(spell, caster, unhidden, damage)
+      for unhidden in unhidden_objects(current_room):
+        if unhidden != caster and hasattr(unhidden, "gain_health"):
+          caster.msg(f"The {spell.key} hits {unhidden.key} for {damage} damage.")
           if victim_desc:
             unhidden.msg(victim_desc)
           current_room.msg_contents(f"{unhidden.key} is hit by {caster.key}'s {spell.key}.",
             exclude=[caster, unhidden])
+          give_spell_damage(spell, caster, unhidden, damage)
     else:
       # single target; see if they're in this room
       target = unhidden_object(current_room, distance_target_key)
-      if target:
+      if target and hasattr(target, "gain_health"):
         caster.msg(f"The {spell.key} hits {target.key} for {damage} damage.")
         if victim_desc:
           target.msg(victim_desc)
@@ -404,9 +404,12 @@ def apply_distance_hurt_effect(spell, effect, caster,
         current_range = 0  # starting all over again
       behavior = DistanceSpellBehavior.NORMAL  # don't keep bouncing
 
-    if exit:
-      current_room = exit.destination
-      current_range = current_range + 1
+    if not exit:
+      # we didn't reverse direction and there's nowhere else to go
+      break
+
+    current_room = exit.destination
+    current_range = current_range + 1
 
     if current_range > max_range:
       # we're done

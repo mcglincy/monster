@@ -16,8 +16,8 @@ def evennia_unhide(obj):
   obj.locks.add("view:all()")
 
 
-def unhidden_objects(room):
-  return [x for x in room.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
+def unhidden_objects(location):
+  return [x for x in location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
 
 
 def unhidden_object(location, key):

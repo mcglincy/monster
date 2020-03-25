@@ -7,23 +7,10 @@ from gamerules.spell_effect_kind import SpellEffectKind
 from gamerules.spells import can_cast_spell, cast_spell
 
 
-def _target_callback(caller, prompt, target_name):
-  target = find_unhidden(caller, target_name)
-  if not target:
-    return
-  # TODO: make sure we want this not-me check... e.g., for healing spells?
-  # if target == caller:
-  #   caller.msg("You can't target yourself!")
-  #   return
-  if caller.ndb.active_spell:
-    cast_spell(caller, caller.ndb.active_spell, target)
-
-
 class CmdCast(QueuedCommand):
   key = "cast"
   aliases = ["cas"]
   help_category = "Monster"
-  target = None
 
   def check_preconditions(self):
     # TODO: figure out rules for spellbook vs. no spellbook    
@@ -38,7 +25,7 @@ class CmdCast(QueuedCommand):
       return False
     return can_cast_spell(self.caller, self.spell)
 
-  def input_prompt(self):
+  def input_prompt1(self):
     if self.spell.is_distance:
       return "Direction?"
     elif self.spell.should_prompt:
@@ -65,10 +52,10 @@ class CmdCast(QueuedCommand):
     direction = None
     distance_target_key = None
     if self.spell.is_distance:
-      direction = Direction.from_string(self.input)
+      direction = Direction.from_string(self.input1)
       distance_target_key = self.input2
     elif self.spell.should_prompt:
-      target = find_unhidden(self.caller, self.input)
+      target = find_unhidden(self.caller, self.input1)
       # we check for missing target later in cast_spell(),
       # so mana etc gets deducted properly
 

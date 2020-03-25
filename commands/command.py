@@ -195,11 +195,13 @@ class Command(BaseCommand):
 
 
 class QueuedCommand(Command):
+  input1 = None
+  input2 = None
 
   def check_preconditions(self):
     return True
 
-  def input_prompt(self):
+  def input_prompt1(self):
     """If not None, command will block for user input, saved to self.input."""
     return None
 
@@ -240,8 +242,8 @@ class QueuedCommand(Command):
           yield self.pre_freeze()
 
         # prompt after pre_freeze, to better mimic old monster behavior
-        if self.input_prompt():
-          self.input = yield(self.input_prompt())
+        if self.input_prompt1():
+          self.input1 = yield(self.input_prompt1())
         if self.input_prompt2():
           self.input2 = yield(self.input_prompt2())
 
