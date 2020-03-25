@@ -60,7 +60,8 @@ The running game server is up at http://www.monstermud.com.
   * *learn* command (list spells only)
   * *cast* command
     * At Who? target prompt
-  * Spell effects: hurt, group hurt, heal, sleep (freeze)
+  * Spell effects: hurt, group hurt, heal, sleep (freeze), distance hurt
+  * Direction/Target prompt for distance spells
   * Spell deflect and armor
 
 
@@ -100,6 +101,5 @@ The running game server is up at http://www.monstermud.com.
   * Remove any Evennia commands we don't want
   * Highlighting for pub messages
 * Spells
-  * Spell effects
-    * cure/poison, push, distance hurt, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
-  * Direction prompt
+  * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
+  
