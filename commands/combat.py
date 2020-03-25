@@ -1,6 +1,7 @@
 from commands.command import QueuedCommand
 from gamerules.combat import resolve_attack
 from gamerules.hiding import find_unhidden
+from gamerules.special_room_kind import SpecialRoomKind
 
 
 class CmdAttack(QueuedCommand):
@@ -13,6 +14,9 @@ class CmdAttack(QueuedCommand):
   def check_preconditions(self):
     if not self.args:
       self.caller.msg("Usage: attack <target>")
+      return False
+    if self.caller.location.is_special_kind(SpecialRoomKind.NO_COMBAT):
+      self.caller.msg("You cannot fight here.")
       return False
     self.target = find_unhidden(self.caller, self.args.strip())
     if not self.target:

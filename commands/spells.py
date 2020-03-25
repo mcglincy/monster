@@ -3,6 +3,7 @@ from evennia.utils.evmenu import get_input
 from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
 from gamerules.hiding import find_unhidden
+from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.spell_effect_kind import SpellEffectKind
 from gamerules.spells import can_cast_spell, cast_spell
 
@@ -13,6 +14,9 @@ class CmdCast(QueuedCommand):
   help_category = "Monster"
 
   def check_preconditions(self):
+    if self.caller.location.is_special_kind(SpecialRoomKind.NO_COMBAT):
+      self.caller.msg("You cannot fight here.")
+      return False    
     # TODO: figure out rules for spellbook vs. no spellbook    
     spellbook = self.caller.equipped_spellbook
     if not spellbook:

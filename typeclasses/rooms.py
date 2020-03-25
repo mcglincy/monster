@@ -37,10 +37,10 @@ class Room(DefaultRoom):
 
     def special_kinds(self):
         return [x for x in SpecialRoomKind 
-          if check_bit(self.special_kind_bitmask, x.value)]
+          if check_bit(self.db.special_kind_bitmask, x.value)]
 
     def is_special_kind(self, special_room_kind):
-        return check_bit(self.special_kind_bitmask, special_room_kind.value)
+        return check_bit(self.db.special_kind_bitmask, special_room_kind.value)
 
     def return_appearance(self, looker, **kwargs):
         """
