@@ -1,7 +1,7 @@
 from enum import IntEnum
 
 
-class RoomKind(IntEnum):
+class SpecialRoomKind(IntEnum):
   MARKET = 0
   NO_COMBAT = 1
   NO_HIDE = 2

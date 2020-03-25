@@ -8,7 +8,13 @@ Rooms are simple containers that has no location of their own.
 from collections import defaultdict
 from evennia import DefaultRoom
 from evennia.utils.utils import list_to_string
-from gamerules.room_kind import RoomKind
+from gamerules.special_room_kind import SpecialRoomKind
+
+
+# TODO: move this somewhere (utils?)
+def check_bit(num, offset):
+  mask = 1 << offset
+  return(num & mask)
 
 
 class Room(DefaultRoom):
@@ -24,10 +30,17 @@ class Room(DefaultRoom):
     def at_object_creation(self):
         super().at_object_creation()
         self.db.record_id = None
-        self.db.room_kind = None
+        # see SpecialRoomKind for the various special kinds and bit positions
+        self.db.special_kind_bitmask = 0
         self.db.trap_chance = 0
         self.db.trap_direction = None
 
+    def special_kinds(self):
+        return [x for x in SpecialRoomKind 
+          if check_bit(self.special_kind_bitmask, x.value)]
+
+    def is_special_kind(self, special_room_kind):
+        return check_bit(self.special_kind_bitmask, special_room_kind.value)
 
     def return_appearance(self, looker, **kwargs):
         """

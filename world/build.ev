@@ -25,6 +25,8 @@ will keep the above description however, because we like it so much.]
 #
 @set here/record_id = 1
 #
+@set here/special_kind_bitmask = 2
+#
 @set here/trap_chance = 50
 #
 @set here/trap_direction = down
@@ -39,6 +41,8 @@ of your previous short-comings are filtered out, and a suitable
 replacement body is manufactured.
 #
 @set here/record_id = 2
+#
+@set here/special_kind_bitmask = 6
 #
 @set here/trap_chance = 35
 #
@@ -75,6 +79,8 @@ reside to escape the troubles of the mortal world.
 Rest well, and do not be troubled by mortal cares.
 #
 @set here/record_id = 5
+#
+@set here/special_kind_bitmask = 70
 #
 @dig/tel grey hills;room_6
 #
@@ -147,6 +153,8 @@ course of action.
 
 #
 @set here/record_id = 12
+#
+@set here/special_kind_bitmask = 2
 #
 @dig/tel The Stone Circle;room_13
 #
@@ -413,6 +421,8 @@ All is silent.
 #
 @set here/record_id = 38
 #
+@set here/special_kind_bitmask = 64
+#
 @dig/tel sewer1;room_39
 #
 @set here/record_id = 39
@@ -526,6 +536,8 @@ a giant boulder.
 #
 @set here/record_id = 48
 #
+@set here/special_kind_bitmask = 2048
+#
 @dig/tel Confusing Passages;room_49
 #
 @set here/record_id = 49
@@ -544,6 +556,8 @@ examination indicates that the writings are in a variety of languages.
 #
 @set here/record_id = 51
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Mead Hall Basement;room_52
 #
 @desc
@@ -558,6 +572,8 @@ Sounds of singing and revelry drift down the stairs from above.
 @dig/tel Lugh's Hall;room_53
 #
 @set here/record_id = 53
+#
+@set here/special_kind_bitmask = 2048
 #
 @dig/tel Victory Stone;room_54
 #
@@ -600,6 +616,8 @@ not seem to notice you as you stand here, completely out of your
 element.
 #
 @set here/record_id = 57
+#
+@set here/special_kind_bitmask = 1
 #
 @set here/trap_chance = 30
 #
@@ -697,6 +715,8 @@ dais with a book opened and chained to the floor upon it.
 @dig/tel Riverbank;room_66
 #
 @set here/record_id = 66
+#
+@set here/special_kind_bitmask = 1
 #
 @dig/tel Overgrown Trail;room_67
 #
@@ -817,6 +837,8 @@ among the goods.
 #
 @set here/record_id = 77
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Freak Street;room_78
 #
 @desc
@@ -836,6 +858,8 @@ of where you are, through a swirling time-dimension vortex, to the place
 where you will be afterwards...the Realm!
 #
 @set here/record_id = 79
+#
+@set here/special_kind_bitmask = 2
 #
 @set here/trap_chance = 10
 #
@@ -918,6 +942,8 @@ makes his arrows, while burly smiths hammer out swords and spears.
 
 #
 @set here/record_id = 85
+#
+@set here/special_kind_bitmask = 1
 #
 @dig/tel Vegetable Market;room_86
 #
@@ -1076,6 +1102,8 @@ the items for sale here might be used for.
 #
 @set here/record_id = 102
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Fortress alley;room_103
 #
 @set here/record_id = 103
@@ -1096,6 +1124,8 @@ phenomenon. Truly, you think, this is no ordinary lake...
 @dig/tel Fortress alley;room_105
 #
 @set here/record_id = 105
+#
+@set here/special_kind_bitmask = 1024
 #
 @dig/tel Druid Palace Gates;room_106
 #
@@ -1344,6 +1374,8 @@ is about to begin another tale...
 #
 @set here/record_id = 124
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel Druid Archives;room_125
 #
 @desc
@@ -1416,6 +1448,8 @@ of foreign articles.
 #
 @set here/record_id = 129
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel House of Red Branch;room_130
 #
 @desc
@@ -1428,6 +1462,8 @@ Palace. A small cooking fire is usually kept smoldering, and the smell
 of roasting meat fills the room.
 #
 @set here/record_id = 130
+#
+@set here/special_kind_bitmask = 2048
 #
 @dig/tel Nuada's Silver Hall;room_131
 #
@@ -1556,6 +1592,8 @@ in a pleasing waterfall.
 #
 @set here/record_id = 141
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel Top of Waterfall;room_142
 #
 @desc
@@ -1594,6 +1632,8 @@ As you approach to investigate, the coals in the forge's heart begin to
 glow with a faint green light. You can feel no heat, however.
 #
 @set here/record_id = 144
+#
+@set here/special_kind_bitmask = 257
 #
 @dig/tel Chamber of Echoes;room_145
 #
@@ -1740,6 +1780,8 @@ at all times.
 #
 @set here/record_id = 156
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel Hall of 1000 Spears;room_157
 #
 @desc
@@ -1868,6 +1910,8 @@ An enterprising man might make due with one of these as a weapon.
 #
 @set here/record_id = 165
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Vitae Arma Via;room_166
 #
 @desc
@@ -1954,6 +1998,8 @@ piles. A few items of gold and silver are also on display here.
 #
 @set here/record_id = 171
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Monstrous Bellows;room_172
 #
 @desc
@@ -1965,6 +2011,8 @@ As the bellows are pumped, you can here the loud sound of rushing air. The
 grunts of the slaves also accompany the rhythmic motion.
 #
 @set here/record_id = 172
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Humongous Forge;room_173
 #
@@ -2119,6 +2167,8 @@ in bondage here.
 #
 @set here/record_id = 184
 #
+@set here/special_kind_bitmask = 2048
+#
 @dig/tel Feasting Hall;room_185
 #
 @desc
@@ -2143,6 +2193,8 @@ and a jug of wine.
 An open path allows passage straight through the room.
 #
 @set here/record_id = 186
+#
+@set here/special_kind_bitmask = 2048
 #
 @dig/tel Lower Ascension;room_187
 #
@@ -2499,6 +2551,8 @@ your weapon is painful and cumbersome.
 #
 @set here/record_id = 212
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel Ice Wastes;room_213
 #
 @desc
@@ -2718,6 +2772,8 @@ This room smells of chemicals, fire, burning flesh, and death.
 #
 @set here/record_id = 228
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Black Cauldron;room_229
 #
 @desc
@@ -2740,6 +2796,8 @@ you to descend...
 
 #
 @set here/record_id = 230
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Climbing Stair;room_231
 #
@@ -2951,6 +3009,8 @@ ladders allows access to the dizzying heights of the upper reaches.
 #
 @set here/record_id = 245
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Conjuring Room;room_246
 #
 @desc
@@ -3046,6 +3106,8 @@ of some of the less fortunate parts of the fortress.
 #
 @set here/record_id = 252
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel South Lake Shore;room_253
 #
 @desc
@@ -3057,6 +3119,8 @@ to venture out on the lake. A voice inside you speaks against risking the
 unknown darkness of the woods.
 #
 @set here/record_id = 253
+#
+@set here/special_kind_bitmask = 1
 #
 @dig/tel Abominable Forest;room_254
 #
@@ -3144,6 +3208,8 @@ so big, in fact, that a man could almost stand inside it comfortably.
 
 #
 @set here/record_id = 261
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Thieves Guild;room_262
 #
@@ -3888,6 +3954,8 @@ top down, leaving only blackened stumps.
 #
 @set here/record_id = 324
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Scorched Grove;room_325
 #
 @desc
@@ -4140,6 +4208,8 @@ of rodenthood. The monster rat is several feet tall, and sports
 a brace of sharp teeth. 
 #
 @set here/record_id = 345
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Corridor of Stench;room_346
 #
@@ -4412,13 +4482,19 @@ beautiful objects of Mankind they find.
 #
 @set here/record_id = 366
 #
+@set here/special_kind_bitmask = 68
+#
 @dig/tel Shayol Ghul;room_367
 #
 @set here/record_id = 367
 #
+@set here/special_kind_bitmask = 69
+#
 @dig/tel Arena Entrance;room_368
 #
 @set here/record_id = 368
+#
+@set here/special_kind_bitmask = 2
 #
 @dig/tel Fountain of the Gods;room_369
 #
@@ -4456,6 +4532,8 @@ down the lines, and into your body.
 #
 @set here/record_id = 374
 #
+@set here/special_kind_bitmask = 2048
+#
 @dig/tel Shaded Courtyard;room_375
 #
 @desc
@@ -4478,6 +4556,8 @@ A small, but comfortable, cot is in the corner. Feel welcome to lay
 your weary self down for a rest.
 #
 @set here/record_id = 376
+#
+@set here/special_kind_bitmask = 2048
 #
 @dig/tel Res Ab'tyrr Balcony;room_377
 #
@@ -4637,6 +4717,8 @@ upward.
 #
 @set here/record_id = 387
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel Crocodile Pit;room_388
 #
 @set here/record_id = 388
@@ -4657,6 +4739,8 @@ your attention, as to the curving elephant tusks which accompany the
 door itself, which is made of a white wood.
 #
 @set here/record_id = 389
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Opium Palace;room_390
 #
@@ -4682,6 +4766,8 @@ within the smokey atmosphere.
 #
 @set here/record_id = 391
 #
+@set here/special_kind_bitmask = 2048
+#
 @dig/tel Baths of Xiombarg;room_392
 #
 @desc
@@ -4694,6 +4780,8 @@ Steam drifts from the back of the bath-house, were saunas, and more
 decadent pleasures, are attended to.
 #
 @set here/record_id = 392
+#
+@set here/special_kind_bitmask = 2048
 #
 @dig/tel Steamy Rafters;room_393
 #
@@ -4860,6 +4948,8 @@ city of Gods, Tai-Tastigon.
 #
 @set here/record_id = 403
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Vale of Tai-Tastigon;room_404
 #
 @desc
@@ -4870,6 +4960,8 @@ widens out into a plain, where the city of Tai-Tastigon is situated.
 A path leads to the south, where you can here the crashing of waves.
 #
 @set here/record_id = 404
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel the Tavern Roof;room_405
 #
@@ -5017,6 +5109,8 @@ shape and design form the centerpiece of the back wall.
 #
 @set here/record_id = 418
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Blue Pass;room_419
 #
 @set here/record_id = 419
@@ -5069,6 +5163,8 @@ It is not recommended that you wander through here at night...
 #
 @set here/record_id = 425
 #
+@set here/special_kind_bitmask = 4
+#
 @set here/trap_chance = 25
 #
 @set here/trap_direction = down
@@ -5086,6 +5182,8 @@ Druid, the famed Lord Terminus...
 #
 @set here/record_id = 426
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Dry Moat;room_427
 #
 @desc
@@ -5093,6 +5191,8 @@ The dreaded Wyldibeast pops up, clubs you over the head, and carries
 you off!!
 #
 @set here/record_id = 427
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Mountain Gate;room_428
 #
@@ -5108,6 +5208,8 @@ The gate holds a worn inscription:
 #
 @set here/record_id = 428
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Common Room;room_429
 #
 @desc
@@ -5119,6 +5221,8 @@ and food for tired travellers.
 
 #
 @set here/record_id = 429
+#
+@set here/special_kind_bitmask = 2048
 #
 @dig/tel Dark Chambers;room_430
 #
@@ -5241,6 +5345,8 @@ wounds taken in battle..
 You are welcome to join them.
 #
 @set here/record_id = 438
+#
+@set here/special_kind_bitmask = 2048
 #
 @dig/tel Haunted Lands;room_439
 #
@@ -5430,6 +5536,8 @@ coin in return.
 #
 @set here/record_id = 452
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Death Chamber;room_453
 #
 @set here/record_id = 453
@@ -5441,6 +5549,8 @@ coin in return.
 @dig/tel Spartican Shop;room_455
 #
 @set here/record_id = 455
+#
+@set here/special_kind_bitmask = 1
 #
 @dig/tel Blue Stone Chamber;room_456
 #
@@ -5466,6 +5576,8 @@ entombed personage you might expect to find here.
 #
 @set here/record_id = 457
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel High Dudgeon;room_458
 #
 @set here/record_id = 458
@@ -5473,6 +5585,8 @@ entombed personage you might expect to find here.
 @dig/tel Blood Cavern;room_459
 #
 @set here/record_id = 459
+#
+@set here/special_kind_bitmask = 64
 #
 @dig/tel Hall of Snow;room_460
 #
@@ -5542,6 +5656,8 @@ the temperature of the room drops suddenly!
 #
 @set here/record_id = 464
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Vafthrudnir's Hall;room_465
 #
 @set here/record_id = 465
@@ -5561,6 +5677,8 @@ low in the air here, and a coldness deeper than anything you have ever
 felt reaches into your bones.
 #
 @set here/record_id = 466
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel The Rime Tree;room_467
 #
@@ -5595,6 +5713,8 @@ next time you will heed the warning.
 #
 @set here/record_id = 469
 #
+@set here/special_kind_bitmask = 4
+#
 @set here/trap_chance = 10
 #
 @set here/trap_direction = down
@@ -5616,6 +5736,8 @@ Type get, to see what equipment is available here.
 #
 @set here/record_id = 470
 #
+@set here/special_kind_bitmask = 7
+#
 @dig/tel Golden Doors;room_471
 #
 @desc
@@ -5631,6 +5753,8 @@ hostile, which you will meet. By typing HELP or '?' you will get a listing
 of available commands and their usage.
 #
 @set here/record_id = 471
+#
+@set here/special_kind_bitmask = 2
 #
 @dig/tel Carpeted Concourse;room_472
 #
@@ -5648,6 +5772,8 @@ for sale here. The key mentioned is for sale for 0 gold.]
 #
 @set here/record_id = 472
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Silver Chamber;room_473
 #
 @desc
@@ -5659,6 +5785,8 @@ a chair here.
 a list of what items in the room may be examined.]
 #
 @set here/record_id = 473
+#
+@set here/special_kind_bitmask = 2
 #
 @dig/tel Trial by Combat;room_474
 #
@@ -5676,6 +5804,8 @@ The name can be abbreviated with the fewest unique initials.]
 #
 @set here/record_id = 474
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Lair of the Beast;room_475
 #
 @desc
@@ -5692,6 +5822,8 @@ ask him properly by mentioning the correct keyword.] (demonlord)
 #
 @set here/record_id = 475
 #
+@set here/special_kind_bitmask = 257
+#
 @dig/tel Long Tunnel;room_476
 #
 @desc
@@ -5704,6 +5836,8 @@ Looking down you see a shiny object.
 [Hint: pick up the object and examine it.]
 #
 @set here/record_id = 476
+#
+@set here/special_kind_bitmask = 1
 #
 @dig/tel Street of Ribbons;room_477
 #
@@ -5725,6 +5859,8 @@ transformed!
 #
 @set here/record_id = 478
 #
+@set here/special_kind_bitmask = 2
+#
 @dig/tel Introverted Chamber;room_479
 #
 @desc
@@ -5737,6 +5873,8 @@ attention away from the necessary introspection.
 [Hint: Check your stats]
 #
 @set here/record_id = 479
+#
+@set here/special_kind_bitmask = 2
 #
 @dig/tel Gold Alley;room_480
 #
@@ -5785,6 +5923,8 @@ departed.
 #
 @set here/record_id = 484
 #
+@set here/special_kind_bitmask = 4
+#
 @set here/trap_chance = 30
 #
 @set here/trap_direction = down
@@ -5799,6 +5939,8 @@ where you are.  Perhaps it was not wise to come in here after all.  Maybe
 next time you will heed the warning.
 #
 @set here/record_id = 485
+#
+@set here/special_kind_bitmask = 4
 #
 @set here/trap_chance = 30
 #
@@ -5815,6 +5957,8 @@ next time you will heed the warning.
 #
 @set here/record_id = 486
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel the maze;room_487
 #
 @desc
@@ -5823,6 +5967,8 @@ where you are.  Perhaps it was not wise to come in here after all.  Maybe
 next time you will heed the warning.
 #
 @set here/record_id = 487
+#
+@set here/special_kind_bitmask = 4
 #
 @set here/trap_chance = 1
 #
@@ -5838,6 +5984,8 @@ where you are.  Perhaps it was not wise to come in here after all.  Maybe
 next time you will heed the warning.
 #
 @set here/record_id = 488
+#
+@set here/special_kind_bitmask = 4
 #
 @set here/trap_chance = 5
 #
@@ -5856,6 +6004,8 @@ ON
 #
 @set here/record_id = 489
 #
+@set here/special_kind_bitmask = 4
+#
 @set here/trap_chance = 5
 #
 @set here/trap_direction = down
@@ -5870,6 +6020,8 @@ where you are.  Perhaps it was not wise to come in here after all.  Maybe
 next time you will heed the warning.
 #
 @set here/record_id = 490
+#
+@set here/special_kind_bitmask = 4
 #
 @set here/trap_chance = 30
 #
@@ -5886,6 +6038,8 @@ next time you will heed the warning.
 #
 @set here/record_id = 491
 #
+@set here/special_kind_bitmask = 4
+#
 @set here/trap_chance = 2
 #
 @set here/trap_direction = down
@@ -5900,6 +6054,8 @@ where you are.  Perhaps it was not wise to come in here after all.  Maybe
 next time you will heed the warning.
 #
 @set here/record_id = 492
+#
+@set here/special_kind_bitmask = 4
 #
 @set here/trap_chance = 4
 #
@@ -5916,6 +6072,8 @@ next time you will heed the warning.
 #
 @set here/record_id = 493
 #
+@set here/special_kind_bitmask = 4
+#
 @set here/trap_chance = 30
 #
 @set here/trap_direction = down
@@ -5930,6 +6088,8 @@ where you are.  Perhaps it was not wise to come in here after all.  Maybe
 next time you will heed the warning.
 #
 @set here/record_id = 494
+#
+@set here/special_kind_bitmask = 4
 #
 @set here/trap_chance = 1
 #
@@ -5946,6 +6106,8 @@ next time you will heed the warning.
 #
 @set here/record_id = 495
 #
+@set here/special_kind_bitmask = 4
+#
 @set here/trap_chance = 1
 #
 @set here/trap_direction = down
@@ -5960,6 +6122,8 @@ where you are.  Perhaps it was not wise to come in here after all.  Maybe
 next time you will heed the warning.
 #
 @set here/record_id = 496
+#
+@set here/special_kind_bitmask = 4
 #
 @set here/trap_chance = 1
 #
@@ -5984,6 +6148,8 @@ crescent moon has been carved into the rocky floor.
 @dig/tel ====>In Op's Jail;room_498
 #
 @set here/record_id = 498
+#
+@set here/special_kind_bitmask = 2054
 #
 @dig/tel 5 Chat room;room_499
 #
@@ -6010,6 +6176,8 @@ The seaweed sways back and forth slightly with the slight current of
 the lake, induced by the Wyrmraggen River.
 #
 @set here/record_id = 501
+#
+@set here/special_kind_bitmask = 256
 #
 @set here/trap_chance = 35
 #
@@ -6060,6 +6228,8 @@ The colums appear to be covered in glistening scales of blue and gold,
 which shimmer and twitch as if the scales of a living fish..
 #
 @set here/record_id = 504
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Room of Shells;room_505
 #
@@ -6562,6 +6732,8 @@ only the faint hint of a wind.
 #
 @set here/record_id = 551
 #
+@set here/special_kind_bitmask = 4
+#
 @set here/trap_chance = 5
 #
 @set here/trap_direction = up
@@ -6581,6 +6753,8 @@ Trackless wastes, and shifting sand dunes lie all about you, disturbed by
 only the faint hint of a wind.
 #
 @set here/record_id = 552
+#
+@set here/special_kind_bitmask = 4
 #
 @set here/trap_chance = 15
 #
@@ -6602,6 +6776,8 @@ only the faint hint of a wind.
 #
 @set here/record_id = 553
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Sighing Wastes;room_554
 #
 @desc
@@ -6616,6 +6792,8 @@ only the faint hint of a wind.
 #
 @set here/record_id = 554
 #
+@set here/special_kind_bitmask = 8
+#
 @dig/tel Sighing Wastes;room_555
 #
 @desc
@@ -6629,6 +6807,8 @@ Trackless wastes, and shifting sand dunes lie all about you, disturbed by
 only the faint hint of a wind.
 #
 @set here/record_id = 555
+#
+@set here/special_kind_bitmask = 8
 #
 @dig/tel Walls of Water;room_556
 #
@@ -6645,6 +6825,8 @@ a chasm of immense breadth and depth. You are trapped now before the
 walls of water and the infinite chasm...
 #
 @set here/record_id = 556
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Pyramid's Shadow;room_557
 #
@@ -6735,6 +6917,8 @@ No sounds can be heard here, it is quiet; as quiet as death itself.
 #
 @set here/record_id = 563
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Jhurvali Oporus;room_564
 #
 @desc
@@ -6747,6 +6931,8 @@ frigid mist rises off the pool, dancing and swirling before you. As you
 approach, the form of a sword slowly forms in the liquid metal...
 #
 @set here/record_id = 564
+#
+@set here/special_kind_bitmask = 1
 #
 @dig/tel Red Granite Passage;room_565
 #
@@ -6773,6 +6959,8 @@ heat.
 
 #
 @set here/record_id = 568
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Battlements of Dawn;room_569
 #
@@ -6806,6 +6994,8 @@ brilliant fire the runes that they touch.
 #
 @set here/record_id = 571
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Implement Chamber;room_572
 #
 @desc
@@ -6818,6 +7008,8 @@ the equipment here with a casual air.
 #
 @set here/record_id = 572
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Fezgar's Curiosities;room_573
 #
 @desc
@@ -6827,6 +7019,8 @@ though lighten the purse. Items of luxury and opulence can be bought
 for the right price, or sold for whatever they might be worth.
 #
 @set here/record_id = 573
+#
+@set here/special_kind_bitmask = 1
 #
 @dig/tel Symbala Coatal;room_574
 #
@@ -7199,9 +7393,13 @@ in these forsaken chambers, aptly called the Dungeons of Solace.
 #
 @set here/record_id = 624
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel Dungeons of Solace;room_625
 #
 @set here/record_id = 625
+#
+@set here/special_kind_bitmask = 64
 #
 @set here/trap_chance = 50
 #
@@ -7218,6 +7416,8 @@ Tyviar the Ogre is here.
 #
 @set here/record_id = 626
 #
+@set here/special_kind_bitmask = 256
+#
 @set here/trap_chance = 50
 #
 @set here/trap_direction = down
@@ -7227,6 +7427,8 @@ Tyviar the Ogre is here.
 @dig/tel Lotrar's Trap;room_627
 #
 @set here/record_id = 627
+#
+@set here/special_kind_bitmask = 256
 #
 @set here/trap_chance = 45
 #
@@ -7238,6 +7440,8 @@ Tyviar the Ogre is here.
 #
 @set here/record_id = 628
 #
+@set here/special_kind_bitmask = 64
+#
 @set here/trap_chance = 88
 #
 @set here/trap_direction = down
@@ -7247,6 +7451,8 @@ Tyviar the Ogre is here.
 @dig/tel Higett's Hall;room_629
 #
 @set here/record_id = 629
+#
+@set here/special_kind_bitmask = 256
 #
 @set here/trap_chance = 45
 #
@@ -7263,6 +7469,8 @@ Drassoff the Ogre-mage is here.
 #
 @set here/record_id = 630
 #
+@set here/special_kind_bitmask = 64
+#
 @set here/trap_chance = 65
 #
 @set here/trap_direction = down
@@ -7273,6 +7481,8 @@ Drassoff the Ogre-mage is here.
 #
 @set here/record_id = 631
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel Lair of Bruniak;room_632
 #
 @desc
@@ -7281,6 +7491,8 @@ Bruniak the Gnome king is here.
 
 #
 @set here/record_id = 632
+#
+@set here/special_kind_bitmask = 256
 #
 @set here/trap_chance = 65
 #
@@ -7311,6 +7523,8 @@ Nystrek the bugbear is here.
 #
 @set here/record_id = 635
 #
+@set here/special_kind_bitmask = 64
+#
 @dig/tel Lair of Jorlock;room_636
 #
 @desc
@@ -7319,6 +7533,8 @@ Jorlock the Giant is here.
 
 #
 @set here/record_id = 636
+#
+@set here/special_kind_bitmask = 256
 #
 @set here/trap_chance = 85
 #
@@ -7335,6 +7551,8 @@ Ippulet the Beastmaster is here.
 #
 @set here/record_id = 637
 #
+@set here/special_kind_bitmask = 256
+#
 @set here/trap_chance = 50
 #
 @set here/trap_direction = down
@@ -7345,6 +7563,8 @@ Ippulet the Beastmaster is here.
 #
 @set here/record_id = 638
 #
+@set here/special_kind_bitmask = 64
+#
 @set here/trap_chance = 35
 #
 @set here/trap_direction = down
@@ -7354,6 +7574,8 @@ Ippulet the Beastmaster is here.
 @dig/tel Procriar's Hall;room_639
 #
 @set here/record_id = 639
+#
+@set here/special_kind_bitmask = 64
 #
 @set here/trap_chance = 65
 #
@@ -7369,6 +7591,8 @@ Orguzar the Fire Giant is here.
 
 #
 @set here/record_id = 640
+#
+@set here/special_kind_bitmask = 256
 #
 @set here/trap_chance = 65
 #
@@ -7395,6 +7619,8 @@ silence of horrors that inhabits the rest of this place.
 #
 @set here/record_id = 642
 #
+@set here/special_kind_bitmask = 2
+#
 @dig/tel Well Bottom;room_643
 #
 @desc
@@ -7404,6 +7630,8 @@ silence of horrors that lies elsewhere in the Dungeons of Solace.
 #
 @set here/record_id = 643
 #
+@set here/special_kind_bitmask = 2
+#
 @dig/tel Well Bottom;room_644
 #
 @desc
@@ -7412,6 +7640,8 @@ of fresh air, and a sound to interrupt the silence of horrors which
 fill the rest of this place.
 #
 @set here/record_id = 644
+#
+@set here/special_kind_bitmask = 2
 #
 @dig/tel Chamber of Hues;room_645
 #
@@ -7439,6 +7669,8 @@ of colors and visions which turn and change almost in response to
 your thoughts.
 #
 @set here/record_id = 646
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Cave Entrance;room_647
 #
@@ -7469,6 +7701,8 @@ entrance of some maze of labyrinth.
 #
 @set here/record_id = 649
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Temple of Death;room_650
 #
 @desc
@@ -7483,6 +7717,8 @@ Slowly, a darker presence in the blackness can be felt in front of you.
 Your terror mounts...
 #
 @set here/record_id = 650
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Passages of Mummra;room_651
 #
@@ -7500,6 +7736,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 651
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Creeper;room_652
 #
 @desc
@@ -7515,6 +7753,8 @@ chambers are devoted to each figure, only 4 were deemed worthy enough to
 be honored by this section of the pyramid. 
 #
 @set here/record_id = 652
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Passages of Krotche;room_653
 #
@@ -7532,6 +7772,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 653
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Tutt;room_654
 #
 @desc
@@ -7547,6 +7789,8 @@ chambers are devoted to each figure, only 4 were deemed worthy enough to
 be honored by this section of the pyramid. 
 #
 @set here/record_id = 654
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Passages of Mummra;room_655
 #
@@ -7564,6 +7808,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 655
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Creeper;room_656
 #
 @desc
@@ -7579,6 +7825,8 @@ chambers are devoted to each figure, only 4 were deemed worthy enough to
 be honored by this section of the pyramid. 
 #
 @set here/record_id = 656
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Passages of Krotche;room_657
 #
@@ -7596,6 +7844,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 657
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Tutt;room_658
 #
 @desc
@@ -7611,6 +7861,8 @@ chambers are devoted to each figure, only 4 were deemed worthy enough to
 be honored by this section of the pyramid. 
 #
 @set here/record_id = 658
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Passages of Mummra;room_659
 #
@@ -7644,6 +7896,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 660
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Krotche;room_661
 #
 @desc
@@ -7659,6 +7913,8 @@ chambers are devoted to each figure, only 4 were deemed worthy enough to
 be honored by this section of the pyramid. 
 #
 @set here/record_id = 661
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Passages of Tutt;room_662
 #
@@ -7676,6 +7932,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 662
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Mummra;room_663
 #
 @desc
@@ -7691,6 +7949,8 @@ chambers are devoted to each figure, only 4 were deemed worthy enough to
 be honored by this section of the pyramid. 
 #
 @set here/record_id = 663
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Passages of Creeper;room_664
 #
@@ -7708,6 +7968,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 664
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Krotche;room_665
 #
 @desc
@@ -7723,6 +7985,8 @@ chambers are devoted to each figure, only 4 were deemed worthy enough to
 be honored by this section of the pyramid. 
 #
 @set here/record_id = 665
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Passages of Tutt;room_666
 #
@@ -7740,6 +8004,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 666
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Mummra;room_667
 #
 @desc
@@ -7756,6 +8022,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 667
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Tutt;room_668
 #
 @desc
@@ -7763,6 +8031,8 @@ You see before you a goblin wearing an oversized green turtleneck.
 *
 #
 @set here/record_id = 668
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Passages of Krotche;room_669
 #
@@ -7780,6 +8050,8 @@ be honored by this section of the pyramid.
 #
 @set here/record_id = 669
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Passages of Creeper;room_670
 #
 @desc
@@ -7795,6 +8067,8 @@ chambers are devoted to each figure, only 4 were deemed worthy enough to
 be honored by this section of the pyramid. 
 #
 @set here/record_id = 670
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Sandstone Steps;room_671
 #
@@ -7847,6 +8121,8 @@ you have just left.
 #
 @set here/record_id = 674
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Behind the Mirror;room_675
 #
 @desc
@@ -7893,6 +8169,8 @@ and drowning you by some unseen force. You move like an ant across the
 floor of the sea, protected by powers beyond your comprehension.
 #
 @set here/record_id = 678
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Towering Gates;room_679
 #
@@ -7969,6 +8247,8 @@ only ancient blood stains upon the floor and walls.
 #
 @set here/record_id = 684
 #
+@set here/special_kind_bitmask = 256
+#
 @dig/tel Gallery of Hopes;room_685
 #
 @set here/record_id = 685
@@ -8002,6 +8282,8 @@ to a hidden breeze. The guardian of this chamber will stand underneath
 the lamp, awaiting the next challenge, and his next foes.
 #
 @set here/record_id = 687
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Central Chamber;room_688
 #
@@ -8100,6 +8382,8 @@ It is too dark in here. You can't see a thing!
 #
 @set here/record_id = 695
 #
+@set here/special_kind_bitmask = 4
+#
 @dig/tel Cave;room_696
 #
 @desc
@@ -8140,9 +8424,13 @@ It is too dark in here.  You can't see a thing!
 #
 @set here/record_id = 699
 #
+@set here/special_kind_bitmask = 64
+#
 @dig/tel Cave;room_700
 #
 @set here/record_id = 700
+#
+@set here/special_kind_bitmask = 4
 #
 @dig/tel Cave;room_701
 #
@@ -8376,6 +8664,8 @@ contains all their secret loot.
 #
 @set here/record_id = 723
 #
+@set here/special_kind_bitmask = 70
+#
 @dig/tel West Wing;room_724
 #
 @desc
@@ -8450,6 +8740,8 @@ You may select a different class from here if you wish.
 #
 @set here/record_id = 731
 #
+@set here/special_kind_bitmask = 66
+#
 @dig/tel marble columns;room_732
 #
 @desc
@@ -8458,6 +8750,8 @@ of invaders.  They were summoned by a great sorceror to serve the castle and
 to protect it.
 #
 @set here/record_id = 732
+#
+@set here/special_kind_bitmask = 16
 #
 @dig/tel Covered path;room_733
 #
@@ -8523,6 +8817,8 @@ served for meditation for the monks, and priest that stayed here.
 #
 @set here/record_id = 742
 #
+@set here/special_kind_bitmask = 6
+#
 @dig/tel Clandestine Hall;room_743
 #
 @desc
@@ -8551,6 +8847,8 @@ weapons, are different than ones in the lower lands, and much older.
 #
 @set here/record_id = 745
 #
+@set here/special_kind_bitmask = 1
+#
 @dig/tel Caved in room;room_746
 #
 @set here/record_id = 746
@@ -8562,6 +8860,8 @@ Make shift beds, lie on the floor, as with old rusted weapons. This room
 seems to be the living area of the Kings personal guard.
 #
 @set here/record_id = 747
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel sentry2 quarters;room_748
 #
@@ -8597,6 +8897,8 @@ walls making visibility possible.  A faint noise of running water can
 be heard.  It seems as though the water is down and behind the wall.
 #
 @set here/record_id = 751
+#
+@set here/special_kind_bitmask = 256
 #
 @dig/tel Sanity ward;room_752
 #

@@ -1,5 +1,5 @@
 import random
-from gamerules.room_kind import RoomKind
+from gamerules.special_room_kind import SpecialRoomKind
 
 
 MAX_HIDE = 15
@@ -44,12 +44,12 @@ def hide(hider):
 
   # check for no-hide room
   room = hider.location
-  if room.db.room_kind == RoomKind.NO_HIDE:
+  if room.is_special_kind(SpecialRoomKind.NO_HIDE):
     hider.msg("There is no room to hide here.")
     return
 
   # check for hard-to-hide room
-  if (room.db.room_kind == RoomKind.HARD_TO_HIDE
+  if (room.is_special_kind(SpecialRoomKind.HARD_TO_HIDE)
     and random.randint(0, 100) > 20):
     hider.msg("You couldn't find a place to hide.")
     return

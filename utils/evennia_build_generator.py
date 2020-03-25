@@ -6,7 +6,6 @@ sys.path.insert(0, '..')
 
 from gamerules.exit_effect_kind import ExitEffectKind
 from gamerules.exit_kind import ExitKind
-from gamerules.room_kind import RoomKind
 from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_integer
 
 
@@ -30,6 +29,9 @@ def make_room(roomdesc, descs):
       print('#')
   print(f'@set here/record_id = {record_id}')
   print('#')
+  if roomdesc["spc_room"]:
+    print(f'@set here/special_kind_bitmask = {roomdesc["spc_room"]}')
+    print('#')
   if roomdesc["trap_chance"] and roomdesc["trap_direction"]:
     print(f'@set here/trap_chance = {roomdesc["trap_chance"]}')
     print('#')
