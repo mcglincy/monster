@@ -20,6 +20,7 @@ from gamerules.combat import mob_death
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.object_kind import ObjectKind
+from gamerules.special_room_kind import SpecialRoomKind
 from userdefined.models import Spell
 
 
@@ -316,8 +317,12 @@ class Equipment(Object):
     self.db.xp = 0
 
   def at_drop(self, dropper, **kwargs):
-    if self.db.drop_destroy:
+    if (self.db.drop_destroy
+      or dropper.location.is_special_kind(SpecialRoomKind.OBJECT_DESTROY)):
      dropper.msg(f"The {self.key} was destroyed.")
+     dropper.location.msg_contents(
+      f"The {self.key} was destroyed when {dropper.key} dropped it.",
+      exclude=[dropper])
      self.delete()
 
   def is_weapon(self):
