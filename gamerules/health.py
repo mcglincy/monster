@@ -1,9 +1,8 @@
 from evennia import TICKER_HANDLER
 
-
-# TODO: figure out proper ticker timing
+# A "tick" in old monster was 0.1 seconds.
 # Tick.TkHealth := GetTicks + 300;
-HEALTH_TICK = 3 * 10
+HEALTH_TICK_SECONDS = 30
 MIN_HEALTH = 0
 
 
@@ -45,7 +44,7 @@ def health_msg(subject, health):
 
 def add_health_ticker(subject):
   id_string = f"tick_health_{subject.key}"
-  TICKER_HANDLER.add(HEALTH_TICK, tick_health, id_string, False, subject)
+  TICKER_HANDLER.add(HEALTH_TICK_SECONDS, tick_health, id_string, False, subject)
 
 
 def tick_health(subject):
