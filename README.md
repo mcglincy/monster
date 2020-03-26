@@ -73,6 +73,8 @@ The running game server is up at http://www.monstermud.com.
   * Various global player messages
     * E.g., "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm." "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
 * Map/Rooms
+  * Room owners / customizations
+    * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing and extensive builder commands)
   * Special room kinds: market, treasure drop, monster generator, monster lair, heal
   * Move silent between rooms
   * Exit types
@@ -107,4 +109,5 @@ The running game server is up at http://www.monstermud.com.
   * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
 * Randoms (aka mobs)
   * [a whole bunch of stuff]
+
   
