@@ -15,6 +15,7 @@ The running game server is up at http://www.monstermud.com.
   * Classes
   * Freeze/delays, queued commands
   * Move speed
+  * Recover health and mana over time
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
   * Exit descriptions
@@ -86,7 +87,6 @@ The running game server is up at http://www.monstermud.com.
   * Hidden/searchable objects
   * Object damage
 * Combat
-  * Heal over time
   * Drop objects when hit
   * Punch
   * Get 50 gold upon death
