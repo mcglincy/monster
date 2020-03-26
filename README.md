@@ -96,6 +96,8 @@ The running game server is up at http://www.monstermud.com.
   * Bombs and *lob* command
   * Poison
 * Commands
+  * Make some built-in Evennia commands queueable/blocking (look, say, whisper, etc)
+  * Remove any Evennia commands we don't want
   * hidesay
   * *use* command
   * *block* command
@@ -103,7 +105,6 @@ The running game server is up at http://www.monstermud.com.
   * Redirect *pose* to *express*
   * Atmosphere
   * Edit self description
-  * Remove any Evennia commands we don't want
   * Highlighting for pub messages
 * Spells
   * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
