@@ -42,7 +42,7 @@ class CmdSheet(QueuedCommand):
     table.add_row(f"Exp/level    : {character.db.xp}/{character.level}")
     table.add_row(f"Health/Max   : {int(character.db.health)}/{character.max_health}")
     table.add_row(f"Mana/Max     : {character.db.mana}/{character.max_mana}")
-    table.add_row(f"Status       :")
+    table.add_row(f"Status       : {'' if not character.is_poisoned else 'poisoned'}")
     table.add_row(f"Move delay   : {character.move_speed}")
     table.add_row(f"Move silent  : {character.total_move_silent}%")
     table.add_row(f"Steal        : {character.total_steal}%")

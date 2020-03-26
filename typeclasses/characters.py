@@ -56,6 +56,8 @@ class Character(DefaultCharacter):
     self.ndb.active_command = None
     self.ndb.command_queue = deque()
     self.ndb.frozen_until = 0
+    self.ndb.hiding = 0
+    self.ndb.poisoned = False
     if self.db.character_class_key is None:
       self.db.character_class_key = "ghost"
       self.ndb.character_class = None
@@ -74,14 +76,13 @@ class Character(DefaultCharacter):
     if self.db.equipment is None:
       # dict of {EquipmentSlot:object}
       self.db.equipment = {}
-    if self.ndb.hiding is None:
-      self.ndb.hiding = 0
 
   def at_init(self):
     self.ndb.active_command = None
     self.ndb.command_queue = deque()
     self.ndb.frozen_until = 0
     self.ndb.hiding = 0
+    self.ndb.poisoned = False
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -244,7 +245,11 @@ class Character(DefaultCharacter):
 
   @property
   def is_hiding(self):
-    return self.ndb.hiding
+    return self.ndb.hiding > 0
+
+  @property
+  def is_poisoned(self):
+    return self.ndb.poisoned
 
   @property
   def attack_speed(self):
