@@ -1,4 +1,9 @@
+from evennia import TICKER_HANDLER
 
+
+# TODO: figure out proper ticker timing
+# Tick.TkHealth := GetTicks + 300;
+HEALTH_TICK = 3 * 10
 MIN_HEALTH = 0
 
 
@@ -36,3 +41,17 @@ def health_msg(subject, health):
     return f"{subject} {to_be} near death."
   else:
     return f"{subject} {to_be} dead."
+
+
+def add_health_ticker(subject):
+  id_string = f"tick_health_{subject.key}"
+  TICKER_HANDLER.add(HEALTH_TICK, tick_health, id_string, False, subject)
+
+
+def tick_health(subject):
+  change = int((subject.max_health - subject.db.health) * (subject.heal_speed / 1000))
+  change = max(change, 5)  
+  if subject.is_poisoned:
+    subject.gain_health(-change)
+  elif subject.db.health < subject.max_health:
+    subject.gain_health(change)

@@ -11,14 +11,14 @@ import time
 from collections import deque
 from random import randint
 
-from evennia import DefaultCharacter, search_object
+from evennia import DefaultCharacter, search_object, TICKER_HANDLER
 from evennia.commands import cmdhandler
 
 from gamerules.alignment import Alignment
 from gamerules.combat import character_death
 from gamerules.equipment_slot import EquipmentSlot
-from gamerules.health import MIN_HEALTH, health_msg
-from gamerules.mana import MIN_MANA
+from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker
+from gamerules.mana import MIN_MANA, add_mana_ticker
 from gamerules.xp import MIN_XP, level_from_xp
 from userdefined.models import CharacterClass
 
@@ -83,6 +83,10 @@ class Character(DefaultCharacter):
     self.ndb.frozen_until = 0
     self.ndb.hiding = 0
     self.ndb.poisoned = False
+    # TODO: verify whether this should be in at_object_creation()
+    add_health_ticker(self)
+    add_mana_ticker(self)
+
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -244,6 +248,11 @@ class Character(DefaultCharacter):
     return self.base_plus_level_attr("base_mana", "level_mana")
 
   @property
+  def is_frozen(self):
+    now = time.time()
+    return self.ndb.frozen_until > now
+
+  @property
   def is_hiding(self):
     return self.ndb.hiding > 0
 
@@ -261,9 +270,8 @@ class Character(DefaultCharacter):
     return self.class_plus_equipped_attr("move_speed")
 
   @property
-  def is_frozen(self):
-    now = time.time()
-    return self.ndb.frozen_until > now
+  def heal_speed(self):
+    return self.class_plus_equipped_attr("heal_speed")
 
   # our damage, armor, etc is the sum of our equipped objects
 

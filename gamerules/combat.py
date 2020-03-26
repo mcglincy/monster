@@ -168,8 +168,18 @@ def character_death(victim, killer=None):
   # reduce victim xp/level
   set_xp(victim, int(victim.db.xp / 2))
 
-  # victim gets back a bit of health
+  # clear/reset various stats
+  reset_victim_state(victim)
+
+
+def reset_victim_state(victim):
   victim.db.health = 1
+  victim.db.mana = 0
+  victim.ndb.active_command = None
+  victim.ndb.command_queue.clear()
+  victim.ndb.frozen_until = 0
+  victim.ndb.hiding = 0
+  victim.ndb.poisoned = False
 
 
 def mob_death(mob, killer=None):
