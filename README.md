@@ -16,6 +16,8 @@ The running game server is up at http://www.monstermud.com.
   * Freeze/delays, queued commands
   * Move speed
   * Recover health and mana over time
+  * Various global player messages
+    * E.g., "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""  
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
   * Exit descriptions
@@ -72,8 +74,7 @@ The running game server is up at http://www.monstermud.com.
 ## What's not implemented yet
 
 * Character
-  * Various global player messages
-    * E.g., "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm." "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
+  * ...
 * Map/Rooms
   * Room owners / customizations
     * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing and extensive builder commands)
