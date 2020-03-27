@@ -23,6 +23,7 @@ from commands.equipment import CmdEquip, CmdUnequip
 from commands.hiding import CmdHide, CmdReveal, CmdSearch
 from commands.misc import CmdBrief, CmdDot, CmdWho
 from commands.spells import CmdCast, CmdLearn
+from commands.talk import CmdShout
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -57,6 +58,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdRest())
         self.add(CmdReveal())
         self.add(CmdSheet())
+        self.add(CmdShout())
         self.add(CmdSearch())
         self.add(CmdSell())
         self.add(CmdUnequip())

@@ -52,6 +52,7 @@ The running game server is up at http://www.monstermud.com.
   * *brief*
   * *name* 
   * *hide* / *reveal* / *search*
+  * *shout* (easy replacement for thundering voice)
 * Commerce
   * Simple merchant in-room object
   * *buy* and *sell* commands
@@ -98,6 +99,7 @@ The running game server is up at http://www.monstermud.com.
 * Commands
   * Make some built-in Evennia commands queueable/blocking (look, say, whisper, etc)
   * Remove any Evennia commands we don't want
+  * delay/pause on rest command
   * hidesay
   * *use* command
   * *block* command
@@ -106,6 +108,7 @@ The running game server is up at http://www.monstermud.com.
   * Atmosphere
   * Edit self description
   * Highlighting for pub messages
+  * ctrl-c or some way to interrupt command queue
 * Spells
   * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
 * Randoms (aka mobs)
