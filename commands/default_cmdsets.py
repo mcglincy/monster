@@ -58,6 +58,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.remove(default_cmds.CmdGet())
         self.add(CmdGet())
         self.remove(default_cmds.CmdGive())
+        self.remove(default_cmds.CmdHome())        
         self.add(CmdHide())
         self.remove(default_cmds.CmdInventory())
         self.add(CmdInventory())
@@ -66,7 +67,8 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdLook())
         self.remove(default_cmds.CmdName())
         self.add(CmdName())
-        self.remove(default_cmds.CmdPose())        
+        self.remove(default_cmds.CmdNick())
+        self.remove(default_cmds.CmdPose())
         self.add(CmdRest())
         self.add(CmdReveal())
         self.remove(default_cmds.CmdSay())
@@ -104,6 +106,11 @@ class AccountCmdSet(default_cmds.AccountCmdSet):
         #
         # any commands you add below will overload the default ones.
         #
+        self.remove(default_cmds.CmdCharCreate())
+        self.remove(default_cmds.CmdCharDelete())
+        self.remove(default_cmds.CmdIC())
+        self.remove(default_cmds.CmdNick())
+        self.remove(default_cmds.CmdOOC())
 
 
 class UnloggedinCmdSet(default_cmds.UnloggedinCmdSet):
