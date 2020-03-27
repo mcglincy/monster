@@ -52,6 +52,12 @@ DATABASES = {
 }
 
 DEFAULT_CHANNELS = [
+    # {
+    #     "key": "Global",
+    #     "aliases": ("pub", "glo", "glob"),
+    #     "desc": "Global messages",
+    #     "locks": "control:perm(Admin);listen:all();send:all()",
+    # }
 ]
 
 ######################################################################
