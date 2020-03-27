@@ -1,6 +1,5 @@
-
-from evennia.server.sessionhandler import SESSIONS
 from commands.command import QueuedCommand
+from gamerules.comms import msg_global
 
 
 class CmdSay(QueuedCommand):
@@ -46,7 +45,7 @@ class CmdShout(QueuedCommand):
 
   def inner_func(self):
     message = f"{self.caller.key} shouts, \"{self.args.strip()}\""
-    SESSIONS.announce_all(message)
+    msg_global(message)
 
 
 class CmdWhisper(QueuedCommand):

@@ -16,6 +16,7 @@ from evennia.commands import cmdhandler
 
 from gamerules.alignment import Alignment
 from gamerules.combat import character_death
+from gamerules.comms import msg_global
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker
 from gamerules.mana import MIN_MANA, add_mana_ticker
@@ -87,6 +88,13 @@ class Character(DefaultCharacter):
     add_health_ticker(self)
     add_mana_ticker(self)
 
+  def at_post_puppet(self, **kwargs):
+    super().at_post_puppet(**kwargs)
+    msg_global(f"({self.name} once again roams the land.)")
+
+  def at_post_unpuppet(self, account, session=None, **kwargs):
+    super().at_post_unpuppet(account, session, **kwargs)
+    msg_global(f"({self.name} has returned to sleep.)")
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
@@ -128,10 +136,10 @@ class Character(DefaultCharacter):
       string = msg
     elif go_in_msg:
       # msgs may have a '#' placeholder
-      string = go_in_msg.replace("#", self.key)
+      string = go_in_msg.replace("#", self.name)
     else:
       if exits:
-        string = f"{self.key} has gone {exits[0].key}."
+        string = f"{self.name} has gone {exits[0].key}."
       else:
         # Evennia default:
         string = "{object} is leaving {origin}, heading for {destination}."        
@@ -182,10 +190,10 @@ class Character(DefaultCharacter):
         string = msg
       elif come_out_msg:
         # msgs may have a '#' placeholder
-        string = come_out_msg.replace("#", self.key)
+        string = come_out_msg.replace("#", self.name)
       else:
         if exits:
-          string = f"{self.key} has come into the room from: {exits[0].key}"
+          string = f"{self.name} has come into the room from: {exits[0].key}"
         else:
           # Evennia default
           string = "{object} arrives to {destination} from {origin}."
@@ -438,21 +446,21 @@ class Character(DefaultCharacter):
     else:
       self.msg("Not currently equipped.")
 
-  def gain_health(self, amount, damager=None):
+  def gain_health(self, amount, damager=None, weapon_name=None):
     if amount < 0:
       # aka damage
       damage = -amount
       self.db.health = max(self.db.health - damage, MIN_HEALTH)
       self.msg(f"You take {damage} damage.")
       self.msg(health_msg("You", self.db.health))
-      self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
+      self.location.msg_contents(health_msg(self.name, self.db.health), exclude=[self])
       if self.db.health <= 0:
-        character_death(self, damager)
+        character_death(self, damager, weapon_name)
     else:
       # aka healing
       self.db.health = min(self.db.health + amount, self.max_health)
       self.msg(health_msg("You", self.db.health))
-      self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
+      self.location.msg_contents(health_msg(self.name, self.db.health), exclude=[self])
 
   def gain_mana(self, amount):
     # TODO: messages?

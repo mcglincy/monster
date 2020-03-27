@@ -391,7 +391,7 @@ class Mob(Object):
   def deflect_armor():
     return 0
 
-  def gain_health(self, amount, damager=None):
+  def gain_health(self, amount, damager=None, weapon_name=None):
     self.db.health = max(MIN_HEALTH, min(self.db.max_health, self.db.health + amount))
     if self.db.health <= 0:
       mob_death(self, damager)

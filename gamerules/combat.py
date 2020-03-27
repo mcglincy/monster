@@ -2,6 +2,7 @@ import random
 
 from evennia.utils.search import search_object
 
+from gamerules.comms import msg_global
 from gamerules.hiding import reveal
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
@@ -21,7 +22,7 @@ def resolve_attack(attacker, target):
 
   is_surprise = False
   if attacker.is_hiding:
-    attacker.msg(f"You unexpectedly attack {target.key}!")
+    attacker.msg(f"You unexpectedly attack {target.name}!")
     target.msg("Surprise!!!")
     reveal(attacker)
     is_surprise = True
@@ -31,13 +32,13 @@ def resolve_attack(attacker, target):
 
   # attack message for attacker
   attack_name = weapon.key if weapon else "claws"
-  attacker.msg(attack_attacker_msg(target.key, attack_name, damage))
+  attacker.msg(attack_attacker_msg(target.name, attack_name, damage))
 
   # attack message for target
-  target.msg(attack_target_msg(attacker.key, attack_name, damage))
+  target.msg(attack_target_msg(attacker.name, attack_name, damage))
 
   # attack message for room bystanders
-  location_msg = attack_bystander_msg(attacker.key, target.key, attack_name, damage)
+  location_msg = attack_bystander_msg(attacker.name, target.name, attack_name, damage)
   attacker.location.msg_contents(location_msg, exclude=[attacker, target])
 
   # apply armor to reduce damage
@@ -45,15 +46,15 @@ def resolve_attack(attacker, target):
   deflect_armor = target.deflect_armor
   if deflect_armor > 0 and random.randint(0, 100) < deflect_armor:
     target.msg("The attack is deflected by your armor.")
-    attacker.msg(f"Your attack is deflected by {target.key}'s armor.")
+    attacker.msg(f"Your attack is deflected by {target.name}'s armor.")
     damage = int(damage / 2)
   if base_armor > 0:
     target.msg("The attack is partially blocked by your armor.")
-    attacker.msg(f"Your attack is partially blocked by {target.key}'s armor.")
+    attacker.msg(f"Your attack is partially blocked by {target.name}'s armor.")
     damage = int(damage * ((100 - base_armor) / 100))
 
   # target takes the damage
-  target.gain_health(-damage, damager=attacker)
+  target.gain_health(-damage, damager=attacker, weapon_name=weapon.name)
 
 
 def attack_damage(attacker, weapon, is_surprise=False):
@@ -141,10 +142,18 @@ def attack_bystander_msg(attacker_name, target_name, weapon_name, damage):
     return f"{attacker_name} misses {target_name} with their {weapon_name}."
 
 
-def character_death(victim, killer=None):
+def character_death(victim, killer=None, weapon_name=None):
+  # send an appropriate global death message
+  if not killer:
+    msg_global(f"{victim.name} has died of mysterious causes.")
+  elif not weapon_name:
+    msg_global(f"{victim.name} has been slain by {killer.name}.")
+  else:
+    msg_global(f"{victim.name} has been slain by {killer.name}'s {weapon_name}.")
+
   # award xp to the killer
   if killer:
-    killer.msg(f"You killed {victim.key}!")
+    killer.msg(f"You killed {victim.name}!")
     xp = calculate_kill_xp(killer.db.xp,victim.db.xp)
     gain_xp(killer, xp)
 
@@ -162,7 +171,7 @@ def character_death(victim, killer=None):
   the_void = search_object("Void")[0]
   if the_void:
     victim.location.msg_contents(
-      f"{victim.key} disappears in a cloud of greasy black smoke.", exclude=[victim])
+      f"{victim.name} disappears in a cloud of greasy black smoke.", exclude=[victim])
     victim.move_to(the_void, quiet=True)
 
   # reduce victim xp/level
