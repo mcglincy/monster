@@ -53,6 +53,7 @@ The running game server is up at http://www.monstermud.com.
   * *name* 
   * *hide* / *reveal* / *search*
   * *shout* (easy replacement for thundering voice)
+  * Make some built-in Evennia commands queueable/blocking (look, say, whisper, etc)  
 * Commerce
   * Simple merchant in-room object
   * *buy* and *sell* commands
@@ -97,7 +98,6 @@ The running game server is up at http://www.monstermud.com.
   * Bombs and *lob* command
   * Poison
 * Commands
-  * Make some built-in Evennia commands queueable/blocking (look, say, whisper, etc)
   * Remove any Evennia commands we don't want
   * delay/pause on rest command
   * hidesay
