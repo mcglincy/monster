@@ -53,4 +53,6 @@ def tick_health(subject):
   if subject.is_poisoned:
     subject.gain_health(-change)
   elif subject.db.health < subject.max_health:
+    # TODO: debugging msg
+    subject.msg(f"You heal {change}.")
     subject.gain_health(change)

@@ -1,5 +1,6 @@
 from commands.command import QueuedCommand
 from gamerules.combat import resolve_attack
+from gamerules.health import tick_health
 from gamerules.hiding import find_unhidden
 from gamerules.special_room_kind import SpecialRoomKind
 
@@ -39,9 +40,8 @@ class CmdBleed(QueuedCommand):
   help_category = "Monster"
 
   def inner_func(self):
-    if hasattr(self.caller, "gain_health"):
-      self.caller.gain_health(-50)
-      self.caller.gain_mana(-10)
+    self.caller.gain_health(-50)
+    self.caller.gain_mana(-10)
 
 
 class CmdRest(QueuedCommand):
@@ -50,7 +50,30 @@ class CmdRest(QueuedCommand):
   locks = "cmd:all()"
   help_category = "Monster"
 
+  def check_preconditions(self):
+    if not self.caller.location.is_special_kind(SpecialRoomKind.HEAL):
+      self.caller.msg("You cannot rest here.")
+      return False
+    # TODO: putting meaningful code in check_preconditions is a hack.
+    self.caller.msg("You begin to rest.")
+    self.caller.location.msg_contents(
+      f"{self.caller.name} begins to rest.", exclude=self.caller)
+    self.caller.ndb.resting = True
+
+  def input_prompt1(self):
+    # TODO: we're cheating, any input will terminate
+    return "Type exit to continue: "
+
   def inner_func(self):
-    if hasattr(self.caller, "gain_health"):
-      self.caller.gain_health(50)
-      self.caller.gain_mana(50)
+    self.caller.ndb.resting = False
+    self.caller.msg("You stop resting.")
+    self.caller.location.msg_contents(
+      f"{self.caller.name} stops resting.", exclude=self.caller)
+
+  def post_freeze(self):
+    # TODO: we need room Mag ints properly populated
+    # Freeze(AllStats.Stats.MoveSpeed * HereDesc.Mag[rm$b_heal] / 100, AllStats);
+    return self.caller.move_speed / 100.0
+
+
+

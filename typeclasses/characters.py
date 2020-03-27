@@ -59,6 +59,7 @@ class Character(DefaultCharacter):
     self.ndb.frozen_until = 0
     self.ndb.hiding = 0
     self.ndb.poisoned = False
+    self.ndb.resting = False
     if self.db.character_class_key is None:
       self.db.character_class_key = "ghost"
       self.ndb.character_class = None
@@ -84,6 +85,7 @@ class Character(DefaultCharacter):
     self.ndb.frozen_until = 0
     self.ndb.hiding = 0
     self.ndb.poisoned = False
+    self.ndb.resting = False
     # TODO: verify whether this should be in at_object_creation()
     add_health_ticker(self)
     add_mana_ticker(self)
@@ -272,6 +274,10 @@ class Character(DefaultCharacter):
     return self.ndb.poisoned
 
   @property
+  def is_resting(self):
+    return self.ndb.resting
+
+  @property
   def attack_speed(self):
     return self.class_plus_equipped_attr("attack_speed")
 
@@ -282,7 +288,11 @@ class Character(DefaultCharacter):
 
   @property
   def heal_speed(self):
-    return self.class_plus_equipped_attr("heal_speed")
+    val = self.class_plus_equipped_attr("heal_speed")
+    if self.is_resting:
+      return 2 * val
+    else:
+      return val
 
   # our damage, armor, etc is the sum of our equipped objects
 

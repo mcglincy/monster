@@ -189,6 +189,7 @@ def reset_victim_state(victim):
   victim.ndb.frozen_until = 0
   victim.ndb.hiding = 0
   victim.ndb.poisoned = False
+  victim.ndb.resting = False
 
 
 def mob_death(mob, killer=None):

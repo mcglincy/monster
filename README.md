@@ -16,7 +16,7 @@ The running game server is up at http://www.monstermud.com.
   * Freeze/delays, queued commands
   * Move speed
   * Recover health and mana over time
-  * Various global player messages
+  * Various global player messages w/ highlighting
     * E.g., "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""  
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
@@ -36,7 +36,8 @@ The running game server is up at http://www.monstermud.com.
 * Combat
   * Attack command
   * Damage-dependent attack messages for attacker, target, and observer (e.g., "Tutt creams your poor little body!!")
-  * Rest / bleed commands
+  * Rest w/ exit
+  * Bleed (useful for debugging health)
   * Weapon base damage / random damage
   * Character health and max health
   * Death at 0 health => go to the Void
@@ -100,7 +101,6 @@ The running game server is up at http://www.monstermud.com.
   * Poison
 * Commands
   * Remove any Evennia commands we don't want
-  * delay/pause on rest command
   * hidesay
   * *use* command
   * *block* command
@@ -108,7 +108,6 @@ The running game server is up at http://www.monstermud.com.
   * Redirect *pose* to *express*
   * Atmosphere
   * Edit self description
-  * Highlighting for pub messages
   * ctrl-c or some way to interrupt command queue
 * Spells
   * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
