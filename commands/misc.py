@@ -60,9 +60,9 @@ v108npa5   Mummy                     1     Troll  the maze
 """
 class CmdWho(QueuedCommand):
   """list who is currently online"""
-
   key = "who"
   locks = "cmd:all()"
+  help_category = "Monster"
 
   # this is used by the parent
   account_caller = True

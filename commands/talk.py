@@ -1,7 +1,6 @@
 
 from evennia.server.sessionhandler import SESSIONS
 from commands.command import QueuedCommand
-from gamerules.hiding import hide, reveal, search
 
 
 class CmdShout(QueuedCommand):
