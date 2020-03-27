@@ -51,6 +51,9 @@ DATABASES = {
     }
 }
 
+DEFAULT_CHANNELS = [
+]
+
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
 ######################################################################
