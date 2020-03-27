@@ -20,11 +20,11 @@ from commands.combat import CmdAttack, CmdBleed, CmdRest
 from commands.commerce import CmdBuy, CmdSell
 from commands.debug import CmdClear
 from commands.equipment import CmdEquip, CmdUnequip
-from commands.general import CmdLook
+from commands.general import CmdDrop, CmdExpress, CmdGet, CmdInventory, CmdLook
 from commands.hiding import CmdHide, CmdReveal, CmdSearch
 from commands.misc import CmdBrief, CmdDot, CmdWho
 from commands.spells import CmdCast, CmdLearn
-from commands.talk import CmdShout
+from commands.talk import CmdSay, CmdShout, CmdWhisper
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -51,20 +51,33 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdCast())
         self.add(CmdClear())
         self.add(CmdDot())
+        self.remove(default_cmds.CmdDrop())
+        self.add(CmdDrop())
         self.add(CmdEquip())
+        self.add(CmdExpress())        
+        self.remove(default_cmds.CmdGet())
+        self.add(CmdGet())
+        self.remove(default_cmds.CmdGive())
         self.add(CmdHide())
+        self.remove(default_cmds.CmdInventory())
+        self.add(CmdInventory())
         self.add(CmdLearn())
         self.remove(default_cmds.CmdLook())
         self.add(CmdLook())
         self.remove(default_cmds.CmdName())
         self.add(CmdName())
+        self.remove(default_cmds.CmdPose())        
         self.add(CmdRest())
         self.add(CmdReveal())
+        self.remove(default_cmds.CmdSay())
+        self.add(CmdSay())
         self.add(CmdSheet())
         self.add(CmdShout())
         self.add(CmdSearch())
         self.add(CmdSell())
         self.add(CmdUnequip())
+        self.remove(default_cmds.CmdWhisper())
+        self.add(CmdWhisper())
         self.remove(default_cmds.CmdWho())
         self.add(CmdWho())
 
