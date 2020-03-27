@@ -113,7 +113,7 @@ class AccountCmdSet(default_cmds.AccountCmdSet):
         self.remove(default_cmds.CmdCemit())
         self.remove(default_cmds.CmdCWho())
         self.remove(default_cmds.CmdDelCom())
-        self.remove(default_cmds.CmdChannelCreate())
+        #self.remove(default_cmds.CmdChannelCreate())
         self.remove(default_cmds.CmdCharCreate())
         self.remove(default_cmds.CmdCharDelete())
         self.remove(default_cmds.CmdClock())
