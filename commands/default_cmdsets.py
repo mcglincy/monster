@@ -106,11 +106,25 @@ class AccountCmdSet(default_cmds.AccountCmdSet):
         #
         # any commands you add below will overload the default ones.
         #
+        self.remove(default_cmds.CmdAddCom())
+        self.remove(default_cmds.CmdAllCom())
+        self.remove(default_cmds.CmdCBoot())
+        self.remove(default_cmds.CmdCdesc())
+        self.remove(default_cmds.CmdCEmit())
+        self.remove(default_cmds.CmdCWho())
+        self.remove(default_cmds.CmdDelCom())
+        self.remove(default_cmds.CmdChannelCreate())
         self.remove(default_cmds.CmdCharCreate())
         self.remove(default_cmds.CmdCharDelete())
+        self.remove(default_cmds.CmdClock())
+        self.remove(default_cmds.CmdGrapevine2Chan())        
         self.remove(default_cmds.CmdIC())
+        self.remove(default_cmds.CmdIRC2Chan())
+        self.remove(default_cmds.CmdIRC2Status())  
         self.remove(default_cmds.CmdNick())
         self.remove(default_cmds.CmdOOC())
+        self.remove(default_cmds.CmdPage())
+        self.remove(default_cmds.CmdRSS2Chan())
 
 
 class UnloggedinCmdSet(default_cmds.UnloggedinCmdSet):
