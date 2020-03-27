@@ -91,6 +91,9 @@ class Character(DefaultCharacter):
   def at_post_puppet(self, **kwargs):
     super().at_post_puppet(**kwargs)
     msg_global(f"({self.name} once again roams the land.)")
+    # TODO: add date, maybe replace super() call
+    # "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm.
+    self.msg(f"Welcome back, {self.name}.")
 
   def at_post_unpuppet(self, account, session=None, **kwargs):
     super().at_post_unpuppet(account, session, **kwargs)
