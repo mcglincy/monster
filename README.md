@@ -17,7 +17,7 @@ The running game server is up at http://www.monstermud.com.
   * Move speed
   * Recover health and mana over time
   * Various global player messages w/ highlighting
-    * E.g., "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""  
+    * E.g., "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
   * Exit descriptions
@@ -28,6 +28,7 @@ The running game server is up at http://www.monstermud.com.
     * set or reset class, change xp, change health, change mana
   * Trapdoors
   * Special room kinds: no combat, no hide, hard to hide, object destroy
+  * Special room magnitudes
 * Objects
   * Imported all original objects (weapons, armor, etc)
   * Simple gold system
@@ -53,10 +54,14 @@ The running game server is up at http://www.monstermud.com.
   * *who* that shows everyone's room location
   * *sheet*
   * *brief*
+  * *buy* / *sell*
+  * *equip* / *unequip*
   * *name* 
   * *hide* / *reveal* / *search*
   * *shout* (easy replacement for thundering voice)
-  * Make some built-in Evennia commands queueable/blocking (look, say, whisper, etc)  
+  * *express* (replaces Evennia *pose*)
+  * Make some built-in Evennia commands queueable/blocking (look, say, whisper, get, drop, etc)  
+  * Edit self-description (via Evennia *setdesc*)
 * Commerce
   * Simple merchant in-room object
   * *buy* and *sell* commands
@@ -95,7 +100,7 @@ The running game server is up at http://www.monstermud.com.
 * Combat
   * Drop objects when hit
   * Punch
-  * Get 50 gold upon death
+  * Get 50 gold upon rebirth in Void
   * Missiles and *throw* command
   * Bombs and *lob* command
   * Poison
@@ -107,8 +112,9 @@ The running game server is up at http://www.monstermud.com.
   * *steal* / *pickpocket* commands
   * Redirect *pose* to *express*
   * Atmosphere
-  * Edit self description
   * ctrl-c or some way to interrupt command queue
+  * *follow*
+  * *show*
 * Spells
   * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
 * Randoms (aka mobs)
