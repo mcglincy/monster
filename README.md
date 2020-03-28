@@ -110,11 +110,8 @@ The running game server is up at http://www.monstermud.com.
   * *use* command
   * *block* command
   * *steal* / *pickpocket* commands
-  * Redirect *pose* to *express*
   * Atmosphere
   * ctrl-c or some way to interrupt command queue
-  * *follow*
-  * *show*
 * Spells
   * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
 * Randoms (aka mobs)
