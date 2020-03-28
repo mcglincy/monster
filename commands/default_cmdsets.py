@@ -15,6 +15,7 @@ own cmdsets by inheriting from them or directly from `evennia.CmdSet`.
 """
 
 from evennia import default_cmds
+from evennia.commands.default.comms import CmdGrapevine2Chan, CmdIRCStatus
 from commands.character import CmdName, CmdSheet
 from commands.combat import CmdAttack, CmdBleed, CmdRest
 from commands.commerce import CmdBuy, CmdSell
@@ -113,14 +114,17 @@ class AccountCmdSet(default_cmds.AccountCmdSet):
         self.remove(default_cmds.CmdCemit())
         self.remove(default_cmds.CmdCWho())
         self.remove(default_cmds.CmdDelCom())
+        # TODO: leaving limited channels commands in until we iron out shout/global
+        #self.remove(default_cmds.CmdChannels())
         #self.remove(default_cmds.CmdChannelCreate())
+        #self.remove(default_cmds.CmdCdestroy())
         self.remove(default_cmds.CmdCharCreate())
         self.remove(default_cmds.CmdCharDelete())
         self.remove(default_cmds.CmdClock())
-        # self.remove(default_cmds.CmdGrapevine2Chan())        
+        self.remove(CmdGrapevine2Chan())        
         self.remove(default_cmds.CmdIC())
         self.remove(default_cmds.CmdIRC2Chan())
-        # self.remove(default_cmds.CmdIRCStatus())  
+        self.remove(CmdIRCStatus())  
         self.remove(default_cmds.CmdNick())
         self.remove(default_cmds.CmdOOC())
         self.remove(default_cmds.CmdPage())
