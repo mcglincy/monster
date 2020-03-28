@@ -54,7 +54,7 @@ def resolve_attack(attacker, target):
     damage = int(damage * ((100 - base_armor) / 100))
 
   # target takes the damage
-  target.gain_health(-damage, damager=attacker, weapon_name=weapon.name)
+  target.gain_health(-damage, damager=attacker, weapon_name=attack_name)
 
 
 def attack_damage(attacker, weapon, is_surprise=False):
@@ -154,7 +154,7 @@ def character_death(victim, killer=None, weapon_name=None):
   # award xp to the killer
   if killer:
     killer.msg(f"You killed {victim.name}!")
-    xp = calculate_kill_xp(killer.db.xp,victim.db.xp)
+    xp = calculate_kill_xp(killer.db.xp, victim.db.xp)
     gain_xp(killer, xp)
 
   # victim drops everything it was holding before leaving room
@@ -193,12 +193,13 @@ def reset_victim_state(victim):
 
 
 def mob_death(mob, killer=None):
-  death_msg = f"{mob.key} disappears in a cloud of greasy black smoke."
-  mob.location.msg_contents(death_msg, exclude=[mob])
-  mob.location = None
-  mob.delete()
   if killer:
     killer.msg(f"You killed {mob.key}!")
-    # TODO: what should mob xp be?
-    xp = kill_xp(killer.db.xp, 300)
-    killer.at_gain_xp(xp)
+    xp = calculate_kill_xp(killer.db.xp, mob.db.xp)
+    gain_xp(killer, xp)
+  mob.location.msg_contents(
+    f"{mob.key} disappears in a cloud of greasy black smoke.", exclude=[mob])
+  # TODO: object drop
+  # TODO: gold drop
+  mob.location = None
+  mob.delete()
