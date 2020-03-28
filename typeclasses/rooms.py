@@ -34,6 +34,7 @@ class Room(DefaultRoom):
         self.db.special_kind_bitmask = 0
         self.db.trap_chance = 0
         self.db.trap_direction = None
+        self.db.magnitudes = [0] * 32  # a list of 32 zeroes
 
     def special_kinds(self):
         return [x for x in SpecialRoomKind 
@@ -41,6 +42,9 @@ class Room(DefaultRoom):
 
     def is_special_kind(self, special_room_kind):
         return check_bit(self.db.special_kind_bitmask, special_room_kind.value)
+
+    def magnitude(self, special_room_kind):
+        return self.db.magnitudes[special_room_kind.value]
 
     def return_appearance(self, looker, **kwargs):
         """

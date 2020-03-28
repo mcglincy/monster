@@ -32,6 +32,8 @@ def make_room(roomdesc, descs):
   if roomdesc["spc_room"]:
     print(f'@set here/special_kind_bitmask = {roomdesc["spc_room"]}')
     print('#')
+    print(f'@set here/magnitudes = {roomdesc["magnitudes"]}')
+    print('#')
   if roomdesc["trap_chance"] and roomdesc["trap_direction"]:
     print(f'@set here/trap_chance = {roomdesc["trap_chance"]}')
     print('#')
