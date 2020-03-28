@@ -71,9 +71,9 @@ class CmdRest(QueuedCommand):
       f"{self.caller.name} stops resting.", exclude=self.caller)
 
   def post_freeze(self):
-    # TODO: we need room Mag ints properly populated
     # Freeze(AllStats.Stats.MoveSpeed * HereDesc.Mag[rm$b_heal] / 100, AllStats);
-    return self.caller.move_speed / 100.0
+    room_magnitude = self.caller.location.magnitude(SpecialRoomKind.HEAL)
+    return self.caller.move_speed * room_magnitude / 100.0
 
 
 
