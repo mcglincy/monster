@@ -13,10 +13,8 @@ inheritance.
 import random
 
 from evennia import CmdSet, Command, DefaultExit, DefaultObject
-from evennia.utils import delay, evtable, search
-from evennia.prototypes.spawner import spawn
+from evennia.utils import delay, search
 
-from gamerules.combat import mob_death
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.object_kind import ObjectKind
@@ -379,55 +377,4 @@ class BankingMachine(Object):
     self.db.object_kind = ObjectKind.BANKING_MACHINE
 
 
-class Mob(Object):
-  def at_object_creation(self):
-    super().at_object_creation()
-    self.db.max_health = 1000
-    self.db.health = 1000
 
-  def base_armor():
-    return 0
-
-  def deflect_armor():
-    return 0
-
-  def gain_health(self, amount, damager=None, weapon_name=None):
-    self.db.health = max(MIN_HEALTH, min(self.db.max_health, self.db.health + amount))
-    if self.db.health <= 0:
-      mob_death(self, damager)
-    else:
-      # tell everyone else in the room our health
-      self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
-
-
-class Merchant(Object):
-  def at_object_creation(self):
-    super().at_object_creation()
-    self.sticky = True
-    spawn("axe")[0].location = self
-    spawn("cudgel")[0].location = self
-    spawn("dirk")[0].location = self
-    spawn("iron_bar")[0].location = self
-    spawn("meat_cleaver")[0].location = self
-    spawn("short_sword")[0].location = self
-    spawn("book_of_shadows")[0].location = self
-    spawn("grand_grimoire")[0].location = self
-    spawn("mabinogian")[0].location = self
-
-  def return_appearance(self, looker, **kwargs):
-    lines = []
-    lines.append("")
-    table = evtable.EvTable("Item", "Cost")
-    for obj in self.contents:
-      cost = obj.db.worth if obj.db.worth else 0
-      table.add_row(obj.key, cost)
-    return f"You see a merchant, hawking their wares:\n{table}"
-
-  def at_object_receive(self, moved_obj, source_location, **kwargs):
-    # only admins can give objects to merchant to go on sale
-    is_admin = (source_location and source_location.account 
-      and (source_location.account.check_permstring("Developer") or source_location.account.check_permstring("Admins")))
-    if not is_admin:
-      moved_obj.delete()
-      if source_location and hasattr(source_location, "msg"):
-        source_location.msg("Sweet, merchants love free stuff.")

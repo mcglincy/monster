@@ -6,7 +6,7 @@ sys.path.insert(0, '..')
 from gamerules.equipment_effect_kind import EquipmentEffectKind
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.object_kind import ObjectKind
-from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_integer
+from utils.generator_utils import DEFAULT_MSG_ID, camel_case, lookup_description, snake_case, split_integer
 
 
 DESC_FILE = './json/desc.json'
@@ -29,52 +29,6 @@ def find_obj(objs, id):
     if obj['id'] == id:
       return obj
   return None
-
-
-def camel_case(s):
-  """Convert an object name to a useful python class name.
-
-  E.g., 'Hammer of the gods' => 'HammerOfTheGods'
-  """
-  s = s.strip()
-  done = False
-  chars = []
-  idx = 0
-  s_len = len(s)
-  while not done:
-    c = s[idx]
-    if idx == 0:
-      chars.append(c.upper())
-      idx = idx + 1
-    elif c == ' ':
-      chars.append(s[idx+1].upper())
-      idx = idx + 2
-    elif c == "'":
-      # skip quote
-      idx = idx + 1
-    else:
-      chars.append(c)
-      idx = idx + 1
-    if idx >= s_len:
-      done = True
-  return ''.join(chars)
-
-
-def snake_case(s):
-  """Convert an object name to a snake case.
-
-  E.g., 'Hammer of the gods' => 'HAMMER_OF_THE_GODS'
-  """
-  s = s.strip()
-  chars = []
-  for c in s:
-    if c == ' ' or c == '-':
-      chars.append('_')
-    elif c == "'":
-      pass
-    else:
-      chars.append(c.upper())
-  return ''.join(chars)
 
 
 def maybe(value, field_name, except_if=None):

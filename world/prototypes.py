@@ -77,7 +77,7 @@ See the `@spawn` command and `evennia.utils.spawner` for more info.
 #
 
 MERCHANT = {
-  'typeclass': 'typeclasses.objects.Merchant',
+  'typeclass': 'typeclasses.merchant.Merchant',
   'key': 'merchant',
 }
 
@@ -86,7 +86,7 @@ MERCHANT = {
 #
 
 TARGET_DUMMY = {
-  'typeclass': 'typeclasses.objects.Mob',
+  'typeclass': 'typeclasses.mobs.Mob',
   'key': 'target dummy',
   'health': 1000,
 }
