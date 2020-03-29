@@ -152,7 +152,7 @@ def character_death(victim, killer=None, weapon_name=None):
     msg_global(f"{victim.name} has been slain by {killer.name}'s {weapon_name}.")
 
   # award xp to the killer
-  if killer:
+  if killer and killer.has_attr("gain_xp"):
     killer.msg(f"You killed {victim.name}!")
     xp = calculate_kill_xp(killer.db.xp, victim.db.xp)
     gain_xp(killer, xp)
@@ -182,7 +182,7 @@ def character_death(victim, killer=None, weapon_name=None):
 
 
 def reset_victim_state(victim):
-  victim.db.health = 1
+  # victim.db.health = 1
   victim.db.mana = 0
   victim.ndb.active_command = None
   victim.ndb.command_queue.clear()
@@ -190,6 +190,44 @@ def reset_victim_state(victim):
   victim.ndb.hiding = 0
   victim.ndb.poisoned = False
   victim.ndb.resting = False
+
+
+def resolve_mob_attack(mob, target):
+  # TODO: add hiding
+  is_surprise = False
+  damage = mob_attack_damage(mob, is_surprise)
+
+  # TODO: consider mob.weapon_id / weapon_name
+  attack_name = "claws"
+
+  # attack message for target
+  target.msg(attack_target_msg(mob.name, attack_name, damage))
+
+  # attack message for room bystanders
+  location_msg = attack_bystander_msg(mob.name, target.name, attack_name, damage)
+  mob.location.msg_contents(location_msg, exclude=[mob, target])
+
+  # apply armor to reduce damage
+  base_armor = target.base_armor
+  deflect_armor = target.deflect_armor
+  if deflect_armor > 0 and random.randint(0, 100) < deflect_armor:
+    target.msg("The attack is deflected by your armor.")
+    damage = int(damage / 2)
+  if base_armor > 0:
+    target.msg("The attack is partially blocked by your armor.")
+    damage = int(damage * ((100 - base_armor) / 100))
+
+  # target takes the damage
+  target.gain_health(-damage, damager=mob, weapon_name=attack_name)
+
+
+def mob_attack_damage(mob, is_surprise=False):
+  rand_multiplier = .7 if is_surprise else random.random()
+  # TODO: consider mob.level_damage?
+  dmg = mob.base_damage + random.randint(0, mob.random_damage)
+  if is_surprise:
+    dmg = dmg + int(dmg * attacker.shadow_damage_percent / 100)
+  return dmg  
 
 
 def mob_death(mob, killer=None):

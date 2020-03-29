@@ -47,7 +47,16 @@ def add_health_ticker(subject):
   TICKER_HANDLER.add(HEALTH_TICK_SECONDS, tick_health, id_string, False, subject)
 
 
+def remove_health_ticker(subject):
+  id_string = f"tick_health_{subject.key}"
+  try:
+    TICKER_HANDLER.remove(interval=HEALTH_TICK_SECONDS, callback=tick_health, idstring=id_string)
+  except KeyError:
+    pass
+
+
 def tick_health(subject):
+#  subject.location.msg_contents(f"tick {subject.key}")
   change = int((subject.max_health - subject.db.health) * (subject.heal_speed / 1000))
   change = max(change, 5)  
   if subject.is_poisoned:
