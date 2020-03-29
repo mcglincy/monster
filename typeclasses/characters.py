@@ -78,6 +78,8 @@ class Character(DefaultCharacter):
     if self.db.equipment is None:
       # dict of {EquipmentSlot:object}
       self.db.equipment = {}
+    self.db.health_ticker_key = None
+    self.db.mana_ticker_key = None
 
   def at_init(self):
     self.ndb.active_command = None

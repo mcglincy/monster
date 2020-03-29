@@ -44,15 +44,16 @@ def health_msg(subject, health):
 
 def add_health_ticker(subject):
   id_string = f"tick_health_{subject.key}"
-  TICKER_HANDLER.add(HEALTH_TICK_SECONDS, tick_health, id_string, False, subject)
+  store_key = TICKER_HANDLER.add(HEALTH_TICK_SECONDS, tick_health, id_string, False, subject)
+  subject.db.health_ticker_key = store_key
 
 
 def remove_health_ticker(subject):
-  id_string = f"tick_health_{subject.key}"
   try:
-    TICKER_HANDLER.remove(interval=HEALTH_TICK_SECONDS, callback=tick_health, idstring=id_string)
+    TICKER_HANDLER.remove(store_key=subject.db.health_ticker_key)
   except KeyError:
     pass
+  subject.db.health_ticker_key = None
 
 
 def tick_health(subject):

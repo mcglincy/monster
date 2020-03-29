@@ -8,7 +8,16 @@ MIN_MANA = 0
 
 def add_mana_ticker(subject):
   id_string = f"tick_mana_{subject.key}"
-  TICKER_HANDLER.add(MANA_TICK_SECONDS, tick_mana, id_string, False, subject)
+  store_key = TICKER_HANDLER.add(MANA_TICK_SECONDS, tick_mana, id_string, False, subject)
+  subject.db.mana_ticker_key = store_key
+
+
+def remove_mana_ticker(subject):
+  try:
+    TICKER_HANDLER.remove(store_key=subject.db.mana_ticker_key)
+  except KeyError:
+    pass
+  subject.db.mana_ticker_key = None
 
 
 def tick_mana(subject):

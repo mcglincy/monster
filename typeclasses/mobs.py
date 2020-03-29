@@ -47,10 +47,15 @@ class Mob(Object):
     # self.db.pursuit_chance = 0
     # self.db.spell_ids = []
     # self.db.sayings = []
+
+    # whether the mob moves between rooms
+    self.db.moves_between_rooms = True
+
+    # whether the mob immediately attacks targets in its room
     self.db.aggressive = True
     self.db.patrolling = True    
     self.db.patrolling_pace = 6
-    self.db.aggressive_pace = 2
+    self.db.attacking_pace = 2
     self.db.hunting_pace = 1    
     # we store the call to the tickerhandler
     # so we can easily deactivate the last
@@ -60,6 +65,8 @@ class Mob(Object):
     # previous interval we used.
     self.db.last_ticker_interval = None    
     self.db.last_hook_key = None
+    self.db.health_ticker_key = None
+    self.db.mana_ticker_key = None
 
   def basetype_posthook_setup(self):
     # overriding this so we can do some post-init
@@ -86,22 +93,23 @@ class Mob(Object):
     self.ndb.is_hunting = False    
     self.start_patrolling()
 
-    # TICKER_HANDLER.add(
-    #   interval=5.0, callback=self.tick_state, idstring=f"tick_state_{self.key}"
-    # )
+  def at_object_delete(self):
+    # kill tickers
+    self.start_idle()
+    remove_health_ticker(self)
+    #remove_mana_ticker(self)
 
   def gain_health(self, amount, damager=None, weapon_name=None):
     self.db.health = max(MIN_HEALTH, min(self.max_health, self.db.health + amount))
     if self.db.health <= 0:
-      # kill ticker
-      self.start_idle()
-      remove_health_ticker(self)
       # die
       mob_death(self, damager)
     else:
       # tell everyone else in the room our health
       self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
+      # aggro
       if amount < 0 and not self.ndb.is_attacking:
+        self.ndb.aggressive = True
         self.start_attacking()
 
   @property
@@ -148,23 +156,15 @@ class Mob(Object):
   def is_poisoned(self):
     return self.ndb.poisoned
 
-  def find_target(self, location):
+  def _find_target(self, location):
     # TODO: handle death of our previous target
     # TODO: and not x.is_superuser ?
-    characters = [x for x in location.contents if x.is_typeclass("typeclasses.characters.Character")]
+    characters = [x for x in location.contents 
+      if x.is_typeclass("typeclasses.characters.Character") and not x.is_hiding]
     if characters:
       choice = random.choice(characters)
       choice.msg(f"{self.key} doesn't like the look of you!")
       return choice
-
-  # def tick_state(self):
-  #   self.location.msg_contents(f"{self.key} tick_state")
-  #   if not self.ndb.target:
-  #     self.find_target()
-  #   if self.ndb.target and self.location == self.ndb.target.location:
-  #     # attack!
-  #     self.location.msg_contents(f"{self.key} attack")
-  #     resolve_mob_attack(self, self.ndb.target)
 
   def _set_ticker(self, interval, hook_key, stop=False):
     """Set how often the given hook key should be "ticked".
@@ -204,8 +204,12 @@ class Mob(Object):
       TICKER_HANDLER.add(interval=interval,
         callback=getattr(self, hook_key), idstring=idstring)
 
+  def _maybe_say_something(self):
+    if random.random() < 0.01 and self.db.irregular_msgs:
+      self.location.msg_contents(random.choice(self.db.irregular_msgs))
+
   def start_idle(self):
-    """Starts just standing around. This will killthe ticker and do nothing more."""
+    """Starts just standing around. This will kill the ticker and do nothing more."""
     self._set_ticker(None, None, stop=True)
 
   def start_patrolling(self):
@@ -235,7 +239,7 @@ class Mob(Object):
     if not self.db.aggressive:
       self.start_hunting()
       return
-    self._set_ticker(self.db.aggressive_pace, "do_attack")
+    self._set_ticker(self.db.attacking_pace, "do_attack")
     self.ndb.is_patrolling = False
     self.ndb.is_hunting = False
     self.ndb.is_attacking = True
@@ -249,24 +253,26 @@ class Mob(Object):
     order to block the mob from moving outside its area while
     allowing account-controlled characters to move normally.
     """
-    if random.random() < 0.01 and self.db.irregular_msgs:
-      self.location.msg_contents(random.choice(self.db.irregular_msgs))
+    self._maybe_say_something()
+
     if self.db.aggressive:
       # first check if there are any targets in the room.
-      target = self.find_target(self.location)
+      target = self._find_target(self.location)
       if target:
         self.start_attacking()
         return
-    # no target found, look for an exit.
-    exits = [x for x in self.location.exits if x.access(self, "traverse")]
-    if exits:
-      # randomly pick an exit
-      exit = random.choice(exits)
-      # move there.
-      self.move_to(exit.destination)
-    else:
-      # no exits! teleport to home to get away.
-      self.move_to(self.home)
+
+    if self.db.moves_between_rooms:
+      # no target found, look for an exit.
+      exits = [x for x in self.location.exits if x.access(self, "traverse")]
+      if exits:
+        # randomly pick an exit
+        exit = random.choice(exits)
+        # move there.
+        self.move_to(exit.destination)
+      else:
+        # no exits! teleport to home to get away.
+        self.move_to(self.home)
 
   def do_hunting(self, *args, **kwargs):
     """Called regularly when in hunting mode.
@@ -275,31 +281,32 @@ class Mob(Object):
     scans adjacent rooms for enemies and moves towards them to
     attack if possible.
     """
-    if random.random() < 0.01 and self.db.irregular_msgs:
-      self.location.msg_contents(random.choice(self.db.irregular_msgs))
+    self._maybe_say_something()   
+
     if self.db.aggressive:
       # first check if there are any targets in the room.
-      target = self.find_target(self.location)
+      target = self._find_target(self.location)
       if target:
         self.start_attacking()
         return
 
-    # no targets found, scan surrounding rooms
-    exits = [x for x in self.location.exits if x.access(self, "traverse")]
-    if exits:
-      # scan the exits destination for targets
-      for exit in exits:
-        target = self.find_target(exit.destination)
-        if target:
-          # a target found. Move there.
-          self.move_to(exit.destination)
-          return
-      # if we get to this point we lost our
-      # prey. Resume patrolling.
-      self.start_patrolling()
-    else:
-      # no exits! teleport to home to get away.
-      self.move_to(self.home)
+    if self.db.moves_between_rooms:
+      # no targets found, scan surrounding rooms
+      exits = [x for x in self.location.exits if x.access(self, "traverse")]
+      if exits:
+        # scan the exits destination for targets
+        for exit in exits:
+          target = self._find_target(exit.destination)
+          if target:
+            # a target found. Move there.
+            self.move_to(exit.destination)
+            return
+        # if we get to this point we lost our
+        # prey. Resume patrolling.
+        self.start_patrolling()
+      else:
+        # no exits! teleport to home to get away.
+        self.move_to(self.home)
 
   def do_attack(self, *args, **kwargs):
     """Called regularly when in attacking mode. 
@@ -308,10 +315,10 @@ class Mob(Object):
     the mob will bring its weapons to bear on any targets
     in the room.
     """
-    if random.random() < 0.01 and self.db.irregular_msgs:
-      self.location.msg_contents(random.choice(self.db.irregular_msgs))
+    self._maybe_say_something()
+
     # first make sure we have a target
-    target = self.find_target(self.location)
+    target = self._find_target(self.location)
     if not target:
       # no target, start looking for one
       self.start_hunting()
