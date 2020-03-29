@@ -1,9 +1,9 @@
 from enum import IntEnum
 import random
 from evennia import TICKER_HANDLER
-from gamerules.combat import mob_death, resolve_mob_attack
 from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker, remove_health_ticker
 from gamerules.mob_kind import MobKind
+from gamerules.mobs import mob_death, resolve_mob_attack
 from typeclasses.objects import Object
 
 # TODO

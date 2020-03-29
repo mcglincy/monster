@@ -20,6 +20,7 @@ from gamerules.comms import msg_global
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker
 from gamerules.mana import MIN_MANA, add_mana_ticker
+from gamerules.mobs import add_mob_generator_ticker
 from gamerules.xp import MIN_XP, level_from_xp
 from userdefined.models import CharacterClass
 
@@ -80,7 +81,8 @@ class Character(DefaultCharacter):
       self.db.equipment = {}
     self.db.health_ticker_key = None
     self.db.mana_ticker_key = None
-
+    self.db.mob_generator_ticker_key = None
+  
   def at_init(self):
     self.ndb.active_command = None
     self.ndb.command_queue = deque()
@@ -91,6 +93,7 @@ class Character(DefaultCharacter):
     # TODO: verify whether this should be in at_object_creation()
     add_health_ticker(self)
     add_mana_ticker(self)
+    add_mob_generator_ticker(self)
 
   def at_post_puppet(self, **kwargs):
     super().at_post_puppet(**kwargs)

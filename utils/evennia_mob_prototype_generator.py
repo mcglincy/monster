@@ -18,11 +18,14 @@ def output_mob(obj):
   obj_name = obj['name']
   print(f"{snake_case(obj_name)} = {{")
   print(f"  'key': \"{obj_name}\",")
-  print(f"  'prototype_parent': 'mob',")  
+  print(f"  'prototype_parent': 'mob',")
+  min_level = obj['min_level']
+  # add tags for easier searchability
+  print(f"  'prototype_tags': ['mob', 'min_level_{min_level}'],")
   print(f"  'record_id': {obj['id']},")
   kind = MobKind(obj['kind'])
   print(f"  'kind': MobKind.{kind.name},")  
-  print(f"  'min_level': {obj['min_level']},")
+  print(f"  'min_level': {min_level},")
   print(f"  'group': {obj['group']},")
   print(f"  'size': {obj['size']},")
   print(f"  'xp': {obj['experience']},")
