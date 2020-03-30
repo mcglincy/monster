@@ -42,20 +42,22 @@ def resolve_attack(attacker, target):
   attacker.location.msg_contents(location_msg, exclude=[attacker, target])
 
   # apply armor to reduce damage
-  base_armor = target.base_armor
-  deflect_armor = target.deflect_armor
-  if deflect_armor > 0 and random.randint(0, 100) < deflect_armor:
-    target.msg("The attack is deflected by your armor.")
-    attacker.msg(f"Your attack is deflected by {target.name}'s armor.")
-    damage = int(damage / 2)
-  if base_armor > 0:
-    target.msg("The attack is partially blocked by your armor.")
-    attacker.msg(f"Your attack is partially blocked by {target.name}'s armor.")
-    damage = int(damage * ((100 - base_armor) / 100))
+  damage = apply_armor(target, damage)
 
   # target takes the damage
   target.gain_health(-damage, damager=attacker, weapon_name=attack_name)
 
+def apply_armor(target, damage):
+  final_damage = damage
+  base_armor = target.base_armor
+  deflect_armor = target.deflect_armor
+  if deflect_armor > 0 and random.randint(0, 100) < deflect_armor:
+    target.msg("The attack is deflected by your armor.")
+    final_damage = int(damage / 2)
+  if base_armor > 0:
+    target.msg("The attack is partially blocked by your armor.")
+    final_damage = int(damage * ((100 - base_armor) / 100))
+  return final_damage
 
 def attack_damage(attacker, weapon, is_surprise=False):
   rand_multiplier = .7 if is_surprise else random.random()

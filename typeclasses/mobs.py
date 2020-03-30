@@ -160,9 +160,9 @@ class Mob(Object):
     characters = [x for x in location.contents 
       if x.is_typeclass("typeclasses.characters.Character") and not x.is_hiding]
     if characters:
-      choice = random.choice(characters)
-      choice.msg(f"{self.key} doesn't like the look of you!")
-      return choice
+      target = random.choice(characters)
+      target.msg(f"{self.key} doesn't like the look of you!")
+      return target
 
   def _set_ticker(self, interval, hook_key, stop=False):
     """Set how often the given hook key should be "ticked".
@@ -251,7 +251,7 @@ class Mob(Object):
     order to block the mob from moving outside its area while
     allowing account-controlled characters to move normally.
     """
-    self._maybe_say_something()
+    #self._maybe_say_something()
 
     if self.db.aggressive:
       # first check if there are any targets in the room.
@@ -279,7 +279,7 @@ class Mob(Object):
     scans adjacent rooms for enemies and moves towards them to
     attack if possible.
     """
-    self._maybe_say_something()   
+    #self._maybe_say_something()   
 
     if self.db.aggressive:
       # first check if there are any targets in the room.
@@ -313,7 +313,7 @@ class Mob(Object):
     the mob will bring its weapons to bear on any targets
     in the room.
     """
-    self._maybe_say_something()
+    #self._maybe_say_something()
 
     # first make sure we have a target
     target = self._find_target(self.location)
@@ -322,6 +322,7 @@ class Mob(Object):
       self.start_hunting()
       return
 
+    self.location.msg_contents(f"{self.key} is attacking {target.key}")
     resolve_mob_attack(self, target)
 
   def at_new_arrival(self, new_character):

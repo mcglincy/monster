@@ -1,8 +1,10 @@
 import random
 from evennia import TICKER_HANDLER
 from evennia.prototypes import prototypes as protlib, spawner
+from gamerules.combat import apply_armor, attack_bystander_msg, attack_target_msg
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
+
 
 # AllStats.Tick.TkRandMove := AllStats.Tick.TkRandMove + 100;
 MOB_GENERATOR_TICK_SECONDS = 10
@@ -24,14 +26,7 @@ def resolve_mob_attack(mob, target):
   mob.location.msg_contents(location_msg, exclude=[mob, target])
 
   # apply armor to reduce damage
-  base_armor = target.base_armor
-  deflect_armor = target.deflect_armor
-  if deflect_armor > 0 and random.randint(0, 100) < deflect_armor:
-    target.msg("The attack is deflected by your armor.")
-    damage = int(damage / 2)
-  if base_armor > 0:
-    target.msg("The attack is partially blocked by your armor.")
-    damage = int(damage * ((100 - base_armor) / 100))
+  damage = apply_armor(target, damage)
 
   # target takes the damage
   target.gain_health(-damage, damager=mob, weapon_name=attack_name)
@@ -42,7 +37,7 @@ def mob_attack_damage(mob, is_surprise=False):
   # TODO: consider mob.level_damage?
   dmg = mob.base_damage + random.randint(0, mob.random_damage)
   if is_surprise:
-    dmg = dmg + int(dmg * attacker.shadow_damage_percent / 100)
+    dmg = dmg + int(dmg * mob.shadow_damage_percent / 100)
   return dmg  
 
 
@@ -113,16 +108,13 @@ def has_players_or_mobs(location):
 
 
 def maybe_spawn_mob_in_lair(location):
-
   if not location.is_special_kind(SpecialRoomKind.MONSTER_LAIR):
     # not a lair
     return
 
-
   if has_players_or_mobs(location):
     # only spawn a new mob in a room devoid of players or mobs
     return
-
 
   mob_id = location.magnitude(SpecialRoomKind.MONSTER_LAIR)
   record_id_tag = f"record_id_{mob_id}"
