@@ -67,6 +67,9 @@ class Exit(DefaultExit):
     """
     source_location = traversing_object.location
 
+    # check for mob lair at our destination
+    maybe_spawn_mob_in_lair(target_location)
+
     # pass our various exit messages down
     if traversing_object.move_to(target_location,
         success_msg=self.db.success_msg,

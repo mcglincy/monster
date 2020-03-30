@@ -84,14 +84,15 @@ def tick_mob_generator(subject):
     # always a 1% chance
     spawn_chance = 1
 
+  # TODO: debugging/testing
   # spawn_chance = 50
 
   if random.randint(0, 100) < spawn_chance:
     # yay, let's make a monster
-    spawn_mob(subject.location, subject.level)
+    generate_mob(subject.location, subject.level)
 
 
-def spawn_mob(location, level):
+def generate_mob(location, level):
   tags = [f"min_level_{x}" for x in range(level+1)]
   mob_prototypes = protlib.search_prototype(tags=tags)
   if not mob_prototypes:
@@ -101,3 +102,29 @@ def spawn_mob(location, level):
   mob = spawner.spawn(proto_choice['prototype_key'])[0]
   mob.location = location
   location.msg_contents(f"A {mob.key} appears!")
+
+
+def has_players_or_mobs(location):
+  for obj in location.contents:
+    if obj.is_typeclass("typeclasses.characters.Character") or obj.is_typeclass("typeclasses.mobs.Mob"):
+      return True
+  return False
+
+
+def maybe_spawn_mob_in_lair(location):
+  if not location.is_special_kind(SpecialRoomKind.LAIR):
+    # not a lair
+    return
+
+  if has_players_or_mobs(location):
+    # only spawn a new mob in a room devoid of players or mobs
+    return
+
+  mob_id = location.magnitude(SpecialRoomKind.LAIR)
+  record_id_tag = f"record_id_{mob_id}"
+  mob_prototypes = protlib.search_prototype(tags=[record_id_tag])
+  if not mob_prototypes:
+    return
+  proto_choice = mob_prototypes[0]
+  mob = spawner.spawn(proto_choice['prototype_key'])[0]
+  mob.location = location
