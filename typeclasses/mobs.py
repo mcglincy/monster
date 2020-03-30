@@ -78,10 +78,8 @@ class Mob(Object):
     self.db.health = self.db.max_health
     self.db.max_mana = self.db.base_mana
     self.db.mana = self.db.max_mana
-    # TODO: debug where/how we should add ticker - at_init doesn't get called at first spawn
-    # maybe we should just make it persistent?
-    # add_health_ticker(self)
-    # add_mana_ticker(self)
+    # call at_init() to add tickers and kickstart the mob
+    self.at_init()
 
   def at_init(self):
     self.ndb.hiding = 0
