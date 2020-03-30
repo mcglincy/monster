@@ -97,18 +97,30 @@ class Mob(Object):
     remove_health_ticker(self)
     #remove_mana_ticker(self)
 
+  def at_new_arrival(self, new_character):
+    """This is triggered whenever a new character enters the room.
+
+    This is called by the TutorialRoom the mob stands in and
+    allows it to be aware of changes immediately without needing
+    to poll for them all the time. For example, the mob can react
+    right away, also when patrolling on a very slow ticker.
+    """
+    # the room actually already checked all we need, so
+    # we know it is a valid target.
+    if self.db.aggressive and not self.ndb.is_attacking:
+      self.start_attacking()
+
   def gain_health(self, amount, damager=None, weapon_name=None):
     self.db.health = max(MIN_HEALTH, min(self.max_health, self.db.health + amount))
+    # tell everyone else in the room our health
+    self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
     if self.db.health <= 0:
       # die
       mob_death(self, damager)
-    else:
-      # tell everyone else in the room our health
-      self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
-      # aggro
-      if amount < 0 and not self.ndb.is_attacking:
-        self.ndb.aggressive = True
-        self.start_attacking()
+    elif amount < 0 and not self.ndb.is_attacking:
+      # we took damage and we're still alive - go aggro
+      self.ndb.aggressive = True
+      self.start_attacking()
 
   @property
   def max_health(self):
@@ -325,18 +337,6 @@ class Mob(Object):
     self.location.msg_contents(f"{self.key} is attacking {target.key}")
     resolve_mob_attack(self, target)
 
-  def at_new_arrival(self, new_character):
-    """This is triggered whenever a new character enters the room.
-
-    This is called by the TutorialRoom the mob stands in and
-    allows it to be aware of changes immediately without needing
-    to poll for them all the time. For example, the mob can react
-    right away, also when patrolling on a very slow ticker.
-    """
-    # the room actually already checked all we need, so
-    # we know it is a valid target.
-    if self.db.aggressive and not self.ndb.is_attacking:
-      self.start_attacking()
 
 # waiting - tick every 1s (then check current room for targets)
 # patrolling - tick at movement speed + whatever delay (then check current room for targets)
