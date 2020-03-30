@@ -219,7 +219,6 @@ class Character(DefaultCharacter):
     })
     destination.msg_contents(string, exclude=(self,), mapping=mapping)
 
-
   # helper getters
 
   @property

@@ -154,7 +154,7 @@ def character_death(victim, killer=None, weapon_name=None):
     msg_global(f"{victim.name} has been slain by {killer.name}'s {weapon_name}.")
 
   # award xp to the killer
-  if killer and killer.has_attr("gain_xp"):
+  if killer is not None and killer.is_typeclass("typeclasses.characters.Character"):
     killer.msg(f"You killed {victim.name}!")
     xp = calculate_kill_xp(killer.db.xp, victim.db.xp)
     gain_xp(killer, xp)

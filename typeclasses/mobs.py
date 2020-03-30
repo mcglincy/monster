@@ -178,7 +178,6 @@ class Mob(Object):
       if x.is_typeclass("typeclasses.characters.Character") and not x.is_hiding]
     if characters:
       target = random.choice(characters)
-      target.msg(f"{self.key} doesn't like the look of you!")
       return target
 
   def _set_ticker(self, interval, hook_key, stop=False):
