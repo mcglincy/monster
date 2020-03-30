@@ -86,6 +86,7 @@ def tick_mob_generator(subject):
 
   # TODO: debugging/testing
   # spawn_chance = 50
+  spawn_chance = 0
 
   if random.randint(0, 100) < spawn_chance:
     # yay, let's make a monster
@@ -112,15 +113,18 @@ def has_players_or_mobs(location):
 
 
 def maybe_spawn_mob_in_lair(location):
-  if not location.is_special_kind(SpecialRoomKind.LAIR):
+
+  if not location.is_special_kind(SpecialRoomKind.MONSTER_LAIR):
     # not a lair
     return
+
 
   if has_players_or_mobs(location):
     # only spawn a new mob in a room devoid of players or mobs
     return
 
-  mob_id = location.magnitude(SpecialRoomKind.LAIR)
+
+  mob_id = location.magnitude(SpecialRoomKind.MONSTER_LAIR)
   record_id_tag = f"record_id_{mob_id}"
   mob_prototypes = protlib.search_prototype(tags=[record_id_tag])
   if not mob_prototypes:

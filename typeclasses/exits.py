@@ -10,6 +10,7 @@ from evennia import DefaultExit
 from commands.movement import CmdExit
 from gamerules.exit_effects import apply_exit_effect
 from gamerules.exit_kind import ExitKind
+from gamerules.mobs import maybe_spawn_mob_in_lair
 
 
 class Exit(DefaultExit):

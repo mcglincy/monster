@@ -1,5 +1,5 @@
 from commands.command import QueuedCommand
-from gamerules.comms import msg_global
+from gamerules.talk import msg_global
 
 
 class CmdSay(QueuedCommand):

@@ -2,8 +2,8 @@ import random
 
 from evennia.utils.search import search_object
 
-from gamerules.comms import msg_global
 from gamerules.hiding import reveal
+from gamerules.talk import msg_global
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 

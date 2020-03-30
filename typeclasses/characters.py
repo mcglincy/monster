@@ -16,11 +16,11 @@ from evennia.commands import cmdhandler
 
 from gamerules.alignment import Alignment
 from gamerules.combat import character_death
-from gamerules.comms import msg_global
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker
 from gamerules.mana import MIN_MANA, add_mana_ticker
 from gamerules.mobs import add_mob_generator_ticker
+from gamerules.talk import msg_global
 from gamerules.xp import MIN_XP, level_from_xp
 from userdefined.models import CharacterClass
 
