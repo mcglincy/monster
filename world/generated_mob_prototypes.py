@@ -13,8 +13,8 @@ MOB = {
 BUGBEAR = {
   'key': "Bugbear",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_4'],
   'record_id': 1,
+  'prototype_tags': ['mob', 'min_level_4', 'record_id_1'],
   'kind': MobKind.FIGHTER,
   'min_level': 4,
   'group': 0,
@@ -44,8 +44,8 @@ BUGBEAR = {
 EVIL_DWARF = {
   'key': "Evil Dwarf",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_4'],
   'record_id': 2,
+  'prototype_tags': ['mob', 'min_level_4', 'record_id_2'],
   'kind': MobKind.FIGHTER,
   'min_level': 4,
   'group': 5,
@@ -75,8 +75,8 @@ EVIL_DWARF = {
 WHITE_DRAGON = {
   'key': "White Dragon",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_7'],
   'record_id': 3,
+  'prototype_tags': ['mob', 'min_level_7', 'record_id_3'],
   'kind': MobKind.FIGHTER,
   'min_level': 7,
   'group': 0,
@@ -106,8 +106,8 @@ WHITE_DRAGON = {
 RED_DRAGON = {
   'key': "Red Dragon",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_7'],
   'record_id': 4,
+  'prototype_tags': ['mob', 'min_level_7', 'record_id_4'],
   'kind': MobKind.FIGHTER,
   'min_level': 7,
   'group': 0,
@@ -137,8 +137,8 @@ RED_DRAGON = {
 A_GHOST = {
   'key': "a ghost",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_5'],
   'record_id': 5,
+  'prototype_tags': ['mob', 'min_level_5', 'record_id_5'],
   'kind': MobKind.FIGHTER,
   'min_level': 5,
   'group': 0,
@@ -168,8 +168,8 @@ A_GHOST = {
 PILGRIM = {
   'key': "Pilgrim",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_0'],
   'record_id': 6,
+  'prototype_tags': ['mob', 'min_level_0', 'record_id_6'],
   'kind': MobKind.FIGHTER,
   'min_level': 0,
   'group': 0,
@@ -199,8 +199,8 @@ PILGRIM = {
 DRUNKEN_WARRIOR = {
   'key': "Drunken Warrior",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_3'],
   'record_id': 7,
+  'prototype_tags': ['mob', 'min_level_3', 'record_id_7'],
   'kind': MobKind.FIGHTER,
   'min_level': 3,
   'group': 0,
@@ -230,8 +230,8 @@ DRUNKEN_WARRIOR = {
 LORD_GRAZZTS_GHOST = {
   'key': "lord grazz't's ghost",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_5'],
   'record_id': 8,
+  'prototype_tags': ['mob', 'min_level_5', 'record_id_8'],
   'kind': MobKind.FIGHTER,
   'min_level': 5,
   'group': 0,
@@ -261,8 +261,8 @@ LORD_GRAZZTS_GHOST = {
 CRUSADERS_SHADE = {
   'key': "crusader's shade",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_4'],
   'record_id': 9,
+  'prototype_tags': ['mob', 'min_level_4', 'record_id_9'],
   'kind': MobKind.FIGHTER,
   'min_level': 4,
   'group': 0,
@@ -292,8 +292,8 @@ CRUSADERS_SHADE = {
 FROST_GIANT = {
   'key': "frost giant",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_6'],
   'record_id': 10,
+  'prototype_tags': ['mob', 'min_level_6', 'record_id_10'],
   'kind': MobKind.FIGHTER,
   'min_level': 6,
   'group': 0,
@@ -323,8 +323,8 @@ FROST_GIANT = {
 FIRE_GIANT = {
   'key': "fire giant",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_5'],
   'record_id': 11,
+  'prototype_tags': ['mob', 'min_level_5', 'record_id_11'],
   'kind': MobKind.FIGHTER,
   'min_level': 5,
   'group': 12,
@@ -354,8 +354,8 @@ FIRE_GIANT = {
 TOAD_MAN = {
   'key': "toad man",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_0'],
   'record_id': 12,
+  'prototype_tags': ['mob', 'min_level_0', 'record_id_12'],
   'kind': MobKind.FIGHTER,
   'min_level': 0,
   'group': 0,
@@ -385,8 +385,8 @@ TOAD_MAN = {
 KOBOLD = {
   'key': "kobold",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_0'],
   'record_id': 13,
+  'prototype_tags': ['mob', 'min_level_0', 'record_id_13'],
   'kind': MobKind.FIGHTER,
   'min_level': 0,
   'group': 0,
@@ -416,8 +416,8 @@ KOBOLD = {
 PUGNACIOUS_RUNT = {
   'key': "pugnacious runt",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_0'],
   'record_id': 14,
+  'prototype_tags': ['mob', 'min_level_0', 'record_id_14'],
   'kind': MobKind.FIGHTER,
   'min_level': 0,
   'group': 0,
@@ -447,8 +447,8 @@ PUGNACIOUS_RUNT = {
 SOLDIER = {
   'key': "soldier",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_10'],
   'record_id': 15,
+  'prototype_tags': ['mob', 'min_level_10', 'record_id_15'],
   'kind': MobKind.FIGHTER,
   'min_level': 10,
   'group': 0,
@@ -478,8 +478,8 @@ SOLDIER = {
 VAMPIRE = {
   'key': "Vampire",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_6'],
   'record_id': 16,
+  'prototype_tags': ['mob', 'min_level_6', 'record_id_16'],
   'kind': MobKind.FIGHTER,
   'min_level': 6,
   'group': 0,
@@ -509,8 +509,8 @@ VAMPIRE = {
 SWORD_OF_KINGS = {
   'key': "Sword of Kings",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_0'],
   'record_id': 17,
+  'prototype_tags': ['mob', 'min_level_0', 'record_id_17'],
   'kind': MobKind.FIGHTER,
   'min_level': 0,
   'group': 0,
@@ -540,8 +540,8 @@ SWORD_OF_KINGS = {
 GREEN_SLIME = {
   'key': "Green Slime",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_4'],
   'record_id': 18,
+  'prototype_tags': ['mob', 'min_level_4', 'record_id_18'],
   'kind': MobKind.FIGHTER,
   'min_level': 4,
   'group': 0,
@@ -571,8 +571,8 @@ GREEN_SLIME = {
 A_CTHULHU = {
   'key': "a Cthulhu",
   'prototype_parent': 'mob',
-  'prototype_tags': ['mob', 'min_level_10'],
   'record_id': 19,
+  'prototype_tags': ['mob', 'min_level_10', 'record_id_19'],
   'kind': MobKind.FIGHTER,
   'min_level': 10,
   'group': 0,
