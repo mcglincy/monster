@@ -54,6 +54,7 @@ def output_common_fields(obj, prototype_parent, descs, lines):
   print(f"{snake_case(obj_name)} = {{")
   # TODO: add better quote escaping for key and desc
   print(f"  'key': \"{obj_name}\",")
+  print(f"  'record_id': {obj['id']}")
   print(f"  'prototype_parent': '{prototype_parent}',")
   maybe(obj['particle'], 'article', except_if=DEFAULT_ARTICLE)
   maybe(obj['components'], 'components')

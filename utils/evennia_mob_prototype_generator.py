@@ -7,14 +7,18 @@ from gamerules.mob_kind import MobKind
 from utils.generator_utils import DEFAULT_MSG_ID, camel_case, lookup_description, snake_case, split_integer
 
 
-DESC_FILE = './json/desc.json'
-LINES_FILE = './json/lines.json'
 OBJECTS_FILE = './json/objects.json'
 RANDOMS_FILE = './json/randoms.json'
-SPELLS_FILE = './json/spells.json'
 
 
-def output_mob(obj):
+def find_object(objects, record_id):
+  for obj in objects:
+    if obj['id'] == record_id:
+      return obj
+  return None
+
+
+def output_mob(obj, objects):
   obj_name = obj['name']
   print(f"{snake_case(obj_name)} = {{")
   print(f"  'key': \"{obj_name}\",")
@@ -46,7 +50,11 @@ def output_mob(obj):
   print(f"  'move_speed': {obj['move_speed']},")
   print(f"  'attack_speed': {obj['attack_speed']},")
   print(f"  'heal_speed': {obj['heal_speed']},")
-  print(f"  'weapon_id': {obj['weapon']},")
+  weapon_id = obj['weapon']
+  if weapon_id:
+    weapon = find_object(objects, weapon_id)
+    if weapon:
+      print(f"  'attack_name': '{weapon['obj_name']}',")
   print(f"  'weapon_use': {obj['weapon_use']},")
   print(f"  'level_weapon_use': {obj['level_weapon_use']},")
   print(f"  'pursuit_chance': {obj['pursuit_chance']},")
@@ -59,16 +67,10 @@ def output_mob(obj):
 
 def main():
   """Command-line script."""
-  with open(DESC_FILE) as f:
-    descs = json.load(f)
-  with open(LINES_FILE) as f:
-    lines = json.load(f)
   with open(OBJECTS_FILE) as f:
     objects = json.load(f)
   with open(RANDOMS_FILE) as f:
     rand_mobs = json.load(f)
-  with open(SPELLS_FILE) as f:
-    spells = json.load(f)
 
   print("""#
 # Generated mob prototypes
@@ -84,7 +86,7 @@ MOB = {
 """)
 
   for rand_mob in rand_mobs:
-    output_mob(rand_mob)
+    output_mob(rand_mob, objects)
 
 
 if __name__ == "__main__":

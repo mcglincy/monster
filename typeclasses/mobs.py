@@ -47,6 +47,7 @@ class Mob(Object):
     # self.db.pursuit_chance = 0
     # self.db.spell_ids = []
     # self.db.sayings = []
+    # self.db.attack_name = None
 
     # whether the mob moves between rooms
     self.db.moves_between_rooms = True
@@ -165,6 +166,10 @@ class Mob(Object):
   @property
   def is_poisoned(self):
     return self.ndb.poisoned
+
+  @property
+  def attack_name(self):
+    return self.db.attack_name if self.db.attack_name else "claws"
 
   def _find_target(self, location):
     # TODO: handle death of our previous target
@@ -333,9 +338,7 @@ class Mob(Object):
       # no target, start looking for one
       self.start_hunting()
       return
-
-    self.location.msg_contents(f"{self.key} is attacking {target.key}")
-    resolve_mob_attack(self, target)
+    resolve_mob_attack(self, target, self.attack_name)
 
 
 # waiting - tick every 1s (then check current room for targets)

@@ -10,13 +10,10 @@ from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 MOB_GENERATOR_TICK_SECONDS = 10
 
 
-def resolve_mob_attack(mob, target):
+def resolve_mob_attack(mob, target, attack_name="claws"):
   # TODO: add hiding
   is_surprise = False
   damage = mob_attack_damage(mob, is_surprise)
-
-  # TODO: consider mob.weapon_id / weapon_name
-  attack_name = "claws"
 
   # attack message for target
   target.msg(attack_target_msg(mob.name, attack_name, damage))
@@ -123,4 +120,6 @@ def maybe_spawn_mob_in_lair(location):
     return
   proto_choice = mob_prototypes[0]
   mob = spawner.spawn(proto_choice['prototype_key'])[0]
+  # stay in the lair
   mob.location = location
+  mob.db.moves_between_rooms = False

@@ -168,6 +168,7 @@ class Object(DefaultObject):
   """
   def at_object_creation(self):
     super().at_object_creation()
+    self.db.record_id = None
     self.db.article = None
     self.db.components = []
     self.db.get_fail_msg = None
