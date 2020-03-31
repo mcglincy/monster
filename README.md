@@ -27,7 +27,7 @@ The running game server is up at http://www.monstermud.com.
   * Exit effects
     * set or reset class, change xp, change health, change mana
   * Trapdoors
-  * Special room kinds: no combat, no hide, hard to hide, object destroy
+  * Special room kinds: no combat, no hide, hard to hide, object destroy, monster generator, monster lair
   * Special room magnitudes
 * Objects
   * Imported all original objects (weapons, armor, etc)
@@ -75,7 +75,11 @@ The running game server is up at http://www.monstermud.com.
   * Spell effects: hurt, group hurt, heal, sleep (freeze), distance hurt
   * Direction/Target prompt for distance spells
   * Spell deflect and armor
-
+* Randoms (aka mobs)
+  * Mob class with prototypes from OG Monster randoms.json data
+  * Simple mob AI: find target, attack, die, patrol/hunt
+  * Mobs spawned by MONSTER_GENERATOR and MONSTER_LAIR rooms
+  * Lair mobs stay in lair
 
 ## What's not implemented yet
 
@@ -84,7 +88,7 @@ The running game server is up at http://www.monstermud.com.
 * Map/Rooms
   * Room owners / customizations
     * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing and extensive builder commands)
-  * Special room kinds: market, treasure drop, monster generator, monster lair, heal
+  * Special room kinds: market, treasure drop, heal
   * Move silent between rooms
   * Exit types
     * guardian
@@ -115,6 +119,12 @@ The running game server is up at http://www.monstermud.com.
 * Spells
   * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
 * Randoms (aka mobs)
-  * [a whole bunch of stuff]
+  * drop object
+  * drop gold
+  * pursuit chance / pursuit behavior
+  * sayings
+  * cast spells
+  * figure out if extra1/extra2 fields contain actually-useful data
+
 
   
