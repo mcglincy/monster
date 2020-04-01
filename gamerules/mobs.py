@@ -66,6 +66,10 @@ def remove_mob_generator_ticker(subject):
 
 
 def tick_mob_generator(subject):
+  if subject is None or subject.location is None:
+    # guard against stupid state
+    return
+
   if subject.location.is_special_kind(SpecialRoomKind.NO_COMBAT):
     # never spawn in a no-combat room
     return
