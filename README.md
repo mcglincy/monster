@@ -109,6 +109,7 @@ The running game server is up at http://www.monstermud.com.
   * Bombs and *lob* command
   * Poison
 * Commands
+  * Default attack / get / etc to picking the first thing for name dupes?
   * Remove any Evennia commands we don't want
   * hidesay
   * *use* command
