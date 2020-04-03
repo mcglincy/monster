@@ -81,12 +81,15 @@ MERCHANT = {
   'key': 'merchant',
 }
 
-#
-# Mob prototypes
-#
-
 TARGET_DUMMY = {
   'typeclass': 'typeclasses.mobs.Mob',
   'key': 'target dummy',
   'health': 1000,
+}
+
+BAG_OF_GOLD = {
+  'typeclass': 'typeclasses.objects.Gold',
+  'key': 'gold',
+  'amount': 50,
+  'desc': 'A bag of 50 gold.'
 }

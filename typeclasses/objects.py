@@ -209,42 +209,62 @@ class Object(DefaultObject):
       user.msg(self.db.use_success_msg)
 
 
-class Gold(Object):
+class StackableObject(Object):
   def at_object_creation(self):
     super().at_object_creation()
-    self.db.amount = 0
-    self.add(5)
+    self.db.amount= 0
+    self.db.stack_name = "stack"
+    self.db.singular_object_name = "thingy"
+    self.db.plural_object_name = "thingies"
+
+  def _stack_name(self):
+    n = f"{self.db.stack_name} of {self.db.amount} "
+    if self.db.amount == 1:
+      n += self.db.singular_object_name 
+    else:
+      n += self.db.plural_object_name 
+    return n
 
   def get_display_name(self, looker, **kwargs):
+    n = self._stack_name()
     if self.locks.check_lockstring(looker, "perm(Builder)"):
-      return f"{self.name}({self.db.amount})(#{self.id})"
-    return f"{self.name}({self.db.amount})"
+      return f"{n} (#{self.id})"
+    return n
+
+  def return_appearance(self, *args, **kwargs):
+    return f"A {self._stack_name()}."
 
   def add(self, amount):
-    self.db.amount = max(self.db.amount + amount, 0)
-    if self.db.amount == 0:
+    self.db.amount = self.db.amount + amount
+    self.db.desc = f"A {self._stack_name()}."
+    if self.db.amount <= 0:
       self.delete()
-    self.db.desc = f"{self.db.amount} gold"
 
   def at_get(self, getter, **kwargs):
-    # see if getter already has a bag of gold, and add picked-up gold to it
-    existing_gold = getter.search("gold",
-      candidates=getter.contents, typeclass="typeclasses.objects.Gold", quiet=True)
-    if len(existing_gold) > 1:
-      keeper = existing_gold[0]
-      for g in existing_gold[1:]:
-        keeper.add(g.db.amount)
-        g.delete()
+    # see if getter already has a stack of this kind
+    existing = [x for x in getter.contents if x.typeclass_path == self.path and x != self]
+    if existing:
+      # add our count to the existing object
+      obj = existing[0]
+      obj.add(self.db.amount)
+      self.delete()
 
   def at_drop(self, dropper, **kwargs):
-    # see if room already has a bag of gold, and add dropped gold to it
-    existing_gold = self.location.search("gold",
-      candidates=self.location.contents, typeclass="typeclasses.objects.Gold", quiet=True)
-    if len(existing_gold) > 1:
-      keeper = existing_gold[0]
-      for g in existing_gold[1:]:
-        keeper.add(g.db.amount)
-        g.delete()
+    # see if dropped-to location already has a stack of this kind
+    existing = [x for x in self.location.contents if x.typeclass_path == self.path and x != self]
+    if existing:
+      # add our count to the existing object
+      obj = existing[0]
+      obj.add(self.db.amount)
+      self.delete()
+
+
+class Gold(StackableObject):
+  def at_object_creation(self):
+    super().at_object_creation()
+    self.db.stack_name = "bag"
+    self.db.singular_object_name = "gold"
+    self.db.plural_object_name = "gold"
 
 
 class Bland(Object):
