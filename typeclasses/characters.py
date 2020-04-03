@@ -11,7 +11,7 @@ import time
 from collections import deque
 from random import randint
 
-from evennia import DefaultCharacter, search_object, TICKER_HANDLER
+from evennia import create_object, DefaultCharacter, search_object, TICKER_HANDLER
 from evennia.commands import cmdhandler
 
 from gamerules.alignment import Alignment
@@ -229,13 +229,30 @@ class Character(DefaultCharacter):
       self.ndb.character_class = CharacterClass.objects.get(db_key=self.db.character_class_key)
     return self.ndb.character_class
 
+  def gold_object(self):
+    for obj in self.contents:
+      if obj.is_typeclass("typeclasses.objects.Gold"):
+        return obj
+    return None
+
   @property
-  def carried_gold_amount(self):
-    gold = self.search("gold",
-      candidates=self.contents, typeclass="typeclasses.objects.Gold", quiet=True)
-    if len(gold) > 0:
-      return gold[0].db.amount
+  def gold(self):
+    gold = self.gold_object()
+    if gold:
+      return gold.db.amount
     return 0
+
+  def gain_gold(self, amount):
+    existing = self.gold_object()
+    if existing:
+      existing.add(amount)
+    elif amount < 1:
+      # don't create zero or negative gold
+      return
+    else:
+      gold = create_object("typeclasses.objects.Gold", key="gold")
+      gold.add(amount)
+      gold.move_to(self, quiet=True)
 
   @property
   def level(self):

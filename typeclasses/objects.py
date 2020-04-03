@@ -240,7 +240,8 @@ class StackableObject(Object):
   def add(self, amount):
     self.db.amount = self.db.amount + amount
     self.db.desc = f"A {self._stack_name()}."
-    if self.db.amount <= 0:
+    if self.db.amount < 1:
+      # don't keep empty stacks around
       self.delete()
 
   def _maybe_add_to_existing(self, location):
