@@ -15,6 +15,8 @@ BASE_BLAND = {
 AMBER_HEMISPHERE = {
   'key': "amber hemisphere",
   'prototype_parent': 'base_bland',
+  'record_id': 112
+  'prototype_tags': ['object', 'record_id_112'],
   'article': 2,
   'desc': "The piece of amber is a perfect hemisphere that rests comfortably in the palm of your hand. You notice a message has been etched in the amber, and spirals its way around the stone. It reads:  \"The Gae Bolge has returned to its makers, the Tuatha de Danaan, who   have fled the Realm of Man and now are only found in the Realm of   Dreams.\"",
 }
@@ -22,6 +24,8 @@ AMBER_HEMISPHERE = {
 ANIMAL_PELT = {
   'key': "animal pelt",
   'prototype_parent': 'base_bland',
+  'record_id': 93
+  'prototype_tags': ['object', 'record_id_93'],
   'article': 2,
   'desc': "The animal pelt is thick and grey.",
 }
@@ -29,6 +33,8 @@ ANIMAL_PELT = {
 ARROWHEAD = {
   'key': "arrowhead",
   'prototype_parent': 'base_bland',
+  'record_id': 99
+  'prototype_tags': ['object', 'record_id_99'],
   'article': 2,
   'desc': "The arrowhead is made from bronze, and has been severely oxidized.",
   'num_exist': 1,
@@ -37,12 +43,16 @@ ARROWHEAD = {
 BENT_DAGGER = {
   'key': "bent dagger",
   'prototype_parent': 'base_bland',
+  'record_id': 92
+  'prototype_tags': ['object', 'record_id_92'],
   'desc': "The dagger's blade has been twisted around behind the hilt.",
 }
 
 BROKEN_LONGSWORD = {
   'key': "broken longsword",
   'prototype_parent': 'base_bland',
+  'record_id': 2
+  'prototype_tags': ['object', 'record_id_2'],
   'num_exist': 2,
   'weight': 1,
 }
@@ -50,6 +60,8 @@ BROKEN_LONGSWORD = {
 CHARM_OF_OPENING = {
   'key': "Charm of Opening",
   'prototype_parent': 'base_bland',
+  'record_id': 116
+  'prototype_tags': ['object', 'record_id_116'],
   'desc': "The charm is a thin silver medallion that has strange markings on the front face, and an inscription on the back. The inscription reads:  \"The wise will know how to use this most ancient of devices.\"",
   'num_exist': 5,
   'worth': 73,
@@ -58,18 +70,24 @@ CHARM_OF_OPENING = {
 CHARM_OF_REDEMPTION = {
   'key': "Charm of Redemption",
   'prototype_parent': 'base_bland',
+  'record_id': 126
+  'prototype_tags': ['object', 'record_id_126'],
   'desc': "The charm is a small blue stone on a string.",
 }
 
 CHUNK_OF_AMBER = {
   'key': "chunk of amber",
   'prototype_parent': 'base_bland',
+  'record_id': 86
+  'prototype_tags': ['object', 'record_id_86'],
   'desc': "The chunk of amber appears normal.",
 }
 
 COPPER_TABLETS = {
   'key': "Copper Tablets",
   'prototype_parent': 'base_bland',
+  'record_id': 10
+  'prototype_tags': ['object', 'record_id_10'],
   'article': 3,
   'desc': "The tablets are large and thin, made of sheets of copper hammered together. A copper chain forms a large loop, going through the left corner of all the tablets around through the right. The writing on the tablets is very archaic, and does not look human.  One tablet does, however, depict an image of a brilliant spear floating above a sleeping individual. Between the spear and the individual is a round sphere, which might depict either the Sun or a more Earthly object.",
   'get_fail_msg': "The tablets are unnaturaly heavy. You cannot lift them.",
@@ -80,12 +98,16 @@ COPPER_TABLETS = {
 CRYSTAL_PRISM = {
   'key': "crystal prism",
   'prototype_parent': 'base_bland',
+  'record_id': 96
+  'prototype_tags': ['object', 'record_id_96'],
   'desc': "The prism fits in the palm of your hand, and is nearly transparent.",
 }
 
 DIAMOND = {
   'key': "diamond",
   'prototype_parent': 'base_bland',
+  'record_id': 64
+  'prototype_tags': ['object', 'record_id_64'],
   'desc': "The gem has already been cut, and is clearly valuable.",
   'num_exist': 2,
   'worth': 75,
@@ -94,12 +116,16 @@ DIAMOND = {
 DRAGONSTONE = {
   'key': "Dragonstone",
   'prototype_parent': 'base_bland',
+  'record_id': 7
+  'prototype_tags': ['object', 'record_id_7'],
   'num_exist': 1,
 }
 
 DRUIDIC_BOAT = {
   'key': "Druidic Boat",
   'prototype_parent': 'base_bland',
+  'record_id': 20
+  'prototype_tags': ['object', 'record_id_20'],
   'get_success_msg': "You climb into the druidic boat. ",
   'line_desc': "A boat of druidic origin rests here.",
   'num_exist': 6,
@@ -109,6 +135,8 @@ DRUIDIC_BOAT = {
 ELF_SKULL = {
   'key': "elf skull",
   'prototype_parent': 'base_bland',
+  'record_id': 98
+  'prototype_tags': ['object', 'record_id_98'],
   'article': 2,
   'desc': "The skull is delicate and slightly smaller than that of a human. The  cranium has been pierced by a sharp instrument.",
   'num_exist': 1,
@@ -117,18 +145,24 @@ ELF_SKULL = {
 FLAT_STONE = {
   'key': "flat stone",
   'prototype_parent': 'base_bland',
+  'record_id': 45
+  'prototype_tags': ['object', 'record_id_45'],
   'num_exist': 1,
 }
 
 FORGE_STONE = {
   'key': "Forge stone",
   'prototype_parent': 'base_bland',
+  'record_id': 163
+  'prototype_tags': ['object', 'record_id_163'],
   'desc': "The stone is a crimson ore of some sort, with a distinctly metallic look and feel about it.",
 }
 
 GARNET = {
   'key': "garnet",
   'prototype_parent': 'base_bland',
+  'record_id': 62
+  'prototype_tags': ['object', 'record_id_62'],
   'desc': "The gem is about a half an inch in diameter, and in the rough.",
   'num_exist': 2,
   'worth': 49,
@@ -137,12 +171,16 @@ GARNET = {
 GLASS_BOTTLE = {
   'key': "glass bottle",
   'prototype_parent': 'base_bland',
+  'record_id': 84
+  'prototype_tags': ['object', 'record_id_84'],
   'desc': "The bottle is of a dark green glass. The bottom is slightly bloated, appearing perhaps more like a flask.",
 }
 
 GOLDEN_RING = {
   'key': "golden ring",
   'prototype_parent': 'base_bland',
+  'record_id': 65
+  'prototype_tags': ['object', 'record_id_65'],
   'desc': "The ring bears the inscription \"to death do us part..\"",
   'num_exist': 1,
   'worth': 91,
@@ -151,6 +189,8 @@ GOLDEN_RING = {
 GRANITE_STONE = {
   'key': "granite stone",
   'prototype_parent': 'base_bland',
+  'record_id': 113
+  'prototype_tags': ['object', 'record_id_113'],
   'desc': "The stone is very smooth, and is in the shape of a perfect hemisphere.",
   'num_exist': 1,
 }
@@ -158,6 +198,8 @@ GRANITE_STONE = {
 HUGE_PEARL = {
   'key': "huge pearl",
   'prototype_parent': 'base_bland',
+  'record_id': 63
+  'prototype_tags': ['object', 'record_id_63'],
   'desc': "The pearl is very large, and of the purest, deepest white.",
   'num_exist': 1,
   'worth': 64,
@@ -166,6 +208,8 @@ HUGE_PEARL = {
 IRON_KEY = {
   'key': "iron key",
   'prototype_parent': 'base_bland',
+  'record_id': 115
+  'prototype_tags': ['object', 'record_id_115'],
   'article': 2,
   'line_desc': "There is an iron key lying here!",
 }
@@ -173,6 +217,8 @@ IRON_KEY = {
 IVORY_BOAT = {
   'key': "Ivory Boat",
   'prototype_parent': 'base_bland',
+  'record_id': 125
+  'prototype_tags': ['object', 'record_id_125'],
   'article': 2,
   'desc': "The boat is not very large, capable of holding only one person. It lacks a sail, oars, or any other visible means of propulsion. It is carved out of a white wood that looks very much like ivory.",
   'get_success_msg': "You climb aboard the ivory boat.",
@@ -183,6 +229,8 @@ IVORY_BOAT = {
 IVORY_CARVING = {
   'key': "ivory carving",
   'prototype_parent': 'base_bland',
+  'record_id': 56
+  'prototype_tags': ['object', 'record_id_56'],
   'article': 2,
   'desc': "The object is an animal tusk which has been richly carved in relief, and capped with gold.",
   'num_exist': 3,
@@ -192,6 +240,8 @@ IVORY_CARVING = {
 JADE_FIGURINE = {
   'key': "jade figurine",
   'prototype_parent': 'base_bland',
+  'record_id': 55
+  'prototype_tags': ['object', 'record_id_55'],
   'desc': "The figurine depicts an elephant.",
   'num_exist': 3,
   'worth': 42,
@@ -200,11 +250,15 @@ JADE_FIGURINE = {
 KEY_OF_MOIBUS = {
   'key': "key of Moibus",
   'prototype_parent': 'base_bland',
+  'record_id': 54
+  'prototype_tags': ['object', 'record_id_54'],
 }
 
 LAKE_STONE = {
   'key': "lake stone",
   'prototype_parent': 'base_bland',
+  'record_id': 181
+  'prototype_tags': ['object', 'record_id_181'],
   'desc': "You see a dark blue stone, shimmering in the water. It has an inscription on one side saying I?s ?n ?he h??t of th? L?k?.",
   'get_success_msg': "You shimmer as you pick up the stone, not realizing its power!",
 }
@@ -212,6 +266,8 @@ LAKE_STONE = {
 LANTERN = {
   'key': "Lantern",
   'prototype_parent': 'base_bland',
+  'record_id': 161
+  'prototype_tags': ['object', 'record_id_161'],
   'desc': "The Lantern is finely crafted from the fines brass found in the realm",
   'line_desc': "There is a finely crafted lantern here.",
   'worth': 10000,
@@ -220,6 +276,8 @@ LANTERN = {
 LEAD_BAR = {
   'key': "lead bar",
   'prototype_parent': 'base_bland',
+  'record_id': 88
+  'prototype_tags': ['object', 'record_id_88'],
   'desc': "The bar is a small ingot of solid lead.",
   'num_exist': 2,
 }
@@ -227,24 +285,32 @@ LEAD_BAR = {
 LONG_STRAND_OF_HEMP = {
   'key': "long strand of hemp",
   'prototype_parent': 'base_bland',
+  'record_id': 29
+  'prototype_tags': ['object', 'record_id_29'],
   'num_exist': 1,
 }
 
 MARBLE = {
   'key': "marble",
   'prototype_parent': 'base_bland',
+  'record_id': 101
+  'prototype_tags': ['object', 'record_id_101'],
   'num_exist': 11,
 }
 
 OBSIDIAN_KEY = {
   'key': "obsidian key",
   'prototype_parent': 'base_bland',
+  'record_id': 33
+  'prototype_tags': ['object', 'record_id_33'],
   'article': 2,
 }
 
 OLD_PARCHMENT = {
   'key': "old parchment",
   'prototype_parent': 'base_bland',
+  'record_id': 89
+  'prototype_tags': ['object', 'record_id_89'],
   'article': 3,
   'desc': "The parchment appears blank. There are several sheets stuck together.",
 }
@@ -252,6 +318,8 @@ OLD_PARCHMENT = {
 PERSIAN_CARPET = {
   'key': "Persian carpet",
   'prototype_parent': 'base_bland',
+  'record_id': 59
+  'prototype_tags': ['object', 'record_id_59'],
   'desc': "The carpet, when unrolled, is 20 feet by 20 feet, and is very impressive.",
   'num_exist': 4,
   'weight': 50,
@@ -261,6 +329,8 @@ PERSIAN_CARPET = {
 PHIAL_OF_SUNSET = {
   'key': "Phial of Sunset",
   'prototype_parent': 'base_bland',
+  'record_id': 82
+  'prototype_tags': ['object', 'record_id_82'],
   'desc': "The phial is a glass prism which scatters light into colorful spectrums. Whats more, the phial almost seems to emanate a light of its own, as well as a faint hum. ",
   'line_desc': "You see a glass phial here.",
   'num_exist': 2,
@@ -269,12 +339,16 @@ PHIAL_OF_SUNSET = {
 PORCELAIN_SHARD = {
   'key': "porcelain shard",
   'prototype_parent': 'base_bland',
+  'record_id': 87
+  'prototype_tags': ['object', 'record_id_87'],
   'desc': "The shard appears like a large piece from an old vase.",
 }
 
 PORCELAIN_VASE = {
   'key': "porcelain vase",
   'prototype_parent': 'base_bland',
+  'record_id': 57
+  'prototype_tags': ['object', 'record_id_57'],
   'desc': "The vase is white, with a scene of men hunting tigers adorning it.",
   'num_exist': 2,
   'weight': 4,
@@ -284,6 +358,8 @@ PORCELAIN_VASE = {
 RHINESTONE_KEY = {
   'key': "Rhinestone Key",
   'prototype_parent': 'base_bland',
+  'record_id': 75
+  'prototype_tags': ['object', 'record_id_75'],
   'article': 4,
   'components': [73, 74],
   'desc': "The key is very oddly shaped. It has a long metal shaft, and is set with an emerald and a cluster of rhinestones.",
@@ -297,6 +373,8 @@ RHINESTONE_KEY = {
 ROPE = {
   'key': "rope",
   'prototype_parent': 'base_bland',
+  'record_id': 30
+  'prototype_tags': ['object', 'record_id_30'],
   'components': [29, 29, 29],
   'num_exist': 5,
   'worth': 65,
@@ -305,23 +383,31 @@ ROPE = {
 RUSTY_KEY = {
   'key': "rusty key",
   'prototype_parent': 'base_bland',
+  'record_id': 145
+  'prototype_tags': ['object', 'record_id_145'],
 }
 
 SILKEN_CORD = {
   'key': "silken cord",
   'prototype_parent': 'base_bland',
+  'record_id': 90
+  'prototype_tags': ['object', 'record_id_90'],
   'desc': "The cord is light, and about a foot long. It is red.",
 }
 
 SILVER_MIRROR = {
   'key': "silver mirror",
   'prototype_parent': 'base_bland',
+  'record_id': 83
+  'prototype_tags': ['object', 'record_id_83'],
   'desc': "The mirror is small enough to fit in the palm of your hand, and is of polished silver.",
 }
 
 SMALL_RUBY = {
   'key': "small ruby",
   'prototype_parent': 'base_bland',
+  'record_id': 61
+  'prototype_tags': ['object', 'record_id_61'],
   'desc': "The gem is rather small, and dark red.",
   'num_exist': 1,
   'worth': 36,
@@ -330,6 +416,8 @@ SMALL_RUBY = {
 STONE_TABLET = {
   'key': "stone tablet",
   'prototype_parent': 'base_bland',
+  'record_id': 85
+  'prototype_tags': ['object', 'record_id_85'],
   'desc': "The tablet is of white marble, and is inscribed with runes which you unfortunately cannot decipher.",
   'num_exist': 1,
 }
@@ -337,6 +425,8 @@ STONE_TABLET = {
 TEAKWOOD_CHEST = {
   'key': "teakwood chest",
   'prototype_parent': 'base_bland',
+  'record_id': 58
+  'prototype_tags': ['object', 'record_id_58'],
   'desc': "The chest is about 4 feet by 2 feet by 2 feet, and has hinges of brass.",
   'num_exist': 2,
   'weight': 8,
@@ -346,6 +436,8 @@ TEAKWOOD_CHEST = {
 THIGHBONE = {
   'key': "thighbone",
   'prototype_parent': 'base_bland',
+  'record_id': 31
+  'prototype_tags': ['object', 'record_id_31'],
   'desc': "The bone is that of some unknown creature, but written on it in black runes is the word: \"suedomsa\"",
   'num_exist': 1,
 }
@@ -353,6 +445,8 @@ THIGHBONE = {
 TROLL_STAFF = {
   'key': "troll staff",
   'prototype_parent': 'base_bland',
+  'record_id': 52
+  'prototype_tags': ['object', 'record_id_52'],
   'desc': "The staff is about 9 feet long, and roughly hacked from wood. It is topped with an Elf skull. Along the length of the staff is written: \"In order to be the leader of your people you must taste the blood of your enemies, and wear the head of a King.\"",
   'get_fail_msg': "Try as you might, you cannot pull the sturdy staff out of the ground.",
   'line_desc': "A long staff, topped with a skull, has been implanted in the ground here.",
@@ -362,12 +456,16 @@ TROLL_STAFF = {
 VELVET_CLOTH = {
   'key': "velvet cloth",
   'prototype_parent': 'base_bland',
+  'record_id': 79
+  'prototype_tags': ['object', 'record_id_79'],
   'desc': "The cloth is of black velvet, and is decorated with embroidery of  golden thread. ",
 }
 
 VIAL = {
   'key': "vial",
   'prototype_parent': 'base_bland',
+  'record_id': 146
+  'prototype_tags': ['object', 'record_id_146'],
 }
 
 #
@@ -382,6 +480,8 @@ BASE_EQUIPMENT = {
 ANIMAL_SKINS = {
   'key': "animal skins",
   'prototype_parent': 'base_equipment',
+  'record_id': 24
+  'prototype_tags': ['object', 'record_id_24'],
   'article': 3,
   'desc': "The animal skins are coarse, and have been treated with some substance to make them rigid. It looks as though they are meant to be worn.",
   'num_exist': 2,
@@ -396,6 +496,8 @@ ANIMAL_SKINS = {
 AQUAMARINE_ORB = {
   'key': "Aquamarine Orb",
   'prototype_parent': 'base_equipment',
+  'record_id': 69
+  'prototype_tags': ['object', 'record_id_69'],
   'article': 2,
   'desc': "The orb is about the size of a very large egg, and weighs about 10 pounds. It is a dark aquamarine in color, and reminds you of a still body of water. It is affixed to a silver stand which is mounted into the floor.",
   'sticky': True,
@@ -406,6 +508,8 @@ AQUAMARINE_ORB = {
 ASSASSINS_DAGGER = {
   'key': "Assassin's dagger",
   'prototype_parent': 'base_equipment',
+  'record_id': 32
+  'prototype_tags': ['object', 'record_id_32'],
   'article': 2,
   'desc': "The dagger has a short, curved blade which has a serrated edge. The blade is coated in a dark liquid you surmise is a deadly poison.",
   'num_exist': 4,
@@ -423,6 +527,8 @@ ASSASSINS_DAGGER = {
 AXE = {
   'key': "axe",
   'prototype_parent': 'base_equipment',
+  'record_id': 36
+  'prototype_tags': ['object', 'record_id_36'],
   'article': 2,
   'desc': "The axe has a double head of iron, and is slightly dull. The haft is worn but solid. This looks like a fine tool for chopping wood. It may also work for chopping bodies.",
   'num_exist': 6,
@@ -438,6 +544,8 @@ AXE = {
 BLACK_ORB = {
   'key': "Black Orb",
   'prototype_parent': 'base_equipment',
+  'record_id': 109
+  'prototype_tags': ['object', 'record_id_109'],
   'desc': "The orb fits into the palm of your hand nicely, and is very dense.",
   'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
 }
@@ -445,6 +553,8 @@ BLACK_ORB = {
 BLEACHED_BONE = {
   'key': "bleached bone",
   'prototype_parent': 'base_equipment',
+  'record_id': 97
+  'prototype_tags': ['object', 'record_id_97'],
   'desc': "The bone is a long thigh bone, and has been bleached white by excessive exposure.",
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'base_weapon_damage': 30,
@@ -456,6 +566,8 @@ BLEACHED_BONE = {
 BLOCK_OF_ICE = {
   'key': "block of ice",
   'prototype_parent': 'base_equipment',
+  'record_id': 177
+  'prototype_tags': ['object', 'record_id_177'],
   'desc': "This large block of ice looks quite out of place lying here.  As a breeze blows by it you feel the chill off of its wet surface.",
   'num_exist': 2,
   'weight': 10,
@@ -469,6 +581,8 @@ BLOCK_OF_ICE = {
 BOOTS_OF_LAGRATH = {
   'key': "Boots of Lagrath",
   'prototype_parent': 'base_equipment',
+  'record_id': 171
+  'prototype_tags': ['object', 'record_id_171'],
   'article': 4,
   'desc': "These boots look as though somone tried to play a strange twisted joke on someone, they appear to be made of leather, yet, there are steel thorns covering the toe and heel.",
   'line_desc': "There is an odd looking pair of boots here.",
@@ -484,6 +598,8 @@ BOOTS_OF_LAGRATH = {
 BRACERS_OF_LUNACY = {
   'key': "Bracers of Lunacy",
   'prototype_parent': 'base_equipment',
+  'record_id': 158
+  'prototype_tags': ['object', 'record_id_158'],
   'article': 3,
   'desc': "The bracers are made of a gold that seems to shimmer as if hot, though it is cold to the touch.",
   'num_exist': 2,
@@ -499,6 +615,8 @@ BRACERS_OF_LUNACY = {
 BROADSWORD = {
   'key': "broadsword",
   'prototype_parent': 'base_equipment',
+  'record_id': 39
+  'prototype_tags': ['object', 'record_id_39'],
   'desc': "The sword is very long, and very broad of blade. It is double edged, and is slightly serrated near the hilt. The hilt is appropriately large, with a straight guard, and a wire wrapped handle.",
   'num_exist': 3,
   'worth': 85,
@@ -513,6 +631,8 @@ BROADSWORD = {
 BROKEN_OAR = {
   'key': "broken oar",
   'prototype_parent': 'base_equipment',
+  'record_id': 95
+  'prototype_tags': ['object', 'record_id_95'],
   'desc': "The oar is like that from a rowboat. It has a crack down its axis, and the blade is broken in half.",
   'equipment_slot': EquipmentSlot.TWO_HAND,
   'base_weapon_damage': 24,
@@ -524,6 +644,8 @@ BROKEN_OAR = {
 BUCKLER = {
   'key': "buckler",
   'prototype_parent': 'base_equipment',
+  'record_id': 21
+  'prototype_tags': ['object', 'record_id_21'],
   'desc': "The buckler is a very small shield with an irregular outer face. While the shield provides very little in the way of body protection, it is useful in catching an opponents weapon away from the body.",
   'num_exist': 2,
   'worth': 20,
@@ -537,6 +659,8 @@ BUCKLER = {
 CAVE_BEAR_SKINS = {
   'key': "Cave Bear skins",
   'prototype_parent': 'base_equipment',
+  'record_id': 9
+  'prototype_tags': ['object', 'record_id_9'],
   'desc': "The clump of skins is extremely heavy and thick, and is clearly from a huge bear of some sort. The hide has been cured somewhat, but the thick black hair of the animal remains. Small bone fragments have been adorned to the hide to provide some additional protection, as well as to appeal to the \"spirits\".",
   'equipment_slot': EquipmentSlot.BODY,
   'base_armor': 6,
@@ -549,6 +673,8 @@ CAVE_BEAR_SKINS = {
 CHAIN_MAIL_ARMOR = {
   'key': "chain mail armor",
   'prototype_parent': 'base_equipment',
+  'record_id': 27
+  'prototype_tags': ['object', 'record_id_27'],
   'desc': "The chain mail is a fine mesh of very small, inter-locking steel links. A support of padded leather is attached in the shoulder and chest  region of the armor.",
   'line_desc': "On the ground here is a suit of chain mail.",
   'num_exist': 5,
@@ -563,6 +689,8 @@ CHAIN_MAIL_ARMOR = {
 CLAYMOORE_SWORD = {
   'key': "Claymoore sword",
   'prototype_parent': 'base_equipment',
+  'record_id': 49
+  'prototype_tags': ['object', 'record_id_49'],
   'desc': "The sword is very long and heavy, clearly unwieldable with only one hand. The blade is about five feet long, and the hilt is an additional foot and a half. The blade is very wide, and has many catches on it near the hilt which, when utilized properly, can catch and snap an opponents blade.",
   'equipment_slot': EquipmentSlot.TWO_HAND,
   'attack_speed': 13,
@@ -576,6 +704,8 @@ CLAYMOORE_SWORD = {
 CLOAK = {
   'key': "cloak",
   'prototype_parent': 'base_equipment',
+  'record_id': 165
+  'prototype_tags': ['object', 'record_id_165'],
   'desc': "This grey cloak is just perfect to keep you warm and possibly a little more protected.",
   'worth': 1,
   'equipment_slot': EquipmentSlot.BACK,
@@ -586,6 +716,8 @@ CLOAK = {
 CLOAK_OF_THE_MAGI = {
   'key': "cloak of the magi",
   'prototype_parent': 'base_equipment',
+  'record_id': 173
+  'prototype_tags': ['object', 'record_id_173'],
   'article': 4,
   'desc': "This worn black cloak inlaid with golden runes appears to be somthing of an ancient evil power.",
   'get_success_msg': "You feel your body quiver in extacsy as you pick up the cloak.",
@@ -605,6 +737,8 @@ CLOAK_OF_THE_MAGI = {
 CONICAL_HELM = {
   'key': "conical helm",
   'prototype_parent': 'base_equipment',
+  'record_id': 5
+  'prototype_tags': ['object', 'record_id_5'],
   'desc': "The helm is of steel, and conical in shape. A wedge shaped nose guard extends downward, while leather flaps fitted with metal scales provide added protection for the neck.",
   'line_desc': "There is a conical helm here.",
   'num_exist': 1,
@@ -619,6 +753,8 @@ CONICAL_HELM = {
 CRESTED_HELM = {
   'key': "crested helm",
   'prototype_parent': 'base_equipment',
+  'record_id': 8
+  'prototype_tags': ['object', 'record_id_8'],
   'desc': "The helm is of steel, and padded with leather. A horsehair crest runs over the surface of the helm from front to back. There is no nose  piece, but metal flaps extend down to protect part of the neck and face.",
   'num_exist': 11,
   'worth': 20,
@@ -632,6 +768,8 @@ CRESTED_HELM = {
 CRUDE_DAGGER = {
   'key': "crude dagger",
   'prototype_parent': 'base_equipment',
+  'record_id': 144
+  'prototype_tags': ['object', 'record_id_144'],
   'desc': "This dagger has a sharp blade, with two hooks used to catch  you oppenents weapon.  Hilt is fashioned from steel, with leather to aid in gripping.",
   'num_exist': 2,
   'worth': 50,
@@ -646,6 +784,8 @@ CRUDE_DAGGER = {
 CUDGEL = {
   'key': "cudgel",
   'prototype_parent': 'base_equipment',
+  'record_id': 34
+  'prototype_tags': ['object', 'record_id_34'],
   'desc': "The cudgel has been carved out of a branch from some hardwood tree. The handle fits into your hand nicely, while the business end is somewhat  larger, and resplendent with thick knots.",
   'num_exist': 3,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
@@ -660,6 +800,8 @@ CUDGEL = {
 DAGGER_OF_VENOMS = {
   'key': "Dagger of Venoms",
   'prototype_parent': 'base_equipment',
+  'record_id': 167
+  'prototype_tags': ['object', 'record_id_167'],
   'article': 4,
   'desc': "The dagger has a dark, curved blade made of some unknown metal. Black runes run along its surface.",
   'line_desc': "A curved dagger lies on the ground.",
@@ -675,6 +817,8 @@ DAGGER_OF_VENOMS = {
 DIRK = {
   'key': "dirk",
   'prototype_parent': 'base_equipment',
+  'record_id': 48
+  'prototype_tags': ['object', 'record_id_48'],
   'desc': "The dirk is a short sword, more properly belonging somewhere between large knife and short sword. The blade is thin, but strong. The cross- piece on the hilt curves upward at the ends into two sharp prongs.",
   'num_exist': 9,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
@@ -689,12 +833,16 @@ DIRK = {
 DRAGON_BOMB = {
   'key': "dragon bomb",
   'prototype_parent': 'base_equipment',
+  'record_id': 138
+  'prototype_tags': ['object', 'record_id_138'],
   'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
 }
 
 DRAGON_CLAWS = {
   'key': "Dragon Claws",
   'prototype_parent': 'base_equipment',
+  'record_id': 120
+  'prototype_tags': ['object', 'record_id_120'],
   'article': 4,
   'desc': "The portal resists your attempts to open it, and a calm voice speaks inside your head:  \"What lies beyond this door is the pervue of the the original Master of   the Lake, the First Water Lord. Only he, or those working in his name   may enter the sacred chamber beyond.\"",
   'line_desc': "A clump of huge, boney claws and leather strands lies here.",
@@ -710,6 +858,8 @@ DRAGON_CLAWS = {
 DREAMING_STONE = {
   'key': "Dreaming Stone",
   'prototype_parent': 'base_equipment',
+  'record_id': 114
+  'prototype_tags': ['object', 'record_id_114'],
   'components': [112, 113],
   'desc': "The Dreaming Stone is sphere,one half of which appears to be of amber, the other half of stone. The two pieces fit together exactly, but the method of their adhesion eludes you.",
   'num_exist': 2,
@@ -720,6 +870,8 @@ DREAMING_STONE = {
 DRUIDSLAYER = {
   'key': "Druidslayer",
   'prototype_parent': 'base_equipment',
+  'record_id': 72
+  'prototype_tags': ['object', 'record_id_72'],
   'desc': "The sword is long and made of a very shiny metal, almost like silver. The hilt is very long, but there is no cross-piece or hilt guard at all. The weapon is double edged, and both edges are severely serrated along their entire length.",
   'get_success_msg': "As you take the shining sword, dark energy long hidden flows into your body...",
   'line_desc': "There is a silvery two handed sword here.",
@@ -741,6 +893,8 @@ DRUIDSLAYER = {
 DWARVEN_MAIL = {
   'key': "Dwarven mail",
   'prototype_parent': 'base_equipment',
+  'record_id': 13
+  'prototype_tags': ['object', 'record_id_13'],
   'desc': "The mail is finely crafted, but obviously made for a creature of small stature",
   'num_exist': 3,
   'worth': 56,
@@ -755,6 +909,8 @@ DWARVEN_MAIL = {
 EBONBLADE = {
   'key': "EbonBlade",
   'prototype_parent': 'base_equipment',
+  'record_id': 81
+  'prototype_tags': ['object', 'record_id_81'],
   'article': 4,
   'desc': "This double-edged sword has a long, thin blade. The hilt is rather utilitarian and unexceptional, and is made from the same dark metal as the rest of the weapon. When you touch it, you feel a strange  sensation.",
   'num_exist': 1,
@@ -770,6 +926,8 @@ EBONBLADE = {
 EBONY_STAFF = {
   'key': "ebony staff",
   'prototype_parent': 'base_equipment',
+  'record_id': 180
+  'prototype_tags': ['object', 'record_id_180'],
   'article': 2,
   'line_desc': "There is a long black ebony staff lying here",
   'equipment_slot': EquipmentSlot.TWO_HAND,
@@ -778,6 +936,8 @@ EBONY_STAFF = {
 EEK = {
   'key': "eek",
   'prototype_parent': 'base_equipment',
+  'record_id': 1
+  'prototype_tags': ['object', 'record_id_1'],
   'article': 2,
   'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
   'throw_range': 2,
@@ -786,6 +946,8 @@ EEK = {
 ELFEN_SPEAR = {
   'key': "Elfen spear",
   'prototype_parent': 'base_equipment',
+  'record_id': 19
+  'prototype_tags': ['object', 'record_id_19'],
   'article': 2,
   'desc': "The spear is long and is made of finely crafted wood. The head looks deadly, and is made of a silvery metal.",
   'line_desc': "There is a delicate, but deadly looking, spear here.",
@@ -800,6 +962,8 @@ ELFEN_SPEAR = {
 ELFSTONE = {
   'key': "elfstone",
   'prototype_parent': 'base_equipment',
+  'record_id': 53
+  'prototype_tags': ['object', 'record_id_53'],
   'article': 2,
   'num_exist': 1,
   'equipment_slot': EquipmentSlot.BACKPACK,
@@ -810,6 +974,8 @@ ELFSTONE = {
 FIRE_OPAL = {
   'key': "Fire Opal",
   'prototype_parent': 'base_equipment',
+  'record_id': 121
+  'prototype_tags': ['object', 'record_id_121'],
   'desc': "As you peer into the opal you see some people walking through a square in the city of Tai-Tastigon.",
   'get_fail_msg': "The Fire Opal is set into the floor and cannot be removed.",
   'sticky': True,
@@ -820,6 +986,8 @@ FIRE_OPAL = {
 GAUNTLET_OF_CRUSADER = {
   'key': "Gauntlet of Crusader",
   'prototype_parent': 'base_equipment',
+  'record_id': 76
+  'prototype_tags': ['object', 'record_id_76'],
   'article': 4,
   'desc': "The guantlet is made of a fine chain mail mesh, under which lies a glove of red leather. The leather is emblazoned with a rampant dragon, and bears the initial \"C\".",
   'line_desc': "There is a fine gauntlet here on the ground.",
@@ -833,6 +1001,8 @@ GAUNTLET_OF_CRUSADER = {
 GAUNTLETS = {
   'key': "gauntlets",
   'prototype_parent': 'base_equipment',
+  'record_id': 150
+  'prototype_tags': ['object', 'record_id_150'],
   'article': 3,
   'desc': "These gauntlets are quite new, better oil them up so they fit better.",
   'get_success_msg': "You pick up the pair of gauntlets.",
@@ -847,6 +1017,8 @@ GAUNTLETS = {
 GEM_OF_TRUE_SEEING = {
   'key': "Gem of True Seeing",
   'prototype_parent': 'base_equipment',
+  'record_id': 166
+  'prototype_tags': ['object', 'record_id_166'],
   'components': [738197894, 100663686, 385876358],
   'num_exist': 1,
   'equipment_slot': EquipmentSlot.POUCH,
@@ -857,6 +1029,8 @@ GEM_OF_TRUE_SEEING = {
 GLOVES_OF_ATLAS = {
   'key': "Gloves of Atlas",
   'prototype_parent': 'base_equipment',
+  'record_id': 156
+  'prototype_tags': ['object', 'record_id_156'],
   'article': 4,
   'desc': "The gloves are of thick leather, and are a sooty black.",
   'num_exist': 1,
@@ -871,6 +1045,8 @@ GLOVES_OF_ATLAS = {
 GRAY_ORB = {
   'key': "Gray Orb",
   'prototype_parent': 'base_equipment',
+  'record_id': 107
+  'prototype_tags': ['object', 'record_id_107'],
   'desc': "The orb fits into the palm of your hand nicely, and is very dense.",
   'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
 }
@@ -878,6 +1054,8 @@ GRAY_ORB = {
 GREEK_FIREBOMB = {
   'key': "Greek firebomb",
   'prototype_parent': 'base_equipment',
+  'record_id': 108
+  'prototype_tags': ['object', 'record_id_108'],
   'desc': "The bomb is circular, roughly a foot in diameter, and is made from some sort of animal bladder. The liquid inside it sloshes slightly as you move it, but you get the feeling shaking it too much could be bad for your health.",
   'num_exist': 3,
   'worth': 20,
@@ -890,6 +1068,8 @@ GREEK_FIREBOMB = {
 HACK_OBJ = {
   'key': "Hack obj",
   'prototype_parent': 'base_equipment',
+  'record_id': 124
+  'prototype_tags': ['object', 'record_id_124'],
   'num_exist': 1,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'largest_fit': 10,
@@ -899,6 +1079,8 @@ HACK_OBJ = {
 HAMMER_OF_THE_GODS = {
   'key': "Hammer of the Gods",
   'prototype_parent': 'base_equipment',
+  'record_id': 122
+  'prototype_tags': ['object', 'record_id_122'],
   'article': 4,
   'desc': "The Hammer is a very large, two handed weapon of mass destruction.",
   'num_exist': 2,
@@ -913,6 +1095,8 @@ HAMMER_OF_THE_GODS = {
 HATCHET = {
   'key': "hatchet",
   'prototype_parent': 'base_equipment',
+  'record_id': 46
+  'prototype_tags': ['object', 'record_id_46'],
   'desc': "The hatchet is of a common sort, being a short, single headed axe  designed for use with one hand. It shows signs of frequent use, but should serve your uses.",
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'attack_speed': 7,
@@ -926,6 +1110,8 @@ HATCHET = {
 HEART_OF_THE_LAKE = {
   'key': "Heart of the Lake",
   'prototype_parent': 'base_equipment',
+  'record_id': 110
+  'prototype_tags': ['object', 'record_id_110'],
   'article': 4,
   'desc': "The object is a very large stone, deep blue in color, which seems almost to give off a cool light. It is definitely translucent. It's surface is smooth, but very faint cracks can be seen to move across the deep blue exterior.",
   'get_fail_msg': "The Heart of the Lake is obviously too large and heavy for you to take or move.",
@@ -936,6 +1122,8 @@ HEART_OF_THE_LAKE = {
 HORNED_HELM = {
   'key': "horned helm",
   'prototype_parent': 'base_equipment',
+  'record_id': 14
+  'prototype_tags': ['object', 'record_id_14'],
   'desc': "The helm is conical and made of iron, with a leather padding on the inside. Affixed to the sides of the helmet, however, are two large bull horns which curve up and out in a menacing fashion.",
   'num_exist': 15,
   'worth': 20,
@@ -949,6 +1137,8 @@ HORNED_HELM = {
 IRON_BAR = {
   'key': "iron bar",
   'prototype_parent': 'base_equipment',
+  'record_id': 47
+  'prototype_tags': ['object', 'record_id_47'],
   'article': 2,
   'desc': "The bar is about an inch and a half in diameter, and is made of black iron. It is about four feet long, and one end is slightly bent.",
   'num_exist': 2,
@@ -964,6 +1154,8 @@ IRON_BAR = {
 IVORY_KNIFE = {
   'key': "Ivory Knife",
   'prototype_parent': 'base_equipment',
+  'record_id': 127
+  'prototype_tags': ['object', 'record_id_127'],
   'article': 2,
   'desc': "You hold in your hand a chill white knife. It glows with a faint light and steam curls from its tip. It is made from a carved bone and the edges never seem to become dull.",
   'get_success_msg': "Your hand becomes numb as it closes over the faintly glowing knife..",
@@ -980,6 +1172,8 @@ IVORY_KNIFE = {
 JAVELIN = {
   'key': "javelin",
   'prototype_parent': 'base_equipment',
+  'record_id': 43
+  'prototype_tags': ['object', 'record_id_43'],
   'desc': "The javelin is light weight, with a shaft of wood and a head of lead. The soft head is intended to deform on impact, hopefully fouling  an enemies shield or armor.",
   'num_exist': 6,
   'worth': 42,
@@ -997,6 +1191,8 @@ JAVELIN = {
 JEWELED_SCIMITAR = {
   'key': "jeweled scimitar",
   'prototype_parent': 'base_equipment',
+  'record_id': 74
+  'prototype_tags': ['object', 'record_id_74'],
   'desc': "The sword is a long, and has a curved blade. It is single edged, and perhaps a bit heavy. The hilt is oddly shaped, having an oddly inlaid piece of metal, with an emerald in the heel.  You notice something written along the blade of the weapon. It might be some sort of name. It reads: \"Sualtim\".",
   'num_exist': 4,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
@@ -1010,6 +1206,8 @@ JEWELED_SCIMITAR = {
 KEY = {
   'key': "key",
   'prototype_parent': 'base_equipment',
+  'record_id': 103
+  'prototype_tags': ['object', 'record_id_103'],
   'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
   'drop_destroy': 1,
 }
@@ -1017,6 +1215,8 @@ KEY = {
 LAKEBLADE = {
   'key': "Lakeblade",
   'prototype_parent': 'base_equipment',
+  'record_id': 4
+  'prototype_tags': ['object', 'record_id_4'],
   'desc': "The blade is a long sword constructed of a strange metal which is dull silver in color. The blade is somewhat thin, but very strong. In varying light, the metal seems almost to flow along the surface of the weapon.",
   'get_object_required': 181,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
@@ -1030,6 +1230,8 @@ LAKEBLADE = {
 LEATHER_BELT = {
   'key': "leather belt",
   'prototype_parent': 'base_equipment',
+  'record_id': 94
+  'prototype_tags': ['object', 'record_id_94'],
   'desc': "The belt is faded, but otherwise a normal belt.",
   'equipment_slot': EquipmentSlot.WAIST,
   'smallest_fit': 3,
@@ -1039,6 +1241,8 @@ LEATHER_BELT = {
 LEATHER_BOOTS = {
   'key': "leather boots",
   'prototype_parent': 'base_equipment',
+  'record_id': 170
+  'prototype_tags': ['object', 'record_id_170'],
   'article': 3,
   'desc': "This pair of boots appear to be slightly worn in, but they look like they are heavy enough to protect your feet from harsh terrain.",
   'worth': 15,
@@ -1051,6 +1255,8 @@ LEATHER_BOOTS = {
 LEATHER_JERKIN = {
   'key': "leather jerkin",
   'prototype_parent': 'base_equipment',
+  'record_id': 25
+  'prototype_tags': ['object', 'record_id_25'],
   'desc': "The jerkin is of boiled leather, and comes down to the wearer's knees. Extra strips of hardened leather have been added across the chest, and on the shoulders.",
   'num_exist': 2,
   'worth': 40,
@@ -1064,6 +1270,8 @@ LEATHER_JERKIN = {
 LICH_RING = {
   'key': "Lich Ring",
   'prototype_parent': 'base_equipment',
+  'record_id': 15
+  'prototype_tags': ['object', 'record_id_15'],
   'desc': "The ring is thin, and carved from some bone or ivory. Etched onto the inner surface of the rings are the following words, written in an ancient but still understandable dialect:               \"Burn away your life and soul.\"",
   'equipment_slot': EquipmentSlot.RING,
   'smallest_fit': 4,
@@ -1075,6 +1283,8 @@ LICH_RING = {
 LONGSWORD = {
   'key': "longsword",
   'prototype_parent': 'base_equipment',
+  'record_id': 41
+  'prototype_tags': ['object', 'record_id_41'],
   'desc': "This sword is double-edged, with the edges running parallel until a sharp taper begins within the last few inches of the blade. The guard on the hilt curves slightly upward.",
   'num_exist': 5,
   'worth': 62,
@@ -1089,6 +1299,8 @@ LONGSWORD = {
 MACE = {
   'key': "mace",
   'prototype_parent': 'base_equipment',
+  'record_id': 38
+  'prototype_tags': ['object', 'record_id_38'],
   'desc': "The mace is made of iron, and is rather heavy. Wire has been wound around its haft to provide a solid grip, while the head is diamond shaped with a small spike at its tip, for effective use in close quarters.",
   'num_exist': 9,
   'worth': 76,
@@ -1103,6 +1315,8 @@ MACE = {
 MAELSTROM_RING = {
   'key': "Maelstrom Ring",
   'prototype_parent': 'base_equipment',
+  'record_id': 117
+  'prototype_tags': ['object', 'record_id_117'],
   'desc': "The ring is constructed of a dull lead, and bears no discernable markings.",
   'equipment_slot': EquipmentSlot.RING,
   'poison': 5,
@@ -1113,6 +1327,8 @@ MAELSTROM_RING = {
 MAGECRUSHER = {
   'key': "MageCrusher",
   'prototype_parent': 'base_equipment',
+  'record_id': 68
+  'prototype_tags': ['object', 'record_id_68'],
   'components': [390],
   'desc': "The weapon is made of blackened steel, and is cold to the touch--cold beyond the very grave itself.  Its blackness seems to pulse as if alive, supposedly imbued with some of the very hatred of Terminus himself.  There are no spikes on the weapon, which has a long shaft and a perfect sphere of ebon on the end.",
   'get_success_msg': "You lift the weapon, shuddering at the very touch of the unnaturally cold steel...",
@@ -1128,6 +1344,8 @@ MAGECRUSHER = {
 MAGIC_HELMET = {
   'key': "magic helmet",
   'prototype_parent': 'base_equipment',
+  'record_id': 159
+  'prototype_tags': ['object', 'record_id_159'],
   'desc': "This helmet appears to be made of one solid piece of metal.  There are no lines or rivets, just smooth glimmering surface.",
   'num_exist': 1,
   'worth': 800,
@@ -1141,6 +1359,8 @@ MAGIC_HELMET = {
 MAGIC_LONGSWORD = {
   'key': "magic longsword",
   'prototype_parent': 'base_equipment',
+  'record_id': 157
+  'prototype_tags': ['object', 'record_id_157'],
   'desc': "This longsword is of fine craftsmanship.  It has runes along its blade and shimmers in the light.",
   'num_exist': 2,
   'worth': 800,
@@ -1155,6 +1375,8 @@ MAGIC_LONGSWORD = {
 MAGIC_SHIELD = {
   'key': "magic shield",
   'prototype_parent': 'base_equipment',
+  'record_id': 172
+  'prototype_tags': ['object', 'record_id_172'],
   'desc': "This ancient looking shield appears as though it were made out of a solid pice of copper, yet it has strength unlike any metal you have seen.",
   'worth': 800,
   'equipment_slot': EquipmentSlot.SHIELD_HAND,
@@ -1168,6 +1390,8 @@ MAGIC_SHIELD = {
 MEAT_CLEAVER = {
   'key': "meat cleaver",
   'prototype_parent': 'base_equipment',
+  'record_id': 35
+  'prototype_tags': ['object', 'record_id_35'],
   'desc': "The cleaver looks like an ordinary butcher's utensil. The single edged blade is hefty, and bears small notches wear it has been marred by  contact with bone.",
   'num_exist': 3,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
@@ -1184,6 +1408,8 @@ MEAT_CLEAVER = {
 MILITARY_FORK = {
   'key': "military fork",
   'prototype_parent': 'base_equipment',
+  'record_id': 142
+  'prototype_tags': ['object', 'record_id_142'],
   'desc': "This military fork resembles a spear, with two more points coming out from the center one.  It is very light weight, and could possibly even be thrown!",
   'worth': 110,
   'equipment_slot': EquipmentSlot.TWO_HAND,
@@ -1199,6 +1425,8 @@ MILITARY_FORK = {
 NORMAN_KITE_SHIELD = {
   'key': "Norman kite shield",
   'prototype_parent': 'base_equipment',
+  'record_id': 11
+  'prototype_tags': ['object', 'record_id_11'],
   'desc': "This shield is narrow, but long. This design helps to protect the full length of the body. The shield is constructed of three layers: the inner most of leather, then one of wood, and then the outer iron layer.",
   'num_exist': 7,
   'worth': 70,
@@ -1212,6 +1440,8 @@ NORMAN_KITE_SHIELD = {
 OLD_SHOE = {
   'key': "old shoe",
   'prototype_parent': 'base_equipment',
+  'record_id': 91
+  'prototype_tags': ['object', 'record_id_91'],
   'article': 2,
   'desc': "The shoe is of leather, and is very tattered.",
   'equipment_slot': EquipmentSlot.FEET,
@@ -1222,6 +1452,8 @@ OLD_SHOE = {
 PEACOCK_GLOVE = {
   'key': "Peacock glove",
   'prototype_parent': 'base_equipment',
+  'record_id': 100
+  'prototype_tags': ['object', 'record_id_100'],
   'desc': "The many colored threads in the glove glisten in the light. ",
   'line_desc': "A brightly colored object catches your eye...",
   'num_exist': 5,
@@ -1231,6 +1463,8 @@ PEACOCK_GLOVE = {
 PIKE = {
   'key': "pike",
   'prototype_parent': 'base_equipment',
+  'record_id': 44
+  'prototype_tags': ['object', 'record_id_44'],
   'desc': "This weapon appears to be a larger, heavier version of a spear. The head of the weapon is much larger, and more complex in design. Small catch guards are placed along the shaft near the head, in order to catch the blades of attacking foes.",
   'num_exist': 2,
   'worth': 100,
@@ -1245,6 +1479,8 @@ PIKE = {
 PINK_FAIRY_TIGHTS = {
   'key': "pink fairy tights",
   'prototype_parent': 'base_equipment',
+  'record_id': 168
+  'prototype_tags': ['object', 'record_id_168'],
   'article': 4,
   'desc': "These bright pink tights look like they will fit your body quite well, they appear to glimmer in the light.",
   'get_success_msg': "You feel magical energy as you pick up the tights.",
@@ -1259,6 +1495,8 @@ PINK_FAIRY_TIGHTS = {
 PITCHFORK = {
   'key': "pitchfork",
   'prototype_parent': 'base_equipment',
+  'record_id': 37
+  'prototype_tags': ['object', 'record_id_37'],
   'desc': "The pitchfork looks like an ordinary farm implement. Each of the four blackened prongs appears sharp, and capable of delivering a serious injury.",
   'equipment_slot': EquipmentSlot.TWO_HAND,
   'attack_speed': 14,
@@ -1271,6 +1509,8 @@ PITCHFORK = {
 PLUMED_HELM = {
   'key': "plumed helm",
   'prototype_parent': 'base_equipment',
+  'record_id': 17
+  'prototype_tags': ['object', 'record_id_17'],
   'desc': "This helmet is made of steel, and has been worked and molded to protect most of the head, face, and neck, without recourse to extra flaps. The helmet is topped with a long horsehair plume that drapes down to the shoulders.",
   'num_exist': 4,
   'worth': 20,
@@ -1284,6 +1524,8 @@ PLUMED_HELM = {
 QUARTZ_EYES = {
   'key': "Quartz Eyes",
   'prototype_parent': 'base_equipment',
+  'record_id': 78
+  'prototype_tags': ['object', 'record_id_78'],
   'desc': "The quartz stones are finely cut spheroids of milky white stone. They are about an inch each in diamtere.",
   'get_fail_msg': "You two quartz stones roll away from your grasp...",
   'line_desc': "Two small quartz stones are here on the ground.",
@@ -1298,6 +1540,8 @@ QUARTZ_EYES = {
 RED_PLATE_MAIL = {
   'key': "Red plate mail",
   'prototype_parent': 'base_equipment',
+  'record_id': 176
+  'prototype_tags': ['object', 'record_id_176'],
   'article': 4,
   'desc': "This armor appears to be made out of scales from a Red dragon.  As you stare at it, the air around it shimmers with heat.  Yet you feel none of the heat.",
   'get_object_required': 177,
@@ -1320,6 +1564,8 @@ RED_PLATE_MAIL = {
 RHINESTONE_RING = {
   'key': "Rhinestone Ring",
   'prototype_parent': 'base_equipment',
+  'record_id': 73
+  'prototype_tags': ['object', 'record_id_73'],
   'desc': "The ring is a band of gold set with a cluster of rhinestones. The  workmanship is clearly superlative.",
   'line_desc': "There is a finely crafted ring of obvious value here.",
   'num_exist': 1,
@@ -1332,6 +1578,8 @@ RHINESTONE_RING = {
 RING_MAIL_ARMOR = {
   'key': "ring mail armor",
   'prototype_parent': 'base_equipment',
+  'record_id': 26
+  'prototype_tags': ['object', 'record_id_26'],
   'desc': "The ring mail is essntially a leather jerkin covered with a mail of  inter-locking iron ringlets. ",
   'line_desc': "On the ground here is a suit of ring mail armor.",
   'num_exist': 2,
@@ -1346,6 +1594,8 @@ RING_MAIL_ARMOR = {
 RUNE = {
   'key': "Rune",
   'prototype_parent': 'base_equipment',
+  'record_id': 132
+  'prototype_tags': ['object', 'record_id_132'],
   'desc': "You have found a Rune of Power. It must not be removed from its place of rest else all of the universe be plunged into chaos. Use carefully and wisely.",
   'get_success_msg': "You feel a surge of magical power permeate your being!",
   'num_exist': 2,
@@ -1359,6 +1609,8 @@ RUNE = {
 SAXON_AXE = {
   'key': "Saxon axe",
   'prototype_parent': 'base_equipment',
+  'record_id': 40
+  'prototype_tags': ['object', 'record_id_40'],
   'desc': "The haft of this axe is a long rod of iron and wood, wrapped in fine leather. The axe's single head is short at the haft, but it curves sharply to present a wide edge.",
   'num_exist': 4,
   'worth': 78,
@@ -1373,6 +1625,8 @@ SAXON_AXE = {
 SCALE_MAIL_ARMOR = {
   'key': "scale mail armor",
   'prototype_parent': 'base_equipment',
+  'record_id': 28
+  'prototype_tags': ['object', 'record_id_28'],
   'desc': "This armor is essentially a padded leather jerkin covered with a  mail of overlapping steel plates, or \"scales\". Each scale is about two inches long, and an inch and a half wide, tapering to a point at the trailing edge.",
   'line_desc': "On the ground here is a suit of scale mail armor.",
   'num_exist': 16,
@@ -1387,6 +1641,8 @@ SCALE_MAIL_ARMOR = {
 SCIMITAR = {
   'key': "scimitar",
   'prototype_parent': 'base_equipment',
+  'record_id': 143
+  'prototype_tags': ['object', 'record_id_143'],
   'desc': "This scimitar ahs a long curved blade, good for slashing opponents.",
   'worth': 60,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
@@ -1400,6 +1656,8 @@ SCIMITAR = {
 SERPENT_SKIN_CLOAK = {
   'key': "Serpent-skin Cloak",
   'prototype_parent': 'base_equipment',
+  'record_id': 128
+  'prototype_tags': ['object', 'record_id_128'],
   'desc': "The cape slithers over your shoulders, giving you an uneasy impression that it is alive!",
   'get_success_msg': "You pull the wriggling cape towards you despite its efforts to escape..",
   'line_desc': "There is a pile of snakes writhing towards you!",
@@ -1413,6 +1671,8 @@ SERPENT_SKIN_CLOAK = {
 SHARPENED_STICK = {
   'key': "sharpened stick",
   'prototype_parent': 'base_equipment',
+  'record_id': 104
+  'prototype_tags': ['object', 'record_id_104'],
   'num_exist': 2,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'base_weapon_damage': 100,
@@ -1424,6 +1684,8 @@ SHARPENED_STICK = {
 SHINY_OBJECT = {
   'key': "shiny object",
   'prototype_parent': 'base_equipment',
+  'record_id': 105
+  'prototype_tags': ['object', 'record_id_105'],
   'desc': "The object is oddly shaped, and appears almost like a polished tin or some such. Written across the face of the object is the following phrase: \"If you wish to continue beyond here, check and see who is currently in the game.\"",
   'num_exist': 2,
   'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
@@ -1432,6 +1694,8 @@ SHINY_OBJECT = {
 SHORT_SWORD = {
   'key': "short sword",
   'prototype_parent': 'base_equipment',
+  'record_id': 152
+  'prototype_tags': ['object', 'record_id_152'],
   'desc': "This sword is shorter than most. It's blade is straight and double edged, and looks to be a nasty thrusting weapon.",
   'num_exist': 1,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
@@ -1446,6 +1710,8 @@ SHORT_SWORD = {
 SHROUD_OF_KROTCHE = {
   'key': "Shroud of Krotche",
   'prototype_parent': 'base_equipment',
+  'record_id': 118
+  'prototype_tags': ['object', 'record_id_118'],
   'article': 4,
   'desc': "The shroud is very long piece of ancient cloth. Immense age has dulled the original color to that of a dull brown. The length of the garment is such that it can be wrapped around ones entire body. It does not appear as though the cloth would prohibit movement when thus worn, but it certainly would slow it.",
   'line_desc': "An ancient length of cloth is here.",
@@ -1459,6 +1725,8 @@ SHROUD_OF_KROTCHE = {
 SILK_ROBE = {
   'key': "silk robe",
   'prototype_parent': 'base_equipment',
+  'record_id': 60
+  'prototype_tags': ['object', 'record_id_60'],
   'desc': "The robe is red, and is without much additional decoration.",
   'line_desc': "You see a silk robe on the ground here.",
   'num_exist': 2,
@@ -1470,6 +1738,8 @@ SILK_ROBE = {
 SILVER_RAPIER = {
   'key': "Silver Rapier",
   'prototype_parent': 'base_equipment',
+  'record_id': 50
+  'prototype_tags': ['object', 'record_id_50'],
   'desc': "The blade is very thin and flexible, being constructed of a very fine  steel. Not very practical as a slashing weapon, this sword is, however, deadly when used deftly as a thrusting and lunging weapon. The hilt is of iron inlaid with silver, and the blade seems to bear a hint of silver as well.",
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'attack_speed': 9,
@@ -1483,6 +1753,8 @@ SILVER_RAPIER = {
 SPEAR = {
   'key': "spear",
   'prototype_parent': 'base_equipment',
+  'record_id': 42
+  'prototype_tags': ['object', 'record_id_42'],
   'desc': "The spear has a long wooden shaft, and a broad head of hammered iron. The head is flat, but diamond shaped. The backside edges are serrated in the hopes of inflicting additional damage when the spear is withdrawn.",
   'num_exist': 8,
   'worth': 72,
@@ -1497,6 +1769,8 @@ SPEAR = {
 STACK_DUMP_BOMB = {
   'key': "stack-dump bomb",
   'prototype_parent': 'base_equipment',
+  'record_id': 80
+  'prototype_tags': ['object', 'record_id_80'],
   'num_exist': 2,
   'equipment_slot': EquipmentSlot.NOT_EQUIPPABLE,
   'bomb_base': 1,
@@ -1505,6 +1779,8 @@ STACK_DUMP_BOMB = {
 STAFF_OF_LUXOR = {
   'key': "Staff of Luxor",
   'prototype_parent': 'base_equipment',
+  'record_id': 164
+  'prototype_tags': ['object', 'record_id_164'],
   'article': 4,
   'components': [738197894, 100663686, 385876358],
   'desc': "The staff is of wood and about 7 feet long. The top of it, however, is capped with a strange green stone, which has a tendency to give off an intense jade light.",
@@ -1514,6 +1790,8 @@ STAFF_OF_LUXOR = {
 STAFF_OF_RA = {
   'key': "Staff of Ra",
   'prototype_parent': 'base_equipment',
+  'record_id': 162
+  'prototype_tags': ['object', 'record_id_162'],
   'article': 4,
   'get_success_msg': "As you pick up the staff, you are jolted with a surge of energy.",
   'line_desc': "An eboy staff lies on the ground.",
@@ -1533,6 +1811,8 @@ STAFF_OF_RA = {
 STEEL_BREASTPLATE = {
   'key': "steel breastplate",
   'prototype_parent': 'base_equipment',
+  'record_id': 160
+  'prototype_tags': ['object', 'record_id_160'],
   'desc': "This steel breastplate looks like it will add quite alot to your personal protection, even though it looks quite heavy.",
   'num_exist': 8,
   'weight': 40,
@@ -1548,6 +1828,8 @@ STEEL_BREASTPLATE = {
 STONE_MALLET = {
   'key': "stone mallet",
   'prototype_parent': 'base_equipment',
+  'record_id': 169
+  'prototype_tags': ['object', 'record_id_169'],
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'base_weapon_damage': 100,
   'random_weapon_damage': 105,
@@ -1558,6 +1840,8 @@ STONE_MALLET = {
 SWORD_O_STACK_DUMPS = {
   'key': "Sword O Stack Dumps",
   'prototype_parent': 'base_equipment',
+  'record_id': 137
+  'prototype_tags': ['object', 'record_id_137'],
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'base_weapon_damage': 1,
   'smallest_fit': 3,
@@ -1567,6 +1851,8 @@ SWORD_O_STACK_DUMPS = {
 SWORD_OF_DEFENSE = {
   'key': "sword of defense",
   'prototype_parent': 'base_equipment',
+  'record_id': 174
+  'prototype_tags': ['object', 'record_id_174'],
   'get_success_msg': "You have picked up the Greatest Longsword in the world!@",
   'line_desc': "A blue sword lies here waiting for you hands!",
   'worth': 1000000000,
@@ -1578,6 +1864,8 @@ SWORD_OF_DEFENSE = {
 SWORD_OF_THE_KINGS = {
   'key': "Sword of the Kings",
   'prototype_parent': 'base_equipment',
+  'record_id': 77
+  'prototype_tags': ['object', 'record_id_77'],
   'desc': "The sword is very long, and very heavy, yet its form is smooth. The  blade is wide, and bears an edge that cannot be dulled. Sunken runes run the length of the blade, weaving charms and spells into the power of the weapon. ",
   'line_desc': "A very large two handed sword lies here on the ground.",
   'num_exist': 1,
@@ -1591,6 +1879,8 @@ SWORD_OF_THE_KINGS = {
 THERMO_NUCLEAR_BOMB = {
   'key': "Thermo-nuclear Bomb",
   'prototype_parent': 'base_equipment',
+  'record_id': 106
+  'prototype_tags': ['object', 'record_id_106'],
   'worth': 7500,
   'equipment_slot': EquipmentSlot.BACKPACK,
   'bomb_base': 99999,
@@ -1600,6 +1890,8 @@ THERMO_NUCLEAR_BOMB = {
 THROWING_DAGGER = {
   'key': "throwing dagger",
   'prototype_parent': 'base_equipment',
+  'record_id': 134
+  'prototype_tags': ['object', 'record_id_134'],
   'num_exist': 5,
   'worth': 25,
   'equipment_slot': EquipmentSlot.WAIST,
@@ -1615,6 +1907,8 @@ THROWING_DAGGER = {
 TROLL_MAIL = {
   'key': "Troll mail",
   'prototype_parent': 'base_equipment',
+  'record_id': 154
+  'prototype_tags': ['object', 'record_id_154'],
   'desc': "This armor is made for a creature of great size. It is heavy and made of blackest iron. A relief of strange and Evil looking markings adorns its dull surface.",
   'num_exist': 8,
   'worth': 59,
@@ -1628,6 +1922,8 @@ TROLL_MAIL = {
 VAPRAKS_SKIN = {
   'key': "Vaprak's Skin",
   'prototype_parent': 'base_equipment',
+  'record_id': 51
+  'prototype_tags': ['object', 'record_id_51'],
   'desc': "This object looks like a rough, scaley skin that might have been shed by a huge reptile. Upon closer examination, you see that it has been modified to be worn by a humanoid creature.",
   'line_desc': "You see a scaly reptile skin here.",
   'num_exist': 1,
@@ -1645,6 +1941,8 @@ VAPRAKS_SKIN = {
 VIKING_ROUND_SHIELD = {
   'key': "Viking round shield",
   'prototype_parent': 'base_equipment',
+  'record_id': 23
+  'prototype_tags': ['object', 'record_id_23'],
   'desc': "This shield is very large and heavy, and of course, round. The shield is effective in covering most of the body, but is also very heavy and  unwieldy.",
   'num_exist': 3,
   'worth': 85,
@@ -1658,6 +1956,8 @@ VIKING_ROUND_SHIELD = {
 VIRSH_BLADE = {
   'key': "Virsh Blade",
   'prototype_parent': 'base_equipment',
+  'record_id': 175
+  'prototype_tags': ['object', 'record_id_175'],
   'article': 4,
   'desc': "This slightly curved blade has a silvery red tint to it.",
   'get_success_msg': "As you grab this weapon, you become enraged at the thought that you might not be able to keep this weapon forever, you must defend yourself.",
@@ -1674,6 +1974,8 @@ VIRSH_BLADE = {
 VOULGE = {
   'key': "Voulge",
   'prototype_parent': 'base_equipment',
+  'record_id': 141
+  'prototype_tags': ['object', 'record_id_141'],
   'desc': "The  Voulge is a long shafted weapon with a large sharp blade on the end. The weight of this object makes it impossible to use with one hand. The blade is long and sharp, so even the slightess miss might do damage.",
   'line_desc': "There is a long bladed weapon on the ground.",
   'num_exist': 6,
@@ -1688,6 +1990,8 @@ VOULGE = {
 WARHAMMER = {
   'key': "warhammer",
   'prototype_parent': 'base_equipment',
+  'record_id': 149
+  'prototype_tags': ['object', 'record_id_149'],
   'desc': "This object has a long, thick handle and a heavy iron headpiece. The hammer is decorated with carvings along the handle.",
   'num_exist': 5,
   'worth': 61,
@@ -1705,6 +2009,8 @@ WARHAMMER = {
 WARNOCK = {
   'key': "Warnock",
   'prototype_parent': 'base_equipment',
+  'record_id': 136
+  'prototype_tags': ['object', 'record_id_136'],
   'worth': 300000,
   'equipment_slot': EquipmentSlot.BACKPACK,
   'teleport': 712,
@@ -1713,6 +2019,8 @@ WARNOCK = {
 WHITE_SCALE_MAIL = {
   'key': "White scale mail",
   'prototype_parent': 'base_equipment',
+  'record_id': 6
+  'prototype_tags': ['object', 'record_id_6'],
   'article': 4,
   'desc': "The armor appears similar in fabrication to scale mail, but instead of utilizing metal plates, it uses small overlapping scales of what appear to be bone, or reptilean armor. The armor is a pure white in color.",
   'line_desc': "There is a suit of white armor here.",
@@ -1730,6 +2038,8 @@ WHITE_SCALE_MAIL = {
 WOODEN_SHIELD = {
   'key': "wooden shield",
   'prototype_parent': 'base_equipment',
+  'record_id': 22
+  'prototype_tags': ['object', 'record_id_22'],
   'desc': "The wooden shield is constructed of two layers of wooden pieces, each running perpendicular to the grain of the other, with a coating of  oxhide.",
   'num_exist': 2,
   'worth': 35,
@@ -1743,6 +2053,8 @@ WOODEN_SHIELD = {
 WRAITH_BLADE = {
   'key': "Wraith Blade",
   'prototype_parent': 'base_equipment',
+  'record_id': 16
+  'prototype_tags': ['object', 'record_id_16'],
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'class': 19,
   'attack_speed': 8,
@@ -1757,6 +2069,8 @@ WRAITH_BLADE = {
 ZEPHYR_GOGGLES = {
   'key': "Zephyr Goggles",
   'prototype_parent': 'base_equipment',
+  'record_id': 151
+  'prototype_tags': ['object', 'record_id_151'],
   'article': 3,
   'desc': "This strange multicolored apparatus appears to be able to be worn on ones head, over ones eyes.  The strange bright colors on the  lenses make you slightly confused, if not nauscious.",
   'get_success_msg': "You pick up them mean shades.",
@@ -1780,6 +2094,8 @@ BASE_SCROLL = {
 GOLDEN_SCROLL = {
   'key': "Golden scroll",
   'prototype_parent': 'base_scroll',
+  'record_id': 67
+  'prototype_tags': ['object', 'record_id_67'],
   'desc': "This scroll is on supple parchment, trimmed with gold-leaf. It is marked with common symbols with appeal to the Gods of good health.",
   'worth': 50,
   'spell_key': 'heal',
@@ -1789,11 +2105,15 @@ GOLDEN_SCROLL = {
 PLEDGE_SLAYER = {
   'key': "Pledge Slayer",
   'prototype_parent': 'base_scroll',
+  'record_id': 135
+  'prototype_tags': ['object', 'record_id_135'],
 }
 
 SCROLL_OF_IDENTIFY = {
   'key': "scroll of identify",
   'prototype_parent': 'base_scroll',
+  'record_id': 178
+  'prototype_tags': ['object', 'record_id_178'],
   'desc': "This small yellowed scroll looks like it may contain some information.",
   'get_success_msg': "You feel some keen knowledge as you pick the scroll up",
   'worth': 200,
@@ -1804,18 +2124,22 @@ SCROLL_OF_IDENTIFY = {
 SCROLL_OF_TELEPORT = {
   'key': "scroll of teleport",
   'prototype_parent': 'base_scroll',
+  'record_id': 179
+  'prototype_tags': ['object', 'record_id_179'],
   'desc': "This scroll looks ancient and powerfull, yet, because of the skin like material it is made of, it comforts you.",
   'get_success_msg': "You grab the scroll and power pulsates through your veins",
   'line_desc': "A small scroll made of infant skin lies here.",
   'num_exist': 1,
   'worth': 90000,
-  'spell_key': 'death word',
+  'spell_key': 'death word 2',
   'charges': 1,
 }
 
 TATTERED_SCROLL = {
   'key': "tattered scroll",
   'prototype_parent': 'base_scroll',
+  'record_id': 70
+  'prototype_tags': ['object', 'record_id_70'],
   'desc': "The scroll is very old, and has a bluish tint to it.",
   'num_exist': 2,
   'worth': 35,
@@ -1826,6 +2150,8 @@ TATTERED_SCROLL = {
 YELLOWED_SCROLL = {
   'key': "yellowed scroll",
   'prototype_parent': 'base_scroll',
+  'record_id': 71
+  'prototype_tags': ['object', 'record_id_71'],
   'desc': "The scrolls are loosely rolled together, and are made of yellowed parchment.",
   'worth': 35,
   'spell_key': 'Sleep',
@@ -1844,6 +2170,8 @@ BASE_WAND = {
 PLATINUM_WAND = {
   'key': "Platinum Wand",
   'prototype_parent': 'base_wand',
+  'record_id': 111
+  'prototype_tags': ['object', 'record_id_111'],
   'desc': "The wand is about 2 feet long and very thin. It is made of a strange metal that has a silver tint to it.",
   'num_exist': 3,
   'worth': 150,
@@ -1852,6 +2180,8 @@ PLATINUM_WAND = {
 ROD_OF_DESTRUCTION = {
   'key': "Rod of Destruction",
   'prototype_parent': 'base_wand',
+  'record_id': 147
+  'prototype_tags': ['object', 'record_id_147'],
   'desc': "The rod is about 3 feet long, made of an almost metallic looking wood. It is richly carved, and tipped with a iron point.",
   'get_success_msg': "Energy courses through you as you lift the ancient Rod of Destruction!",
   'line_desc': "There is a long rod of the ground here.",
@@ -1869,6 +2199,8 @@ BASE_MISSILE = {
 ARROW = {
   'key': "arrow",
   'prototype_parent': 'base_missile',
+  'record_id': 140
+  'prototype_tags': ['object', 'record_id_140'],
   'article': 2,
   'num_exist': 7,
   'worth': 12,
@@ -1877,6 +2209,8 @@ ARROW = {
 BOULDER = {
   'key': "boulder",
   'prototype_parent': 'base_missile',
+  'record_id': 155
+  'prototype_tags': ['object', 'record_id_155'],
   'desc': "This large boulder is slightly covered with moss, but it looks like it might have once been part of a building of some sort.",
   'get_success_msg': "Somehow you manage to place the boulder on your shoulder, you hear a loud *POP* as your back goes out.",
   'line_desc': "There is a large boulder here, slightly sunken into the ground.",
@@ -1887,6 +2221,8 @@ BOULDER = {
 STONE = {
   'key': "stone",
   'prototype_parent': 'base_missile',
+  'record_id': 119
+  'prototype_tags': ['object', 'record_id_119'],
   'num_exist': 31,
   'weight': 1,
   'worth': 6,
@@ -1904,6 +2240,8 @@ BASE_MISSILE_LAUNCHER = {
 CATAPULT = {
   'key': "catapult",
   'prototype_parent': 'base_missile_launcher',
+  'record_id': 153
+  'prototype_tags': ['object', 'record_id_153'],
   'article': 4,
   'desc': "This massive weapon used for attacking a castle looks very impressive. It must have taken alot of time and engineering skill to build, if only you had the right kind of ammo.",
   'get_fail_msg': "You fail to pick up the catapult, mainly because it is the size of a small house.",
@@ -1918,6 +2256,8 @@ CATAPULT = {
 CROSSBOW = {
   'key': "crossbow",
   'prototype_parent': 'base_missile_launcher',
+  'record_id': 139
+  'prototype_tags': ['object', 'record_id_139'],
   'components': [390],
   'desc': "The crossbow is a standard crossbow.",
   'num_exist': 2,
@@ -1927,6 +2267,8 @@ CROSSBOW = {
 HORN_BOW = {
   'key': "horn bow",
   'prototype_parent': 'base_missile_launcher',
+  'record_id': 148
+  'prototype_tags': ['object', 'record_id_148'],
   'desc': "The bow has a slight recurve to it, and is made from two long animal tusks.",
   'num_exist': 2,
   'worth': 100,
@@ -1935,6 +2277,8 @@ HORN_BOW = {
 SLING = {
   'key': "sling",
   'prototype_parent': 'base_missile_launcher',
+  'record_id': 102
+  'prototype_tags': ['object', 'record_id_102'],
   'num_exist': 4,
   'worth': 65,
 }
@@ -1951,6 +2295,8 @@ BASE_SPELLBOOK = {
 BOOK_OF_SHADOWS = {
   'key': "Book of Shadows",
   'prototype_parent': 'base_spellbook',
+  'record_id': 3
+  'prototype_tags': ['object', 'record_id_3'],
   'desc': "These boots look as though somone tried to play a strange twisted joke on someone, they appear to be made of leather, yet, there are steel thorns covering the toe and heel.",
   'get_success_msg': "You feel a surge of power from the dark tome.",
   'line_desc': "Darkness emanates from a book lying on the ground.",
@@ -1962,6 +2308,8 @@ BOOK_OF_SHADOWS = {
 DEMONS_TOME = {
   'key': "Demon's Tome",
   'prototype_parent': 'base_spellbook',
+  'record_id': 123
+  'prototype_tags': ['object', 'record_id_123'],
   'article': 4,
   'desc': "The tome is large, and rather heavy. It is bound with a dry, thick leather that appears to have been made from the hide of some huge retile. The pages are of some type of animal skin. The writing contained within is casually indecipherable, but clearly magical.",
   'line_desc': "There is a volume bound in reptilean leather here.",
@@ -1973,6 +2321,8 @@ DEMONS_TOME = {
 FLICKERING_FLAME = {
   'key': "Flickering Flame",
   'prototype_parent': 'base_spellbook',
+  'record_id': 130
+  'prototype_tags': ['object', 'record_id_130'],
   'desc': "You see a flickering flame before you that entrances your eyes, drawing you closer to it. Words dance before your eyes...if you concentrate you might be able to decipher them.",
   'get_fail_msg': "You will burn yourself if you touch that!",
   'line_desc': "There is a flickering flame dancing before your eyes..",
@@ -1985,24 +2335,30 @@ FLICKERING_FLAME = {
 GRAND_GRIMOIRE = {
   'key': "Grand Grimoire",
   'prototype_parent': 'base_spellbook',
+  'record_id': 66
+  'prototype_tags': ['object', 'record_id_66'],
   'desc': "The grimiore is an exceedingly large tome, bound in leather and reptile skin. Its pages show great age, but are in good shape. The magical writings contained within are illegible to all save Wizards.",
   'get_fail_msg': "The grimiore is far too bulky and heavy for you to go lugging it around whilst hacking monsters!",
   'num_exist': 2,
   'equipment_slot': EquipmentSlot.BACKPACK,
-  'spell_keys': ['Cure Poison', 'Unholy Blast', 'Dragon fire', 'Invisibility', 'Sleep', 'Gripping Plants', 'Remove Poison', 'earthquake', 'Illusion I', 'chestnut hail', 'grave rot', 'Brain Hammer', 'ray of death', 'heal', 'charm', 'killing winds', 'whisper', 'lightning bolts', 'identify', 'death word'],
+  'spell_keys': ['Cure Poison', 'Unholy Blast', 'Dragon fire', 'Invisibility', 'Sleep', 'Gripping Plants', 'Remove Poison', 'earthquake', 'Illusion I', 'chestnut hail', 'grave rot 2', 'Brain Hammer', 'ray of death', 'heal', 'charm', 'killing winds', 'whisper', 'lightning bolts', 'identify', 'death word'],
 }
 
 MABINOGIAN = {
   'key': "Mabinogian",
   'prototype_parent': 'base_spellbook',
+  'record_id': 18
+  'prototype_tags': ['object', 'record_id_18'],
   'num_exist': 1,
   'equipment_slot': EquipmentSlot.BACKPACK,
-  'spell_keys': ['Gripping Plants', 'Thundering Voice', 'Ent Strength', 'Pinecones of Death', 'Tree Attack', 'Morning Frost', 'Earth Hammer', 'Insect Cloud', 'Locust Plague', 'Bear Claws', 'Pack of Wolves', 'Forest Fire', 'Tornado', 'Soul Harvester', 'Elk Speed'],
+  'spell_keys': ['Thundering Voice', 'Ent Strength', 'Pinecones of Death', 'Tree Attack', 'Morning Frost', 'Earth Hammer', 'Insect Cloud', 'Locust Plague', 'Bear Claws', 'Pack of Wolves', 'Forest Fire', 'Tornado', 'Soul Harvester', 'Elk Speed'],
 }
 
 PALE_BOOK = {
   'key': "Pale Book",
   'prototype_parent': 'base_spellbook',
+  'record_id': 129
+  'prototype_tags': ['object', 'record_id_129'],
   'desc': "The book of pale leather feels slightly warm in your hands. The cover has a texture not unlike that of human skin, with faint lines like veins running underneath its surface.",
   'get_fail_msg': "You can touch the pale book but you are unable to move it from the table where it is anchored.",
   'line_desc': "There is a book bound in pale leather here.",
@@ -2015,6 +2371,8 @@ PALE_BOOK = {
 SANDSTONE = {
   'key': "Sandstone",
   'prototype_parent': 'base_spellbook',
+  'record_id': 131
+  'prototype_tags': ['object', 'record_id_131'],
   'desc': "A large stone of pale color dominates the room. Upon are lines of ancient runes, worn and difficult to read.",
   'get_fail_msg': "The stone is too heavy to lift!",
   'line_desc': "There is a large stone pillar before you.",
@@ -2028,6 +2386,8 @@ SANDSTONE = {
 SCROLL = {
   'key': "Scroll",
   'prototype_parent': 'base_spellbook',
+  'record_id': 133
+  'prototype_tags': ['object', 'record_id_133'],
   'desc': "You see a pale scroll covered in faded writing hanging upon the far wall. The words fade out of meaning the more you concentrate but they seem to be of a magical nature.",
   'line_desc': "A scroll hangs before you.",
   'sticky': True,
@@ -2047,6 +2407,8 @@ BASE_BANKING_MACHINE = {
 ATM = {
   'key': "ATM",
   'prototype_parent': 'base_banking_machine',
+  'record_id': 12
+  'prototype_tags': ['object', 'record_id_12'],
   'article': 2,
   'desc': "This strange box like object looks quite out of place in the realm of Tai-Tastigon, but it looks pretty useful.",
   'get_fail_msg': "You attempt to pick up the automatic teller, and she slaps you silly.",
