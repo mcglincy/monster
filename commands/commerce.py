@@ -16,7 +16,7 @@ class CmdBuy(QueuedCommand):
   def inner_func(self):
     # is there a merchant in the room?
     merchants = self.caller.location.search("merchant",
-      candidates=self.caller.location.contents, typeclass="typeclasses.objects.Merchant", quiet=True)
+      candidates=self.caller.location.contents, typeclass="typeclasses.merchant.Merchant", quiet=True)
     if len(merchants) == 0 or merchants[0] is None:
       self.caller.msg("There is no merchant in this room.")
       return
@@ -57,7 +57,7 @@ class CmdSell(QueuedCommand):
 
     # is there a merchant in the room?
     merchants = self.caller.location.search("merchant",
-      candidates=self.caller.location.contents, typeclass="typeclasses.objects.Merchant", quiet=True)
+      candidates=self.caller.location.contents, typeclass="typeclasses.merchant.Merchant", quiet=True)
     if len(merchants) == 0 or merchants[0] is None:
       self.caller.msg("There is no merchant in this room.")
       return
