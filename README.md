@@ -80,6 +80,8 @@ The running game server is up at http://www.monstermud.com.
   * Simple mob AI: find target, attack, die, patrol/hunt
   * Mobs spawned by MONSTER_GENERATOR and MONSTER_LAIR rooms
   * Lair mobs stay in lair
+  * drop gold and object
+
 
 ## What's not implemented yet
 
@@ -120,8 +122,6 @@ The running game server is up at http://www.monstermud.com.
 * Spells
   * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
 * Randoms (aka mobs)
-  * drop object
-  * drop gold
   * pursuit chance / pursuit behavior
   * sayings
   * cast spells
