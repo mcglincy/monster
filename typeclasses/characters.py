@@ -49,6 +49,7 @@ class Character(DefaultCharacter):
     """Called at initial creation."""
     super().at_object_creation()
     self.set_field_defaults()
+    self.at_init()
 
   def set_field_defaults(self):
     """Set various field defaults in an idempotent way."""
@@ -90,7 +91,6 @@ class Character(DefaultCharacter):
     self.ndb.hiding = 0
     self.ndb.poisoned = False
     self.ndb.resting = False
-    # TODO: verify whether this should be in at_object_creation()
     add_health_ticker(self)
     add_mana_ticker(self)
     add_mob_generator_ticker(self)
