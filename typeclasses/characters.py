@@ -17,6 +17,7 @@ from evennia.commands import cmdhandler
 from gamerules.alignment import Alignment
 from gamerules.combat import character_death
 from gamerules.equipment_slot import EquipmentSlot
+from gamerules.gold import give_starting_gold
 from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker
 from gamerules.mana import MIN_MANA, add_mana_ticker
 from gamerules.mobs import add_mob_generator_ticker
@@ -49,6 +50,7 @@ class Character(DefaultCharacter):
     """Called at initial creation."""
     super().at_object_creation()
     self.set_field_defaults()
+    self.give_starting_gold()
     self.at_init()
 
   def set_field_defaults(self):
@@ -263,6 +265,10 @@ class Character(DefaultCharacter):
   @property
   def max_mana(self):
     return self.base_plus_level_attr("base_mana", "level_mana")
+
+  @property
+  def is_dead(self):
+    return self.db.health <= 0
 
   @property
   def is_frozen(self):

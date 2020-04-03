@@ -17,7 +17,7 @@ class Mob(Object):
   """Non-player monster aka mob aka Monster 'random'.
 
   Ticker code lifted from evennia.contrib.tutorial_world.mob.
-  """
+  """  
   def at_object_creation(self):
     super().at_object_creation()
     # self.db.record_id
@@ -122,6 +122,10 @@ class Mob(Object):
       # we took damage and we're still alive - go aggro
       self.ndb.aggressive = True
       self.start_attacking()
+
+  @property
+  def is_dead(self):
+    return self.db.health <= 0
 
   @property
   def max_health(self):

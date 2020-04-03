@@ -29,12 +29,11 @@ class CmdBuy(QueuedCommand):
       return
     obj = objs[0]
 
-    worth = obj.db.worth if obj.db.worth else 0
     # TODO: does buyer have enough gold?
 
     # TODO: take buyer gold
     # seller.take_gold(worth)
-    self.caller.msg(f"You buy a {obj.key} for {worth} gold.")
+    self.caller.msg(f"You buy a {obj.key} for {obj.worth} gold.")
     # copy the object directly into the caller
     ObjectDB.objects.copy_object(obj, new_key=obj.key, new_location=self.caller)
 
@@ -63,15 +62,14 @@ class CmdSell(QueuedCommand):
       return
 
     # check object type to make sure it's sellable
-    #if not obj.db.worth:
+    #if not obj.worth:
     #  self.caller.msg("You can't sell that.")
     #  return
-    if obj.key == "gold":
+    if obj.is_typeclass("typeclasses.object.Gold"):
       self.caller.msg("You can't sell gold.")
       return
 
-    worth = obj.db.worth if obj.db.worth else 0
-    self.caller.msg(f"You sell a {obj.key} for {worth} gold.")
+    self.caller.msg(f"You sell a {obj.key} for {obj.worth} gold.")
 
     # TODO: give seller gold
     # seller.give_gold(worth)

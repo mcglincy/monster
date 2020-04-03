@@ -124,7 +124,7 @@ class CmdGet(QueuedCommand):
 class CmdInventory(QueuedCommand):
   """View inventory."""
   key = "inventory"
-  aliases = ["i", "inv", "inve", "inven", "invent", "invento", "inventor"]
+  aliases = ["i", "in", "inv", "inve", "inven", "invent", "invento", "inventor"]
   locks = "cmd:all()"
   arg_regex = r"$"
   help_category = "Monster"

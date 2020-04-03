@@ -184,6 +184,10 @@ class Object(DefaultObject):
     self.db.weight = 0
     self.db.worth = 0
 
+  @property
+  def worth(self):
+    return self.db.worth or 0
+
   def at_before_get(self, getter, **kwargs):
     if self.db.sticky:
       if self.db.get_fail_msg:
@@ -194,7 +198,6 @@ class Object(DefaultObject):
   def at_get(self, getter, **kwargs):
     if self.db.get_success_msg:
       getter.msg(self.db.get_success_msg)
-
 
   def at_before_use(self, user, **kwargs):
     if self.db.use_object_required:
@@ -260,7 +263,11 @@ class Gold(StackableObject):
     self.db.stack_name = "bag"
     self.db.singular_object_name = "gold"
     self.db.plural_object_name = "gold"
+    self.db.worth = 1  # just so we're never considered worthless
 
+  @property
+  def worth(self):
+    return self.db.amount
 
 class Bland(Object):
   def at_object_creation(self):

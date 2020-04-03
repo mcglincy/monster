@@ -22,8 +22,7 @@ class Merchant(Object):
     lines.append("")
     table = evtable.EvTable("Item", "Cost")
     for obj in self.contents:
-      cost = obj.db.worth if obj.db.worth else 0
-      table.add_row(obj.key, cost)
+      table.add_row(obj.key, obj.worth)
     return f"You see a merchant, hawking their wares:\n{table}"
 
   def at_object_receive(self, moved_obj, source_location, **kwargs):

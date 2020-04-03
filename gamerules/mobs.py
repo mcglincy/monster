@@ -4,7 +4,6 @@ from evennia.prototypes import prototypes as protlib, spawner
 from gamerules.combat import apply_armor, attack_bystander_msg, attack_target_msg
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
-from typeclasses.objects import Gold
 
 
 # AllStats.Tick.TkRandMove := AllStats.Tick.TkRandMove + 100;
@@ -12,6 +11,10 @@ MOB_GENERATOR_TICK_SECONDS = 10
 
 
 def resolve_mob_attack(mob, target, attack_name="claws"):
+  if target.is_dead:
+    # already dead
+    return
+
   # TODO: add hiding
   is_surprise = False
   damage = mob_attack_damage(mob, is_surprise)

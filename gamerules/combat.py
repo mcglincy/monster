@@ -1,13 +1,17 @@
 import random
 
 from evennia.utils.search import search_object
-
+from gamerules.gold import give_starting_gold
 from gamerules.hiding import reveal
 from gamerules.talk import msg_global
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 
 def resolve_attack(attacker, target):
+  if target.is_dead:
+    # already dead
+    return
+
   weapon = attacker.equipped_weapon
   if not weapon and not attacker.has_claws:
     attacker.msg("You have no equipped weapon!")
@@ -47,6 +51,7 @@ def resolve_attack(attacker, target):
   # target takes the damage
   target.gain_health(-damage, damager=attacker, weapon_name=attack_name)
 
+
 def apply_armor(target, damage):
   final_damage = damage
   base_armor = target.base_armor
@@ -58,6 +63,7 @@ def apply_armor(target, damage):
     target.msg("The attack is partially blocked by your armor.")
     final_damage = int(damage * ((100 - base_armor) / 100))
   return final_damage
+
 
 def attack_damage(attacker, weapon, is_surprise=False):
   rand_multiplier = .7 if is_surprise else random.random()
@@ -161,7 +167,7 @@ def character_death(victim, killer=None, weapon_name=None):
 
   # victim drops everything it was holding before leaving room
   for obj in victim.contents:
-    if obj.db.worth:
+    if obj.worth:
       # only drop things with value
       # TODO: possible destroy chance?
       victim.execute_cmd(f"drop {obj.key}")
@@ -181,6 +187,9 @@ def character_death(victim, killer=None, weapon_name=None):
 
   # clear/reset various stats
   reset_victim_state(victim)
+
+  # starting gold!
+  give_starting_gold(victim)
 
 
 def reset_victim_state(victim):
