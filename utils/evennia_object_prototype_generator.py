@@ -56,7 +56,7 @@ def output_common_fields(obj, prototype_parent, descs, lines):
   print(f"  'key': \"{obj_name}\",")
   print(f"  'prototype_parent': '{prototype_parent}',")
   record_id = obj['id']
-  print(f"  'record_id': {record_id}")
+  print(f"  'record_id': {record_id},")
   # add tags for easier searchability
   tags = ['object', f'record_id_{record_id}']
   print(f"  'prototype_tags': {tags},")
