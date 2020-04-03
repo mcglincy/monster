@@ -18,6 +18,7 @@ The running game server is up at http://www.monstermud.com.
   * Recover health and mana over time
   * Various global player messages w/ highlighting
     * E.g., "(Puzzeledfrog once again roams the land.)" "(Mummy has returned to sleep.)" "Puzzeledfrog has been slain by Giant Spider's Elf Slayer.""
+  * Get 50 starting gold at creation and upon rebirth in Void    
 * Map/Rooms
   * Imported all original Tai Tastigon rooms, room descriptions, and exits
   * Exit descriptions
@@ -106,7 +107,6 @@ The running game server is up at http://www.monstermud.com.
 * Combat
   * Drop objects when hit
   * Punch
-  * Get 50 gold upon rebirth in Void
   * Missiles and *throw* command
   * Bombs and *lob* command
   * Poison
