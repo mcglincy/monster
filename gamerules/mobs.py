@@ -1,9 +1,10 @@
 import random
-from evennia import TICKER_HANDLER
+from evennia import create_object, TICKER_HANDLER
 from evennia.prototypes import prototypes as protlib, spawner
 from gamerules.combat import apply_armor, attack_bystander_msg, attack_target_msg
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
+from typeclasses.objects import Gold
 
 
 # AllStats.Tick.TkRandMove := AllStats.Tick.TkRandMove + 100;
@@ -43,10 +44,24 @@ def mob_death(mob, killer=None):
     killer.msg(f"You killed {mob.key}!")
     xp = calculate_kill_xp(killer.db.xp, mob.db.xp)
     gain_xp(killer, xp)
+
+  if mob.db.drop_gold:
+    gold = create_object("typeclasses.objects.Gold", key="gold")
+    gold.add(mob.db.drop_gold)
+    # use move_to() so we invoke StackableObject accumulation
+    gold.move_to(mob.location, quiet=True)
+    mob.location.msg_contents(f"{mob.key} drops {mob.db.drop_gold} gold.")
+
+  if mob.db.drop_object_id:
+    tags = ["object", f"record_id_{mob.db.drop_object_id}"]
+    prototypes = protlib.search_prototype(tags=tags)
+    if prototypes:
+      obj = spawner.spawn(prototypes[0]["prototype_key"])[0]
+      obj.location = mob.location
+      mob.location.msg_contents(f"{mob.key} drops {obj.name}.")
+
   mob.location.msg_contents(
     f"{mob.key} disappears in a cloud of greasy black smoke.", exclude=[mob])
-  # TODO: object drop
-  # TODO: gold drop
   mob.location = None
   mob.delete()
 

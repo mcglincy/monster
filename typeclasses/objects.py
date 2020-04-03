@@ -240,23 +240,18 @@ class StackableObject(Object):
     if self.db.amount <= 0:
       self.delete()
 
-  def at_get(self, getter, **kwargs):
+  def _maybe_add_to_existing(self, location):
     # see if getter already has a stack of this kind
-    existing = [x for x in getter.contents if x.typeclass_path == self.path and x != self]
+    existing = [x for x in location.contents if x.typeclass_path == self.path and x != self]
     if existing:
       # add our count to the existing object
       obj = existing[0]
       obj.add(self.db.amount)
       self.delete()
 
-  def at_drop(self, dropper, **kwargs):
-    # see if dropped-to location already has a stack of this kind
-    existing = [x for x in self.location.contents if x.typeclass_path == self.path and x != self]
-    if existing:
-      # add our count to the existing object
-      obj = existing[0]
-      obj.add(self.db.amount)
-      self.delete()
+  def at_after_move(self, source_location, **kwargs):
+    # at_after_move() also gets called as part of getting/dropping
+    self._maybe_add_to_existing(self.location)
 
 
 class Gold(StackableObject):
