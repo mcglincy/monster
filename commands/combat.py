@@ -19,9 +19,6 @@ class CmdAttack(QueuedCommand):
     if self.caller.location.is_special_kind(SpecialRoomKind.NO_COMBAT):
       self.caller.msg("You cannot fight here.")
       return False
-    self.target = find_unhidden(self.caller, self.args.strip())
-    if not self.target:
-      return False
 
   def pre_freeze(self):
     return self.caller.attack_speed / 200.0
@@ -30,6 +27,10 @@ class CmdAttack(QueuedCommand):
     return self.caller.attack_speed / 200.0
 
   def inner_func(self):
+    # check the target after pre_freeze and immediately before resolving attack
+    self.target = find_unhidden(self.caller, self.args.strip())
+    if not self.target:
+      return False
     resolve_attack(self.caller, self.target)
 
 
