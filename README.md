@@ -104,6 +104,8 @@ The running game server is up at http://www.monstermud.com.
 * Objects
   * Hidden/searchable objects
   * Object damage
+  * Cursed (no drop) objects
+  * Enter amount of gold to drop
 * Combat
   * Drop objects when hit
   * Punch
