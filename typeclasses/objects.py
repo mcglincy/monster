@@ -183,10 +183,16 @@ class Object(DefaultObject):
     self.db.use_success_msg = None
     self.db.weight = 0
     self.db.worth = 0
+    # object hiding is non-persistent
+    self.db.hiding = 0
 
   @property
   def worth(self):
     return self.db.worth or 0
+
+  @property
+  def is_hiding(self):
+    return self.db.hiding > 0
 
   def at_before_get(self, getter, **kwargs):
     if self.db.sticky:

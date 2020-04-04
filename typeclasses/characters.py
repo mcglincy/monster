@@ -50,7 +50,7 @@ class Character(DefaultCharacter):
     """Called at initial creation."""
     super().at_object_creation()
     self.set_field_defaults()
-    self.give_starting_gold()
+    give_starting_gold(self)
     self.at_init()
 
   def set_field_defaults(self):

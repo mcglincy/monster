@@ -18,8 +18,6 @@ class Merchant(Object):
     spawn("mabinogian")[0].location = self
 
   def return_appearance(self, looker, **kwargs):
-    lines = []
-    lines.append("")
     table = evtable.EvTable("Item", "Cost")
     for obj in self.contents:
       table.add_row(obj.key, obj.worth)

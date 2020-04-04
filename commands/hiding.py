@@ -1,5 +1,6 @@
 from commands.command import QueuedCommand
-from gamerules.hiding import hide, reveal, search
+from gamerules.hiding import find_unhidden, hide, hide_object, reveal, search
+
 
 class CmdHide(QueuedCommand):
   key = "hide"
@@ -7,7 +8,16 @@ class CmdHide(QueuedCommand):
   help_category = "Monster"
 
   def inner_func(self):
-    hide(self.caller)
+    if self.args:
+      # trying to hide an object
+      # must be unhidden in the room
+      obj = find_unhidden(self.caller, self.args.strip())
+      if obj is None:
+        self.caller.msg("I see no such object here.")
+        return
+      hide_object(self.caller, obj)
+    else:
+      hide(self.caller)
 
 
 class CmdReveal(QueuedCommand):

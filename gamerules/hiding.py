@@ -39,6 +39,17 @@ def find_unhidden(searcher, key):
   return None
 
 
+def hide_object(hider, obj):
+  if (hider.location.is_special_kind(SpecialRoomKind.MARKET)
+    and not hider.account.is_superuser):
+    hider.msg("You can't hide that here.")
+    return
+  # TODO: should objects use just a hidden boolean?
+  obj.db.hiding = 1
+  evennia_hide(obj)
+  hider.msg(f"You have hidden {obj.key}.")
+
+
 def hide(hider):
   # TODO: freeze for 0.5 + hide delay
 
@@ -110,11 +121,9 @@ def search(searcher):
   room = searcher.location
   found = False
   if rand < 20:
-    # reveal objects
-    pass
+    found = reveal_objects(searcher)
   elif rand < 40:
-    # reveal exits
-    pass
+    found = reveal_exits(searcher)
   else:
     # reveal people
     found = reveal_people(searcher)
@@ -123,6 +132,17 @@ def search(searcher):
     searcher.msg("You haven't found anything.")
   #searcher.location.msg_contents(f"{searcher.key} appears to have found something.", exclude=[searcher])
   
+
+def reveal_objects(searcher):
+  # TODO
+  return False
+
+
+def reveal_exits(searcher):
+  # TODO
+  return False
+
+
 def reveal_people(searcher):
   # TODO: this logic is a bit wacko
   characters = [

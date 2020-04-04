@@ -7,6 +7,7 @@ Rooms are simple containers that has no location of their own.
 
 from collections import defaultdict
 from evennia import DefaultRoom
+from evennia.utils import evtable
 from evennia.utils.utils import list_to_string
 from gamerules.special_room_kind import SpecialRoomKind
 
@@ -45,6 +46,16 @@ class Room(DefaultRoom):
 
     def magnitude(self, special_room_kind):
         return self.db.magnitudes[special_room_kind.value]
+
+    def list_objects_for_sale(self, looker):
+        if not self.is_special_kind(SpecialRoomKind.MARKET):
+          return
+        table = evtable.EvTable("Item", "Cost")
+        for obj in self.contents:
+          if (obj.is_typeclass("typeclasses.objects.Object", exact=False)
+            and obj.is_hiding):
+              table.add_row(obj.key, obj.worth)
+        looker.msg(f"{table}")
 
     def return_appearance(self, looker, **kwargs):
         """
