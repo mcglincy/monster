@@ -28,7 +28,7 @@ The running game server is up at http://www.monstermud.com.
   * Exit effects
     * set or reset class, change xp, change health, change mana
   * Trapdoors
-  * Special room kinds: no combat, no hide, hard to hide, object destroy, monster generator, monster lair
+  * Special room kinds: no combat, no hide, hard to hide, object destroy, monster generator, monster lair, heal
   * Special room magnitudes
 * Objects
   * Imported all original objects (weapons, armor, etc)
@@ -92,7 +92,7 @@ The running game server is up at http://www.monstermud.com.
 * Map/Rooms
   * Room owners / customizations
     * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing and extensive builder commands)
-  * Special room kinds: market, treasure drop, heal
+  * Special room kinds: market, treasure drop
   * Move silent between rooms
   * Exit types
     * guardian
