@@ -96,11 +96,13 @@ class CmdGet(QueuedCommand):
   def inner_func(self):
     caller = self.caller
     if not self.args:
-      if caller.location.is_special_kind(SpecialRoomKind.MARKET):
-        caller.location.list_objects_for_sale(caller)
-      else:
-        # TODO: list all objects in room?
-        caller.msg("Get what?")
+      # TODO: decide if we're going to use MARKET rooms
+      # if caller.location.is_special_kind(SpecialRoomKind.MARKET):
+      #   caller.location.list_objects_for_sale(caller)
+      # else:
+      #   # TODO: list all objects in room?
+      #   caller.msg("Get what?")
+      caller.msg("Get what?")
       return
     obj = caller.search(self.args, location=caller.location)
     if not obj:
