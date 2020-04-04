@@ -9,7 +9,7 @@ class CmdHide(QueuedCommand):
 
   def inner_func(self):
     if self.args:
-      # trying to hide an object
+      # arg, trying to hide an object
       # must be unhidden in the room
       obj = find_unhidden(self.caller, self.args.strip())
       if obj is None:
@@ -17,6 +17,7 @@ class CmdHide(QueuedCommand):
         return
       hide_object(self.caller, obj)
     else:
+      # no arg, just hide self
       hide(self.caller)
 
 
