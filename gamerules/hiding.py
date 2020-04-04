@@ -29,6 +29,17 @@ def unhidden_object(location, key):
   return None
 
 
+def num_unhidden_others(room, hider):
+  num = 0
+  for obj in room.contents:
+    if ((obj.is_typeclass("typeclasses.characters.Character")
+        and not obj.is_hiding and obj != hider)
+      or obj.is_typeclass("typeclasses.mobs.Mob", exact=False)
+      or obj.is_typeclass("typeclasses.merchant.Merchant", exact=False)):
+      num = num + 1
+  return num
+
+
 def find_unhidden(searcher, key):
   unhidden = [
     x for x in searcher.location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
@@ -44,6 +55,11 @@ def hide_object(hider, obj):
     and not hider.account.is_superuser):
     hider.msg("You can't hide that here.")
     return
+
+  if num_unhidden_others(hider.location, hider) > 0:
+    hider.msg("You can't hide things when people are watching you.")
+    return
+
   # TODO: should objects use just a hidden boolean?
   obj.db.hiding = 1
   evennia_hide(obj)
@@ -96,14 +112,6 @@ def hide(hider):
     hider.msg("You've hidden yourself from view.")
 
 
-def num_unhidden_others(room, hider):
-  num = 0
-  for obj in room.contents:
-    if obj.is_typeclass("typeclasses.characters.Character") and obj != hider:
-      num = num + 1
-  return num
-
-
 def reveal(hider):
   if hider.ndb.hiding == 0:
     hider.msg("You were not hiding.")
@@ -112,6 +120,11 @@ def reveal(hider):
   evennia_unhide(hider)
   hider.msg("You are no longer hiding.")
   hider.location.msg_contents(f"{hider.key} has stepped out of the shadows.", exclude=[hider])
+
+
+def reveal_object(obj):
+  hider.db.hiding = 0
+  evennia_unhide(obj)
 
 
 def search(searcher):
@@ -125,7 +138,6 @@ def search(searcher):
   elif rand < 40:
     found = reveal_exits(searcher)
   else:
-    # reveal people
     found = reveal_people(searcher)
 
   if not found:
@@ -134,7 +146,12 @@ def search(searcher):
   
 
 def reveal_objects(searcher):
-  # TODO
+  for obj in searcher.location.contents:
+    if obj.is_typeclass("typeclasses.objects.Object", exact=False) and obj.is_hiding:
+      searcher.msg(f"You found {obj.name}.")
+      reveal_obj(obj)
+      # only find one object at a time
+      return True
   return False
 
 
