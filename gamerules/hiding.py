@@ -56,7 +56,6 @@ def num_unhidden_others(hider):
 def find_unhidden(searcher, key):
   unhidden = [
     x for x in searcher.location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
-  searcher.msg(unhidden)
   for x in unhidden:
     if x.key.lower().startswith(key.lower()):
       return x

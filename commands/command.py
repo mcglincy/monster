@@ -5,6 +5,9 @@ Commands describe the input the account can do to the game.
 
 """
 
+import time
+
+from commands.debug import debug_msg
 from evennia import Command as BaseCommand
 from evennia.commands import cmdhandler
 from evennia.utils import utils
@@ -239,7 +242,11 @@ class QueuedCommand(Command):
         if self.pre_freeze():
           # utils.delay(self.pre_freeze, other_func)
           # self.caller.msg(f"{self.raw_string}: pre_freeze {self.pre_freeze()}")
+          self.caller.ndb.command_timestamp = int(time.time() * 1000.0)
           yield self.pre_freeze()
+          now = int(time.time() * 1000.0)
+          debug_msg(self.caller,
+            f"{self.key} pre-freeze {self.pre_freeze()}, actually {now - self.caller.ndb.command_timestamp} millis.")
 
         # prompt after pre_freeze, to better mimic old monster behavior
         if self.input_prompt1():
@@ -253,7 +260,11 @@ class QueuedCommand(Command):
         if self.post_freeze():
           # utils.delay(self.post_freeze, other_func)
           # self.caller.msg(f"{self.raw_string}: post_freeze {self.post_freeze()}")
+          self.caller.ndb.command_timestamp = int(time.time() * 1000.0)
           yield self.post_freeze()
+          now = int(time.time() * 1000.0)
+          debug_msg(self.caller,
+            f"{self.key} post-freeze {self.post_freeze()}, actually {now - self.caller.ndb.command_timestamp} millis.")
     except Exception as err:
       self.caller.msg(err)
     finally:

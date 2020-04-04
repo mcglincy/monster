@@ -19,7 +19,7 @@ from evennia.commands.default.comms import CmdGrapevine2Chan, CmdIRCStatus
 from commands.character import CmdName, CmdSheet
 from commands.combat import CmdAttack, CmdBleed, CmdRest
 from commands.commerce import CmdBuy, CmdSell
-from commands.debug import CmdClear
+from commands.debug import CmdClear, CmdDebug
 from commands.equipment import CmdEquip, CmdUnequip
 from commands.general import CmdDrop, CmdExpress, CmdGet, CmdInventory, CmdLook
 from commands.hiding import CmdHide, CmdReveal, CmdSearch
@@ -51,6 +51,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdBrief())
         self.add(CmdCast())
         self.add(CmdClear())
+        self.add(CmdDebug())
         self.add(CmdDot())
         self.remove(default_cmds.CmdDrop())
         self.add(CmdDrop())
