@@ -321,6 +321,10 @@ class Character(DefaultCharacter):
     else:
       return val
 
+  @property
+  def hide_delay(self):
+    return self.character_class.hide_delay
+
   # our damage, armor, etc is the sum of our equipped objects
 
   def base_plus_level_attr(self, base_attr_name, level_attr_name):

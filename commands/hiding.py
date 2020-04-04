@@ -7,6 +7,9 @@ class CmdHide(QueuedCommand):
   aliases = ["hid"]  
   help_category = "Monster"
 
+  def pre_freeze(self):
+    return 0.5 + self.caller.hide_delay
+
   def inner_func(self):
     if self.args:
       # arg, trying to hide an object
