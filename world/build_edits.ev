@@ -6,7 +6,30 @@
 #
 @open down;d = Void
 #
+@desc
+Go down to begin your adventure!
+#
 @tel Void
 #
 @lock north = view:none()
+#
+@tel Purgatory
+#
+@spawn ghostly_merchant
+#
+@tel Armory Stall
+#
+@spawn armorer
+#
+@tel Arms Emporium
+#
+@spawn weaponsmith
+#
+@tel Arkinor's Exotica
+#
+@spawn booksmith
+#
+@tel Wizard Pawn Shop
+#
+@spawn booksmith
 #
