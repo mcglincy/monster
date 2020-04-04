@@ -76,20 +76,38 @@ See the `@spawn` command and `evennia.utils.spawner` for more info.
 # Misc object prototypes
 #
 
-MERCHANT = {
-  'typeclass': 'typeclasses.merchant.Merchant',
-  'key': 'merchant',
-}
-
-TARGET_DUMMY = {
-  'typeclass': 'typeclasses.mobs.Mob',
-  'key': 'target dummy',
-  'health': 1000,
-}
-
 BAG_OF_GOLD = {
   'typeclass': 'typeclasses.objects.Gold',
   'key': 'gold',
   'amount': 50,
   'desc': 'A bag of 50 gold.'
+}
+
+GHOSTLY_MERCHANT = {
+  'typeclass': 'typeclasses.merchant.Merchant',
+  'key': 'ghostly merchant',
+  'for_sale_keys': ['axe', 'claymoore_sword', 'cudgel', 'dirk', 
+    'hatchet', 'short_sword'],
+}
+
+WEAPONSMITH = {
+  'typeclass': 'typeclasses.merchant.Merchant',
+  'key': 'weaponsmith',
+  'for_sale_keys': ['broadsword', 'longsword', 'mace', 'military_fork', 
+    'pike', 'saxon_axe', 'scimitar', 'spear', 'voulge', 'warhammer'],
+}
+
+ARMORER = {
+  'typeclass': 'typeclasses.merchant.Merchant',
+  'key': 'armorer',
+  'for_sale_keys': ['buckler', 'chain_mail_armor', 'conical_helm',
+    'crested_helm', 'horned_helm', 'leather_jerkin', 'norman_kite_shield',
+    'plumed_helm', 'ring_mail_armor', 'steel_breastplate', 'wooden_shield',
+    'viking_round_shield'],
+}
+
+BOOKSELLER = {
+  'typeclass': 'typeclasses.merchant.Merchant',
+  'key': 'bookseller',
+  'for_sale_keys': ['book_of_shadows', 'grand_grimoire', 'mabinogian'],
 }

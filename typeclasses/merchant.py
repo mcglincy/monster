@@ -7,15 +7,24 @@ class Merchant(Object):
   def at_object_creation(self):
     super().at_object_creation()
     self.sticky = True
-    spawn("axe")[0].location = self
-    spawn("cudgel")[0].location = self
-    spawn("dirk")[0].location = self
-    spawn("iron_bar")[0].location = self
-    spawn("meat_cleaver")[0].location = self
-    spawn("short_sword")[0].location = self
-    spawn("book_of_shadows")[0].location = self
-    spawn("grand_grimoire")[0].location = self
-    spawn("mabinogian")[0].location = self
+    self.db.for_sale_keys = []
+    # spawn("axe")[0].location = self
+    # spawn("cudgel")[0].location = self
+    # spawn("dirk")[0].location = self
+    # spawn("iron_bar")[0].location = self
+    # spawn("meat_cleaver")[0].location = self
+    # spawn("short_sword")[0].location = self
+    # spawn("book_of_shadows")[0].location = self
+    # spawn("grand_grimoire")[0].location = self
+    # spawn("mabinogian")[0].location = self
+
+  def basetype_posthook_setup(self):
+    # overriding this so we can do some post-init
+    # after spawning, as BaseObject.at_first_save() applies _create_dict field values
+    # *after* calling at_object_creation()
+    super().basetype_posthook_setup()
+    for key in self.db.for_sale_keys:
+      spawn(key)[0].location = self
 
   def return_appearance(self, looker, **kwargs):
     table = evtable.EvTable("Item", "Cost")
