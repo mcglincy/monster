@@ -64,9 +64,10 @@ class CmdSell(QueuedCommand):
       return
 
     # is the object sellable?
-    if not obj.worth:
-      self.caller.msg("You can't sell that.")
-      return
+    # TODO: for now allow selling 0-worth objects
+    # if not obj.worth:
+    #  self.caller.msg("You can't sell that.")
+    #  return
     if obj.is_typeclass("typeclasses.objects.Gold"):
       self.caller.msg("You can't sell gold.")
       return
