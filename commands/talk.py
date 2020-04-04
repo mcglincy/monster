@@ -20,7 +20,7 @@ class CmdSay(QueuedCommand):
         caller.msg("Say what?")
         return
 
-    speech = self.args
+    speech = self.args.strip()
 
     # Calling the at_before_say hook on the character
     speech = caller.at_before_say(speech)
@@ -30,7 +30,10 @@ class CmdSay(QueuedCommand):
         return
 
     # Call the at_after_say hook on the character
-    caller.at_say(speech, msg_self=True)
+    if caller.is_hiding:
+      caller.at_say(speech, msg_self=True, mapping={"object": "An unidentified voice"})
+    else:
+      caller.at_say(speech, msg_self=True)
 
 
 class CmdShout(QueuedCommand):
@@ -66,17 +69,16 @@ class CmdWhisper(QueuedCommand):
   def inner_func(self):
     caller = self.caller
 
-    # TODO: convert to monster syntax and nix the =
-    if not self.lhs or not self.rhs:
-      caller.msg("Usage: whisper <character> = <message>")
+    tokens = self.args.strip().split(" ")
+    if len(tokens) < 2:
+      caller.msg("Usage: whisper <character> <message>")
       return
 
-    receivers = [recv.strip() for recv in self.lhs.split(",")]
-
+    receivers = [tokens[0]]
     receivers = [caller.search(receiver) for receiver in set(receivers)]
     receivers = [recv for recv in receivers if recv]
 
-    speech = self.rhs
+    speech = " ".join(tokens[1:])
     # If the speech is empty, abort the command
     if not speech or not receivers:
       return
@@ -86,6 +88,8 @@ class CmdWhisper(QueuedCommand):
 
     # no need for self-message if we are whispering to ourselves (for some reason)
     msg_self = None if caller in receivers else True
-    caller.at_say(speech, msg_self=msg_self, receivers=receivers, whisper=True)
 
-
+    if caller.is_hiding:
+      caller.at_say(speech, msg_self=msg_self, receivers=receivers, whisper=True, mapping={"object": "An unidentified voice"})
+    else:
+      caller.at_say(speech, msg_self=msg_self, receivers=receivers, whisper=True)
