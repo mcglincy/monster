@@ -35,6 +35,7 @@ The running game server is up at http://www.monstermud.com.
   * Simple gold system
   * Wear/equipment slots
   * Drop-destroy
+  * Hidden/searchable
 * Combat
   * Attack command
   * Damage-dependent attack messages for attacker, target, and observer (e.g., "Tutt creams your poor little body!!")
@@ -58,7 +59,7 @@ The running game server is up at http://www.monstermud.com.
   * *buy* / *sell*
   * *equip* / *unequip*
   * *name* 
-  * *hide* / *reveal* / *search*
+  * *hide* / *reveal* / *search*, and "unidentified voice" for hidesay
   * *shout* (easy replacement for thundering voice)
   * *express* (replaces Evennia *pose*)
   * Make some built-in Evennia commands queueable/blocking (look, say, whisper, get, drop, etc)  
@@ -102,7 +103,6 @@ The running game server is up at http://www.monstermud.com.
   * Start game in tutorial room(s) (w/ room special/special effect)
   * Windows / window_descs?
 * Objects
-  * Hidden/searchable objects
   * Object damage
   * Cursed (no drop) objects
   * Enter amount of gold to drop
@@ -115,7 +115,6 @@ The running game server is up at http://www.monstermud.com.
 * Commands
   * Default attack / get / etc to picking the first thing for name dupes?
   * Remove any Evennia commands we don't want
-  * hidesay
   * *use* command
   * *block* command
   * *steal* / *pickpocket* commands

@@ -29,11 +29,24 @@ def unhidden_object(location, key):
   return None
 
 
-def num_unhidden_others(room, hider):
-  num = 0
-  for obj in room.contents:
+def unhidden_others(hider):
+  unhidden = []
+  for obj in hider.location.contents:
     if ((obj.is_typeclass("typeclasses.characters.Character")
-        and not obj.is_hiding and obj != hider)
+        and obj != hider
+        and not obj.is_hiding)
+      or obj.is_typeclass("typeclasses.mobs.Mob", exact=False)
+      or obj.is_typeclass("typeclasses.merchant.Merchant", exact=False)):
+      unhidden.append(obj)
+  return unhidden
+
+
+def num_unhidden_others(hider):
+  num = 0
+  for obj in hider.location.contents:
+    if ((obj.is_typeclass("typeclasses.characters.Character")
+        and obj != hider
+        and not obj.is_hiding)
       or obj.is_typeclass("typeclasses.mobs.Mob", exact=False)
       or obj.is_typeclass("typeclasses.merchant.Merchant", exact=False)):
       num = num + 1
@@ -43,6 +56,7 @@ def num_unhidden_others(room, hider):
 def find_unhidden(searcher, key):
   unhidden = [
     x for x in searcher.location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
+  searcher.msg(unhidden)
   for x in unhidden:
     if x.key.lower().startswith(key.lower()):
       return x
@@ -56,11 +70,10 @@ def hide_object(hider, obj):
     hider.msg("You can't hide that here.")
     return
 
-  if num_unhidden_others(hider.location, hider) > 0:
+  if unhidden_others(hider):
     hider.msg("You can't hide things when people are watching you.")
     return
 
-  # TODO: should objects use just a hidden boolean?
   obj.db.hiding = 1
   evennia_hide(obj)
   hider.msg(f"You have hidden {obj.key}.")
@@ -82,7 +95,7 @@ def hide(hider):
     return
 
   # check for other non-hidden occupants
-  if num_unhidden_others(room, hider) > 0:
+  if unhidden_others(hider):
     if hider.ndb.hiding > 0:
       hider.msg("You can't hide any better with people in the room.")
     else:
@@ -123,7 +136,7 @@ def reveal(hider):
 
 
 def reveal_object(obj):
-  hider.db.hiding = 0
+  obj.db.hiding = 0
   evennia_unhide(obj)
 
 
@@ -149,7 +162,7 @@ def reveal_objects(searcher):
   for obj in searcher.location.contents:
     if obj.is_typeclass("typeclasses.objects.Object", exact=False) and obj.is_hiding:
       searcher.msg(f"You found {obj.name}.")
-      reveal_obj(obj)
+      reveal_object(obj)
       # only find one object at a time
       return True
   return False
