@@ -26,7 +26,7 @@ The running game server is up at http://www.monstermud.com.
   * Exit types
     * passworded/alias-required, hidden, object required/forbidden/hidden-without
   * Exit effects
-    * set or reset class, change xp, change health, change mana
+    * set or reset class, change xp, change health, change mana, change gold
   * Trapdoors
   * Special room kinds: no combat, no hide, hard to hide, object destroy, monster generator, monster lair, heal
   * Special room magnitudes
@@ -94,7 +94,7 @@ The running game server is up at http://www.monstermud.com.
   * Exit types
     * guardian
   * Exit effects
-    * gold, alarmed, guardian, health less
+    * alarmed, guardian, health less
   * Hidden/searchable exits
   * Look at in-room subdescriptions
   * Start game in tutorial room(s), with room special/special effect)

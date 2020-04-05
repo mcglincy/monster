@@ -8,8 +8,8 @@ def apply_exit_effect(target, exit_effect_kind, exit_effect_value):
     # TODO: how is XP different from XP_MODIFIED?
     gain_xp(target, exit_effect_value)
   elif exit_effect_kind == ExitEffectKind.WEALTH:
-    # TODO
-    pass
+    if target.has_attr("gain_gold"):
+      target.gain_gold(exit_effect_value)
   elif exit_effect_kind == ExitEffectKind.BANK_WEALTH:
     # TODO
     pass
