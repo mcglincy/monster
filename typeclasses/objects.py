@@ -344,6 +344,16 @@ class Equipment(Object):
     self.db.trap = 0
     self.db.xp = 0
 
+  def at_before_drop(self, dropper, **kwargs):
+    # TODO: decide if we want to check drop access
+    # if not self.access(dropper, "drop", default=False):
+    #   dropper.msg(f"You cannot drop {self.get_display_name(dropper)}")
+    #   return False
+    if self.db.cursed:
+      dropper.msg(f"The {self.key} is cursed.")
+      return False
+    return True
+
   def at_drop(self, dropper, **kwargs):
     if (self.db.drop_destroy
       or dropper.location.is_special_kind(SpecialRoomKind.OBJECT_DESTROY)):

@@ -36,6 +36,7 @@ The running game server is up at http://www.monstermud.com.
   * Wear/equipment slots
   * Drop-destroy
   * Hidden/searchable
+  * Cursed (no drop)  
 * Combat
   * Attack command
   * Damage-dependent attack messages for attacker, target, and observer (e.g., "Tutt creams your poor little body!!")
@@ -100,7 +101,6 @@ The running game server is up at http://www.monstermud.com.
   * Windows / window_descs?
 * Objects
   * Object damage
-  * Cursed (no drop) objects
   * Enter amount of gold to drop
 * Combat
   * Drop objects when hit
@@ -124,7 +124,8 @@ The running game server is up at http://www.monstermud.com.
   * figure out if extra1/extra2 fields contain actually-useful data
 
 
-## What probably won't get implemented ever
+## What probably won't get implemented
+
 * Map/Rooms
   * Room owners / customizations
     * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing 

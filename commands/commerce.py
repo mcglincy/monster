@@ -2,6 +2,13 @@ from commands.command import QueuedCommand
 from evennia.objects.models import ObjectDB
 
 
+def find_merchant(location):
+  for obj in location.contents:
+    if obj.is_typeclass("typeclasses.merchant.Merchant", exact=False):
+      return obj
+  return None
+
+
 class CmdBuy(QueuedCommand):
   key = "buy"
   aliases = []
@@ -15,12 +22,10 @@ class CmdBuy(QueuedCommand):
 
   def inner_func(self):
     # is there a merchant in the room?
-    merchants = self.caller.location.search("merchant",
-      candidates=self.caller.location.contents, typeclass="typeclasses.merchant.Merchant", quiet=True)
-    if len(merchants) == 0 or merchants[0] is None:
+    merchant = find_merchant(self.caller.location)
+    if not merchant:
       self.caller.msg("There is no merchant in this room.")
       return
-    merchant = merchants[0]
 
     # does the merchant have that object for sale?
     objs = merchant.search(self.args.strip(), candidates=merchant.contents, quiet=True)
@@ -57,9 +62,8 @@ class CmdSell(QueuedCommand):
       return
 
     # is there a merchant in the room?
-    merchants = self.caller.location.search("merchant",
-      candidates=self.caller.location.contents, typeclass="typeclasses.merchant.Merchant", quiet=True)
-    if len(merchants) == 0 or merchants[0] is None:
+    merchant = find_merchant(self.caller.location)
+    if not merchant:
       self.caller.msg("There is no merchant in this room.")
       return
 
@@ -68,6 +72,9 @@ class CmdSell(QueuedCommand):
     # if not obj.worth:
     #  self.caller.msg("You can't sell that.")
     #  return
+    if obj.db.cursed:
+      self.caller.msg(f"The {obj.key} is cursed.")
+      return   
     if obj.is_typeclass("typeclasses.objects.Gold"):
       self.caller.msg("You can't sell gold.")
       return
