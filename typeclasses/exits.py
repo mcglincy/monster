@@ -83,7 +83,7 @@ class Exit(DefaultExit):
   def at_after_traverse(self, traversing_object, source_location, **kwargs):
     # note: this is taking place *after* we have moved to the new location.
     if self.db.exit_effect_kind:
-      apply_exit_effect(traversing_object, self.db.exit_effect_kind, self.db.exit_effect_value)
+      apply_exit_effect(traversing_object, source_location, self.db.exit_effect_kind, self.db.exit_effect_value)
 
   def at_failed_traverse(self, traversing_object, **kwargs):
     fail_msg = self.db.fail_msg if self.db.fail_msg else "You can't go that way."
