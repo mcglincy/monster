@@ -39,4 +39,7 @@ class CmdUnequip(QueuedCommand):
     obj = self.caller.search(self.args.strip(), candidates=self.caller.contents)
     if not obj:
       return
+    if obj.db.cursed:
+      self.caller.msg(f"The {obj.key} is cursed.")
+      return
     self.caller.unequip(obj)
