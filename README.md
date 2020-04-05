@@ -64,6 +64,7 @@ The running game server is up at http://www.monstermud.com.
   * *express* (replaces Evennia *pose*)
   * Make some built-in Evennia commands queueable/blocking (look, say, whisper, get, drop, etc)  
   * Edit self-description (via Evennia *setdesc*)
+  * Remove any Evennia commands we don't want  
 * Commerce
   * Simple merchant in-room object
   * *buy* and *sell* commands
@@ -87,12 +88,7 @@ The running game server is up at http://www.monstermud.com.
 
 ## What's not implemented yet
 
-* Character
-  * ...
 * Map/Rooms
-  * Room owners / customizations
-    * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing and extensive builder commands)
-  * Special room kinds: market, treasure drop
   * Move silent between rooms
   * Exit types
     * guardian
@@ -100,7 +96,7 @@ The running game server is up at http://www.monstermud.com.
     * gold, alarmed, guardian, health less
   * Hidden/searchable exits
   * Look at in-room subdescriptions
-  * Start game in tutorial room(s) (w/ room special/special effect)
+  * Start game in tutorial room(s), with room special/special effect)
   * Windows / window_descs?
 * Objects
   * Object damage
@@ -114,14 +110,13 @@ The running game server is up at http://www.monstermud.com.
   * Poison
 * Commands
   * Default attack / get / etc to picking the first thing for name dupes?
-  * Remove any Evennia commands we don't want
   * *use* command
   * *block* command
   * *steal* / *pickpocket* commands
   * Atmosphere
   * ctrl-c or some way to interrupt command queue
 * Spells
-  * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, announce, command, detect magic, find person, locate
+  * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, detect magic, find person, locate
 * Randoms (aka mobs)
   * pursuit chance / pursuit behavior
   * sayings
@@ -129,4 +124,10 @@ The running game server is up at http://www.monstermud.com.
   * figure out if extra1/extra2 fields contain actually-useful data
 
 
-  
+## What probably won't get implemented ever
+* Map/Rooms
+  * Room owners / customizations
+    * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing 
+  * Special room kinds: market (we have merchant objects instead), random group, random level, treasure drop (no rooms seem to use these SpcRoom values)
+* Spells
+  * Spell effects: announce (we have *shout* command instead of thundering voice), command (better implemented as a new effect in code?)
