@@ -30,7 +30,7 @@ class CmdAttack(QueuedCommand):
     # check the target after pre_freeze and immediately before resolving attack
     self.target = find_unhidden(self.caller, self.args.strip())
     if not self.target:
-      return False
+      return
     resolve_attack(self.caller, self.target)
 
 

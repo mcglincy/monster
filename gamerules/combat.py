@@ -3,15 +3,12 @@ import random
 from evennia.utils.search import search_object
 from gamerules.gold import give_starting_gold
 from gamerules.hiding import reveal
+from gamerules.spells import make_saving_throw
 from gamerules.talk import msg_global
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 
 def resolve_attack(attacker, target):
-  if target.is_dead:
-    # already dead
-    return
-
   weapon = attacker.equipped_weapon
   if not weapon and not attacker.has_claws:
     attacker.msg("You have no equipped weapon!")
@@ -22,6 +19,9 @@ def resolve_attack(attacker, target):
   # TODO: add more rigorous can-attack checks
   if not hasattr(target, "gain_health"):
     attacker.msg("You can't attack that.")
+    return
+  if target.is_dead:
+    # already dead
     return
 
   is_surprise = False
@@ -48,7 +48,16 @@ def resolve_attack(attacker, target):
   # apply armor to reduce damage
   damage = apply_armor(target, damage)
 
-  # target takes the damage
+  # check for poison
+  if random.randint(0, 100) < attacker.poison_chance:
+    attacker.msg(f"You've poisoned {target.name}!")
+    if not make_saving_throw(target, "poison"):
+      target.msg(f"You've been poisoned by {attacker.name}'s {attack_name}!")
+      attacker.location.msg_contents(
+        f"{attacker.name} has poisoned {target.name}!", exclude=[attacker, target])
+      target.ndb.poisoned = True
+
+  # target takes the damage, and maybe dies
   target.gain_health(-damage, damager=attacker, weapon_name=attack_name)
 
 

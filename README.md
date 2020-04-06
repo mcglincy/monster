@@ -52,6 +52,7 @@ The running game server is up at http://www.monstermud.com.
   * Surprise attack
   * Freeze
   * Weapon speed  
+  * Poison
 * Command set
   * *.* for last action
   * *who* that shows everyone's room location
@@ -63,7 +64,7 @@ The running game server is up at http://www.monstermud.com.
   * *hide* / *reveal* / *search*, and "unidentified voice" for hidesay
   * *shout* (easy replacement for thundering voice)
   * *express* (replaces Evennia *pose*)
-  * Make some built-in Evennia commands queueable/blocking (look, say, whisper, get, drop, etc)  
+  * Make some built-in Evennia commands queueable/blocking (look, say, whisper, get, drop, etc)
   * Edit self-description (via Evennia *setdesc*)
   * Remove any Evennia commands we don't want  
 * Commerce
@@ -76,7 +77,7 @@ The running game server is up at http://www.monstermud.com.
   * *learn* command (list spells only)
   * *cast* command
     * At Who? target prompt
-  * Spell effects: hurt, group hurt, heal, sleep (freeze), distance hurt
+  * Spell effects: hurt, group hurt, heal, sleep (freeze), distance hurt, cure/poison
   * Direction/Target prompt for distance spells
   * Spell deflect and armor
 * Randoms (aka mobs)
@@ -107,7 +108,6 @@ The running game server is up at http://www.monstermud.com.
   * Punch
   * Missiles and *throw* command
   * Bombs and *lob* command
-  * Poison
 * Commands
   * Default attack / get / etc to picking the first thing for name dupes?
   * *use* command
@@ -116,7 +116,7 @@ The running game server is up at http://www.monstermud.com.
   * Atmosphere
   * ctrl-c or some way to interrupt command queue
 * Spells
-  * Spell effects: cure/poison, push, strength/weak, speed/slow, invisible, see invisible, detect magic, find person, locate
+  * Spell effects: push, strength/weak, speed/slow, invisible, see invisible, detect magic, find person, locate
 * Randoms (aka mobs)
   * pursuit chance / pursuit behavior
   * sayings

@@ -6,15 +6,15 @@ from gamerules.hiding import reveal, unhidden_object, unhidden_objects
 from gamerules.spell_effect_kind import SpellEffectKind
 
 
-def make_saving_throw(target, spell):
+def make_saving_throw(target, save_name):
   # TODO: original monster save % is MyExperience DIV 1000, aka 1% per level...
   # but that code also checks if >80, which would never happen. WTF?
   # Maybe it was supposed to be 10% per level? or max 8%?
   chance_to_save = target.level
   if random.randint(0, 100) <= chance_to_save:
-    target.msg(f"You resisted the {spell.key} spell.")
+    target.msg(f"You resisted the {save_name}.")
     target.location.msg_contents(
-      f"{target.ket} resisted the {spell.key} spell.", exclude=[target])
+      f"{target.ket} resisted the {save_name}.", exclude=[target])
     return True
   return False
 
@@ -210,8 +210,20 @@ def apply_spell_effect(spell, effect, caster,
 
 
 def apply_cure_poison_effect(effect, caster, target):
-  cure_or_poison = effect.param_1
-  # TODO
+  is_poison = effect.param_1
+  if is_poison:
+    if not target.is_poisoned:
+      target.ndb.poisoned = False
+      target.msg("Your blood begins to boil!")
+      target.location.msg_contents(
+        f"{target.name} is poisoned!", exclude=[target])
+  else:
+    # cure
+    if target.is_poisoned:
+      target.ndb.poisoned = False
+      target.msg("Your blood runs clean.")
+      target.location.msg_contents(
+        f"{target.name} is no longer poisoned.", exclude=[target])
 
 
 def apply_strength_effect(effect, caster, target):
@@ -302,7 +314,7 @@ def apply_sleep_effect(spell, effect, caster, targets):
   freeze_duration = sleep_time / 100.0
 
   for target in targets:
-    if make_saving_throw(target, spell):
+    if make_saving_throw(target, spell.key):
       # We already msg in make_saving_throw()...
       # caster.msg(f"{target.key} is not affected by the spell.")
       # target.msg("You are not affected by the spell.")

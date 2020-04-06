@@ -4,6 +4,7 @@ from evennia import TICKER_HANDLER
 from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker, remove_health_ticker
 from gamerules.mob_kind import MobKind
 from gamerules.mobs import mob_death, resolve_mob_attack
+from gamerules.xp import level_from_xp
 from typeclasses.objects import Object
 
 # TODO
@@ -122,6 +123,10 @@ class Mob(Object):
       # we took damage and we're still alive - go aggro
       self.ndb.aggressive = True
       self.start_attacking()
+
+  @property
+  def level(self):
+    return level_from_xp(self.db.xp)
 
   @property
   def is_dead(self):
