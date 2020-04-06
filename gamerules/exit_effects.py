@@ -9,6 +9,13 @@ def apply_exit_effect(target, source_location, exit_effect_kind, exit_effect_val
     # TODO: how is XP different from XP_MODIFIED?
     gain_xp(target, exit_effect_value)
   elif exit_effect_kind == ExitEffectKind.WEALTH:
+    # TODO: this isn't quite right
+    # we need to move this check to before traverse occurs
+        #     IF (AllStats.Stats.Wealth < -Mag) THEN
+        # BEGIN
+        #   ExitFail(ExitSlot, AllStats);
+        #   Writeln('Not enough money!');
+        #   Going := FALSE;
     if target.has_attr("gain_gold"):
       target.gain_gold(exit_effect_value)
   elif exit_effect_kind == ExitEffectKind.BANK_WEALTH:
@@ -29,7 +36,7 @@ def apply_exit_effect(target, source_location, exit_effect_kind, exit_effect_val
   elif exit_effect_kind == ExitEffectKind.ALARMED:
     sound_alarm(target, source_location)
   elif exit_effect_kind == ExitEffectKind.HEALTH_LESS:
-    # TODO
+    # TODO: also needs to be checked before travere
     pass
   elif exit_effect_kind == ExitEffectKind.GUARDIAN:
     # TODO
