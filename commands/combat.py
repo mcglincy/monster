@@ -1,6 +1,5 @@
 from commands.command import QueuedCommand
-from gamerules.combat import resolve_attack
-from gamerules.health import tick_health
+from gamerules.combat import resolve_punch
 from gamerules.hiding import find_unhidden
 from gamerules.special_room_kind import SpecialRoomKind
 
@@ -34,15 +33,31 @@ class CmdAttack(QueuedCommand):
     resolve_attack(self.caller, self.target)
 
 
-class CmdBleed(QueuedCommand):
-  key = "bleed"
-  aliases = ["ble", "blee"]
+class CmdPunch(QueuedCommand):
+  """Punch the enemy."""
+  key = "punch"
+  aliases = ["pun", "punc"]
   locks = "cmd:all()"
   help_category = "Monster"
 
+  def check_preconditions(self):
+    if not self.args:
+      self.caller.msg("Usage: punch <target>")
+      return False
+    if self.caller.location.is_special_kind(SpecialRoomKind.NO_COMBAT):
+      self.caller.msg("You cannot fight here.")
+      return False
+
+  def post_freeze(self):
+    # for whatever reason, OG Monster only froze after the punch
+    return self.caller.attack_speed / 100.0
+
   def inner_func(self):
-    self.caller.gain_health(-50)
-    self.caller.gain_mana(-10)
+    # check the target after pre_freeze and immediately before resolving attack
+    self.target = find_unhidden(self.caller, self.args.strip())
+    if not self.target:
+      return
+    resolve_punch(self.caller, self.target)
 
 
 class CmdRest(QueuedCommand):
@@ -75,6 +90,3 @@ class CmdRest(QueuedCommand):
     # Freeze(AllStats.Stats.MoveSpeed * HereDesc.Mag[rm$b_heal] / 100, AllStats);
     room_magnitude = self.caller.location.magnitude(SpecialRoomKind.HEAL)
     return self.caller.move_speed * room_magnitude / 100.0
-
-
-

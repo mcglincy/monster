@@ -41,7 +41,6 @@ The running game server is up at http://www.monstermud.com.
   * Attack command
   * Damage-dependent attack messages for attacker, target, and observer (e.g., "Tutt creams your poor little body!!")
   * Rest w/ exit
-  * Bleed (useful for debugging health)
   * Weapon base damage / random damage
   * Character health and max health
   * Death at 0 health => go to the Void
@@ -53,6 +52,7 @@ The running game server is up at http://www.monstermud.com.
   * Freeze
   * Weapon speed  
   * Poison
+  * Punch
 * Command set
   * *.* for last action
   * *who* that shows everyone's room location
@@ -105,7 +105,6 @@ The running game server is up at http://www.monstermud.com.
   * Enter amount of gold to drop
 * Combat
   * Drop objects when hit
-  * Punch
   * Missiles and *throw* command
   * Bombs and *lob* command
 * Commands

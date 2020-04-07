@@ -1,11 +1,15 @@
 import random
 
 from evennia.utils.search import search_object
+from gamerules.combat_msgs import *
 from gamerules.gold import give_starting_gold
 from gamerules.hiding import reveal
 from gamerules.spells import make_saving_throw
 from gamerules.talk import msg_global
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
+
+
+PUNCH_KINDS = 15  # 0-15
 
 
 def resolve_attack(attacker, target):
@@ -93,71 +97,57 @@ def attack_damage(attacker, weapon, is_surprise=False):
   return dmg
 
 
-def attack_attacker_msg(target_name, weapon_name, damage):
-  add_s = "" if weapon_name == "claws" else "s"
-  if damage > 500:
-    return f"You vaporize {target_name}'s putrid body. [{damage}]"
-  elif damage > 400:
-    return f"You attack {target_name} with blinding speed and power!!! [{damage}]"
-  elif damage > 300:
-    return f"You deliver an almost deadly blow to {target_name} with your {weapon_name}!! [{damage}]"
-  elif damage > 200:
-    return f"Your {weapon_name} cream{add_s} {target_name}'s poor little body!! [{damage}]"
-  elif damage > 150:
-    return f"Your {weapon_name} hit{add_s} {target_name} very hard! [{damage}]"
-  elif damage > 100:
-    return f"Your {weapon_name} hit{add_s} {target_name} hard! [{damage}]"
-  elif damage > 50:
-    return f"You hit {target_name}, good. [{damage}]"
-  elif damage > 0:
-    return f"{target_name} is grazed by your {weapon_name}."
+def resolve_punch(attacker, target):
+  if not hasattr(target, "gain_health"):
+    attacker.msg("You can't punch that.")
+    return
+  if target.is_dead:
+    return
+
+  attack_name = "fists of fury"
+
+  if target == attacker:
+    # surprisingly enough, you can punch yourself
+    if attacker.is_hiding:
+      reveal(attacker)
+    attacker.msg("You catch yourself off guard with an elbow to the ribs, arrg!")
+    attacker.location.msg(f"{attacker.name} is heading for the void.", exclude=[attacker])
+    attacker.gain_health(-100, damager=attacker, weapon_name=attack_name)
+    return
+
+  is_surprise = False
+  if attacker.is_hiding:
+    attacker.msg(f"You pounce unexpectedly on {target.name}!")
+    target.msg(f"{attacker.name} pounces on you from the shadows!")
+    attacker.location.msg_contents(
+      f"{attacker.name} jumps out of the shadows and attacks {target.name}.",
+      exclude=[attacker, target])
+    reveal(attacker)
+    is_surprise = True
+
+  punch_num = random.randint(0, PUNCH_KINDS)
+  if attacker.db.health < 75:
+    punch_num = 16
+
+  attacker.msg(punch_attacker_msg(target.name, punch_num))
+  target.msg(punch_target_msg(attacker.name, punch_num))
+  attacker.location.msg_contents(
+    punch_bystander_msg(attacker.name, target.name, punch_num),
+    exclude=[attacker, target])
+
+  damage = punch_damage(punch_num)
+  target.gain_health(-damage, damager=attacker, weapon_name=attack_name)
+
+
+def punch_damage(num):
+  if num < 7:
+    return 25
+  elif num < 12:
+    return 50
+  elif num < 15:
+    return 75
   else:
-    return f"You miss {target_name} with your {weapon_name}."
-
-
-def attack_target_msg(attacker_name, weapon_name, damage):
-  add_s = "" if weapon_name == "claws" else "s"  
-  if damage > 500:
-    return f"{attacker_name} vaporizes you! [{damage}]"
-  elif damage > 400:
-    return f"{attacker_name} attacks you with blinding speed and power, ARRRG!! [{damage}]"
-  elif damage > 300:
-    return f"{attacker_name}'s {weapon_name} nearly split{add_s} you in two!!! [{damage}]"
-  elif damage > 200:
-    return f"{attacker_name}'s {weapon_name} cream{add_s} your poor little body!! [{damage}]"
-  elif damage > 150:
-    return f"{attacker_name}'s {weapon_name} hit{add_s} you very hard! [{damage}]"
-  elif damage > 100:
-    return f"{attacker_name}'s {weapon_name} hit{add_s} you hard! [{damage}]"
-  elif damage > 50:
-    return f"{attacker_name}'s {weapon_name} hit{add_s} you, good. [{damage}]"
-  elif damage > 0:
-    return f"You are grazed by {attacker_name}'s {weapon_name}. [{damage}]"
-  else:
-    return f"{attacker_name} missed you with a {weapon_name}. [{damage}]"
-
-
-def attack_bystander_msg(attacker_name, target_name, weapon_name, damage):
-  add_s = "" if weapon_name == "claws" else "s"  
-  if damage > 500:
-    return f"{attacker_name} vaporizes {target_name}'s putrid body."
-  elif damage > 400:
-    return f"{attacker_name} attacks {target_name} with blinding speed and power!!!"
-  elif damage > 300:
-    return f"{attacker_name}'s {weapon_name} nearly split{add_s} {target_name} in two!!!"
-  elif damage > 200:
-    return f"{attacker_name}'s {weapon_name} cream{add_s} {target_name}'s poor little body!!"
-  elif damage > 150:
-    return f"{attacker_name}'s {weapon_name} hit{add_s} {target_name} very hard!"
-  elif damage > 100:
-    return f"{attacker_name}'s {weapon_name} hit{add_s} {target_name} with incredible force!"
-  elif damage > 50:
-    return f"{attacker_name} hits {target_name}, good."
-  elif damage > 0:
-    return f"{target_name} is grazed by {attacker_name}'s {weapon_name}."
-  else:
-    return f"{attacker_name} misses {target_name} with their {weapon_name}."
-
+    return 100
 
 def character_death(victim, killer=None, weapon_name=None):
   # send an appropriate global death message
@@ -210,5 +200,3 @@ def reset_victim_state(victim):
   victim.ndb.hiding = 0
   victim.ndb.poisoned = False
   victim.ndb.resting = False
-
-

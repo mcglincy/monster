@@ -17,7 +17,7 @@ own cmdsets by inheriting from them or directly from `evennia.CmdSet`.
 from evennia import default_cmds
 from evennia.commands.default.comms import CmdGrapevine2Chan, CmdIRCStatus
 from commands.character import CmdName, CmdSheet
-from commands.combat import CmdAttack, CmdBleed, CmdRest
+from commands.combat import CmdAttack, CmdPunch, CmdRest
 from commands.commerce import CmdBuy, CmdSell
 from commands.debug import CmdClear, CmdDebug
 from commands.equipment import CmdEquip, CmdUnequip
@@ -46,7 +46,6 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         # any commands you add below will overload the default ones.
         #
         self.add(CmdAttack())
-        self.add(CmdBleed())
         self.add(CmdBuy())
         self.add(CmdBrief())
         self.add(CmdCast())
@@ -71,6 +70,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdName())
         self.remove(default_cmds.CmdNick())
         self.remove(default_cmds.CmdPose())
+        self.add(CmdPunch())
         self.add(CmdRest())
         self.add(CmdReveal())
         self.remove(default_cmds.CmdSay())
