@@ -94,7 +94,9 @@ def attack_damage(attacker, weapon, is_surprise=False):
       )
   if is_surprise:
     dmg = dmg + int(dmg * attacker.shadow_damage_percent / 100)
-  return dmg
+  # make sure we don't allow negative damage,
+  # as some classes have negative shadow_damage_percent
+  return max(dmg, 0)
 
 
 def resolve_punch(attacker, target):
