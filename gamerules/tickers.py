@@ -77,6 +77,8 @@ def tick_mob_generator(subject):
 
 
 def tick_trapdoor(subject):
+  if subject is None or subject.location is None:
+    return
   if not subject.location.db.trap_chance or not subject.location.db.trap_direction:
     # no trapdoor here
     return
