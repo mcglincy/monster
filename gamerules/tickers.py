@@ -19,6 +19,10 @@ def add_health_ticker(subject):
   subject.add_ticker(TickerKind.HEALTH, HEALTH_TICK_SECONDS, tick_health)
 
 
+def remove_health_ticker(subject):
+  subject.remove_ticker(TickerKind.HEALTH)
+
+
 def add_mana_ticker(subject):
   subject.add_ticker(TickerKind.MANA, MANA_TICK_SECONDS, tick_mana)
 
