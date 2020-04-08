@@ -39,6 +39,8 @@ def add_trapdoor_ticker(subject):
 
 
 def tick_health(subject):
+  if subject is None or subject.db is None:
+    return
 #  subject.location.msg_contents(f"tick {subject.key}")
   change = int((subject.max_health - subject.db.health) * (subject.heal_speed / 1000))
   change = max(change, 5)  
@@ -51,6 +53,8 @@ def tick_health(subject):
 
 
 def tick_mana(subject):
+  if subject is None or subject.db is None:
+    return
   if subject.db.mana < subject.max_mana:
     # AllStats.Stats.Mana := AllStats.Stats.Mana + (AllStats.MyHold.MaxMana) DIV 2;
     # TODO: so in two ticks the subject will be fully mana-healed? is that correct?
@@ -60,8 +64,7 @@ def tick_mana(subject):
 
 
 def tick_mob_generator(subject):
-  if subject is None or subject.location is None:
-    # guard against stupid state
+  if subject is None or subject.db is None or subject.location is None:
     return
   if subject.location.is_special_kind(SpecialRoomKind.NO_COMBAT):
     # never spawn in a no-combat room
@@ -77,7 +80,7 @@ def tick_mob_generator(subject):
 
 
 def tick_trapdoor(subject):
-  if subject is None or subject.location is None:
+  if subject is None or subject.db is None or subject.location is None:
     return
   if not subject.location.db.trap_chance or not subject.location.db.trap_direction:
     # no trapdoor here
