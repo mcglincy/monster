@@ -1,5 +1,5 @@
 from commands.command import QueuedCommand
-from gamerules.combat import resolve_punch
+from gamerules.combat import resolve_attack, resolve_punch
 from gamerules.hiding import find_unhidden
 from gamerules.special_room_kind import SpecialRoomKind
 
