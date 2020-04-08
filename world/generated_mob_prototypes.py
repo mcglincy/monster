@@ -97,7 +97,6 @@ WHITE_DRAGON = {
   'move_speed': 25,
   'attack_speed': 120,
   'heal_speed': 400,
-  'attack_name': 'Dagger of Venoms',
   'weapon_use': 140,
   'level_weapon_use': 10,
   'pursuit_chance': 35,
@@ -494,8 +493,8 @@ VAMPIRE = {
   'pursuit_chance': 0,
 }
 
-SWORD_OF_KINGS = {
-  'key': "Sword of Kings",
+DANCING_SWORD = {
+  'key': "Dancing Sword",
   'prototype_parent': 'mob',
   'record_id': 17,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_17'],
@@ -519,6 +518,7 @@ SWORD_OF_KINGS = {
   'move_speed': 0,
   'attack_speed': 150,
   'heal_speed': 0,
+  'attack_name': 'riposte',
   'weapon_use': 0,
   'level_weapon_use': 0,
   'pursuit_chance': 0,
@@ -549,7 +549,7 @@ GREEN_SLIME = {
   'move_speed': 0,
   'attack_speed': 140,
   'heal_speed': 0,
-  'attack_name': 'longsword',
+  'attack_name': 'pseudopod',
   'weapon_use': 90,
   'level_weapon_use': 0,
   'pursuit_chance': 0,
