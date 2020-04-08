@@ -50,8 +50,6 @@ class Character(DefaultCharacter):
     """Called at initial creation."""
     super().at_object_creation()
     self.set_field_defaults()
-    # TODO: this seems to screw up when first creating chars, and leave gold on the floor of limbo
-    give_starting_gold(self)
     self.at_init()
 
   def set_field_defaults(self):
