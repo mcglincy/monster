@@ -33,6 +33,7 @@ from evennia.settings_default import *
 
 SERVERNAME = "Monster"
 GAME_SLOGAN = "It's not a game, it's a lifestyle"
+DEFAULT_HOME = "#4"  # aka Void
 START_LOCATION = "#4"  # aka Void
 
 INSTALLED_APPS = INSTALLED_APPS + ["userdefined", ]
