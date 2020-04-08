@@ -64,7 +64,7 @@ class Character(DefaultCharacter):
     self.ndb.poisoned = False
     self.ndb.resting = False
     if self.db.character_class_key is None:
-      self.db.character_class_key = "ghost"
+      self.db.character_class_key = "Templar"
       self.ndb.character_class = None
     if self.db.xp is None:
       self.db.xp = 0
