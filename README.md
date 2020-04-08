@@ -99,7 +99,7 @@ The running game server is up at http://www.monstermud.com.
   * Hidden/searchable exits
   * Look at in-room subdescriptions
   * Start game in tutorial room(s), with room special/special effect)
-  * Windows / window_descs?
+  * Windows / window_descs (e.g., Improbable Structure <=> Forbidden Library)
 * Objects
   * Object damage
   * Enter amount of gold to drop
@@ -117,9 +117,9 @@ The running game server is up at http://www.monstermud.com.
 * Spells
   * Spell effects: push, strength/weak, speed/slow, invisible, see invisible, detect magic, find person, locate
 * Randoms (aka mobs)
-  * pursuit chance / pursuit behavior
   * sayings
-  * cast spells
+  * pursuit chance / pursuit behavior
+  * cast spells and combat behaviors
   * figure out if extra1/extra2 fields contain actually-useful data
 
 
