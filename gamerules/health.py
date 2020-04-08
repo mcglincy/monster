@@ -1,8 +1,3 @@
-from evennia import TICKER_HANDLER
-
-# A "tick" in old monster was 0.1 seconds.
-# Tick.TkHealth := GetTicks + 300;
-HEALTH_TICK_SECONDS = 30
 MIN_HEALTH = 0
 
 
@@ -40,29 +35,3 @@ def health_msg(subject, health):
     return f"{subject} {to_be} near death."
   else:
     return f"{subject} {to_be} dead."
-
-
-def add_health_ticker(subject):
-  id_string = f"tick_health_{subject.key}"
-  store_key = TICKER_HANDLER.add(HEALTH_TICK_SECONDS, tick_health, id_string, False, subject)
-  subject.db.health_ticker_key = store_key
-
-
-def remove_health_ticker(subject):
-  try:
-    TICKER_HANDLER.remove(store_key=subject.db.health_ticker_key)
-  except KeyError:
-    pass
-  subject.db.health_ticker_key = None
-
-
-def tick_health(subject):
-#  subject.location.msg_contents(f"tick {subject.key}")
-  change = int((subject.max_health - subject.db.health) * (subject.heal_speed / 1000))
-  change = max(change, 5)  
-  if subject.is_poisoned:
-    subject.gain_health(-change)
-  elif subject.db.health < subject.max_health:
-    # TODO: debugging msg
-    subject.msg(f"You heal {change}.")
-    subject.gain_health(change)

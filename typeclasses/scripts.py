@@ -93,31 +93,6 @@ class Script(DefaultScript):
     pass
 
 
-class Trapdoor(Script):
-  def at_script_creation(self):
-    self.key = "trapdoor"
-    self.interval = 1  # every second
-    self.persistent = True  # survive server reset/shutdown
-
-  def at_repeat(self):
-    if not self.obj.db.trap_chance or not self.obj.db.trap_direction:
-      return
-
-    # find the exit
-    exits = self.obj.search(self.obj.db.trap_direction, typeclass="typeclasses.exits.Exit", quiet=True)
-    if not exits:
-      return
-    exit = exits[0]
-
-    for content in self.obj.contents:
-      # only characters go through trap doors
-      if content.is_typeclass("typeclasses.characters.Character"):
-        rand = random.randint(0, 100)
-        if rand < self.obj.db.trap_chance:
-          # away you go!
-          exit.at_traverse(content, exit.destination)
-
-
 # To unfreeze a target:
 # create_script('typeclasses.scripts.DelayedUnfreeze', obj=target, interval=freeze_duration)
 class DelayedUnfreeze(Script):

@@ -1,13 +1,11 @@
 import random
-from evennia import create_object, TICKER_HANDLER
+from evennia import create_object
 from evennia.prototypes import prototypes as protlib, spawner
 from gamerules.combat import apply_armor, attack_bystander_msg, attack_target_msg
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 
-# AllStats.Tick.TkRandMove := AllStats.Tick.TkRandMove + 100;
-MOB_GENERATOR_TICK_SECONDS = 10
 
 
 def resolve_mob_attack(mob, target, attack_name="claws"):
@@ -67,44 +65,6 @@ def mob_death(mob, killer=None):
     f"{mob.key} disappears in a cloud of greasy black smoke.", exclude=[mob])
   mob.location = None
   mob.delete()
-
-
-def add_mob_generator_ticker(subject):
-  id_string = f"tick_mob_generator_{subject.key}"
-  store_key = TICKER_HANDLER.add(MOB_GENERATOR_TICK_SECONDS, tick_mob_generator, id_string, False, subject)
-  subject.db.mob_generator_ticker_key = store_key
-
-
-def remove_mob_generator_ticker(subject):
-  try:
-    TICKER_HANDLER.remove(store_key=subject.db.mob_generator_ticker_key)
-  except KeyError:
-    pass
-  subject.db.mob_generator_ticker_key = None
-
-
-def tick_mob_generator(subject):
-  if subject is None or subject.location is None:
-    # guard against stupid state
-    return
-
-  if subject.location.is_special_kind(SpecialRoomKind.NO_COMBAT):
-    # never spawn in a no-combat room
-    return
-
-  if subject.location.is_special_kind(SpecialRoomKind.MONSTER_GENERATOR):
-    spawn_chance = subject.location.magnitude(SpecialRoomKind.MONSTER_GENERATOR)
-  else:
-    # always a 1% chance
-    spawn_chance = 1
-
-  # TODO: debugging/testing
-  # spawn_chance = 50
-  spawn_chance = 0
-
-  if random.randint(0, 100) < spawn_chance:
-    # yay, let's make a monster
-    generate_mob(subject.location, subject.level)
 
 
 def generate_mob(location, level):

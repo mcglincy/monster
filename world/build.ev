@@ -33,8 +33,6 @@ will keep the above description however, because we like it so much.]
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Void;room_2
 #
 @desc
@@ -51,8 +49,6 @@ replacement body is manufactured.
 @set here/trap_chance = 35
 #
 @set here/trap_direction = north
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Red street;room_3
 #
@@ -120,8 +116,6 @@ sorts of loathesome creatures make their home here.
 @set here/trap_chance = 35
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel grey hills;room_9
 #
@@ -641,8 +635,6 @@ element.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Ancient City Square;room_58
 #
 @desc
@@ -889,8 +881,6 @@ where you will be afterwards...the Realm!
 #
 @set here/trap_direction = north
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Temple of Apollo;room_80
 #
 @desc
@@ -1040,8 +1030,6 @@ you into an artificial twilight..
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Cedar Trees;room_95
 #
 @set here/record_id = 95
@@ -1058,8 +1046,6 @@ you into an artificial twilight..
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Wild Woods;room_97
 #
 @desc
@@ -1071,8 +1057,6 @@ you into an artificial twilight..
 @set here/trap_chance = 35
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Shaded Gulley;room_98
 #
@@ -4726,8 +4710,6 @@ subjecting it to any undue strain.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Road of Gods;room_383
 #
 @desc
@@ -4808,8 +4790,6 @@ upward.
 @set here/trap_chance = 25
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel White Doorstep;room_389
 #
@@ -4902,8 +4882,6 @@ variety keeps the travel interesting as you hop from roof to roof.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Upper Croc House;room_395
 #
 @desc
@@ -4936,8 +4914,6 @@ be moving in the water. Hopefully they are just harmless fish of some
 @set here/trap_chance = 45
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Reptilean Concourse;room_397
 #
@@ -4979,8 +4955,6 @@ The ledge is buffetted by high winds, and is dangerous.
 @set here/trap_chance = 32
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Rocky Shore;room_400
 #
@@ -5265,8 +5239,6 @@ It is not recommended that you wander through here at night...
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Old Wall;room_426
 #
 @desc
@@ -5401,8 +5373,6 @@ dancing to the music of a carnival.
 #
 @set here/trap_direction = north
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Ship Island;room_436
 #
 @desc
@@ -5433,8 +5403,6 @@ clue as to where you are.
 @set here/trap_chance = 5
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Three Legg'd Dog;room_438
 #
@@ -5839,8 +5807,6 @@ next time you will heed the warning.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Purgatory;room_470
 #
 @desc
@@ -6069,8 +6035,6 @@ departed.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel the maze;room_485
 #
 @desc
@@ -6087,8 +6051,6 @@ next time you will heed the warning.
 @set here/trap_chance = 30
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel the maze;room_486
 #
@@ -6120,8 +6082,6 @@ next time you will heed the warning.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel the maze;room_488
 #
 @desc
@@ -6138,8 +6098,6 @@ next time you will heed the warning.
 @set here/trap_chance = 5
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel the maze;room_489
 #
@@ -6160,8 +6118,6 @@ ON
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel the maze;room_490
 #
 @desc
@@ -6178,8 +6134,6 @@ next time you will heed the warning.
 @set here/trap_chance = 30
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel the maze;room_491
 #
@@ -6198,8 +6152,6 @@ next time you will heed the warning.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel the maze;room_492
 #
 @desc
@@ -6216,8 +6168,6 @@ next time you will heed the warning.
 @set here/trap_chance = 4
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel the maze;room_493
 #
@@ -6236,8 +6186,6 @@ next time you will heed the warning.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel the maze;room_494
 #
 @desc
@@ -6254,8 +6202,6 @@ next time you will heed the warning.
 @set here/trap_chance = 1
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel the maze;room_495
 #
@@ -6274,8 +6220,6 @@ next time you will heed the warning.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel the maze;room_496
 #
 @desc
@@ -6292,8 +6236,6 @@ next time you will heed the warning.
 @set here/trap_chance = 1
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel The treasure room;room_497
 #
@@ -6350,8 +6292,6 @@ the lake, induced by the Wyrmraggen River.
 @set here/trap_chance = 35
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Watery Cave;room_502
 #
@@ -6761,8 +6701,6 @@ The breeze is stronger to the west.
 #
 @set here/trap_direction = up
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Hall of Kunta;room_537
 #
 @set here/record_id = 537
@@ -6910,8 +6848,6 @@ only the faint hint of a wind.
 #
 @set here/trap_direction = up
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Sighing Wastes;room_552
 #
 @desc
@@ -6933,8 +6869,6 @@ only the faint hint of a wind.
 @set here/trap_chance = 15
 #
 @set here/trap_direction = up
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Sighing Wastes;room_553
 #
@@ -7030,8 +6964,6 @@ terminating at a dark point about half way up.
 @set here/trap_chance = 100
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Path of Shadows;room_559
 #
@@ -7603,8 +7535,6 @@ in these forsaken chambers, aptly called the Dungeons of Solace.
 #
 @set here/trap_direction = up
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Tyviar's Hall;room_626
 #
 @desc
@@ -7622,8 +7552,6 @@ Tyviar the Ogre is here.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Lotrar's Trap;room_627
 #
 @set here/record_id = 627
@@ -7635,8 +7563,6 @@ Tyviar the Ogre is here.
 @set here/trap_chance = 45
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Dungeons of Solace;room_628
 #
@@ -7650,8 +7576,6 @@ Tyviar the Ogre is here.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Higett's Hall;room_629
 #
 @set here/record_id = 629
@@ -7663,8 +7587,6 @@ Tyviar the Ogre is here.
 @set here/trap_chance = 45
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Chamber of Drassoff;room_630
 #
@@ -7682,8 +7604,6 @@ Drassoff the Ogre-mage is here.
 @set here/trap_chance = 65
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Lost Room;room_631
 #
@@ -7710,8 +7630,6 @@ Bruniak the Gnome king is here.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel lair of Nystrek;room_633
 #
 @desc
@@ -7724,8 +7642,6 @@ Nystrek the bugbear is here.
 @set here/trap_chance = 50
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Hall of Frobar;room_634
 #
@@ -7756,8 +7672,6 @@ Jorlock the Giant is here.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Chamber of Ippulet;room_637
 #
 @desc
@@ -7775,8 +7689,6 @@ Ippulet the Beastmaster is here.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Dungeons of Solace;room_638
 #
 @set here/record_id = 638
@@ -7789,8 +7701,6 @@ Ippulet the Beastmaster is here.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Procriar's Hall;room_639
 #
 @set here/record_id = 639
@@ -7802,8 +7712,6 @@ Ippulet the Beastmaster is here.
 @set here/trap_chance = 65
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Orguzar's Lair;room_640
 #
@@ -7822,8 +7730,6 @@ Orguzar the Fire Giant is here.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Dead End;room_641
 #
 @set here/record_id = 641
@@ -7831,8 +7737,6 @@ Orguzar the Fire Giant is here.
 @set here/trap_chance = 19
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Well Bottom;room_642
 #
@@ -8514,8 +8418,6 @@ but the door has closed behind you!
 #
 @set here/trap_direction = east
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Gauntlet;room_684
 #
 @desc
@@ -8550,8 +8452,6 @@ will freeze to death if you do not escape quickly.
 @set here/trap_chance = 100
 #
 @set here/trap_direction = north
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Guardian's Chamber;room_687
 #
@@ -8832,8 +8732,6 @@ forest.
 #
 @set here/trap_direction = down
 #
-@script here = typeclasses.scripts.Trapdoor
-#
 @dig/tel Corazny's Plaza;room_713
 #
 @desc
@@ -8871,8 +8769,6 @@ This area is a confusing jumble of dark, smoky, and bare chambers.
 @set here/trap_chance = 35
 #
 @set here/trap_direction = down
-#
-@script here = typeclasses.scripts.Trapdoor
 #
 @dig/tel Tower of the Prophet;room_717
 #

@@ -1,7 +1,8 @@
 from enum import IntEnum
 import random
 from evennia import TICKER_HANDLER
-from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker, remove_health_ticker
+from gamerules.health import MIN_HEALTH, health_msg
+from gamerules.tickers import add_health_ticker
 from gamerules.mob_kind import MobKind
 from gamerules.mobs import mob_death, resolve_mob_attack
 from gamerules.xp import level_from_xp
@@ -65,10 +66,8 @@ class Mob(Object):
     # since we will use the same idstring
     # throughout we only need to save the
     # previous interval we used.
-    self.db.last_ticker_interval = None    
+    self.db.last_ticker_interval = None
     self.db.last_hook_key = None
-    self.db.health_ticker_key = None
-    self.db.mana_ticker_key = None
 
   def basetype_posthook_setup(self):
     # overriding this so we can do some post-init
@@ -86,12 +85,26 @@ class Mob(Object):
   def at_init(self):
     self.ndb.hiding = 0
     self.ndb.poisoned = False
+    self.ndb.ticker_keys = {}    
     add_health_ticker(self)
     #add_mana_ticker(self)
     self.ndb.is_patrolling = self.db.patrolling
     self.ndb.is_attacking = False
     self.ndb.is_hunting = False    
     self.start_patrolling()
+
+  # TODO: DRY add_ticker / remove_ticker with Character. Mixin?
+  def add_ticker(self, ticker_kind, interval, callback):
+    id_string = f"tick_{ticker_kind.name.lower()}_{self.key}"
+    store_key = TICKER_HANDLER.add(interval, callback, id_string, False, self)
+    self.ndb.ticker_keys[ticker_kind] = store_key
+
+  def remove_ticker(self, ticker_kind):
+    try:
+      TICKER_HANDLER.remove(store_key=self.ndb.ticker_keys[ticker_kind])
+    except KeyError:
+      pass
+    del self.ndb.ticker_keys[ticker_kind]
 
   def at_object_delete(self):
     # kill tickers

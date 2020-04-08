@@ -18,10 +18,10 @@ from gamerules.alignment import Alignment
 from gamerules.combat import character_death
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.gold import give_starting_gold
-from gamerules.health import MIN_HEALTH, health_msg, add_health_ticker
-from gamerules.mana import MIN_MANA, add_mana_ticker
-from gamerules.mobs import add_mob_generator_ticker
+from gamerules.health import MIN_HEALTH, health_msg
+from gamerules.mana import MIN_MANA
 from gamerules.talk import msg_global
+from gamerules.tickers import add_health_ticker, add_mana_ticker, add_mob_generator_ticker, add_trapdoor_ticker
 from gamerules.xp import MIN_XP, level_from_xp
 from userdefined.models import CharacterClass
 
@@ -50,6 +50,7 @@ class Character(DefaultCharacter):
     """Called at initial creation."""
     super().at_object_creation()
     self.set_field_defaults()
+    # TODO: this seems to screw up when first creating chars, and leave gold on the floor of limbo
     give_starting_gold(self)
     self.at_init()
 
@@ -82,9 +83,6 @@ class Character(DefaultCharacter):
     if self.db.equipment is None:
       # dict of {EquipmentSlot:object}
       self.db.equipment = {}
-    self.db.health_ticker_key = None
-    self.db.mana_ticker_key = None
-    self.db.mob_generator_ticker_key = None
   
   def at_init(self):
     self.ndb.active_command = None
@@ -93,9 +91,23 @@ class Character(DefaultCharacter):
     self.ndb.hiding = 0
     self.ndb.poisoned = False
     self.ndb.resting = False
+    self.ndb.ticker_keys = {}
     add_health_ticker(self)
     add_mana_ticker(self)
     add_mob_generator_ticker(self)
+    add_trapdoor_ticker(self)
+
+  def add_ticker(self, ticker_kind, interval, callback):
+    id_string = f"tick_{ticker_kind.name.lower()}_{self.key}"
+    store_key = TICKER_HANDLER.add(interval, callback, id_string, False, self)
+    self.ndb.ticker_keys[ticker_kind] = store_key
+
+  def remove_ticker(self, ticker_kind):
+    try:
+      TICKER_HANDLER.remove(store_key=self.ndb.ticker_keys[ticker_kind])
+    except KeyError:
+      pass
+    del self.ndb.ticker_keys[ticker_kind]
 
   def at_post_puppet(self, **kwargs):
     super().at_post_puppet(**kwargs)

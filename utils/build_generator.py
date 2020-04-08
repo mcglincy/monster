@@ -39,8 +39,6 @@ def make_room(roomdesc, descs):
     print('#')
     print(f'@set here/trap_direction = {roomdesc["trap_direction"]}')
     print('#')
-    print('@script here = typeclasses.scripts.Trapdoor')
-    print('#')
 
 
 def maybe_set_desc(desc_id, exit_name, attr_name, descs, lines):
