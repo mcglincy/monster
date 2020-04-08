@@ -2,7 +2,7 @@ from enum import IntEnum
 import random
 from evennia import TICKER_HANDLER
 from gamerules.health import MIN_HEALTH, health_msg
-from gamerules.tickers import add_health_ticker, remove_health_ticker
+from gamerules.tickers import add_health_ticker, TickerKind
 from gamerules.mob_kind import MobKind
 from gamerules.mobs import mob_death, resolve_mob_attack
 from gamerules.xp import level_from_xp
@@ -109,8 +109,7 @@ class Mob(Object):
   def at_object_delete(self):
     # kill tickers
     self.start_idle()
-    remove_health_ticker(self)
-    #remove_mana_ticker(self)
+    self.remove_ticker(TickerKind.HEALTH)
 
   def at_new_arrival(self, new_character):
     """This is triggered whenever a new character enters the room.
