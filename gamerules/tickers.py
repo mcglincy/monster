@@ -39,7 +39,7 @@ def add_trapdoor_ticker(subject):
 
 
 def tick_health(subject):
-  if subject is None or subject.db is None:
+  if subject is None or subject.db is None or subject.location is None:
     return
 #  subject.location.msg_contents(f"tick {subject.key}")
   change = int((subject.max_health - subject.db.health) * (subject.heal_speed / 1000))
@@ -53,7 +53,7 @@ def tick_health(subject):
 
 
 def tick_mana(subject):
-  if subject is None or subject.db is None:
+  if subject is None or subject.db is None or subject.location is None:
     return
   if subject.db.mana < subject.max_mana:
     # AllStats.Stats.Mana := AllStats.Stats.Mana + (AllStats.MyHold.MaxMana) DIV 2;
