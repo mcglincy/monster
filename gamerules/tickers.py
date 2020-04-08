@@ -1,7 +1,7 @@
 import random
+from enum import Enum
 from evennia import TICKER_HANDLER
 from gamerules.mobs import generate_mob
-from gamerules.ticker_kind import TickerKind
 from gamerules.special_room_kind import SpecialRoomKind
 
 
@@ -15,12 +15,15 @@ MOB_GENERATOR_TICK_SECONDS = 10
 TRAPDOOR_TICK_SECONDS = 1
 
 
+class TickerKind(Enum):
+  HEALTH = 1
+  MANA = 2
+  MOB_GENERATOR = 3
+  TRAPDOOR = 4
+
+
 def add_health_ticker(subject):
   subject.add_ticker(TickerKind.HEALTH, HEALTH_TICK_SECONDS, tick_health)
-
-
-def remove_health_ticker(subject):
-  subject.remove_ticker(TickerKind.HEALTH)
 
 
 def add_mana_ticker(subject):
