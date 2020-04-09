@@ -117,6 +117,7 @@ The running game server is up at http://www.monstermud.com.
 * Spells
   * Spell effects: push, strength/weak, speed/slow, invisible, see invisible, detect magic, find person, locate
 * Randoms (aka mobs)
+  * search for hidden character
   * sayings
   * pursuit chance / pursuit behavior
   * cast spells and combat behaviors
