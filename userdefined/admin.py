@@ -1,6 +1,7 @@
 from django.contrib import admin
 from userdefined.models import CharacterClass, Spell, SpellEffect
 
+
 class CharacterClassAdmin(admin.ModelAdmin):
   list_display = ["db_key", "db_group"]
   ordering = ["db_key"]
@@ -12,7 +13,7 @@ class SpellEffectInline(admin.TabularInline):
 
 
 class SpellEffectAdmin(admin.ModelAdmin):
-  list_display = ["db_key"]
+  list_display = ["db_key", "db_group", "db_min_level"]
   ordering = ["db_key"]
   inlines = (SpellEffectInline, )
 
@@ -20,5 +21,3 @@ class SpellEffectAdmin(admin.ModelAdmin):
 admin.site.register(CharacterClass, CharacterClassAdmin)
 admin.site.register(Spell, SpellEffectAdmin)
 admin.site.register(SpellEffect)
-
-
