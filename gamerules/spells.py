@@ -125,16 +125,23 @@ def send_effect_messages(caster, spell, target):
       target.msg(victim_desc)
 
 
-def effect_targets(effect, caster, target):
-  if not effect.affects_room:
-    # single target
-    return [target]
-  # everyone in room
+def is_targetable(obj):
+  return (obj.is_typeclass("typeclasses.characters.Character")
+    or obj.is_typeclass("typeclasses.mobs.Mob", exact=False))
+
+
+def pick_targets(effect, caster, target):
   targets = []
-  for occupant in caster.location.contents:
-    if (occupant != caster 
-      and occupant.is_typeclass("typeclasses.characters.Character")):
-      targets.append(occupant)
+  if effect.affects_room:
+    # everyone in room
+    for obj in caster.location.contents:
+      if obj != caster and is_targetable(obj):
+        targets.append(occupant)
+  elif target:
+    # single target
+    targets.append(target)
+  if effect.affects_caster:
+    targets.append(caster)
   return targets  
 
 
@@ -169,8 +176,8 @@ def apply_spell_effect(spell, effect, caster,
     apply_distance_hurt_effect(spell, effect, caster, target, direction, distance_target_key)
     return
 
-  # single target or room
-  targets = effect_targets(effect, caster, target)
+  # single target or room, possibly including self
+  targets = pick_targets(effect, caster, target)
   # check spell deflection before applying the actual effect
   if is_deflectable(effect):
     targets = remove_spell_deflections(caster, targets)
@@ -209,44 +216,53 @@ def apply_spell_effect(spell, effect, caster,
     apply_slow_effect(effect, caster, targets)
 
 
-def apply_cure_poison_effect(effect, caster, target):
+def apply_cure_poison_effect(effect, caster, targets):
   is_poison = effect.param_1
-  if is_poison:
-    if not target.is_poisoned:
-      target.ndb.poisoned = False
-      target.msg("Your blood begins to boil!")
-      target.location.msg_contents(
-        f"{target.name} is poisoned!", exclude=[target])
-  else:
-    # cure
-    if target.is_poisoned:
-      target.ndb.poisoned = False
-      target.msg("Your blood runs clean.")
-      target.location.msg_contents(
-        f"{target.name} is no longer poisoned.", exclude=[target])
+  for target in targets:
+    if is_poison:
+      if not target.is_poisoned:
+        target.ndb.poisoned = False
+        target.msg("Your blood begins to boil!")
+        target.location.msg_contents(
+          f"{target.name} is poisoned!", exclude=[target])
+    else:
+      # cure
+      if target.is_poisoned:
+        target.ndb.poisoned = False
+        target.msg("Your blood runs clean.")
+        target.location.msg_contents(
+          f"{target.name} is no longer poisoned.", exclude=[target])
 
 
-def apply_strength_effect(effect, caster, target):
+def apply_strength_effect(effect, caster, targets):
+  # TODO
   strength_modifier = effect.param_1
   level_strength_modifier = effect.param_2
+  for target in targets:
+    pass
+
+
+def apply_speed_effect(effect, caster, targets):
   # TODO
-
-
-def apply_speed_effect(effect, caster, target):
   speed_modifier = effect.param_1
   level_speed_modifier = effect.param_2
+  for target in targets:    
+    pass
+
+
+def apply_invisible_effect(effect, caster, targets):
   # TODO
+  for target in targets:
+    pass
 
 
-def apply_invisible_effect(effect, caster, target):
-  pass
+def apply_see_invisible_effect(effect, caster, targets):
+  # TODO
+  for target in targets:
+    pass
 
 
-def apply_see_invisible_effect(effect, caster, target):
-  pass
-
-
-def apply_heal_effect(effect, caster, target):
+def apply_heal_effect(effect, caster, targets):
   base = effect.param_1
   level_base = effect.param_2
   rand = effect.param_3
@@ -254,7 +270,8 @@ def apply_heal_effect(effect, caster, target):
   base_heal = base + level_base * caster.level
   random_heal = rand + level_rand * caster.level
   heal = base_heal + random.randint(0, random_heal)
-  target.gain_health(heal, damager=None)
+  for target in targets:
+    target.gain_health(heal, damager=None)
 
 
 def spell_armor_adverb(amount):
@@ -299,9 +316,6 @@ def apply_hurt_effect(spell, effect, caster, targets):
   for target in targets:
     give_spell_damage(spell, caster, target, damage)
 
-  if effect.affects_caster and hasattr(caster, "gain_health"):
-    caster.gain_health(-damage, damager=None)
-
 
 def apply_sleep_effect(spell, effect, caster, targets):
   base = effect.param_1
@@ -325,6 +339,8 @@ def apply_sleep_effect(spell, effect, caster, targets):
 def apply_push_effect(effect, caster, target):
   push_direction = effect.param_1
   # TODO
+  for target in targets:
+    pass
 
 
 def apply_announce_effect(effect, caster, target):
@@ -429,25 +445,25 @@ def apply_distance_hurt_effect(spell, effect, caster,
 
 
 
-def apply_detect_magic_effect(effect, caster, target):
+def apply_detect_magic_effect(effect, caster, targets):
   pass
 
 
-def apply_find_person_effect(effect, caster, target):
+def apply_find_person_effect(effect, caster, targets):
   pass
 
 
-def apply_locate_effect(effect, caster, target):
+def apply_locate_effect(effect, caster, targets):
   pass
 
 
-def apply_weak_effect(effect, caster, target):
+def apply_weak_effect(effect, caster, targets):
   strength_modifier = effect.param_1
   level_strength_modifier = effect.param_2
   # TODO
 
 
-def apply_slow_effect(effect, caster, target):
+def apply_slow_effect(effect, caster, targets):
   speed_modifier = effect.param_1
   level_speed_modifier = effect.param_2
   # TODO
