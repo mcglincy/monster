@@ -2,7 +2,7 @@ from django.contrib import admin
 from userdefined.models import CharacterClass, Spell, SpellEffect
 
 class CharacterClassAdmin(admin.ModelAdmin):
-  list_display = ["db_key"]
+  list_display = ["db_key", "db_group"]
   ordering = ["db_key"]
 
 
