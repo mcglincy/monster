@@ -93,8 +93,9 @@ GHOSTLY_MERCHANT = {
 WEAPONSMITH = {
   'typeclass': 'typeclasses.merchant.Merchant',
   'key': 'weaponsmith',
+  # TODO: add back scimitar when it's nerfed
   'for_sale_keys': ['broadsword', 'longsword', 'mace', 'military_fork', 
-    'pike', 'saxon_axe', 'scimitar', 'spear', 'voulge', 'warhammer'],
+    'pike', 'saxon_axe', 'spear', 'voulge', 'warhammer'],
 }
 
 ARMORER = {
@@ -111,3 +112,28 @@ BOOKSELLER = {
   'key': 'bookseller',
   'for_sale_keys': ['book_of_shadows', 'grand_grimoire', 'mabinogian'],
 }
+
+DRUID_SPELLBOOK = {
+  'key': "Druid Spellbook",
+  'prototype_parent': 'base_spellbook',
+  'prototype_tags': ['object'],
+  'equipment_slot': EquipmentSlot.BACKPACK,
+  'spell_keys': ['Ent Strength', 'Pinecones of Death', 'Tree Attack', 'Morning Frost', 'Earth Hammer', 'Insect Cloud', 'Locust Plague', 'Bear Claws', 'Pack of Wolves', 'Forest Fire', 'Tornado', 'Soul Harvester', 'Elk Speed'],
+}
+
+ELF_SPELLBOOK = {
+  'key': "Wizard Spellbook",
+  'prototype_parent': 'base_spellbook',
+  'prototype_tags': ['object'],
+  'equipment_slot': EquipmentSlot.BACKPACK,
+  'spell_keys': [],
+}
+
+WIZARD_SPELLBOOK = {
+  'key': "Wizard Spellbook",
+  'prototype_parent': 'base_spellbook',
+  'prototype_tags': ['object'],
+  'equipment_slot': EquipmentSlot.BACKPACK,
+  'spell_keys': [],
+}
+
