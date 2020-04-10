@@ -1,0 +1,87 @@
+[
+  {
+    "op": "replace",
+    "path": "/28/worth",
+    "value": 5
+  },
+  {
+    "op": "replace",
+    "path": "/29/worth",
+    "value": 15
+  },
+  {
+    "op": "replace",
+    "path": "/44/worth",
+    "value": 1
+  },
+  {
+    "op": "replace",
+    "path": "/72/worth",
+    "value": 150
+  },
+  {
+    "op": "replace",
+    "path": "/73/worth",
+    "value": 120
+  },
+  {
+    "op": "replace",
+    "path": "/78/worth",
+    "value": 3
+  },
+  {
+    "op": "replace",
+    "path": "/82/worth",
+    "value": 10
+  },
+  {
+    "op": "replace",
+    "path": "/83/worth",
+    "value": 4
+  },
+  {
+    "op": "replace",
+    "path": "/85/worth",
+    "value": 12
+  },
+  {
+    "op": "replace",
+    "path": "/87/worth",
+    "value": 10
+  },
+  {
+    "op": "replace",
+    "path": "/92/worth",
+    "value": 15
+  },
+  {
+    "op": "replace",
+    "path": "/97/worth",
+    "value": 50
+  },
+  {
+    "op": "replace",
+    "path": "/98/worth",
+    "value": 1
+  },
+  {
+    "op": "replace",
+    "path": "/100/worth",
+    "value": 2
+  },
+  {
+    "op": "replace",
+    "path": "/111/worth",
+    "value": 30
+  },
+  {
+    "op": "replace",
+    "path": "/112/worth",
+    "value": 8
+  },
+  {
+    "op": "replace",
+    "path": "/145/worth",
+    "value": 5
+  }
+]

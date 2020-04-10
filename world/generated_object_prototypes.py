@@ -19,6 +19,7 @@ AMBER_HEMISPHERE = {
   'prototype_tags': ['object', 'record_id_112'],
   'article': 2,
   'desc': "The piece of amber is a perfect hemisphere that rests comfortably in the palm of your hand. You notice a message has been etched in the amber, and spirals its way around the stone. It reads:  \"The Gae Bolge has returned to its makers, the Tuatha de Danaan, who   have fled the Realm of Man and now are only found in the Realm of   Dreams.\"",
+  'worth': 30,
 }
 
 ANIMAL_PELT = {
@@ -28,6 +29,7 @@ ANIMAL_PELT = {
   'prototype_tags': ['object', 'record_id_93'],
   'article': 2,
   'desc': "The animal pelt is thick and grey.",
+  'worth': 15,
 }
 
 ARROWHEAD = {
@@ -38,6 +40,7 @@ ARROWHEAD = {
   'article': 2,
   'desc': "The arrowhead is made from bronze, and has been severely oxidized.",
   'num_exist': 1,
+  'worth': 1,
 }
 
 BENT_DAGGER = {
@@ -81,6 +84,7 @@ CHUNK_OF_AMBER = {
   'record_id': 86,
   'prototype_tags': ['object', 'record_id_86'],
   'desc': "The chunk of amber appears normal.",
+  'worth': 12,
 }
 
 COPPER_TABLETS = {
@@ -140,6 +144,7 @@ ELF_SKULL = {
   'article': 2,
   'desc': "The skull is delicate and slightly smaller than that of a human. The  cranium has been pierced by a sharp instrument.",
   'num_exist': 1,
+  'worth': 50,
 }
 
 FLAT_STONE = {
@@ -148,6 +153,7 @@ FLAT_STONE = {
   'record_id': 45,
   'prototype_tags': ['object', 'record_id_45'],
   'num_exist': 1,
+  'worth': 1,
 }
 
 FORGE_STONE = {
@@ -174,6 +180,7 @@ GLASS_BOTTLE = {
   'record_id': 84,
   'prototype_tags': ['object', 'record_id_84'],
   'desc': "The bottle is of a dark green glass. The bottom is slightly bloated, appearing perhaps more like a flask.",
+  'worth': 4,
 }
 
 GOLDEN_RING = {
@@ -193,6 +200,7 @@ GRANITE_STONE = {
   'prototype_tags': ['object', 'record_id_113'],
   'desc': "The stone is very smooth, and is in the shape of a perfect hemisphere.",
   'num_exist': 1,
+  'worth': 8,
 }
 
 HUGE_PEARL = {
@@ -280,6 +288,7 @@ LEAD_BAR = {
   'prototype_tags': ['object', 'record_id_88'],
   'desc': "The bar is a small ingot of solid lead.",
   'num_exist': 2,
+  'worth': 10,
 }
 
 LONG_STRAND_OF_HEMP = {
@@ -288,6 +297,7 @@ LONG_STRAND_OF_HEMP = {
   'record_id': 29,
   'prototype_tags': ['object', 'record_id_29'],
   'num_exist': 1,
+  'worth': 5,
 }
 
 MARBLE = {
@@ -296,6 +306,7 @@ MARBLE = {
   'record_id': 101,
   'prototype_tags': ['object', 'record_id_101'],
   'num_exist': 11,
+  'worth': 2,
 }
 
 OBSIDIAN_KEY = {
@@ -377,7 +388,7 @@ ROPE = {
   'prototype_tags': ['object', 'record_id_30'],
   'components': ['long strand of hemp', 'long strand of hemp', 'long strand of hemp'],
   'num_exist': 5,
-  'worth': 65,
+  'worth': 15,
 }
 
 RUSTY_KEY = {
@@ -401,6 +412,7 @@ SILVER_MIRROR = {
   'record_id': 83,
   'prototype_tags': ['object', 'record_id_83'],
   'desc': "The mirror is small enough to fit in the palm of your hand, and is of polished silver.",
+  'worth': 10,
 }
 
 SMALL_RUBY = {
@@ -459,6 +471,7 @@ VELVET_CLOTH = {
   'record_id': 79,
   'prototype_tags': ['object', 'record_id_79'],
   'desc': "The cloth is of black velvet, and is decorated with embroidery of  golden thread. ",
+  'worth': 3,
 }
 
 VIAL = {
@@ -466,6 +479,7 @@ VIAL = {
   'prototype_parent': 'base_bland',
   'record_id': 146,
   'prototype_tags': ['object', 'record_id_146'],
+  'worth': 5,
 }
 
 #
@@ -1195,6 +1209,7 @@ JEWELED_SCIMITAR = {
   'prototype_tags': ['object', 'record_id_74'],
   'desc': "The sword is a long, and has a curved blade. It is single edged, and perhaps a bit heavy. The hilt is oddly shaped, having an oddly inlaid piece of metal, with an emerald in the heel.  You notice something written along the blade of the weapon. It might be some sort of name. It reads: \"Sualtim\".",
   'num_exist': 4,
+  'worth': 120,
   'equipment_slot': EquipmentSlot.SWORD_HAND,
   'attack_speed': 9,
   'base_weapon_damage': 101,
@@ -1569,6 +1584,7 @@ RHINESTONE_RING = {
   'desc': "The ring is a band of gold set with a cluster of rhinestones. The  workmanship is clearly superlative.",
   'line_desc': "There is a finely crafted ring of obvious value here.",
   'num_exist': 1,
+  'worth': 150,
   'equipment_slot': EquipmentSlot.RING,
   'base_health': 99,
   'smallest_fit': 3,
