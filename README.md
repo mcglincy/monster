@@ -98,9 +98,12 @@ The running game server is up at http://www.monstermud.com.
   * Exit effects
     * guardian, health less
   * Hidden/searchable exits
-  * Look at in-room subdescriptions
+  * In-room details / lookable subdescriptions
   * Start game in tutorial room(s), with room special/special effect)
   * Windows / window_descs (e.g., Improbable Structure <=> Forbidden Library)
+  * Use NamePrint (Preposition for room name printing) / PrintParticle [sic]
+  * MagicObj / secondary description
+  * Object drop destination
 * Objects
   * Object damage
   * Enter amount of gold to drop
