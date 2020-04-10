@@ -132,8 +132,8 @@ RED_DRAGON = {
   'pursuit_chance': 15,
 }
 
-A_GHOST = {
-  'key': "a ghost",
+GHOST = {
+  'key': "Ghost",
   'prototype_parent': 'mob',
   'record_id': 5,
   'prototype_tags': ['mob', 'min_level_5', 'record_id_5'],
@@ -224,7 +224,7 @@ DRUNKEN_WARRIOR = {
 }
 
 LORD_GRAZZTS_GHOST = {
-  'key': "lord grazz't's ghost",
+  'key': "Lord Grazz't's Ghost",
   'prototype_parent': 'mob',
   'record_id': 8,
   'prototype_tags': ['mob', 'min_level_5', 'record_id_8'],
@@ -254,7 +254,7 @@ LORD_GRAZZTS_GHOST = {
 }
 
 CRUSADERS_SHADE = {
-  'key': "crusader's shade",
+  'key': "Crusader's Shade",
   'prototype_parent': 'mob',
   'record_id': 9,
   'prototype_tags': ['mob', 'min_level_4', 'record_id_9'],
@@ -284,7 +284,7 @@ CRUSADERS_SHADE = {
 }
 
 FROST_GIANT = {
-  'key': "frost giant",
+  'key': "Frost Giant",
   'prototype_parent': 'mob',
   'record_id': 10,
   'prototype_tags': ['mob', 'min_level_6', 'record_id_10'],
@@ -314,7 +314,7 @@ FROST_GIANT = {
 }
 
 FIRE_GIANT = {
-  'key': "fire giant",
+  'key': "Fire Giant",
   'prototype_parent': 'mob',
   'record_id': 11,
   'prototype_tags': ['mob', 'min_level_5', 'record_id_11'],
@@ -344,7 +344,7 @@ FIRE_GIANT = {
 }
 
 TOAD_MAN = {
-  'key': "toad man",
+  'key': "Toad Man",
   'prototype_parent': 'mob',
   'record_id': 12,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_12'],
@@ -374,7 +374,7 @@ TOAD_MAN = {
 }
 
 KOBOLD = {
-  'key': "kobold",
+  'key': "Kobold",
   'prototype_parent': 'mob',
   'record_id': 13,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_13'],
@@ -404,7 +404,7 @@ KOBOLD = {
 }
 
 PUGNACIOUS_RUNT = {
-  'key': "pugnacious runt",
+  'key': "Pugnacious Runt",
   'prototype_parent': 'mob',
   'record_id': 14,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_14'],
@@ -434,7 +434,7 @@ PUGNACIOUS_RUNT = {
 }
 
 SOLDIER = {
-  'key': "soldier",
+  'key': "Soldier",
   'prototype_parent': 'mob',
   'record_id': 15,
   'prototype_tags': ['mob', 'min_level_10', 'record_id_15'],
@@ -518,7 +518,6 @@ DANCING_SWORD = {
   'move_speed': 0,
   'attack_speed': 150,
   'heal_speed': 0,
-  'attack_name': 'riposte',
   'weapon_use': 0,
   'level_weapon_use': 0,
   'pursuit_chance': 0,
@@ -549,14 +548,13 @@ GREEN_SLIME = {
   'move_speed': 0,
   'attack_speed': 140,
   'heal_speed': 0,
-  'attack_name': 'pseudopod',
   'weapon_use': 90,
   'level_weapon_use': 0,
   'pursuit_chance': 0,
 }
 
-A_CTHULHU = {
-  'key': "a Cthulhu",
+CTHULHU = {
+  'key': "Cthulhu",
   'prototype_parent': 'mob',
   'record_id': 19,
   'prototype_tags': ['mob', 'min_level_10', 'record_id_19'],
