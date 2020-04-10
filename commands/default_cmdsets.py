@@ -17,6 +17,7 @@ own cmdsets by inheriting from them or directly from `evennia.CmdSet`.
 from evennia import default_cmds
 from evennia.commands.default.comms import CmdGrapevine2Chan, CmdIRCStatus
 from commands.character import CmdName, CmdSheet
+from commands.crafting import CmdMake
 from commands.combat import CmdAttack, CmdPunch, CmdRest
 from commands.commerce import CmdBuy, CmdSell
 from commands.debug import CmdClear, CmdDebug
@@ -66,6 +67,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdLearn())
         self.remove(default_cmds.CmdLook())
         self.add(CmdLook())
+        self.add(CmdMake())
         self.remove(default_cmds.CmdName())
         self.add(CmdName())
         self.remove(default_cmds.CmdNick())
