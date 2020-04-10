@@ -87,14 +87,14 @@ BAG_OF_GOLD = {
 
 GHOSTLY_MERCHANT = {
   'typeclass': 'typeclasses.merchant.Merchant',
-  'key': 'ghostly merchant',
+  'key': 'Ghostly Merchant',
   'for_sale_keys': ['axe', 'claymoore_sword', 'cudgel', 'dirk', 
     'hatchet', 'short_sword'],
 }
 
 WEAPONSMITH = {
   'typeclass': 'typeclasses.merchant.Merchant',
-  'key': 'weaponsmith',
+  'key': 'Weaponsmith',
   # TODO: add back scimitar when it's nerfed
   'for_sale_keys': ['broadsword', 'longsword', 'mace', 'military_fork', 
     'pike', 'saxon_axe', 'spear', 'voulge', 'warhammer'],
@@ -102,7 +102,7 @@ WEAPONSMITH = {
 
 ARMORER = {
   'typeclass': 'typeclasses.merchant.Merchant',
-  'key': 'armorer',
+  'key': 'Armorer',
   'for_sale_keys': ['buckler', 'chain_mail_armor', 'conical_helm',
     'crested_helm', 'horned_helm', 'leather_jerkin', 'norman_kite_shield',
     'plumed_helm', 'ring_mail_armor', 'steel_breastplate', 'wooden_shield',
@@ -111,9 +111,21 @@ ARMORER = {
 
 BOOKSELLER = {
   'typeclass': 'typeclasses.merchant.Merchant',
-  'key': 'bookseller',
+  'key': 'Bookseller',
   'for_sale_keys': ['book_of_shadows', 'druid_spellbook', 'elf_spellbook',
   'grand_grimoire', 'lich_spellbook', 'mabinogian', 'wizard_spellbook'],
+}
+
+CURIO_MERCHANT = {
+  'typeclass': 'typeclasses.merchant.Merchant',
+  'key': 'Curio Merchant',
+  'for_sale_keys': ['amber_hemisphere', 'animal_pelt', 'arrowhead', 
+    'bent_dagger', 'broken_longsword', 'chunk_of_amber', 'diamond', 
+    'elf_skull', 'flat_stone', 'garnet', 'glass_bottle', 'golden_ring',
+    'granite_stone', 'huge_pearl', 'ivory_carving', 'jade_figurine',
+    'jeweled_scimitar', 'lead_bar', 'long_strand_of_hemp', 'marble', 
+    'persian_carpet', 'porcelain_vase', 'rhinestone_ring', 'silver_mirror',
+    'small_ruby', 'velvet_cloth', 'vial']  
 }
 
 DRUID_SPELLBOOK = {

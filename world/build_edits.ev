@@ -31,8 +31,13 @@ Go down to begin your adventure!
 #
 @tel Arkinor's Exotica
 #
-@spawn bookseller
+@spawn {"prototype_key": "wizened arkinor", "prototype_parent": "bookseller", "key": "Wizened Arkanor"}
 #
 @tel Wizard Pawn Shop
 #
-@spawn bookseller
+@spawn {"prototype_key": "old curator", "prototype_parent": "bookseller", "key": "Old Curator"}
+#
+@tel Fezgar's Curiosities
+#
+@spawn {"prototype_key": "shopkeeper", "prototype_parent": "curio_merchant", "key": "Shopkeeper"}
+#
