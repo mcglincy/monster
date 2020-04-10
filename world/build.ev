@@ -5656,7 +5656,7 @@ entombed personage you might expect to find here.
 #
 @set here/special_kind_bitmask = 256
 #
-@set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 #
 @dig/tel High Dudgeon;room_458
 #
