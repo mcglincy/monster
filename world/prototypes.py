@@ -112,7 +112,8 @@ ARMORER = {
 BOOKSELLER = {
   'typeclass': 'typeclasses.merchant.Merchant',
   'key': 'bookseller',
-  'for_sale_keys': ['book_of_shadows', 'grand_grimoire', 'mabinogian'],
+  'for_sale_keys': ['book_of_shadows', 'druid_spellbook', 'elf_spellbook',
+  'grand_grimoire', 'lich_spellbook', 'mabinogian', 'wizard_spellbook'],
 }
 
 DRUID_SPELLBOOK = {
@@ -120,15 +121,30 @@ DRUID_SPELLBOOK = {
   'prototype_parent': 'base_spellbook',
   'prototype_tags': ['object'],
   'equipment_slot': EquipmentSlot.BACKPACK,
-  'spell_keys': ['Ent Strength', 'Pinecones of Death', 'Tree Attack', 'Morning Frost', 'Earth Hammer', 'Insect Cloud', 'Locust Plague', 'Bear Claws', 'Pack of Wolves', 'Forest Fire', 'Tornado', 'Soul Harvester', 'Elk Speed'],
+  'spell_keys': ['Animate Shrubbery', 'Bear Claws', 'Earth Hammer', 'Forest Fire',
+    'Gripping Plants', 'Insect Cloud', 'Locust Plague', 'Morning Frost',
+    'Pack of Wolves', 'Soul Harvester', 'Stinging Hornets', 'Tidal Wave', 'Tornado',
+    'Tree Attack']
 }
 
 ELF_SPELLBOOK = {
-  'key': "Wizard Spellbook",
+  'key': "Elf Spellbook",
   'prototype_parent': 'base_spellbook',
   'prototype_tags': ['object'],
   'equipment_slot': EquipmentSlot.BACKPACK,
-  'spell_keys': [],
+  # TODO: there is a dupe Heal/heal spell
+  'spell_keys': ['Heal', 'Poison Thorn', 'Silver Dagger', 'Sleep', 'Willow Blast',
+    'charm', 'chestnut hail'],
+}
+
+LICH_SPELLBOOK = {
+  'key': "Lich Spellbook",
+  'prototype_parent': 'base_spellbook',
+  'prototype_tags': ['object'],
+  'equipment_slot': EquipmentSlot.BACKPACK,
+  # TODO: figure out Grave Rot vs grave rot 2
+  'spell_keys': ['Dark Arrows', 'Finger of Death', 'Grave Rot', 'Hands of Fire',
+    'Minor Hellfire', 'Solar Flare', 'Storm', 'Unholy Blast', 'ray of death'],
 }
 
 WIZARD_SPELLBOOK = {
@@ -136,6 +152,6 @@ WIZARD_SPELLBOOK = {
   'prototype_parent': 'base_spellbook',
   'prototype_tags': ['object'],
   'equipment_slot': EquipmentSlot.BACKPACK,
-  'spell_keys': [],
+  'spell_keys': ['Brain Hammer', 'Dragon fire', 'Fireball', 'Flame Spray', 'Hailstorm',
+  'Magic Missile', 'Touch of Death', 'earthquake'],
 }
-
