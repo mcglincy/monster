@@ -120,7 +120,7 @@ CURIO_MERCHANT = {
   'typeclass': 'typeclasses.merchant.Merchant',
   'key': 'Curio Merchant',
   'for_sale_keys': ['amber_hemisphere', 'animal_pelt', 'arrowhead', 
-    'bent_dagger', 'broken_longsword', 'chunk_of_amber', 'diamond', 
+    'chunk_of_amber', 'diamond', 
     'elf_skull', 'flat_stone', 'garnet', 'glass_bottle', 'golden_ring',
     'granite_stone', 'huge_pearl', 'ivory_carving', 'jade_figurine',
     'jeweled_scimitar', 'lead_bar', 'long_strand_of_hemp', 'marble', 
