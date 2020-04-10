@@ -133,7 +133,7 @@ The running game server is up at http://www.monstermud.com.
 
 * Map/Rooms
   * Room owners / customizations
-    * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing 
+    * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing toolset
   * Special room kinds: market (we have merchant objects instead), random group, random level, treasure drop (no rooms seem to use these SpcRoom values)
 * Spells
   * Spell effects: announce (we have *shout* command instead of thundering voice), command (better implemented as a new effect in code?)
