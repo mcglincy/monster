@@ -1,0 +1,67 @@
+[
+  {
+    "op": "replace",
+    "path": "/2/weapon",
+    "value": 0
+  },
+  {
+    "op": "replace",
+    "path": "/4/name",
+    "value": "Ghost"
+  },
+  {
+    "op": "replace",
+    "path": "/7/name",
+    "value": "Lord Grazz't's Ghost"
+  },
+  {
+    "op": "replace",
+    "path": "/8/name",
+    "value": "Crusader's Shade"
+  },
+  {
+    "op": "replace",
+    "path": "/9/name",
+    "value": "Frost Giant"
+  },
+  {
+    "op": "replace",
+    "path": "/10/name",
+    "value": "Fire Giant"
+  },
+  {
+    "op": "replace",
+    "path": "/11/name",
+    "value": "Toad Man"
+  },
+  {
+    "op": "replace",
+    "path": "/12/name",
+    "value": "Kobold"
+  },
+  {
+    "op": "replace",
+    "path": "/13/name",
+    "value": "Pugnacious Runt"
+  },
+  {
+    "op": "replace",
+    "path": "/14/name",
+    "value": "Soldier"
+  },
+  {
+    "op": "replace",
+    "path": "/16/name",
+    "value": "Dancing Sword"
+  },
+  {
+    "op": "replace",
+    "path": "/17/weapon",
+    "value": 0
+  },
+  {
+    "op": "replace",
+    "path": "/18/name",
+    "value": "Cthulhu"
+  }
+]

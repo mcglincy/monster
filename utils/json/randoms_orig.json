@@ -92,7 +92,7 @@
     "pursuit_chance": 35,
     "weapon_use": 140,
     "level_weapon_use": 10,
-    "weapon": 0,
+    "weapon": 167,
     "object": 0,
     "sayings": [],
     "base_mana": 0,
@@ -133,7 +133,7 @@
     "id": 4
   },
   {
-    "name": "Ghost",
+    "name": "a ghost",
     "base_health": 2800,
     "random_health": 300,
     "base_damage": 100,
@@ -229,7 +229,7 @@
     "id": 7
   },
   {
-    "name": "Lord Grazz't's Ghost",
+    "name": "lord grazz't's ghost",
     "base_health": 500,
     "random_health": 500,
     "base_damage": 100,
@@ -261,7 +261,7 @@
     "id": 8
   },
   {
-    "name": "Crusader's Shade",
+    "name": "crusader's shade",
     "base_health": 500,
     "random_health": 400,
     "base_damage": 125,
@@ -293,7 +293,7 @@
     "id": 9
   },
   {
-    "name": "Frost Giant",
+    "name": "frost giant",
     "base_health": 2500,
     "random_health": 500,
     "base_damage": 180,
@@ -325,7 +325,7 @@
     "id": 10
   },
   {
-    "name": "Fire Giant",
+    "name": "fire giant",
     "base_health": 1600,
     "random_health": 600,
     "base_damage": 200,
@@ -357,7 +357,7 @@
     "id": 11
   },
   {
-    "name": "Toad Man",
+    "name": "toad man",
     "base_health": 550,
     "random_health": 150,
     "base_damage": 105,
@@ -389,7 +389,7 @@
     "id": 12
   },
   {
-    "name": "Kobold",
+    "name": "kobold",
     "base_health": 825,
     "random_health": 225,
     "base_damage": 135,
@@ -421,7 +421,7 @@
     "id": 13
   },
   {
-    "name": "Pugnacious Runt",
+    "name": "pugnacious runt",
     "base_health": 350,
     "random_health": 100,
     "base_damage": 50,
@@ -453,7 +453,7 @@
     "id": 14
   },
   {
-    "name": "Soldier",
+    "name": "soldier",
     "base_health": 1000,
     "random_health": 100,
     "base_damage": 80,
@@ -522,7 +522,7 @@
     "id": 16
   },
   {
-    "name": "Dancing Sword",
+    "name": "Sword of Kings",
     "base_health": 500,
     "random_health": 400,
     "base_damage": 30,
@@ -577,7 +577,7 @@
     "pursuit_chance": 0,
     "weapon_use": 90,
     "level_weapon_use": 0,
-    "weapon": 0,
+    "weapon": 41,
     "object": 0,
     "sayings": [],
     "base_mana": 0,
@@ -586,7 +586,7 @@
     "id": 18
   },
   {
-    "name": "Cthulhu",
+    "name": "a Cthulhu",
     "base_health": 9999999,
     "random_health": 99999,
     "base_damage": 9999999,
