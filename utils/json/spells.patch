@@ -1,8 +1,48 @@
 [
   {
     "op": "replace",
+    "path": "/4/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/7/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/8/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/10/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/13/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
     "path": "/17/name",
     "value": "grave rot 2"
+  },
+  {
+    "op": "replace",
+    "path": "/18/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/18/effects/1/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/19/effects/1/prompt",
+    "value": true
   },
   {
     "op": "replace",
@@ -17,6 +57,61 @@
     "op": "replace",
     "path": "/29/name",
     "value": "death word 2"
+  },
+  {
+    "op": "replace",
+    "path": "/31/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/44/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/45/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/49/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/55/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/58/effects/0/prompt",
+    "value": false
+  },
+  {
+    "op": "replace",
+    "path": "/63/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/64/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/79/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/81/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/81/effects/1/prompt",
+    "value": true
   },
   {
     "op": "replace",
