@@ -36,6 +36,8 @@ See the `@spawn` command and `evennia.utils.spawner` for more info.
 
 """
 
+from gamerules.equipment_slot import EquipmentSlot
+
 # from random import randint
 #
 # GOBLIN = {
