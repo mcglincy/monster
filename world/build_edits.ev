@@ -36,9 +36,3 @@ Go down to begin your adventure!
 @tel Wizard Pawn Shop
 #
 @spawn bookseller
-#
-# Burial Chamber is incorrect spawning chainmail :P
-#
-@tel Burial Chamber
-#
-@set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
