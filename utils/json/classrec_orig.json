@@ -757,8 +757,8 @@
   },
   {
     "group": 1,
-    "name": "ghost2",
-    "who_name": "ghost2",
+    "name": "ghost",
+    "who_name": "ghost",
     "base_health": 2000,
     "level_health": 100,
     "base_mana": 200,

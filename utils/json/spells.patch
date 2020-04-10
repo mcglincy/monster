@@ -1,0 +1,26 @@
+[
+  {
+    "op": "replace",
+    "path": "/17/name",
+    "value": "grave rot 2"
+  },
+  {
+    "op": "replace",
+    "path": "/20/effects/0/prompt",
+    "value": true
+  },
+  {
+    "op": "remove",
+    "path": "/20/effects/1"
+  },
+  {
+    "op": "replace",
+    "path": "/29/name",
+    "value": "death word 2"
+  },
+  {
+    "op": "replace",
+    "path": "/82/effects/0/prompt",
+    "value": true
+  }
+]
