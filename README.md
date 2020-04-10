@@ -110,6 +110,7 @@ The running game server is up at http://www.monstermud.com.
 * Commands
   * Default attack / get / etc to picking the first thing for name dupes?
   * *use* command
+  * *make* command
   * *block* command
   * *steal* / *pickpocket* commands
   * Atmosphere
