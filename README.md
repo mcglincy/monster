@@ -115,6 +115,7 @@ The running game server is up at http://www.monstermud.com.
   * *steal* / *pickpocket* commands
   * Atmosphere
   * ctrl-c or some way to interrupt command queue
+  * Command help text
 * Spells
   * Spell effects: push, strength/weak, speed/slow, invisible, see invisible, detect magic, find person, locate
 * Randoms (aka mobs)
