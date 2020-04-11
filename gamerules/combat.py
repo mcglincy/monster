@@ -83,8 +83,7 @@ def attack_damage(attacker, weapon, is_surprise=False):
   if weapon:
     # attacker weapon damages may be the sum of several equipped objects
     dmg = attacker.base_weapon_damage + int(attacker.random_weapon_damage * rand_multiplier)
-    weapon_use = attacker.base_weapon_use + attacker.level_weapon_use * attacker.level
-    dmg = int(dmg * weapon_use / 100)
+    dmg = int(dmg * attacker.total_weapon_use / 100)
   else:
     # claws
     dmg = (
