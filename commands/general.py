@@ -1,5 +1,6 @@
 from commands.command import QueuedCommand
 from gamerules.special_room_kind import SpecialRoomKind
+from gamerules.find import find_first, find_first_unhidden
 
 
 class CmdDrop(QueuedCommand):
@@ -14,31 +15,24 @@ class CmdDrop(QueuedCommand):
   help_category = "Monster"
 
   def inner_func(self):
-    caller = self.caller
     if not self.args:
-      caller.msg("Drop what?")
+      self.caller.msg("Drop what?")
       return
-
-    # Because the DROP command by definition looks for items
-    # in inventory, call the search function using location = caller
-    obj = caller.search(
-      self.args,
-      location=caller,
-      nofound_string="You aren't carrying %s." % self.args,
-      multimatch_string="You carry more than one %s:" % self.args,
-    )
+    key = self.args.strip()
+    obj = find_first(self.caller, key)
     if not obj:
+      self.caller.msg(f"You aren't carrying {key}.")
       return
-
-    # Call the object script's at_before_drop() method.
-    if not obj.at_before_drop(caller):
+    # before the drop
+    if not obj.at_before_drop(self.caller):
       return
-
-    obj.move_to(caller.location, quiet=True)
-    caller.msg("You drop %s." % (obj.name,))
-    caller.location.msg_contents("%s drops %s." % (caller.name, obj.name), exclude=caller)
-    # Call the object script's at_drop() method.
-    obj.at_drop(caller)
+    # do the drop
+    obj.move_to(self.caller.location, quiet=True)
+    self.caller.msg(f"You drop {obj.name}.")
+    self.caller.location.msg_contents(
+      f"{self.caller.name} drops {obj.name}.", exclude=self.caller)
+    # after the drop
+    obj.at_drop(self.caller)
 
 
 
@@ -94,38 +88,33 @@ class CmdGet(QueuedCommand):
   help_category = "Monster"
 
   def inner_func(self):
-    caller = self.caller
     if not self.args:
-      # TODO: decide if we're going to use MARKET rooms
-      # if caller.location.is_special_kind(SpecialRoomKind.MARKET):
-      #   caller.location.list_objects_for_sale(caller)
-      # else:
-      #   # TODO: list all objects in room?
-      #   caller.msg("Get what?")
-      caller.msg("Get what?")
+      self.caller.msg("Get what?")
       return
-    obj = caller.search(self.args, location=caller.location)
+    key = self.args.strip()
+    obj = find_first_unhidden(self.caller.location, key)
     if not obj:
+      self.caller.msg(f"You can't find {key}.")
       return
-    if caller == obj:
-      caller.msg("You can't get yourself.")
+    if self.caller == obj:
+      self.caller.msg("You can't get yourself.")
       return
-    if not obj.access(caller, "get"):
+    if not obj.access(self.caller, "get"):
       if obj.db.get_err_msg:
-          caller.msg(obj.db.get_err_msg)
+        self.caller.msg(obj.db.get_err_msg)
       else:
-          caller.msg("You can't get that.")
+        self.caller.msg("You can't get that.")
       return
-
-    # calling at_before_get hook method
-    if not obj.at_before_get(caller):
+    # before the get
+    if not obj.at_before_get(self.caller):
       return
-
-    obj.move_to(caller, quiet=True)
-    caller.msg("You pick up %s." % obj.name)
-    caller.location.msg_contents("%s picks up %s." % (caller.name, obj.name), exclude=caller)
-    # calling at_get hook method
-    obj.at_get(caller)
+    # do the get
+    obj.move_to(self.caller, quiet=True)
+    self.caller.msg("You pick up %s." % obj.name)
+    self.caller.location.msg_contents(
+      f"{self.caller.name} picks up {obj.name}.", exclude=self.caller)
+    # after the get
+    obj.at_get(self.caller)
 
 
 class CmdInventory(QueuedCommand):
@@ -164,17 +153,20 @@ class CmdLook(QueuedCommand):
 
   def inner_func(self):
     """Handle the looking."""
-    caller = self.caller
     if not self.args:
-      target = caller.location
+      target = self.caller.location
       if not target:
-        caller.msg("You have no location to look at!")
+        self.caller.msg("You have no location to look at!")
         return
     else:
-      target = caller.search(self.args)
+      key = self.args.strip()
+      # note that our look targeting works slightly differently from Evennia look - 
+      # we don't include character contents.
+      target = find_first_unhidden(self.caller.location, key)
       if not target:
+        self.caller.msg(f"You can't find {key}.")
         return
-    self.msg((caller.at_look(target), {"type": "look"}), options=None)
+    self.msg((self.caller.at_look(target), {"type": "look"}), options=None)
 
 
 

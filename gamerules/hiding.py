@@ -16,19 +16,6 @@ def evennia_unhide(obj):
   obj.locks.add("view:all()")
 
 
-def unhidden_objects(location):
-  return [x for x in location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
-
-
-def unhidden_object(location, key):
-  unhidden = [
-    x for x in location.contents if not hasattr(x, "is_hiding") or not x.is_hiding]
-  for x in unhidden:
-    if x.key.lower().startswith(key.lower()):
-      return x
-  return None
-
-
 def unhidden_others(hider):
   unhidden = []
   for obj in hider.location.contents:
@@ -51,15 +38,6 @@ def num_unhidden_others(hider):
       or obj.is_typeclass("typeclasses.merchant.Merchant", exact=False)):
       num = num + 1
   return num
-
-
-def find_unhidden(searcher, key):
-  for x in searcher.location.contents:
-    if ((not hasattr(x, "is_hiding") or not x.is_hiding)
-      and x.key.lower().startswith(key.lower())):
-      return x
-  searcher.msg(f"Could not find '{key}'.")
-  return None
 
 
 def hide_object(hider, obj):

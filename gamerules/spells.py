@@ -1,8 +1,9 @@
 import random
 from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
+from gamerules.find import find_all_unhidden, find_first_unhidden
 from gamerules.freeze import freeze
-from gamerules.hiding import reveal, unhidden_object, unhidden_objects
+from gamerules.hiding import reveal
 from gamerules.spell_effect_kind import SpellEffectKind
 
 
@@ -384,7 +385,7 @@ def apply_distance_hurt_effect(spell, effect, caster,
     # deal damage, if any
     if behavior == DistanceSpellBehavior.DAMAGES_ENTIRE_PATH:
       # damage everyone unhidden in the room except the caster
-      for unhidden in unhidden_objects(current_room):
+      for unhidden in find_all_unhidden(current_room):
         if unhidden != caster and hasattr(unhidden, "gain_health"):
           caster.msg(f"The {spell.key} hits {unhidden.key} for {damage} damage.")
           if victim_desc:
@@ -394,7 +395,7 @@ def apply_distance_hurt_effect(spell, effect, caster,
           give_spell_damage(spell, caster, unhidden, damage)
     else:
       # single target; see if they're in this room
-      target = unhidden_object(current_room, distance_target_key)
+      target = find_first_unhidden(current_room, distance_target_key)
       if target and hasattr(target, "gain_health"):
         caster.msg(f"The {spell.key} hits {target.key} for {damage} damage.")
         if victim_desc:

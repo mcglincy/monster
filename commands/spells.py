@@ -2,7 +2,7 @@ from commands.command import QueuedCommand
 from evennia.utils.evmenu import get_input
 from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
-from gamerules.hiding import find_unhidden
+from gamerules.find import find_first_unhidden
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.spell_effect_kind import SpellEffectKind
 from gamerules.spells import can_cast_spell, cast_spell
@@ -59,7 +59,9 @@ class CmdCast(QueuedCommand):
       direction = Direction.from_string(self.input1)
       distance_target_key = self.input2
     elif self.spell.should_prompt:
-      target = find_unhidden(self.caller, self.input1)
+      target = find_first_unhidden(self.caller.location, self.input1)
+      if not target:
+        self.caller.msg(f"Could not find '{key}'.")      
       # we check for missing target later in cast_spell(),
       # so mana etc gets deducted properly
 

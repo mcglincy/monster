@@ -1,5 +1,7 @@
 from commands.command import QueuedCommand
-from gamerules.hiding import find_unhidden, hide, hide_object, reveal, search
+from gamerules.find import find_first_unhidden
+from gamerules.hiding import hide, hide_object, reveal, search
+
 
 
 class CmdHide(QueuedCommand):
@@ -14,7 +16,7 @@ class CmdHide(QueuedCommand):
     if self.args:
       # arg, trying to hide an object
       # must be unhidden in the room
-      obj = find_unhidden(self.caller, self.args.strip())
+      obj = find_first_unhidden(self.caller.location, self.args.strip())
       if obj is None:
         self.caller.msg("I see no such object here.")
         return

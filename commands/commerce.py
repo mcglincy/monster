@@ -1,5 +1,6 @@
 from commands.command import QueuedCommand
 from evennia.objects.models import ObjectDB
+from gamerules.find import find_first
 
 
 def find_merchant(location):
@@ -28,21 +29,22 @@ class CmdBuy(QueuedCommand):
       return
 
     # does the merchant have that object for sale?
-    objs = merchant.search(self.args.strip(), candidates=merchant.contents, quiet=True)
-    if len(objs) == 0 or objs[0] is None:
+    key = self.args.strip()
+    obj = find_first(merchant, key)
+    if not obj:
       self.caller.msg("Merchant doesn't have that for sale.")
       return
-    obj = objs[0]
 
     # does the buyer have enough gold?
     if self.caller.gold < obj.worth:
       self.caller.msg("You don't have enough gold.")
       return
 
+    # buy it!
     self.caller.gain_gold(-obj.worth)
-    self.caller.msg(f"You buy a {obj.key} for {obj.worth} gold.")
     # copy the object directly into the caller
     ObjectDB.objects.copy_object(obj, new_key=obj.key, new_location=self.caller)
+    self.caller.msg(f"You buy a {obj.key} for {obj.worth} gold.")
 
 
 class CmdSell(QueuedCommand):
@@ -57,8 +59,10 @@ class CmdSell(QueuedCommand):
       return False
 
   def inner_func(self):
-    obj = self.caller.search(self.args.strip(), candidates=self.caller.contents)
+    key = self.args.strip()
+    obj = find_first(self.caller, key)
     if not obj:
+      self.caller.msg(f"You aren't carrying {key}.")      
       return
 
     # is there a merchant in the room?
@@ -82,5 +86,6 @@ class CmdSell(QueuedCommand):
     sell_price = int(obj.worth / 2)
     self.caller.msg(f"You sell a {obj.key} for {sell_price} gold.")
     self.caller.gain_gold(sell_price)
+    # TODO: do we want to call obj.at_drop()?
     obj.delete()
 
