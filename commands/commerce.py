@@ -79,7 +79,8 @@ class CmdSell(QueuedCommand):
       self.caller.msg("You can't sell gold.")
       return
 
-    self.caller.msg(f"You sell a {obj.key} for {obj.worth} gold.")
-    self.caller.gain_gold(obj.worth)
+    sell_price = int(obj.worth / 2)
+    self.caller.msg(f"You sell a {obj.key} for {sell_price} gold.")
+    self.caller.gain_gold(sell_price)
     obj.delete()
 
