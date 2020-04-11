@@ -27,7 +27,8 @@ class CmdAttack(QueuedCommand):
 
   def inner_func(self):
     # check the target after pre_freeze and immediately before resolving attack
-    self.target = find_first_unhidden(self.caller.location, self.args.strip())
+    key = self.args.strip()
+    self.target = find_first_unhidden(self.caller.location, key)
     if not self.target:
       self.caller.msg(f"Could not find '{key}'.")      
       return
@@ -55,7 +56,8 @@ class CmdPunch(QueuedCommand):
 
   def inner_func(self):
     # check the target after pre_freeze and immediately before resolving attack
-    self.target = find_first_unhidden(self.caller.location, self.args.strip())
+    key = self.args.strip()    
+    self.target = find_first_unhidden(self.caller.location, key)
     if not self.target:
       self.caller.msg(f"Could not find '{key}'.")
       return

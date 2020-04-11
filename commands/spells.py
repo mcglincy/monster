@@ -59,7 +59,8 @@ class CmdCast(QueuedCommand):
       direction = Direction.from_string(self.input1)
       distance_target_key = self.input2
     elif self.spell.should_prompt:
-      target = find_first_unhidden(self.caller.location, self.input1)
+      key = self.input1
+      target = find_first_unhidden(self.caller.location, key)
       if not target:
         self.caller.msg(f"Could not find '{key}'.")      
       # we check for missing target later in cast_spell(),
