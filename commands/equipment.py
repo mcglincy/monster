@@ -1,4 +1,5 @@
 from commands.command import QueuedCommand
+from gamerules.find import find_first
 from gamerules.equipment_slot import EquipmentSlot
 
 
@@ -11,8 +12,10 @@ class CmdEquip(QueuedCommand):
     if not self.args:
       self.show_currently_equipped()
       return
-    obj = self.caller.search(self.args.strip(), candidates=self.caller.contents)
+    key = self.args.strip()
+    obj = find_first(self.caller, key)
     if not obj:
+      self.caller.msg(f"You're not carrying {key}".)
       return
     self.caller.equip(obj)
 
@@ -36,8 +39,10 @@ class CmdUnequip(QueuedCommand):
     if not self.args:
       self.caller.msg("Usage: unequip <obj>")
       return
-    obj = self.caller.search(self.args.strip(), candidates=self.caller.contents)
+    key = self.args.strip()
+    obj = find_first(self.caller, key)
     if not obj:
+      self.caller.msg(f"You're not carrying {key}".)
       return
     if obj.db.cursed:
       self.caller.msg(f"The {obj.key} is cursed.")
