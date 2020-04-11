@@ -286,14 +286,6 @@ class Character(DefaultCharacter):
     return alignment
 
   @property
-  def max_health(self):
-    return self.base_plus_level_attr("base_health", "level_health")
-
-  @property
-  def max_mana(self):
-    return self.base_plus_level_attr("base_mana", "level_mana")
-
-  @property
   def is_dead(self):
     return self.db.health <= 0
 
@@ -313,6 +305,30 @@ class Character(DefaultCharacter):
   @property
   def is_resting(self):
     return self.ndb.resting
+
+  @property
+  def base_health(self):
+    return self.class_plus_equipped_attr("base_health")
+
+  @property
+  def level_health(self):
+    return self.class_plus_equipped_attr("level_health")
+
+  @property
+  def max_health(self):
+    return self.base_health + self.level_health * self.level
+
+  @property
+  def base_mana(self):
+    return self.class_plus_equipped_attr("base_mana")
+
+  @property
+  def level_mana(self):
+    return self.class_plus_equipped_attr("level_mana")
+
+  @property
+  def max_mana(self):
+    return self.base_mana + self.level_mana * self.level
 
   @property
   def attack_speed(self):
@@ -336,12 +352,6 @@ class Character(DefaultCharacter):
     return self.character_class.hide_delay
 
   # our damage, armor, etc is the sum of our equipped objects
-
-  def base_plus_level_attr(self, base_attr_name, level_attr_name):
-    clazz = self.character_class
-    base_val = getattr(clazz, base_attr_name)
-    level_val = getattr(clazz, level_attr_name)
-    return base_val + level_val * self.level
 
   def equipped_attr(self, attr_name):
     # TODO: there may be None values in the dict post-dequip
@@ -376,7 +386,7 @@ class Character(DefaultCharacter):
 
   @property
   def total_weapon_use(self):
-    return self.base_plus_level_attr("base_weapon_use", "level_weapon_use")
+    return self.base_weapon_use + self.level_weapon_use * self.level
 
   @property
   def base_armor(self):
@@ -410,7 +420,7 @@ class Character(DefaultCharacter):
 
   @property
   def total_claw_damage(self):
-    return self.base_plus_level_attr("base_claw_damage", "level_claw_damage")
+    return self.base_claw_damage + self.level_claw_damage * self.level
 
   @property
   def random_claw_damage(self):
@@ -430,7 +440,7 @@ class Character(DefaultCharacter):
 
   @property
   def total_move_silent(self):
-    return self.base_plus_level_attr("base_move_silent", "level_move_silent")
+    return self.base_move_silent + self.level_move_silent * self.level
 
   @property
   def base_steal(self):
@@ -442,7 +452,7 @@ class Character(DefaultCharacter):
 
   @property
   def total_steal(self):
-    return self.base_plus_level_attr("base_steal", "level_steal")
+    return self.base_steal + self.level_steal * self.level
 
   @property
   def poison_chance(self):
