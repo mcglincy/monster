@@ -35,7 +35,7 @@ class CmdSheet(QueuedCommand):
     table = self.styled_table(
       "|wCharacter Sheet",
     )
-    table.add_row(f"Name         : {utils.crop(account.get_display_name(account), width=25)}")
+    table.add_row(f"Name         : {utils.crop(character.name, width=25)}")
     table.add_row(f"Class        : {character.character_class.key}")
     table.add_row(f"Alignment    : {character.alignment.name.lower()}")
     table.add_row(f"Size         : {character.size}'")
