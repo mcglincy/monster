@@ -15,7 +15,7 @@ class CmdEquip(QueuedCommand):
     key = self.args.strip()
     obj = find_first(self.caller, key)
     if not obj:
-      self.caller.msg(f"You're not carrying {key}".)
+      self.caller.msg(f"You're not carrying {key}.")
       return
     self.caller.equip(obj)
 
@@ -42,7 +42,7 @@ class CmdUnequip(QueuedCommand):
     key = self.args.strip()
     obj = find_first(self.caller, key)
     if not obj:
-      self.caller.msg(f"You're not carrying {key}".)
+      self.caller.msg(f"You're not carrying {key}.")
       return
     if obj.db.cursed:
       self.caller.msg(f"The {obj.key} is cursed.")
