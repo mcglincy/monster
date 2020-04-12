@@ -40,10 +40,10 @@ def resolve_attack(attacker, target):
 
   # attack message for attacker
   attack_name = weapon.key if weapon else "claws"
-  attacker.msg(attack_attacker_msg(target.name, attack_name, damage))
+  attacker.msg("|w" + attack_attacker_msg(target.name, attack_name, damage))
 
   # attack message for target
-  target.msg(attack_target_msg(attacker.name, attack_name, damage))
+  target.msg("|w" + attack_target_msg(attacker.name, attack_name, damage))
 
   # attack message for room bystanders
   location_msg = attack_bystander_msg(attacker.name, target.name, attack_name, damage)

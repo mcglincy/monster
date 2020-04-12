@@ -104,12 +104,13 @@ def cast_spell(caster, spell, target=None,
 
 def send_cast_messages(caster, spell):
   # TODO: handle spell.silent checks for messaging
-  caster.msg(f"You cast {spell.key}.")
-  caster.location.msg_contents(
-    f"{caster.key} casts {spell.key}.", exclude=[caster])
   # where should caster_desc be sent? cast or effect?
   if spell.caster_desc:
-    caster.msg(spell.caster_desc)
+    caster.msg("|w" + spell.caster_desc)
+  else:
+    caster.msg(f"|wYou cast {spell.key}.")
+  caster.location.msg_contents(
+    f"{caster.key} casts {spell.key}.", exclude=[caster])
 
 
 # TODO: figure out distance vs. not for messaging
@@ -121,9 +122,9 @@ def send_effect_messages(caster, spell, target):
   if spell.victim_desc:
     victim_desc = spell.victim_desc.replace("#", caster.key)
     if spell.affects_room:
-      caster.location.msg_contents(victim_desc, exclude=[caster])
+      caster.location.msg_contents("|w" + victim_desc, exclude=[caster])
     elif target:
-      target.msg(victim_desc)
+      target.msg("|w" + victim_desc)
 
 
 def is_targetable(obj):
@@ -223,14 +224,14 @@ def apply_cure_poison_effect(effect, caster, targets):
     if is_poison:
       if not target.is_poisoned:
         target.ndb.poisoned = False
-        target.msg("Your blood begins to boil!")
+        target.msg("|wYour blood begins to boil!")
         target.location.msg_contents(
           f"{target.name} is poisoned!", exclude=[target])
     else:
       # cure
       if target.is_poisoned:
         target.ndb.poisoned = False
-        target.msg("Your blood runs clean.")
+        target.msg("|wYour blood runs clean.")
         target.location.msg_contents(
           f"{target.name} is no longer poisoned.", exclude=[target])
 
@@ -389,7 +390,7 @@ def apply_distance_hurt_effect(spell, effect, caster,
         if unhidden != caster and hasattr(unhidden, "gain_health"):
           caster.msg(f"The {spell.key} hits {unhidden.key} for {damage} damage.")
           if victim_desc:
-            unhidden.msg(victim_desc)
+            unhidden.msg("|w" + victim_desc)
           current_room.msg_contents(f"{unhidden.key} is hit by {caster.key}'s {spell.key}.",
             exclude=[caster, unhidden])
           give_spell_damage(spell, caster, unhidden, damage)

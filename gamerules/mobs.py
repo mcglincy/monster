@@ -6,8 +6,6 @@ from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 
-
-
 def resolve_mob_attack(mob, target, attack_name="claws"):
   if target.is_dead:
     # already dead
@@ -18,7 +16,7 @@ def resolve_mob_attack(mob, target, attack_name="claws"):
   damage = mob_attack_damage(mob, is_surprise)
 
   # attack message for target
-  target.msg(attack_target_msg(mob.name, attack_name, damage))
+  target.msg("|w" + attack_target_msg(mob.name, attack_name, damage))
 
   # attack message for room bystanders
   location_msg = attack_bystander_msg(mob.name, target.name, attack_name, damage)
