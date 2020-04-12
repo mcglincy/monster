@@ -1,3 +1,4 @@
+import random
 from evennia import TICKER_HANDLER
 
 
@@ -92,5 +93,5 @@ class TickerMixin:
     if not exits:
       return
     if random.randint(0, 100) < self.location.db.trap_chance:
-      # away they go!
+      # away we go!
       exits[0].at_traverse(self, exits[0].destination)  
