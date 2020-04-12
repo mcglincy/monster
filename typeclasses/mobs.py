@@ -5,6 +5,7 @@ from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.tickers import add_health_ticker, TickerKind
 from gamerules.mob_kind import MobKind
 from gamerules.mobs import mob_death, resolve_mob_attack
+from gamerules.ticker_mixin import TickerMixin
 from gamerules.xp import level_from_xp
 from typeclasses.objects import Object
 
@@ -15,7 +16,7 @@ from typeclasses.objects import Object
 #   etc
 
 
-class Mob(Object):
+class Mob(Object, TickerMixin):
   """Non-player monster aka mob aka Monster 'random'.
 
   Ticker code lifted from evennia.contrib.tutorial_world.mob.
@@ -85,31 +86,17 @@ class Mob(Object):
   def at_init(self):
     self.ndb.hiding = 0
     self.ndb.poisoned = False
-    self.ndb.ticker_keys = {}    
-    add_health_ticker(self)
-    #add_mana_ticker(self)
+    self.add_health_ticker()
+    #self.add_mana_ticker()
     self.ndb.is_patrolling = self.db.patrolling
     self.ndb.is_attacking = False
     self.ndb.is_hunting = False    
     self.start_patrolling()
 
-  # TODO: DRY add_ticker / remove_ticker with Character. Mixin?
-  def add_ticker(self, ticker_kind, interval, callback):
-    id_string = f"tick_{ticker_kind.name.lower()}_{self.key}"
-    store_key = TICKER_HANDLER.add(interval, callback, id_string, False, self)
-    self.ndb.ticker_keys[ticker_kind] = store_key
-
-  def remove_ticker(self, ticker_kind):
-    try:
-      TICKER_HANDLER.remove(store_key=self.ndb.ticker_keys[ticker_kind])
-    except KeyError:
-      pass
-    del self.ndb.ticker_keys[ticker_kind]
-
   def at_object_delete(self):
     # kill tickers
     self.start_idle()
-    self.remove_ticker(TickerKind.HEALTH)
+    self.remove_health_ticker()
 
   def at_new_arrival(self, new_character):
     """This is triggered whenever a new character enters the room.

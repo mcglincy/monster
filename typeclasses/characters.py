@@ -21,12 +21,12 @@ from gamerules.gold import give_starting_gold
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.mana import MIN_MANA
 from gamerules.talk import msg_global
-from gamerules.tickers import add_health_ticker, add_mana_ticker, add_mob_generator_ticker, add_trapdoor_ticker
+from gamerules.ticker_mixin import TickerMixin
 from gamerules.xp import MIN_XP, level_from_xp
 from userdefined.models import CharacterClass
 
 
-class Character(DefaultCharacter):
+class Character(DefaultCharacter, TickerMixin):
   """
   The Character defaults to reimplementing some of base Object's hook methods with the
   following functionality:
@@ -74,8 +74,6 @@ class Character(DefaultCharacter):
       self.db.mana = 0
     if self.db.brief_descriptions is None:
       self.db.brief_descriptions = False      
-    # TODO: support various equipment slots
-    # checking None to set None is pointless
     if self.db.gold_in_bank is None:
       self.db.gold_in_bank = 0
     if self.db.equipment is None:
@@ -89,23 +87,6 @@ class Character(DefaultCharacter):
     self.ndb.hiding = 0
     self.ndb.poisoned = False
     self.ndb.resting = False
-    self.ndb.ticker_keys = {}
-    add_health_ticker(self)
-    add_mana_ticker(self)
-    add_mob_generator_ticker(self)
-    add_trapdoor_ticker(self)
-
-  def add_ticker(self, ticker_kind, interval, callback):
-    id_string = f"tick_{ticker_kind.name.lower()}_{self.key}"
-    store_key = TICKER_HANDLER.add(interval, callback, id_string, False, self)
-    self.ndb.ticker_keys[ticker_kind] = store_key
-
-  def remove_ticker(self, ticker_kind):
-    try:
-      TICKER_HANDLER.remove(store_key=self.ndb.ticker_keys[ticker_kind])
-    except KeyError:
-      pass
-    del self.ndb.ticker_keys[ticker_kind]
 
   def at_post_puppet(self, **kwargs):
     super().at_post_puppet(**kwargs)
@@ -113,10 +94,19 @@ class Character(DefaultCharacter):
     # TODO: add date, maybe replace super() call
     # "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm.
     self.msg(f"Welcome back, {self.name}.")
+    # idempotent ticker adds
+    self.add_health_ticker()
+    self.add_mana_ticker()
+    self.add_mob_generator_ticker()
+    self.add_trapdoor_ticker()
 
   def at_post_unpuppet(self, account, session=None, **kwargs):
     super().at_post_unpuppet(account, session, **kwargs)
     msg_global(f"({self.name} has returned to sleep.)")
+    self.remove_health_ticker()
+    self.remove_mana_ticker()
+    self.remove_mob_generator_ticker()
+    self.remove_trapdoor_ticker()
 
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
