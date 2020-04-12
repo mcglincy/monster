@@ -57,12 +57,6 @@ class Character(DefaultCharacter, TickerMixin):
     # TODO: dragging in the CharacterClass model f's with evennia's
     # initial creation of god_character, so we can't refer to max_health(), 
     # max_mana(), etc in at_object_created() / set_field_defaults().
-    self.ndb.active_command = None
-    self.ndb.command_queue = deque()
-    self.ndb.frozen_until = 0
-    self.ndb.hiding = 0
-    self.ndb.poisoned = False
-    self.ndb.resting = False
     if self.db.character_class_key is None:
       self.db.character_class_key = "Gnoll"
       self.ndb.character_class = None
@@ -79,13 +73,17 @@ class Character(DefaultCharacter, TickerMixin):
     if self.db.equipment is None:
       # dict of {EquipmentSlot:object}
       self.db.equipment = {}
+    if self.db.poisoned is None:
+      self.db.poisoned = False
   
   def at_init(self):
+    self.reset_transient_state()
+
+  def reset_transient_state(self):
     self.ndb.active_command = None
     self.ndb.command_queue = deque()
     self.ndb.frozen_until = 0
     self.ndb.hiding = 0
-    self.ndb.poisoned = False
     self.ndb.resting = False
 
   def at_post_puppet(self, **kwargs):
@@ -94,6 +92,7 @@ class Character(DefaultCharacter, TickerMixin):
     # TODO: add date, maybe replace super() call
     # "Welcome back, King Kickass.  Your last play was on 24-FEB-1991 at 3:35pm.
     self.msg(f"Welcome back, {self.name}.")
+    self.reset_transient_state()
     # idempotent ticker adds
     self.add_health_ticker()
     self.add_mana_ticker()
@@ -290,7 +289,7 @@ class Character(DefaultCharacter, TickerMixin):
 
   @property
   def is_poisoned(self):
-    return self.ndb.poisoned
+    return self.db.poisoned
 
   @property
   def is_resting(self):

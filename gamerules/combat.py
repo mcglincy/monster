@@ -59,7 +59,7 @@ def resolve_attack(attacker, target):
       target.msg(f"You've been poisoned by {attacker.name}'s {attack_name}!")
       attacker.location.msg_contents(
         f"{attacker.name} has poisoned {target.name}!", exclude=[attacker, target])
-      target.ndb.poisoned = True
+      target.db.poisoned = True
 
   # target takes the damage, and maybe dies
   target.gain_health(-damage, damager=attacker, weapon_name=attack_name)
@@ -195,9 +195,9 @@ def character_death(victim, killer=None, weapon_name=None):
 def reset_victim_state(victim):
   # victim.db.health = 1
   victim.db.mana = 0
+  victim.db.poisoned = False
   victim.ndb.active_command = None
   victim.ndb.command_queue.clear()
   victim.ndb.frozen_until = 0
   victim.ndb.hiding = 0
-  victim.ndb.poisoned = False
   victim.ndb.resting = False

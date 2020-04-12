@@ -79,12 +79,12 @@ class Mob(Object, TickerMixin):
     self.db.health = self.db.max_health
     self.db.max_mana = self.db.base_mana
     self.db.mana = self.db.max_mana
+    self.db.poisoned = False
     # call at_init() to add tickers and kickstart the mob
     self.at_init()
 
   def at_init(self):
     self.ndb.hiding = 0
-    self.ndb.poisoned = False
     self.add_health_ticker()
     #self.add_mana_ticker()
     self.ndb.is_patrolling = self.db.patrolling
@@ -172,7 +172,7 @@ class Mob(Object, TickerMixin):
 
   @property
   def is_poisoned(self):
-    return self.ndb.poisoned
+    return self.db.poisoned
 
   @property
   def attack_name(self):

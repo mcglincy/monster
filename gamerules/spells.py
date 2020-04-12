@@ -223,14 +223,14 @@ def apply_cure_poison_effect(effect, caster, targets):
   for target in targets:
     if is_poison:
       if not target.is_poisoned:
-        target.ndb.poisoned = False
+        target.db.poisoned = False
         target.msg("|wYour blood begins to boil!")
         target.location.msg_contents(
           f"{target.name} is poisoned!", exclude=[target])
     else:
       # cure
       if target.is_poisoned:
-        target.ndb.poisoned = False
+        target.db.poisoned = False
         target.msg("|wYour blood runs clean.")
         target.location.msg_contents(
           f"{target.name} is no longer poisoned.", exclude=[target])
