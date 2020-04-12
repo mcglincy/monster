@@ -41,3 +41,15 @@ Go down to begin your adventure!
 #
 @spawn {"prototype_key": "shopkeeper", "prototype_parent": "curio_merchant", "key": "Shopkeeper"}
 #
+# Get rid of cheater XP door
+#
+@tel Upper Crypt
+#
+@set west/exit_kind = 0
+#
+@set west/password = 
+#
+@set west/exit_effect_kind = 0
+#
+@set west/exit_effect_value = 0
+#
