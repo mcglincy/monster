@@ -9126,6 +9126,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 0
 #
+@lock north = view:none()
+#
 @lock north = traverse:none()
 #
 @set north/go_in_msg = # disappears from view!
@@ -9162,9 +9164,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 1
 #
-@lock up = traverse:none()
-#
 @set up/password = "climb"
+#
+@lock up = view:none()
+#
+@lock up = traverse:none()
 #
 @set up/exit_desc = A ray of sunlight beams down from the city above.
 #
@@ -9638,9 +9642,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = traverse:none()
-#
 @set down/password = "pry"
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
 #
 @set down/success_msg = Prying a stone loose, you throw caution to the wind and jump down into the black grave! 
 #
@@ -9678,17 +9684,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "death"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @open south;s;duty = room_90
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "duty"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @open east;e = room_31
 #
@@ -9698,17 +9708,21 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = traverse:none()
-#
 @set west/password = "persistance"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @open down;d;life = room_33
 #
 @set down/exit_kind = 1
 #
-@lock down = traverse:none()
-#
 @set down/password = "life"
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
 #
 @tel room_33
 #
@@ -9746,9 +9760,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "senethari"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @open east;e = room_90
 #
@@ -9763,6 +9779,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open down;d = room_37
 #
 @set down/exit_kind = 0
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -9942,9 +9960,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 8
 #
-@lock south = traverse:none()
-#
 @set south/password = "!!rawg"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @set south/exit_desc = There is a large round wooden door set in the south wall.
 #
@@ -10070,9 +10090,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = traverse:none()
-#
 @set down/password = "push"
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
 #
 @tel room_55
 #
@@ -10512,6 +10534,10 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
+@set down/password = "stayout"
+#
+@lock down = view:none()
+#
 @set down/exit_desc = Some half hidden steps lead down.
 #
 @tel room_81
@@ -10555,6 +10581,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open west;w = room_442
 #
 @set west/exit_kind = 0
+#
+@lock west = view:none()
 #
 @lock west = traverse:none()
 #
@@ -10706,6 +10734,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 0
 #
+@lock down = view:none()
+#
 @lock down = traverse:none()
 #
 @set down/success_msg = The dreaded Wyldibeast pops up, clubs you over the head, and carries you off!!
@@ -10789,6 +10819,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open down;d = room_716
 #
 @set down/exit_kind = 0
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -10892,9 +10924,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = traverse:none()
-#
 @set down/password = "drown"
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
 #
 @set down/fail_msg = Go down? What do you want to do..Drown?! 
 #
@@ -11002,9 +11036,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 0
 #
-@lock up = traverse:none()
-#
 @set up/password = "dorkboy"
+#
+@lock up = view:none()
+#
+@lock up = traverse:none()
 #
 @set up/exit_desc = Some steps lead up to a turret room, which has a solidly locked door.
 #
@@ -11258,6 +11294,12 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 2
 #
+@set up/password = "sleep"
+#
+@lock up = view:none()
+#
+@lock up = traverse:none()
+#
 @set up/success_msg = As you fall asleep, you embark upon a wondrous dream that seems more real than is possible. Darkness swoops down upon you, and you feel your mind leaving your body to walk upon the road of dreams... 
 #
 @set up/required_object = "Dreaming Stone"
@@ -11438,7 +11480,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = view:perm(see_hidden_exits)
+@set north/hidden_desc = You have found a hidden tunnel leading north!
+#
+@set north/hiding = 1
+#
+@lock north = traverse:none(); view:perm(see_hidden)
 #
 @open east;e = room_147
 #
@@ -11525,6 +11571,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open north;n = room_547
 #
 @set north/exit_kind = 0
+#
+@lock north = view:none()
 #
 @lock north = traverse:none()
 #
@@ -12184,9 +12232,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 8
 #
-@lock east = traverse:none()
-#
 @set east/password = "rogodobob"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/exit_desc = A carved door with a large lock is set in the eastern wall.
 #
@@ -12293,6 +12343,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open up;u = room_164
 #
 @set up/exit_kind = 0
+#
+@lock up = view:none()
 #
 @lock up = traverse:none()
 #
@@ -12930,9 +12982,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 8
 #
-@lock east = traverse:none()
-#
 @set east/password = "hermathya"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/exit_desc = A heavy door of blackened wood lies east.
 #
@@ -13436,9 +13490,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 1
 #
-@lock up = traverse:none()
-#
 @set up/password = "climb"
+#
+@lock up = view:none()
+#
+@lock up = traverse:none()
 #
 @set up/success_msg = You step inside the fireplace, and climb up the chimney with little difficulty. 
 #
@@ -13450,9 +13506,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 8
 #
-@lock south = traverse:none()
-#
 @set south/password = "gargantuan"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @set south/go_in_msg = # masturbates furiously, and dissappears.
 #
@@ -13460,9 +13518,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "magpie"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/go_in_msg = # masturbates furiously.
 #
@@ -13562,9 +13622,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "tutt"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/exit_effect_kind = 8
 #
@@ -13574,9 +13636,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = traverse:none()
-#
 @set west/password = "tutt1"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @set west/exit_effect_kind = 1
 #
@@ -13826,9 +13890,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = traverse:none()
-#
 @set west/password = "alfrion"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @set west/fail_msg = The city's ancient gates have been sealed, and blocked by debris!
 #
@@ -14108,9 +14174,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "druidslayer"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @set south/fail_msg = You are unable to breach this doors magical defense!
 #
@@ -14264,9 +14332,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "rhetinoid"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @set north/success_msg = By the power of the dark forces you are transformed into a Hobgoblin!
 #
@@ -14282,7 +14352,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = view:perm(see_hidden_exits)
+@set south/hidden_desc = You have found a hidden passage leading south!
+#
+@set south/hiding = 1
+#
+@lock south = traverse:none(); view:perm(see_hidden)
 #
 @open east;e = room_317
 #
@@ -14294,9 +14368,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 8
 #
-@lock west = traverse:none()
-#
 @set west/password = "ghobabob"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @set west/exit_desc = An immense wave of heat shimmers west.
 #
@@ -14364,6 +14440,10 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
+@set east/password = "exit"
+#
+@lock east = view:none()
+#
 @set east/exit_desc = You may exit the shop to the east.
 #
 @tel room_324
@@ -14378,9 +14458,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "blzeebub"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @set south/success_msg = Upon uttering the long forgotten words you are transformed...
 #
@@ -14520,9 +14602,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "adalabbak"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @open up;u = room_331
 #
@@ -14828,6 +14912,12 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 2
 #
+@set up/password = "asmodeus"
+#
+@lock up = view:none()
+#
+@lock up = traverse:none()
+#
 @set up/success_msg = You feel yourself losing solidity, as you are drawn upward along an etheral passage into the flame, and beyond. White hot fire blinds you momentarily, and when you can see again you find yourself in a strange new place.... 
 #
 @set up/go_in_msg = # suddenly dissolves into a wisp of smoke, and is drawn upwards into the flame!
@@ -14906,9 +14996,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "spectre"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @open south;s = room_355
 #
@@ -14928,9 +15020,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "tezcatlipoca"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @set north/go_in_msg = A beam of darkness absorbs # !
 #
@@ -14943,6 +15037,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open east;e = room_650
 #
 @set east/exit_kind = 0
+#
+@lock east = view:none()
 #
 @lock east = traverse:none()
 #
@@ -14996,6 +15092,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 0
 #
+@lock north = view:none()
+#
 @lock north = traverse:none()
 #
 @open up;u = room_423
@@ -15048,9 +15146,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "old"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @set north/exit_desc = Type OLD if you are a venerable player.
 #
@@ -15062,9 +15162,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "out"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @set south/exit_desc = Type OUT if you want OUT of here.
 #
@@ -15076,9 +15178,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "new"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/exit_desc = Type NEW if you are a whiney new player.
 #
@@ -15103,6 +15207,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open east;e = room_368
 #
 @set east/exit_kind = 0
+#
+@lock east = view:none()
 #
 @lock east = traverse:none()
 #
@@ -15249,6 +15355,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open down;d = room_577
 #
 @set down/exit_kind = 8
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -15440,11 +15548,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 0
 #
+@lock up = view:none()
+#
 @lock up = traverse:none()
 #
 @open down;d = room_388
 #
 @set down/exit_kind = 0
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -15463,6 +15575,10 @@ be heard.  It seems as though the water is down and behind the wall.
 @open south;s;open = room_390
 #
 @set south/exit_kind = 4
+#
+@set south/password = "open"
+#
+@lock south = view:none()
 #
 @set south/exit_desc = You may open the door, and enter the building, if you wish.
 #
@@ -15986,6 +16102,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 0
 #
+@lock up = view:none()
+#
 @lock up = traverse:none()
 #
 @tel room_422
@@ -16020,7 +16138,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = view:perm(see_hidden_exits)
+@set down/hidden_desc = You find a moving panel which conceals a set of steps leading down into a basement.
+#
+@set down/hiding = 1
+#
+@lock down = traverse:none(); view:perm(see_hidden)
 #
 @tel room_424
 #
@@ -16059,6 +16181,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open down;d = room_425
 #
 @set down/exit_kind = 0
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -16156,7 +16280,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 2
 #
-@lock down = view:perm(see_hidden_exits)
+@set down/password = "sataki"
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
+#
+@set down/hidden_desc = You find a loose panel concealing some steps leading down.
+#
+@set down/hiding = 1
+#
+@lock down = traverse:none(); view:perm(see_hidden)
 #
 @set down/success_msg = As you speak the word, a magical portal opens in the floor, allowing you to descend... 
 #
@@ -16206,17 +16340,25 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 0
 #
+@lock up = view:none()
+#
 @lock up = traverse:none()
 #
 @open down;d;lift = room_4
 #
 @set down/exit_kind = 1
 #
-@lock down = view:perm(see_hidden_exits)
+@set down/password = "lift"
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
-@set down/password = "lift"
+@set down/hidden_desc = You notice a small grate set into the cobblestones.
+#
+@set down/hiding = 1
+#
+@lock down = traverse:none(); view:perm(see_hidden)
 #
 @set down/fail_msg = The sewers are a dangerous place...
 #
@@ -16258,6 +16400,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 0
 #
+@lock north = view:none()
+#
 @lock north = traverse:none()
 #
 @set north/success_msg = Some of the city's Guardsmen beat you up for loitering, and drag you away from the glitter of Ship Island and deposit you somewhere else...
@@ -16279,6 +16423,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open up;u = room_399
 #
 @set up/exit_kind = 0
+#
+@lock up = view:none()
 #
 @lock up = traverse:none()
 #
@@ -16382,9 +16528,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 8
 #
-@lock up = traverse:none()
-#
 @set up/password = "totally"
+#
+@lock up = view:none()
+#
+@lock up = traverse:none()
 #
 @open down;d = room_442
 #
@@ -16398,9 +16546,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "useth"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/success_msg = Upon uttering the name of 'Useth', a panel of iron pivots slightly to allow passage. You squeeze through, and it closes behind you... 
 #
@@ -16478,9 +16628,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "taste"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @set north/success_msg = Against your better judgement, you bring the thick, crimson liquid of the  pool to your mouth. The salty taste of it slowly courses through your body, and your vision blurs. When it returns, you see through a reddish haze. The cave looks distorted and unreal, as if you have slipped through another reality. You see a new opening to the north, and instinctively slip through it before you lose consciousness...  You awake to find yourself in a new location. 
 #
@@ -16508,9 +16660,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "makemetrol"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/success_msg = Chet whops you on the head with his bowling bowl for mega damage !!!!
 #
@@ -16558,9 +16712,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 8
 #
-@lock north = traverse:none()
-#
 @set north/password = "cctds"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @open south;s = room_449
 #
@@ -16622,9 +16778,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = traverse:none()
-#
 @set down/password = "lift"
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
 #
 @set down/success_msg = You lift the large trap door, and slip down into the darkness below.
 #
@@ -16878,6 +17036,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 0
 #
+@lock south = view:none()
+#
 @lock south = traverse:none()
 #
 @set south/exit_desc = A door is south.
@@ -16888,9 +17048,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "quetzalcoatl"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/success_msg = Upon uttering the magical word, a door opens in the eastern wall of this room, and you are sucked through it by a great gust of air. 
 #
@@ -16910,7 +17072,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = view:perm(see_hidden_exits)
+@set west/hidden_desc = You have found a hidden doorway leading west.
+#
+@set west/hiding = 1
+#
+@lock west = traverse:none(); view:perm(see_hidden)
 #
 @tel room_475
 #
@@ -16924,9 +17090,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 8
 #
-@lock east = traverse:none()
-#
 @set east/password = "demonlord"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/exit_desc = A stout door, requiring a magical password, lies east.
 #
@@ -17210,7 +17378,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = view:perm(see_hidden_exits)
+@set down/hidden_desc = You discover an endless pit!
+#
+@set down/hiding = 1
+#
+@lock down = traverse:none(); view:perm(see_hidden)
 #
 @tel room_492
 #
@@ -17286,7 +17458,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = view:perm(see_hidden_exits)
+@set down/hidden_desc = You find a way out!
+#
+@set down/hiding = 1
+#
+@lock down = traverse:none(); view:perm(see_hidden)
 #
 @tel room_495
 #
@@ -17376,6 +17552,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 0
 #
+@lock west = view:none()
+#
 @lock west = traverse:none()
 #
 @set west/success_msg = The moldy wood of the steps gives way underneath you, and you fall heavily down the stairs towards the ground below! 
@@ -17411,6 +17589,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open down;d = room_57
 #
 @set down/exit_kind = 0
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -17486,9 +17666,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "manannan"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/exit_desc = The coral wall is east.
 #
@@ -17677,6 +17859,12 @@ be heard.  It seems as though the water is down and behind the wall.
 @open down;d;phase = room_549
 #
 @set down/exit_kind = 2
+#
+@set down/password = "phase"
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
 #
 @set down/success_msg = You find yourself passing unharmed through the frozen walls. 
 #
@@ -18302,6 +18490,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 0
 #
+@lock up = view:none()
+#
 @lock up = traverse:none()
 #
 @set up/success_msg = A fish jumps up, splashing you with cool water. You feel refreshed.
@@ -18552,6 +18742,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 0
 #
+@lock up = view:none()
+#
 @lock up = traverse:none()
 #
 @tel room_553
@@ -18635,6 +18827,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open down;d = room_558
 #
 @set down/exit_kind = 0
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -18784,9 +18978,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set up/exit_kind = 8
 #
-@lock up = traverse:none()
-#
 @set up/password = "keebler"
+#
+@lock up = view:none()
+#
+@lock up = traverse:none()
 #
 @set up/exit_desc = A formidible stone portal is set in the ceiling.
 #
@@ -18874,9 +19070,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = traverse:none()
-#
 @set west/password = "zababar"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @set west/fail_msg = Where are you going? This is an infinite plain!
 #
@@ -19072,9 +19270,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 8
 #
-@lock west = traverse:none()
-#
 @set west/password = "dorkus"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @open up;u = room_616
 #
@@ -19334,9 +19534,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = traverse:none()
-#
 @set west/password = "frognar"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @open down;d = room_629
 #
@@ -19766,9 +19968,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "benedriven"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @set north/success_msg = Upon uttering the magic words a magical wave sweeps down upon you, pushing you forward through the walls of the chamber into a new place... 
 #
@@ -19786,9 +19990,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = traverse:none()
-#
 @set west/password = "deus"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @set west/exit_desc = A blue portal is west.
 #
@@ -19904,7 +20110,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = view:perm(see_hidden_exits)
+@set east/hidden_desc = The passage runs north and south from this point.
+#
+@set east/hiding = 1
+#
+@lock east = traverse:none(); view:perm(see_hidden)
 #
 @open west;w = room_666
 #
@@ -20072,7 +20282,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = view:perm(see_hidden_exits)
+@set west/hidden_desc = The passage runs north and south from this point.
+#
+@set west/hiding = 1
+#
+@lock west = traverse:none(); view:perm(see_hidden)
 #
 @tel room_663
 #
@@ -20280,9 +20494,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = traverse:none()
-#
 @set west/password = "prostrate"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @set west/success_msg = Upon submitting yourself to the Grand Lich you feel intense, unbearable pain, as your flesh is burned and ripped from your body. You feel yourself screaming in terror as memories are being torn from your mind to feed the desires of your undead Master. All that WAS you is fleeing, leaving only a blackened shell of what was once a living being... 
 #
@@ -20328,9 +20544,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "avalon"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @set south/exit_desc = The doorway is south.
 #
@@ -20368,9 +20586,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "ring"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @set south/exit_desc = A small door is in the south wall.
 #
@@ -20392,6 +20612,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 0
 #
+@lock north = view:none()
+#
 @lock north = traverse:none()
 #
 @set north/exit_desc = The door you entered by is north.
@@ -20409,6 +20631,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open east;e = room_683
 #
 @set east/exit_kind = 0
+#
+@lock east = view:none()
 #
 @lock east = traverse:none()
 #
@@ -20462,6 +20686,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 0
 #
+@lock north = view:none()
+#
 @lock north = traverse:none()
 #
 @set north/exit_effect_kind = 4
@@ -20479,6 +20705,8 @@ be heard.  It seems as though the water is down and behind the wall.
 @open down;d = room_685
 #
 @set down/exit_kind = 0
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -20580,9 +20808,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "pray"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/success_msg = You feel elevated and revived!
 #
@@ -20688,9 +20918,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = traverse:none()
-#
 @set down/password = "push"
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
 #
 @tel room_700
 #
@@ -20766,7 +20998,15 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = view:perm(see_hidden_exits)
+@set north/password = "covered path"
+#
+@lock north = view:none()
+#
+@set north/hidden_desc = You uncover an exit leading north!
+#
+@set north/hiding = 1
+#
+@lock north = traverse:none(); view:perm(see_hidden)
 #
 @set north/success_msg = Moving through the trees, you find and escape north.
 #
@@ -20796,7 +21036,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = view:perm(see_hidden_exits)
+@set north/hidden_desc = You move some branches around uncovering a path leading north.
+#
+@set north/hiding = 1
+#
+@lock north = traverse:none(); view:perm(see_hidden)
 #
 @set north/success_msg = Searching the trees, you find a path leading north.
 #
@@ -20970,6 +21214,8 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 0
 #
+@lock down = view:none()
+#
 @lock down = traverse:none()
 #
 @set down/success_msg = The hungry Wyldibeast munches on your head !!
@@ -21010,9 +21256,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "worship"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/go_in_msg = # bows before the dark altar, and is transformed!
 #
@@ -21106,9 +21354,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "mojorisin"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/success_msg = You look into the mirror, and by the magic of the Tower are transformed! 
 #
@@ -21136,9 +21386,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set east/exit_kind = 1
 #
-@lock east = traverse:none()
-#
 @set east/password = "gnoll"
+#
+@lock east = view:none()
+#
+@lock east = traverse:none()
 #
 @set east/exit_desc = Type GNOLL to become a Gnoll.
 #
@@ -21152,9 +21404,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set west/exit_kind = 1
 #
-@lock west = traverse:none()
-#
 @set west/password = "templar"
+#
+@lock west = view:none()
+#
+@lock west = traverse:none()
 #
 @set west/exit_desc = Type TEMPLAR to become a Templar.
 #
@@ -21280,9 +21534,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "read"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @open south;s = room_738
 #
@@ -21410,9 +21666,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set north/exit_kind = 1
 #
-@lock north = traverse:none()
-#
 @set north/password = "open"
+#
+@lock north = view:none()
+#
+@lock north = traverse:none()
 #
 @set north/exit_desc = A closed iron door is to the north.
 #
@@ -21438,9 +21696,11 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set south/exit_kind = 1
 #
-@lock south = traverse:none()
-#
 @set south/password = "open"
+#
+@lock south = view:none()
+#
+@lock south = traverse:none()
 #
 @set south/exit_desc = A closed door is to the south.
 #
@@ -21462,11 +21722,17 @@ be heard.  It seems as though the water is down and behind the wall.
 #
 @set down/exit_kind = 1
 #
-@lock down = view:perm(see_hidden_exits)
+@set down/password = "turn"
+#
+@lock down = view:none()
 #
 @lock down = traverse:none()
 #
-@set down/password = "turn"
+@set down/hidden_desc = You uncover a platform revealing a secret passage!
+#
+@set down/hiding = 1
+#
+@lock down = traverse:none(); view:perm(see_hidden)
 #
 @set down/go_in_msg = # dissappears from the room.
 #

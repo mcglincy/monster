@@ -56,6 +56,9 @@ class Exit(DefaultExit):
     self.db.come_out_msg = None
     self.db.password = None
     self.db.required_object = None
+    self.db.hiding = 0
+    # description to show if exit was hidden then found
+    self.db.hidden_desc = None
 
   def at_traverse(self, traversing_object, target_location, **kwargs):
     """Override superclass for custom exit messaging.
@@ -84,10 +87,32 @@ class Exit(DefaultExit):
     # note: this is taking place *after* we have moved to the new location.
     if self.db.exit_effect_kind:
       apply_exit_effect(traversing_object, source_location, self.db.exit_effect_kind, self.db.exit_effect_value)
+    if self.db.hidden_desc:
+      # re-hide the exit
+      self.make_invisible()
+      self.make_impassable()
 
   def at_failed_traverse(self, traversing_object, **kwargs):
     fail_msg = self.db.fail_msg if self.db.fail_msg else "You can't go that way."
     traversing_object.msg(fail_msg)
+
+  def make_passable(self):
+    self.locks.remove("traverse")
+    self.locks.add("traverse:all()")
+
+  def make_impassable(self):
+    self.locks.remove("traverse")
+    self.locks.add("traverse:none()")
+
+  def make_visible(self):
+    self.db.hiding = 0
+    self.locks.remove("view")
+    self.locks.add("view:all()")
+
+  def make_invisible(self):
+    self.db.hiding = 1
+    self.locks.remove("view")
+    self.locks.add("view:perm(see_hidden)")
 
   def get_display_name(self, looker, **kwargs):
     if self.db.exit_desc:

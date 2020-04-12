@@ -120,7 +120,6 @@ def search(searcher):
   searcher.location.msg_contents(
     f"{searcher.key} seems to be looking for something.", exclude=[searcher])
   rand = random.randint(0, 100)
-  room = searcher.location
   found = False
   if rand < 20:
     found = reveal_objects(searcher)
@@ -128,10 +127,10 @@ def search(searcher):
     found = reveal_exits(searcher)
   else:
     found = reveal_people(searcher)
-
   if not found:
     searcher.msg("You haven't found anything.")
-  #searcher.location.msg_contents(f"{searcher.key} appears to have found something.", exclude=[searcher])
+  else:
+    searcher.location.msg_contents(f"{searcher.name} appears to have found something.", exclude=[searcher])
   
 
 def reveal_objects(searcher):
@@ -144,8 +143,30 @@ def reveal_objects(searcher):
   return False
 
 
+def find_exit(location, key):
+  for obj in location.contents:
+    if obj.is_typeclass('typeclasses.exits.Exit') and obj.key == key:
+      return obj
+  return None
+
+
 def reveal_exits(searcher):
-  # TODO
+  # TODO: this is a weird algorithm
+  # the original algorithm tried 4 times, picking a random exit slot from NSEWUD and 
+  # seeing if that exit is hidden
+  exit_keys = ["north", "south", "east", "west", "up", "down"]
+  for _ in range(0, 4):
+    rand_key = random.choice(exit_keys)
+    rand_exit = find_exit(searcher.location, rand_key)
+    if rand_exit is not None and rand_exit.db.hiding > 0:
+      if rand_exit.db.hidden_desc:
+        searcher.msg(rand_exit.db.hidden_desc)
+      else:
+        exit_name = rand_exit.db.password or rand_exit.key
+        searcher.msg(f"You've found a hidden exit: {exit_name}.")
+      rand_exit.make_visible()
+      rand_exit.make_passable()
+      return True
   return False
 
 

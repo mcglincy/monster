@@ -105,19 +105,35 @@ def make_exit(exit, come_out_exit, descs, lines, objects):
   print(f"@set {exit_name}/exit_kind = {exit_kind}")
   print('#')
 
-  # TODO: hidden appears to never be set in the JSON
-  if exit['hidden']:
-    print(f"@lock {exit_name} = view:perm(see_hidden_exits)")
+  if alias:
+    print(f"@set {exit_name}/password = \"{alias}\"")
     print('#')
 
-  # there are several different "flavors" of locked/passworded exit
-  if (exit_kind == ExitKind.NO_EXIT
-    or exit_kind == ExitKind.PASSWORDED
-    or (exit_kind == ExitKind.OPEN and exit['req_alias'])):
+  # there are several different flavors of invisible exit
+  if (alias
+    or exit_kind == ExitKind.NO_EXIT
+    or exit_kind == ExitKind.PASSWORDED):
+    print(f"@lock {exit_name} = view:none()")
+    print('#')
+
+  # and several flavors of impassable exit
+  if (exit['req_alias']
+    or exit_kind == ExitKind.NO_EXIT
+    or exit_kind == ExitKind.PASSWORDED):
     print(f"@lock {exit_name} = traverse:none()")
     print('#')
-    if alias:
-      print(f"@set {exit_name}/password = \"{alias}\"")
+
+  # and then there's hidden, too
+  hidden_id = exit['hidden']
+  if hidden_id is not None and hidden_id != 0:
+    # TODO: handle 32000 default ?
+    hidden_desc = lookup_description(hidden_id, descs, lines)
+    if hidden_desc:
+      print(f"@set {exit_name}/hidden_desc = {hidden_desc}")
+      print('#')
+      print(f"@set {exit_name}/hiding = 1")
+      print('#')
+      print(f"@lock {exit_name} = traverse:none(); view:perm(see_hidden)")
       print('#')
 
   maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc', descs, lines)
