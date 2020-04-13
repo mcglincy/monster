@@ -124,9 +124,7 @@ The running game server is up at http://www.monstermud.com.
   * search for hidden character
   * sayings
   * pursuit chance / pursuit behavior
-  * cast spells and combat behaviors
-  * figure out if extra1/extra2 fields contain actually-useful data
-
+ 
 
 ## What probably won't get implemented (yet)
 
@@ -140,3 +138,6 @@ The running game server is up at http://www.monstermud.com.
   * Special room kinds: market (we have merchant objects instead), random group, random level, treasure drop (no rooms seem to use these SpcRoom values)
 * Spells
   * Spell effects: announce (we have *shout* command instead of thundering voice), command (better implemented as a new effect in code?)
+* Randoms (aka mobs)
+  * cast spells and other combat behaviors
+
