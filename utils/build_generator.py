@@ -61,6 +61,16 @@ def make_room(roomdesc):
     print('#')
     print(f'@set here/trap_direction = "{roomdesc["trap_direction"]}"')
     print('#')
+  details = roomdesc["details"]
+  detail_ids = roomdesc["detail_descs"]
+  if details and detail_ids:
+    detail_dict = {}
+    for detail, detail_id in zip(details, detail_ids):
+      detail_desc = lookup_description(detail_id, DESCS, LINES)
+      if detail_desc:
+        detail_dict[detail] = detail_desc
+    print(f"@set here/details = {detail_dict}")
+    print('#')
 
 
 def maybe_set_desc(desc_id, exit_name, attr_name):

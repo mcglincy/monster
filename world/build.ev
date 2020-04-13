@@ -427,6 +427,8 @@ All is silent.
 #
 @set here/magnitudes = [0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 #
+@set here/details = {'doors': 'The twin doors are very large and made of some sort of stone you do not recognize.  There are no handles evident.  A black wizard mark is engraved into each door.  You do not recognize it.  At any rate, it is *not* that of the wizard Darkmage himself.  You wonder whether the being who put it there meant to keep somebody out...or keep somebody in...', 'gates': 'The gates to the north and south of the road apparently are designed to keep the local denizens from violating the grave area.  Footprints go around the gates and up to the very doors before disappearing, however.'}
+#
 @dig/tel sewer1;room_39
 #
 @set here/record_id = 39
@@ -588,6 +590,8 @@ Sounds of singing and revelry drift down the stairs from above.
 @dig/tel Victory Stone;room_54
 #
 @set here/record_id = 54
+#
+@set here/details = {'carvings': 'Both the wood and marble carvings depict battles against an alien folk. The creatures depicted are somewhat smaller and thinner than the human warriors, and exhibit slightly pointed ears, and cat-like eyes. From the carvings, you deduce that the alien folk emerged mysteriously eons ago, and where originally lead by one appearing to be a Druid. Warfare between the Druids and this strange people began almost immediately, however, and continued without cessation until the Druids defeated or destroyed  the strange people in a large, and seemingly Otherwordly, battle. Great magic and Gods were clearly involved in this final battle.'}
 #
 @dig/tel Wellspring of Ulster;room_55
 #
@@ -846,6 +850,8 @@ beside you...
 Apparently the leavings of a former victim.
 #
 @set here/record_id = 76
+#
+@set here/details = {'paper': '  steal a peach, steal a plum see to what your carcass comes.. '}
 #
 @dig/tel Armory Stall;room_77
 #
@@ -1417,6 +1423,8 @@ than the bards and minstels could provide.
 #
 @set here/record_id = 125
 #
+@set here/details = {'green': 'The book is very old, but written in a language you can understand. It is partially damaged, but you can make out the following passage: \\"And so it was that in this great battle the Wizard Lord who was heir to the unholy blade of the first Wizard King fell amongst the spears of the Druids. The demonic blade was taken from the battlefield by Sualtim, who hid it in an eternal chamber. The sword was girded round with a great wall of thorns to repel the magical searches of those who would search for it, while the magical Rhinestone door barred entrance into the hidden chamber.\\"', 'green book': 'You open a book that is bound in green leather. It is a historical account of some sort, and is mostly written in runes which are unknown to you. One passage, however, was recorded by a scribe who wrote in a form which you can decipher. It reads:  \\"..And so the mighty Sword that might have united humanity passed from this world into the Afterworld with the death of its holder. In the mighty battle between Man and Gods, the holder of the Sword fell on the vast plain of combat. The spirits of the Dead brought the Souls and the Sword across the bridge into the Afterworld.', 'black book': '         '}
+#
 @dig/tel Tuatha de Danan Hall;room_126
 #
 @desc
@@ -1512,6 +1520,8 @@ has been engraved another mural.
 @dig/tel Ach Samrath Gateway;room_132
 #
 @set here/record_id = 132
+#
+@set here/details = {'writings': 'The writings are weathered, and have been written in a strange dialect. You can discern, however, that the underground lands ahead were once known by the name of \\"Ach Samrath\\". Apparently Ach Samrath was home to fearsome creatures of a very malicious bent, as well as the warriors who ventured into the caves to do battle with them. The writings give  a name of \\"haldruidacha\\" to those humans who sortied into the caves, and often made their homes there.  You wonder if the fearsome creatures the writings talk about could still linger in the dark depths beyond...'}
 #
 @dig/tel Hewn Passageway;room_133
 #
@@ -1784,6 +1794,8 @@ that is astride the corridor leading south. The gateway is open, and is
 covered with runes.
 #
 @set here/record_id = 154
+#
+@set here/details = {'runes': 'The runes are of a common type, and you are able to read what is inscribed on the portal with little difficulty: \\"You stand before the entrance to the fortress of the Mountain Warlord.  All that proceed beyond this point should be prepared to pay for their  intrusion in the currency of tribute, or else that of blood.\\" '}
 #
 @dig/tel Inner Portcullis;room_155
 #
@@ -2294,6 +2306,8 @@ The floor is tiled with white marble, and a thick velvet cloth has
 been laid across the lower half of the statue.
 #
 @set here/record_id = 190
+#
+@set here/details = {'sarcophagus': 'The side of the sarcophagus is graced with faint engraving which reads: \\"In the words of a King...The kingdom is best,                           Served from abreast,                           The back of a steed,                           In times of need.\\"', 'statue': 'You notice a circular shaft sunk into the bronze staue at the point where the hilt of a sword might lie.'}
 #
 @dig/tel Tomb of Lersing;room_191
 #
@@ -2838,6 +2852,8 @@ of a black wax, but they provide some necessary illumination.
 #
 @set here/record_id = 229
 #
+@set here/details = {'cauldron': 'You notice some obscured markings on the cauldron. It reads : \\"The forces of Evil have tongues which speak backwards.\\"'}
+#
 @dig/tel Summoning Chamber;room_230
 #
 @desc
@@ -3065,6 +3081,8 @@ ladders allows access to the dizzying heights of the upper reaches.
 #
 @set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 #
+@set here/details = {'red tome': 'This appears to be a book on various terrible monsters. One passage reads:  \\"Of Dragons one need remember the names of the fearsome Zuringa and Chakara who descended from the far North, bringing great misery and destruction in their wake. Bathelusa and Morgant from the far East are also very worthy of note, as they destroyed the ancient city of Epelizara.\\"', 'green tome': 'This book appears to be on the customs and history of various creatures. One section talks of the Trolls: \\"The Trolls are simple-minded, but very violent creatures, as indicated by this quote from their king Grundh the 3 Fingered- \'Rule by Courage, Cruelty, Terror, Domination, and Subjugation.\'\\"', 'blue tome': 'This text is apparently one of miscellaneous prophecy. A few choice lines come to your attention: \\"The dreaming stone will take one to lands beyond the waking Earth.\\" \\"The Jaguar\'s name is one of a lesser Evil, but may open unwanted doors.\\" \\"Only by a famed Wizard\'s grip can the lost blade be returned to us.\\" \\"Under water, beyond a desert, across an Ocean...lies the ultimate prize.\\"'}
+#
 @dig/tel Conjuring Room;room_246
 #
 @desc
@@ -3163,6 +3181,8 @@ of some of the less fortunate parts of the fortress.
 @set here/special_kind_bitmask = 1
 #
 @set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+#
+@set here/details = {'keyhole': 'There looks to be a small opening next to the doors. Perhaps with luck one can find an old key lying around that just might fit the lock!'}
 #
 @dig/tel South Lake Shore;room_253
 #
@@ -3272,6 +3292,8 @@ so big, in fact, that a man could almost stand inside it comfortably.
 @set here/special_kind_bitmask = 256
 #
 @set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+#
+@set here/details = {'fireplace': 'The fireplace is very large, and made of brick. It does not appear to have been used in a very long time. Its wide chimney goes straight up.'}
 #
 @dig/tel Thieves Guild;room_262
 #
@@ -3472,6 +3494,8 @@ up to get out.
 #
 @set here/record_id = 281
 #
+@set here/details = {'blue text': 'You thumb through a blue text, and begin reading the only legible words you can find: \\"...And so the great weapon Druidslayer, originally belonging to the  Wizard King of the same name, was lost. It is believed that the Druids recovered it, and placed it in a magical vault to prevent it from ever being recovered. The weapon had many great powers, not the least of which was its ability to easily deflect blows away from the wielder. The exact hiding place of Druidslayer remains a secret however, though it is likely to be a place of honored or sacred ground.\\"', 'brown text': 'You pick up a brown text, and begin reading: \\"The Sword of the Kings thus passed from this world into the Land of  the Dead, where it is guarded by many Watchful Eyes. There it awaits the fulfullment of its destiny: that whoever can wield the Sword can unite all of Mankind.\\"'}
+#
 @dig/tel Festival Place;room_282
 #
 @desc
@@ -3514,6 +3538,8 @@ have mostly collapsed, and are impassable.
 #
 @set here/record_id = 284
 #
+@set here/details = {'old tome': 'You look through an ancient manuscript, and are struck by the following grim passage:  \\"For those who seek utter darkness, and life beyond a mortal death, seek the dark god\'s hall, and look into the eyes of Jaguar. For in those regions, shall the dark god\'s name open evil doors...\\"  Another part: \\"In the end, the name of the Ultimate Master shall seal the fate of those who seek him...\\"'}
+#
 @dig/tel South Wing;room_285
 #
 @desc
@@ -3538,6 +3564,8 @@ can be seen to the west, though it has been smashed by the weight of the
 wood and stone lying on top of it.
 #
 @set here/record_id = 286
+#
+@set here/details = {'old book': 'You notice an old book, and turn through its ancient pages. A particular passage catches your eye: \\"The Elves were consumed in the great fire which ruptured the 3rd Age, and were no more. But their magic was strong, and it is said that they shall be reborn from the ashes of their Forest Temple through the hand of a mortal who seeks their ancient wisdom.\\"'}
 #
 @dig/tel Sealed Entrance;room_287
 #
@@ -3820,6 +3848,8 @@ decipher it's mysteries.
 #
 @set here/record_id = 309
 #
+@set here/details = {'wall': 'Only in the name of the First and wisest of the Wizards shall ye pass! '}
+#
 @dig/tel Bowels of Monster;room_310
 #
 @desc
@@ -3951,6 +3981,8 @@ something has been chiseled into the floor of the cavern.
 #
 @set here/record_id = 319
 #
+@set here/details = {'floor': 'The floor of the cave bears an inscription which has been crudely carved, probably with a sharp stone or a weapon of some sort. The writing is in the common language of the realm, and reads:   \\"To live is to die, to die is to live.\\"'}
+#
 @dig/tel Goblin Throne;room_320
 #
 @desc
@@ -4074,6 +4106,8 @@ Beyond this pit lies the rock wall of the huge cavern in which this
 village rests.
 #
 @set here/record_id = 328
+#
+@set here/details = {'skeletons': 'Despite the unpleasantness of the situation, you move closer to examine the skeletal remains. From what you can see, it would appear that  these people were killed violently. The skeletons bear severed and crushed bones, and are also slightly smaller than that of the average human.'}
 #
 @dig/tel Decaying Library;room_329
 #
@@ -5229,6 +5263,8 @@ emblem of the kings that once ruled this fair land.
 #
 @set here/record_id = 422
 #
+@set here/details = {'arch': ' The arch is crumbling but you can still decipher the figure that stands at its apex... It is that of a dragon, wings unfurled and head thrown back as if to shake the earth with its roar... '}
+#
 @dig/tel Charnel House;room_423
 #
 @desc
@@ -5438,6 +5474,8 @@ clue as to where you are.
 #
 @set here/trap_direction = "down"
 #
+@set here/details = {'tapestry': 'Foolish travellers! You have entered the abode of the Master of  Demons. Thieves beware....his treasure is guarded by a maze that none have penetrated yet many have tried...lured by fantastic tales of the masters treasure. Dare the maze if you will but do not expect to ever return.  May the demon take your soul!'}
+#
 @dig/tel Three Legg'd Dog;room_438
 #
 @desc
@@ -5495,6 +5533,8 @@ less bright as you ascend the mountain.  Trails of smoke pour forth from
 the valleys.
 #
 @set here/record_id = 441
+#
+@set here/details = {'slab': "Plain in appearance but with a determined look, Pilferer stands about two meters in height, is thin but with a rugged appearance. He serves his Guild with honor.  Oh, you might want this back... He filched it when you weren't looking"}
 #
 @dig/tel Tomb of Useth;room_442
 #
@@ -5615,6 +5655,8 @@ does however, bear some faint writing.
 #
 @set here/record_id = 450
 #
+@set here/details = {'writing': 'The writing on the wall is in a rough language akin to the common  tongue of the Realm. It reads:                                 \\"The key lies in fifths.\\"'}
+#
 @dig/tel Troll Treasure Room;room_451
 #
 @desc
@@ -5651,6 +5693,8 @@ coin in return.
 @dig/tel Death Chamber;room_453
 #
 @set here/record_id = 453
+#
+@set here/details = {'sacred': 'You stare at the Sacred Oak that the Black Druids swear upon, charging fealty to their Emperor.  Legend says that the Oak is a part of the Living Tree that existed before the Demon Lords Brennte and Nadien.  It was torn asunder by the Demon Lords, and from its bark was formed the crust of the world, and from its sap flowed the ancient rivers, and its seedlings were indeed the sprouts that would give rise to the original population of Druids.  It is said that this Sacred Branch is all that remains of the Tree...'}
 #
 @dig/tel Lookout Tower Base;room_454
 #
@@ -5860,6 +5904,8 @@ Type get, to see what equipment is available here.
 #
 @set here/magnitudes = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 #
+@set here/details = {'notice': '*Attention Monster Players* --------------------------- Change your class here-a-bouts!'}
+#
 @dig/tel Golden Doors;room_471
 #
 @desc
@@ -5915,6 +5961,8 @@ a list of what items in the room may be examined.]
 @set here/special_kind_bitmask = 2
 #
 @set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+#
+@set here/details = {'plaque': 'The plaque is made of silver, and is securely fastened to the wall.  There is some writing on the plaque, which you can easily read as follows:  \\"By saying the magic word QUETZALCOATL you will be guided beyond this room.\\"'}
 #
 @dig/tel Trial by Combat;room_474
 #
@@ -6456,6 +6504,8 @@ point of interest is a large plaque that has been embedded in the floor.
 #
 @set here/record_id = 510
 #
+@set here/details = {'plaque': 'The plaque reads, \\"This complex is dedicated to Arlindel, Wystryk, Fastigonn and Exomerol, the Four Great Sages. Although it was by their own hands that this great complex was built, we still show our reverence for them by dedicating this wondrous place to these four men. Each in their own way has increased our awareness of the awesome power around us: the wind, the tides, the great fires at the center of the earth, and the majesty of the great mountain ranges. We also remember these fellows, not only for their work with The Elements, but for their contribution to  society through their teachings and prophecies, as the lesson they taught was great, and the prophecies they told were never false.\\"'}
+#
 @dig/tel Arlindel's Testimony;room_511
 #
 @desc
@@ -6470,6 +6520,8 @@ was once there.
 #
 @set here/record_id = 511
 #
+@set here/details = {'murals': 'Upon closer inspection of the murals, you can tell that they depicted aerial scenes. In one section, you can just barely make out what seems to be a city in the clouds. In other portions, you can make out a humanoid figure, possibly a wizard.', 'book': 'The page that the book is open to reads...  The Chronicles of Arlindel                        page 107       The Kings of the world lament      And the merchants of the world      Weep, wail and rend their clothes.      They cry: Alas, alas that great city Tai-Tastigon,      In one hour is her judgement come. '}
+#
 @dig/tel Hall of Sleet;room_512
 #
 @desc
@@ -6482,6 +6534,8 @@ the downpour of sleet. The sleet seems to materialize from out of nowhere.
 #
 @set here/record_id = 512
 #
+@set here/details = {'sleet': 'The sleet is rather cold and it stings you wherever it strikes bare flesh. '}
+#
 @dig/tel Frozen Caverns;room_513
 #
 @desc
@@ -6492,6 +6546,8 @@ where there is just a very thin sheet of ice that is safe enough to walk on.
 With the exception of the ice, the cavern is completely empty.
 #
 @set here/record_id = 513
+#
+@set here/details = {'ice': 'The ice seems to totally devoid of impurities, and is very cold. You can even see your reflection in it... the reflection of a face even a mother could hate!'}
 #
 @dig/tel Liquid Caverns;room_514
 #
@@ -6504,6 +6560,8 @@ water stays in its place, giving you a safe, yet scenic, passage through
 the cavern.
 #
 @set here/record_id = 514
+#
+@set here/details = {'aquatic life': 'Some of the creatures you see are quite familiar, but there are others which you have never seen before. Some of them totally ignore your presence, while others intently look at you, perhaps thinking about their next meal.'}
 #
 @dig/tel Boiling Caverns;room_515
 #
@@ -6518,6 +6576,8 @@ boiling walls, but the heat is only strong enough to cause you some slight
 discomfort, not any real physical harm.
 #
 @set here/record_id = 515
+#
+@set here/details = {'walls': 'It is difficult to determine exactly what material the walls are made of, as you cannot get too close to the walls. However, it seems as if the walls were made of water.'}
 #
 @dig/tel Wystryk Memorial;room_516
 #
@@ -6535,6 +6595,8 @@ on the base of the statue.
 #
 @set here/record_id = 516
 #
+@set here/details = {'statue': "The writing reads:             'O Sons of Lothlorien,              Who art to be destroyed,              Happy shall he be that taketh thy children              And dasheth them against a stone,              For with violence shall that great              Land of Lothlorien be thrown down              And shall be found no more at all.'                                        - Wystryk, Lord of the Oceans", 'waterfalls': 'Upon closer inspection of the waterfalls, you notice that the fluctuating light patterns in them seem to be some sort of moving picture. After watching the display for a few minutes, you discover that some sort of story is being acted out by the images. The story begins in a dark workshop where a  magnificent suit of armor is being forged. Later, it is given to a mysterious wizard, who enchants the armor, causing it to turn in color to a pale shade of white. He then takes the armor, and travels north with it. Along the way he overcomes great obstacles, including passing through a great glacier by doning the armor and phasing through it. However, his journey is brought to a sudden end when he is suprised and killed by a white dragon.'}
+#
 @dig/tel Hall of Steam;room_517
 #
 @desc
@@ -6548,6 +6610,8 @@ through, from head to toe. Water (or sweat) streams down your face, as the
 steam bath begins to take its full effect on you.
 #
 @set here/record_id = 517
+#
+@set here/details = {'steam': "What are you expecting to see? It's just plain steam! "}
 #
 @dig/tel Trail of Heat;room_518
 #
@@ -6595,6 +6659,8 @@ of gleaming brass. Some words can be seen on the black stone.
 #
 @set here/record_id = 521
 #
+@set here/details = {'stone': '\\"Seeing the Evil that would befall the World, our Lord and Prophet did seek the comfort of endless sleep, lest his eyes see the ruin that would mark an end to a glorious age. Would that we could know who the Evil One would be...\\"', 'writing': 'Some writing has been added to the stone, obviously at a later date...it almost look as if it had been done hurriedly... \\"Know thy Enemy, \'suedomsa\' \\" '}
+#
 @dig/tel Hall of Smoke;room_522
 #
 @desc
@@ -6618,6 +6684,8 @@ flow shows no sign of ceasing.
 #
 @set here/record_id = 523
 #
+@set here/details = {'lava': 'The lava is moving rather swiftly (as swift as lava can move, anyhow) and seems to be fairly deep.'}
+#
 @dig/tel Earthen Path;room_524
 #
 @desc
@@ -6633,6 +6701,8 @@ Also, with the exception of the path, there is no evidence of a floor
 anywhere, nor is there any ceiling or walls.
 #
 @set here/record_id = 524
+#
+@set here/details = {'rocks': 'The rocks seem very hard, and you shudder at the thought of being hit by any of them.'}
 #
 @dig/tel Desert Path;room_525
 #
@@ -6659,6 +6729,8 @@ to have something inscribed on it.
 #
 @set here/record_id = 526
 #
+@set here/details = {'bronze plate': 'The inscription reads:                     \\"Shrine of Exomerol\\"  \\"This shrine is testimony to all that The Great Earth Ruler Exomerol had accomplished in his life on this earth...\\"      Thus spake Exomerol:              \'Thy sons that thou shalt beget,               They shall be taken away and be eunuchs               In the caverns of the King of Trolls.               Howl Ye therefore.\'', 'murals': "The murals seems to tell a story. The story begins with a birth scene. One mural tells of great earthquakes during this birth, but not much more. In the next mural you see a young man, in his twenties, going up against a fearsome creature of great evil. Eventually the young man defeats the creature by turning it to stone. In another mural, we see an older man, in his mid-50's, leading an army into battle. At a wave of the man's hand the entire enemy army is swallowed up by the earth, and never seen again. In the last mural, we see a very old man, laying on his death bed. He  appears troubled about something more than just his imminent death. At  this point, the story ends."}
+#
 @dig/tel Hall of Dust;room_527
 #
 @desc
@@ -6669,6 +6741,8 @@ everything is covered by a one-inch layer of dust. The dust even seems to
 hang suspended in the air, making breathing a little uncomfortable.
 #
 @set here/record_id = 527
+#
+@set here/details = {'dust': 'Throughout all the dust, you see interspersed various sizes of Dust-Monsters. They used to be Dust-Bunnies, but have gotten bigger and meaner. At the  moment however, they seem pretty tame.'}
 #
 @dig/tel Corridor of Smog;room_528
 #
@@ -7867,6 +7941,8 @@ Bones of humans and other creatures are scattered about the floor.
 #
 @set here/record_id = 647
 #
+@set here/details = {'sign': 'After a closer look at the bones, one can see what appears to be teeth marks. They might have been caused by animals, but the gashes are very deep.'}
+#
 @dig/tel Vault;room_648
 #
 @set here/record_id = 648
@@ -7905,6 +7981,8 @@ Your terror mounts...
 @set here/special_kind_bitmask = 256
 #
 @set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+#
+@set here/details = {'red runes': 'The runes appear Evil and indecipherable, but slowly the lines move to form readable characters. It reads:  \\"For the Black Power, seek the circles of Obedience in the land of Dark Reflections. Call forth the Spectre to open the way, from whence you may never return. Your soul will be consumed by flame, and your mortal life at an end...immortal undead subjegation will be your fate!\\"'}
 #
 @dig/tel Passages of Mummra;room_651
 #
@@ -8319,6 +8397,8 @@ souls interred in this great pyramid.
 #
 @set here/record_id = 672
 #
+@set here/details = {'portal': 'The portal is a shimmering oval of dim light which resides on the north wall of this chamber. The portal seems to waver and undulate in an unearthly fashion, as if the place it leads to is far more  removed than just another chamber to the north.'}
+#
 @dig/tel Treasure of Krotche;room_673
 #
 @desc
@@ -8414,6 +8494,8 @@ stonework in which the door is set has been delicately carved, and some
 words have been inscribed there.
 #
 @set here/record_id = 679
+#
+@set here/details = {'stonework': 'The words which have been inscribed into the stonework are in the common tongue, and read as follows:  \\"Those who seek knowledge are truly the most blessed of all travelers.  Speak the name of this place, and you shall be granted admission.\\"'}
 #
 @dig/tel Bottom Hall;room_680
 #
@@ -9152,6 +9234,8 @@ them alive.
 #
 @set here/record_id = 749
 #
+@set here/details = {'torch': 'The torch is made of iron, hard and as black as night.  The torch glows with a strange aura of magical power, which seems to keep it eluminated.'}
+#
 @dig/tel East tower;room_750
 #
 @desc
@@ -9160,6 +9244,8 @@ on the walls are missing, as though someone had pushed them out.  Light bursts
 through the holes creating a mosaic of patterns on the far wall.
 #
 @set here/record_id = 750
+#
+@set here/details = {'torch': 'The torch is made of iron, black and as hard as night.  But not like other torches in the fortress, this one seems a little loose.'}
 #
 @dig/tel secret passage;room_751
 #
