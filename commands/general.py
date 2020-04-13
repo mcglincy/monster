@@ -153,15 +153,26 @@ class CmdLook(QueuedCommand):
 
   def inner_func(self):
     """Handle the looking."""
+    # OG Monster implementation was:
+    # 1) LookDetail
+    # 2) LookPerson
+    # 3) DoExamine
     if not self.args:
       target = self.caller.location
       if not target:
         self.caller.msg("You have no location to look at!")
         return
     else:
-      key = self.args.strip()
+      key = self.args.strip().lower()
+
+      # see if we specified a room detail
+      if self.caller.location and key in self.caller.location.db.details:
+        self.caller.msg(self.caller.location.db.details[key])
+        return
+
       # note that our look targeting works slightly differently from Evennia look - 
       # we don't include character contents.
+
       target = find_first_unhidden(self.caller.location, key)
       if not target:
         self.caller.msg(f"You can't find {key}.")
