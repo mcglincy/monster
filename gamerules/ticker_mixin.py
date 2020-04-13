@@ -25,25 +25,37 @@ class TickerMixin:
     TICKER_HANDLER.add(HEALTH_TICK_SECONDS, self.tick_health)
 
   def remove_health_ticker(self):
-    TICKER_HANDLER.remove(HEALTH_TICK_SECONDS, self.tick_health)
-
+    try:
+      TICKER_HANDLER.remove(HEALTH_TICK_SECONDS, self.tick_health)
+    except KeyError:
+      pass
+  
   def add_mana_ticker(self):
     TICKER_HANDLER.add(MANA_TICK_SECONDS, self.tick_mana)
 
   def remove_mana_ticker(self):
-    TICKER_HANDLER.remove(MANA_TICK_SECONDS, self.tick_mana)
+    try:
+      TICKER_HANDLER.remove(MANA_TICK_SECONDS, self.tick_mana)
+    except KeyError:
+      pass
 
   def add_mob_generator_ticker(self):
     TICKER_HANDLER.add(MOB_GENERATOR_TICK_SECONDS, self.tick_mob_generator)
 
   def remove_mob_generator_ticker(self):
-    TICKER_HANDLER.remove(MOB_GENERATOR_TICK_SECONDS, self.tick_mob_generator)
+    try:
+      TICKER_HANDLER.remove(MOB_GENERATOR_TICK_SECONDS, self.tick_mob_generator)
+    except KeyError:
+      pass
 
   def add_trapdoor_ticker(self):
     TICKER_HANDLER.add(TRAPDOOR_TICK_SECONDS, self.tick_trapdoor)
 
   def remove_trapdoor_ticker(self):
-    TICKER_HANDLER.remove(TRAPDOOR_TICK_SECONDS, self.tick_trapdoor)
+    try:
+      TICKER_HANDLER.remove(TRAPDOOR_TICK_SECONDS, self.tick_trapdoor)
+    except KeyError:
+      pass
 
   def tick_health(self):
     if not self.db or not self.location:
