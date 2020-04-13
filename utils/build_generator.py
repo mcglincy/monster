@@ -15,11 +15,10 @@ OBJECT_FILE = './json/objects.json'
 ROOMDESC_FILE = './json/roomdesc.json'
 
 
-def make_room(roomdesc, descs):
+def make_room(roomdesc, descs, lines):
   record_id = roomdesc["id"]
   print(f'@dig/tel {roomdesc["nice_name"]};room_{record_id}')
   print('#')
-  # TODO: do we want to handle secondary descript?
   if 'primary' in roomdesc:
     desc_idx = roomdesc['primary'] - 1
     if desc_idx >= 0 and desc_idx < len(descs):
@@ -27,6 +26,15 @@ def make_room(roomdesc, descs):
       print('@desc')
       print('\n'.join(desc['lines']))
       print('#')
+  if 'secondary' in roomdesc:
+    secondary_id = roomdesc['secondary']
+    secondary_desc = lookup_description(secondary_id, descs, lines)
+    if secondary_desc:
+      print(f"@set here/secondary_desc = \"{secondary_desc}\"")
+      print('#')
+  if roomdesc['which']:
+    print(f"@set here/which_desc = {roomdesc['which']}")
+    print('#')
   print(f'@set here/record_id = {record_id}')
   print('#')
   if roomdesc["spc_room"]:
@@ -203,7 +211,7 @@ def main():
 #""")
 
   for roomdesc in roomdescs:
-    make_room(roomdesc, descs)
+    make_room(roomdesc, descs, lines)
 
   print("""#
 #

@@ -6,6 +6,7 @@ Rooms are simple containers that has no location of their own.
 """
 
 from collections import defaultdict
+from enum import IntEnum
 from evennia import DefaultRoom
 from evennia.utils import evtable
 from evennia.utils.utils import list_to_string
@@ -16,6 +17,14 @@ from gamerules.special_room_kind import SpecialRoomKind
 def check_bit(num, offset):
   mask = 1 << offset
   return(num & mask)
+
+
+class WhichDesc(IntEnum):
+  PRIMARY_ONLY = 0
+  SECONDARY_ONLY = 1
+  PRIMARY_AND_SECONDARY = 2
+  PRIMARY_THEN_SECONDARY_IF_OBJECT = 3
+  SECONDARY_IF_OBJECT_ELSE_PRIMARY = 4
 
 
 class Room(DefaultRoom):
@@ -31,11 +40,14 @@ class Room(DefaultRoom):
     def at_object_creation(self):
         super().at_object_creation()
         self.db.record_id = None
+        self.db.secondary_desc = None
+        self.db.which_desc = 0
         # see SpecialRoomKind for the various special kinds and bit positions
         self.db.special_kind_bitmask = 0
+        # special kind magnitudes
+        self.db.magnitudes = [0] * 32  # a list of 32 zeroes
         self.db.trap_chance = 0
         self.db.trap_direction = None
-        self.db.magnitudes = [0] * 32  # a list of 32 zeroes
 
     def special_kinds(self):
         return [x for x in SpecialRoomKind 

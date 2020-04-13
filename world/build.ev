@@ -659,6 +659,10 @@ Just beyond the gateway lies the rough rock of the cavern wall. The
 gateway, however, is filled with rubble and debris, blocking any 
 regress.
 #
+@set here/secondary_desc = " You notice some faint runes reading: \"In the name of the greater Lord Alfrion shall the seals be lifted!\". "
+#
+@set here/which_desc = 3
+#
 @set here/record_id = 59
 #
 @dig/tel Via Necromantia;room_60
@@ -707,6 +711,10 @@ maelstorm that seems never to end.
 @desc
 The slope of the hillside, makes traveling much difficult.  The light is
 diffused through the tall trees, causing a dim, but visible enviroment.
+#
+@set here/secondary_desc = " Down the path,  The smell of charred wood and fire emminate. To the north, a well beaten path leads to the floor of the valley. Leading south up the Mountian is a gravel path."
+#
+@set here/which_desc = 2
 #
 @set here/record_id = 64
 #
@@ -3204,6 +3212,8 @@ reverance to a gnarled, ancient tree in the center.
 
 The central tree is somewhat small, with stunted branches. 
 #
+@set here/which_desc = 2
+#
 @set here/record_id = 256
 #
 @dig/tel Hall of Nightflowers;room_257
@@ -3537,6 +3547,10 @@ city was transported into this void.
 
 The wooden remains of various riverboats and trading goods can be seen
 lying about, as if a river once lied beyond the gate.
+#
+@set here/secondary_desc = " You notice some magical runes which read: \"Oh blessed Zababar, in your name may seals be broken!\" "
+#
+@set here/which_desc = 3
 #
 @set here/record_id = 287
 #
@@ -4106,6 +4120,10 @@ descended upon, and crushed, an existing world.
 
 The dirt here is sandy, as if it has been without moisture for eons.
 #
+@set here/secondary_desc = " You notice that magical runes have been carved into the floor of the riverbed! They read in the dark tongue of the Drow: \"Kabbalada\" "
+#
+@set here/which_desc = 3
+#
 @set here/record_id = 332
 #
 @dig/tel Place of Lies;room_333
@@ -4471,6 +4489,10 @@ The waters respond sluggishly, and quickly return to a state of inactivity.
 The floor of this chamber is a tile mosaic, depicting a large jaguar.
 The colors are faded, but were once bright.
 
+#
+@set here/secondary_desc = "Suddenly a face begins to form in the dark pool before you! It is a skeletal head, with glimmering red eyes. The image forms, and seems to rise almost imperceptably from the pool surface. It turns its gaze upon you and speaks thusly:    \"If you wish the Life of Unlife, the Death of Undeath, you must     worship in that place where your words will be heard. If you are     wise, doors otherwise closed to you will be open with the mention      of my name. Do not seek your destiny in vain...\""
+#
+@set here/which_desc = 3
 #
 @set here/record_id = 361
 #
@@ -5248,6 +5270,8 @@ Under the man's hood you can just make out his facial features--long flowing
 black hair, full black beard, and jet black eyes.  This, then, is the Black
 Druid, the famed Lord Terminus...
 #
+@set here/which_desc = 1
+#
 @set here/record_id = 426
 #
 @set here/special_kind_bitmask = 4
@@ -5259,6 +5283,8 @@ Druid, the famed Lord Terminus...
 @desc
 The dreaded Wyldibeast pops up, clubs you over the head, and carries
 you off!!
+#
+@set here/which_desc = 1
 #
 @set here/record_id = 427
 #
@@ -6159,6 +6185,8 @@ As you look around the room you come to the conclusion that you have no idea
 where you are.  Perhaps it was not wise to come in here after all.  Maybe
 next time you will heed the warning.
 #
+@set here/which_desc = 1
+#
 @set here/record_id = 492
 #
 @set here/special_kind_bitmask = 4
@@ -6741,6 +6769,8 @@ of Tia-Tastigon is also visible form here.  The large rock are black and
 easily broken apart, as it appears some force already crushed the rocks.
 The hillside is steep enough to slow acsent, which is possible only because
 of the well worn path up the hill.
+#
+@set here/which_desc = 2
 #
 @set here/record_id = 543
 #
@@ -7488,6 +7518,10 @@ down the black well crosses your mind, but you soon come to your
 The steps upon which you walk are narrow, more treacherous, and
 damper than those which lie above. A faint breeze can be felt from
 below, but it brings the smell of death and decay. 
+#
+@set here/secondary_desc = " You notice some strange runes here. "
+#
+@set here/which_desc = 3
 #
 @set here/record_id = 621
 #
@@ -8532,6 +8566,10 @@ Inside the strange block of ice can be seen a stately warrior, dressed
 in full armor and bearing a dragon upon his shield. The warrior
 has no visible wounds, and appears to be merely resting peacefully.
 #
+@set here/secondary_desc = " A brilliant light fills the room, and a vision forms before your eyes. The vision is of a golden chalice, bathed in warm light. It hovers in mid air, just beyond the reach of your mortal hands, yet it seems to be cogniscant of your thoughts.  Truly this is an extroidinary experience!"
+#
+@set here/which_desc = 3
+#
 @set here/record_id = 692
 #
 @dig/tel Misty Seas;room_693
@@ -8582,6 +8620,8 @@ materials suplied by other beings.
 
 
 #
+@set here/which_desc = 2
+#
 @set here/record_id = 696
 #
 @dig/tel Cave;room_697
@@ -8589,6 +8629,8 @@ materials suplied by other beings.
 @desc
 
 It is too dark in here. You can't see a thing!
+#
+@set here/which_desc = 3
 #
 @set here/record_id = 697
 #
@@ -8598,6 +8640,8 @@ It is too dark in here. You can't see a thing!
 
 It is too dark in here.  You can't see a thing!
 #
+@set here/which_desc = 2
+#
 @set here/record_id = 698
 #
 @dig/tel Cave;room_699
@@ -8606,6 +8650,8 @@ It is too dark in here.  You can't see a thing!
 
 It is too dark in here.  You can't see a thing!
 #
+@set here/which_desc = 2
+#
 @set here/record_id = 699
 #
 @set here/special_kind_bitmask = 64
@@ -8613,6 +8659,10 @@ It is too dark in here.  You can't see a thing!
 @set here/magnitudes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 #
 @dig/tel Cave;room_700
+#
+@set here/secondary_desc = " There is a hint of light coming from the east."
+#
+@set here/which_desc = 2
 #
 @set here/record_id = 700
 #
@@ -8626,6 +8676,8 @@ It is too dark in here.  You can't see a thing!
 
 It is too dark in here.  You can't see a thing!
 #
+@set here/which_desc = 2
+#
 @set here/record_id = 701
 #
 @dig/tel Cave;room_702
@@ -8634,6 +8686,8 @@ It is too dark in here.  You can't see a thing!
 
 It is too dark in here. You can't see a thing!
 #
+@set here/which_desc = 2
+#
 @set here/record_id = 702
 #
 @dig/tel Cave;room_703
@@ -8641,6 +8695,8 @@ It is too dark in here. You can't see a thing!
 @desc
 
 It is too dark in here. You can't see a thing!
+#
+@set here/which_desc = 2
 #
 @set here/record_id = 703
 #
@@ -9036,6 +9092,8 @@ unnoticable when walking upon it.
 @desc
 Here weapons can be bought or sold.  You notice, that most of these
 weapons, are different than ones in the lower lands, and much older.
+#
+@set here/which_desc = 2
 #
 @set here/record_id = 745
 #
