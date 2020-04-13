@@ -46,11 +46,10 @@ class TickerMixin:
     TICKER_HANDLER.remove(TRAPDOOR_TICK_SECONDS, self.tick_trapdoor)
 
   def tick_health(self):
-  #  self.location.msg_contents(f"tick {self.key}")
     if not self.db or not self.location:
       return
     change = int((self.max_health - self.db.health) * (self.heal_speed / 1000))
-    change = max(change, 5)  
+    change = max(change, 1)  
     if self.is_poisoned:
       self.gain_health(-change)
     elif self.db.health < self.max_health:
