@@ -107,6 +107,19 @@ class Character(DefaultCharacter, TickerMixin):
     self.remove_mob_generator_ticker()
     self.remove_trapdoor_ticker()
 
+  def at_after_move(self, source_location, **kwargs):
+    # look around if we moved to a new location
+    if self.location != source_location and self.location.access(self, "view"):
+      # apply our brief descriptions setting
+      self.msg(self.at_look(self.location, brief=self.db.brief_descriptions))
+
+  def at_object_leave(self, obj, target_location):
+    # called when an object leaves this object in any fashion
+    #super().at_object_leave(obj, target_location)
+    # unequip if equipped
+    if self.db.equipment.get(obj.db.equipment_slot) == obj:
+      del self.db.equipment[obj.db.equipment_slot]
+
   def execute_cmd(self, raw_string, session=None, **kwargs):
     """Support execute_cmd(), like account and object."""
     return cmdhandler.cmdhandler(
@@ -240,18 +253,6 @@ class Character(DefaultCharacter, TickerMixin):
     if gold:
       return gold.db.amount
     return 0
-
-  def gain_gold(self, amount):
-    existing = self.gold_object()
-    if existing:
-      existing.add(amount)
-    elif amount < 1:
-      # don't create zero or negative gold
-      return
-    else:
-      gold = create_object("typeclasses.objects.Gold", key="gold")
-      gold.add(amount)
-      gold.move_to(self, quiet=True)
 
   @property
   def level(self):
@@ -499,6 +500,8 @@ class Character(DefaultCharacter, TickerMixin):
     else:
       self.msg("Not currently equipped.")
 
+  # gain_ methods
+
   def gain_health(self, amount, damager=None, weapon_name=None):
     if amount < 0:
       # aka damage
@@ -519,17 +522,15 @@ class Character(DefaultCharacter, TickerMixin):
     # TODO: messages?
     self.db.mana = max(MIN_MANA, min(self.max_mana, self.db.mana + amount))
 
-  # at_* event notifications
-
-  def at_after_move(self, source_location, **kwargs):
-    # override to apply our brief descriptions setting
-    if self.location.access(self, "view"):
-      self.msg(self.at_look(self.location, brief=self.db.brief_descriptions))
-
-  def at_object_leave(self, obj, target_location):
-    # called when an object leaves this object in any fashion
-    #super().at_object_leave(obj, target_location)
-    # unequip if equipped
-    if self.db.equipment.get(obj.db.equipment_slot) == obj:
-      del self.db.equipment[obj.db.equipment_slot]
+  def gain_gold(self, amount):
+    existing = self.gold_object()
+    if existing:
+      existing.add(amount)
+    elif amount < 1:
+      # don't create zero or negative gold
+      return
+    else:
+      gold = create_object("typeclasses.objects.Gold", key="gold")
+      gold.add(amount)
+      gold.move_to(self, quiet=True)
 
