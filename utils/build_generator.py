@@ -14,21 +14,30 @@ LINES_FILE = './json/lines.json'
 OBJECT_FILE = './json/objects.json'
 ROOMDESC_FILE = './json/roomdesc.json'
 
+with open(DESC_FILE) as f:
+  DESCS = json.load(f)
+with open(LINES_FILE) as f:
+  LINES = json.load(f)
+with open(OBJECT_FILE) as f:
+  OBJECTS = json.load(f)
+with open(ROOMDESC_FILE) as f:
+  ROOMDESCS = json.load(f)
 
-def make_room(roomdesc, descs, lines):
+
+def make_room(roomdesc):
   record_id = roomdesc["id"]
   print(f'@dig/tel {roomdesc["nice_name"]};room_{record_id}')
   print('#')
   if 'primary' in roomdesc:
     desc_idx = roomdesc['primary'] - 1
-    if desc_idx >= 0 and desc_idx < len(descs):
-      desc = descs[desc_idx]
+    if desc_idx >= 0 and desc_idx < len(DESCS):
+      desc = DESCS[desc_idx]
       print('@desc')
       print('\n'.join(desc['lines']))
       print('#')
   if 'secondary' in roomdesc:
     secondary_id = roomdesc['secondary']
-    secondary_desc = lookup_description(secondary_id, descs, lines)
+    secondary_desc = lookup_description(secondary_id, DESCS, LINES)
     if secondary_desc:
       print(f"@set here/secondary_desc = \"{secondary_desc}\"")
       print('#')
@@ -49,10 +58,10 @@ def make_room(roomdesc, descs, lines):
     print('#')
 
 
-def maybe_set_desc(desc_id, exit_name, attr_name, descs, lines):
+def maybe_set_desc(desc_id, exit_name, attr_name):
   if not desc_id or desc_id == 0 or desc_id == DEFAULT_MSG_ID:
     return
-  desc = lookup_description(desc_id, descs, lines)
+  desc = lookup_description(desc_id, DESCS, LINES)
   print(f"@set {exit_name}/{attr_name} = \"{desc}\"")
   print('#') 
 
@@ -63,7 +72,7 @@ def find_object(objects, obj_id):
       return obj
   return None
 
-def make_exit(exit, come_out_exit, descs, lines, objects):
+def make_exit(exit, come_out_exit):
   exit_kind = ExitKind(exit['kind'])
   direction = exit['direction']
   direction_letter = direction[0]
@@ -135,7 +144,7 @@ def make_exit(exit, come_out_exit, descs, lines, objects):
   hidden_id = exit['hidden']
   if hidden_id is not None and hidden_id != 0:
     # TODO: handle 32000 default ?
-    hidden_desc = lookup_description(hidden_id, descs, lines)
+    hidden_desc = lookup_description(hidden_id, DESCS, LINES)
     if hidden_desc:
       print(f"@set {exit_name}/hidden_desc = \"{hidden_desc}\"")
       print('#')
@@ -144,16 +153,16 @@ def make_exit(exit, come_out_exit, descs, lines, objects):
       print(f"@lock {exit_name} = traverse:none(); view:perm(see_hidden)")
       print('#')
 
-  maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc', descs, lines)
-  maybe_set_desc(exit['fail'], exit_name, 'fail_msg', descs, lines)
-  maybe_set_desc(exit['success'], exit_name, 'success_msg', descs, lines)
-  maybe_set_desc(exit['go_in'], exit_name, 'go_in_msg', descs, lines)
+  maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc')
+  maybe_set_desc(exit['fail'], exit_name, 'fail_msg')
+  maybe_set_desc(exit['success'], exit_name, 'success_msg')
+  maybe_set_desc(exit['go_in'], exit_name, 'go_in_msg')
   # TODO: we could search all rooms/exits for our opposite and then use its come_out_msg
-  # maybe_set_desc(exit['come_out'], exit_name, 'come_out_msg', descs, lines)
+  # maybe_set_desc(exit['come_out'], exit_name, 'come_out_msg')
   if come_out_exit:
-    maybe_set_desc(come_out_exit['come_out'], exit_name, 'come_out_msg', descs, lines)
+    maybe_set_desc(come_out_exit['come_out'], exit_name, 'come_out_msg')
   # if opposite_exit:
-  #   maybe_set_desc(opposite_exit['come_out'], exit_name, 'come_out_msg', descs, lines)
+  #   maybe_set_desc(opposite_exit['come_out'], exit_name, 'come_out_msg')
 
   door_effect = exit['door_effect']
   if door_effect:
@@ -165,7 +174,7 @@ def make_exit(exit, come_out_exit, descs, lines, objects):
 
   obj_req_id = exit['obj_req']
   if obj_req_id:
-    obj_req = find_object(objects, obj_req_id)
+    obj_req = find_object(OBJECTS, obj_req_id)
     if obj_req:
       print(f"@set {exit_name}/required_object = \"{obj_req['obj_name']}\"")
       print('#')
@@ -183,19 +192,7 @@ def make_exit(exit, come_out_exit, descs, lines, objects):
 
 
 def main():
-  """Command-line script."""  
-  # TODO: use a class and keep descs/lines/roomsdescs as ivars
-  # Alternately make them globals
-  with open(DESC_FILE) as f:
-    descs = json.load(f)
-  with open(LINES_FILE) as f:
-    lines = json.load(f)
-  with open(OBJECT_FILE) as f:
-    objects = json.load(f)
-  with open(ROOMDESC_FILE) as f:
-    roomdescs = json.load(f)
-
-
+  """Command-line script."""
   print("""# Monster batchcommand build file.
 #
 # To nuke the database first:
@@ -210,15 +207,15 @@ def main():
 # Step 1: Create all rooms.
 #""")
 
-  for roomdesc in roomdescs:
-    make_room(roomdesc, descs, lines)
+  for roomdesc in ROOMDESCS:
+    make_room(roomdesc)
 
   print("""#
 #
 # Step 2: Make exits between rooms.
 #""")
 
-  for roomdesc in roomdescs:
+  for roomdesc in ROOMDESCS:
     print(f'@tel room_{roomdesc["id"]}')
     print('#')
     for exit in roomdesc['exits']:
@@ -229,10 +226,10 @@ def main():
       come_out_exit = None
       come_out_slot = exit['slot']
       if come_out_slot:
-        to_room = roomdescs[to_loc-1]
+        to_room = ROOMDESCS[to_loc-1]
         to_exits = to_room['exits']
         come_out_exit = to_exits[come_out_slot - 1]
-      make_exit(exit, come_out_exit, descs, lines, objects)
+      make_exit(exit, come_out_exit)
 
   print("""#
 #
