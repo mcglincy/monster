@@ -132,7 +132,7 @@ The running game server is up at http://www.monstermud.com.
 
 * Map/Rooms
   * Room special/special effect
-    * afaict used only to overload commands in tutorial rooms
+    * afaict used only to overload commands in tutorial rooms?
   * Starting game tutorial rooms
     * Nice to have
   * Room owners / customizations
