@@ -61,25 +61,30 @@ class Room(DefaultRoom):
     return self.db.magnitudes[special_room_kind.value]
 
   def choose_desc(self, looker):
-    if self.db.which_desc == RoomDesc.PRIMARY:
-      return self.desc
-    elif self.db.which_desc == RoomDesc.SECONDARY:
-      return self.db.secondary_desc
-    elif self.db.which_desc == RoomDesc.PRIMARY_AND_SECONDARY:
-      return f"{self.desc}\n{self.db.secondary_desc}"
-    elif self.db.which_desc == PRIMARY_THEN_SECONDARY_IF_OBJECT:
-      if self.db.magic_object:
+    if self.db.which_desc == WhichDesc.PRIMARY:
+      return self.db.desc
+    elif self.db.which_desc == WhichDesc.SECONDARY:
+      if self.db.secondary_desc:
+        return self.db.secondary_desc
+      else:
+        return self.db.desc
+    elif self.db.which_desc == WhichDesc.PRIMARY_AND_SECONDARY:
+      if self.db.secondary_desc:
+        return f"{self.db.desc}\n\n{self.db.secondary_desc}"
+      else:
+        return self.db.desc
+    elif self.db.which_desc == WhichDesc.PRIMARY_THEN_SECONDARY_IF_OBJECT:
+      if self.db.secondary_desc is not None and self.db.magic_object is not None:
         has_obj = find_first(looker, self.db.magic_object)
         if has_obj:
-          return f"{self.desc}\n{self.db.secondary_desc}"
-      return self.desc
-    elif self.db.which_desc == SECONDARY_IF_OBJECT_ELSE_PRIMARY:
-      if self.db.magic_object:
+          return f"{self.db.desc}\n\n{self.db.secondary_desc}"
+      return self.db.desc
+    elif self.db.which_desc == WhichDesc.SECONDARY_IF_OBJECT_ELSE_PRIMARY:
+      if self.db.secondary_desc is not None and self.db.magic_object is not None:
         has_obj = find_first(looker, self.db.magic_object)
         if has_obj:
           return self.db.secondary_desc
-      return self.desc
-
+      return self.db.desc
 
   def return_appearance(self, looker, **kwargs):
     """This formats a description. It is the hook a 'look' command
