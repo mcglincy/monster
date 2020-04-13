@@ -37,7 +37,7 @@ def make_room(roomdesc, descs):
   if roomdesc["trap_chance"] and roomdesc["trap_direction"]:
     print(f'@set here/trap_chance = {roomdesc["trap_chance"]}')
     print('#')
-    print(f'@set here/trap_direction = {roomdesc["trap_direction"]}')
+    print(f'@set here/trap_direction = "{roomdesc["trap_direction"]}"')
     print('#')
 
 
@@ -45,7 +45,7 @@ def maybe_set_desc(desc_id, exit_name, attr_name, descs, lines):
   if not desc_id or desc_id == 0 or desc_id == DEFAULT_MSG_ID:
     return
   desc = lookup_description(desc_id, descs, lines)
-  print(f"@set {exit_name}/{attr_name} = {desc}")
+  print(f"@set {exit_name}/{attr_name} = \"{desc}\"")
   print('#') 
 
 
@@ -129,7 +129,7 @@ def make_exit(exit, come_out_exit, descs, lines, objects):
     # TODO: handle 32000 default ?
     hidden_desc = lookup_description(hidden_id, descs, lines)
     if hidden_desc:
-      print(f"@set {exit_name}/hidden_desc = {hidden_desc}")
+      print(f"@set {exit_name}/hidden_desc = \"{hidden_desc}\"")
       print('#')
       print(f"@set {exit_name}/hiding = 1")
       print('#')
