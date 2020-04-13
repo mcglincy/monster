@@ -49,6 +49,8 @@ class Room(DefaultRoom):
     self.db.trap_chance = 0
     self.db.trap_direction = None
     self.db.magic_object = None
+    # dict of detail name => description
+    self.db.details = {}
 
   def special_kinds(self):
     return [x for x in SpecialRoomKind 
@@ -70,14 +72,14 @@ class Room(DefaultRoom):
         return self.db.desc
     elif self.db.which_desc == WhichDesc.PRIMARY_AND_SECONDARY:
       if self.db.secondary_desc:
-        return f"{self.db.desc}\n\n{self.db.secondary_desc}"
+        return f"{self.db.desc}\n{self.db.secondary_desc}"
       else:
         return self.db.desc
     elif self.db.which_desc == WhichDesc.PRIMARY_THEN_SECONDARY_IF_OBJECT:
       if self.db.secondary_desc is not None and self.db.magic_object is not None:
         has_obj = find_first(looker, self.db.magic_object)
         if has_obj:
-          return f"{self.db.desc}\n\n{self.db.secondary_desc}"
+          return f"{self.db.desc}\n{self.db.secondary_desc}"
       return self.db.desc
     elif self.db.which_desc == WhichDesc.SECONDARY_IF_OBJECT_ELSE_PRIMARY:
       if self.db.secondary_desc is not None and self.db.magic_object is not None:
