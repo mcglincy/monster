@@ -1,7 +1,12 @@
 # 
 # Manual edits to apply after running generated build.ev.
 #
-# make sure Limbo is linked to the Void, until we have default start room working
+###############################################################################
+# Fix starting rooms.
+###############################################################################
+#
+# Make sure Limbo is linked to the Void, until we have default start room working.
+#
 @tel Limbo
 #
 @open down;d = Void
@@ -9,13 +14,15 @@
 @desc
 Go down to begin your adventure!
 #
-# Hide Void exit
+# Hide Void exit.
 #
 @tel Void
 #
 @lock north = view:none()
 #
-# Spawn merchants
+###############################################################################
+# Spawn merchants.
+###############################################################################
 #
 @tel Purgatory
 #
@@ -41,7 +48,9 @@ Go down to begin your adventure!
 #
 @spawn {"prototype_key": "shopkeeper", "prototype_parent": "curio_merchant", "key": "Shopkeeper"}
 #
-# Get rid of cheater XP door
+###############################################################################
+# Get rid of cheater mummy XP door.
+###############################################################################
 #
 @tel Upper Crypt
 #
@@ -52,4 +61,28 @@ Go down to begin your adventure!
 @set west/exit_effect_kind = 0
 #
 @set west/exit_effect_value = 0
+#
+###############################################################################
+# Fix various borked descriptions.
+###############################################################################
+#
+@tel Dry Moat
+#
+@desc
+Like a wet moat, but drier.
+#
+@tel Old Wall
+#
+@desc
+Behold my old walls, ye mighty, and despair!
+#
+@tel Tower of Useth
+#
+set west/exit_desc =
+#
+set down/exit_desc =
+#
+@tel Charnel House
+#
+set east/exit_desc =
 #
