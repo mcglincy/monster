@@ -30,6 +30,7 @@ The running game server is up at http://www.monstermud.com.
   * Trapdoors
   * Special room kinds: no combat, no hide, hard to hide, object destroy, monster generator, monster lair, heal
   * Special room magnitudes
+  * Hidden/searchable exits  
 * Objects
   * Imported all original objects (weapons, armor, etc)
   * Simple gold system
@@ -98,9 +99,7 @@ The running game server is up at http://www.monstermud.com.
     * guardian
   * Exit effects
     * guardian, health less
-  * Hidden/searchable exits
   * In-room details / lookable subdescriptions
-  * Start game in tutorial room(s), with room special/special effect)
   * Windows / window_descs (e.g., Improbable Structure <=> Forbidden Library)
   * Use NamePrint (Preposition for room name printing) / PrintParticle [sic]
   * MagicObj / secondary description
@@ -129,9 +128,13 @@ The running game server is up at http://www.monstermud.com.
   * figure out if extra1/extra2 fields contain actually-useful data
 
 
-## What probably won't get implemented
+## What probably won't get implemented (yet)
 
 * Map/Rooms
+  * Room special/special effect
+    * afaict used only to overload commands in tutorial rooms
+  * Starting game tutorial rooms
+    * Nice to have
   * Room owners / customizations
     * (unclear if we need to bother replicating old monster custroom.pas, given Evennia's existing toolset
   * Special room kinds: market (we have merchant objects instead), random group, random level, treasure drop (no rooms seem to use these SpcRoom values)
