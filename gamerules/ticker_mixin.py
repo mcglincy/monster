@@ -1,5 +1,6 @@
 import random
 from evennia import TICKER_HANDLER
+from gamerules.mobs import generate_mob
 
 
 # A "tick" in old monster was 0.1 seconds.
