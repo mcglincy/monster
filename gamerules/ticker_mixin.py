@@ -1,6 +1,7 @@
 import random
 from evennia import TICKER_HANDLER
 from gamerules.mobs import generate_mob
+from gamerules.special_room_kind import SpecialRoomKind
 
 
 # A "tick" in old monster was 0.1 seconds.
@@ -68,6 +69,7 @@ class TickerMixin:
       self.msg("You feel magically energized.")
 
   def tick_mob_generator(self):
+    self.msg("tick mob")
     if not self.db or not self.location:
       return
     if self.location.is_special_kind(SpecialRoomKind.NO_COMBAT):
@@ -80,7 +82,9 @@ class TickerMixin:
       spawn_chance = 1
     if random.randint(0, 100) < spawn_chance:
       # yay, let's make a monster
+      self.msg("generate")
       generate_mob(self.location, self.level)
+      self.msg("after generate")
 
   def tick_trapdoor(self):
     if not self.db or not self.location:
