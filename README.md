@@ -30,7 +30,8 @@ The running game server is up at http://www.monstermud.com.
   * Trapdoors
   * Special room kinds: no combat, no hide, hard to hide, object destroy, monster generator, monster lair, heal
   * Special room magnitudes
-  * Hidden/searchable exits  
+  * Hidden/searchable exits
+  * MagicObj / secondary description  
 * Objects
   * Imported all original objects (weapons, armor, etc)
   * Simple gold system
@@ -102,7 +103,6 @@ The running game server is up at http://www.monstermud.com.
   * In-room details / lookable subdescriptions
   * Windows / window_descs (e.g., Improbable Structure <=> Forbidden Library)
   * Use NamePrint (Preposition for room name printing) / PrintParticle [sic]
-  * MagicObj / secondary description
   * Object drop destination
 * Objects
   * Object damage
