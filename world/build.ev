@@ -663,6 +663,8 @@ regress.
 #
 @set here/which_desc = 3
 #
+@set here/magic_object = "Gem of True Seeing"
+#
 @set here/record_id = 59
 #
 @dig/tel Via Necromantia;room_60
@@ -3552,6 +3554,8 @@ lying about, as if a river once lied beyond the gate.
 #
 @set here/which_desc = 3
 #
+@set here/magic_object = "Gem of True Seeing"
+#
 @set here/record_id = 287
 #
 @dig/tel Cold Anvil;room_288
@@ -4124,6 +4128,8 @@ The dirt here is sandy, as if it has been without moisture for eons.
 #
 @set here/which_desc = 3
 #
+@set here/magic_object = "Staff of Luxor"
+#
 @set here/record_id = 332
 #
 @dig/tel Place of Lies;room_333
@@ -4493,6 +4499,8 @@ The colors are faded, but were once bright.
 @set here/secondary_desc = "Suddenly a face begins to form in the dark pool before you! It is a skeletal head, with glimmering red eyes. The image forms, and seems to rise almost imperceptably from the pool surface. It turns its gaze upon you and speaks thusly:    \"If you wish the Life of Unlife, the Death of Undeath, you must     worship in that place where your words will be heard. If you are     wise, doors otherwise closed to you will be open with the mention      of my name. Do not seek your destiny in vain...\""
 #
 @set here/which_desc = 3
+#
+@set here/magic_object = "elf skull"
 #
 @set here/record_id = 361
 #
@@ -7284,6 +7292,8 @@ the valleys.
 #
 @dig/tel Dark Pit;room_587
 #
+@set here/magic_object = "Lantern"
+#
 @set here/record_id = 587
 #
 @dig/tel Mountain Ledge;room_588
@@ -7522,6 +7532,8 @@ below, but it brings the smell of death and decay.
 @set here/secondary_desc = " You notice some strange runes here. "
 #
 @set here/which_desc = 3
+#
+@set here/magic_object = "Gem of True Seeing"
 #
 @set here/record_id = 621
 #
@@ -8570,6 +8582,8 @@ has no visible wounds, and appears to be merely resting peacefully.
 #
 @set here/which_desc = 3
 #
+@set here/magic_object = "Charm of Redemption"
+#
 @set here/record_id = 692
 #
 @dig/tel Misty Seas;room_693
@@ -8642,6 +8656,8 @@ It is too dark in here.  You can't see a thing!
 #
 @set here/which_desc = 2
 #
+@set here/magic_object = "Lantern"
+#
 @set here/record_id = 698
 #
 @dig/tel Cave;room_699
@@ -8651,6 +8667,8 @@ It is too dark in here.  You can't see a thing!
 It is too dark in here.  You can't see a thing!
 #
 @set here/which_desc = 2
+#
+@set here/magic_object = "Lantern"
 #
 @set here/record_id = 699
 #

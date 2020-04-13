@@ -44,6 +44,11 @@ def make_room(roomdesc):
   if roomdesc['which']:
     print(f"@set here/which_desc = {roomdesc['which']}")
     print('#')
+  if roomdesc['magic_obj']:
+    magic_obj = find_object(OBJECTS, roomdesc['magic_obj'])
+    if magic_obj:
+      print(f"@set here/magic_object = \"{magic_obj['obj_name']}\"")
+      print('#')
   print(f'@set here/record_id = {record_id}')
   print('#')
   if roomdesc["spc_room"]:
@@ -71,6 +76,7 @@ def find_object(objects, obj_id):
     if obj['id'] == obj_id:
       return obj
   return None
+
 
 def make_exit(exit, come_out_exit):
   exit_kind = ExitKind(exit['kind'])
