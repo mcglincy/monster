@@ -31,7 +31,8 @@ The running game server is up at http://www.monstermud.com.
   * Special room kinds: no combat, no hide, hard to hide, object destroy, monster generator, monster lair, heal
   * Special room magnitudes
   * Hidden/searchable exits
-  * MagicObj / secondary description  
+  * MagicObj / secondary description
+  * LOOK-able room details
 * Objects
   * Imported all original objects (weapons, armor, etc)
   * Simple gold system
@@ -100,7 +101,6 @@ The running game server is up at http://www.monstermud.com.
     * guardian
   * Exit effects
     * guardian, health less
-  * In-room details / lookable subdescriptions
   * Windows / window_descs (e.g., Improbable Structure <=> Forbidden Library)
   * Use NamePrint (Preposition for room name printing) / PrintParticle [sic]
   * Object drop destination
@@ -112,6 +112,7 @@ The running game server is up at http://www.monstermud.com.
   * Missiles and *throw* command
   * Bombs and *lob* command
 * Commands
+  * *show* command or equivalent
   * *use* command
   * *block* command
   * *steal* / *pickpocket* commands
