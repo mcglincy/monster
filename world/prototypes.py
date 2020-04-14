@@ -88,16 +88,15 @@ BAG_OF_GOLD = {
 GHOSTLY_MERCHANT = {
   'typeclass': 'typeclasses.merchant.Merchant',
   'key': 'Ghostly Merchant',
-  'for_sale_keys': ['axe', 'claymoore_sword', 'cudgel', 'dirk', 
-    'hatchet', 'short_sword'],
+  'for_sale_keys': ['cudgel', 'hatchet', 'iron_bar', 'meat_cleaver'],
 }
 
 WEAPONSMITH = {
   'typeclass': 'typeclasses.merchant.Merchant',
   'key': 'Weaponsmith',
-  # TODO: add back scimitar when it's nerfed
-  'for_sale_keys': ['broadsword', 'longsword', 'mace', 'military_fork', 
-    'pike', 'saxon_axe', 'spear', 'voulge', 'warhammer'],
+  'for_sale_keys': ['broadsword', 'claymoore_sword', 'dirk', 'longsword',
+    'mace', 'military_fork', 'pike', 'saxon_axe', 'short_sword', 'spear',
+    'voulge', 'warhammer'],
 }
 
 ARMORER = {
