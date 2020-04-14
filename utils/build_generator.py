@@ -96,35 +96,6 @@ def make_exit(exit, come_out_exit):
   # req_verb is only used in a single exit - maybe by error?
   # req_verb = exit['req_verb']
 
-  # if exit_kind == ExitKind.NO_EXIT:
-  #   # skip, I guess?
-  #   return
-  # elif exit_kind == ExitKind.OPEN:
-  #   room_class = 'Room'
-  #   pass  
-  # elif exit_kind == ExitKind.NEED_KEY:
-  #   # TODO
-  #   pass
-  # elif exit_kind == ExitKind.NEED_NO_KEY:
-  #   # TODO
-  #   pass
-  # elif exit_kind == ExitKind.RANDOM_FAIL:
-  #   # TODO
-  #   pass
-  # elif exit_kind == ExitKind.ACCEPT:
-  #   # TODO
-  #   pass
-  # elif exit_kind == ExitKind.NEED_OBJECT:
-  #   # TODO
-  #   pass
-  # elif exit_kind == ExitKind.OPEN_CLOSE:
-  #   # aka timed door
-  #   # TODO
-  #   pass
-  # elif exit_kind == ExitKind.PASSWORDED:
-  #   # TODO
-  #   pass
-
   alias = exit['alias']
   if alias:
     exit_names = f"{direction};{direction_letter};{alias}"
@@ -143,30 +114,28 @@ def make_exit(exit, come_out_exit):
     print('#')
 
   # there are several different flavors of invisible exit
-  if (alias
-    or exit_kind == ExitKind.NO_EXIT
-    or exit_kind == ExitKind.PASSWORDED):
+  if (exit_kind == ExitKind.NO_EXIT
+    or exit_kind == ExitKind.PASSWORDED
+    or exit['hidden']):
     print(f"@lock {exit_name} = view:none()")
     print('#')
 
   # and several flavors of impassable exit
-  if (exit['req_alias']
-    or exit_kind == ExitKind.NO_EXIT
-    or exit_kind == ExitKind.PASSWORDED):
+  if (exit_kind == ExitKind.NO_EXIT
+    or exit_kind == ExitKind.PASSWORDED
+    or exit['req_alias']
+    or exit['hidden']):
     print(f"@lock {exit_name} = traverse:none()")
     print('#')
 
-  # and then there's hidden, too
-  hidden_id = exit['hidden']
-  if hidden_id is not None and hidden_id != 0:
+  # and then there's hidden-but-searchable, too
+  if exit['hidden']:
     # TODO: handle 32000 default ?
-    hidden_desc = lookup_description(hidden_id, DESCS, LINES)
+    hidden_desc = lookup_description(exit['hidden'], DESCS, LINES)
     if hidden_desc:
       print(f"@set {exit_name}/hidden_desc = {repr(hidden_desc)}")
       print('#')
       print(f"@set {exit_name}/hiding = 1")
-      print('#')
-      print(f"@lock {exit_name} = traverse:none(); view:perm(see_hidden)")
       print('#')
 
   maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc')
