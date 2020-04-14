@@ -21,7 +21,7 @@ def find_object(objects, record_id):
 def output_mob(obj, objects):
   obj_name = obj['name']
   print(f"{snake_case(obj_name)} = {{")
-  print(f"  'key': \"{obj_name}\",")
+  print(f"  'key': {repr(obj_name)},")
   print(f"  'prototype_parent': 'mob',")
   record_id = obj['id']
   print(f"  'record_id': {record_id},")

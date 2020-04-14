@@ -1,7 +1,7 @@
 import json
 from gamerules.spell_effect_kind import SpellEffectKind
 from userdefined.models import CharacterClass, Spell, SpellEffect
-from utils.generator_utils import escaped, lookup_description
+from utils.generator_utils import lookup_description
 
 
 CLASSREC_FILE = "utils/json/classrec.json"

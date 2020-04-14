@@ -11,7 +11,7 @@ MOB = {
 
 
 BUGBEAR = {
-  'key': "Bugbear",
+  'key': 'Bugbear',
   'prototype_parent': 'mob',
   'record_id': 1,
   'prototype_tags': ['mob', 'min_level_4', 'record_id_1'],
@@ -42,7 +42,7 @@ BUGBEAR = {
 }
 
 EVIL_DWARF = {
-  'key': "Evil Dwarf",
+  'key': 'Evil Dwarf',
   'prototype_parent': 'mob',
   'record_id': 2,
   'prototype_tags': ['mob', 'min_level_4', 'record_id_2'],
@@ -73,7 +73,7 @@ EVIL_DWARF = {
 }
 
 WHITE_DRAGON = {
-  'key': "White Dragon",
+  'key': 'White Dragon',
   'prototype_parent': 'mob',
   'record_id': 3,
   'prototype_tags': ['mob', 'min_level_7', 'record_id_3'],
@@ -103,7 +103,7 @@ WHITE_DRAGON = {
 }
 
 RED_DRAGON = {
-  'key': "Red Dragon",
+  'key': 'Red Dragon',
   'prototype_parent': 'mob',
   'record_id': 4,
   'prototype_tags': ['mob', 'min_level_7', 'record_id_4'],
@@ -133,7 +133,7 @@ RED_DRAGON = {
 }
 
 GHOST = {
-  'key': "Ghost",
+  'key': 'Ghost',
   'prototype_parent': 'mob',
   'record_id': 5,
   'prototype_tags': ['mob', 'min_level_5', 'record_id_5'],
@@ -163,7 +163,7 @@ GHOST = {
 }
 
 PILGRIM = {
-  'key': "Pilgrim",
+  'key': 'Pilgrim',
   'prototype_parent': 'mob',
   'record_id': 6,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_6'],
@@ -193,7 +193,7 @@ PILGRIM = {
 }
 
 DRUNKEN_WARRIOR = {
-  'key': "Drunken Warrior",
+  'key': 'Drunken Warrior',
   'prototype_parent': 'mob',
   'record_id': 7,
   'prototype_tags': ['mob', 'min_level_3', 'record_id_7'],
@@ -284,7 +284,7 @@ CRUSADERS_SHADE = {
 }
 
 FROST_GIANT = {
-  'key': "Frost Giant",
+  'key': 'Frost Giant',
   'prototype_parent': 'mob',
   'record_id': 10,
   'prototype_tags': ['mob', 'min_level_6', 'record_id_10'],
@@ -314,7 +314,7 @@ FROST_GIANT = {
 }
 
 FIRE_GIANT = {
-  'key': "Fire Giant",
+  'key': 'Fire Giant',
   'prototype_parent': 'mob',
   'record_id': 11,
   'prototype_tags': ['mob', 'min_level_5', 'record_id_11'],
@@ -344,7 +344,7 @@ FIRE_GIANT = {
 }
 
 TOAD_MAN = {
-  'key': "Toad Man",
+  'key': 'Toad Man',
   'prototype_parent': 'mob',
   'record_id': 12,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_12'],
@@ -374,7 +374,7 @@ TOAD_MAN = {
 }
 
 KOBOLD = {
-  'key': "Kobold",
+  'key': 'Kobold',
   'prototype_parent': 'mob',
   'record_id': 13,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_13'],
@@ -404,7 +404,7 @@ KOBOLD = {
 }
 
 PUGNACIOUS_RUNT = {
-  'key': "Pugnacious Runt",
+  'key': 'Pugnacious Runt',
   'prototype_parent': 'mob',
   'record_id': 14,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_14'],
@@ -434,7 +434,7 @@ PUGNACIOUS_RUNT = {
 }
 
 SOLDIER = {
-  'key': "Soldier",
+  'key': 'Soldier',
   'prototype_parent': 'mob',
   'record_id': 15,
   'prototype_tags': ['mob', 'min_level_10', 'record_id_15'],
@@ -464,7 +464,7 @@ SOLDIER = {
 }
 
 VAMPIRE = {
-  'key': "Vampire",
+  'key': 'Vampire',
   'prototype_parent': 'mob',
   'record_id': 16,
   'prototype_tags': ['mob', 'min_level_6', 'record_id_16'],
@@ -494,7 +494,7 @@ VAMPIRE = {
 }
 
 DANCING_SWORD = {
-  'key': "Dancing Sword",
+  'key': 'Dancing Sword',
   'prototype_parent': 'mob',
   'record_id': 17,
   'prototype_tags': ['mob', 'min_level_0', 'record_id_17'],
@@ -524,7 +524,7 @@ DANCING_SWORD = {
 }
 
 GREEN_SLIME = {
-  'key': "Green Slime",
+  'key': 'Green Slime',
   'prototype_parent': 'mob',
   'record_id': 18,
   'prototype_tags': ['mob', 'min_level_4', 'record_id_18'],
@@ -554,7 +554,7 @@ GREEN_SLIME = {
 }
 
 CTHULHU = {
-  'key': "Cthulhu",
+  'key': 'Cthulhu',
   'prototype_parent': 'mob',
   'record_id': 19,
   'prototype_tags': ['mob', 'min_level_10', 'record_id_19'],

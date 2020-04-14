@@ -52,7 +52,7 @@ def maybe_desc_field(desc_id, field_name):
   if desc_id and desc_id != DEFAULT_MSG_ID:
     desc = lookup_description(desc_id, DESCS, LINES)
     if desc:
-      print(f"  '{field_name}': \"{desc}\",")
+      print(f"  '{field_name}': {repr(desc)},")
 
 
 def maybe_effect(obj, effect_kind, field_name):
@@ -64,8 +64,7 @@ def maybe_effect(obj, effect_kind, field_name):
 def output_common_fields(obj, prototype_parent):
   obj_name = obj['obj_name']
   print(f"{snake_case(obj_name)} = {{")
-  # TODO: add better quote escaping for key and desc
-  print(f"  'key': \"{obj_name}\",")
+  print(f"  'key': {repr(obj_name)},")
   print(f"  'prototype_parent': '{prototype_parent}',")
   record_id = obj['id']
   print(f"  'record_id': {record_id},")

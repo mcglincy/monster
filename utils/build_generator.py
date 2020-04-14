@@ -39,7 +39,7 @@ def make_room(roomdesc):
     secondary_id = roomdesc['secondary']
     secondary_desc = lookup_description(secondary_id, DESCS, LINES)
     if secondary_desc:
-      print(f"@set here/secondary_desc = \"{secondary_desc}\"")
+      print(f"@set here/secondary_desc = {repr(secondary_desc)}")
       print('#')
   if roomdesc['which']:
     print(f"@set here/which_desc = {roomdesc['which']}")
@@ -47,7 +47,7 @@ def make_room(roomdesc):
   if roomdesc['magic_obj']:
     magic_obj = find_object(OBJECTS, roomdesc['magic_obj'])
     if magic_obj:
-      print(f"@set here/magic_object = \"{magic_obj['obj_name']}\"")
+      print(f"@set here/magic_object = {repr(magic_obj['obj_name'])}")
       print('#')
   print(f'@set here/record_id = {record_id}')
   print('#')
@@ -77,7 +77,7 @@ def maybe_set_desc(desc_id, exit_name, attr_name):
   if not desc_id or desc_id == 0 or desc_id == DEFAULT_MSG_ID:
     return
   desc = lookup_description(desc_id, DESCS, LINES)
-  print(f"@set {exit_name}/{attr_name} = \"{desc}\"")
+  print(f"@set {exit_name}/{attr_name} = {repr(desc)}")
   print('#') 
 
 
@@ -139,7 +139,7 @@ def make_exit(exit, come_out_exit):
   print('#')
 
   if alias:
-    print(f"@set {exit_name}/password = \"{alias}\"")
+    print(f"@set {exit_name}/password = {repr(alias)}")
     print('#')
 
   # there are several different flavors of invisible exit
@@ -162,7 +162,7 @@ def make_exit(exit, come_out_exit):
     # TODO: handle 32000 default ?
     hidden_desc = lookup_description(hidden_id, DESCS, LINES)
     if hidden_desc:
-      print(f"@set {exit_name}/hidden_desc = \"{hidden_desc}\"")
+      print(f"@set {exit_name}/hidden_desc = {repr(hidden_desc)}")
       print('#')
       print(f"@set {exit_name}/hiding = 1")
       print('#')
@@ -192,7 +192,7 @@ def make_exit(exit, come_out_exit):
   if obj_req_id:
     obj_req = find_object(OBJECTS, obj_req_id)
     if obj_req:
-      print(f"@set {exit_name}/required_object = \"{obj_req['obj_name']}\"")
+      print(f"@set {exit_name}/required_object = {repr(obj_req['obj_name'])}")
       print('#')
       if exit_kind == ExitKind.OBJECT_REQUIRED:
         print(f"@lock {exit_name} = traverse:holds({obj_req['obj_name']})")
