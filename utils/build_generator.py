@@ -108,6 +108,10 @@ def make_exit(exit, come_out_exit):
   exit_name = exit_names.split(';')[0]
   print(f"@set {exit_name}/exit_kind = {exit_kind}")
   print('#')
+  if exit['auto_look'] == False:
+    # True is default auto_look, so only print if it's non-default
+    print(f"@set {exit_name}/auto_look = {exit['auto_look']}")
+    print('#')
 
   if alias:
     print(f"@set {exit_name}/password = {repr(alias)}")
