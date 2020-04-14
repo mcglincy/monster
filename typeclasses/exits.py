@@ -59,6 +59,7 @@ class Exit(DefaultExit):
     self.db.hiding = 0
     # description to show if exit was hidden then found
     self.db.hidden_desc = None
+    self.db.auto_look = True
 
   def at_traverse(self, traversing_object, target_location, **kwargs):
     """Override superclass for custom exit messaging.
@@ -74,11 +75,14 @@ class Exit(DefaultExit):
     # check for mob lair at our destination
     maybe_spawn_mob_in_lair(target_location)
 
-    # pass our various exit messages down
     if traversing_object.move_to(target_location,
+        # TODO: this is too-powerful way to control character looking
+        move_hooks=self.db.auto_look != False,
+        # pass our various exit messages down
         success_msg=self.db.success_msg,
         go_in_msg=self.db.go_in_msg,
-        come_out_msg=self.db.come_out_msg):
+        come_out_msg=self.db.come_out_msg
+        ):
       self.at_after_traverse(traversing_object, source_location)
     else:
       self.at_failed_traverse(traversing_object)
