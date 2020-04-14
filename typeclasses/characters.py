@@ -108,8 +108,7 @@ class Character(DefaultCharacter, TickerMixin):
     self.remove_trapdoor_ticker()
 
   def at_after_move(self, source_location, **kwargs):
-    # look around if we moved to a new location
-    if self.location != source_location and self.location.access(self, "view"):
+    if self.location.access(self, "view"):
       # apply our brief descriptions setting
       self.msg(self.at_look(self.location, brief=self.db.brief_descriptions))
 
