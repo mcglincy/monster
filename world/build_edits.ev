@@ -44,6 +44,10 @@ Go down to begin your adventure!
 #
 @spawn {"prototype_key": "old curator", "prototype_parent": "bookseller", "key": "Old Curator"}
 #
+@tel Druid Archives
+#
+@spawn {"prototype_key": "druidic archivist", "prototype_parent": "bookseller", "key": "Druidic Archivist"}
+#
 @tel Fezgar's Curiosities
 #
 @spawn {"prototype_key": "shopkeeper", "prototype_parent": "curio_merchant", "key": "Shopkeeper"}
@@ -61,6 +65,50 @@ Go down to begin your adventure!
 @set west/exit_effect_kind = 0
 #
 @set west/exit_effect_value = 0
+#
+###############################################################################
+# Add missing class doors.
+###############################################################################
+#
+@tel The Taig
+#
+@open down;d;kneel = The Taig
+#
+@set down/exit_kind = 1
+#
+@set down/password = 'kneel'
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
+#
+@set down/exit_desc = 'You may KNEEL to the Emperor to join the Druids.'
+#
+@set down/come_out_msg = '# has changed his class.'
+#
+@set down/exit_effect_kind = 7
+#
+@set down/exit_effect_value = 4
+#
+@tel Initiates' Study
+#
+@open down;d;study = Initiates' Study
+#
+@set down/exit_kind = 1
+#
+@set down/password = 'study'
+#
+@lock down = view:none()
+#
+@lock down = traverse:none()
+#
+@set down/exit_desc = 'You may STUDY here to learn the secrets of the Wizards.'
+#
+@set down/come_out_msg = '# has changed his class.'
+#
+@set down/exit_effect_kind = 7
+#
+@set down/exit_effect_value = 5
 #
 ###############################################################################
 # Fix various borked descriptions.
