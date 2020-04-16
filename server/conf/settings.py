@@ -58,6 +58,12 @@ DEFAULT_CHANNELS = [
         "aliases": ("pub"),
         "desc": "Global public messages",
         "locks": "control:perm(Admin);listen:all();send:all()",
+    },
+    {
+        "key": "Admin",
+        "aliases": (),
+        "desc": "Global admin messages",
+        "locks": "control:perm(Admin);listen:all();send:all()",
     }
 ]
 
