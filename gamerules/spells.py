@@ -138,7 +138,7 @@ def pick_targets(effect, caster, target):
     # everyone in room
     for obj in caster.location.contents:
       if obj != caster and is_targetable(obj):
-        targets.append(occupant)
+        targets.append(obj)
   elif target:
     # single target
     targets.append(target)
