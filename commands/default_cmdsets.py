@@ -22,7 +22,7 @@ from commands.combat import CmdAttack, CmdPunch, CmdRest
 from commands.commerce import CmdBuy, CmdSell
 from commands.debug import CmdClear, CmdDebug
 from commands.equipment import CmdEquip, CmdUnequip
-from commands.general import CmdDrop, CmdExpress, CmdGet, CmdInventory, CmdLook
+from commands.general import CmdDrop, CmdExpress, CmdGet, CmdInventory, CmdLook, CmdShow
 from commands.hiding import CmdHide, CmdReveal, CmdSearch
 from commands.misc import CmdBrief, CmdDot, CmdWho
 from commands.spells import CmdCast, CmdLearn
@@ -79,6 +79,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdSay())
         self.add(CmdSheet())
         self.add(CmdShout())
+        self.add(CmdShow())
         self.add(CmdSearch())
         self.add(CmdSell())
         self.add(CmdUnequip())
