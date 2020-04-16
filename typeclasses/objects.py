@@ -221,7 +221,7 @@ class Object(DefaultObject):
 class StackableObject(Object):
   def at_object_creation(self):
     super().at_object_creation()
-    self.db.amount= 0
+    self.db.amount = 0
     self.db.stack_name = "stack"
     self.db.singular_object_name = "thingy"
     self.db.plural_object_name = "thingies"
@@ -244,7 +244,10 @@ class StackableObject(Object):
     return f"A {self._stack_name()}."
 
   def add(self, amount):
-    self.db.amount = self.db.amount + amount
+    new_amount = amount
+    if self.db.amount:
+      new_amount += self.db.amount
+    self.db.amount = new_amount
     self.db.desc = f"A {self._stack_name()}."
     if self.db.amount < 1:
       # don't keep empty stacks around

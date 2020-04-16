@@ -150,6 +150,7 @@ def punch_damage(num):
   else:
     return 100
 
+
 def character_death(victim, killer=None, weapon_name=None):
   # send an appropriate global death message
   if not killer:
