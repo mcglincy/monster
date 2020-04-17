@@ -68,13 +68,14 @@ The running game server is up at http://www.monstermud.com.
   * *shout* (easy replacement for thundering voice)
   * *express* (replaces Evennia *pose*)
   * *make* command  
+  * *show* (details) command
   * Make some built-in Evennia commands queueable/blocking (look, say, whisper, get, drop, etc)
   * Edit self-description (via Evennia *setdesc*)
   * Remove any Evennia commands we don't want
   * Target-needing commands picking the first match, to better deal with name dupes
 * Commerce
-  * Simple merchant in-room object
-  * *buy* and *sell* commands
+  * Simple merchant in-room object that works with buy/sell
+  * Weapon, armor, and spellbook merchants spawned at sensible rooms around the realm
 * Spells
   * Spell and SpellEffect schema
   * Character and class mana
@@ -112,7 +113,6 @@ The running game server is up at http://www.monstermud.com.
   * Missiles and *throw* command
   * Bombs and *lob* command
 * Commands
-  * *show* command or equivalent
   * *use* command
   * *block* command
   * *steal* / *pickpocket* commands
