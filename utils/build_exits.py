@@ -9,18 +9,13 @@ from gamerules.exit_kind import ExitKind
 from utils.generator_utils import *
 
 
-DESC_FILE = './json/desc.json'
-LINES_FILE = './json/lines.json'
-OBJECT_FILE = './json/objects.json'
-ROOMDESC_FILE = './json/roomdesc.json'
-
-with open(DESC_FILE) as f:
+with open('./json/desc.json') as f:
   DESCS = json.load(f)
-with open(LINES_FILE) as f:
+with open('./json/lines.json') as f:
   LINES = json.load(f)
-with open(OBJECT_FILE) as f:
+with open('./json/objects.json') as f:
   OBJECTS = json.load(f)
-with open(ROOMDESC_FILE) as f:
+with open('./json/roomdesc.json') as f:
   ROOMDESCS = json.load(f)
 
 
@@ -32,11 +27,11 @@ def maybe_set_desc(desc_id, exit_name, attr_name):
   print('#') 
 
 
-def make_exit(exit, come_out_exit):
+def make_exit(exit, to_loc, come_out_exit):
   exit_kind = ExitKind(exit['kind'])
   direction = exit['direction']
   direction_letter = direction[0]
-  to_room_id = f'room_{exit["to_loc"]}'
+  to_room_id = f'room_{to_loc}'
   # req_verb is only used in a single exit - maybe by error?
   # req_verb = exit['req_verb']
 
@@ -97,6 +92,7 @@ def make_exit(exit, come_out_exit):
   # if opposite_exit:
   #   maybe_set_desc(opposite_exit['come_out'], exit_name, 'come_out_msg')
 
+  # exit effect
   door_effect = exit['door_effect']
   if door_effect:
     exit_effect_value, exit_effect_kind = split_integer(door_effect)
@@ -105,6 +101,7 @@ def make_exit(exit, come_out_exit):
     print(f"@set {exit_name}/exit_effect_value = {exit_effect_value}")
     print('#')
 
+  # required object
   obj_req_id = exit['obj_req']
   if obj_req_id:
     obj_req = find_object(OBJECTS, obj_req_id)
@@ -134,8 +131,11 @@ def main():
     print('#')
     for exit in roomdesc['exits']:
       to_loc = exit['to_loc']
+#      if not to_loc:
+#        continue
       if not to_loc:
-        continue
+        # "go nowhere" doors will just link to ourself
+        to_loc = roomdesc['id']
       # stupid slot / come_out msg logic
       come_out_exit = None
       come_out_slot = exit['slot']
@@ -143,7 +143,7 @@ def main():
         to_room = ROOMDESCS[to_loc-1]
         to_exits = to_room['exits']
         come_out_exit = to_exits[come_out_slot - 1]
-      make_exit(exit, come_out_exit)
+      make_exit(exit, to_loc, come_out_exit)
 
 
 if __name__ == "__main__":
