@@ -2,6 +2,22 @@
 DEFAULT_MSG_ID = 32000
 
 
+def maybe_set_desc(desc_id, exit_name, attr_name):
+  if not desc_id or desc_id == 0 or desc_id == DEFAULT_MSG_ID:
+    return
+  desc = lookup_description(desc_id, DESCS, LINES)
+  print(f"@set {exit_name}/{attr_name} = {repr(desc)}")
+  print('#') 
+
+
+
+def find_object(objects, obj_id):
+  for obj in objects:
+    if obj['id'] == obj_id:
+      return obj
+  return None
+
+
 def split_integer(i):
   # some old pascal integers were packed with 2 values
   high = int(i / 100)

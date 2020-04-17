@@ -1,0 +1,1504 @@
+@dig Great Hall;room_1
+#
+@dig Void;room_2
+#
+@dig Red street;room_3
+#
+@dig Sewer Entrance;room_4
+#
+@dig Tu'matei Alras;room_5
+#
+@dig grey hills;room_6
+#
+@dig grey hills;room_7
+#
+@dig wasteland;room_8
+#
+@dig grey hills;room_9
+#
+@dig Circle of Fire;room_10
+#
+@dig Goblin Mural Room;room_11
+#
+@dig Pit of Fire;room_12
+#
+@dig The Stone Circle;room_13
+#
+@dig Marsh;room_14
+#
+@dig Fens;room_15
+#
+@dig Swamp;room_16
+#
+@dig Great Bog;room_17
+#
+@dig Row of Megaliths;room_18
+#
+@dig Swampy Forest;room_19
+#
+@dig Cedar Forest;room_20
+#
+@dig Cyprus Trees;room_21
+#
+@dig Endless Forest;room_22
+#
+@dig Grey Steppe;room_23
+#
+@dig Entrance Hall;room_24
+#
+@dig Redwood Forest;room_25
+#
+@dig Great Redwood;room_26
+#
+@dig Forest Crossroads;room_27
+#
+@dig smoking ruins;room_28
+#
+@dig Barrow Mound;room_29
+#
+@dig Keep Entrance;room_30
+#
+@dig foyer;room_31
+#
+@dig Hall of Honor;room_32
+#
+@dig World Window;room_33
+#
+@dig Troll Tunnel;room_34
+#
+@dig Dark of the Moon;room_35
+#
+@dig Starless Night;room_36
+#
+@dig Defeat and Dishonor;room_37
+#
+@dig tomb of Darkmage;room_38
+#
+@dig sewer1;room_39
+#
+@dig War Dance;room_40
+#
+@dig Gaping Pit of Doom;room_41
+#
+@dig Doom Pit Bottom;room_42
+#
+@dig Cave of Mangled Elf;room_43
+#
+@dig Cave of Skinned Man;room_44
+#
+@dig Cave of Eaten Dwarf;room_45
+#
+@dig Fire Leaping;room_46
+#
+@dig Cave of Violated Pig;room_47
+#
+@dig Grand Troll Cavern;room_48
+#
+@dig Confusing Passages;room_49
+#
+@dig Twisted Tunnels;room_50
+#
+@dig Archive Basement;room_51
+#
+@dig Mead Hall Basement;room_52
+#
+@dig Lugh's Hall;room_53
+#
+@dig Victory Stone;room_54
+#
+@dig Wellspring of Ulster;room_55
+#
+@dig Bhalge Beltaine;room_56
+#
+@dig Lake Bottom;room_57
+#
+@dig Ancient City Square;room_58
+#
+@dig Collapsed Gate;room_59
+#
+@dig Via Necromantia;room_60
+#
+@dig Via Necromantia;room_61
+#
+@dig Via Necromantia;room_62
+#
+@dig Wind Blowing;room_63
+#
+@dig Valleyside;room_64
+#
+@dig Earth Moving;room_65
+#
+@dig Riverbank;room_66
+#
+@dig Overgrown Trail;room_67
+#
+@dig Overgrown Trail;room_68
+#
+@dig Great Oaks;room_69
+#
+@dig Forum of Shops;room_70
+#
+@dig Water Flowing;room_71
+#
+@dig Pyramid;room_72
+#
+@dig sewer2;room_73
+#
+@dig Temple of the Horned Rat;room_74
+#
+@dig Central Fountain;room_75
+#
+@dig The Mercy Seat;room_76
+#
+@dig Armory Stall;room_77
+#
+@dig Freak Street;room_78
+#
+@dig Sucking Vortex;room_79
+#
+@dig Temple of Apollo;room_80
+#
+@dig Shadowed Hills;room_81
+#
+@dig Feast of Corpses;room_82
+#
+@dig Burrowed Tunnel;room_83
+#
+@dig Judgement Square;room_84
+#
+@dig Arms Emporium;room_85
+#
+@dig Vegetable Market;room_86
+#
+@dig Crypt Foyer;room_87
+#
+@dig rabid lair;room_88
+#
+@dig Dark passage;room_89
+#
+@dig winding hallway;room_90
+#
+@dig Hall of Mourning;room_91
+#
+@dig Natural Staircase;room_92
+#
+@dig Shadow of Aldheorte;room_93
+#
+@dig Wild Woods;room_94
+#
+@dig Cedar Trees;room_95
+#
+@dig Wild Woods;room_96
+#
+@dig Wild Woods;room_97
+#
+@dig Shaded Gulley;room_98
+#
+@dig Ravine Base;room_99
+#
+@dig Inner courtyard;room_100
+#
+@dig Arkinor's Specialty;room_101
+#
+@dig Arkinor's Exotica;room_102
+#
+@dig Fortress alley;room_103
+#
+@dig Forest Lake;room_104
+#
+@dig Fortress alley;room_105
+#
+@dig Druid Palace Gates;room_106
+#
+@dig Oak Archway;room_107
+#
+@dig Grande Mead Hall;room_108
+#
+@dig Earthen Tower Base;room_109
+#
+@dig Tower of Vapors;room_110
+#
+@dig Earthen Tower;room_111
+#
+@dig the Celtivirke;room_112
+#
+@dig Tower of Vapors;room_113
+#
+@dig Emerald Concourse;room_114
+#
+@dig The Taig;room_115
+#
+@dig Room of the Tree;room_116
+#
+@dig the Celtivirke;room_117
+#
+@dig Flame Pinnacle;room_118
+#
+@dig Tower of Fire;room_119
+#
+@dig the Celtivirke;room_120
+#
+@dig Spire of Winds;room_121
+#
+@dig Tower of Winds;room_122
+#
+@dig the Celtivirke;room_123
+#
+@dig Chamber of Lore;room_124
+#
+@dig Druid Archives;room_125
+#
+@dig Tuatha de Danan Hall;room_126
+#
+@dig Gallery of Dreams;room_127
+#
+@dig Speckled House;room_128
+#
+@dig Manannan's Hall;room_129
+#
+@dig House of Red Branch;room_130
+#
+@dig Nuada's Silver Hall;room_131
+#
+@dig Ach Samrath Gateway;room_132
+#
+@dig Hewn Passageway;room_133
+#
+@dig Sparkling Cavern;room_134
+#
+@dig Rotunda Schlindera;room_135
+#
+@dig Split-Level Stair;room_136
+#
+@dig Jaws of Stone;room_137
+#
+@dig Limestone Curtain;room_138
+#
+@dig Underdeep Gate;room_139
+#
+@dig Cascading Waters;room_140
+#
+@dig Green Pool;room_141
+#
+@dig Top of Waterfall;room_142
+#
+@dig Gallery of Weaponry;room_143
+#
+@dig Dwarven Smithy;room_144
+#
+@dig Chamber of Echoes;room_145
+#
+@dig Dark Basin;room_146
+#
+@dig Cavern of Bones;room_147
+#
+@dig Druidic Meadow;room_148
+#
+@dig The Root;room_149
+#
+@dig Tunnel of Daggers;room_150
+#
+@dig Spiral Stair;room_151
+#
+@dig Cliff Face Tower;room_152
+#
+@dig Turret;room_153
+#
+@dig Warlord's Gateway;room_154
+#
+@dig Inner Portcullis;room_155
+#
+@dig Sentry's Watch;room_156
+#
+@dig Hall of 1000 Spears;room_157
+#
+@dig Hall of 10 Kings;room_158
+#
+@dig Hall of 100 Battles;room_159
+#
+@dig Grande Ascension;room_160
+#
+@dig Concourse of Virtues;room_161
+#
+@dig Hall of Courage;room_162
+#
+@dig Chamber of Loyalty;room_163
+#
+@dig Well of Truth;room_164
+#
+@dig Jade Market;room_165
+#
+@dig Vitae Arma Via;room_166
+#
+@dig Hall of Battle;room_167
+#
+@dig Mausoleum of Glory;room_168
+#
+@dig Cryptus Honorium;room_169
+#
+@dig Upper Ascension;room_170
+#
+@dig Wrought Power Hall;room_171
+#
+@dig Monstrous Bellows;room_172
+#
+@dig Humongous Forge;room_173
+#
+@dig Topmost Ascension;room_174
+#
+@dig Heating Shaft;room_175
+#
+@dig Gallery of Strength;room_176
+#
+@dig Stone Parlour;room_177
+#
+@dig Room of Bribes;room_178
+#
+@dig Room of Threats;room_179
+#
+@dig Room of Pleasantries;room_180
+#
+@dig Room of Obsequities;room_181
+#
+@dig Warlord's Court;room_182
+#
+@dig Chamber of Ambitions;room_183
+#
+@dig Den of Iniquity;room_184
+#
+@dig Feasting Hall;room_185
+#
+@dig Debauchery Chambers;room_186
+#
+@dig Lower Ascension;room_187
+#
+@dig Dusty Landing;room_188
+#
+@dig Catacombs of Ghosts;room_189
+#
+@dig Tomb of William I;room_190
+#
+@dig Tomb of Lersing;room_191
+#
+@dig Hold of Halbarad;room_192
+#
+@dig Gurgling Spring;room_193
+#
+@dig Rocky Hillside;room_194
+#
+@dig Warlord's Vale;room_195
+#
+@dig Execution Road;room_196
+#
+@dig Marble Escarpment;room_197
+#
+@dig Quarry of Souls;room_198
+#
+@dig Marble Plain;room_199
+#
+@dig Marble Plain;room_200
+#
+@dig Oracle of Delphi;room_201
+#
+@dig Desolate Expanse;room_202
+#
+@dig Salt Flats;room_203
+#
+@dig Windswept Tundra;room_204
+#
+@dig Ice Wastes;room_205
+#
+@dig Rocky Foothills;room_206
+#
+@dig Scorched Earth;room_207
+#
+@dig Ashen Wastes;room_208
+#
+@dig Ashen Wastes;room_209
+#
+@dig Ashen Wastes;room_210
+#
+@dig Ashen Wastes;room_211
+#
+@dig Ice Wastes;room_212
+#
+@dig Ice Wastes;room_213
+#
+@dig Improbable Structure;room_214
+#
+@dig Unlikely Greenhouse;room_215
+#
+@dig Rope Shaft Bottom;room_216
+#
+@dig Rope Shaft;room_217
+#
+@dig Alchemist's Lab;room_218
+#
+@dig Reagentum Aureum;room_219
+#
+@dig Reagentum Argentum;room_220
+#
+@dig Reagentum Ferrum;room_221
+#
+@dig Reagentum Sulfurum;room_222
+#
+@dig Giant Lead Sphere;room_223
+#
+@dig Obsidian Stair;room_224
+#
+@dig Climbing Stair;room_225
+#
+@dig Upper Obsidian Stair;room_226
+#
+@dig Obsidian Chamber;room_227
+#
+@dig Forbidden Library;room_228
+#
+@dig Black Cauldron;room_229
+#
+@dig Summoning Chamber;room_230
+#
+@dig Climbing Stair;room_231
+#
+@dig Shocking Terror;room_232
+#
+@dig Frightful View;room_233
+#
+@dig Inquisitive Scene;room_234
+#
+@dig Illusionary Walkway;room_235
+#
+@dig Rope Shaft Top;room_236
+#
+@dig Hemp Room;room_237
+#
+@dig Room of Candles;room_238
+#
+@dig Alibaster Stair;room_239
+#
+@dig Alibaster Dome;room_240
+#
+@dig Hall of Enchantments;room_241
+#
+@dig Spinning Globes;room_242
+#
+@dig Dancing Daggers;room_243
+#
+@dig Wizards' Banquetroom;room_244
+#
+@dig Archmage's Study;room_245
+#
+@dig Conjuring Room;room_246
+#
+@dig Initiates' Study;room_247
+#
+@dig Errant Magic Room;room_248
+#
+@dig Cantrips Gone Awry;room_249
+#
+@dig Glittering Dome;room_250
+#
+@dig Damp Woods;room_251
+#
+@dig Great Iron Doors;room_252
+#
+@dig South Lake Shore;room_253
+#
+@dig Abominable Forest;room_254
+#
+@dig Enchanted Woods;room_255
+#
+@dig Ent Grove;room_256
+#
+@dig Hall of Nightflowers;room_257
+#
+@dig Endless Forest;room_258
+#
+@dig Great Temple Gates;room_259
+#
+@dig Moon Alley;room_260
+#
+@dig Back Pub;room_261
+#
+@dig Thieves Guild;room_262
+#
+@dig Horned Rat's Temple;room_263
+#
+@dig sewer3;room_264
+#
+@dig Cold Corridor;room_265
+#
+@dig Blue Hall;room_266
+#
+@dig sewer4;room_267
+#
+@dig corridor of ashes;room_268
+#
+@dig Under Stone;room_269
+#
+@dig Tapestry of Shadows;room_270
+#
+@dig Upper Crypt;room_271
+#
+@dig Ice Ballroom;room_272
+#
+@dig Chior of Icicles;room_273
+#
+@dig sewer5;room_274
+#
+@dig Hole of Maximus;room_275
+#
+@dig Crumbling Alley;room_276
+#
+@dig Guild Forum;room_277
+#
+@dig Ruined Guild;room_278
+#
+@dig Guild Rostra;room_279
+#
+@dig Burnt Building;room_280
+#
+@dig Wizard Archives;room_281
+#
+@dig Festival Place;room_282
+#
+@dig Ancestor's Field;room_283
+#
+@dig Library of Ancients;room_284
+#
+@dig South Wing;room_285
+#
+@dig Caved-in Wing;room_286
+#
+@dig Sealed Entrance;room_287
+#
+@dig Cold Anvil;room_288
+#
+@dig Forsaken Armory;room_289
+#
+@dig Fire-Ravaged Guild;room_290
+#
+@dig Room of Study;room_291
+#
+@dig Chamber of Splendor;room_292
+#
+@dig Place of Graves;room_293
+#
+@dig Collapsed Temple;room_294
+#
+@dig Via Paladinia;room_295
+#
+@dig Via Paladinia;room_296
+#
+@dig Moneylender's Abode;room_297
+#
+@dig Avenue of Kings;room_298
+#
+@dig Small Marketplace;room_299
+#
+@dig Narrow Avenue;room_300
+#
+@dig Unusual Building;room_301
+#
+@dig Ampitheater;room_302
+#
+@dig District of Borba;room_303
+#
+@dig District of Borba;room_304
+#
+@dig Uhto's Gallery;room_305
+#
+@dig Anciatus Terminus;room_306
+#
+@dig Senatorial Curia;room_307
+#
+@dig Obsidian Landing;room_308
+#
+@dig Chamber of Ancients;room_309
+#
+@dig Bowels of Monster;room_310
+#
+@dig Demon's Shaft;room_311
+#
+@dig Top of Demon's Shaft;room_312
+#
+@dig Low Tunnel;room_313
+#
+@dig Giant Web;room_314
+#
+@dig Forgotten Cave;room_315
+#
+@dig Place of Memories;room_316
+#
+@dig Salt Cave;room_317
+#
+@dig Rubbish Heap;room_318
+#
+@dig Cave of Mortem;room_319
+#
+@dig Goblin Throne;room_320
+#
+@dig Deserted Village;room_321
+#
+@dig Empty Marketplace;room_322
+#
+@dig Abandoned Shop;room_323
+#
+@dig Fire-Gutted Temple;room_324
+#
+@dig Scorched Grove;room_325
+#
+@dig Withered Wood;room_326
+#
+@dig Fallen Tree-House;room_327
+#
+@dig Mass Grave;room_328
+#
+@dig Decaying Library;room_329
+#
+@dig Upper Library;room_330
+#
+@dig Bridge of Despair;room_331
+#
+@dig Dry Riverbed;room_332
+#
+@dig Place of Lies;room_333
+#
+@dig Looted Treasure Room;room_334
+#
+@dig Heap of Debris;room_335
+#
+@dig Dead Branch;room_336
+#
+@dig Shaken Platform;room_337
+#
+@dig Forgotten Room;room_338
+#
+@dig Rubble-Choked Wing;room_339
+#
+@dig Thinning Branches;room_340
+#
+@dig Blackened Eaves;room_341
+#
+@dig Crumbling Platform;room_342
+#
+@dig Hidden Stair;room_343
+#
+@dig Wilted Lothlorien;room_344
+#
+@dig Rat's Haven;room_345
+#
+@dig Corridor of Stench;room_346
+#
+@dig Rotunda Mortis;room_347
+#
+@dig Steps of Famine;room_348
+#
+@dig Steps of Strife;room_349
+#
+@dig Steps of Disease;room_350
+#
+@dig Grand Mortuary;room_351
+#
+@dig Dead Vault;room_352
+#
+@dig Passage of Undead;room_353
+#
+@dig Flame of Souls;room_354
+#
+@dig Room of Living Death;room_355
+#
+@dig Gallery of Hungers;room_356
+#
+@dig Chamber of Poisons;room_357
+#
+@dig Place of Deep Misery;room_358
+#
+@dig Smoking Mirror;room_359
+#
+@dig Temple to Death;room_360
+#
+@dig Tezcatlipoca's Hall;room_361
+#
+@dig Malus Occulus;room_362
+#
+@dig Cold Basement;room_363
+#
+@dig Chamber of Wasting;room_364
+#
+@dig Room of Rotted Flesh;room_365
+#
+@dig Goblin Forge;room_366
+#
+@dig Shayol Ghul;room_367
+#
+@dig Arena Entrance;room_368
+#
+@dig Fountain of the Gods;room_369
+#
+@dig East Tiberius Way;room_370
+#
+@dig West Tiberius Way;room_371
+#
+@dig South Agamemnon;room_372
+#
+@dig North Agamemnon;room_373
+#
+@dig Resuscitation Room;room_374
+#
+@dig Shaded Courtyard;room_375
+#
+@dig Upper Res Ab'tyrr;room_376
+#
+@dig Res Ab'tyrr Balcony;room_377
+#
+@dig Chaos Cathedral;room_378
+#
+@dig Altar of Uncertainty;room_379
+#
+@dig Nave of Confusion;room_380
+#
+@dig Cathedral Dome;room_381
+#
+@dig Crumbling Buttress;room_382
+#
+@dig Road of Gods;room_383
+#
+@dig Temple District;room_384
+#
+@dig Crocodile Cult House;room_385
+#
+@dig Lizard Temple;room_386
+#
+@dig Snake Cult Temple;room_387
+#
+@dig Crocodile Pit;room_388
+#
+@dig White Doorstep;room_389
+#
+@dig Opium Palace;room_390
+#
+@dig Opium Lounge;room_391
+#
+@dig Baths of Xiombarg;room_392
+#
+@dig Steamy Rafters;room_393
+#
+@dig Road of Rooftops;room_394
+#
+@dig Upper Croc House;room_395
+#
+@dig Wooden Walkway;room_396
+#
+@dig Reptilean Concourse;room_397
+#
+@dig Guildmaster's Room;room_398
+#
+@dig Wind-beaten Ledge;room_399
+#
+@dig Rocky Shore;room_400
+#
+@dig White Sands;room_401
+#
+@dig Sea Cliffs;room_402
+#
+@dig Mountain Pass;room_403
+#
+@dig Vale of Tai-Tastigon;room_404
+#
+@dig the Tavern Roof;room_405
+#
+@dig Chamber of Quartz;room_406
+#
+@dig Glacial View;room_407
+#
+@dig Frozen Gates;room_408
+#
+@dig Meadow Gate;room_409
+#
+@dig Old Wall entrance;room_410
+#
+@dig River street;room_411
+#
+@dig River alley;room_412
+#
+@dig Audience Hall;room_413
+#
+@dig Res Ab'tyrr entrance;room_414
+#
+@dig Street of Streams;room_415
+#
+@dig the Serpent fountain;room_416
+#
+@dig Way of Tears;room_417
+#
+@dig Armorers Row;room_418
+#
+@dig Blue Pass;room_419
+#
+@dig Antiquarians' Row;room_420
+#
+@dig Red Wax district;room_421
+#
+@dig Crowned Crossroads;room_422
+#
+@dig Charnel House;room_423
+#
+@dig Lower Town Entrance;room_424
+#
+@dig Fleshambles street;room_425
+#
+@dig Old Wall;room_426
+#
+@dig Dry Moat;room_427
+#
+@dig Mountain Gate;room_428
+#
+@dig Common Room;room_429
+#
+@dig Dark Chambers;room_430
+#
+@dig Cook Room;room_431
+#
+@dig Back Alley;room_432
+#
+@dig Silken dark;room_433
+#
+@dig North Fosse;room_434
+#
+@dig Waterfront;room_435
+#
+@dig Ship Island;room_436
+#
+@dig Tower of Demons;room_437
+#
+@dig Three Legg'd Dog;room_438
+#
+@dig Haunted Lands;room_439
+#
+@dig Plain of the Dead;room_440
+#
+@dig Tower of Useth;room_441
+#
+@dig Tomb of Useth;room_442
+#
+@dig Weathered Bluff;room_443
+#
+@dig Ilutian Downs;room_444
+#
+@dig Carolingian Prairie;room_445
+#
+@dig Pool of Blood;room_446
+#
+@dig Troll Warrior Cave;room_447
+#
+@dig Troll Stair;room_448
+#
+@dig Troll King's Tomb;room_449
+#
+@dig Crawl-space;room_450
+#
+@dig Troll Treasure Room;room_451
+#
+@dig Wizard Pawn Shop;room_452
+#
+@dig Death Chamber;room_453
+#
+@dig Lookout Tower Base;room_454
+#
+@dig Spartican Shop;room_455
+#
+@dig Blue Stone Chamber;room_456
+#
+@dig Burial Chamber;room_457
+#
+@dig High Dudgeon;room_458
+#
+@dig Blood Cavern;room_459
+#
+@dig Hall of Snow;room_460
+#
+@dig Frigid Gallery;room_461
+#
+@dig White Balcony;room_462
+#
+@dig Rime Tree;room_463
+#
+@dig Hrungnir's Hall;room_464
+#
+@dig Vafthrudnir's Hall;room_465
+#
+@dig Ice Throne;room_466
+#
+@dig The Rime Tree;room_467
+#
+@dig Sand-choked Passage;room_468
+#
+@dig the maze;room_469
+#
+@dig Purgatory;room_470
+#
+@dig Golden Doors;room_471
+#
+@dig Carpeted Concourse;room_472
+#
+@dig Silver Chamber;room_473
+#
+@dig Trial by Combat;room_474
+#
+@dig Lair of the Beast;room_475
+#
+@dig Long Tunnel;room_476
+#
+@dig Street of Ribbons;room_477
+#
+@dig Glum Passage;room_478
+#
+@dig Introverted Chamber;room_479
+#
+@dig Gold Alley;room_480
+#
+@dig Shining court;room_481
+#
+@dig The Rim;room_482
+#
+@dig Sun Gate;room_483
+#
+@dig the maze;room_484
+#
+@dig the maze;room_485
+#
+@dig the maze;room_486
+#
+@dig the maze;room_487
+#
+@dig the maze;room_488
+#
+@dig the maze;room_489
+#
+@dig the maze;room_490
+#
+@dig the maze;room_491
+#
+@dig the maze;room_492
+#
+@dig the maze;room_493
+#
+@dig the maze;room_494
+#
+@dig the maze;room_495
+#
+@dig the maze;room_496
+#
+@dig The treasure room;room_497
+#
+@dig ====>In Op's Jail;room_498
+#
+@dig 5 Chat room;room_499
+#
+@dig Rickety Stairs;room_500
+#
+@dig Thick Seaweed;room_501
+#
+@dig Watery Cave;room_502
+#
+@dig Aqua Steps;room_503
+#
+@dig Glistening Columns;room_504
+#
+@dig Room of Shells;room_505
+#
+@dig Coral Doorway;room_506
+#
+@dig Coral Chamber;room_507
+#
+@dig Sinking Passage;room_508
+#
+@dig Whirlpool Bottom;room_509
+#
+@dig Elemental Crossroads;room_510
+#
+@dig Arlindel's Testimony;room_511
+#
+@dig Hall of Sleet;room_512
+#
+@dig Frozen Caverns;room_513
+#
+@dig Liquid Caverns;room_514
+#
+@dig Boiling Caverns;room_515
+#
+@dig Wystryk Memorial;room_516
+#
+@dig Hall of Steam;room_517
+#
+@dig Trail of Heat;room_518
+#
+@dig Trail of Blazes;room_519
+#
+@dig Trail of Cinders;room_520
+#
+@dig Tomb of Fastigonn;room_521
+#
+@dig Hall of Smoke;room_522
+#
+@dig Magma Path;room_523
+#
+@dig Earthen Path;room_524
+#
+@dig Desert Path;room_525
+#
+@dig Shrine of Exomerol;room_526
+#
+@dig Hall of Dust;room_527
+#
+@dig Corridor of Smog;room_528
+#
+@dig Corridor of Wind;room_529
+#
+@dig Corridor of Storms;room_530
+#
+@dig Torture Chamber;room_531
+#
+@dig Lookout Tower;room_532
+#
+@dig Gatehouse;room_533
+#
+@dig Long Hallway;room_534
+#
+@dig Blasted Plain;room_535
+#
+@dig Drawbridge;room_536
+#
+@dig Hall of Kunta;room_537
+#
+@dig House of Kunta;room_538
+#
+@dig Gardens of Cebeuq;room_539
+#
+@dig House of Pain;room_540
+#
+@dig Ninstar's Abode;room_541
+#
+@dig Holy Basilica;room_542
+#
+@dig Sloping Hillside;room_543
+#
+@dig Dwarven Gates;room_544
+#
+@dig Granite Stair;room_545
+#
+@dig Onyx Dome;room_546
+#
+@dig Silver Anvil;room_547
+#
+@dig Eldren Spyre;room_548
+#
+@dig Cavern Beyond Time;room_549
+#
+@dig Whirlpool;room_550
+#
+@dig Sighing Wastes;room_551
+#
+@dig Sighing Wastes;room_552
+#
+@dig Sighing Wastes;room_553
+#
+@dig Sighing Wastes;room_554
+#
+@dig Sighing Wastes;room_555
+#
+@dig Walls of Water;room_556
+#
+@dig Pyramid's Shadow;room_557
+#
+@dig monster pit;room_558
+#
+@dig Path of Shadows;room_559
+#
+@dig Stone Cairn;room_560
+#
+@dig Realm of Dark Dreams;room_561
+#
+@dig Fire in the Dark;room_562
+#
+@dig Mholask Ilurum;room_563
+#
+@dig Jhurvali Oporus;room_564
+#
+@dig Red Granite Passage;room_565
+#
+@dig Upper Bronze Hall;room_566
+#
+@dig Lower Bronze Hall;room_567
+#
+@dig Draconis Maioris;room_568
+#
+@dig Battlements of Dawn;room_569
+#
+@dig Balcony of Twilight;room_570
+#
+@dig Chamber of Making;room_571
+#
+@dig Implement Chamber;room_572
+#
+@dig Fezgar's Curiosities;room_573
+#
+@dig Symbala Coatal;room_574
+#
+@dig Lost Drow Cave;room_575
+#
+@dig High King's Chambers;room_576
+#
+@dig Gates of Hell;room_577
+#
+@dig Warn1;room_578
+#
+@dig Hidden Cave;room_579
+#
+@dig Frozen Vault;room_580
+#
+@dig Stone Prism;room_581
+#
+@dig Frognar's Chamber;room_582
+#
+@dig Beyond the Gates;room_583
+#
+@dig Beyond the Seal;room_584
+#
+@dig Mountain side;room_585
+#
+@dig test;room_586
+#
+@dig Dark Pit;room_587
+#
+@dig Mountain Ledge;room_588
+#
+@dig Crumbling Ledge;room_589
+#
+@dig Mountain top;room_590
+#
+@dig 2 Player Start;room_591
+#
+@dig lower west;room_592
+#
+@dig lower north-west;room_593
+#
+@dig lower north;room_594
+#
+@dig lower north-east;room_595
+#
+@dig lower east;room_596
+#
+@dig lower south-east;room_597
+#
+@dig lower south;room_598
+#
+@dig lower south-west;room_599
+#
+@dig middle south-west;room_600
+#
+@dig upper south-west;room_601
+#
+@dig middle south-east;room_602
+#
+@dig upper south-east;room_603
+#
+@dig middle north-east;room_604
+#
+@dig upper north-east;room_605
+#
+@dig middle north-west;room_606
+#
+@dig upper north-west;room_607
+#
+@dig upper north;room_608
+#
+@dig upper east;room_609
+#
+@dig upper south;room_610
+#
+@dig upper west;room_611
+#
+@dig 1 Player Start;room_612
+#
+@dig Long Stones;room_613
+#
+@dig Cobbled Courtyard;room_614
+#
+@dig Chapel Stones;room_615
+#
+@dig Old Tower Base;room_616
+#
+@dig Damp Steps;room_617
+#
+@dig Well of Regrets;room_618
+#
+@dig Well of Sorrow;room_619
+#
+@dig Well of Lost Hopes;room_620
+#
+@dig Cold Steps;room_621
+#
+@dig Dark Landing;room_622
+#
+@dig Dank Passage;room_623
+#
+@dig Ghantriak's Trap;room_624
+#
+@dig Dungeons of Solace;room_625
+#
+@dig Tyviar's Hall;room_626
+#
+@dig Lotrar's Trap;room_627
+#
+@dig Dungeons of Solace;room_628
+#
+@dig Higett's Hall;room_629
+#
+@dig Chamber of Drassoff;room_630
+#
+@dig Lost Room;room_631
+#
+@dig Lair of Bruniak;room_632
+#
+@dig lair of Nystrek;room_633
+#
+@dig Hall of Frobar;room_634
+#
+@dig Long Corridor;room_635
+#
+@dig Lair of Jorlock;room_636
+#
+@dig Chamber of Ippulet;room_637
+#
+@dig Dungeons of Solace;room_638
+#
+@dig Procriar's Hall;room_639
+#
+@dig Orguzar's Lair;room_640
+#
+@dig Dead End;room_641
+#
+@dig Well Bottom;room_642
+#
+@dig Well Bottom;room_643
+#
+@dig Well Bottom;room_644
+#
+@dig Chamber of Hues;room_645
+#
+@dig Lake's Heart;room_646
+#
+@dig Cave Entrance;room_647
+#
+@dig Vault;room_648
+#
+@dig Stone Oasis;room_649
+#
+@dig Temple of Death;room_650
+#
+@dig Passages of Mummra;room_651
+#
+@dig Passages of Creeper;room_652
+#
+@dig Passages of Krotche;room_653
+#
+@dig Passages of Tutt;room_654
+#
+@dig Passages of Mummra;room_655
+#
+@dig Passages of Creeper;room_656
+#
+@dig Passages of Krotche;room_657
+#
+@dig Passages of Tutt;room_658
+#
+@dig Passages of Mummra;room_659
+#
+@dig Passages of Creeper;room_660
+#
+@dig Passages of Krotche;room_661
+#
+@dig Passages of Tutt;room_662
+#
+@dig Passages of Mummra;room_663
+#
+@dig Passages of Creeper;room_664
+#
+@dig Passages of Krotche;room_665
+#
+@dig Passages of Tutt;room_666
+#
+@dig Passages of Mummra;room_667
+#
+@dig Passages of Tutt;room_668
+#
+@dig Passages of Krotche;room_669
+#
+@dig Passages of Creeper;room_670
+#
+@dig Sandstone Steps;room_671
+#
+@dig Temple of Anubis;room_672
+#
+@dig Treasure of Krotche;room_673
+#
+@dig Ocean's Tunnel;room_674
+#
+@dig Behind the Mirror;room_675
+#
+@dig Ghalstract Absolung;room_676
+#
+@dig Hall of Pillars;room_677
+#
+@dig Ocean's Tunnel;room_678
+#
+@dig Towering Gates;room_679
+#
+@dig Bottom Hall;room_680
+#
+@dig Ivory Steps;room_681
+#
+@dig Brass Bell;room_682
+#
+@dig Trial of Fire;room_683
+#
+@dig Gauntlet;room_684
+#
+@dig Gallery of Hopes;room_685
+#
+@dig Trial of Ice;room_686
+#
+@dig Guardian's Chamber;room_687
+#
+@dig Central Chamber;room_688
+#
+@dig Central Steps;room_689
+#
+@dig Misty Isle;room_690
+#
+@dig Misty Seas;room_691
+#
+@dig Arthur's Tomb;room_692
+#
+@dig Misty Seas;room_693
+#
+@dig Hokka's Hole;room_694
+#
+@dig Cave;room_695
+#
+@dig Cave;room_696
+#
+@dig Cave;room_697
+#
+@dig Cave;room_698
+#
+@dig Cave;room_699
+#
+@dig Cave;room_700
+#
+@dig Cave;room_701
+#
+@dig Cave;room_702
+#
+@dig Cave;room_703
+#
+@dig Top of tower;room_704
+#
+@dig Valley Floor;room_705
+#
+@dig Shaded Path;room_706
+#
+@dig Steep Embankment;room_707
+#
+@dig Fortress Meadow;room_708
+#
+@dig Forgotten fortress;room_709
+#
+@dig Burnt Hills;room_710
+#
+@dig Black Hills;room_711
+#
+@dig Bottom Room;room_712
+#
+@dig Corazny's Plaza;room_713
+#
+@dig Upper Chambers;room_714
+#
+@dig North Wing;room_715
+#
+@dig Wyldibeast's Lair;room_716
+#
+@dig Tower of the Prophet;room_717
+#
+@dig Hidden Hallway;room_718
+#
+@dig Forlorn Altar;room_719
+#
+@dig Tower of Yslsl;room_720
+#
+@dig Upper Yslsl Tower;room_721
+#
+@dig East Wing;room_722
+#
+@dig Guild's Stashroom;room_723
+#
+@dig West Wing;room_724
+#
+@dig Council Chambers;room_725
+#
+@dig Wood-King's Throne;room_726
+#
+@dig Hall of MindMirror;room_727
+#
+@dig Hall of Mindmirror;room_728
+#
+@dig Autumnfire Chambers;room_729
+#
+@dig Chambers of Greydawn;room_730
+#
+@dig Class-Room;room_731
+#
+@dig marble columns;room_732
+#
+@dig Covered path;room_733
+#
+@dig Great Landing;room_734
+#
+@dig Hall of Portraits;room_735
+#
+@dig Room of Arms;room_736
+#
+@dig Landing Overlook;room_737
+#
+@dig Warrior Study;room_738
+#
+@dig Library of warriors;room_739
+#
+@dig Alchemy room;room_740
+#
+@dig Hall of Treaties;room_741
+#
+@dig Hall of Faith;room_742
+#
+@dig Clandestine Hall;room_743
+#
+@dig High Court;room_744
+#
+@dig Weapon Gallery;room_745
+#
+@dig Caved in room;room_746
+#
+@dig Sentry Quarters;room_747
+#
+@dig sentry2 quarters;room_748
+#
+@dig long passage;room_749
+#
+@dig East tower;room_750
+#
+@dig secret passage;room_751
+#
+@dig Sanity ward;room_752
+#
