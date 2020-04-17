@@ -53,7 +53,7 @@ DATABASES = {
 }
 
 DEFAULT_CHANNELS = [
-    {
+     {
         "key": "Public",
         "aliases": ("pub"),
         "desc": "Global public messages",
@@ -61,10 +61,10 @@ DEFAULT_CHANNELS = [
     },
     {
         "key": "Admin",
-        "aliases": (),
+        "aliases": ("adm"),
         "desc": "Global admin messages",
         "locks": "control:perm(Admin);listen:all();send:all()",
-    }
+    },
 ]
 
 ######################################################################
