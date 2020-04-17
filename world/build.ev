@@ -20,6 +20,10 @@
 #
 #INSERT world.build_exits
 #
+#INSERT world.build_exit_attrs
+#
+#INSERT world.build_exit_descs
+#
 # Step 3: Apply manual build edits.
 #
 #INSERT world.build_edits

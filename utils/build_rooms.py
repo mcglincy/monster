@@ -20,6 +20,9 @@ def make_room(roomdesc):
 
 
 def main():
+  print('# Add an obvious non-destination for room id 0')
+  print(f'@dig NOWHERE;room_0')
+  print('#')  
   for roomdesc in ROOMDESCS:
     make_room(roomdesc)
 

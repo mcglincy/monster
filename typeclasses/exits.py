@@ -121,6 +121,8 @@ class Exit(DefaultExit):
   def get_display_name(self, looker, **kwargs):
     if self.db.exit_desc:
       return self.db.exit_desc
+    elif self.db.exit_kind == ExitKind.NO_EXIT:
+      return ""
     elif self.name in ["north", "south", "east", "west"]:
       return f"To the {self.name} is {self.destination.key}."
     elif self.name in ["up", "down"]:

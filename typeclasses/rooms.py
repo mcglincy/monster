@@ -104,6 +104,9 @@ class Room(DefaultRoom):
     exits, users, things = [], [], defaultdict(list)
     for con in visible:
       key = con.get_display_name(looker)
+      if not key:
+        # skip any no-description things
+        continue
       if con.destination:
         exits.append(key)
       elif con.has_account:

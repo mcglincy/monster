@@ -1,3 +1,6 @@
+# Add an obvious non-destination for room id 0
+@dig NOWHERE;room_0
+#
 @dig Great Hall;room_1
 #
 @dig Void;room_2

@@ -40,9 +40,18 @@ def make_exit(exit, to_loc, come_out_exit):
     exit_names = f"{direction};{direction_letter};{alias}"
   else:
     exit_names = f"{direction};{direction_letter}"
+  exit_name = exit_names.split(';')[0]
 
-  print(f'@open {exit_names} = {to_room_id}')
-  print('#')
+  maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc')
+  maybe_set_desc(exit['fail'], exit_name, 'fail_msg')
+  maybe_set_desc(exit['success'], exit_name, 'success_msg')
+  maybe_set_desc(exit['go_in'], exit_name, 'go_in_msg')
+  # TODO: we could search all rooms/exits for our opposite and then use its come_out_msg
+  # maybe_set_desc(exit['come_out'], exit_name, 'come_out_msg')
+  if come_out_exit:
+    maybe_set_desc(come_out_exit['come_out'], exit_name, 'come_out_msg')
+  # if opposite_exit:
+  #   maybe_set_desc(opposite_exit['come_out'], exit_name, 'come_out_msg')
 
 
 def main():
