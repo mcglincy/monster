@@ -1,0 +1,37 @@
+Frozen Vault
+Sanity ward
+Stone Prism
+Vault
+Bottom Room
+Crypt Foyer
+Defeat and Dishonor
+Draconis Maioris
+Horned Rat's Temple
+Lost Drow Cave
+Lower Bronze Hall
+Pit of Fire
+Red Granite Passage
+Symbala Coatal
+Temple of the Horned Rat
+Upper Bronze Hall
+lower east
+lower north
+lower north-east
+lower north-west
+lower south
+lower south-east
+lower south-west
+lower west
+middle north-east
+middle north-west
+middle south-east
+middle south-west
+tomb of Darkmage
+upper east
+upper north
+upper north-east
+upper north-west
+upper south
+upper south-east
+upper south-west
+upper west

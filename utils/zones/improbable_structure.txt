@@ -1,0 +1,45 @@
+Alchemist's Lab
+Alibaster Dome
+Alibaster Stair
+Archmage's Study
+Arkinor's Exotica
+Arkinor's Specialty
+Black Cauldron
+Cantrips Gone Awry
+Climbing Stair
+Conjuring Room
+Dancing Daggers
+Demon's Shaft
+Errant Magic Room
+Forbidden Library
+Frightful View
+Giant Lead Sphere
+Glittering Dome
+Hall of Enchantments
+Hemp Room
+Illusionary Walkway
+Initiates' Study
+Inquisitive Scene
+Library of Ancients
+Obsidian Chamber
+Obsidian Landing
+Obsidian Stair
+Reagentum Argentum
+Reagentum Aureum
+Reagentum Ferrum
+Reagentum Sulfurum
+Resuscitation Room
+Room of Candles
+Rope Shaft
+Rope Shaft Bottom
+Rope Shaft Top
+Shocking Terror
+Spinning Globes
+Summoning Chamber
+Top of Demon's Shaft
+Unlikely Greenhouse
+Upper Obsidian Stair
+Wizard Archives
+Wizard Pawn Shop
+Wizards' Banquetroom
+Improbable Structure
