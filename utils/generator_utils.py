@@ -2,9 +2,6 @@
 DEFAULT_MSG_ID = 32000
 
 
-
-
-
 def find_object(objects, obj_id):
   for obj in objects:
     if obj['id'] == obj_id:

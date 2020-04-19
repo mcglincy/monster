@@ -5,7 +5,6 @@ import sys
 sys.path.insert(0, '..')
 
 from gamerules.exit_effect_kind import ExitEffectKind
-from gamerules.exit_kind import ExitKind
 from utils.generator_utils import *
 
 
@@ -28,20 +27,7 @@ def maybe_set_desc(desc_id, exit_name, attr_name):
 
 
 def make_exit(exit, to_loc, come_out_exit):
-  exit_kind = ExitKind(exit['kind'])
-  direction = exit['direction']
-  direction_letter = direction[0]
-  to_room_id = f'room_{to_loc}'
-  # req_verb is only used in a single exit - maybe by error?
-  # req_verb = exit['req_verb']
-
-  alias = exit['alias']
-  if alias:
-    exit_names = f"{direction};{direction_letter};{alias}"
-  else:
-    exit_names = f"{direction};{direction_letter}"
-  exit_name = exit_names.split(';')[0]
-
+  exit_name = exit['direction']
   maybe_set_desc(exit['exit_desc'], exit_name, 'exit_desc')
   maybe_set_desc(exit['fail'], exit_name, 'fail_msg')
   maybe_set_desc(exit['success'], exit_name, 'success_msg')
