@@ -125,6 +125,7 @@ The running game server is up at http://www.monstermud.com.
   * search for hidden character
   * sayings
   * pursuit chance / pursuit behavior
+  * smarter lair behavior
  
 
 ## What probably won't get implemented (yet)
