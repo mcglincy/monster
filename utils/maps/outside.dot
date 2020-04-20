@@ -308,7 +308,6 @@ room_590 -> room_64 [label="w"];
 room_590 -> room_543 [label="d"];
 room_613 [label="Long Stones"];
 room_613 -> room_559 [label="n"];
-room_623 [label="Dank Passage"];
 room_705 [label="Valley Floor"];
 room_705 -> room_733 [label="n"];
 room_705 -> room_64 [label="s"];

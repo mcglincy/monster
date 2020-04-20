@@ -2,6 +2,7 @@ Chapel Stones
 Cobbled Courtyard
 Cold Steps
 Damp Steps
+Dank Passage
 Dark Landing
 Dungeons of Solace
 Ghantriak's Trap
