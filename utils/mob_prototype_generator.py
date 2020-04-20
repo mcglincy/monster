@@ -27,8 +27,9 @@ def output_mob(obj, objects):
   print(f"  'record_id': {record_id},")
   min_level = obj['min_level']
   # add tags for easier searchability
-  tags = ['mob', f'min_level_{min_level}', f'record_id_{record_id}']
-  print(f"  'prototype_tags': {tags},")
+  prototype_tags = ['mob', f'min_level_{min_level}', f'record_id_{record_id}']
+  print(f"  'prototype_tags': {prototype_tags},")
+  print(f"  'tags': ['mob'],")
   kind = MobKind(obj['kind'])
   print(f"  'kind': MobKind.{kind.name},")  
   print(f"  'min_level': {min_level},")

@@ -1,6 +1,6 @@
 import random
 from evennia import TICKER_HANDLER
-from gamerules.mobs import generate_mob
+from gamerules.mobs import generate_mob, has_mobs, MAX_MOBS, mob_count
 from gamerules.special_room_kind import SpecialRoomKind
 
 
@@ -90,13 +90,11 @@ class TickerMixin:
     else:
       # default is a 1% chance
       spawn_chance = 1
-    if random.randint(0, 100) < spawn_chance:
-      pass
-      existing_mobs = [x for x in self.location.contents
-        if x.is_typeclass("typeclasses.mobs.Mob", exact=False)]
-      if not existing_mobs:
-        # yay, let's make a monster
-        generate_mob(self.location, self.level)
+    if (random.randint(0, 100) < spawn_chance
+      and not has_mobs(self.location)
+      and mob_count() < MAX_MOBS):
+      # yay, let's make a monster
+      generate_mob(self.location, self.level)
 
   def tick_trapdoor(self):
     if not self.db or not self.location:

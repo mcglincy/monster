@@ -1,9 +1,13 @@
 import random
 from evennia import create_object
 from evennia.prototypes import prototypes as protlib, spawner
+from evennia.utils.search import search_object_by_tag
 from gamerules.combat import apply_armor, attack_bystander_msg, attack_target_msg
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
+
+# never spawn more than this many mobs in the world
+MAX_MOBS = 20
 
 
 def resolve_mob_attack(mob, target, attack_name="claws"):
@@ -79,7 +83,23 @@ def generate_mob(location, level):
 
 def has_players_or_mobs(location):
   for obj in location.contents:
-    if obj.is_typeclass("typeclasses.characters.Character") or obj.is_typeclass("typeclasses.mobs.Mob"):
+    if (obj.is_typeclass("typeclasses.characters.Character")
+      or obj.is_typeclass("typeclasses.mobs.Mob", exact=False)):
+      return True
+  return False
+
+
+def mob_count():
+  return len(all_mobs())
+
+
+def all_mobs():
+  return search_object_by_tag("mob")
+
+
+def has_mobs(location):
+  for obj in location.contents:
+    if obj.is_typeclass("typeclasses.mobs.Mob", exact=False):
       return True
   return False
 
