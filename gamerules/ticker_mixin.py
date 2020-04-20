@@ -91,8 +91,12 @@ class TickerMixin:
       # default is a 1% chance
       spawn_chance = 1
     if random.randint(0, 100) < spawn_chance:
-      # yay, let's make a monster
-      generate_mob(self.location, self.level)
+      pass
+      existing_mobs = [x for x in self.location.contents
+        if x.is_typeclass("typeclasses.mobs.Mob", exact=False)]
+      if not existing_mobs:
+        # yay, let's make a monster
+        generate_mob(self.location, self.level)
 
   def tick_trapdoor(self):
     if not self.db or not self.location:
