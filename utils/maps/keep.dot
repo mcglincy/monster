@@ -1,0 +1,15 @@
+digraph monster {
+room_30 [label="Keep Entrance"];
+room_30 -> room_31 [label="e"];
+room_31 [label="foyer"];
+room_31 -> room_30 [label="n"];
+room_31 -> room_32 [label="s"];
+room_32 [label="Hall of Honor"];
+room_32 -> room_268 [label="n"];
+room_32 -> room_31 [label="e"];
+room_32 -> room_89 [label="w"];
+room_32 -> room_33 [label="d"];
+room_33 [label="World Window"];
+room_89 [label="Dark passage"];
+room_268 [label="corridor of ashes"];
+}

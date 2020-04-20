@@ -1,0 +1,16 @@
+digraph monster {
+room_4 [label="Sewer Entrance"];
+room_4 -> room_39 [label="n"];
+room_4 -> room_264 [label="s"];
+room_4 -> room_73 [label="e"];
+room_4 -> room_267 [label="w"];
+room_39 [label="sewer1"];
+room_39 -> room_4 [label="s"];
+room_73 [label="sewer2"];
+room_73 -> room_4 [label="w"];
+room_264 [label="sewer3"];
+room_264 -> room_4 [label="n"];
+room_267 [label="sewer4"];
+room_267 -> room_4 [label="e"];
+room_274 [label="sewer5"];
+}

@@ -21,7 +21,6 @@ Heating Shaft
 High Dudgeon
 Hold of Halbarad
 Humongous Forge
-Implement Chamber
 Inner Portcullis
 Lower Ascension
 Mausoleum of Glory

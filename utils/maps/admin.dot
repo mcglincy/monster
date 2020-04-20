@@ -1,0 +1,8 @@
+digraph monster {
+room_367 [label="Shayol Ghul"];
+room_499 [label="5 Chat room"];
+room_578 [label="Warn1"];
+room_586 [label="test"];
+room_591 [label="2 Player Start"];
+room_612 [label="1 Player Start"];
+}

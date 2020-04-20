@@ -1,0 +1,10 @@
+digraph monster {
+room_2 [label="Void"];
+room_2 -> room_470 [label="n"];
+room_470 [label="Purgatory"];
+room_470 -> room_731 [label="d"];
+room_731 [label="Class-Room"];
+room_731 -> room_731 [label="e"];
+room_731 -> room_731 [label="w"];
+room_731 -> room_470 [label="u"];
+}

@@ -1,5 +1,3 @@
-Guild Forum
-Guild Rostra
 Ampitheater
 Ancestor's Field
 Anciatus Terminus
@@ -21,12 +19,14 @@ Festival Place
 Fire-Ravaged Guild
 Forsaken Armory
 Forum of Shops
+Guild Forum
+Guild Rostra
+Library of Ancients
 Moneylender's Abode
 Narrow Avenue
 Place of Graves
 Room of Study
 Ruined Guild
-Scorched Grove
 Sealed Entrance
 Senatorial Curia
 Small Marketplace
@@ -34,3 +34,4 @@ South Wing
 Unusual Building
 Via Necromantia
 Via Paladinia
+Wizard Archives

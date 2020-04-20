@@ -11,6 +11,6 @@
 # }
 
 echo "digraph monster {" > room.dot
-grep dig/tel ../world/build.ev |sed 's/^\@dig\/tel //' |awk -F\; '{printf "%s [label=\"%s\"];\n",$2,$1}' >> room.dot
-egrep '\@tel|\@open' ../world/build.ev |./exits.pl  >> room.dot
+grep dig ../world/build_rooms.ev |sed 's/^\@dig //' |awk -F\; '{printf "%s [label=\"%s\"];\n",$2,$1}' >> room.dot
+egrep '\@tel|\@open' ../world/build_exits.ev |./exits.pl  >> room.dot
 echo "}" >> room.dot

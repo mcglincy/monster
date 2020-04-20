@@ -2,8 +2,6 @@ Alchemist's Lab
 Alibaster Dome
 Alibaster Stair
 Archmage's Study
-Arkinor's Exotica
-Arkinor's Specialty
 Black Cauldron
 Cantrips Gone Awry
 Climbing Stair
@@ -18,9 +16,9 @@ Glittering Dome
 Hall of Enchantments
 Hemp Room
 Illusionary Walkway
+Implement Chamber
 Initiates' Study
 Inquisitive Scene
-Library of Ancients
 Obsidian Chamber
 Obsidian Landing
 Obsidian Stair
@@ -39,7 +37,6 @@ Summoning Chamber
 Top of Demon's Shaft
 Unlikely Greenhouse
 Upper Obsidian Stair
-Wizard Archives
 Wizard Pawn Shop
 Wizards' Banquetroom
 Improbable Structure

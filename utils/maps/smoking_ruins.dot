@@ -1,0 +1,31 @@
+digraph monster {
+room_10 [label="Circle of Fire"];
+room_10 -> room_28 [label="w"];
+room_28 [label="smoking ruins"];
+room_28 -> room_10 [label="e"];
+room_35 [label="Dark of the Moon"];
+room_35 -> room_36 [label="s"];
+room_36 [label="Starless Night"];
+room_36 -> room_35 [label="n"];
+room_36 -> room_40 [label="s"];
+room_36 -> room_90 [label="e"];
+room_36 -> room_269 [label="w"];
+room_40 [label="War Dance"];
+room_40 -> room_63 [label="n"];
+room_40 -> room_71 [label="s"];
+room_40 -> room_46 [label="e"];
+room_40 -> room_65 [label="w"];
+room_46 [label="Fire Leaping"];
+room_46 -> room_40 [label="w"];
+room_63 [label="Wind Blowing"];
+room_63 -> room_40 [label="s"];
+room_65 [label="Earth Moving"];
+room_65 -> room_40 [label="e"];
+room_71 [label="Water Flowing"];
+room_71 -> room_40 [label="n"];
+room_90 [label="winding hallway"];
+room_90 -> room_91 [label="e"];
+room_91 [label="Hall of Mourning"];
+room_91 -> room_28 [label="s"];
+room_269 [label="Under Stone"];
+}

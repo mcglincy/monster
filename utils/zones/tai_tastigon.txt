@@ -1,6 +1,7 @@
 Altar of Uncertainty
 Antiquarians' Row
 Arena Entrance
+Arkinor's Exotica
 Armorers Row
 Armory Stall
 Arms Emporium
@@ -28,7 +29,6 @@ Freak Street
 Gardens of Cebeuq
 Gatehouse
 Gates of Hell
-Gold Alley
 Great Temple Gates
 Hall of Kunta
 High King's Chambers
@@ -52,7 +52,6 @@ Old Wall entrance
 Opium Lounge
 Opium Palace
 Red Wax district
-Red street
 Reptilean Concourse
 Res Ab'tyrr Balcony
 Res Ab'tyrr entrance
@@ -60,24 +59,19 @@ River alley
 River street
 Road of Gods
 Road of Rooftops
-Shining court
 Ship Island
 Silken dark
 Snake Cult Temple
 South Agamemnon
 Spartican Shop
 Steamy Rafters
-Street of Ribbons
 Street of Streams
-Sun Gate
 Temple District
 The Mercy Seat
-The Rim
 Three Legg'd Dog
 Torture Chamber
 Upper Croc House
 Upper Res Ab'tyrr
-Upper Yslsl Tower
 Vegetable Market
 Waterfront
 Way of Tears

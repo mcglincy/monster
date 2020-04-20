@@ -1,0 +1,26 @@
+digraph monster {
+room_1 [label="Great Hall"];
+room_1 -> room_79 [label="d"];
+room_79 [label="Sucking Vortex"];
+room_79 -> room_471 [label="n"];
+room_471 [label="Golden Doors"];
+room_471 -> room_472 [label="n"];
+room_472 [label="Carpeted Concourse"];
+room_472 -> room_473 [label="n"];
+room_472 -> room_471 [label="s"];
+room_473 [label="Silver Chamber"];
+room_473 -> room_472 [label="s"];
+room_473 -> room_474 [label="e"];
+room_474 [label="Trial by Combat"];
+room_474 -> room_475 [label="n"];
+room_474 -> room_475 [label="w"];
+room_475 [label="Lair of the Beast"];
+room_475 -> room_474 [label="s"];
+room_475 -> room_476 [label="e"];
+room_476 [label="Long Tunnel"];
+room_476 -> room_475 [label="w"];
+room_478 [label="Glum Passage"];
+room_478 -> room_479 [label="n"];
+room_479 [label="Introverted Chamber"];
+room_479 -> room_478 [label="s"];
+}
