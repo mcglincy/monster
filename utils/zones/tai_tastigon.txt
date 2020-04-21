@@ -20,6 +20,7 @@ Crocodile Cult House
 Crocodile Pit
 Crowned Crossroads
 Crumbling Buttress
+Dry Moat
 Fezgar's Curiosities
 Fleshambles street
 Freak Street
@@ -31,7 +32,9 @@ Jade Market
 Judgement Square
 Lizard Temple
 Lower Town Entrance
+Meadow Gate
 Moon Alley
+Mountain Gate
 Nave of Confusion
 North Fosse
 Old Wall

@@ -2,6 +2,7 @@ digraph monster {
 room_3 [label="Red street"];
 room_3 -> room_477 [label="e"];
 room_12 [label="Pit of Fire"];
+room_22 [label="Endless Forest"];
 room_37 [label="Defeat and Dishonor"];
 room_37 -> room_37 [label="d"];
 room_38 [label="tomb of Darkmage"];
@@ -9,6 +10,8 @@ room_74 [label="Temple of the Horned Rat"];
 room_87 [label="Crypt Foyer"];
 room_101 [label="Arkinor's Specialty"];
 room_148 [label="Druidic Meadow"];
+room_258 [label="Endless Forest"];
+room_258 -> room_258 [label="e"];
 room_263 [label="Horned Rat's Temple"];
 room_465 [label="Vafthrudnir's Hall"];
 room_477 [label="Street of Ribbons"];

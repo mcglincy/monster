@@ -1,9 +1,6 @@
 digraph monster {
 room_57 [label="Lake Bottom"];
-room_57 -> room_104 [label="u"];
 room_57 -> room_501 [label="d"];
-room_104 [label="Forest Lake"];
-room_104 -> room_57 [label="d"];
 room_305 [label="Uhto's Gallery"];
 room_305 -> room_645 [label="s"];
 room_501 [label="Thick Seaweed"];

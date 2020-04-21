@@ -1,0 +1,26 @@
+digraph monster {
+room_137 [label="Jaws of Stone"];
+room_137 -> room_194 [label="n"];
+room_194 [label="Rocky Hillside"];
+room_194 -> room_137 [label="s"];
+room_194 -> room_195 [label="d"];
+room_195 [label="Warlord's Vale"];
+room_195 -> room_196 [label="n"];
+room_195 -> room_194 [label="u"];
+room_196 [label="Execution Road"];
+room_196 -> room_197 [label="n"];
+room_196 -> room_195 [label="s"];
+room_197 [label="Marble Escarpment"];
+room_197 -> room_196 [label="s"];
+room_197 -> room_198 [label="d"];
+room_198 [label="Quarry of Souls"];
+room_198 -> room_199 [label="n"];
+room_198 -> room_200 [label="e"];
+room_198 -> room_197 [label="u"];
+room_199 [label="Marble Plain"];
+room_199 -> room_198 [label="s"];
+room_199 -> room_200 [label="e"];
+room_200 [label="Marble Plain"];
+room_200 -> room_199 [label="n"];
+room_200 -> room_198 [label="w"];
+}

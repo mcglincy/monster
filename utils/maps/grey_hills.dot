@@ -1,0 +1,22 @@
+digraph monster {
+room_6 [label="grey hills"];
+room_6 -> room_8 [label="n"];
+room_6 -> room_7 [label="e"];
+room_6 -> room_23 [label="w"];
+room_7 [label="grey hills"];
+room_7 -> room_8 [label="n"];
+room_7 -> room_9 [label="e"];
+room_7 -> room_6 [label="w"];
+room_8 [label="wasteland"];
+room_8 -> room_7 [label="s"];
+room_8 -> room_9 [label="e"];
+room_8 -> room_6 [label="w"];
+room_8 -> room_88 [label="d"];
+room_9 [label="grey hills"];
+room_9 -> room_8 [label="n"];
+room_9 -> room_7 [label="w"];
+room_23 [label="Grey Steppe"];
+room_23 -> room_6 [label="e"];
+room_88 [label="rabid lair"];
+room_88 -> room_8 [label="u"];
+}
