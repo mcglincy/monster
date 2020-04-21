@@ -1,0 +1,31 @@
+digraph monster {
+room_5 [label="Tu'matei Alras"];
+room_5 -> room_571 [label="d"];
+room_257 [label="Hall of Nightflowers"];
+room_257 -> room_725 [label="n"];
+room_257 -> room_570 [label="s"];
+room_548 [label="Eldren Spyre"];
+room_548 -> room_569 [label="u"];
+room_569 [label="Battlements of Dawn"];
+room_569 -> room_570 [label="u"];
+room_569 -> room_548 [label="d"];
+room_570 [label="Balcony of Twilight"];
+room_570 -> room_257 [label="n"];
+room_570 -> room_729 [label="e"];
+room_570 -> room_730 [label="w"];
+room_570 -> room_571 [label="u"];
+room_570 -> room_569 [label="d"];
+room_571 [label="Chamber of Making"];
+room_571 -> room_5 [label="u"];
+room_571 -> room_570 [label="d"];
+room_725 [label="Council Chambers"];
+room_725 -> room_726 [label="n"];
+room_725 -> room_257 [label="s"];
+room_726 [label="Wood-King's Throne"];
+room_726 -> room_725 [label="s"];
+room_727 [label="Hall of MindMirror"];
+room_729 [label="Autumnfire Chambers"];
+room_729 -> room_570 [label="w"];
+room_730 [label="Chambers of Greydawn"];
+room_730 -> room_570 [label="e"];
+}

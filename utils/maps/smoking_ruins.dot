@@ -28,4 +28,7 @@ room_90 -> room_91 [label="e"];
 room_91 [label="Hall of Mourning"];
 room_91 -> room_28 [label="s"];
 room_269 [label="Under Stone"];
+room_269 -> room_270 [label="w"];
+room_270 [label="Tapestry of Shadows"];
+room_270 -> room_269 [label="e"];
 }

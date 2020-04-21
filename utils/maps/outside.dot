@@ -232,7 +232,6 @@ room_256 -> room_255 [label="e"];
 room_256 -> room_254 [label="w"];
 room_258 [label="Endless Forest"];
 room_258 -> room_258 [label="e"];
-room_270 [label="Tapestry of Shadows"];
 room_400 [label="Rocky Shore"];
 room_400 -> room_93 [label="n"];
 room_400 -> room_401 [label="e"];

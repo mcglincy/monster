@@ -1,0 +1,37 @@
+digraph monster {
+room_375 [label="Shaded Courtyard"];
+room_375 -> room_413 [label="n"];
+room_375 -> room_720 [label="s"];
+room_413 [label="Audience Hall"];
+room_413 -> room_430 [label="n"];
+room_413 -> room_375 [label="s"];
+room_430 [label="Dark Chambers"];
+room_430 -> room_714 [label="n"];
+room_430 -> room_413 [label="s"];
+room_430 -> room_718 [label="d"];
+room_714 [label="Upper Chambers"];
+room_714 -> room_715 [label="n"];
+room_714 -> room_717 [label="s"];
+room_714 -> room_722 [label="e"];
+room_714 -> room_724 [label="w"];
+room_714 -> room_430 [label="d"];
+room_715 [label="North Wing"];
+room_715 -> room_714 [label="s"];
+room_717 [label="Tower of the Prophet"];
+room_717 -> room_714 [label="n"];
+room_718 [label="Hidden Hallway"];
+room_718 -> room_719 [label="s"];
+room_718 -> room_430 [label="w"];
+room_719 [label="Forlorn Altar"];
+room_719 -> room_718 [label="n"];
+room_719 -> room_719 [label="e"];
+room_720 [label="Tower of Yslsl"];
+room_720 -> room_375 [label="n"];
+room_720 -> room_721 [label="u"];
+room_721 [label="Upper Yslsl Tower"];
+room_721 -> room_720 [label="d"];
+room_722 [label="East Wing"];
+room_722 -> room_714 [label="w"];
+room_724 [label="West Wing"];
+room_724 -> room_714 [label="e"];
+}
