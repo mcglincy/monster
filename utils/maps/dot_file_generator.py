@@ -12,6 +12,7 @@ ZONES = [
   'dwarven_stair',
   'forest_lake',
   'forgotten_fortress',
+  'fountain_of_the_gods',
   'goblin_caves',
   'ice_wastes',
   'improbable_structure',

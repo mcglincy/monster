@@ -1,6 +1,5 @@
 Altar of Uncertainty
 Antiquarians' Row
-Arena Entrance
 Arkinor's Exotica
 Armorers Row
 Armory Stall
@@ -20,32 +19,19 @@ Corazny's Plaza
 Crocodile Cult House
 Crocodile Pit
 Crowned Crossroads
-Drawbridge
-East Tiberius Way
 Fezgar's Curiosities
 Fleshambles street
-Fountain of the Gods
 Freak Street
-Gardens of Cebeuq
-Gatehouse
 Gates of Hell
 Great Temple Gates
-Hall of Kunta
 High King's Chambers
 Holy Basilica
-House of Kunta
-House of Pain
 Jade Market
 Judgement Square
 Lizard Temple
-Long Hallway
-Lookout Tower
-Lookout Tower Base
 Lower Town Entrance
 Moon Alley
 Nave of Confusion
-Ninstar's Abode
-North Agamemnon
 North Fosse
 Old Wall
 Old Wall entrance
@@ -62,20 +48,16 @@ Road of Rooftops
 Ship Island
 Silken dark
 Snake Cult Temple
-South Agamemnon
-Spartican Shop
 Steamy Rafters
 Street of Streams
 Temple District
 The Mercy Seat
 Three Legg'd Dog
-Torture Chamber
 Upper Croc House
 Upper Res Ab'tyrr
 Vegetable Market
 Waterfront
 Way of Tears
-West Tiberius Way
 White Doorstep
 Wind-beaten Ledge
 Wooden Walkway

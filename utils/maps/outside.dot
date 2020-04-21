@@ -282,7 +282,6 @@ room_456 [label="Blue Stone Chamber"];
 room_456 -> room_13 [label="u"];
 room_457 [label="Burial Chamber"];
 room_457 -> room_29 [label="u"];
-room_535 [label="Blasted Plain"];
 room_543 [label="Sloping Hillside"];
 room_543 -> room_585 [label="s"];
 room_543 -> room_711 [label="e"];
