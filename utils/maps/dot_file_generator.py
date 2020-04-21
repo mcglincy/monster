@@ -63,8 +63,7 @@ def output_zone(zone):
   room_names = room_names_in_zone(zone)
   room_ids = ids_for_room_names(room_names)
 
-  outfile_name = f'{zone}.dot'
-  with open(f'{zone}.dot', 'w') as f:
+  with open(f'./dot/{zone}.dot', 'w') as f:
     print('digraph monster {', file=f)
     for roomdesc in ROOMDESCS:
       name = roomdesc["nice_name"]
