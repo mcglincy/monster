@@ -8,6 +8,13 @@ from gamerules.ticker_mixin import TickerMixin
 from gamerules.xp import level_from_xp
 from typeclasses.objects import Object
 
+
+# TODO: refactor/optimize state machine for patrolling vs. lair monster:
+# patrolling monster: starts in state PATROLLING and added to global ticker
+# lair monster: unhooked from global ticker, when someone enters the room, 
+# goes to attacking state and adds self to global ticker
+# if not target available, goes to IDLE and unhooks from global ticker
+
 class MobBehavior(IntEnum):
   IDLE = 0
   PATROLLING = 1
