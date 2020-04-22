@@ -52,6 +52,24 @@ class Room(DefaultRoom):
     # dict of detail name => description
     self.db.details = {}
 
+  def at_object_receive(self, new_arrival, source_location):
+    """
+    When an object enter a tutorial room we tell other objects in
+    the room about it by trying to call a hook on them. The Mob object
+    uses this to cheaply get notified of enemies without having
+    to constantly scan for them.
+
+    Args:
+      new_arrival (Object): the object that just entered this room.
+      source_location (Object): the previous location of new_arrival.
+    """
+    # and not new_arrival.is_superuser???
+    if new_arrival.has_account:
+      # this is a character
+      for obj in self.contents_get(exclude=new_arrival):
+        if hasattr(obj, "at_new_arrival"):
+          obj.at_new_arrival(new_arrival)
+
   def special_kinds(self):
     return [x for x in SpecialRoomKind 
       if check_bit(self.db.special_kind_bitmask, x.value)]
