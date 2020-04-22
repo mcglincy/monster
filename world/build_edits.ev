@@ -9,6 +9,8 @@
 #
 @tel Limbo
 #
+@set here/special_kind_bitmask = 6
+#
 @open down;d = Void
 #
 @desc
@@ -72,13 +74,13 @@ Go down to begin your adventure!
 #
 @tel The Taig
 #
+@destroy/force down
+#
 @open down;d;kneel = The Taig
 #
 @set down/exit_kind = 1
 #
 @set down/password = 'kneel'
-#
-@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -92,13 +94,13 @@ Go down to begin your adventure!
 #
 @tel Initiates' Study
 #
+@destroy/force down
+#
 @open down;d;study = Initiates' Study
 #
 @set down/exit_kind = 1
 #
 @set down/password = 'study'
-#
-@lock down = view:none()
 #
 @lock down = traverse:none()
 #
@@ -109,6 +111,26 @@ Go down to begin your adventure!
 @set down/exit_effect_kind = 7
 #
 @set down/exit_effect_value = 5
+#
+@tel Silver Anvil
+#
+@destroy/force down
+#
+@open down;d;hammer = Silver Anvil
+#
+@set down/exit_kind = 1
+#
+@set down/password = 'hammer'
+#
+@lock down = traverse:none()
+#
+@set down/exit_desc = 'You may HAMMER on the anvil to become a Dwarf.'
+#
+@set down/come_out_msg = '# has changed his class.'
+#
+@set down/exit_effect_kind = 7
+#
+@set down/exit_effect_value = 10
 #
 ###############################################################################
 # Fix various borked descriptions.
