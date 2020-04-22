@@ -1,6 +1,6 @@
 from enum import IntEnum
 import random
-from evennia import TICKER_HANDLER
+from evennia import GLOBAL_SCRIPTS, logger, TICKER_HANDLER
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.mob_kind import MobKind
 from gamerules.mobs import mob_death, resolve_mob_attack
@@ -8,14 +8,14 @@ from gamerules.ticker_mixin import TickerMixin
 from gamerules.xp import level_from_xp
 from typeclasses.objects import Object
 
-# TODO
-# class MobState(IntEnum):
-#   IDLE = 0
-#   HUNTING = 1
-#   etc
+class MobBehavior(IntEnum):
+  IDLE = 0
+  PATROLLING = 1
+  HUNTING = 2
+  ATTACKING = 3
 
 
-class Mob(Object, TickerMixin):
+class OldMob(Object, TickerMixin):
   """Non-player monster aka mob aka Monster 'random'.
 
   Ticker code lifted from evennia.contrib.tutorial_world.mob.
@@ -347,14 +347,264 @@ class Mob(Object, TickerMixin):
     resolve_mob_attack(self, target, self.attack_name)
 
 
-# waiting - tick every 1s (then check current room for targets)
-# patrolling - tick at movement speed + whatever delay (then check current room for targets)
-# attacking target (hunting) - tick at attack speed + whatever delay
+class Mob(Object, TickerMixin):
+  """Non-player monster aka mob aka Monster 'random'.
 
-# hmm, maybe two statemachines: no-movement fighter and movement fighter
-# no-movement picks a target and attacks until they're dead or they leave the room, 
-# then picks a new target
-# yes-movement picks a target and attacks until they're dead or they leave the room,
-# then either follows them or picks a new target in same room
-# attacking
-# patrolling
+  Ticker code lifted from evennia.contrib.tutorial_world.mob.
+  """  
+  def at_object_creation(self):
+    super().at_object_creation()
+    # self.db.record_id
+    # self.db.kind = MobKind.FIGHTER
+    # self.db.min_level = 0
+    # self.db.group = 0
+    # self.db.size = 0
+    # self.db.xp = 0
+    # self.db.drop_gold = 0
+    # self.db.drop_object_id = 0
+    # self.db.base_health = 0
+    # self.db.random_health = 0
+    # self.db.level_health = 0
+    # self.db.base_mana = 0
+    # self.db.level_mana = 0
+    # self.db.base_damage = 0
+    # self.db.random_damage = 0
+    # self.db.level_damage = 0
+    # self.db.armor = 0
+    # self.db.spell_armor = 0
+    # self.db.move_speed = 0
+    # self.db.attack_speed = 0
+    # self.db.heal_speed = 0
+    # self.db.weapon_id = 0
+    # self.db.weapon_use = 0
+    # self.db.level_weapon_use = 0
+    # self.db.pursuit_chance = 0
+    # self.db.spell_ids = []
+    # self.db.sayings = []
+    # self.db.attack_name = None
+    # whether the mob moves between rooms
+    self.db.moves_between_rooms = True
+    # whether the mob immediately attacks targets in its room
+    self.db.aggressive = True
+
+  def basetype_posthook_setup(self):
+    # overriding this so we can do some post-init
+    # after spawning, as BaseObject.at_first_save() applies _create_dict field values
+    # *after* calling at_object_creation()
+    super().basetype_posthook_setup()
+    # TODO: what about level_health and level_mana? do mobs have a level?
+    self.db.max_health = self.db.base_health + random.randint(0, self.db.random_health)
+    self.db.health = self.db.max_health
+    self.db.max_mana = self.db.base_mana
+    self.db.mana = self.db.max_mana
+    self.db.poisoned = False
+    # call at_init() to add tickers and kickstart the mob
+    self.at_init()
+
+  def at_init(self):
+    logger.log_info(f"mob {self.key}#{self.id} at_init()")
+    self.ndb.hiding = 0
+    self.ndb.behavior = MobBehavior.PATROLLING
+    self.add_to_global_tickers()
+
+  def at_object_delete(self):
+    self.remove_from_global_tickers()
+    return True
+
+  def add_to_global_tickers(self):
+    GLOBAL_SCRIPTS.behavior_ticker.ndb.targets.add(self)
+    GLOBAL_SCRIPTS.health_ticker.ndb.targets.add(self)
+
+  def remove_from_global_tickers(self):
+    GLOBAL_SCRIPTS.behavior_ticker.ndb.targets.remove(self)
+    GLOBAL_SCRIPTS.health_ticker.ndb.targets.remove(self)
+
+  def at_new_arrival(self, new_character):
+    """This is triggered whenever a new character enters the room.
+
+    This is called by the TutorialRoom the mob stands in and
+    allows it to be aware of changes immediately without needing
+    to poll for them all the time. For example, the mob can react
+    right away, also when patrolling on a very slow ticker.
+    """
+    # the room actually already checked all we need, so
+    # we know it is a valid target.
+    if self.db.aggressive and self.ndb.behavior != MobBehavior.ATTACKING:
+      #self.start_attacking()
+      self.ndb.behavior = MobBehavior.ATTACKING
+
+  def gain_health(self, amount, damager=None, weapon_name=None):
+    self.db.health = max(MIN_HEALTH, min(self.max_health, self.db.health + amount))
+    # tell everyone else in the room our health
+    self.location.msg_contents(health_msg(self.key, self.db.health), exclude=[self])
+    if self.db.health <= 0:
+      # die
+      mob_death(self, damager)
+    elif amount < 0 and not self.ndb.is_attacking:
+      # we took damage and we're still alive - go aggro
+      self.ndb.aggressive = True
+#      self.start_attacking()
+      self.ndb.behavior = MobBehavior.ATTACKING
+
+  @property
+  def level(self):
+    return level_from_xp(self.db.xp)
+
+  @property
+  def is_dead(self):
+    return self.db.health <= 0
+
+  @property
+  def max_health(self):
+    return self.db.max_health
+
+  @property
+  def base_armor(self):
+    return self.db.armor
+
+  @property
+  def deflect_armor(self):
+    return 0
+
+  @property
+  def spell_armor(self):
+    return self.db.spell_armor
+
+  @property
+  def spell_deflect_armor(self):
+    return 0
+
+  @property
+  def attack_speed(self):
+    return self.db.attack_speed  
+
+  @property
+  def move_speed(self):
+    return self.db.move_speed  
+  
+  @property
+  def heal_speed(self):
+    return self.db.heal_speed  
+
+  @property
+  def base_damage(self):
+    return self.db.base_damage
+
+  @property
+  def random_damage(self):
+    return self.db.random_damage
+
+  @property
+  def is_poisoned(self):
+    return self.db.poisoned
+
+  @property
+  def attack_name(self):
+    return self.db.attack_name if self.db.attack_name else "claws"
+
+  def tick_behavior(self):
+    logger.log_info(f"mob {self.key}#{self.id} is behavior {self.ndb.behavior.name}")
+    if self.ndb.behavior == MobBehavior.IDLE:
+      # do nothing
+      return
+    elif self.ndb.behavior == MobBehavior.PATROLLING:
+      self.do_patrol()
+    elif self.ndb.behavior == MobBehavior.HUNTING:
+      self.do_hunting()
+    elif self.ndb.behavior == MobBehavior.ATTACKING:
+      self.do_attack()
+
+  def _find_target(self, location):
+    # TODO: handle death of our previous target
+    # TODO: and not x.is_superuser ?
+    characters = [x for x in location.contents 
+      if x.is_typeclass("typeclasses.characters.Character") and not x.is_hiding]
+    if characters:
+      target = random.choice(characters)
+      return target
+
+  def _maybe_say_something(self):
+    if random.random() < 0.01 and self.db.irregular_msgs:
+      self.location.msg_contents(random.choice(self.db.irregular_msgs))
+
+  def do_patrol(self, *args, **kwargs):
+    """Called repeatedly during patrolling mode.  
+
+    In this mode, the
+    mob scans its surroundings and randomly chooses a viable exit.
+    One should lock exits with the traverse:has_account() lock in
+    order to block the mob from moving outside its area while
+    allowing account-controlled characters to move normally.
+    """
+    #self._maybe_say_something()
+
+    if self.db.aggressive:
+      # first check if there are any targets in the room.
+      target = self._find_target(self.location)
+      if target:
+        self.ndb.behavior = MobBehavior.ATTACKING
+        return
+
+    if self.db.moves_between_rooms:
+      # no target found, look for an exit.
+      exits = [x for x in self.location.exits if x.access(self, "traverse")]
+      if exits:
+        # randomly pick an exit
+        exit = random.choice(exits)
+        # move there.
+        self.move_to(exit.destination)
+      else:
+        # no exits! teleport to home to get away.
+        self.move_to(self.home)
+
+  def do_hunting(self, *args, **kwargs):
+    """Called regularly when in hunting mode.
+
+    In hunting mode the mob
+    scans adjacent rooms for enemies and moves towards them to
+    attack if possible.
+    """
+    #self._maybe_say_something()   
+
+    if self.db.aggressive:
+      # first check if there are any targets in the room.
+      target = self._find_target(self.location)
+      if target:
+        self.ndb.behavior = MobBehavior.ATTACKING
+        return
+
+    if self.db.moves_between_rooms:
+      # no targets found, scan surrounding rooms
+      exits = [x for x in self.location.exits if x.access(self, "traverse")]
+      if exits:
+        # scan the exits destination for targets
+        for exit in exits:
+          target = self._find_target(exit.destination)
+          if target:
+            # a target found. Move there.
+            self.move_to(exit.destination)
+            return
+        # if we get to this point we lost our
+        # prey. Resume patrolling.
+        self.ndb.behavior = MobBehavior.PATROLLING
+      else:
+        # no exits! teleport to home to get away.
+        self.move_to(self.home)
+
+  def do_attack(self, *args, **kwargs):
+    """Called regularly when in attacking mode. 
+
+    In attacking mode
+    the mob will bring its weapons to bear on any targets
+    in the room.
+    """
+    #self._maybe_say_something()
+
+    # first make sure we have a target
+    target = self._find_target(self.location)
+    if not target:
+      # no target, start looking for one
+      self.ndb.behavior = MobBehavior.HUNTING
+      return
+    resolve_mob_attack(self, target, self.attack_name)
+

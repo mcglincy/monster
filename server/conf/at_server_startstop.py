@@ -15,6 +15,7 @@ at_server_cold_start()
 at_server_cold_stop()
 
 """
+from typeclasses.script_manager import attach_signal_handlers
 
 
 def at_server_start():
@@ -22,7 +23,7 @@ def at_server_start():
     This is called every time the server starts up, regardless of
     how it was shut down.
     """
-    pass
+    attach_signal_handlers()
 
 
 def at_server_stop():

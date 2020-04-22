@@ -14,6 +14,7 @@ just overloads its hooks to have it perform its function.
 
 import random
 from evennia import DefaultScript
+from evennia.utils.search import search_object_by_tag
 from gamerules.freeze import unfreeze
 
 
@@ -104,4 +105,42 @@ class DelayedUnfreeze(Script):
 
   def at_repeat(self):
     unfreeze(self.obj)
+
+
+class BehaviorTicker(Script):
+  """Global script for ticking behavior of all mobs.
+
+  Performance optimization to avoid running separate tickers per mob.
+  """
+  def at_script_creation(self):
+    self.key = "behavior_ticker"
+    self.interval = 2
+    self.repeats = -1
+    self.persistent = True
+    self.ndb.targets = set()
+
+  def at_start(self):
+    # add all existing mobs
+    self.ndb.targets = set(search_object_by_tag("mob"))
+
+  def at_repeat(self):
+    for target in self.ndb.targets:
+      target.tick_behavior()
+
+
+class HealthTicker(Script):
+  def at_script_creation(self):
+    self.key = "health_ticker"
+    self.interval = 30
+    self.repeats = -1
+    self.persistent = True
+    self.ndb.mobs = set()
+
+  def at_start(self):
+    # add all existing mobs
+    self.ndb.targets = set(search_object_by_tag("mob"))
+
+  def at_repeat(self):
+    for target in self.ndb.targets:
+      target.tick_health()
 
