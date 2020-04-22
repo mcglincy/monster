@@ -42,6 +42,9 @@ def create_character_classes():
         db_level_steal = rec["level_steal"],
         db_base_move_silent = rec["move_silent"],
         db_level_move_silent = rec["level_move_silent"],
+        db_armor = rec["armor"],
+        db_spell_armor = rec["spell_armor"],
+        db_hear_noise = rec["hear_noise"],
         db_poison_chance = rec["poison_chance"],
         db_shadow_damage_percent = rec["shadow_damage_percent"],
       )
