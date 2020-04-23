@@ -9,14 +9,4 @@
     "path": "/456/extra1",
     "value": 5
   },
-  {
-    "op": "replace",
-    "path": "/500/magnitudes/8",
-    "value": 18
-  },
-  {
-    "op": "replace",
-    "path": "/500/extra1",
-    "value": 18
-  }
 ]

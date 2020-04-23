@@ -114,8 +114,8 @@ def maybe_spawn_mob_in_lair(location):
     return
 
   mob_id = location.magnitude(SpecialRoomKind.MONSTER_LAIR)
-  record_id_tag = f"record_id_{mob_id}"
-  mob_prototypes = protlib.search_prototype(tags=[record_id_tag])
+  mob_prototypes = protlib.search_prototype(
+    tags=["mob", f"record_id_{mob_id}"])
   if not mob_prototypes:
     return
   proto_choice = mob_prototypes[0]
