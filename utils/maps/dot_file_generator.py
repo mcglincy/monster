@@ -27,6 +27,7 @@ ZONES = [
   'orphaned',
   'pyramid',
   'quarry_of_souls',
+  'rocky_foothills',
   'sewer',
   'smoking_ruins',
   'tai_tastigon',

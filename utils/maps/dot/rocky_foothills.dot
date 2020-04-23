@@ -1,0 +1,34 @@
+digraph monster {
+room_202 [label="Desolate Expanse"];
+room_202 -> room_206 [label="s"];
+room_202 -> room_203 [label="e"];
+room_203 [label="Salt Flats"];
+room_203 -> room_206 [label="s"];
+room_203 -> room_204 [label="e"];
+room_203 -> room_202 [label="w"];
+room_204 [label="Windswept Tundra"];
+room_204 -> room_206 [label="s"];
+room_204 -> room_203 [label="w"];
+room_206 [label="Rocky Foothills"];
+room_206 -> room_203 [label="n"];
+room_206 -> room_204 [label="e"];
+room_206 -> room_202 [label="w"];
+room_206 -> room_560 [label="u"];
+room_559 [label="Path of Shadows"];
+room_559 -> room_560 [label="n"];
+room_559 -> room_613 [label="s"];
+room_560 [label="Stone Cairn"];
+room_560 -> room_559 [label="s"];
+room_560 -> room_206 [label="d"];
+room_613 [label="Long Stones"];
+room_613 -> room_559 [label="n"];
+room_613 -> room_614 [label="e"];
+room_614 [label="Cobbled Courtyard"];
+room_614 -> room_615 [label="n"];
+room_614 -> room_616 [label="e"];
+room_614 -> room_613 [label="w"];
+room_615 [label="Chapel Stones"];
+room_615 -> room_614 [label="s"];
+room_616 [label="Old Tower Base"];
+room_616 -> room_614 [label="w"];
+}
