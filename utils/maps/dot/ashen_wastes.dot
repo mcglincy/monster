@@ -65,4 +65,13 @@ room_560 -> room_559 [label="s"];
 room_560 -> room_206 [label="d"];
 room_613 [label="Long Stones"];
 room_613 -> room_559 [label="n"];
+room_613 -> room_614 [label="e"];
+room_614 [label="Cobbled Courtyard"];
+room_614 -> room_615 [label="n"];
+room_614 -> room_616 [label="e"];
+room_614 -> room_613 [label="w"];
+room_615 [label="Chapel Stones"];
+room_615 -> room_614 [label="s"];
+room_616 [label="Old Tower Base"];
+room_616 -> room_614 [label="w"];
 }

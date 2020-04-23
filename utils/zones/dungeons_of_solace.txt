@@ -1,5 +1,3 @@
-Chapel Stones
-Cobbled Courtyard
 Cold Steps
 Damp Steps
 Dank Passage
@@ -10,7 +8,6 @@ Hall of Frobar
 Jhurvali Oporus
 Long Corridor
 Mholask Ilurum
-Old Tower Base
 Well of Lost Hopes
 Well of Regrets
 Well of Sorrow
