@@ -1,0 +1,21 @@
+digraph monster {
+room_439 [label="Haunted Lands"];
+room_439 -> room_444 [label="s"];
+room_439 -> room_440 [label="e"];
+room_439 -> room_443 [label="w"];
+room_440 [label="Plain of the Dead"];
+room_440 -> room_445 [label="s"];
+room_440 -> room_439 [label="w"];
+room_443 [label="Weathered Bluff"];
+room_443 -> room_444 [label="s"];
+room_443 -> room_439 [label="e"];
+room_444 [label="Ilutian Downs"];
+room_444 -> room_439 [label="n"];
+room_444 -> room_445 [label="s"];
+room_444 -> room_445 [label="e"];
+room_444 -> room_443 [label="w"];
+room_445 [label="Carolingian Prairie"];
+room_445 -> room_444 [label="n"];
+room_445 -> room_440 [label="e"];
+room_445 -> room_444 [label="w"];
+}
