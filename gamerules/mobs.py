@@ -104,22 +104,31 @@ def has_mobs(location):
   return False
 
 
+def find_mob_prototype(mob_id):
+  record_id_tag = f"record_id_{mob_id}"
+  # unfortunately search_prototype() tags are OR'd,
+  # so we can't search for tags "mob" AND "record_id_123".
+  # Instead we do the second-pass filtering ourself.
+  mob_prototypes = protlib.search_prototype(tags=["mob"])
+  for proto in mob_prototypes:
+    if record_id_tag in proto["prototype_tags"]:
+      return proto
+  return None
+
+
 def maybe_spawn_mob_in_lair(location):
   if not location.is_special_kind(SpecialRoomKind.MONSTER_LAIR):
     # not a lair
     return
-
   if has_players_or_mobs(location):
     # only spawn a new mob in a room devoid of players or mobs
     return
-
   mob_id = location.magnitude(SpecialRoomKind.MONSTER_LAIR)
-  mob_prototypes = protlib.search_prototype(
-    tags=["mob", f"record_id_{mob_id}"])
-  if not mob_prototypes:
+  proto = find_mob_prototype(mob_id)
+  if not proto:
+    # no such mob found
     return
-  proto_choice = mob_prototypes[0]
-  mob = spawner.spawn(proto_choice['prototype_key'])[0]
+  mob = spawner.spawn(proto['prototype_key'])[0]
   # stay in the lair
   mob.location = location
   mob.db.moves_between_rooms = False
