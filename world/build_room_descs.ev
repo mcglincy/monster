@@ -5,13 +5,13 @@
 #
 @desc
 This is the first room of many in the Realm of Monster. Once things get 
-rolling, a simple series of rooms will be installed which will force
-new players to get used to the Monster commands in order to reach the 
-actual world. For now however, we will be cheesey, and merely deposit
+rolling, a simple series of rooms will be installed, forcing new
+players to get used to the Monster commands in order to reach the 
+actual world. For now however, we will be cheesy and merely deposit
 you in the Realm at a convenient location. 
 
-[Please note: The cheesey shortcut has finally been circumvented. We
-will keep the above description however, because we like it so much.]
+[Please note: The cheesy shortcut has finally been circumvented, but we
+will keep the description above because we like it so much.]
 #
 ###############################################################################
 # Void
@@ -19,9 +19,9 @@ will keep the above description however, because we like it so much.]
 @tel room_2
 #
 @desc
-Your life essence is being recycled. Please wait a moment while most
-of your previous short-comings are filtered out, and a suitable
-replacement body is manufactured.
+Your life essence is being recycled. Please wait a moment while most of your
+previous shortcomings are filtered out and a suitable replacement body is 
+manufactured.
 #
 ###############################################################################
 # Red street
@@ -29,9 +29,9 @@ replacement body is manufactured.
 @tel room_3
 #
 @desc
-Residents of the city call out their windows and exchange pleasantries
-over you head. Ribbons hang from some of the buildings and you see
-they become more varied and clustered further east.
+Residents of the city call out from their windows and exchange pleasantries
+from high overhead. Ribbons hang from some of the buildings, and becoming more
+aried and clustered further east.
 #
 ###############################################################################
 # Sewer Entrance
@@ -39,11 +39,10 @@ they become more varied and clustered further east.
 @tel room_4
 #
 @desc
-You stand at the entrance to the vast sewer system located beneath the
-City of Tai-Tastigon. Sprawling out in all directions, the sewers lay
-like the web of a giant spider - or like the maze of some deranged minotaur.
-The stench here is not as foul as you might at first have guessed, and your
-nose quickly adapts to the malorific odor.
+You stand at the entrance to the vast sewer system located beneath the city of
+Tai-Tastigon. Sprawling out in all directions, the sewers seem like the web of
+giant spider--or the maze of some deranged minotaur. The stench here is not as
+foul as expected, and your nose quickly adapts to the odor.
 #
 ###############################################################################
 # Tu'matei Alras
@@ -51,10 +50,9 @@ nose quickly adapts to the malorific odor.
 @tel room_5
 #
 @desc
-You are in the shaded land of soft color in which the Fair Folk
-reside to escape the troubles of the mortal world.
-
-Rest well, and do not be troubled by mortal cares.
+You are in the shaded land of soft color in which the Fair Folk retreat to
+escape the troubles of the mortal world. Rest well, and do not be troubled by
+mortal cares.
 #
 ###############################################################################
 # grey hills
@@ -62,11 +60,9 @@ Rest well, and do not be troubled by mortal cares.
 @tel room_6
 #
 @desc
-The air is cold and stale here. You can still see the City and that
-is a great comfort in this cheerless land. Ashes swirl around you,
-blown in from the dark east.
-
-It would be very easy to lose oneself here.
+The air is cold and stale here. You can still see the city, the sight of which
+is a great comfort in this cheerless land. Ashes swirl around you, blown in 
+from the dark skies to east. It would be very easy to lose yourself here.
 #
 ###############################################################################
 # grey hills
@@ -74,9 +70,8 @@ It would be very easy to lose oneself here.
 @tel room_7
 #
 @desc
-Cries of horror now wind their way through the hills. Perchance
-there has been murder here. Travellers must be wary of haunts
-that seek for living flesh.
+Cries of horror wind their way through the hills, bringing to mind the tales of
+haunted souls that seek out living flesh.
 #
 ###############################################################################
 # wasteland
@@ -84,9 +79,8 @@ that seek for living flesh.
 @tel room_8
 #
 @desc
-There is little life here. The crust of the land is thin and all
-sorts of loathesome creatures make their home here.
-
+The land here is is cracked and barren, and only the most loathsome of
+creatures call this forsaken place home.
 #
 ###############################################################################
 # grey hills
@@ -94,9 +88,9 @@ sorts of loathesome creatures make their home here.
 @tel room_9
 #
 @desc
-You have lost sight of the city but there is something that looks like
-a dwelling further among the hills. It is quickly growing dark and
-it might be a good idea to investigate another time..
+Although you have lost sight of the city, you spot something that looks like a
+dwelling further along among the hills. The sky is quickly growing dark, and
+you feel the sudden urge to find shelter and escape the encroaching shadows.
 #
 ###############################################################################
 # Circle of Fire
@@ -109,14 +103,11 @@ it might be a good idea to investigate another time..
 @tel room_11
 #
 @desc
-The south wall of this chamber is long, and has been artificially 
-flattened and smoothed. The rest of the chamber has been left in its
-rough, natural state. The south wall is decorated with a crude, and
-disturbing, mural.
-
-The mural depicts stocky humanoid creatures laying waste to a human 
-village, underneath a blood red moon. Fires burn in the background, and
-scenes of extreme violence are prominantly displayed in the foreground.
+The long southern wall of this chamber, artificially flattened and smoothed,
+has been decorated with a crude and disturbing mural depicting stocky humanoid
+creatures laying waste to a human village beneath a blood-red moon. Fires blaze
+throughout the settlement, and what few humans you can make out have been
+subjected to every type of violence imaginable.
 #
 ###############################################################################
 # Pit of Fire
@@ -125,9 +116,8 @@ scenes of extreme violence are prominantly displayed in the foreground.
 #
 @desc
 You may alter your pitiful existence in this portion of the Netherworld.
-Considering how much time you spend here, it might be an advisable
-course of action.
-
+Considering how much time you spend here, it might be an advisable course of
+action.
 #
 ###############################################################################
 # The Stone Circle
@@ -135,14 +125,12 @@ course of action.
 @tel room_13
 #
 @desc
-A multitude of gigantic, dark hued stones are arranged in a circular 
-pattern here. Concentric with this arrangement is one of smaller blue
-stones. At the very center of the pattern, the ground has been covered
-with marble tiles.
+A multitude of gigantic, dark-hued stones are arranged in a circular pattern
+here. Concentric with this arrangement is one of smaller blue stones. At the
+very center of the pattern, the ground has been covered with marble tiles.
 
-This stunning display stands on a mound of solid ground rising out of
-the surrounding swamp. A feeling of immense natural power pervades the
-entire area.
+This stunning display stands on a mound of solid ground rising out of the
+surrounding swamp. A feeling of immense natural power pervades the entire area.
 #
 ###############################################################################
 # Marsh
@@ -150,11 +138,9 @@ entire area.
 @tel room_14
 #
 @desc
-A strange mist hugs the surface of the marsh waters, filling you wish
-a strong feeling of dread.
-
-The marsh is roughly chest-deep, but dangerous sink holes and drop-offs
-abound, making all progress slow to a painful crawl.
+A strange mist hugs the surface of the marsh waters, filling you with a strong
+feeling of dread. The marsh is roughly chest-deep, but dangerous sinkholes and
+drop-offs abound, slowing your progress to a painful crawl.
 #
 ###############################################################################
 # Fens
@@ -162,11 +148,10 @@ abound, making all progress slow to a painful crawl.
 @tel room_15
 #
 @desc
-Despite the waist deep muck you are now forced to wade through, the
-population of trees has thinned only slightly. Tall, dark trees rise
-up from the dark mud and water. The trunks of these trees are unusually
-smooth, and glisten with moisture as if they were a living, amphibian 
-skin.
+Despite the waist-deep muck you wade through, the forest has thinned only 
+slightly. Tall, dark trees rise up from the dark mud and water. Their trunks
+are unusually smooth, and they glisten with moisture like the skin of a living
+amphibian.
 #
 ###############################################################################
 # Swamp
@@ -175,7 +160,6 @@ skin.
 #
 @desc
 You are in a swamp.
-
 #
 ###############################################################################
 # Great Bog
@@ -183,13 +167,12 @@ You are in a swamp.
 @tel room_17
 #
 @desc
-More so here than in any other area of the swamp or forest, you feel 
-as though you are in immediate peril. The mist and swamp gas swirl as
-if to purposely confuse you. The strange voice of the wind seems to
-speak to you of the unyielding embrace of death that waits for you at 
-the abyss bottom of a hidden bog or sink hole. Your mind screams with
-fear, and your limbs are reluctant to follow your commands, for fear of
-making the tragic mis-step that can only lead to a suffocating doom.
+Moreso here than in any other area of the swamp or forest, you feel as though
+you are in immediate peril. Mist and swamp gas swirl through the air in a 
+dizzying fashion, as if to purposely confuse you. The wind seems to whisper to
+you in a strange voice, promising the unyielding embrace of death at the
+bottom of a hidden bog or sinkhole. Your mind screams with fear, and your limbs
+are reluctant to follow your commands out of fear of a tragic misstep.
 #
 ###############################################################################
 # Row of Megaliths
@@ -197,13 +180,11 @@ making the tragic mis-step that can only lead to a suffocating doom.
 @tel room_18
 #
 @desc
-An ancient footpath runs from the clearing to the north, south to the
-circle of stones. Astride the path are a series of giant megaliths placed
-at evenly spaced intervals.
-
-The megaliths are carved from single blocks of a dark stone. Reaching a
-height of 15 feet, the impassionate faces carved onto the rock surfaces
-stare down upon travellers with indifference.
+An ancient footpath runs from the clearing to the north to the circle of stones
+to the south. Astride the path is a series of giant megaliths placed at evenly
+spaced intervals. Each megalith is more than twice as tall as a man and has
+been carved from a single block of dark stone. The inscrutable faces carved 
+onto the rock surfaces stare down upon travellers with indifference.
 #
 ###############################################################################
 # Swampy Forest
@@ -211,11 +192,10 @@ stare down upon travellers with indifference.
 @tel room_19
 #
 @desc
-The ground here is composed of a muddy slush thickly covered with old 
-leaves. The forest is once again dense, and absent of all but the faintest
-slivers of light creeping through the leafy canopy. With every step you
-take you sink to your knees, and must struggle to free yourself from the
-persistant grasp of the amorpheous earth.
+The ground here is composed of a muddy slush intermingled with a thick cover
+of old leaves. The forest is dense enough here that only the faintest slivers
+of light creep through the leafy canopy. You sink to your knees with every 
+step, struggling to free yourself from the grip of the clinging swamp.
 #
 ###############################################################################
 # Cedar Forest
@@ -223,10 +203,10 @@ persistant grasp of the amorpheous earth.
 @tel room_20
 #
 @desc
-You are finding it hard to determine distance and time this deep in the
-forest. The unending multitude presents a constant aspect to you, defying
-your senses. A thin mist floats through the forest, only adding to your
-apprehension.
+Time and distance are becoming hard to gauge this deep in the forest. The 
+unending multitude of trees presents an unchanging landscape to you, 
+confounding your senses. A thin mist floats through the air, only adding to 
+your apprehension.
 #
 ###############################################################################
 # Cyprus Trees
@@ -234,13 +214,13 @@ apprehension.
 @tel room_21
 #
 @desc
-Twisted cyprus trees rise up here, intertwining in a sinister display.
-A seemingly continuous palisade of cyprus trees runs north to south,
+Twisted cyprus trees rise up here, intertwining in a silent display of sinister
+shapes. A seemingly continuous palisade of cyprus trees runs north to south,
 complicating any attempted passage to the west.
 
-The sounds of the forest can be heard here, but to the west are noises
-of an unknown nature. You wonder if it would not be better to avoid 
-the dark tangle of woods that lies west of here.
+The sounds of the forest mingle with noises of an unknown nature to the west.
+You wonder if it would not be better to avoid the dark tangle of woods that 
+lies to the west.
 #
 ###############################################################################
 # Endless Forest
@@ -253,13 +233,12 @@ the dark tangle of woods that lies west of here.
 @tel room_23
 #
 @desc
-The grey lands before you contradict the promise of the sun gate...
-they are grey and unwelcome. The eastern lands were once a thriving
-market but now restless spirits have taken over the land. The hills
-are now hollow, lost souls breaking out from beneath the crust of the
-rotton land.
+The grey, unwelcoming lands before you belie the promise of the sun gate. These
+lands were once home to thriving markets of would-be settlers, but restless 
+spirits now rule the hollow hills, breaking free from beneath the cracked earth
+to haunt this dying land.
 
-Nothing stays dead here for long..
+Nothing stays dead here for long . . .
 #
 ###############################################################################
 # Entrance Hall
@@ -267,14 +246,14 @@ Nothing stays dead here for long..
 @tel room_24
 #
 @desc
-A vast chamber of ice surrounds you, encompassing you in a giant tomb
-of cold darkness. The walls of the chamber tier inward towards the
-ceiling, and appear to have been painstakingly carved by magical hands.
+A vast chamber of ice surrounds you, enveloping you in chilling darkness. The 
+walls of this seeming tomb slope inward toward the ceiling. They appear to have
+been painstakingly carved by magical means.
 
-From somewhere far, far above, a thin beam of light enters this 
-towering crevace, and is reflected and scattered from surface to 
-surface. The ice absorbs the light somewhat, giving back a deep blue
-hue that speaks of natural wonders un-beholden to Mankind.
+From somewhere far, far above, a thin beam of light enters this towering 
+crevice, scattering from one surface to another as it reflects off the ice.
+The ice absorbs the light somewhat, filling the room with a deep blue hue that
+speaks of natural wonders unknown to mankind.
 #
 ###############################################################################
 # Redwood Forest
@@ -282,13 +261,12 @@ hue that speaks of natural wonders un-beholden to Mankind.
 @tel room_25
 #
 @desc
-Lurching up like a wooden mountain here are giant redwood trees. The
-reddish trunks are of impressive circumference, and rise straight up to
-an incredible height. Even the Great Oaks are dwarfed by these monsters,
-though the redwoods do not exude the same aura.
+Giant redwood trees rise up from the ground here like a wooden mountain. Even
+the great oaks are dwarfed by these monsters, although the redwoods do not 
+exude the same aura.
 
-The ground here is bare, for the most part. The giant trees are seperated 
-by large distances, providing a relief from the claustrophobic confines 
+The ground here is bare for the most part. The giant trees are separated by 
+large distances, providing a measure of relief from the claustrophobic confines 
 of the inner forest.
 #
 ###############################################################################
@@ -297,15 +275,14 @@ of the inner forest.
 @tel room_26
 #
 @desc
-A lone tree is immense proportions towers towards the sky here. Its
-gigantic roots ripple beneath the ground like some predator fish
-caught at the surface of a frozen lake. Its base is as wide around
-as a tower, and its rough bark nearly as tough as stone.
+A lone tree of immense proportions towers toward the sky here. Its gigantic 
+roots break across the surface of the ground here and there like waves upon a
+lake. Its base is as wide as a tower, and its rough bark nearly as tough as 
+stone.
 
-Bits of leaves drift down from above like a faint snowfall, and even
-though no other trees can grow so close to this monster, the forest
-here is dark and forboding.
-
+Bits of leaves drift down from above like a faint snowfall, and even though 
+no other trees can grow so close to this monster, the forest here is dark and
+forboding.
 #
 ###############################################################################
 # Forest Crossroads
@@ -313,13 +290,12 @@ here is dark and forboding.
 @tel room_27
 #
 @desc
-The trees thin out here, allowing a small clearing that shows signs of
-traffic. Unlike most of the Great Forest, light streams down upon you 
-here, and smaller brushes and foliage flourish.
+The trees thin out here, revealing a small clearing that shows signs of heavy
+traffic. Unlike most of the Great Forest, light streams openly here, and 
+smaller brushes and foliage flourish.
 
-Ancient stones of immense size can be seen to the south of here, while 
-the steady sounds of a slow moving, but mighty, river can be heard to
-the west.
+Ancient stones of immense size can be seen to the south, while the steady 
+sounds of a slow but mighty river can be heard to the west.
 #
 ###############################################################################
 # smoking ruins
@@ -332,16 +308,15 @@ the west.
 @tel room_29
 #
 @desc
-Rising up in an exposed fashion, unsheltered from the protective forest,
-is a group of grassy mounds. These are ancient barrow mounds, holding the
-remains and treasures of personages long forgotten by all except the Druids.
+A group of grassy mounds rise up from the bare earth here, unsheltered by the 
+protective canopy of forest. These are ancient barrow mounds, holding the
+remains and treasures of personages long forgotten by all except the druids.
 
-The barrows are apparently roofed in wood and stone, and covered with earth.
-The largest of the mounds exudes a feeling of extreme age, and has fallen
-prey to the effects of erosion. Large blocks of solid stone are visible.
-While you might be able to pry one loose, and venture into the blackness
-of the ancient grave, your better judgement tells you that such actions
-might be unwise.
+The barrows are apparently roofed in wood and stone and covered with earth. The
+largest mound, clearly ancient, has fallen prey to the effects of erosion. 
+Large blocks of solid stone are visible. Although you might be able to pry one
+loose and venture into the blackness of the ancient grave, your better judgment
+tells you that such actions might be unwise.
 #
 ###############################################################################
 # Keep Entrance
@@ -359,16 +334,14 @@ might be unwise.
 @tel room_32
 #
 @desc
-In the dim light you can see the walls of the great hall of covered
-in tapestries, now tattered and burned and difficult to read. What
-you can see of the stories told therein are confusing, giving little
-information as to whom the inhabitants of this place were. Or how they
-died..
+The dim light here reveals a great hall whose walls are covered in old and
+tattered tapestries. Their partially burned remains are difficult to read, and
+what you can discern of the stories they tell is confusing, giving little
+information about who lived here and what might have befallen them.
 
-Set within the walls are three doorways, each with an inscription in
-faded letters above.
-
-The words speak of danger and death.
+Three doorways are set within the walls of this hall. A chiseled inscription
+lies above each one. The letters are worn and faded, but the words speak of
+danger and death.
 #
 ###############################################################################
 # World Window
@@ -381,12 +354,10 @@ The words speak of danger and death.
 @tel room_34
 #
 @desc
-This tunnel is quite large, as if made for the passage of creatures 
-much larger than that of a human. The bottom tunnel surface is flat,
-while the top is arched.
-
-The tunnel has been rough-hewn, and is unlit. You can feel your way 
-through without much difficulty however.
+This rough-hewn tunnel is quite large, as if it were made to accommodate
+creatures much larger than an average-sized human. The floor of the tunnel is
+flat, while the top is arched. Although the tunnel is unlit, you can feel your
+way along the passage without much difficulty.
 #
 ###############################################################################
 # Dark of the Moon
@@ -409,16 +380,17 @@ through without much difficulty however.
 @tel room_38
 #
 @desc
-You arrive at the tomb of Darkmage, the wizard.  An eerie silence hangs in
-the air.  A light breeze sends an occassional chill through your body.  The
-tomb itself is a large concrete structure, simply crafted in a Gothic style.
-Stairs lead up to a huge set of double doors.  The doors themselves have no
-handles.  
-The cemetery road extends east and west from here, splitting around the
-tomb itself.  There are small gates along the north and south edges of the
-road, separating the tomb area from the cemetery proper.
-All is silent.
-*Very* silent.
+You arrive at the tomb of the wizard Darkmage. An eerie silence hangs in the
+air, and the occasional light breeze sends a chill through your body. The tomb
+itself is a large concrete structure, crafted in a simple Gothic style. Stairs
+lead up from the path on which you stand to a huge set of double doors. The 
+doors themselves have no handles.
+
+The cemetery road extends east and west from here, splitting around the tomb
+itself. Small gates along the north and south edges of the road separate the
+tomb from the cemetery proper.
+
+All is silent--very silent.
 #
 ###############################################################################
 # sewer1
@@ -431,10 +403,9 @@ All is silent.
 @tel room_40
 #
 @desc
-You have entered a room devoted solely to the arts of war, magical and
-otherwise. The room is bare of any furnishing or design and is dominated
-by 4 exits that lead from the four walls on the points of the compass.
-
+You have entered a room devoted solely to the arts of war, both magical and
+otherwise. The room is bare of any furnishing or design and is dominated by
+four exits, one set in each wall.
 #
 ###############################################################################
 # Gaping Pit of Doom
@@ -442,12 +413,13 @@ by 4 exits that lead from the four walls on the points of the compass.
 @tel room_41
 #
 @desc
-A sputtering torch provides thankful light at this point. The tunnel 
-widens out, and you are faced with a large, black hole that seems to 
-devour the tunnel, and drag it down into the hidden depths below. 
+A sputtering torch set in a sconce on the wall provides a small but welcome
+measure of light. The tunnel widens here, leading you to the edge of a large,
+black hole that seems to devour the tunnel and drag it down into the hidden 
+depths below. 
 
-The dark pit facing you is rough edged, and probably not made by
-humanoid hands. You should be able to make a descent.
+The rough edges of the dark pit before you suggest that it was not made by
+humanoid hands. You should be able to descend safely if you are careful.
 #
 ###############################################################################
 # Doom Pit Bottom
@@ -455,12 +427,11 @@ humanoid hands. You should be able to make a descent.
 @tel room_42
 #
 @desc
-You stand at the bottom of a black pit. The skeletons of small animals
-who have fallen into the pit and died can be seen scattered about. 
+You stand at the bottom of a black pit. The skeletons of countless small 
+animals who have fallen into the pit and died are scattered across the floor. 
 
-A small hole has been knocked in the eastern wall of the pit bottom. The
-hole is large enough for you to crawl through comfortably, and could 
-accomodate a larger creature as well.
+A small hole, large enough for you to crawl through comfortably, has been 
+knocked into the eastern wall.
 #
 ###############################################################################
 # Cave of Mangled Elf
@@ -468,15 +439,13 @@ accomodate a larger creature as well.
 @tel room_43
 #
 @desc
-Lying near the center of this cave is the body of a humanoid creature.
-It is difficult to tell exactly what race it is from, as it has been 
-horribly beaten and disfigured, not to mention partially decayed.
-
-The still form has been manacled to an iron ring set in the floor of
-the chamber. Bloody tracks on the floor show the body was dragged in
-from the west and has not moved since being chained here. It is 
-therefore likely that the body was chained here after death. Perhaps
-this is a warning?
+Lying near the center of this cave is the partially decayed body of a humanoid
+creature. You cannot definitively identify its race, as the body has been
+horribly beaten and disfigured. The still form has been manacled to an iron 
+ring set in the floor of the chamber. Bloody tracks on the floor indicate that
+the body was dragged in from the west and has not moved since being chained 
+here, making it likely that the body was chained here after death, perhaps as a
+warning.
 #
 ###############################################################################
 # Cave of Skinned Man
@@ -484,15 +453,14 @@ this is a warning?
 @tel room_44
 #
 @desc
-Carefully positioned in the center of the this cave are the remains of
-a man. The body has been skinned skillfully, and has been laid in a spread
-eagle position. A 'U' shaped iron bar has been pounded into the rock 
-floor around the chest of the body, pinning the torso tightly to the floor.
+Carefully positioned in the center of this cave are the remains of a man whose
+body has been skillfully skinned and laid in a spread-eagle position. A 
+U-shaped shaped iron bar has been pounded into the rock around the chest of the
+corpse, pinning the torso tightly to the floor.
 
-It occurs to you that instead of being a warning, this might actually
-be a marker laid for the benefit of those who might inhabit these
-caves. You shudder to think of what kind of beings would leave a skinned
-body as a path marker.
+It occurs to you that instead of being a warning, this might actually be a 
+marker laid for the benefit of those who might inhabit these caves. You shudder
+to think of what kind of beings would leave a skinned body to mark their path.
 #
 ###############################################################################
 # Cave of Eaten Dwarf
@@ -500,10 +468,10 @@ body as a path marker.
 @tel room_45
 #
 @desc
-Another grisly marker has been left here. This time it is a Dwarf, whose
-legs have been gnawed off. An iron spike has been driven directly 
-through the body. It dawns on you that these means of restraint are 
-likely employed to keep wild creatures from removing the path markers.
+Another grisly marker has been left here--a dwarf whose legs have been gnawed
+off. An iron spike has been driven directly through the body. It dawns on you
+that these means of restraint are likely employed to keep wild creatures from
+removing the path markers.
 #
 ###############################################################################
 # Fire Leaping
@@ -511,10 +479,9 @@ likely employed to keep wild creatures from removing the path markers.
 @tel room_46
 #
 @desc
-You are in a fiery warm room that glows with the power of flame
-that erupts from the bowels of the earth. All around you flames
-seem to flicker on the edge of your vision, tantalizing you with
-sights of riches never before known.
+You are in a warm room that glows with the light of many flames erupting from
+the bowels of the earth. All around you, fire seems to flicker on the edge of
+your vision, tantalizing you with sights of riches never before known.
 #
 ###############################################################################
 # Cave of Violated Pig
@@ -522,10 +489,10 @@ sights of riches never before known.
 @tel room_47
 #
 @desc
-A very large lance has been driven lengthwise through the body of a wild
-pig here. The lance has been thrust into the cavern floor, upending 
-the poor animal, and suspending it upside down. A large pool of dried 
-blood has collected at the base of the weapon.
+A very large lance has been driven lengthwise through the body of a wild pig
+here. The lance has been thrust into the cavern floor, upending the poor animal
+and suspending it upside down. A large pool of dried blood stains the ground 
+around the weapon.
 #
 ###############################################################################
 # Grand Troll Cavern
@@ -533,15 +500,14 @@ blood has collected at the base of the weapon.
 @tel room_48
 #
 @desc
-This cavern is very large, and is strewn with large rocks that have 
-been slightly chiseled, and serve as chairs. Three deep fire pits, 
-ringed with stones, are situated throughout the chamber. A large 
-mammoth tusk and a rough iron bell are suspended from a wooden 
-superstructure in the north end of the room. The bell has no clapper,
-but is instead rung by swinging the tusk into it.
+This massive cavern is strewn with large rocks that have been crudely fashioned
+to serve as chairs. Three deep fire pits ringed with stones are situated 
+throughout the chamber. A large mammoth tusk and a rough iron bell are 
+suspended from a wooden superstructure at the northern end of the room. The 
+bell has no clapper, leading you to believe that it is rung by swinging the 
+tusk into it--no easy task.
 
-Near the bell are some stone steps which lead up to a throne carved into
-a giant boulder.
+Stone steps near the bell lead up to a throne carved into a giant boulder.
 #
 ###############################################################################
 # Confusing Passages
@@ -559,10 +525,10 @@ a giant boulder.
 @tel room_51
 #
 @desc
-Several large racks run the length of this room. Each of the racks
-is filled with scrolls, books, and animal hides. Markings indicate
-that the scolls and such are kept in some mysterious order. A quick
-examination indicates that the writings are in a variety of languages.
+Several large racks run the length of this room, each filled with scrolls, 
+books, and animal hides. The markings on these items suggest that they are kept 
+in some mysterious order. A quick examination indicates that the writings cover 
+a variety of languages.
 #
 ###############################################################################
 # Mead Hall Basement
@@ -574,7 +540,7 @@ This room is cluttered with wooden kegs and sacks of vegetables and fruit.
 There is very little space to maneouver, but a path has been cleared 
 from the stairs to the western portal. 
 
-Sounds of singing and revelry drift down the stairs from above.
+Sounds of song and revelry drift down the stairs from above.
 #
 ###############################################################################
 # Lugh's Hall
@@ -592,12 +558,12 @@ Sounds of singing and revelry drift down the stairs from above.
 @tel room_55
 #
 @desc
-The walls of this room are timber and stone, while the floor has largely
-been covered with smooth stones obtained from a riverbed. In the
-center of the floor is a large, clear spring. 
+The walls of this room are timber and stone, while the floor has largely been
+covered with smooth stones obtained from a nearby riverbed. Water flows from a
+large, clear spring in the center of the floor.
 
-A large root disrupts the stone patttern on the floor as it travels
-from a room to the west towards the spring. 
+A large root disrupts the floor's stone pattterns as it travels from a room to
+the west toward the spring. 
 #
 ###############################################################################
 # Bhalge Beltaine
@@ -605,12 +571,11 @@ from a room to the west towards the spring.
 @tel room_56
 #
 @desc
-The walls of this room are rough-hewn, while the floor is smooth blocks
-of polished stone. The floor has been covered with symbols, glyphs, and
-lines, some clearly indicating constellations. Small holes have been 
-sunk from the surface somewhere down into the walls and ceiling of this
-room. Through some of the holes, light from the sun, or moon, strikes
-the floor markings.
+The walls of this room are rough-hewn rock, but the floor consists of smooth 
+blocks of polished stone covered with symbols, glyphs, and lines. Some of these
+symbols clearly indicate constellations, but you cannot make out the others.
+Pinpoints of light stream into the room from small holes in the walls and 
+ceiling, striking the floor markings here and there.
 
 It is here that the passage of seasons and time is observed. 
 #
@@ -620,12 +585,10 @@ It is here that the passage of seasons and time is observed.
 @tel room_57
 #
 @desc
-The lake bottom does not look like you would expect. Instead of being
-rough and uneven, it is regular and flat, as if the floor has been
-constructed of stone by some immense, forgotten giant. Small plants
-grow on the bottom, and a wide variety of fish can be seen. They do 
-not seem to notice you as you stand here, completely out of your
-element.
+The bottom of the lake does not look like you expect. Instead of being rough
+and uneven, it is regular and flat. Small plants grow here, and a wide variety
+of fish swim around you. They seem to take no notice of you as you stand here,
+completely out of your element.
 #
 ###############################################################################
 # Ancient City Square
@@ -633,13 +596,13 @@ element.
 @tel room_58
 #
 @desc
-You stand on a wide cobble plain from which narrow roads radiate out
-in the cardinal directions. Once cluttered with arches and columns, this
-square now contains only their crumbled remains. 
+You stand on a wide, cobbled plain from which narrow roads radiate outward in
+the cardinal directions. This square was undoubtedly once cluttered with 
+arches and columns, but now it contains only their crumbled remains. 
 
-Though far underground, a hazy light fills the area of the city. The air
-is still, and has a mineral flavor to it. The only sound you can here is
-that of your echoing footsteps.
+Although this area of the city is far underground, it is illuminated by a hazy
+light from an unseen source. The air here is still and has a coppery tang to
+it. The only sounds you hear are the echoes of your footsteps.
 #
 ###############################################################################
 # Collapsed Gate
@@ -647,13 +610,12 @@ that of your echoing footsteps.
 @tel room_59
 #
 @desc
-A great gate, what was once a primary entrance into the city, lies
-before you. Its top crossmember is a gigantic single piece of stone,
-which has cracked and fallen, like an animal whose back has broken.
+You stand before the ruins of the great gate that once served as a primary
+entrance into the city. Its top crossmember is a gigantic single piece of 
+stone, which has cracked and fallen like an animal whose back has broken.
 
-Just beyond the gateway lies the rough rock of the cavern wall. The
-gateway, however, is filled with rubble and debris, blocking any 
-regress.
+Just beyond the gateway lies the rough rock of the cavern wall. The gateway,
+however, is filled with rubble and debris, blocking any egress.
 #
 ###############################################################################
 # Via Necromantia
@@ -662,9 +624,9 @@ regress.
 #
 @desc
 You find yourself walking along what must have been the main road of this
-ancient city. It is wider than most, but the buildings that line the road
-come up right to the edge of the avenue. The buildings are still standing
-along the road, which is more than what can be said for much of the city.
+ancient city. It is wider than most, but the buildings that line the road come
+right up to the edge of the avenue. The buildings are still standing along the
+road, which is more than can be said for much of the city.
 
 The condition of the remains improves to the west.
 #
@@ -675,9 +637,9 @@ The condition of the remains improves to the west.
 #
 @desc
 You find yourself walking along what must have been the main road of this
-ancient city. It is wider than most, but the buildings that line the road
-come up right to the edge of the avenue. The buildings are still standing
-along the road, which is more than what can be said for much of the city.
+ancient city. It is wider than most, but the buildings that line the road come
+right up to the edge of the avenue. The buildings are still standing along the
+road, which is more than can be said for much of the city.
 #
 ###############################################################################
 # Via Necromantia
@@ -686,9 +648,9 @@ along the road, which is more than what can be said for much of the city.
 #
 @desc
 You find yourself walking along what must have been the main road of this
-ancient city. It is wider than most, but the buildings that line the road
-come up right to the edge of the avenue. The buildings are still standing
-along the road, which is more than what can be said for much of the city.
+ancient city. It is wider than most, but the buildings that line the road come
+right up to the edge of the avenue. The buildings are still standing along the
+road, which is more than can be said for much of the city.
 #
 ###############################################################################
 # Wind Blowing
@@ -696,9 +658,8 @@ along the road, which is more than what can be said for much of the city.
 @tel room_63
 #
 @desc
-You are swept into a frenzy as soon as you step into the room!
-The center is calm but the outer edges of the room swirl in a
-maelstorm that seems never to end.
+You are swept into a frenzy as soon as you step into the room! The center is 
+calm, but the outer edges of the room swirl in a seemingly endless maelstrom.
 #
 ###############################################################################
 # Valleyside
@@ -706,8 +667,8 @@ maelstorm that seems never to end.
 @tel room_64
 #
 @desc
-The slope of the hillside, makes traveling much difficult.  The light is
-diffused through the tall trees, causing a dim, but visible enviroment.
+The slope of the hillside here makes traveling difficult. The tall trees seem
+to absorb most of the light as it filters through the canopy overhead.
 #
 ###############################################################################
 # Earth Moving
@@ -715,12 +676,11 @@ diffused through the tall trees, causing a dim, but visible enviroment.
 @tel room_65
 #
 @desc
-This room is one of peace and of life, representative of living things
-as well as the destructive forces of nature now held at bay. It is
-a dark room, lit only by stones that are set in the wall and glow
-with an earthy light. The floor is clay and lichens grow along the
-walls over stones and soil. In the center of the room is a stone
-dais with a book opened and chained to the floor upon it.
+This room exudes an aura of peace and life. It is lit only by the soft brown
+glow of the many stones set in the walls. The floor is made of clay, and 
+lichen grows along the walls, as well as over the stones and soil. A stone
+dais dominates the center of the room. An open book lies upon it, secured to
+the floor with a length of metal chains.
 #
 ###############################################################################
 # Riverbank
@@ -733,13 +693,11 @@ dais with a book opened and chained to the floor upon it.
 @tel room_67
 #
 @desc
-The branches that overhang the pathway are particularly low at this
-point. They seem almost animated as they reach towards you and clutch at
-your belongings and person. Only the faintest breath of wind aids their
-motion.
+The branches that overhang the path through the forest are particularly low at
+this point. They seem to reach toward you and clutch at your possessions. Only
+the faintest breath of wind aids their motion.
 
 The trail seems to widen somewhat to the west.
-
 #
 ###############################################################################
 # Overgrown Trail
@@ -747,13 +705,13 @@ The trail seems to widen somewhat to the west.
 @tel room_68
 #
 @desc
-This brush chocked trail is reminiscent of a cave tunnel. Ancient trees
-hug the pathway, and cover you with a low roof of wooden boughs. The light
-that does filter down is dim, and more than a little surreal.
+This trail is so choked with brush that it seems more like a cave tunnel than a
+path through a forest. Ancient trees hug the pathway, covering you with a low
+roof of wooden boughs. What little light filters down to the forest floor 
+paints the scene in surreal shades.
 
-A thick coating of old leaves covers the ground, and announces your passage
-with a muffled voice.
-
+A thick coating of old leaves covers the ground, announcing your passage with a
+muffled rustle.
 #
 ###############################################################################
 # Great Oaks
@@ -761,15 +719,10 @@ with a muffled voice.
 @tel room_69
 #
 @desc
-Here lies the border to the great forests of the Druids. A nearly solid
-wall of towering oaks lies west. A trail leads into a small, cave-like
-break in the tree front.
-
-This is a stark demarcation. West lie dark wilds accompanied by the 
-sounds of its fierce denizens. East are the meadows and roads of a more
-cultivated environ. The break in the treeline at the trail lies west. 
-One moment it looks inviting, but the next it seems to mock you with a
-tempting and forbodingly silent laughter.
+You stand before a stark demarcation between the more cultivated environment to
+the east and the dark wilds to the west, where the druids hold sway. A phalanx
+of towering oaks stands guard along the border, but you spy a small, cave-like
+break in the wall of trees.
 #
 ###############################################################################
 # Forum of Shops
@@ -777,10 +730,9 @@ tempting and forbodingly silent laughter.
 @tel room_70
 #
 @desc
-Thin columns rise up to greet the hazy air here. Marble steps lead 
-up and down around various areas that once were home to many shops.
-Small bronze statues still stand on pedstals here, depicting 
-personages long forgotten by Mankind.
+Thin columns rise up through the hazy air here. Marble steps lead up and down
+around various areas that once were home to many shops. Small bronze statues
+still stand on pedstals here, depicting personages long forgotten.
 #
 ###############################################################################
 # Water Flowing
@@ -788,12 +740,12 @@ personages long forgotten by Mankind.
 @tel room_71
 #
 @desc
-You are overwhelmed by the spirit of water flowing through this room.
-The walls are blue and green and seem to be moving, the pale fronds
-of seaweed and water grass swaying in a nonexistant tide.
+You are overwhelmed by the spirit of water flowing through this room. The color
+of the walls oscillates from blue to green. They seem to be moving, the pale 
+fronds of seaweed and watergrass swaying in a nonexistent tide.
 
-In the center of the room upon a small dais is a book bound in
-pale leather, its pages opened and anchored.
+A small dais sits in the center of this room. A book bound in pale leather sits
+upon it, its pages opened and anchored.
 #
 ###############################################################################
 # Pyramid
@@ -801,10 +753,9 @@ pale leather, its pages opened and anchored.
 @tel room_72
 #
 @desc
-This is the first chamber in the interior of the pyramid. Because it
-has remained open to the elements for countless ages, whatever 
-stories might have been concealed in this room have been erased by
-time and the elements.
+You stand in the first chamber of the pyramid's interior. Because this room has 
+remained open to the elements for countless ages, whatever stories it might 
+have concealed have been erased.
 #
 ###############################################################################
 # sewer2
@@ -822,11 +773,9 @@ time and the elements.
 @tel room_75
 #
 @desc
-You are in the center of the square by a large marble fountain spraying
-cool, clean water.
-From this vantage you can see the whole square with its vegetable stalls
-and markets where one might purchase a great variety of items.
-
+You stand in the center of the square at the heart of Tai-Tastigon. A large 
+marble fountain sprays cool, clean water into the air. You spy several nearby
+vegetable stalls and markets where you might purchase a great variety of items.
 #
 ###############################################################################
 # The Mercy Seat
