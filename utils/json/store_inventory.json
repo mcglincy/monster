@@ -1,0 +1,263 @@
+[
+  {
+    "name": "Archive Basement",
+    "objects": []
+  },
+  {
+    "name": "Lake Bottom",
+    "objects": []
+  },
+  {
+    "name": "Riverbank",
+    "objects": [
+      "Druidic Boat"
+    ]
+  },
+  {
+    "name": "Armory Stall",
+    "objects": [
+      "wooden shield",
+      "horned helm",
+      "animal skins",
+      "leather jerkin",
+      "cloak",
+      "leather boots",
+      "gauntlets"
+    ]
+  },
+  {
+    "name": "Arms Emporium",
+    "objects": [
+      "horn bow",
+      "crossbow",
+      "sling",
+      "stone",
+      "arrow",
+      "pike",
+      "longsword",
+      "spear",
+      "javelin",
+      "Saxon axe",
+      "broadsword",
+      "hatchet"
+    ]
+  },
+  {
+    "name": "Arkinor's Exotica",
+    "objects": [
+      "Assassin's dagger",
+      "tattered scroll",
+      "Troll mail",
+      "Golden scroll",
+      "magic longsword",
+      "Greek firebomb",
+      "yellowed scroll",
+      "magic helmet",
+      "Zephyr Goggles",
+      "Boots of Lagrath",
+      "magic shield",
+      "Rune"
+    ]
+  },
+  {
+    "name": "Manannan's Hall",
+    "objects": [
+      "leather jerkin",
+      "ring mail armor",
+      "Norman kite shield",
+      "wooden shield",
+      "Saxon axe",
+      "spear",
+      "javelin",
+      "broadsword",
+      "cudgel"
+    ]
+  },
+  {
+    "name": "Dwarven Smithy",
+    "objects": [
+      "Dwarven mail",
+      "horned helm",
+      "conical helm",
+      "wooden shield",
+      "warhammer",
+      "mace",
+      "axe",
+      "gauntlets"
+    ]
+  },
+  {
+    "name": "Jade Market",
+    "objects": [
+      "axe",
+      "iron bar",
+      "hatchet"
+    ]
+  },
+  {
+    "name": "Wrought Power Hall",
+    "objects": [
+      "scale mail armor",
+      "chain mail armor",
+      "broadsword",
+      "mace",
+      "longsword",
+      "spear",
+      "Viking round shield",
+      "horned helm",
+      "plumed helm",
+      "axe",
+      "javelin",
+      "Norman kite shield",
+      "warhammer",
+      "gauntlets"
+    ]
+  },
+  {
+    "name": "Archmage's Study",
+    "objects": []
+  },
+  {
+    "name": "Great Iron Doors",
+    "objects": [
+      "rusty key"
+    ]
+  },
+  {
+    "name": "South Lake Shore",
+    "objects": [
+      "Druidic Boat"
+    ]
+  },
+  {
+    "name": "Fire-Gutted Temple",
+    "objects": []
+  },
+  {
+    "name": "Shayol Ghul",
+    "objects": [
+      "Thermo-nuclear Bomb"
+    ]
+  },
+  {
+    "name": "Armorers Row",
+    "objects": [
+      "chain mail armor",
+      "ring mail armor",
+      "gauntlets",
+      "steel breastplate",
+      "horned helm",
+      "plumed helm",
+      "scale mail armor",
+      "conical helm",
+      "buckler",
+      "Norman kite shield",
+      "Viking round shield"
+    ]
+  },
+  {
+    "name": "Wizard Pawn Shop",
+    "objects": [
+      "yellowed scroll",
+      "tattered scroll",
+      "scroll of identify",
+      "Platinum Wand",
+      "Charm of Opening",
+      "scroll of teleport",
+      "rope",
+      "Greek firebomb"
+    ]
+  },
+  {
+    "name": "Spartican Shop",
+    "objects": []
+  },
+  {
+    "name": "Hrungnir's Hall",
+    "objects": [
+      "jeweled scimitar"
+    ]
+  },
+  {
+    "name": "Purgatory",
+    "objects": [
+      "cudgel",
+      "axe",
+      "short sword"
+    ]
+  },
+  {
+    "name": "Carpeted Concourse",
+    "objects": [
+      "key"
+    ]
+  },
+  {
+    "name": "Trial by Combat",
+    "objects": [
+      "sharpened stick"
+    ]
+  },
+  {
+    "name": "Lair of the Beast",
+    "objects": [
+      "sharpened stick"
+    ]
+  },
+  {
+    "name": "Long Tunnel",
+    "objects": [
+      "shiny object"
+    ]
+  },
+  {
+    "name": "Jhurvali Oporus",
+    "objects": []
+  },
+  {
+    "name": "Chamber of Making",
+    "objects": [
+      "spear",
+      "longsword",
+      "chain mail armor",
+      "plumed helm",
+      "crested helm",
+      "ring mail armor",
+      "horn bow",
+      "arrow",
+      "Elfen spear",
+      "Greek firebomb"
+    ]
+  },
+  {
+    "name": "Implement Chamber",
+    "objects": []
+  },
+  {
+    "name": "Fezgar's Curiosities",
+    "objects": [
+      "garnet",
+      "jade figurine",
+      "teakwood chest",
+      "crystal prism",
+      "Peacock glove",
+      "silk robe",
+      "diamond",
+      "huge pearl",
+      "golden ring",
+      "silver mirror",
+      "chunk of amber",
+      "Persian carpet",
+      "ivory carving"
+    ]
+  },
+  {
+    "name": "Weapon Gallery",
+    "objects": [
+      "Voulge",
+      "scimitar",
+      "military fork",
+      "crude dagger"
+    ]
+  }
+]
