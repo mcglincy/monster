@@ -30,17 +30,17 @@ def main():
     if not check_bit(roomdesc["spc_room"], 0):
       continue
     store = {}
-    store["name"] = roomdesc["nice_name"]
+    store["room"] = roomdesc["nice_name"]
     room_id = roomdesc["id"]
     room = find_object(ROOMS, room_id)
-    object_names = []
-    for packed_int in room["objs"]:
-      if packed_int:
-        low_digits = packed_int % 1000
-        object_id = low_digits
+    inventory = []
+    for packed_object_int, packed_hide_int in zip(room["objs"], room["obj_hides"]):
+      if packed_object_int:
+        object_id = packed_object_int % 1000
+        quantity = packed_hide_int % 1000
         obj = find_object(OBJECTS, object_id)
-        object_names.append(obj["obj_name"])
-    store["objects"] = object_names
+        inventory.append({"object": obj["obj_name"], "quantity": quantity})
+    store["inventory"] = inventory
     stores.append(store)
   print(json.dumps(stores, indent=2))
 

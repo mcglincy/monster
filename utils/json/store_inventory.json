@@ -1,263 +1,632 @@
 [
   {
-    "name": "Archive Basement",
-    "objects": []
+    "room": "Archive Basement",
+    "inventory": []
   },
   {
-    "name": "Lake Bottom",
-    "objects": []
+    "room": "Lake Bottom",
+    "inventory": []
   },
   {
-    "name": "Riverbank",
-    "objects": [
-      "Druidic Boat"
+    "room": "Riverbank",
+    "inventory": [
+      {
+        "object": "Druidic Boat",
+        "quantity": 949
+      }
     ]
   },
   {
-    "name": "Armory Stall",
-    "objects": [
-      "wooden shield",
-      "horned helm",
-      "animal skins",
-      "leather jerkin",
-      "cloak",
-      "leather boots",
-      "gauntlets"
+    "room": "Armory Stall",
+    "inventory": [
+      {
+        "object": "wooden shield",
+        "quantity": 957
+      },
+      {
+        "object": "horned helm",
+        "quantity": 961
+      },
+      {
+        "object": "animal skins",
+        "quantity": 973
+      },
+      {
+        "object": "leather jerkin",
+        "quantity": 970
+      },
+      {
+        "object": "cloak",
+        "quantity": 875
+      },
+      {
+        "object": "leather boots",
+        "quantity": 927
+      },
+      {
+        "object": "gauntlets",
+        "quantity": 986
+      }
     ]
   },
   {
-    "name": "Arms Emporium",
-    "objects": [
-      "horn bow",
-      "crossbow",
-      "sling",
-      "stone",
-      "arrow",
-      "pike",
-      "longsword",
-      "spear",
-      "javelin",
-      "Saxon axe",
-      "broadsword",
-      "hatchet"
+    "room": "Arms Emporium",
+    "inventory": [
+      {
+        "object": "horn bow",
+        "quantity": 162
+      },
+      {
+        "object": "crossbow",
+        "quantity": 47
+      },
+      {
+        "object": "sling",
+        "quantity": 774
+      },
+      {
+        "object": "stone",
+        "quantity": 478
+      },
+      {
+        "object": "arrow",
+        "quantity": 833
+      },
+      {
+        "object": "pike",
+        "quantity": 500
+      },
+      {
+        "object": "longsword",
+        "quantity": 261
+      },
+      {
+        "object": "spear",
+        "quantity": 111
+      },
+      {
+        "object": "javelin",
+        "quantity": 200
+      },
+      {
+        "object": "Saxon axe",
+        "quantity": 970
+      },
+      {
+        "object": "broadsword",
+        "quantity": 957
+      },
+      {
+        "object": "hatchet",
+        "quantity": 915
+      }
     ]
   },
   {
-    "name": "Arkinor's Exotica",
-    "objects": [
-      "Assassin's dagger",
-      "tattered scroll",
-      "Troll mail",
-      "Golden scroll",
-      "magic longsword",
-      "Greek firebomb",
-      "yellowed scroll",
-      "magic helmet",
-      "Zephyr Goggles",
-      "Boots of Lagrath",
-      "magic shield",
-      "Rune"
+    "room": "Arkinor's Exotica",
+    "inventory": [
+      {
+        "object": "Assassin's dagger",
+        "quantity": 883
+      },
+      {
+        "object": "tattered scroll",
+        "quantity": 937
+      },
+      {
+        "object": "Troll mail",
+        "quantity": 949
+      },
+      {
+        "object": "Golden scroll",
+        "quantity": 953
+      },
+      {
+        "object": "magic longsword",
+        "quantity": 954
+      },
+      {
+        "object": "Greek firebomb",
+        "quantity": 788
+      },
+      {
+        "object": "yellowed scroll",
+        "quantity": 847
+      },
+      {
+        "object": "magic helmet",
+        "quantity": 891
+      },
+      {
+        "object": "Zephyr Goggles",
+        "quantity": 924
+      },
+      {
+        "object": "Boots of Lagrath",
+        "quantity": 909
+      },
+      {
+        "object": "magic shield",
+        "quantity": 903
+      },
+      {
+        "object": "Rune",
+        "quantity": 969
+      }
     ]
   },
   {
-    "name": "Manannan's Hall",
-    "objects": [
-      "leather jerkin",
-      "ring mail armor",
-      "Norman kite shield",
-      "wooden shield",
-      "Saxon axe",
-      "spear",
-      "javelin",
-      "broadsword",
-      "cudgel"
+    "room": "Manannan's Hall",
+    "inventory": [
+      {
+        "object": "leather jerkin",
+        "quantity": 801
+      },
+      {
+        "object": "ring mail armor",
+        "quantity": 807
+      },
+      {
+        "object": "Norman kite shield",
+        "quantity": 815
+      },
+      {
+        "object": "wooden shield",
+        "quantity": 868
+      },
+      {
+        "object": "Saxon axe",
+        "quantity": 774
+      },
+      {
+        "object": "spear",
+        "quantity": 875
+      },
+      {
+        "object": "javelin",
+        "quantity": 896
+      },
+      {
+        "object": "broadsword",
+        "quantity": 775
+      },
+      {
+        "object": "cudgel",
+        "quantity": 923
+      }
     ]
   },
   {
-    "name": "Dwarven Smithy",
-    "objects": [
-      "Dwarven mail",
-      "horned helm",
-      "conical helm",
-      "wooden shield",
-      "warhammer",
-      "mace",
-      "axe",
-      "gauntlets"
+    "room": "Dwarven Smithy",
+    "inventory": [
+      {
+        "object": "Dwarven mail",
+        "quantity": 754
+      },
+      {
+        "object": "horned helm",
+        "quantity": 807
+      },
+      {
+        "object": "conical helm",
+        "quantity": 850
+      },
+      {
+        "object": "wooden shield",
+        "quantity": 826
+      },
+      {
+        "object": "warhammer",
+        "quantity": 804
+      },
+      {
+        "object": "mace",
+        "quantity": 952
+      },
+      {
+        "object": "axe",
+        "quantity": 708
+      },
+      {
+        "object": "gauntlets",
+        "quantity": 982
+      }
     ]
   },
   {
-    "name": "Jade Market",
-    "objects": [
-      "axe",
-      "iron bar",
-      "hatchet"
+    "room": "Jade Market",
+    "inventory": [
+      {
+        "object": "axe",
+        "quantity": 832
+      },
+      {
+        "object": "iron bar",
+        "quantity": 894
+      },
+      {
+        "object": "hatchet",
+        "quantity": 878
+      }
     ]
   },
   {
-    "name": "Wrought Power Hall",
-    "objects": [
-      "scale mail armor",
-      "chain mail armor",
-      "broadsword",
-      "mace",
-      "longsword",
-      "spear",
-      "Viking round shield",
-      "horned helm",
-      "plumed helm",
-      "axe",
-      "javelin",
-      "Norman kite shield",
-      "warhammer",
-      "gauntlets"
+    "room": "Wrought Power Hall",
+    "inventory": [
+      {
+        "object": "scale mail armor",
+        "quantity": 486
+      },
+      {
+        "object": "chain mail armor",
+        "quantity": 13
+      },
+      {
+        "object": "broadsword",
+        "quantity": 998
+      },
+      {
+        "object": "mace",
+        "quantity": 841
+      },
+      {
+        "object": "longsword",
+        "quantity": 915
+      },
+      {
+        "object": "spear",
+        "quantity": 22
+      },
+      {
+        "object": "Viking round shield",
+        "quantity": 732
+      },
+      {
+        "object": "horned helm",
+        "quantity": 650
+      },
+      {
+        "object": "plumed helm",
+        "quantity": 675
+      },
+      {
+        "object": "axe",
+        "quantity": 988
+      },
+      {
+        "object": "javelin",
+        "quantity": 690
+      },
+      {
+        "object": "Norman kite shield",
+        "quantity": 670
+      },
+      {
+        "object": "warhammer",
+        "quantity": 648
+      },
+      {
+        "object": "gauntlets",
+        "quantity": 978
+      }
     ]
   },
   {
-    "name": "Archmage's Study",
-    "objects": []
+    "room": "Archmage's Study",
+    "inventory": []
   },
   {
-    "name": "Great Iron Doors",
-    "objects": [
-      "rusty key"
+    "room": "Great Iron Doors",
+    "inventory": [
+      {
+        "object": "rusty key",
+        "quantity": 719
+      }
     ]
   },
   {
-    "name": "South Lake Shore",
-    "objects": [
-      "Druidic Boat"
+    "room": "South Lake Shore",
+    "inventory": [
+      {
+        "object": "Druidic Boat",
+        "quantity": 766
+      }
     ]
   },
   {
-    "name": "Fire-Gutted Temple",
-    "objects": []
+    "room": "Fire-Gutted Temple",
+    "inventory": []
   },
   {
-    "name": "Shayol Ghul",
-    "objects": [
-      "Thermo-nuclear Bomb"
+    "room": "Shayol Ghul",
+    "inventory": [
+      {
+        "object": "Thermo-nuclear Bomb",
+        "quantity": 999
+      }
     ]
   },
   {
-    "name": "Armorers Row",
-    "objects": [
-      "chain mail armor",
-      "ring mail armor",
-      "gauntlets",
-      "steel breastplate",
-      "horned helm",
-      "plumed helm",
-      "scale mail armor",
-      "conical helm",
-      "buckler",
-      "Norman kite shield",
-      "Viking round shield"
+    "room": "Armorers Row",
+    "inventory": [
+      {
+        "object": "chain mail armor",
+        "quantity": 752
+      },
+      {
+        "object": "ring mail armor",
+        "quantity": 160
+      },
+      {
+        "object": "gauntlets",
+        "quantity": 956
+      },
+      {
+        "object": "steel breastplate",
+        "quantity": 919
+      },
+      {
+        "object": "horned helm",
+        "quantity": 56
+      },
+      {
+        "object": "plumed helm",
+        "quantity": 941
+      },
+      {
+        "object": "scale mail armor",
+        "quantity": 944
+      },
+      {
+        "object": "conical helm",
+        "quantity": 674
+      },
+      {
+        "object": "buckler",
+        "quantity": 952
+      },
+      {
+        "object": "Norman kite shield",
+        "quantity": 977
+      },
+      {
+        "object": "Viking round shield",
+        "quantity": 938
+      }
     ]
   },
   {
-    "name": "Wizard Pawn Shop",
-    "objects": [
-      "yellowed scroll",
-      "tattered scroll",
-      "scroll of identify",
-      "Platinum Wand",
-      "Charm of Opening",
-      "scroll of teleport",
-      "rope",
-      "Greek firebomb"
+    "room": "Wizard Pawn Shop",
+    "inventory": [
+      {
+        "object": "yellowed scroll",
+        "quantity": 665
+      },
+      {
+        "object": "tattered scroll",
+        "quantity": 667
+      },
+      {
+        "object": "scroll of identify",
+        "quantity": 985
+      },
+      {
+        "object": "Platinum Wand",
+        "quantity": 703
+      },
+      {
+        "object": "Charm of Opening",
+        "quantity": 603
+      },
+      {
+        "object": "scroll of teleport",
+        "quantity": 999
+      },
+      {
+        "object": "rope",
+        "quantity": 404
+      },
+      {
+        "object": "Greek firebomb",
+        "quantity": 557
+      }
     ]
   },
   {
-    "name": "Spartican Shop",
-    "objects": []
+    "room": "Spartican Shop",
+    "inventory": []
   },
   {
-    "name": "Hrungnir's Hall",
-    "objects": [
-      "jeweled scimitar"
+    "room": "Hrungnir's Hall",
+    "inventory": [
+      {
+        "object": "jeweled scimitar",
+        "quantity": 482
+      }
     ]
   },
   {
-    "name": "Purgatory",
-    "objects": [
-      "cudgel",
-      "axe",
-      "short sword"
+    "room": "Purgatory",
+    "inventory": [
+      {
+        "object": "cudgel",
+        "quantity": 696
+      },
+      {
+        "object": "axe",
+        "quantity": 997
+      },
+      {
+        "object": "short sword",
+        "quantity": 633
+      }
     ]
   },
   {
-    "name": "Carpeted Concourse",
-    "objects": [
-      "key"
+    "room": "Carpeted Concourse",
+    "inventory": [
+      {
+        "object": "key",
+        "quantity": 951
+      }
     ]
   },
   {
-    "name": "Trial by Combat",
-    "objects": [
-      "sharpened stick"
+    "room": "Trial by Combat",
+    "inventory": [
+      {
+        "object": "sharpened stick",
+        "quantity": 989
+      }
     ]
   },
   {
-    "name": "Lair of the Beast",
-    "objects": [
-      "sharpened stick"
+    "room": "Lair of the Beast",
+    "inventory": [
+      {
+        "object": "sharpened stick",
+        "quantity": 0
+      }
     ]
   },
   {
-    "name": "Long Tunnel",
-    "objects": [
-      "shiny object"
+    "room": "Long Tunnel",
+    "inventory": [
+      {
+        "object": "shiny object",
+        "quantity": 985
+      }
     ]
   },
   {
-    "name": "Jhurvali Oporus",
-    "objects": []
+    "room": "Jhurvali Oporus",
+    "inventory": []
   },
   {
-    "name": "Chamber of Making",
-    "objects": [
-      "spear",
-      "longsword",
-      "chain mail armor",
-      "plumed helm",
-      "crested helm",
-      "ring mail armor",
-      "horn bow",
-      "arrow",
-      "Elfen spear",
-      "Greek firebomb"
+    "room": "Chamber of Making",
+    "inventory": [
+      {
+        "object": "spear",
+        "quantity": 455
+      },
+      {
+        "object": "longsword",
+        "quantity": 519
+      },
+      {
+        "object": "chain mail armor",
+        "quantity": 515
+      },
+      {
+        "object": "plumed helm",
+        "quantity": 523
+      },
+      {
+        "object": "crested helm",
+        "quantity": 514
+      },
+      {
+        "object": "ring mail armor",
+        "quantity": 523
+      },
+      {
+        "object": "horn bow",
+        "quantity": 430
+      },
+      {
+        "object": "arrow",
+        "quantity": 387
+      },
+      {
+        "object": "Elfen spear",
+        "quantity": 558
+      },
+      {
+        "object": "Greek firebomb",
+        "quantity": 997
+      }
     ]
   },
   {
-    "name": "Implement Chamber",
-    "objects": []
+    "room": "Implement Chamber",
+    "inventory": []
   },
   {
-    "name": "Fezgar's Curiosities",
-    "objects": [
-      "garnet",
-      "jade figurine",
-      "teakwood chest",
-      "crystal prism",
-      "Peacock glove",
-      "silk robe",
-      "diamond",
-      "huge pearl",
-      "golden ring",
-      "silver mirror",
-      "chunk of amber",
-      "Persian carpet",
-      "ivory carving"
+    "room": "Fezgar's Curiosities",
+    "inventory": [
+      {
+        "object": "garnet",
+        "quantity": 870
+      },
+      {
+        "object": "jade figurine",
+        "quantity": 873
+      },
+      {
+        "object": "teakwood chest",
+        "quantity": 882
+      },
+      {
+        "object": "crystal prism",
+        "quantity": 832
+      },
+      {
+        "object": "Peacock glove",
+        "quantity": 827
+      },
+      {
+        "object": "silk robe",
+        "quantity": 920
+      },
+      {
+        "object": "diamond",
+        "quantity": 822
+      },
+      {
+        "object": "huge pearl",
+        "quantity": 825
+      },
+      {
+        "object": "golden ring",
+        "quantity": 654
+      },
+      {
+        "object": "silver mirror",
+        "quantity": 786
+      },
+      {
+        "object": "chunk of amber",
+        "quantity": 804
+      },
+      {
+        "object": "Persian carpet",
+        "quantity": 823
+      },
+      {
+        "object": "ivory carving",
+        "quantity": 818
+      }
     ]
   },
   {
-    "name": "Weapon Gallery",
-    "objects": [
-      "Voulge",
-      "scimitar",
-      "military fork",
-      "crude dagger"
+    "room": "Weapon Gallery",
+    "inventory": [
+      {
+        "object": "Voulge",
+        "quantity": 994
+      },
+      {
+        "object": "scimitar",
+        "quantity": 992
+      },
+      {
+        "object": "military fork",
+        "quantity": 993
+      },
+      {
+        "object": "crude dagger",
+        "quantity": 991
+      }
     ]
   }
 ]
