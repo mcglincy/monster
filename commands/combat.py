@@ -1,6 +1,5 @@
 from commands.command import QueuedCommand
-from gamerules.combat import resolve_attack, resolve_punch
-from gamerules.find import find_first_unhidden
+from gamerules.combat import find_first_attackable, resolve_attack, resolve_punch
 from gamerules.special_room_kind import SpecialRoomKind
 
 
@@ -28,9 +27,9 @@ class CmdAttack(QueuedCommand):
   def inner_func(self):
     # check the target after pre_freeze and immediately before resolving attack
     key = self.args.strip()
-    self.target = find_first_unhidden(self.caller.location, key)
+    self.target = find_first_attackable(self.caller.location, key)
     if not self.target:
-      self.caller.msg(f"Could not find '{key}'.")      
+      self.caller.msg(f"Could not find '{key}'.")
       return
     resolve_attack(self.caller, self.target)
 
@@ -56,8 +55,8 @@ class CmdPunch(QueuedCommand):
 
   def inner_func(self):
     # check the target after pre_freeze and immediately before resolving attack
-    key = self.args.strip()    
-    self.target = find_first_unhidden(self.caller.location, key)
+    key = self.args.strip()
+    self.target = find_first_attackable(self.caller.location, key)
     if not self.target:
       self.caller.msg(f"Could not find '{key}'.")
       return

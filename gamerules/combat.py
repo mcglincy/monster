@@ -3,13 +3,27 @@ import random
 from evennia.utils.search import search_object
 from gamerules.combat_msgs import *
 from gamerules.gold import give_starting_gold
+from gamerules.find import is_hidden, keymatch
 from gamerules.hiding import reveal
-from gamerules.spells import make_saving_throw
+from gamerules.saving_throw import make_saving_throw
 from gamerules.talk import msg_global
 from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 
 
 PUNCH_KINDS = 15  # 0-15
+
+
+def is_attackable(target):
+  # TODO: consider hasattr(target, "gain_health") ?
+  return (target.is_typeclass("typeclasses.characters.Character")
+    or target.is_typeclass("typeclasses.mobs.Mob", exact=False))
+
+
+def find_first_attackable(container, key):
+  for obj in container.contents:
+    if keymatch(obj, key) and not is_hidden(obj) and is_attackable(obj):
+      return obj
+  return None
 
 
 def resolve_attack(attacker, target):
@@ -21,7 +35,7 @@ def resolve_attack(attacker, target):
     attacker.msg("You can't attack yourself!")
     return
   # TODO: add more rigorous can-attack checks
-  if not hasattr(target, "gain_health"):
+  if not is_attackable(target):
     attacker.msg("You can't attack that.")
     return
   if target.is_dead:

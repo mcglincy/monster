@@ -1,8 +1,8 @@
 from commands.command import QueuedCommand
 from evennia.utils.evmenu import get_input
+from gamerules.combat import find_first_attackable
 from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
-from gamerules.find import find_first_unhidden
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.spell_effect_kind import SpellEffectKind
 from gamerules.spells import can_cast_spell, cast_spell
@@ -60,7 +60,7 @@ class CmdCast(QueuedCommand):
       distance_target_key = self.input2
     elif self.spell.should_prompt:
       key = self.input1
-      target = find_first_unhidden(self.caller.location, key)
+      target = find_first_attackable(self.caller.location, key)
       if not target:
         self.caller.msg(f"Could not find '{key}'.")      
       # we check for missing target later in cast_spell(),

@@ -24,6 +24,6 @@ def find_first_unhidden(container, key):
 
 def find_all_unhidden(container, key=None):
   if key:
-    return [x for x in location.contents if keymatch(x, key) and not is_hidden(x)]
+    return [x for x in container.contents if keymatch(x, key) and not is_hidden(x)]
   else:
-    return [x for x in location.contents if not is_hidden(x)]
+    return [x for x in container.contents if not is_hidden(x)]
