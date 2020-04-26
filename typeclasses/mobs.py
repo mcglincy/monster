@@ -1,6 +1,6 @@
 from enum import IntEnum
 import random
-from evennia import GLOBAL_SCRIPTS, logger, TICKER_HANDLER
+from evennia import GLOBAL_SCRIPTS, TICKER_HANDLER
 from gamerules.health import MIN_HEALTH, health_msg
 from gamerules.mob_kind import MobKind
 from gamerules.mobs import mob_death, resolve_mob_attack
@@ -409,7 +409,6 @@ class Mob(Object, TickerMixin):
     self.at_init()
 
   def at_init(self):
-    logger.log_info(f"mob {self.key}#{self.id} at_init()")
     self.ndb.hiding = 0
     self.ndb.behavior = MobBehavior.PATROLLING
     self.add_to_global_tickers()
@@ -510,7 +509,6 @@ class Mob(Object, TickerMixin):
     return self.db.attack_name if self.db.attack_name else "claws"
 
   def tick_behavior(self):
-    logger.log_info(f"mob {self.key}#{self.id} is behavior {self.ndb.behavior.name}")
     if self.ndb.behavior == MobBehavior.IDLE:
       # do nothing
       return
