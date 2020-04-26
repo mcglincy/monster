@@ -49,6 +49,15 @@ def make_exit(exit, to_loc, come_out_exit):
     print(f"@set {exit_name}/password = {repr(exit['alias'])}")
     print('#')
 
+  # required object
+  obj_req = None
+  obj_req_id = exit['obj_req']
+  if obj_req_id:
+    obj_req = find_object(OBJECTS, obj_req_id)
+  if obj_req:
+    print(f"@set {exit_name}/required_object = {repr(obj_req['obj_name'])}")
+    print('#')
+
   # accumulate various Evennia locks to set for the exit
   locks = []
 
@@ -57,6 +66,8 @@ def make_exit(exit, to_loc, come_out_exit):
     or exit_kind == ExitKind.PASSWORDED
     or exit['hidden']):
     locks.append("view:none()")
+  elif exit_kind == ExitKind.ONLY_EXISTS_WITH_OBJECT:
+    locks.append(f"view:holds({obj_req['obj_name']})")
 
   # and several flavors of impassable exit
   if (exit_kind == ExitKind.NO_EXIT
@@ -64,21 +75,12 @@ def make_exit(exit, to_loc, come_out_exit):
     or exit['req_alias']
     or exit['hidden']):
     locks.append("traverse:none()")
-
-  # required object
-  obj_req_id = exit['obj_req']
-  if obj_req_id:
-    obj_req = find_object(OBJECTS, obj_req_id)
-    if obj_req:
-      print(f"@set {exit_name}/required_object = {repr(obj_req['obj_name'])}")
-      print('#')
-      if exit_kind == ExitKind.OBJECT_REQUIRED:
-        locks.append(f"traverse:holds({obj_req['obj_name']})")
-      elif exit_kind == ExitKind.OBJECT_FORBIDDEN:
-        locks.append(f"traverse: NOT holds({obj_req['obj_name']})")
-      elif exit_kind == ExitKind.ONLY_EXISTS_WITH_OBJECT:
-        locks.append(f"traverse:holds({obj_req['obj_name']})")
-        locks.append(f"view:holds({obj_req['obj_name']})")
+  elif exit_kind == ExitKind.OBJECT_REQUIRED and obj_req:
+    locks.append(f"traverse:holds({obj_req['obj_name']})")
+  elif exit_kind == ExitKind.OBJECT_FORBIDDEN and obj_req:
+    locks.append(f"traverse: NOT holds({obj_req['obj_name']})")
+  elif exit_kind == ExitKind.ONLY_EXISTS_WITH_OBJECT and obj_req:
+    locks.append(f"traverse:holds({obj_req['obj_name']})")
 
   if locks:
     print(f"@lock {exit_name} = {'; '.join(locks)}")

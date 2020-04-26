@@ -16,22 +16,34 @@ class CmdExit(QueuedCommand):
     return self.caller.move_speed / 100.0
 
   def inner_func(self):
+    ok_to_traverse = False
     if self.obj.access(self.caller, "traverse"):
-      # we may traverse the exit.
+      # we satisfy any locks on the exit
+      ok_to_traverse = True
+    elif self.obj.db.password and self.obj.db.password.lower() == self.raw_string.lower():
+      # we used the locked exit's password (case-insensitive)
+      if self.obj.kind == ExitKind.PASSWORDED:
+        # passworded only
+        ok_to_traverse = True
+      elif ((self.obj.kind == ExitKind.OBJECT_REQUIRED or self.obj.kind == ExitKind.ONLY_EXISTS_WITH_OBJECT)
+        and find_first(self.caller, self.obj.db.required_object)):
+        # passworded and we have the required object
+        ok_to_traverse = True
+      elif (self.obj.kind == ExitKind.OBJECT_FORBIDDEN and 
+        not find_first(self.caller, self.obj.db.required_object)):
+        # passworded and we don't have the forbidden object
+        ok_to_traverse = True
+
+    if ok_to_traverse:
       self.obj.at_traverse(self.caller, self.obj.destination)
     else:
-      # exit is locked
-      if self.obj.db.password and self.obj.db.password.lower() == self.raw_string.lower():
-        # we used the exit's password (case-insensitive), so bypass the lock
-        self.obj.at_traverse(self.caller, self.obj.destination)
+      if self.obj.db.err_traverse:
+        # if exit has a better error message, let's use it.
+        self.caller.msg(self.obj.db.err_traverse)
       else:
-        # failed to traverse the exit.
-        if self.obj.db.err_traverse:
-          # if exit has a better error message, let's use it.
-          self.caller.msg(self.obj.db.err_traverse)
-        else:
-          # No shorthand error message. Call hook.
-          self.obj.at_failed_traverse(self.caller)
+        # No shorthand error message. Call hook.
+        self.obj.at_failed_traverse(self.caller)
+
 
   def get_extra_info(self, caller, **kwargs):
     """Shows a bit of information on where the exit leads.

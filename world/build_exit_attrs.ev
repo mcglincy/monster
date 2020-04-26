@@ -3157,7 +3157,7 @@
 #
 @set up/required_object = 'Dreaming Stone'
 #
-@lock up = traverse:none(); traverse:holds(Dreaming Stone)
+@lock up = traverse:none()
 #
 @set down/exit_kind = 0
 #
@@ -8872,7 +8872,7 @@
 #
 @set up/required_object = 'Lich Ring'
 #
-@lock up = traverse:none(); traverse:holds(Lich Ring)
+@lock up = traverse:none()
 #
 @set down/exit_kind = 0
 #
@@ -10840,7 +10840,7 @@
 #
 @set down/required_object = 'golden ring'
 #
-@lock down = view:none(); traverse:none(); traverse:holds(golden ring)
+@lock down = view:none(); traverse:none()
 #
 @set down/hidden_desc = 'You find a loose panel concealing some steps leading down.'
 #
@@ -12947,7 +12947,7 @@
 #
 @set down/required_object = 'White scale mail'
 #
-@lock down = traverse:none(); traverse:holds(White scale mail)
+@lock down = traverse:none()
 #
 @set down/exit_effect_kind = 4
 #
