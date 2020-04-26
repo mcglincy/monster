@@ -1,5 +1,6 @@
 from commands.command import Command, QueuedCommand
 from gamerules.exit_kind import ExitKind
+from gamerules.find import find_first
 
 # see also evennia commands.py ExitCommand
 class CmdExit(QueuedCommand):
@@ -22,14 +23,17 @@ class CmdExit(QueuedCommand):
       ok_to_traverse = True
     elif self.obj.db.password and self.obj.db.password.lower() == self.raw_string.lower():
       # we used the locked exit's password (case-insensitive)
-      if self.obj.kind == ExitKind.PASSWORDED:
+      # TODO: maybe we should convert OPEN + alias_required to PASSWORDED?
+      if (self.obj.db.exit_kind == ExitKind.OPEN 
+        or self.obj.db.exit_kind == ExitKind.PASSWORDED):
         # passworded only
         ok_to_traverse = True
-      elif ((self.obj.kind == ExitKind.OBJECT_REQUIRED or self.obj.kind == ExitKind.ONLY_EXISTS_WITH_OBJECT)
+      elif ((self.obj.db.exit_kind == ExitKind.OBJECT_REQUIRED
+       or self.obj.db.exit_kind == ExitKind.ONLY_EXISTS_WITH_OBJECT)
         and find_first(self.caller, self.obj.db.required_object)):
         # passworded and we have the required object
         ok_to_traverse = True
-      elif (self.obj.kind == ExitKind.OBJECT_FORBIDDEN and 
+      elif (self.obj.db.exit_kind == ExitKind.OBJECT_FORBIDDEN and 
         not find_first(self.caller, self.obj.db.required_object)):
         # passworded and we don't have the forbidden object
         ok_to_traverse = True
