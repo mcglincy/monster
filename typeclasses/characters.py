@@ -510,6 +510,9 @@ class Character(DefaultCharacter, TickerMixin):
       self.msg(health_msg("You", self.db.health))
       self.location.msg_contents(health_msg(self.name, self.db.health), exclude=[self])
       if self.db.health <= 0:
+        if self.ndb.active_command:
+          self.ndb.active_command.cancelled = True
+        self.ndb.command_queue.clear()
         character_death(self, damager, weapon_name)
     else:
       # aka healing
