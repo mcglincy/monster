@@ -8,7 +8,8 @@ class CmdClear(BaseCommand):
 
   def func(self):
     self.caller.msg("Clearing character state.")
-    self.caller.ndb.active_command = None
+    if self.caller.ndb.active_command:
+      self.caller.ndb.active_command.cancelled = True
     self.caller.ndb.command_queue.clear()
     self.caller.ndb.frozen_until = 0
     self.caller.ndb.hiding = 0

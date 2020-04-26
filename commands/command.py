@@ -198,8 +198,11 @@ class Command(BaseCommand):
 
 
 class QueuedCommand(Command):
-  input1 = None
-  input2 = None
+  def __init__(self, *args, **kwargs):
+    super(QueuedCommand, self).__init__(*args, **kwargs)
+    self.input1 = None
+    self.input2 = None
+    self.cancelled = False
 
   def check_preconditions(self):
     return True
@@ -247,12 +250,18 @@ class QueuedCommand(Command):
           now = int(time.time() * 1000.0)
           debug_msg(self.caller,
             f"{self.key} pre-freeze {self.pre_freeze()}, actually {now - self.caller.ndb.command_timestamp} millis.")
+          if self.cancelled:
+            return
 
         # prompt after pre_freeze, to better mimic old monster behavior
         if self.input_prompt1():
           self.input1 = yield(self.input_prompt1())
+        if self.cancelled:
+          return
         if self.input_prompt2():
           self.input2 = yield(self.input_prompt2())
+        if self.cancelled:
+          return
 
         # self.caller.msg(f"{self.raw_string}: inner_func")
         # TODO: use kwargs instead of input/input2?
@@ -265,6 +274,9 @@ class QueuedCommand(Command):
           now = int(time.time() * 1000.0)
           debug_msg(self.caller,
             f"{self.key} post-freeze {self.post_freeze()}, actually {now - self.caller.ndb.command_timestamp} millis.")
+          # no point in cancelling now; we're done
+          # if self.cancelled:
+          #   return
     except Exception as err:
       self.caller.msg(err)
     finally:
