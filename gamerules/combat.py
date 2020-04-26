@@ -167,25 +167,34 @@ def punch_damage(num):
 
 def character_death(victim, killer=None, weapon_name=None):
   # send an appropriate global death message
-  if not killer:
-    msg_global(f"{victim.name} has died of mysterious causes.")
-  elif not weapon_name:
-    msg_global(f"{victim.name} has been slain by {killer.name}.")
-  else:
+  if killer and weapon_name:
     msg_global(f"{victim.name} has been slain by {killer.name}'s {weapon_name}.")
+  elif killer:
+    msg_global(f"{victim.name} has been slain by {killer.name}.")
+  elif weapon_name:
+    msg_global(f"{victim.name} has been slain by a {weapon_name}.")
+  else:
+    msg_global(f"{victim.name} has died of mysterious causes.")
 
   # award xp to the killer
-  if killer is not None and killer.is_typeclass("typeclasses.characters.Character"):
+  if killer and killer.is_typeclass("typeclasses.characters.Character"):
     killer.msg(f"You killed {victim.name}!")
     xp = calculate_kill_xp(killer.db.xp, victim.db.xp)
     gain_xp(killer, xp)
 
-  # victim drops everything it was holding before leaving room
+  # victim drops everything they were holding before leaving room
   for obj in victim.contents:
     if obj.worth:
       # only drop things with value
       # TODO: possible destroy chance?
-      victim.execute_cmd(f"drop {obj.key}")
+      # since drop is now a queued commend, do all the steps of a drop ourselves
+      if obj.at_before_drop(victim):
+        obj.move_to(victim.location, quiet=True)
+        victim.msg(f"You drop {obj.name}.")
+        victim.location.msg_contents(f"{victim.name} drops {obj.name}.", exclude=victim)
+        obj.at_drop(victim)
+      else:
+        obj.delete()
     else:
       # nuke worthless objects
       obj.delete()
