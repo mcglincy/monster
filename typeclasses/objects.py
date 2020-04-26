@@ -244,10 +244,7 @@ class StackableObject(Object):
     return f"A {self._stack_name()}."
 
   def add(self, amount):
-    new_amount = amount
-    if self.db.amount:
-      new_amount += self.db.amount
-    self.db.amount = new_amount
+    self.db.amount = (self.db.amount or 0) + amount
     self.db.desc = f"A {self._stack_name()}."
     if self.db.amount < 1:
       # don't keep empty stacks around

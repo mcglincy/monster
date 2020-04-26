@@ -7,4 +7,4 @@ def give_starting_gold(character):
   gold.add(STARTING_GOLD_AMOUNT)
   # use move_to() so we invoke StackableObject accumulation
   gold.move_to(character, quiet=True)
-  character.msg(f"You now have {gold.db.amount} gold.")
+  character.msg(f"You now have {STARTING_GOLD_AMOUNT} gold.")
