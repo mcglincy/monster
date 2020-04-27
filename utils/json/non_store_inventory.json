@@ -1,0 +1,809 @@
+[
+  {
+    "room": "Sewer Entrance",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 2,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Tu'matei Alras",
+    "inventory": [
+      {
+        "object": "crude dagger",
+        "condition": 100,
+        "charges": 10,
+        "hide": 1
+      },
+      {
+        "object": "Dwarven mail",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "scimitar",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Cedar Forest",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 3,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Great Oaks",
+    "inventory": [
+      {
+        "object": "Red plate mail",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Freak Street",
+    "inventory": [
+      {
+        "object": "cloak of the magi",
+        "condition": 100,
+        "charges": 10,
+        "hide": 8
+      }
+    ]
+  },
+  {
+    "room": "Judgement Square",
+    "inventory": [
+      {
+        "object": "ATM",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Vegetable Market",
+    "inventory": [
+      {
+        "object": "crude dagger",
+        "condition": 100,
+        "charges": 10,
+        "hide": 21
+      }
+    ]
+  },
+  {
+    "room": "Flame Pinnacle",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Green Pool",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Room of Obsequities",
+    "inventory": [
+      {
+        "object": "shiny object",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Ashen Wastes",
+    "inventory": [
+      {
+        "object": "block of ice",
+        "condition": 100,
+        "charges": 10,
+        "hide": 6
+      }
+    ]
+  },
+  {
+    "room": "Forbidden Library",
+    "inventory": [
+      {
+        "object": "boulder",
+        "condition": 0,
+        "charges": 3,
+        "hide": 0
+      },
+      {
+        "object": "catapult",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "catapult",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "cloak",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Summoning Chamber",
+    "inventory": [
+      {
+        "object": "cloak",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "cloak",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "sharpened stick",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "cloak",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "Golden scroll",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Enchanted Woods",
+    "inventory": [
+      {
+        "object": "block of ice",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Great Temple Gates",
+    "inventory": [
+      {
+        "object": "longsword",
+        "condition": 100,
+        "charges": 10,
+        "hide": 2
+      }
+    ]
+  },
+  {
+    "room": "Upper Crypt",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 2,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Library of Ancients",
+    "inventory": [
+      {
+        "object": "cloak of the magi",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Collapsed Temple",
+    "inventory": [
+      {
+        "object": "Zephyr Goggles",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Senatorial Curia",
+    "inventory": [
+      {
+        "object": "Rhinestone Key",
+        "condition": 100,
+        "charges": 10,
+        "hide": 4
+      },
+      {
+        "object": "jeweled scimitar",
+        "condition": 100,
+        "charges": 10,
+        "hide": 5
+      }
+    ]
+  },
+  {
+    "room": "Chamber of Ancients",
+    "inventory": [
+      {
+        "object": "Book of Shadows",
+        "condition": 100,
+        "charges": 10,
+        "hide": 14
+      }
+    ]
+  },
+  {
+    "room": "Dead Vault",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Goblin Forge",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Crocodile Cult House",
+    "inventory": [
+      {
+        "object": "Rhinestone Ring",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Crocodile Pit",
+    "inventory": [
+      {
+        "object": "EbonBlade",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Reptilean Concourse",
+    "inventory": [
+      {
+        "object": "silver mirror",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Chamber of Quartz",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 2,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Ship Island",
+    "inventory": [
+      {
+        "object": "crystal prism",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Weathered Bluff",
+    "inventory": [
+      {
+        "object": "sling",
+        "condition": 100,
+        "charges": 10,
+        "hide": 4
+      }
+    ]
+  },
+  {
+    "room": "Troll Warrior Cave",
+    "inventory": [
+      {
+        "object": "buckler",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Death Chamber",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Blue Stone Chamber",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 58,
+        "hide": 0
+      },
+      {
+        "object": "thighbone",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "Dragonstone",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "Charm of Opening",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "High Dudgeon",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Ice Throne",
+    "inventory": [
+      {
+        "object": "Dragon Claws",
+        "condition": 100,
+        "charges": 10,
+        "hide": 1
+      },
+      {
+        "object": "Charm of Opening",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "The Rime Tree",
+    "inventory": [
+      {
+        "object": "Dragonstone",
+        "condition": 100,
+        "charges": 10,
+        "hide": 1
+      }
+    ]
+  },
+  {
+    "room": "Coral Doorway",
+    "inventory": [
+      {
+        "object": "Druidic Boat",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Sinking Passage",
+    "inventory": [
+      {
+        "object": "Druidic Boat",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Magma Path",
+    "inventory": [
+      {
+        "object": "White scale mail",
+        "condition": 100,
+        "charges": 10,
+        "hide": 8
+      }
+    ]
+  },
+  {
+    "room": "Cavern Beyond Time",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      },
+      {
+        "object": "gauntlets",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "iron key",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "Forge stone",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "Ivory Boat",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Whirlpool",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Realm of Dark Dreams",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 4,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Fire in the Dark",
+    "inventory": [
+      {
+        "object": "Voulge",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "elf skull",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "thighbone",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Symbala Coatal",
+    "inventory": [
+      {
+        "object": "Aquamarine Orb",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Hidden Cave",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 6,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Lair of Jorlock",
+    "inventory": [
+      {
+        "object": "gauntlets",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "Troll mail",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Chamber of Ippulet",
+    "inventory": [
+      {
+        "object": "cloak",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 46,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Chamber of Hues",
+    "inventory": [
+      {
+        "object": "Druidic Boat",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Lake's Heart",
+    "inventory": [
+      {
+        "object": "Lakeblade",
+        "condition": 100,
+        "charges": 10,
+        "hide": 5
+      }
+    ]
+  },
+  {
+    "room": "Temple of Death",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Treasure of Krotche",
+    "inventory": [
+      {
+        "object": "crude dagger",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "old parchment",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Behind the Mirror",
+    "inventory": [
+      {
+        "object": "Rune",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 1,
+        "hide": 0
+      },
+      {
+        "object": "White scale mail",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Ghalstract Absolung",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 7,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Ocean's Tunnel",
+    "inventory": [
+      {
+        "object": "Aquamarine Orb",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "Druidic Boat",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "Druidic Boat",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Towering Gates",
+    "inventory": [
+      {
+        "object": "spear",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      },
+      {
+        "object": "scale mail armor",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Wyldibeast's Lair",
+    "inventory": [
+      {
+        "object": "Rune",
+        "condition": 100,
+        "charges": 10,
+        "hide": 1
+      }
+    ]
+  },
+  {
+    "room": "Guild's Stashroom",
+    "inventory": [
+      {
+        "object": "jeweled scimitar",
+        "condition": 100,
+        "charges": 10,
+        "hide": 20
+      },
+      {
+        "object": "Dreaming Stone",
+        "condition": 100,
+        "charges": 10,
+        "hide": 14
+      },
+      {
+        "object": "shiny object",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "Class-Room",
+    "inventory": [
+      {
+        "object": "ATM",
+        "condition": 100,
+        "charges": 10,
+        "hide": 0
+      }
+    ]
+  },
+  {
+    "room": "secret passage",
+    "inventory": [
+      {
+        "object": "stone",
+        "condition": 100,
+        "charges": 2,
+        "hide": 0
+      }
+    ]
+  }
+]
