@@ -2191,6 +2191,8 @@ PLATINUM_WAND = {
   'desc': 'The wand is about 2 feet long and very thin. It is made of a strange\nmetal that has a silver tint to it.',
   'num_exist': 3,
   'worth': 150,
+  'spell_key': 'Flame Spray',
+  'charges': 7,
 }
 
 ROD_OF_DESTRUCTION = {
@@ -2201,6 +2203,8 @@ ROD_OF_DESTRUCTION = {
   'desc': 'The rod is about 3 feet long, made of an almost metallic looking\nwood. It is richly carved, and tipped with a iron point.',
   'get_success_msg': 'Energy courses through you as you lift the ancient Rod of Destruction!',
   'line_desc': 'There is a long rod of the ground here.',
+  'spell_key': 'Group Destruction',
+  'charges': 24,
 }
 
 #

@@ -167,7 +167,13 @@ BASE_WAND = {
   #    O_WAND: Charges := Obj.Parms[2];
   for obj in objs:
     output_common_fields(obj, 'base_wand')
-    # TODO: figure out parms
+    parms = obj['parms']
+    if len(parms) == 2:
+      spell = find_obj(SPELLS, parms[0])
+      if spell:
+        print(f"  'spell_key': '{spell['name']}',")
+      charges = parms[1]
+      print(f"  'charges': {charges},")
     print('}')
     print()
 
