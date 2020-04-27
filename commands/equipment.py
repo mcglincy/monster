@@ -1,6 +1,8 @@
 from commands.command import QueuedCommand
+from commands.spells import list_spells
 from gamerules.find import find_first
 from gamerules.equipment_slot import EquipmentSlot
+from gamerules.object_kind import ObjectKind
 
 
 class CmdEquip(QueuedCommand):
@@ -48,3 +50,48 @@ class CmdUnequip(QueuedCommand):
       self.caller.msg(f"The {obj.key} is cursed.")
       return
     self.caller.unequip(obj)
+
+
+class CmdUse(QueuedCommand):
+  key = "use"
+  help_category = "Monster"
+
+  def inner_func(self):
+    if not self.args:
+      self.caller.msg("Usage: use <obj>")
+      return
+    key = self.args.strip()
+    obj = find_first(self.caller, key)
+    if not obj:
+      self.caller.msg(f"You're not carrying {key}.")
+      return
+    if obj.db.object_kind is None:
+      self.caller.msg("You can't use that.")
+    elif obj.db.object_kind == ObjectKind.BLAND:
+      # silently do nothing
+      pass
+    elif obj.db.object_kind == ObjectKind.EQUIPMENT:
+      use_equipment(user, obj)
+    elif obj.db.object_kind == ObjectKind.SCROLL:
+      use_spell(user, obj)
+    elif obj.db.object_kind == ObjectKind.WAND:
+      use_spell(user, obj)
+    elif obj.db.object_kind == ObjectKind.MISSILE_LAUNCHER:
+      self.caller.msg("[not implemented yet]")
+    elif obj.db.object_kind == ObjectKind.SPELLBOOK:
+      # same as LEARN command
+      list_spells(self, obj)
+    elif obj.db.object_kind == ObjectKind.BANKING_MACHINE:
+      self.caller.msg("[not implemented yet]")
+    else:
+      self.caller.msg("That object is of an unknown type.")
+# "It doesn't work for some reason."
+
+
+def use_equipment(user, obj):
+  pass
+
+
+def use_spell(user, obj):
+  pass
+

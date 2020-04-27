@@ -21,7 +21,7 @@ from commands.crafting import CmdMake
 from commands.combat import CmdAttack, CmdPunch, CmdRest
 from commands.commerce import CmdBuy, CmdSell
 from commands.debug import CmdClear, CmdDebug
-from commands.equipment import CmdEquip, CmdUnequip
+from commands.equipment import CmdEquip, CmdUnequip, CmdUse
 from commands.general import CmdDrop, CmdExpress, CmdGet, CmdInventory, CmdLook, CmdShow
 from commands.hiding import CmdHide, CmdReveal, CmdSearch
 from commands.misc import CmdBrief, CmdDot, CmdWho
@@ -83,6 +83,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdSearch())
         self.add(CmdSell())
         self.add(CmdUnequip())
+        self.add(CmdUse())
         self.remove(default_cmds.CmdWhisper())
         self.add(CmdWhisper())
         self.remove(default_cmds.CmdWho())

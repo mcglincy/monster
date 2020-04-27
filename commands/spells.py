@@ -82,19 +82,23 @@ class CmdLearn(QueuedCommand):
     if not spellbook:
       self.caller.msg("No spellbook equipped!")
       return
+    list_spells(self, spellbook)
 
-    spells = sorted(spellbook.spells, key = lambda x: (x.min_level, x.key))
-    table = self.styled_table("|wSpell Name", "Level", "Mana/Lvl", "Casting Time", "Effects")
-    for spell in spells:
-      if spell.group and spell.group != self.caller.character_class.group:
-        continue
-      effects = spell.spelleffect_set.all()
-      effect_names = ",".join([e.nice_name() for e in effects])
-      table.add_row(
-        spell.key, 
-        spell.min_level,
-        f"{spell.mana}/{spell.level_mana}",
-        spell.casting_time,
-        effect_names,
-      )
-    self.msg(f"{table}")
+
+def list_spells(cmd, spellbook):
+  # TODO: this function only takes command so we can use cmd.styled_table
+  spells = sorted(spellbook.spells, key = lambda x: (x.min_level, x.key))
+  table = cmd.styled_table("|wSpell Name", "Level", "Mana/Lvl", "Casting Time", "Effects")
+  for spell in spells:
+    if spell.group and spell.group != cmd.caller.character_class.group:
+      continue
+    effects = spell.spelleffect_set.all()
+    effect_names = ",".join([e.nice_name() for e in effects])
+    table.add_row(
+      spell.key, 
+      spell.min_level,
+      f"{spell.mana}/{spell.level_mana}",
+      spell.casting_time,
+      effect_names,
+    )
+  cmd.msg(f"{table}")
