@@ -69,6 +69,7 @@ The running game server is up at http://www.monstermud.com.
   * *express* (replaces Evennia *pose*)
   * *make* command  
   * *show* (details) command
+  * *use* command
   * Make some built-in Evennia commands queueable/blocking (look, say, whisper, get, drop, etc)
   * Edit self-description (via Evennia *setdesc*)
   * Remove any Evennia commands we don't want
@@ -113,7 +114,6 @@ The running game server is up at http://www.monstermud.com.
   * Missiles and *throw* command
   * Bombs and *lob* command
 * Commands
-  * *use* command
   * *block* command
   * *steal* / *pickpocket* commands
   * Atmosphere
