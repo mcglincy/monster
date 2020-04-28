@@ -40,7 +40,9 @@ def poof(target, to_room):
     f"{target.name} vanishes from the room in a cloud of blue smoke.",
     exclude=target)
   target.move_to(to_room, quiet=True)
-  to_room.msg_contents(f"In an explosion of golden light {target.name} poofs into the room.")
+  to_room.msg_contents(
+    f"In an explosion of golden light {target.name} poofs into the room."
+    exclude=target)
 
 
 def first_prompt(spell):
