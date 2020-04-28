@@ -41,7 +41,7 @@ def poof(target, to_room):
     exclude=target)
   target.move_to(to_room, quiet=True)
   to_room.msg_contents(
-    f"In an explosion of golden light {target.name} poofs into the room."
+    f"In an explosion of golden light {target.name} poofs into the room.",
     exclude=target)
 
 
