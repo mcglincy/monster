@@ -27,3 +27,12 @@ def find_all_unhidden(container, key=None):
     return [x for x in container.contents if keymatch(x, key) and not is_hidden(x)]
   else:
     return [x for x in container.contents if not is_hidden(x)]
+
+
+def find_exit(location, direction):
+  if direction is not None and direction != Direction.INVALID:
+    for x in location.contents:
+      if (x.is_typeclass("typeclasses.exits.Exit", exact=False) 
+        and x.key.lower() == direction.name.lower()):
+        return x
+  return None

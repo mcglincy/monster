@@ -1,11 +1,28 @@
 import random
 from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
-from gamerules.find import find_all_unhidden, find_first_unhidden
+from gamerules.find import find_all_unhidden, find_exit, find_first_unhidden
 from gamerules.freeze import freeze
 from gamerules.hiding import reveal
 from gamerules.saving_throw import make_saving_throw
 from gamerules.spell_effect_kind import SpellEffectKind
+
+
+def first_prompt(spell):
+  if spell.is_distance:
+    return "Direction?"
+  elif spell.should_prompt:
+    return "At who?"
+  return None
+
+
+def second_prompt(spell):
+  distance_effect = spell.distance_effect
+  if spell.distance_effect:
+    behavior = DistanceSpellBehavior(spell.distance_effect.db_param_4)
+    if behavior != DistanceSpellBehavior.DAMAGES_ENTIRE_PATH:
+      return "Person to target?"
+  return None
 
 
 def mana_cost(caster, spell):
@@ -33,23 +50,15 @@ def can_cast_spell(caster, spell):
   return True
 
 
-def find_exit(location, direction):
-  if direction is not None and direction != Direction.INVALID:
-    for x in location.contents:
-      if (x.is_typeclass("typeclasses.exits.Exit", exact=False) 
-        and x.key.lower() == direction.name.lower()):
-        return x
-  return None
+def deduct_mana(caster, spell):
+  mana = mana_cost(caster, spell)
+  caster.gain_mana(-mana)
 
 
 def cast_spell(caster, spell, target=None,
   direction=None, distance_target_key=None):
-  if not can_cast_spell(caster, spell):
-    return
-
-  # deduct mana
-  mana = mana_cost(caster, spell)
-  caster.gain_mana(-mana)
+  # we do no checks on whether caster can actually cast this spell; 
+  # call can_cast_spell() for that
 
   # possibly reveal caster
   if spell.reveals and caster.is_hiding:

@@ -5,7 +5,7 @@ from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.spell_effect_kind import SpellEffectKind
-from gamerules.spells import can_cast_spell, cast_spell
+from gamerules.spells import can_cast_spell, cast_spell, deduct_mana, first_prompt, second_prompt
 
 
 class CmdCast(QueuedCommand):
@@ -30,20 +30,10 @@ class CmdCast(QueuedCommand):
     return can_cast_spell(self.caller, self.spell)
 
   def input_prompt1(self):
-    if self.spell.is_distance:
-      return "Direction?"
-    elif self.spell.should_prompt:
-      return "At who?"
-    else:
-      return None
+    return first_prompt(self.spell)
 
   def input_prompt2(self):
-    distance_effect = self.spell.distance_effect
-    if distance_effect:
-      behavior = DistanceSpellBehavior(distance_effect.db_param_4)
-      if behavior != DistanceSpellBehavior.DAMAGES_ENTIRE_PATH:
-        return "Person to target?"
-    return None
+    return second_prompt(self.spell)
 
   def pre_freeze(self):
     return self.spell.casting_time / 200.0
@@ -62,10 +52,8 @@ class CmdCast(QueuedCommand):
       key = self.input1
       target = find_first_attackable(self.caller.location, key)
       if not target:
-        self.caller.msg(f"Could not find '{key}'.")      
-      # we check for missing target later in cast_spell(),
-      # so mana etc gets deducted properly
-
+        self.caller.msg(f"Could not find '{key}'.")
+    deduct_mana(self.caller, self.spell)
     cast_spell(self.caller, self.spell, target=target, 
       direction=direction, distance_target_key=distance_target_key)
 
