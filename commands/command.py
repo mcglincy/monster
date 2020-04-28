@@ -225,6 +225,9 @@ class QueuedCommand(Command):
     return 0.0
 
   def func(self):
+    # always start off uncancelled
+    self.cancelled = False
+
     if self.caller.ndb.active_command is not None or self.caller.is_frozen:
       # another command is already running or caller is frozen,
       # so just enqueue this command (FIFO)
