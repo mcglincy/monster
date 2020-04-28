@@ -1,4 +1,5 @@
 import random
+from gamerules.combat import find_first_attackable
 from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
 from gamerules.find import find_all_unhidden, find_exit, find_first_unhidden
@@ -6,6 +7,40 @@ from gamerules.freeze import freeze
 from gamerules.hiding import reveal
 from gamerules.saving_throw import make_saving_throw
 from gamerules.spell_effect_kind import SpellEffectKind
+
+
+def do_cast(caster, spell, input1, input2, deduct_mana=False):
+  """Generic 'apply inputs' cast function useful for command classes."""
+  target = None
+  direction = None
+  distance_target_key = None
+  if spell.is_distance:
+    direction = Direction.from_string(input1)
+    distance_target_key = input2
+  elif spell.should_prompt:
+    key = input1
+    target = find_first_attackable(caster.location, key)
+    if not target:
+      user.msg(f"Could not find '{key}'.")
+  if deduct_mana:
+    mana = mana_cost(caster, spell)
+    caster.gain_mana(-mana)
+  cast_spell(caster, spell, target=target, 
+    direction=direction, distance_target_key=distance_target_key)
+
+
+def poof(target, to_room):
+  # TODO: use Priv'd target messages? 
+  # 'Great wisps of blue smoke drift out of the shadows.'
+  # 'Some wisps of blue smoke drift about in the shadows.'
+  # TODO: do we need to handle failure?
+  # 'There is a crackle of electricity, but the poof fails.'
+  target.msg("|wYou feel yourself pulled through the fabric of time and space...")
+  target.location.msg_contents(
+    f"{target.name} vanishes from the room in a cloud of blue smoke.",
+    exclude=target)
+  target.move_to(to_room, quiet=True)
+  to_room.msg_contents(f"In an explosion of golden light {target.name} poofs into the room.")
 
 
 def first_prompt(spell):
@@ -48,11 +83,6 @@ def can_cast_spell(caster, spell):
     return False
 
   return True
-
-
-def deduct_mana(caster, spell):
-  mana = mana_cost(caster, spell)
-  caster.gain_mana(-mana)
 
 
 def cast_spell(caster, spell, target=None,

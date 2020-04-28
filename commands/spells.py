@@ -5,7 +5,7 @@ from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.spell_effect_kind import SpellEffectKind
-from gamerules.spells import can_cast_spell, cast_spell, deduct_mana, first_prompt, second_prompt
+from gamerules.spells import can_cast_spell, do_cast, first_prompt, second_prompt
 
 
 class CmdCast(QueuedCommand):
@@ -42,20 +42,8 @@ class CmdCast(QueuedCommand):
     return self.spell.casting_time / 200.0
 
   def inner_func(self):
-    target = None
-    direction = None
-    distance_target_key = None
-    if self.spell.is_distance:
-      direction = Direction.from_string(self.input1)
-      distance_target_key = self.input2
-    elif self.spell.should_prompt:
-      key = self.input1
-      target = find_first_attackable(self.caller.location, key)
-      if not target:
-        self.caller.msg(f"Could not find '{key}'.")
-    deduct_mana(self.caller, self.spell)
-    cast_spell(self.caller, self.spell, target=target, 
-      direction=direction, distance_target_key=distance_target_key)
+    do_cast(self.caller, self.spell, self.input1, self.input2,
+      deduct_mana=True)
 
 
 class CmdLearn(QueuedCommand):

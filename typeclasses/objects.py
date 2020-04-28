@@ -198,6 +198,8 @@ class Object(DefaultObject):
     if self.db.sticky:
       if self.db.get_fail_msg:
         getter.msg(self.db.get_fail_msg)
+      else:
+        getter.msg(f"The {self.name} cannot be picked up.")
       return False
     return True
 
