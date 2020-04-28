@@ -177,7 +177,9 @@ def character_death(victim, killer=None, weapon_name=None):
     msg_global(f"{victim.name} has died of mysterious causes.")
 
   # award xp to the killer
-  if killer and killer.is_typeclass("typeclasses.characters.Character"):
+  if (killer
+    and killer.is_typeclass("typeclasses.characters.Character")
+    and killer.key != victim.key):
     killer.msg(f"You killed {victim.name}!")
     xp = calculate_kill_xp(killer.db.xp, victim.db.xp)
     gain_xp(killer, xp)
