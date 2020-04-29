@@ -1,13 +1,12 @@
 import json
+from gamerules.alignment import parse_alignment
 from gamerules.spell_effect_kind import SpellEffectKind
 from userdefined.models import CharacterClass, Spell, SpellEffect
 from utils.generator_utils import lookup_description
 
 
 CLASSREC_FILE = "utils/json/classrec.json"
-DESC_FILE = 'utils/json/desc.json'
-LINES_FILE = 'utils/json/lines.json'
-SPELLS_FILE = "utils/json/spells.json"
+SPELLS_FILE = "utils/json/spell_import_data.json"
 
 
 def create_everything():
@@ -52,36 +51,21 @@ def create_character_classes():
 
 
 def create_spells():
-  with open(DESC_FILE) as f:
-    descs = json.load(f)
-  with open(LINES_FILE) as f:
-    lines = json.load(f)
   with open(SPELLS_FILE) as f:
     spells = json.load(f)
 
   for rec in spells:
-    print(f"doing spell {rec['name']}")
-
-    maybe_alignment = rec["alignment"]
-    if maybe_alignment >= 0 and maybe_alignment <= 99:
-      # valid alignment range
-      alignment = maybe_alignment
-      room_desc = None
-    else:
-      # TODO: it's possible the room_desc is old record garbage
-      alignment = 66  # neutral
-      room_desc = lookup_description(maybe_alignment, descs, lines)
     new_spell = Spell(
       db_record_id = rec["id"],
       db_key = rec["name"],
       db_mana = rec["mana"],
       db_level_mana = rec["level_mana"],
-      db_caster_desc = lookup_description(rec["caster_desc"], descs, lines),
-      db_victim_desc = lookup_description(rec["victim_desc"], descs, lines),
-      db_room_desc = room_desc,
-      db_failure_desc = lookup_description(rec["failure_desc"], descs, lines),
+      db_caster_desc = rec["caster_desc"],
+      db_victim_desc = rec["victim_desc"],
+      db_room_desc = rec["room_desc"],
+      db_failure_desc = rec["failure_desc"],
       db_min_level = rec["min_level"],
-      db_alignment = alignment,
+      db_alignment = rec["alignment"],
       db_class_id = rec["class"],
       db_group = rec["group"],
       db_room = rec["room"],

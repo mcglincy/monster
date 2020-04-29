@@ -33,6 +33,14 @@ def create_spells():
     fill_in(rec, "caster_desc", descs, lines)
     fill_in(rec, "victim_desc", descs, lines)
     fill_in(rec, "failure_desc", descs, lines)
+    alignment = rec["alignment"]
+    if (alignment < 0 or alignment > 99):
+      # it looks like the alignment integer used to hold a room description?
+      # a lot of it is garbage, though
+      rec["room_desc"] = lookup_description(alignment, descs, lines)
+      rec["alignment"] = 66  # neutral
+    else:
+      rec["room_desc"] = ""
 
   print(json.dumps(spells, indent = 2, sort_keys=False))    
 
