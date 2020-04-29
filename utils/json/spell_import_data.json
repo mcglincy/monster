@@ -36,8 +36,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 1,
-    "room_desc": "A glowing hand looms in the darkness, and strikes a target.\n"
+    "id": 1
   },
   {
     "name": "Cure Poison",
@@ -76,8 +75,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 2,
-    "room_desc": null
+    "id": 2
   },
   {
     "name": "Thundering Voice",
@@ -116,8 +114,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 3,
-    "room_desc": null
+    "id": 3
   },
   {
     "name": "Minor Hellfire",
@@ -156,8 +153,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 4,
-    "room_desc": null
+    "id": 4
   },
   {
     "name": "Magic Missile",
@@ -165,6 +161,7 @@
     "level_mana": 6,
     "caster_desc": "You send a blazing bolt of pain shooting after your prey!\n",
     "victim_desc": "You are struck by a magical arrow! Egad!\n",
+    "room_desc": "A glowing arrow strikes someone in the room!",    
     "alignment": 66,
     "failure_desc": "Your incantations have failed. Ooh Gawd!",
     "min_level": 1,
@@ -196,8 +193,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 5,
-    "room_desc": "A glowing arrow strikes someone in the room!"
+    "id": 5
   },
   {
     "name": "Fireball",
@@ -247,8 +243,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 6,
-    "room_desc": ""
+    "id": 6
   },
   {
     "name": "Flame Spray",
@@ -287,8 +282,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 7,
-    "room_desc": null
+    "id": 7
   },
   {
     "name": "Tidal Wave",
@@ -327,8 +321,7 @@
     "extra1": 32737,
     "extra2": -1688731648,
     "extra3": 32737,
-    "id": 8,
-    "room_desc": ""
+    "id": 8
   },
   {
     "name": "Unholy Blast",
@@ -367,8 +360,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 9,
-    "room_desc": ""
+    "id": 9
   },
   {
     "name": "Dragon fire",
@@ -418,8 +410,7 @@
     "extra1": 1632829446,
     "extra2": 1852795250,
     "extra3": 30571,
-    "id": 10,
-    "room_desc": ""
+    "id": 10
   },
   {
     "name": "Freezing sphere",
@@ -469,8 +460,7 @@
     "extra1": 1632829446,
     "extra2": 1852795250,
     "extra3": 30571,
-    "id": 11,
-    "room_desc": ""
+    "id": 11
   },
   {
     "name": "Sleep",
@@ -509,8 +499,7 @@
     "extra1": 745369455,
     "extra2": 0,
     "extra3": 428,
-    "id": 12,
-    "room_desc": ""
+    "id": 12
   },
   {
     "name": "Gripping Plants",
@@ -549,14 +538,13 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 13,
-    "room_desc": ""
+    "id": 13
   },
   {
     "name": "Remove Poison",
     "mana": 0,
     "level_mana": 0,
-    "caster_desc": "You eat some herbs, and mumble a folk-remedy.",
+    "caster_desc": "You eat some herbs, and mumble a folk remedy.",
     "victim_desc": "You feel better.",
     "alignment": 66,
     "failure_desc": null,
@@ -589,8 +577,7 @@
     "extra1": 0,
     "extra2": 589824,
     "extra3": 1635213675,
-    "id": 14,
-    "room_desc": ""
+    "id": 14
   },
   {
     "name": "earthquake",
@@ -629,8 +616,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 15,
-    "room_desc": ""
+    "id": 15
   },
   {
     "name": "Illusion I",
@@ -669,8 +655,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 16,
-    "room_desc": null
+    "id": 16
   },
   {
     "name": "chestnut hail",
@@ -720,8 +705,7 @@
     "extra1": 0,
     "extra2": 95696,
     "extra3": 327680,
-    "id": 17,
-    "room_desc": ""
+    "id": 17
   },
   {
     "name": "grave rot 2",
@@ -782,14 +766,13 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 18,
-    "room_desc": ""
+    "id": 18
   },
   {
     "name": "Brain Hammer",
     "mana": 100,
     "level_mana": 5,
-    "caster_desc": "You concentrate on #'s mind and begin to crush his psychie.",
+    "caster_desc": "You concentrate on #'s mind and begin to crush his psyche.",
     "victim_desc": "# reaches forth and plunges his hand into your skull!",
     "alignment": 99,
     "failure_desc": "You fail to crush #'s mind.  You put the world to sleep.",
@@ -833,8 +816,7 @@
     "extra1": 0,
     "extra2": 786432,
     "extra3": 1869114965,
-    "id": 19,
-    "room_desc": ""
+    "id": 19
   },
   {
     "name": "ray of death",
@@ -884,8 +866,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 262144,
-    "id": 20,
-    "room_desc": ""
+    "id": 20
   },
   {
     "name": "heal",
@@ -924,8 +905,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 262144,
-    "id": 21,
-    "room_desc": ""
+    "id": 21
   },
   {
     "name": "charm",
@@ -986,8 +966,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 22,
-    "room_desc": ""
+    "id": 22
   },
   {
     "name": "killing winds",
@@ -1037,8 +1016,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 262144,
-    "id": 23,
-    "room_desc": ""
+    "id": 23
   },
   {
     "name": "whisper",
@@ -1088,8 +1066,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 262144,
-    "id": 24,
-    "room_desc": ""
+    "id": 24
   },
   {
     "name": "lightning bolts",
@@ -1172,8 +1149,7 @@
     "extra1": 1,
     "extra2": 1869348876,
     "extra3": 1679844466,
-    "id": 25,
-    "room_desc": ""
+    "id": 25
   },
   {
     "name": "identify",
@@ -1212,8 +1188,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 26,
-    "room_desc": ""
+    "id": 26
   },
   {
     "name": "death word",
@@ -1252,8 +1227,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 27,
-    "room_desc": ""
+    "id": 27
   },
   {
     "name": "Blinding Sun",
@@ -1292,8 +1266,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 262144,
-    "id": 28,
-    "room_desc": ""
+    "id": 28
   },
   {
     "name": "Animate Shrubbery",
@@ -1301,6 +1274,7 @@
     "level_mana": 4,
     "caster_desc": "You command some nearby bushes to assault yuor foe!\n",
     "victim_desc": "Some nearby bushes up-root themselves, and are upon you with unholy \ngreen frenzy!\n",
+    "room_desc": "Some bushes are attacking people!",
     "alignment": 66,
     "failure_desc": "Your incantations have failed! Ooh Gawd!",
     "min_level": 0,
@@ -1332,8 +1306,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 29,
-    "room_desc": "Some bushes are attacking people!"
+    "id": 29
   },
   {
     "name": "death word 2",
@@ -1372,8 +1345,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 30,
-    "room_desc": ""
+    "id": 30
   },
   {
     "name": "Root Enemy",
@@ -1412,8 +1384,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 31,
-    "room_desc": "Pain and misery are upon you!  The end is nigh!  ARGH!!!"
+    "id": 31
   },
   {
     "name": "Stinging Hornets",
@@ -1421,6 +1392,7 @@
     "level_mana": 4,
     "caster_desc": "You summon a swarm of hornets, and send them off to wreak great havoc!\n",
     "victim_desc": "A swarm of hornets descends upon you! This must be the result of a \nmagical attack!\n",
+    "room_desc": "A swarm of hornets flies into the room, attacking an unsuspecting \nvictim.",
     "alignment": 66,
     "failure_desc": "Your incantations have failed! Ooh Gawd!",
     "min_level": 2,
@@ -1452,8 +1424,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 32,
-    "room_desc": "A swarm of honets flies into the room, attacking an unsuspecting \nvictim."
+    "id": 32
   },
   {
     "name": "Bog",
@@ -1492,8 +1463,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 33,
-    "room_desc": null
+    "id": 33
   },
   {
     "name": "Ent Strength",
@@ -1532,8 +1502,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 34,
-    "room_desc": null
+    "id": 34
   },
   {
     "name": "Elk Speed",
@@ -1572,8 +1541,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 35,
-    "room_desc": null
+    "id": 35
   },
   {
     "name": "North Wind",
@@ -1623,8 +1591,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 36,
-    "room_desc": null
+    "id": 36
   },
   {
     "name": "South Wind",
@@ -1674,8 +1641,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 37,
-    "room_desc": "A mystical dragon's fiery breath sears your skin!"
+    "id": 37
   },
   {
     "name": "East Wind",
@@ -1725,8 +1691,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 38,
-    "room_desc": "SSSS    OOO"
+    "id": 38
   },
   {
     "name": "West Wind",
@@ -1776,17 +1741,17 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 39,
-    "room_desc": null
+    "id": 39
   },
   {
     "name": "Tree Attack",
     "mana": 29,
     "level_mana": 8,
-    "caster_desc": "This area contains a few empty rooms surrounding a small\nfoyer containing an old oak table.\n",
-    "victim_desc": "You find yourself in a semi-circular room with a single large\nwindow facing south. This room is midway up a tower overlooking the\ncourtyard, but how you can reach the top of the tower eludes you.\nThe floor is marked with rays of red reaching out from the\nnorth door to the edges of the semi-circle.\n",
+    "caster_desc": "",
+    "victim_desc": "",
+    "room_desc": "The trees in this area uproot themselves and fall upon a hapless \nvictim!",
     "alignment": 66,
-    "failure_desc": "The smell of fire and smoke eminates from the east.",
+    "failure_desc": "",
     "min_level": 1,
     "class": 0,
     "group": 3,
@@ -1816,8 +1781,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 40,
-    "room_desc": "The trees in this area uproot themselves and fall upon a hapless \nvictim!"
+    "id": 40
   },
   {
     "name": "Prison of Thorns",
@@ -1867,8 +1831,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 41,
-    "room_desc": "bread mold ten stories high with protruding limbs everywhere\nname's blorp\n\n\n\n\n\n\n\n"
+    "id": 41
   },
   {
     "name": "Morning Frost",
@@ -1907,17 +1870,17 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 42,
-    "room_desc": null
+    "id": 42
   },
   {
     "name": "Earth Hammer",
     "mana": 29,
     "level_mana": 8,
-    "caster_desc": "You behold a Godlike Individual, with a big bulge in his crotch.\n\n\n\n\n\n\n\n\n",
-    "victim_desc": "You are burned horribly beyond recognition by a fireball !!",
+    "caster_desc": "",
+    "victim_desc": "",
+    "room_desc": "Someone just got pounded--hard...",    
     "alignment": 66,
-    "failure_desc": "Along the crumbling ledge to the east is a steep hillside wich has a path",
+    "failure_desc": "",
     "min_level": 1,
     "class": 0,
     "group": 3,
@@ -1947,8 +1910,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 43,
-    "room_desc": "Someone just got pounded--hard..."
+    "id": 43
   },
   {
     "name": "Flesh to Wood",
@@ -1987,8 +1949,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 44,
-    "room_desc": "A ledge along the mountainside is east."
+    "id": 44
   },
   {
     "name": "Insect Cloud",
@@ -2027,17 +1988,17 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 45,
-    "room_desc": "A crumbling ledge is east."
+    "id": 45
   },
   {
     "name": "Locust Plague",
     "mana": 29,
     "level_mana": 8,
-    "caster_desc": "\nex\n\n\n\n\n\n\n\n",
-    "victim_desc": "ugly Son a ma bitch\n\n\n\nmakemethief\n\n\n\n\n",
+    "caster_desc": "",
+    "victim_desc": "",
+    "room_desc": "A horde of locusts enters the room, vengefully attacking someone!",    
     "alignment": 66,
-    "failure_desc": "Darkness is west.",
+    "failure_desc": "",
     "min_level": 4,
     "class": 0,
     "group": 3,
@@ -2067,17 +2028,17 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 46,
-    "room_desc": "A horde of locusts enters the room, vengefully attacking someone!"
+    "id": 46
   },
   {
     "name": "Bear Claws",
     "mana": 42,
     "level_mana": 13,
-    "caster_desc": "Nothing much to look at... :)\n\n\n\n\n\n\n\n\n",
-    "victim_desc": "I am cool.\nHeh heh, heh heh heh heh, heh.",
+    "caster_desc": "",
+    "victim_desc": "",
+    "room_desc": "The image of a great bear appears in the air in this room, striking\nat people..!",    
     "alignment": 66,
-    "failure_desc": "As you pick up the lantern, it starts to glow.",
+    "failure_desc": "",
     "min_level": 3,
     "class": 0,
     "group": 3,
@@ -2118,8 +2079,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 47,
-    "room_desc": "The image of a great bear appears in the air in this room, striking\nat people..!"
+    "id": 47
   },
   {
     "name": "Pack of Wolves",
@@ -2158,8 +2118,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 48,
-    "room_desc": null
+    "id": 48
   },
   {
     "name": "Forest Fire",
@@ -2198,17 +2157,17 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 49,
-    "room_desc": null
+    "id": 49
   },
   {
     "name": "Tornado",
     "mana": 42,
     "level_mana": 13,
-    "caster_desc": "human knight\ngood\nawesome\n",
-    "victim_desc": "Help me!!!!!!!!!!!!!\n\nHelp me (kill you)",
+    "caster_desc": "",
+    "victim_desc": "",
+    "room_desc": "A swirling tornado flies into the room, destroying one occupant!",
     "alignment": 66,
-    "failure_desc": "As you pick up the staff, you are jolted with a surge of energy.",
+    "failure_desc": "",
     "min_level": 5,
     "class": 0,
     "group": 3,
@@ -2238,8 +2197,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 50,
-    "room_desc": "A swirling tornado flies into the room, destroying one occupant!"
+    "id": 50
   },
   {
     "name": "Soul Harvester",
@@ -2278,17 +2236,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 51,
-    "room_desc": "Crackling black energy rips through the room!"
+    "id": 51
   },
   {
     "name": "Terminal Frost",
     "mana": 165,
     "level_mana": 0,
-    "caster_desc": "This cavern is dark and very cold. Strange and frightening runes\ncover the rough walls, but the cave is bare and dark. There are no\nvisible exits, but a dark pit lies in the center of the room.",
-    "victim_desc": "\nYou notice that magical runes have been carved into the floor of\nthe riverbed! They read in the dark tongue of the Drow:\n\"Kabbalada\"\n",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "An eboy staff lies on the ground.",
+    "failure_desc": "",
     "min_level": 6,
     "class": 0,
     "group": 10,
@@ -2318,8 +2275,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 52,
-    "room_desc": null
+    "id": 52
   },
   {
     "name": "Poison Thorn",
@@ -2358,8 +2314,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 53,
-    "room_desc": "You hear a cry of agony!"
+    "id": 53
   },
   {
     "name": "Hands of Fire",
@@ -2409,17 +2364,17 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 54,
-    "room_desc": "A glowing hand of fire hangs before you, burnig your eyes!"
+    "id": 54
   },
   {
     "name": "Silver Dagger",
     "mana": 26,
     "level_mana": 7,
-    "caster_desc": "You may select a different class from here if you wish.\n",
-    "victim_desc": "I am a mysterious Half-Elf. You had better watch out, or I'll\nuse magic on you!",
+    "caster_desc": "",
+    "victim_desc": "",
+    "room_desc": "You see a bright knife covered in blood and the agony of its victim!",    
     "alignment": 66,
-    "failure_desc": "A crocodile munches on your foot before you can escape!!",
+    "failure_desc": "",
     "min_level": 2,
     "class": 0,
     "group": 8,
@@ -2449,8 +2404,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 55,
-    "room_desc": "You see a bright knife covered in blood and the agony of its victim!"
+    "id": 55
   },
   {
     "name": "Dark Arrows",
@@ -2489,8 +2443,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 56,
-    "room_desc": "A glowing arrow strikes someone in the room."
+    "id": 56
   },
   {
     "name": "Solar Flare",
@@ -2529,15 +2482,14 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 57,
-    "room_desc": null
+    "id": 57
   },
   {
     "name": "Spectral Hounds",
     "mana": 54,
     "level_mana": 0,
-    "caster_desc": "This small chamber is walled in glowing jade! A small torch burns\nperpetually, bathing the chamber in a warm green glow. This is the secre\nvault of the gnome Frognar, a very industrious collector of rare items.\n",
-    "victim_desc": "You fail to summon your chestnut friends to your rescue!",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
     "failure_desc": "# reaches forth and plunges his hand into your skull!",
     "min_level": 4,
@@ -2569,17 +2521,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 58,
-    "room_desc": null
+    "id": 58
   },
   {
     "name": "Storm",
     "mana": 19,
     "level_mana": 6,
-    "caster_desc": "The room you stand in is lit by some unknown source. A large circle of black\nstone faces upright in the middle of the room, a ring of elder glyphs cut\ninto the stone around an avellan cross. Thongs possibly designed to tie\nwrists and ankles are situated at likely spots on the disk of black marble.\nOpposite the stone altar is a black circular mirror, reflecting what little\nlight there is in this room.\n\nMisty tendrils stream down from the circle of black glass high above like\nspiderwebs, seeming to undulate into and out of the black mirror. Something\nseems to move inside the writhing mass of darkness.",
-    "victim_desc": "You concentrate on #'s mind and begin to crush his psychie.",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "You fail to crush #'s mind.  You put the world to sleep.",
+    "failure_desc": "",
     "min_level": 3,
     "class": 0,
     "group": 7,
@@ -2609,8 +2560,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 59,
-    "room_desc": null
+    "id": 59
   },
   {
     "name": "Willow Blast",
@@ -2649,17 +2599,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 60,
-    "room_desc": ""
+    "id": 60
   },
   {
     "name": "Phantom Sword",
     "mana": 31,
     "level_mana": 0,
-    "caster_desc": "Holding the Phial of Sunset aloft, a soft glow begins to fill the area.\nSlowly, a door through east through the debris can be seen, outlined\nin a reddish light. You pass through it...\n",
-    "victim_desc": "Your attempt to soothe your opponant has failed!",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "# reaches out with his mind to contact you.",
+    "failure_desc": "",
     "min_level": 2,
     "class": 0,
     "group": 10,
@@ -2689,17 +2638,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 61,
-    "room_desc": "You concentrate with your mind and reach out to #."
+    "id": 61
   },
   {
     "name": "Ring of Fire",
     "mana": 80,
     "level_mana": 0,
-    "caster_desc": "You manage to lift up the grate and descend into the darkness below...",
-    "victim_desc": "The wand is constructed of a golden metal, and is about a foot and a\nhalf long. It's surface is warm to the touch.",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "# lifts up a grate and descends beneath the city!",
+    "failure_desc": "",
     "min_level": 5,
     "class": 0,
     "group": 10,
@@ -2729,17 +2677,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 62,
-    "room_desc": null
+    "id": 62
   },
   {
     "name": "Iron collar",
     "mana": 59,
     "level_mana": 0,
-    "caster_desc": "\nYou notice some magical runes which read: \"Oh blessed Zababar, in your\nname may seals be broken!\"\n",
-    "victim_desc": "The  Voulge is a long shafted weapon with a large sharp blade on the end.\nThe weight of this object makes it impossible to use with one hand.\nThe blade is long and sharp, so even the slightess miss might do damage.",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "A ray of sunlight beams down from the city above.",
+    "failure_desc": "",
     "min_level": 3,
     "class": 0,
     "group": 10,
@@ -2769,8 +2716,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 63,
-    "room_desc": "# emerges from a grate set into the street stones."
+    "id": 63
   },
   {
     "name": "Green Dart",
@@ -2809,17 +2755,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 64,
-    "room_desc": "Someone in this room has been zapped!"
+    "id": 64
   },
   {
     "name": "Finger of Death",
     "mana": 19,
     "level_mana": 6,
-    "caster_desc": "# shimmies up a sewer ladder and escapes into the city above.",
-    "victim_desc": "This military fork resembles a spear, with two more points coming\nout from the center one.  It is very light weight, and could\npossibly even be thrown!",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "# lifts the grate and plops down into the water below.",
+    "failure_desc": "",
     "min_level": 4,
     "class": 0,
     "group": 7,
@@ -2849,8 +2794,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 65,
-    "room_desc": "A shadow obscures the sun.."
+    "id": 65
   },
   {
     "name": "Hack",
@@ -2889,8 +2833,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 66,
-    "room_desc": null
+    "id": 66
   },
   {
     "name": "Class Talk",
@@ -2929,8 +2872,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 67,
-    "room_desc": null
+    "id": 67
   },
   {
     "name": "OP Send",
@@ -2969,8 +2911,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 68,
-    "room_desc": null
+    "id": 68
   },
   {
     "name": "Person",
@@ -3009,17 +2950,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 69,
-    "room_desc": ""
+    "id": 69
   },
   {
     "name": "Grave Rot",
     "mana": 19,
     "level_mana": 6,
-    "caster_desc": "*",
-    "victim_desc": "\n\n\n\n\n\n\n\n\n",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "**\\",
+    "failure_desc": "",
     "min_level": 2,
     "class": 0,
     "group": 7,
@@ -3027,7 +2967,7 @@
     "effects": [
       {
         "effect": 1919247977,
-        "name": "a trol heading west.",
+        "name": "",
         "all": false,
         "caster": false,
         "prompt": false,
@@ -3060,17 +3000,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 70,
-    "room_desc": "Foul magic is at work!"
+    "id": 70
   },
   {
     "name": "Doomspeak",
     "mana": 65,
     "level_mana": 0,
-    "caster_desc": "How dare you look upon my greatness!\nNow you must die!",
-    "victim_desc": "\nIt is too dark in here.  You can't see a thing!",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "The juice is loose!!!",
+    "failure_desc": "",
     "min_level": 4,
     "class": 0,
     "group": 10,
@@ -3100,15 +3039,14 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 71,
-    "room_desc": "Moxy the great"
+    "id": 71
   },
   {
     "name": "Blight",
     "mana": 55,
     "level_mana": 0,
     "caster_desc": "",
-    "victim_desc": "\nThere is a hint of light coming from the east.",
+    "victim_desc": "",
     "alignment": 66,
     "failure_desc": "Your incantations have failed! Argh!",
     "min_level": 4,
@@ -3140,8 +3078,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 72,
-    "room_desc": null
+    "id": 72
   },
   {
     "name": "Shatter Person",
@@ -3180,8 +3117,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 73,
-    "room_desc": "Terrible magic is at work here."
+    "id": 73
   },
   {
     "name": "Group Destruction",
@@ -3220,15 +3156,15 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 74,
-    "room_desc": null
+    "id": 74
   },
   {
     "name": "Cold Ball",
     "mana": 11,
     "level_mana": 3,
-    "caster_desc": "The gates of Tai-Tastigon are closed!",
-    "victim_desc": "The gates of Tai-Tastigon are closed!",
+    "caster_desc": "",
+    "victim_desc": "",
+    "room_desc": "A frosty ball of death flies through the room.",
     "alignment": 66,
     "failure_desc": null,
     "min_level": 3,
@@ -3260,17 +3196,17 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 75,
-    "room_desc": "A frosty ball of death flies through the room."
+    "id": 75
   },
   {
     "name": "Acid Ball",
     "mana": 27,
     "level_mana": 7,
-    "caster_desc": "The door is stuck!",
-    "victim_desc": "A crowded square is north.",
+    "caster_desc": "",
+    "victim_desc": "A",
+    "room_desc": "A ball of acid strikes someone in the room, burning him horribly!",    
     "alignment": 66,
-    "failure_desc": "You see a dark shadow hovering above the ground.",
+    "failure_desc": "",
     "min_level": 4,
     "class": 0,
     "group": 0,
@@ -3300,17 +3236,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 76,
-    "room_desc": "A ball of acid strikes someone in the room, burning him horribly!"
+    "id": 76
   },
   {
     "name": "Invisibility",
     "mana": 115,
     "level_mana": 0,
-    "caster_desc": "You unleash unholy fire!",
+    "caster_desc": "",
     "victim_desc": null,
     "alignment": 66,
-    "failure_desc": "An ornate shop is west.",
+    "failure_desc": "",
     "min_level": 4,
     "class": 0,
     "group": 10,
@@ -3340,17 +3275,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 77,
-    "room_desc": null
+    "id": 77
   },
   {
     "name": "Pinecones of Death",
     "mana": 31,
     "level_mana": 1,
-    "caster_desc": "You behold a Godlike Individual, with a big bulge in his crotch.\n\n\n\n\n\n\n\n\n",
-    "victim_desc": "Someone just got pounded--hard...",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "You are burned horribly beyond recognition by a fireball !!",
+    "failure_desc": "",
     "min_level": 2,
     "class": 0,
     "group": 10,
@@ -3380,17 +3314,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 78,
-    "room_desc": "You see a dark shadow hovering above the ground."
+    "id": 78
   },
   {
     "name": "Water Flowing",
     "mana": 40,
     "level_mana": 0,
-    "caster_desc": "My name\nis Indigo Montoya.\nYou killed my father.\nPrepare to die.",
-    "victim_desc": "\n\n\n\nugly\npurple\nyellow\ngreen\nblack\ngone",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "# can be seen at the base of the structure.",
+    "failure_desc": "",
     "min_level": 0,
     "class": 0,
     "group": 10,
@@ -3420,17 +3353,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 79,
-    "room_desc": "You lift the weapon, shuddering at the very touch of the unnaturally\ncold steel..."
+    "id": 79
   },
   {
     "name": "Fire Leaping",
     "mana": 40,
     "level_mana": 0,
-    "caster_desc": "\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopq\n#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqr\n$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrs\n%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrst\n&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstu\n'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuv\n()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvw\n)*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwx\n*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxy\n+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz",
-    "victim_desc": "\n\n\n\n\n\n\n\n\n",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "You have the feeling you are being watched.",
+    "failure_desc": "",
     "min_level": 0,
     "class": 0,
     "group": 10,
@@ -3460,17 +3392,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 80,
-    "room_desc": "This shop off the jade market deals in curiosities and rare items. Its\nclose quarters are crammed with all manner of items which tempt the eye,\nthough lighten the purse. Items of luxury and opulence can be bought\nfor the right price, or sold for whatever they might be worth."
+    "id": 80
   },
   {
     "name": "Quaking Earth",
     "mana": 40,
     "level_mana": 0,
-    "caster_desc": "hey this is Jm Of the MIGHTy MIGHTY Knights\nBEWARE: I might be rusty but I know what to  do\nMake a mistake and you shall Perish\n(flakey, ain't it?)\n",
-    "victim_desc": "The rod is about 3 feet long, made of an almost metallic looking\nwood. It is richly carved, and tipped with a iron point.",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "On the ground here is a large black mace.",
+    "failure_desc": "",
     "min_level": 0,
     "class": 0,
     "group": 10,
@@ -3500,17 +3431,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 81,
-    "room_desc": null
+    "id": 81
   },
   {
     "name": "Wind Blowing",
     "mana": 40,
     "level_mana": 0,
-    "caster_desc": "This area is a confusing jumble of dark, smoky, and bare chambers.\n",
-    "victim_desc": "\n\n\n\n\n\n\n\n\n",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "Away with you, vile Unbeliever!",
+    "failure_desc": "",
     "min_level": 0,
     "class": 0,
     "group": 10,
@@ -3551,8 +3481,7 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 82,
-    "room_desc": "You are hit by a wave of unholy fire !!"
+    "id": 82
   },
   {
     "name": "Heal",
@@ -3591,17 +3520,16 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 83,
-    "room_desc": null
+    "id": 83
   },
   {
     "name": "Hailstorm",
     "mana": 95,
     "level_mana": 0,
-    "caster_desc": "You send forth a dart of green energy after your target!",
-    "victim_desc": "You see a bright knife covered in blood and the agony of its victim!",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
-    "failure_desc": "Someone in this room has been zapped!",
+    "failure_desc": "",
     "min_level": 4,
     "class": 0,
     "group": 2,
@@ -3631,15 +3559,14 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 84,
-    "room_desc": "A dart of green energy strikes you!  OUCH!"
+    "id": 84
   },
   {
     "name": "Oak Arm",
     "mana": 28,
     "level_mana": 0,
-    "caster_desc": "The shop's exit is east.",
-    "victim_desc": "A very large cavern is west.",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
     "failure_desc": null,
     "min_level": 1,
@@ -3671,15 +3598,14 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 85,
-    "room_desc": null
+    "id": 85
   },
   {
     "name": "Searing Heat",
     "mana": 35,
     "level_mana": 0,
-    "caster_desc": "The gloves are of thick leather, and are a sooty black.",
-    "victim_desc": "You have found a hidden passage leading south!",
+    "caster_desc": "",
+    "victim_desc": "",
     "alignment": 66,
     "failure_desc": null,
     "min_level": 2,
@@ -3711,7 +3637,6 @@
     "extra1": 0,
     "extra2": 0,
     "extra3": 0,
-    "id": 86,
-    "room_desc": null
+    "id": 86
   }
 ]
