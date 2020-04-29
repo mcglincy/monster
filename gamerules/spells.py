@@ -102,6 +102,8 @@ def cast_spell(caster, spell, target=None,
       caster.msg(spell.failure_desc)
     else:
       caster.msg("Your spell failed!")
+      caster.location.msg_contents(
+        f"{caster.name}'s {spell.key} spell fails.", exclude=caster)
     return
 
   # make sure distance spells have a valid initial exit
@@ -139,7 +141,7 @@ def send_cast_messages(caster, spell):
   else:
     caster.msg(f"|wYou cast {spell.key}.")
   caster.location.msg_contents(
-    f"{caster.key} casts {spell.key}.", exclude=[caster])
+    f"{caster.key} casts {spell.key}.", exclude=caster)
 
 
 # TODO: figure out distance vs. not for messaging
@@ -151,7 +153,7 @@ def send_effect_messages(caster, spell, target):
   if spell.victim_desc:
     victim_desc = spell.victim_desc.replace("#", caster.key)
     if spell.affects_room:
-      caster.location.msg_contents("|w" + victim_desc, exclude=[caster])
+      caster.location.msg_contents("|w" + victim_desc, exclude=caster)
     elif target:
       target.msg("|w" + victim_desc)
 
@@ -193,7 +195,7 @@ def remove_spell_deflections(effect, targets):
       if random.randint(0, 100) < target.spell_deflect_armor:
         target.msg("The spell has been deflected by your armor!")
         target.location.msg_contents(
-          f"The spell was deflected by {target.key}'s armor.", exclude=[target])
+          f"The spell was deflected by {target.key}'s armor.", exclude=target)
         deflected.append(target)
   # remove deflections
   return [x for x in targets if x not in deflected]
@@ -255,14 +257,14 @@ def apply_cure_poison_effect(effect, caster, targets):
         target.db.poisoned = False
         target.msg("|wYour blood begins to boil!")
         target.location.msg_contents(
-          f"{target.name} is poisoned!", exclude=[target])
+          f"{target.name} is poisoned!", exclude=target)
     else:
       # cure
       if target.is_poisoned:
         target.db.poisoned = False
         target.msg("|wYour blood runs clean.")
         target.location.msg_contents(
-          f"{target.name} is no longer poisoned.", exclude=[target])
+          f"{target.name} is no longer poisoned.", exclude=target)
 
 
 def apply_strength_effect(effect, caster, targets):
@@ -394,7 +396,7 @@ def apply_distance_hurt_effect(spell, effect, caster,
   # TODO: should effect.name be populated?
   caster.location.msg_contents(
     f"{caster.key} fires a {spell.key} heading {direction.name.lower()}.",
-    exclude=[caster])
+    exclude=caster)
 
   current_range = 0
   current_room = caster.location
@@ -406,7 +408,7 @@ def apply_distance_hurt_effect(spell, effect, caster,
       caster.msg(f"The {spell.key} travels into {current_room.key}.")
       current_room.msg_contents(
         f"You see a {spell.key} from {caster.key} heading {direction.name.lower()}.",
-        exclude=[caster])
+        exclude=caster)
 
     victim_desc = None
     if spell.victim_desc:
@@ -446,7 +448,7 @@ def apply_distance_hurt_effect(spell, effect, caster,
       direction = direction.opposite()
       current_room.msg_contents(
         f"You see a {spell.key} from {caster.key} bounce {direction.name.lower()}.",
-        exclude=[caster])
+        exclude=caster)
 
     # try to advance to the next room
     exit = find_exit(current_room, direction)
@@ -457,7 +459,7 @@ def apply_distance_hurt_effect(spell, effect, caster,
       exit = find_exit(current_room, direction)
       current_room.msg_contents(
         f"You see a {spell.key} from {caster.key} bounce {direction.name.lower()}.",
-        exclude=[caster])
+        exclude=caster)
       if behavior == DistanceSpellBehavior.RETURNS_TO_CASTER:
         max_range = current_range  # how many rooms it took to get here
         current_range = 0  # starting all over again
