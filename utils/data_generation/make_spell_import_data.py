@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 import sys
-sys.path.insert(0, '..')
+sys.path.insert(0, '../..')
 
 import json
 from gamerules.spell_effect_kind import SpellEffectKind
-from utils.generator_utils import lookup_description
+from generator_utils import lookup_description
 
 
 CLASSREC_FILE = "./og_monster_data/classrec.json"

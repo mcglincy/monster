@@ -2,10 +2,10 @@
 from enum import IntEnum
 import json
 import sys
-sys.path.insert(0, '..')
+sys.path.insert(0, '../..')
 
 from gamerules.exit_effect_kind import ExitEffectKind
-from utils.generator_utils import *
+from generator_utils import *
 
 
 with open('./og_monster_data/desc.json') as f:

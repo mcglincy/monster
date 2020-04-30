@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 import json
 import sys
-sys.path.insert(0, '..')
+sys.path.insert(0, '../..')
 
 from gamerules.equipment_effect_kind import EquipmentEffectKind
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.object_kind import ObjectKind
-from utils.generator_utils import DEFAULT_MSG_ID, camel_case, lookup_description, snake_case, split_integer
-
+from generator_utils import *
 
 DESC_FILE = './og_monster_data/desc.json'
 LINES_FILE = './og_monster_data/lines.json'
