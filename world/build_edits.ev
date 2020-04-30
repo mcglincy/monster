@@ -163,3 +163,22 @@ set east/exit_desc =
 #
 @spawn aquamarine_orb
 #
+###############################################################################
+# Runes in rooms off War Dance
+###############################################################################
+@tel room_46
+#
+@spawn {"prototype_parent": "rune"}
+#
+@tel room_63
+#
+@spawn {"prototype_parent": "rune"}
+#
+@tel room_65
+#
+@spawn {"prototype_parent": "rune"}
+#
+@tel room_71
+#
+@spawn {"prototype_parent": "rune"}
+#
