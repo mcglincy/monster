@@ -2,11 +2,10 @@ import json
 from gamerules.alignment import parse_alignment
 from gamerules.spell_effect_kind import SpellEffectKind
 from userdefined.models import CharacterClass, Spell, SpellEffect
-from utils.generator_utils import lookup_description
 
 
-CLASSREC_FILE = "./character_class_data.json"
-SPELLS_FILE = "./spell_data.json"
+CLASSREC_FILE = "world/character_class_data.json"
+SPELLS_FILE = "world/spell_data.json"
 
 
 def create_everything():
