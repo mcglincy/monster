@@ -7,10 +7,6 @@ from gamerules.mob_kind import MobKind
 from generator_utils import *
 
 
-OBJECTS_FILE = './og_monster_data/objects.json'
-RANDOMS_FILE = './og_monster_data/randoms.json'
-
-
 def find_object(objects, record_id):
   for obj in objects:
     if obj['id'] == record_id:
@@ -68,11 +64,6 @@ def output_mob(obj, objects):
 
 def main():
   """Command-line script."""
-  with open(OBJECTS_FILE) as f:
-    objects = json.load(f)
-  with open(RANDOMS_FILE) as f:
-    rand_mobs = json.load(f)
-
   print("""#
 # Generated mob prototypes
 #
@@ -86,8 +77,8 @@ MOB = {
 
 """)
 
-  for rand_mob in rand_mobs:
-    output_mob(rand_mob, objects)
+  for rand_mob in RANDOMS:
+    output_mob(rand_mob, OBJECTS)
 
 
 if __name__ == "__main__":

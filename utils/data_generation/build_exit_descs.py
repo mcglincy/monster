@@ -4,18 +4,7 @@ import json
 import sys
 sys.path.insert(0, '../..')
 
-from gamerules.exit_effect_kind import ExitEffectKind
 from generator_utils import *
-
-
-with open('./og_monster_data/desc.json') as f:
-  DESCS = json.load(f)
-with open('./og_monster_data/lines.json') as f:
-  LINES = json.load(f)
-with open('./og_monster_data/objects.json') as f:
-  OBJECTS = json.load(f)
-with open('./og_monster_data/roomdesc.json') as f:
-  ROOMDESCS = json.load(f)
 
 
 def maybe_set_desc(desc_id, exit_name, attr_name):

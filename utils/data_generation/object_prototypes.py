@@ -8,23 +8,6 @@ from gamerules.equipment_slot import EquipmentSlot
 from gamerules.object_kind import ObjectKind
 from generator_utils import *
 
-DESC_FILE = './og_monster_data/desc.json'
-LINES_FILE = './og_monster_data/lines.json'
-OBJECTS_FILE = './og_monster_data/objects.json'
-SPELLS_FILE = './og_monster_data/spells.json'
-
-DESCS = []
-LINES = []
-OBJECTS = []
-SPELLS = []
-with open(DESC_FILE) as f:
-  DESCS = json.load(f)
-with open(LINES_FILE) as f:
-  LINES = json.load(f)
-with open(OBJECTS_FILE) as f:
-  OBJECTS = json.load(f)
-with open(SPELLS_FILE) as f:
-  SPELLS = json.load(f)
 
 DEFAULT_ARTICLE = 1
 

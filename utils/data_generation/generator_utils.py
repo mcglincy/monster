@@ -1,5 +1,44 @@
+import json
+
 
 DEFAULT_MSG_ID = 32000
+
+# global data
+with open('./og_monster_data/desc.json') as f:
+  DESCS = json.load(f)
+with open('./og_monster_data/lines.json') as f:
+  LINES = json.load(f)
+with open('./og_monster_data/objects.json') as f:
+  OBJECTS = json.load(f)
+with open('./og_monster_data/randoms.json') as f:
+  RANDOMS = json.load(f)
+with open('./og_monster_data/roomdesc.json') as f:
+  ROOMDESCS = json.load(f)
+with open('./og_monster_data/rooms.json') as f:
+  ROOMS = json.load(f)
+with open('./og_monster_data/spells.json') as f:
+  SPELLS = json.load(f)
+
+
+def load_json(filepath):
+  with open(filepath) as f:
+    data = json.load(filepath)
+  return data
+
+def load_descs():
+  return load_json('./og_monster_data/desc.json')
+
+
+def load_lines():
+  return load_json('./og_monster_data/lines.json')
+
+
+def load_objects():
+  return load_json('./og_monster_data/objects.json')
+
+
+def load_roomdescs():
+  return load_json('./og_monster_data/roomdesc.json')
 
 
 def find_object(objects, obj_id):

@@ -9,10 +9,6 @@ from gamerules.exit_kind import ExitKind
 from generator_utils import *
 
 
-with open('./og_monster_data/roomdesc.json') as f:
-  ROOMDESCS = json.load(f)
-
-
 def make_room(roomdesc):
   record_id = roomdesc["id"]
   print(f'@dig {roomdesc["nice_name"]};room_{record_id}')
