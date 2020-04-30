@@ -9,10 +9,10 @@ from gamerules.object_kind import ObjectKind
 from utils.generator_utils import DEFAULT_MSG_ID, camel_case, lookup_description, snake_case, split_integer
 
 
-DESC_FILE = './json/desc.json'
-LINES_FILE = './json/lines.json'
-OBJECTS_FILE = './json/objects.json'
-SPELLS_FILE = './json/spells.json'
+DESC_FILE = './og_monster_data/desc.json'
+LINES_FILE = './og_monster_data/lines.json'
+OBJECTS_FILE = './og_monster_data/objects.json'
+SPELLS_FILE = './og_monster_data/spells.json'
 
 DESCS = []
 LINES = []

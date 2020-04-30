@@ -9,10 +9,10 @@ from gamerules.exit_kind import ExitKind
 from utils.generator_utils import DEFAULT_MSG_ID, lookup_description, split_integer
 
 
-DESC_FILE = './json/desc.json'
-LINES_FILE = './json/lines.json'
-OBJECT_FILE = './json/objects.json'
-ROOMDESC_FILE = './json/roomdesc.json'
+DESC_FILE = './og_monster_data/desc.json'
+LINES_FILE = './og_monster_data/lines.json'
+OBJECT_FILE = './og_monster_data/objects.json'
+ROOMDESC_FILE = './og_monster_data/roomdesc.json'
 
 with open(DESC_FILE) as f:
   DESCS = json.load(f)

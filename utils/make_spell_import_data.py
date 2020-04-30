@@ -7,10 +7,10 @@ from gamerules.spell_effect_kind import SpellEffectKind
 from utils.generator_utils import lookup_description
 
 
-CLASSREC_FILE = "./json/classrec.json"
-DESC_FILE = './json/desc.json'
-LINES_FILE = './json/lines.json'
-SPELLS_FILE = "./json/spells.json"
+CLASSREC_FILE = "./og_monster_data/classrec.json"
+DESC_FILE = './og_monster_data/desc.json'
+LINES_FILE = './og_monster_data/lines.json'
+SPELLS_FILE = "./og_monster_data/spells.json"
 
 
 def fill_in(rec, key, descs, lines):

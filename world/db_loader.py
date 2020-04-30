@@ -5,8 +5,8 @@ from userdefined.models import CharacterClass, Spell, SpellEffect
 from utils.generator_utils import lookup_description
 
 
-CLASSREC_FILE = "utils/json/classrec.json"
-SPELLS_FILE = "utils/json/spell_import_data.json"
+CLASSREC_FILE = "./character_class_data.json"
+SPELLS_FILE = "./spell_data.json"
 
 
 def create_everything():
@@ -62,7 +62,7 @@ def create_spells():
       db_level_mana = rec["level_mana"],
       db_caster_desc = rec["caster_desc"],
       db_victim_desc = rec["victim_desc"],
-      db_room_desc = rec["room_desc"],
+      db_room_desc = rec.get("room_desc", ""),
       db_failure_desc = rec["failure_desc"],
       db_min_level = rec["min_level"],
       db_alignment = rec["alignment"],

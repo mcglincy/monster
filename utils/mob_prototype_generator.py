@@ -7,8 +7,8 @@ from gamerules.mob_kind import MobKind
 from utils.generator_utils import DEFAULT_MSG_ID, camel_case, lookup_description, snake_case, split_integer
 
 
-OBJECTS_FILE = './json/objects.json'
-RANDOMS_FILE = './json/randoms.json'
+OBJECTS_FILE = './og_monster_data/objects.json'
+RANDOMS_FILE = './og_monster_data/randoms.json'
 
 
 def find_object(objects, record_id):

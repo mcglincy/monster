@@ -9,7 +9,7 @@ from gamerules.exit_kind import ExitKind
 from utils.generator_utils import *
 
 
-with open('./json/roomdesc.json') as f:
+with open('./og_monster_data/roomdesc.json') as f:
   ROOMDESCS = json.load(f)
 
 

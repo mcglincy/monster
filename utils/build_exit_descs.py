@@ -8,13 +8,13 @@ from gamerules.exit_effect_kind import ExitEffectKind
 from utils.generator_utils import *
 
 
-with open('./json/desc.json') as f:
+with open('./og_monster_data/desc.json') as f:
   DESCS = json.load(f)
-with open('./json/lines.json') as f:
+with open('./og_monster_data/lines.json') as f:
   LINES = json.load(f)
-with open('./json/objects.json') as f:
+with open('./og_monster_data/objects.json') as f:
   OBJECTS = json.load(f)
-with open('./json/roomdesc.json') as f:
+with open('./og_monster_data/roomdesc.json') as f:
   ROOMDESCS = json.load(f)
 
 
