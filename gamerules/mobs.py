@@ -9,6 +9,25 @@ from gamerules.xp import calculate_kill_xp, set_xp, gain_xp
 # never spawn more than this many mobs in the world
 MAX_MOBS = 20
 
+MOB_NAMES = [
+  'Agroth','Agrit','Atamut','Ali Baba','Arnold','Aluzinthra','Atariana','Agmeish',
+  'Buster','Boozer','Brent','Bugzool','Butch','Barahirin','Broog','Bidrethmog',
+  'Buffy','Chadwik','Chuck','Chimlick','Cheuk','Chumliz','Cromwell','Carbanor',
+  'Canawok','Cordread','Cirith','Droog','Dirk','Daldinaron','Denowet','Draka',
+  'Dum dum','Dimwit','Dumshitz','Elvis','Ecthellion','Eneroth','Elethil',
+  'Eugumoot','Eleduin','Egor','Feanor','Fargblatz','Farging','Fletch','Friggit',
+  'Gothmog','Grondin','Gangleous','Grog','Gerland','Ginreth','Glockbleshz',
+  'Grouzithab','Herbruk','Hallwaith','Helmut','Hercimer','Howarmuk','Henchhelm',
+  'Hanmaddin','Ingwe','Ingrish','Jerluk','Jabbalop','Jocko','Jeth','Junga','Jinga',
+  'Jimba','Krotche','Kunta','Killroy','Kaputa','Kuch','Kumquat','Kurgan','Khadaffy',
+  'Krazool','Lenin','Leonard','Leo','Lear','Louie','Lister','Laurendil','Lokesiltary',
+  'Mudarasah','Morgoth','Mugwump','Melmen','Masnads','Mrokbut','Merlkyteral',
+  'Milknenrou','Mybalon','Mordenkainen','Nadien','Opie','Orgrond','Orville','Ogden',
+  'Orion','Pharelen','Pogo','Pfzarrak','Poofley','Proklmt','Rellinger','Rhunwik',
+  'Rugrat','Retred','Rocky','Rhygon','Rejuon','Rogundin','Roxanne',
+  'Sceleron','Scarythe','Smegma','Spunk','Sindar','Sarek','Swatme','Swishme',
+  'Tellemicus','Talleyrand','Turin','Tyme','Vermothrax','Whacker'
+]
 
 def resolve_mob_attack(mob, target, attack_name="claws"):
   if target.is_dead:
@@ -75,8 +94,11 @@ def generate_mob(location, level):
   if not mob_prototypes:
     # no valid prototypes found
     return
-  proto_choice = random.choice(mob_prototypes)
-  mob = spawner.spawn(proto_choice['prototype_key'])[0]
+  proto = random.choice(mob_prototypes)
+  mob_name = f"{random.choice(MOB_NAMES)} the {proto['key']}"
+  mob = spawner.spawn({
+    'prototype_parent': proto['prototype_key'], 'prototype_key': mob_name, 'key': mob_name,
+  })[0]
   mob.location = location
   location.msg_contents(f"A {mob.key} appears!")
 
@@ -128,7 +150,10 @@ def maybe_spawn_mob_in_lair(location):
   if not proto:
     # no such mob found
     return
-  mob = spawner.spawn(proto['prototype_key'])[0]
+  mob_name = f"{random.choice(MOB_NAMES)} the {proto['key']}"
+  mob = spawner.spawn({
+    'prototype_parent': proto['prototype_key'], 'prototype_key': mob_name, 'key': mob_name,
+  })[0]
   # stay in the lair
   mob.location = location
   mob.db.moves_between_rooms = False
