@@ -77,7 +77,7 @@ def can_cast_spell(caster, spell):
     return False
 
   if spell.min_level > caster.level:
-    caster.msg(f"Your level is too low to cast {spell.key}.")
+    caster.msg(f"Your level is too low to cast that spell.")
     return False
 
   if mana_cost(caster, spell) > caster.db.mana:
@@ -146,9 +146,6 @@ def send_cast_messages(caster, spell):
 
 # TODO: figure out distance vs. not for messaging
 def send_effect_messages(caster, spell, target):
-  # TODO: our room descriptions / alignment field??? seem off. DEBUG and look at old pascal code.
-  #if spell.room_desc:
-  #  caster.location.msg_contents(spell.room_desc, exclude=[caster, target])
   # TODO: do we need to consider effect vs. room for msgs?
   if spell.victim_desc:
     victim_desc = spell.victim_desc.replace("#", caster.key)
@@ -156,6 +153,8 @@ def send_effect_messages(caster, spell, target):
       caster.location.msg_contents("|w" + victim_desc, exclude=caster)
     elif target:
       target.msg("|w" + victim_desc)
+  if spell.room_desc:
+    caster.location.msg_contents(spell.room_desc, exclude=[caster, target])
 
 
 def is_targetable(obj):
