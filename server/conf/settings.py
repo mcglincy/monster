@@ -33,6 +33,7 @@ from evennia.settings_default import *
 
 SERVERNAME = "Monster"
 GAME_SLOGAN = "It's not a game, it's a lifestyle"
+SSL_ENABLED = True
 # DEFAULT_HOME = "#4"  # aka Void
 START_LOCATION = "#4"  # aka Void
 
@@ -40,7 +41,6 @@ INSTALLED_APPS = INSTALLED_APPS + ["userdefined", ]
 PROTOTYPE_MODULES = ["world.prototypes", "world.generated_mob_prototypes", "world.generated_object_prototypes"]
 
 DATA_DIR = "/opt/monsterdata"
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
