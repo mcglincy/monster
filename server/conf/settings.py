@@ -34,7 +34,7 @@ from evennia.settings_default import *
 SERVERNAME = "Monster"
 GAME_SLOGAN = "It's not a game, it's a lifestyle"
 #SSL_ENABLED = True
-#WEBSOCKET_CLIENT_URL = "wss://www.monstermud.com:4002"
+WEBSOCKET_CLIENT_URL = "wss://www.monstermud.com:4002"
 # DEFAULT_HOME = "#4"  # aka Void
 START_LOCATION = "#4"  # aka Void
 
