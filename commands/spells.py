@@ -1,7 +1,6 @@
 from commands.command import QueuedCommand
 from evennia.utils.evmenu import get_input
 from gamerules.combat import find_first_attackable
-from gamerules.direction import Direction
 from gamerules.distance_spell_behavior import DistanceSpellBehavior
 from gamerules.special_room_kind import SpecialRoomKind
 from gamerules.spell_effect_kind import SpellEffectKind

@@ -1,3 +1,4 @@
+from gamerules.direction import Direction
 
 
 def keymatch(obj, key):

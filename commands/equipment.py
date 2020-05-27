@@ -1,7 +1,6 @@
 from commands.command import QueuedCommand
 from commands.spells import list_spells
 from evennia.utils.search import search_object
-from gamerules.direction import Direction
 from gamerules.find import find_first, find_first_unhidden
 from gamerules.equipment_slot import EquipmentSlot
 from gamerules.object_kind import ObjectKind
